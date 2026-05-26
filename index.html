@@ -1,0 +1,1366 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BronchiNet｜気管支拡張症 MSL文献ポータル</title>
+<style>
+  :root {
+    --primary: #1a56a8;
+    --primary-dark: #0f3872;
+    --primary-light: #dbeafe;
+    --accent: #e85d04;
+    --bg: #f4f6fa;
+    --card-bg: #ffffff;
+    --text: #1e293b;
+    --text-muted: #64748b;
+    --border: #e2e8f0;
+    --new-badge: #dc2626;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: 'Hiragino Kaku Gothic ProN', 'Noto Sans JP', sans-serif; background: var(--bg); color: var(--text); font-size: 14px; }
+
+  /* ── HEADER ── */
+  header { background: var(--primary-dark); color: #fff; padding: 0; box-shadow: 0 2px 8px rgba(0,0,0,0.3); position: sticky; top: 0; z-index: 100; }
+  .header-top { display: flex; align-items: center; justify-content: space-between; padding: 10px 24px; }
+  .logo { display: flex; align-items: center; gap: 10px; text-decoration: none; color: #fff; }
+  .logo-icon { width: 36px; height: 36px; background: #fff; border-radius: 8px; display: flex; align-items: center; justify-content: center; }
+  .logo-icon svg { width: 24px; height: 24px; }
+  .logo-text { font-size: 22px; font-weight: 800; letter-spacing: -0.5px; }
+  .logo-sub { font-size: 11px; color: #93c5fd; font-weight: 400; }
+  .header-meta { display: flex; align-items: center; gap: 16px; font-size: 12px; color: #93c5fd; }
+  .header-date { background: rgba(255,255,255,0.1); padding: 4px 10px; border-radius: 4px; }
+  nav { background: var(--primary); display: flex; gap: 2px; padding: 0 24px; overflow-x: auto; }
+  nav a { color: #bfdbfe; text-decoration: none; padding: 10px 16px; font-size: 13px; white-space: nowrap; border-bottom: 3px solid transparent; transition: all 0.2s; cursor: pointer; }
+  nav a:hover, nav a.active { color: #fff; border-bottom-color: #60a5fa; background: rgba(255,255,255,0.08); }
+  /* ── SECTIONS ── */
+  .section { display: none; }
+  .section.active { display: block; }
+  /* ── TRIALS PAGE ── */
+  .trials-page { padding: 20px 0 40px; }
+  .trials-page-header { background: linear-gradient(135deg, #064e3b, #065f46); color:#fff; border-radius: 12px; padding: 24px; margin-bottom: 20px; }
+  .trials-page-header h2 { font-size: 20px; font-weight: 800; margin-bottom: 6px; }
+  .trials-page-header p { color: #a7f3d0; font-size: 13px; }
+  .trials-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; }
+  .trial-card { background: var(--card-bg); border: 1px solid var(--border); border-radius: 12px; padding: 18px; border-left: 5px solid #15803d; }
+  .trial-card-title { font-size: 14px; font-weight: 700; color: var(--text); margin-bottom: 6px; line-height: 1.4; }
+  .trial-card-sub { font-size: 12px; color: var(--text-muted); margin-bottom: 10px; }
+  .trial-card-badges { display: flex; flex-wrap: wrap; gap: 5px; margin-bottom: 12px; }
+  .trial-card-desc { font-size: 12px; color: #475569; line-height: 1.7; }
+  .trial-card-link { display: inline-block; margin-top: 10px; font-size: 11px; color: var(--primary); }
+  /* ── GUIDELINES PAGE ── */
+  .guide-page { padding: 20px 0 40px; }
+  .guide-page-header { background: linear-gradient(135deg, #3b0764, #6d28d9); color:#fff; border-radius: 12px; padding: 24px; margin-bottom: 20px; }
+  .guide-page-header h2 { font-size: 20px; font-weight: 800; margin-bottom: 6px; }
+  .guide-page-header p { color: #ddd6fe; font-size: 13px; }
+  .guide-section-title { font-size: 15px; font-weight: 700; color: var(--primary); border-left: 4px solid var(--primary); padding-left: 10px; margin: 24px 0 12px; }
+  .guide-card { background: var(--card-bg); border: 1px solid var(--border); border-radius: 10px; padding: 16px; margin-bottom: 12px; display: flex; gap: 14px; cursor: pointer; transition: all 0.2s; }
+  .guide-card:hover { box-shadow: 0 4px 12px rgba(0,0,0,0.08); transform: translateY(-1px); }
+  .guide-card-icon { font-size: 28px; flex-shrink: 0; }
+  .guide-card-title { font-size: 13px; font-weight: 700; color: var(--text); margin-bottom: 4px; line-height: 1.4; }
+  .guide-card-meta { font-size: 11px; color: var(--text-muted); margin-bottom: 6px; }
+  .guide-card-desc { font-size: 12px; color: #475569; line-height: 1.6; }
+  /* ── REPORTS PAGE ── */
+  .reports-page { padding: 20px 0 40px; }
+  .reports-page-header { background: linear-gradient(135deg, #78350f, #b45309); color:#fff; border-radius: 12px; padding: 24px; margin-bottom: 20px; }
+  .reports-page-header h2 { font-size: 20px; font-weight: 800; margin-bottom: 6px; }
+  .reports-page-header p { color: #fde68a; font-size: 13px; }
+  .report-card { background: var(--card-bg); border: 1px solid var(--border); border-radius: 12px; padding: 20px; margin-bottom: 14px; }
+  .report-card-header { display: flex; align-items: center; justify-content: space-between; margin-bottom: 14px; padding-bottom: 12px; border-bottom: 1px solid var(--border); }
+  .report-card-date { font-size: 18px; font-weight: 800; color: var(--primary); }
+  .report-card-count { font-size: 12px; background: var(--primary-light); color: var(--primary); padding: 3px 10px; border-radius: 10px; font-weight: 600; }
+  .report-highlight-list { list-style: none; padding: 0; }
+  .report-highlight-list li { display: flex; gap: 10px; padding: 7px 0; border-bottom: 1px solid var(--border); font-size: 13px; line-height: 1.5; }
+  .report-highlight-list li:last-child { border-bottom: none; }
+  .report-num { font-weight: 700; color: var(--primary); min-width: 20px; }
+  .report-cat-inline { font-size: 10px; padding: 1px 6px; border-radius: 3px; font-weight: 700; white-space: nowrap; align-self: flex-start; margin-top: 2px; flex-shrink: 0; }
+
+  /* ── LAYOUT ── */
+  .container { max-width: 1280px; margin: 0 auto; padding: 0 20px; }
+  .page-body { display: grid; grid-template-columns: 1fr 300px; gap: 20px; padding: 20px 0 40px; }
+
+  /* ── DASHBOARD HERO ── */
+  .dashboard { background: linear-gradient(135deg, var(--primary-dark) 0%, var(--primary) 100%); color: #fff; padding: 24px; border-radius: 12px; margin: 16px 0 0; }
+  .dashboard-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 16px; }
+  .dashboard-title { font-size: 16px; font-weight: 700; display: flex; align-items: center; gap: 8px; }
+  .dashboard-badge { background: var(--new-badge); color: #fff; font-size: 10px; padding: 2px 7px; border-radius: 10px; font-weight: 700; }
+  .dashboard-date { font-size: 12px; color: #93c5fd; }
+  .dashboard-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+  .dash-card { background: rgba(255,255,255,0.12); border: 1px solid rgba(255,255,255,0.2); border-radius: 8px; padding: 12px; cursor: pointer; transition: all 0.2s; }
+  .dash-card:hover { background: rgba(255,255,255,0.2); transform: translateY(-2px); }
+  .dash-card.featured { grid-column: 1 / -1; background: rgba(255,255,255,0.18); }
+  .dash-cat { font-size: 10px; font-weight: 700; letter-spacing: 0.5px; opacity: 0.8; margin-bottom: 5px; display: flex; align-items: center; gap: 5px; }
+  .dash-cat-dot { width: 6px; height: 6px; border-radius: 50%; background: #fbbf24; }
+  .dash-title { font-size: 13px; font-weight: 600; line-height: 1.4; }
+  .dash-title-en { font-size: 11px; color: #bfdbfe; margin-top: 3px; line-height: 1.3; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+  .dash-journal { font-size: 11px; color: #93c5fd; margin-top: 6px; }
+  .dash-new { display: inline-block; background: #ef4444; color: #fff; font-size: 9px; padding: 1px 6px; border-radius: 3px; font-weight: 700; margin-right: 4px; vertical-align: middle; }
+
+  /* ── STATS BAR ── */
+  .stats-bar { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; margin: 16px 0; }
+  .stat-card { background: var(--card-bg); border-radius: 10px; padding: 14px 16px; border: 1px solid var(--border); display: flex; align-items: center; gap: 12px; }
+  .stat-icon { width: 40px; height: 40px; border-radius: 10px; display: flex; align-items: center; justify-content: center; font-size: 18px; flex-shrink: 0; }
+  .stat-num { font-size: 24px; font-weight: 800; color: var(--primary); line-height: 1; }
+  .stat-label { font-size: 11px; color: var(--text-muted); margin-top: 2px; }
+
+  /* ── FILTER & SEARCH ── */
+  .filter-bar { background: var(--card-bg); border: 1px solid var(--border); border-radius: 10px; padding: 14px 16px; margin-bottom: 16px; }
+  .filter-bar-top { display: flex; align-items: center; gap: 12px; margin-bottom: 12px; flex-wrap: wrap; }
+  .search-box { flex: 1; min-width: 200px; display: flex; align-items: center; gap: 8px; background: var(--bg); border: 1px solid var(--border); border-radius: 7px; padding: 8px 12px; }
+  .search-box input { border: none; background: none; outline: none; font-size: 13px; width: 100%; color: var(--text); }
+  .search-icon { color: var(--text-muted); font-size: 16px; }
+  .filter-label { font-size: 12px; color: var(--text-muted); font-weight: 600; white-space: nowrap; }
+  .sort-sel { border: 1px solid var(--border); border-radius: 6px; padding: 7px 10px; font-size: 12px; background: var(--bg); color: var(--text); cursor: pointer; }
+  .cat-chips { display: flex; gap: 8px; flex-wrap: wrap; }
+  .chip { padding: 5px 13px; border-radius: 20px; font-size: 12px; font-weight: 600; cursor: pointer; border: 2px solid transparent; transition: all 0.2s; white-space: nowrap; }
+  .chip.active { color: #fff !important; }
+  .chip[data-cat="all"] { background: var(--primary-light); color: var(--primary); border-color: var(--primary); }
+  .chip[data-cat="all"].active { background: var(--primary); }
+  .chip[data-cat="治療・薬剤"] { background: #dbeafe; color: #1d4ed8; }
+  .chip[data-cat="治療・薬剤"].active { background: #1d4ed8; border-color: #1d4ed8; }
+  .chip[data-cat="増悪・病態"] { background: #fee2e2; color: #b91c1c; }
+  .chip[data-cat="増悪・病態"].active { background: #b91c1c; border-color: #b91c1c; }
+  .chip[data-cat="マイクロバイオーム・感染"] { background: #dcfce7; color: #15803d; }
+  .chip[data-cat="マイクロバイオーム・感染"].active { background: #15803d; border-color: #15803d; }
+  .chip[data-cat="ガイドライン・総説"] { background: #ede9fe; color: #6d28d9; }
+  .chip[data-cat="ガイドライン・総説"].active { background: #6d28d9; border-color: #6d28d9; }
+  .chip[data-cat="精密医療・エンドタイプ"] { background: #fef3c7; color: #b45309; }
+  .chip[data-cat="精密医療・エンドタイプ"].active { background: #b45309; border-color: #b45309; }
+  .chip[data-cat="臨床試験"] { background: #cffafe; color: #0e7490; }
+  .chip[data-cat="臨床試験"].active { background: #0e7490; border-color: #0e7490; }
+  .chip[data-cat="学会動向"] { background: #f1f5f9; color: #475569; }
+  .chip[data-cat="学会動向"].active { background: #475569; border-color: #475569; }
+
+  /* ── ARTICLE GRID ── */
+  .articles-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px; }
+  .articles-count { font-size: 13px; color: var(--text-muted); }
+  .articles-count strong { color: var(--text); }
+  .article-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+  .article-card { background: var(--card-bg); border: 1px solid var(--border); border-radius: 10px; padding: 15px; cursor: pointer; transition: all 0.2s; position: relative; overflow: hidden; }
+  .article-card:hover { box-shadow: 0 4px 16px rgba(0,0,0,0.1); transform: translateY(-2px); border-color: #93c5fd; }
+  .article-card.is-new { border-left: 4px solid var(--new-badge); }
+  .card-top { display: flex; align-items: flex-start; justify-content: space-between; gap: 8px; margin-bottom: 8px; }
+  .cat-tag { font-size: 10px; font-weight: 700; padding: 2px 8px; border-radius: 4px; white-space: nowrap; flex-shrink: 0; }
+  .cat-tag.治療・薬剤 { background: #dbeafe; color: #1d4ed8; }
+  .cat-tag.増悪・病態 { background: #fee2e2; color: #b91c1c; }
+  .cat-tag.マイクロバイオーム・感染 { background: #dcfce7; color: #15803d; }
+  .cat-tag.ガイドライン・総説 { background: #ede9fe; color: #6d28d9; }
+  .cat-tag.精密医療・エンドタイプ { background: #fef3c7; color: #b45309; }
+  .cat-tag.臨床試験 { background: #cffafe; color: #0e7490; }
+  .cat-tag.学会動向 { background: #f1f5f9; color: #475569; }
+  .new-tag { background: #fee2e2; color: #b91c1c; font-size: 10px; font-weight: 700; padding: 2px 6px; border-radius: 4px; }
+  .card-title-ja { font-size: 13px; font-weight: 700; color: var(--text); line-height: 1.5; margin-bottom: 5px; }
+  .card-title-en { font-size: 11px; color: var(--text-muted); line-height: 1.4; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+  .card-summary { font-size: 12px; color: #475569; line-height: 1.6; margin: 8px 0; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
+  .card-footer { display: flex; align-items: center; justify-content: space-between; margin-top: 10px; padding-top: 8px; border-top: 1px solid var(--border); }
+  .card-journal { font-size: 11px; color: var(--text-muted); font-style: italic; display: flex; align-items: center; gap: 4px; }
+  .card-date { font-size: 11px; color: var(--text-muted); }
+  .card-link { font-size: 11px; color: var(--primary); text-decoration: none; display: flex; align-items: center; gap: 3px; }
+  .card-link:hover { text-decoration: underline; }
+
+  /* ── SIDEBAR ── */
+  .sidebar { display: flex; flex-direction: column; gap: 16px; }
+  .sidebar-card { background: var(--card-bg); border: 1px solid var(--border); border-radius: 10px; overflow: hidden; }
+  .sidebar-header { background: var(--primary); color: #fff; padding: 10px 14px; font-size: 13px; font-weight: 700; display: flex; align-items: center; gap: 8px; }
+  .sidebar-header.green { background: #15803d; }
+  .sidebar-header.purple { background: #6d28d9; }
+  .sidebar-header.orange { background: #d97706; }
+  .sidebar-body { padding: 12px; }
+  .trial-item { padding: 10px 0; border-bottom: 1px solid var(--border); }
+  .trial-item:last-child { border-bottom: none; }
+  .trial-name { font-size: 12px; font-weight: 600; color: var(--text); line-height: 1.4; margin-bottom: 4px; }
+  .trial-meta { display: flex; flex-wrap: wrap; gap: 4px; margin-top: 5px; }
+  .trial-badge { font-size: 10px; padding: 1px 6px; border-radius: 3px; font-weight: 600; }
+  .trial-badge.phase { background: #ede9fe; color: #6d28d9; }
+  .trial-badge.recruiting { background: #dcfce7; color: #15803d; }
+  .trial-badge.nct { background: #f1f5f9; color: #475569; font-family: monospace; }
+  .ranking-item { display: flex; align-items: flex-start; gap: 10px; padding: 9px 0; border-bottom: 1px solid var(--border); cursor: pointer; }
+  .ranking-item:last-child { border-bottom: none; }
+  .rank-num { font-size: 18px; font-weight: 900; color: var(--border); min-width: 24px; line-height: 1; margin-top: 2px; }
+  .rank-num.top3 { color: var(--primary); }
+  .rank-title { font-size: 12px; color: var(--text); line-height: 1.4; }
+  .rank-cat { font-size: 10px; color: var(--text-muted); margin-top: 2px; }
+  .report-item { display: flex; align-items: center; justify-content: space-between; padding: 8px 0; border-bottom: 1px solid var(--border); }
+  .report-item:last-child { border-bottom: none; }
+  .report-date { font-size: 12px; color: var(--primary); font-weight: 600; }
+  .report-count { font-size: 11px; color: var(--text-muted); }
+  .report-link { font-size: 11px; color: var(--primary); cursor: pointer; }
+
+  /* ── MODAL ── */
+  .modal-overlay { display: none; position: fixed; inset: 0; background: rgba(0,0,0,0.5); z-index: 200; align-items: center; justify-content: center; padding: 20px; }
+  .modal-overlay.open { display: flex; }
+  .modal { background: #fff; border-radius: 14px; max-width: 680px; width: 100%; max-height: 80vh; overflow-y: auto; box-shadow: 0 20px 60px rgba(0,0,0,0.3); }
+  .modal-header { padding: 20px 24px 16px; border-bottom: 1px solid var(--border); position: sticky; top: 0; background: #fff; }
+  .modal-close { float: right; background: none; border: none; font-size: 22px; cursor: pointer; color: var(--text-muted); line-height: 1; }
+  .modal-cat-tag { display: inline-block; margin-bottom: 10px; }
+  .modal-title-ja { font-size: 18px; font-weight: 800; color: var(--text); line-height: 1.4; margin-bottom: 8px; }
+  .modal-title-en { font-size: 13px; color: var(--text-muted); line-height: 1.5; }
+  .modal-body { padding: 20px 24px 24px; }
+  .modal-meta { display: flex; gap: 20px; padding: 12px; background: var(--bg); border-radius: 8px; margin-bottom: 16px; flex-wrap: wrap; }
+  .modal-meta-item { font-size: 12px; color: var(--text-muted); }
+  .modal-meta-item strong { color: var(--text); display: block; font-size: 13px; }
+  .modal-summary-label { font-size: 12px; font-weight: 700; color: var(--primary); text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 8px; }
+  .modal-summary { font-size: 14px; line-height: 1.8; color: var(--text); }
+  .modal-link { display: inline-flex; align-items: center; gap: 6px; margin-top: 16px; background: var(--primary); color: #fff; text-decoration: none; padding: 8px 16px; border-radius: 7px; font-size: 13px; font-weight: 600; }
+  .modal-link:hover { background: var(--primary-dark); }
+
+  /* ── PAGINATION ── */
+  .pagination { display: flex; justify-content: center; gap: 6px; margin-top: 20px; flex-wrap: wrap; }
+  .page-btn { padding: 6px 12px; border: 1px solid var(--border); border-radius: 6px; background: var(--card-bg); cursor: pointer; font-size: 13px; color: var(--text-muted); transition: all 0.2s; }
+  .page-btn:hover, .page-btn.active { background: var(--primary); color: #fff; border-color: var(--primary); }
+  .page-btn:disabled { opacity: 0.4; cursor: not-allowed; }
+
+  /* ── FOOTER ── */
+  footer { background: var(--primary-dark); color: #93c5fd; text-align: center; padding: 20px; font-size: 12px; margin-top: 20px; }
+  footer strong { color: #fff; }
+
+  /* ── EMPTY ── */
+  .empty { text-align: center; padding: 40px; color: var(--text-muted); grid-column: 1 / -1; }
+  .empty-icon { font-size: 48px; margin-bottom: 12px; }
+
+  @media (max-width: 900px) {
+    .page-body { grid-template-columns: 1fr; }
+    .article-grid { grid-template-columns: 1fr; }
+    .dashboard-grid { grid-template-columns: 1fr; }
+    .stats-bar { grid-template-columns: repeat(2, 1fr); }
+    .sidebar { display: none; }
+  }
+</style>
+</head>
+<body>
+
+<!-- HEADER -->
+<header>
+  <div class="header-top">
+    <a class="logo" href="#">
+      <div class="logo-icon">
+        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 14H9V8h2v8zm4 0h-2V8h2v8z" fill="#1a56a8"/>
+          <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2z" fill="none" stroke="#1a56a8" stroke-width="0.5"/>
+          <ellipse cx="8" cy="9" rx="1.5" ry="3" fill="#1a56a8" opacity="0.6"/>
+          <ellipse cx="12" cy="7" rx="1.5" ry="5" fill="#1a56a8"/>
+          <ellipse cx="16" cy="10" rx="1.5" ry="2" fill="#1a56a8" opacity="0.4"/>
+        </svg>
+      </div>
+      <div>
+        <div class="logo-text">BronchiNet</div>
+        <div class="logo-sub">気管支拡張症 MSL文献ポータル</div>
+      </div>
+    </a>
+    <div class="header-meta">
+      <div class="header-date" id="currentDate">2026年5月24日 更新</div>
+      <div>Boehringer Ingelheim MSL専用</div>
+    </div>
+  </div>
+  <nav>
+    <a class="active" onclick="showSection('articles',this)">📚 文献一覧</a>
+    <a onclick="showSection('trials',this)">🧪 臨床試験</a>
+    <a onclick="showSection('guidelines',this)">📋 ガイドライン</a>
+    <a onclick="showSection('reports',this)">📝 デイリーレポート</a>
+  </nav>
+</header>
+
+<!-- MAIN -->
+<div class="container">
+
+<!-- ==================== SECTION: 文献一覧 ==================== -->
+<div class="section active" id="section-articles">
+
+  <!-- DASHBOARD -->
+  <div class="dashboard" id="dashboardSection">
+    <div class="dashboard-header">
+      <div class="dashboard-title">
+        🔥 本日のハイライト
+        <span class="dashboard-badge">NEW 3件</span>
+      </div>
+      <div class="dashboard-date">最終更新：2026年5月25日 08:04 自動生成</div>
+    </div>
+    <div class="dashboard-grid" id="dashboardGrid"></div>
+  </div>
+
+  <!-- STATS -->
+  <div class="stats-bar">
+    <div class="stat-card">
+      <div class="stat-icon" style="background:#dbeafe">📄</div>
+      <div>
+        <div class="stat-num" id="totalArticles">79</div>
+        <div class="stat-label">収録論文総数</div>
+      </div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-icon" style="background:#dcfce7">🧪</div>
+      <div>
+        <div class="stat-num">14</div>
+        <div class="stat-label">注目臨床試験</div>
+      </div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-icon" style="background:#fef3c7">📅</div>
+      <div>
+        <div class="stat-num">3</div>
+        <div class="stat-label">本日の新規論文</div>
+      </div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-icon" style="background:#ede9fe">📋</div>
+      <div>
+        <div class="stat-num">4</div>
+        <div class="stat-label">蓄積デイリーレポート</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- BODY -->
+  <div class="page-body">
+    <!-- MAIN CONTENT -->
+    <div>
+      <!-- FILTER BAR -->
+      <div class="filter-bar">
+        <div class="filter-bar-top">
+          <div class="search-box">
+            <span class="search-icon">🔍</span>
+            <input type="text" id="searchInput" placeholder="タイトル・要約・雑誌名で検索..." oninput="filterArticles()">
+          </div>
+          <span class="filter-label">並び順：</span>
+          <select class="sort-sel" id="sortSel" onchange="filterArticles()">
+            <option value="newest">新しい順</option>
+            <option value="oldest">古い順</option>
+            <option value="category">カテゴリ順</option>
+          </select>
+        </div>
+        <div class="cat-chips">
+          <div class="chip active" data-cat="all" onclick="setFilter('all',this)">すべて</div>
+          <div class="chip" data-cat="治療・薬剤" onclick="setFilter('治療・薬剤',this)">💊 治療・薬剤</div>
+          <div class="chip" data-cat="増悪・病態" onclick="setFilter('増悪・病態',this)">⚡ 増悪・病態</div>
+          <div class="chip" data-cat="マイクロバイオーム・感染" onclick="setFilter('マイクロバイオーム・感染',this)">🦠 マイクロバイオーム・感染</div>
+          <div class="chip" data-cat="ガイドライン・総説" onclick="setFilter('ガイドライン・総説',this)">📋 ガイドライン・総説</div>
+          <div class="chip" data-cat="精密医療・エンドタイプ" onclick="setFilter('精密医療・エンドタイプ',this)">🎯 精密医療</div>
+          <div class="chip" data-cat="臨床試験" onclick="setFilter('臨床試験',this)">🧪 臨床試験</div>
+          <div class="chip" data-cat="学会動向" onclick="setFilter('学会動向',this)">🌐 学会動向</div>
+        </div>
+      </div>
+
+      <!-- ARTICLES -->
+      <div class="articles-header">
+        <div class="articles-count">表示中：<strong id="filteredCount">0</strong>件 / 全<strong id="totalCount">0</strong>件</div>
+      </div>
+      <div class="article-grid" id="articleGrid"></div>
+      <div class="pagination" id="pagination"></div>
+    </div>
+
+    <!-- SIDEBAR -->
+    <div class="sidebar">
+      <!-- TRIALS -->
+      <div class="sidebar-card">
+        <div class="sidebar-header green">🧪 注目臨床試験（継続中）</div>
+        <div class="sidebar-body">
+          <div class="trial-item">
+            <div class="trial-name">AIRTIVITY™（verducatib/BI 1291583）</div>
+            <div class="trial-meta">
+              <span class="trial-badge phase">Phase III</span>
+              <span class="trial-badge recruiting">RECRUITING</span>
+              <span class="trial-badge nct">NCT06872892</span>
+            </div>
+          </div>
+          <div class="trial-item">
+            <div class="trial-name">AZD0292（抗PA二重特異性抗体）</div>
+            <div class="trial-meta">
+              <span class="trial-badge phase">Phase IIb</span>
+              <span class="trial-badge recruiting">RECRUITING</span>
+              <span class="trial-badge nct">NCT07088926</span>
+            </div>
+          </div>
+          <div class="trial-item">
+            <div class="trial-name">Ensifentrine（PDE3/4阻害吸入薬）</div>
+            <div class="trial-meta">
+              <span class="trial-badge phase">Phase II</span>
+              <span class="trial-badge recruiting">RECRUITING</span>
+              <span class="trial-badge nct">NCT06559150</span>
+            </div>
+          </div>
+          <div class="trial-item">
+            <div class="trial-name">Itepekimab（抗IL-33）</div>
+            <div class="trial-meta">
+              <span class="trial-badge phase">Phase II</span>
+              <span class="trial-badge recruiting">RECRUITING</span>
+              <span class="trial-badge nct">NCT06280391</span>
+            </div>
+          </div>
+          <div class="trial-item">
+            <div class="trial-name">GSK3862995B</div>
+            <div class="trial-meta">
+              <span class="trial-badge phase">Phase II</span>
+              <span class="trial-badge recruiting">RECRUITING</span>
+              <span class="trial-badge nct">NCT07201051</span>
+            </div>
+          </div>
+          <div class="trial-item">
+            <div class="trial-name">Itraconazole（気道カビ感染）</div>
+            <div class="trial-meta">
+              <span class="trial-badge phase">Phase I/II</span>
+              <span class="trial-badge recruiting">RECRUITING</span>
+              <span class="trial-badge nct">NCT07283497</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- RANKING -->
+      <div class="sidebar-card">
+        <div class="sidebar-header purple">🏆 参照数ランキング（推定）</div>
+        <div class="sidebar-body" id="rankingList"></div>
+      </div>
+
+      <!-- REPORTS -->
+      <div class="sidebar-card">
+        <div class="sidebar-header orange">📅 デイリーレポート履歴</div>
+        <div class="sidebar-body">
+          <div class="report-item">
+            <div>
+              <div class="report-date">2026年5月25日</div>
+              <div class="report-count">新規3件収録</div>
+            </div>
+            <span class="report-link" onclick="showSection('reports',document.querySelectorAll('nav a')[3])">▶ 開く</span>
+          </div>
+          <div class="report-item">
+            <div>
+              <div class="report-date">2026年5月24日</div>
+              <div class="report-count">新規5件収録</div>
+            </div>
+            <span class="report-link" onclick="showSection('reports',document.querySelectorAll('nav a')[3])">▶ 開く</span>
+          </div>
+          <div class="report-item">
+            <div>
+              <div class="report-date">2026年5月23日</div>
+              <div class="report-count">新規8件収録</div>
+            </div>
+            <span class="report-link">▶ 開く</span>
+          </div>
+          <div class="report-item">
+            <div>
+              <div class="report-date">2026年5月22日</div>
+              <div class="report-count">新規11件収録</div>
+            </div>
+            <span class="report-link">▶ 開く</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div><!-- /section-articles -->
+
+</div><!-- /section-articles wrapper -->
+
+<!-- ==================== SECTION: 臨床試験 ==================== -->
+<div class="section" id="section-trials">
+<div class="trials-page">
+  <div class="trials-page-header">
+    <h2>🧪 臨床試験データベース</h2>
+    <p>気管支拡張症領域で現在進行中・注目すべき主要臨床試験。リクルート状況・フェーズ・NCT番号を一覧で確認できます。</p>
+  </div>
+  <div class="trials-grid" id="trialsGrid"></div>
+</div>
+</div>
+
+<!-- ==================== SECTION: ガイドライン ==================== -->
+<div class="section" id="section-guidelines">
+<div class="guide-page">
+  <div class="guide-page-header">
+    <h2>📋 ガイドライン・主要総説</h2>
+    <p>2025 ERSガイドライン改訂を中心に、気管支拡張症診療の根拠となる国際的ガイドラインと主要レビューを整理しています。</p>
+  </div>
+
+  <div class="guide-section-title">🌐 国際ガイドライン（2025年版 ERS）</div>
+  <div class="guide-card" onclick="openModal(37)">
+    <div class="guide-card-icon">📘</div>
+    <div>
+      <div class="guide-card-title">2025 ERS Clinical Practice Guideline for the Management of Adult Bronchiectasis</div>
+      <div class="guide-card-meta">European Respiratory Journal | 2025年12月 | ERS Task Force</div>
+      <div class="guide-card-desc">2017年版以来の大幅改訂。気道クリアランス・長期マクロライド・DPP-1阻害薬（ブレンソカチブ）の位置付けを更新。Treatable Traitsの概念を全面採用した包括的ガイドライン。</div>
+    </div>
+  </div>
+  <div class="guide-card" onclick="openModal(38)">
+    <div class="guide-card-icon">📗</div>
+    <div>
+      <div class="guide-card-title">From evidence to practice: What the 2025 ERS guidelines mean for clinical practice</div>
+      <div class="guide-card-meta">ERJ | 2025年12月 | J. Chalmers et al.</div>
+      <div class="guide-card-desc">ERSガイドライン改訂のエキスパート解説。「シンプルなことを確実に行う」原則のもと、原因同定・気道クリアランス・適切な薬物療法の三本柱と日常臨床での優先順位を解説。</div>
+    </div>
+  </div>
+  <div class="guide-card" onclick="openModal(39)">
+    <div class="guide-card-icon">📙</div>
+    <div>
+      <div class="guide-card-title">Highlights and interpretation of the 2025 ERS clinical practice guideline</div>
+      <div class="guide-card-meta">European Respiratory Review | 2026年1月</div>
+      <div class="guide-card-desc">「臨床への10の問い」形式でガイドライン改訂の主要ポイントを解説。気道クリアランス・長期抗菌薬・DPP-1阻害薬・好酸球性気管支拡張症の管理方針についてエビデンスレベル別に整理。</div>
+    </div>
+  </div>
+
+  <div class="guide-section-title">🗺️ 国際的提言・委員会レポート</div>
+  <div class="guide-card" onclick="openModal(40)">
+    <div class="guide-card-icon">📄</div>
+    <div>
+      <div class="guide-card-title">The Lancet Respiratory Medicine Commission on Bronchiectasis</div>
+      <div class="guide-card-meta">Lancet Respiratory Medicine | 2024年12月</div>
+      <div class="guide-card-desc">世界的な過小診断・過小治療の問題提起、診断基準の標準化、多職種ケアモデルの確立を提唱。希少疾患から主要気道疾患への位置付け転換を宣言した国際委員会のコンセンサスレポート。</div>
+    </div>
+  </div>
+  <div class="guide-card" onclick="openModal(41)">
+    <div class="guide-card-icon">📊</div>
+    <div>
+      <div class="guide-card-title">Annual Progress in the Clinical Management and Research of Bronchiectasis 2025</div>
+      <div class="guide-card-meta">ERJ Open Research | 2025年12月</div>
+      <div class="guide-card-desc">2025年の気管支拡張症研究の主要進捗を網羅。ブレンソカチブFDA承認・ERSガイドライン改訂・ASPEN試験・GREAT-2試験を軸に1年間の歩みをまとめた年次レビュー。</div>
+    </div>
+  </div>
+
+  <div class="guide-section-title">🌏 地域別適用ガイダンス</div>
+  <div class="guide-card" onclick="openModal(57)">
+    <div class="guide-card-icon">🇮🇳</div>
+    <div>
+      <div class="guide-card-title">What the 2025 ERS Bronchiectasis Guideline means for India</div>
+      <div class="guide-card-meta">Lung India | 2026年2月</div>
+      <div class="guide-card-desc">結核後気管支拡張症が多い低・中所得国での適用課題を論じた特別論文。資源制約・保険未整備環境下でのガイドライン実装モデルとして参考になる。</div>
+    </div>
+  </div>
+
+  <div class="guide-section-title">📐 治療アルゴリズム・総説</div>
+  <div class="guide-card" onclick="openModal(42)">
+    <div class="guide-card-icon">🔬</div>
+    <div>
+      <div class="guide-card-title">Bronchiectasis management in adults: state of the art and future directions</div>
+      <div class="guide-card-meta">ERJ | 2024年7月</div>
+      <div class="guide-card-desc">国際的な気管支拡張症管理の現状を総括。治療アルゴリズム・バイオマーカーの役割・精密医療への移行・未解決課題を体系的にまとめた包括的総説。</div>
+    </div>
+  </div>
+  <div class="guide-card" onclick="openModal(44)">
+    <div class="guide-card-icon">💊</div>
+    <div>
+      <div class="guide-card-title">Recent investigations in pharmacotherapy for bronchiectasis</div>
+      <div class="guide-card-meta">Am J Respir Crit Care Med | 2025年1月</div>
+      <div class="guide-card-desc">DPP-1阻害薬・吸入抗菌薬・粘液調整薬・生物製剤の最新RCTデータを網羅。各治療ターゲットの機序・臨床試験成果・実臨床での位置付けを体系的にまとめた。</div>
+    </div>
+  </div>
+</div>
+</div>
+
+<!-- ==================== SECTION: デイリーレポート ==================== -->
+<div class="section" id="section-reports">
+<div class="reports-page">
+  <div class="reports-page-header">
+    <h2>📝 デイリーレポート アーカイブ</h2>
+    <p>毎朝8時に自動生成される文献サマリーの履歴。既読除外機能により、常に新規情報のみを収録しています。</p>
+  </div>
+
+  <!-- Report 2026-05-25 -->
+  <div class="report-card">
+    <div class="report-card-header">
+      <div>
+        <div class="report-card-date">📅 2026年5月25日</div>
+        <div style="font-size:12px;color:var(--text-muted);margin-top:3px;">除外済み：76論文 / 54試験</div>
+      </div>
+      <span class="report-card-count">新規 3件</span>
+    </div>
+    <ul class="report-highlight-list">
+      <li>
+        <span class="report-num">1</span>
+        <span class="report-cat-inline" style="background:#dcfce7;color:#15803d">NTM管理</span>
+        <span>UCSFのINTEGRATEプログラム：453名の後ろ向き研究で多職種連携参加後に増悪36%減少、NTM培養陰性化も改善。<em>（Chest, 2026）</em></span>
+      </li>
+      <li>
+        <span class="report-num">2</span>
+        <span class="report-cat-inline" style="background:#f1f5f9;color:#475569">学会動向</span>
+        <span>気管支拡張症・NTM専門センターの体制設計ガイド：コアチーム・必須パートナーについての専門家コンセンサス。米国62施設に拡大中。<em>（Chest, 2025）</em></span>
+      </li>
+      <li>
+        <span class="report-num">3</span>
+        <span class="report-cat-inline" style="background:#dbeafe;color:#1d4ed8">治療・薬剤</span>
+        <span>急性呼吸不全時のHFNC：気管支拡張症による急性呼吸不全でHFNCが気道分泌物排出を改善し生理的指標も有意に向上。<em>（Respiratory Care, 2026）</em></span>
+      </li>
+    </ul>
+  </div>
+
+  <!-- Report 2026-05-24 -->
+  <div class="report-card">
+    <div class="report-card-header">
+      <div>
+        <div class="report-card-date">📅 2026年5月24日</div>
+        <div style="font-size:12px;color:var(--text-muted);margin-top:3px;">除外済み：71論文 / 54試験</div>
+      </div>
+      <span class="report-card-count">新規 5件</span>
+    </div>
+    <ul class="report-highlight-list">
+      <li>
+        <span class="report-num">1</span>
+        <span class="report-cat-inline" style="background:#dbeafe;color:#1d4ed8">治療・薬剤</span>
+        <span>ICERがブレンソカチブの有効性を11-0で認定も、年間88,000ドルの現行価格は費用対効果「低」と判定。日本の薬価設定への示唆大。<em>（J Manag Care Spec Pharm, 2026）</em></span>
+      </li>
+      <li>
+        <span class="report-num">2</span>
+        <span class="report-cat-inline" style="background:#dcfce7;color:#15803d">感染</span>
+        <span>慶應大グループ：日本のエリスロマイシン供給不足が長期マクロライド療法の選択を困難にしていると報告。NTM耐性誘導リスクとの兼ね合いが焦点。<em>（Respirology, 2025）</em></span>
+      </li>
+      <li>
+        <span class="report-num">3</span>
+        <span class="report-cat-inline" style="background:#fee2e2;color:#b91c1c">増悪</span>
+        <span>トルコ14,319例・10年コホート：粗死亡率34.8%、男性・55歳以上で高い。多変量解析で予後不良因子を同定。<em>（BMC Pulm Med, 2026）</em></span>
+      </li>
+      <li>
+        <span class="report-num">4</span>
+        <span class="report-cat-inline" style="background:#dbeafe;color:#1d4ed8">治療・薬剤</span>
+        <span>ATHOS試験設計論文：症状別個別化スポーツプロトコル（週3回/6ヶ月）のパイロット試験。肺リハの発展形として注目。<em>（Front Med, 2025）</em></span>
+      </li>
+      <li>
+        <span class="report-num">5</span>
+        <span class="report-cat-inline" style="background:#f1f5f9;color:#475569">学会</span>
+        <span>第8回世界気管支拡張症会議2025（ブリスベン）ハイライト論文公開。患者参加型プログラムを初導入、多職種ケアモデルと新興治療の方向性を共有。<em>（ERJ Open Res, 2026）</em></span>
+      </li>
+    </ul>
+  </div>
+
+  <!-- Report 2026-05-23 (placeholder) -->
+  <div class="report-card">
+    <div class="report-card-header">
+      <div>
+        <div class="report-card-date">📅 2026年5月23日</div>
+        <div style="font-size:12px;color:var(--text-muted);margin-top:3px;">除外済み：66論文 / 54試験</div>
+      </div>
+      <span class="report-card-count">新規 8件</span>
+    </div>
+    <ul class="report-highlight-list">
+      <li><span class="report-num">1</span><span class="report-cat-inline" style="background:#dbeafe;color:#1d4ed8">治療</span><span>高張食塩水またはカルボシステイン：英国20施設288例のRCT（NEJM掲載）。粘液調整薬の増悪予防効果を2×2要因デザインで初めて本格検証。</span></li>
+      <li><span class="report-num">2</span><span class="report-cat-inline" style="background:#dbeafe;color:#1d4ed8">治療</span><span>自家P63+肺前駆細胞移植RCT（Nat Med）：治療群で肺機能・CT所見の有意改善。再生医療の新地平を拓く。</span></li>
+      <li><span class="report-num">3</span><span class="report-cat-inline" style="background:#dcfce7;color:#15803d">感染</span><span>GREAT-2試験結果：Psl/PcrV標的二重特異性抗体（Gremubamab）の慢性緑膿菌感染患者RCT。増悪抑制傾向あるも主要エンドポイント未達。後継AZD0292がPhase IIbへ。</span></li>
+      <li><span class="report-num">4</span><span class="report-cat-inline" style="background:#ede9fe;color:#6d28d9">精密医療</span><span>EMBARC-BRIDGEデータ：好酸球性内型（≥300/μL）が約20%に認められ、独自の微生物・分子プロファイルを持つことを確認。</span></li>
+      <li><span class="report-num">5〜8</span><span class="report-cat-inline" style="background:#f1f5f9;color:#475569">他</span><span>DPP-1阻害薬ネットワークメタアナリシス・DIBS試験（双気管支拡張薬RCT）・耐性菌マップ（欧州横断メタゲノム解析）・吸入バクテリオファージの系統的レビューを収録。</span></li>
+    </ul>
+  </div>
+
+  <!-- Report 2026-05-22 (placeholder) -->
+  <div class="report-card">
+    <div class="report-card-header">
+      <div>
+        <div class="report-card-date">📅 2026年5月22日</div>
+        <div style="font-size:12px;color:var(--text-muted);margin-top:3px;">除外済み：55論文 / 54試験</div>
+      </div>
+      <span class="report-card-count">新規 11件</span>
+    </div>
+    <ul class="report-highlight-list">
+      <li><span class="report-num">1</span><span class="report-cat-inline" style="background:#dbeafe;color:#1d4ed8">治療</span><span>AIRLEAF試験（verducatib/BI 1291583 Phase II）結果とAIRTIVITY™ Phase III設計論文が同時公開。DPP-1阻害薬第2弾の本格的な展開が始まった。</span></li>
+      <li><span class="report-num">2</span><span class="report-cat-inline" style="background:#fee2e2;color:#b91c1c">増悪</span><span>アジスロマイシン予防投与メタアナリシス（Cureus）：長期投与でSMD -0.63の増悪抑制。NTMリスクを考慮した患者選択指針を提示。</span></li>
+      <li><span class="report-num">3</span><span class="report-cat-inline" style="background:#dcfce7;color:#15803d">感染</span><span>NTM陽性例でNETs（好中球細胞外トラップ）産生亢進を伴う重症表現型との関連を示した下気道マイクロバイオーム解析（Respir Res）。</span></li>
+      <li><span class="report-num">4〜11</span><span class="report-cat-inline" style="background:#f1f5f9;color:#475569">他</span><span>SAVE-BE試験（中国HSK31858 Phase 2）・好酸球性内型の詳細特徴付け・ICS吸入とH.influenzae・肺がんリスク研究・Treatable Traits関連総説など8件収録。</span></li>
+    </ul>
+  </div>
+</div>
+</div>
+
+<!-- MODAL -->
+<div class="modal-overlay" id="modalOverlay" onclick="closeModal(event)">
+  <div class="modal" id="modalContent">
+    <div class="modal-header">
+      <button class="modal-close" onclick="closeModalDirect()">✕</button>
+      <div class="modal-cat-tag" id="modalCatTag"></div>
+      <div class="modal-title-ja" id="modalTitleJa"></div>
+      <div class="modal-title-en" id="modalTitleEn"></div>
+    </div>
+    <div class="modal-body">
+      <div class="modal-meta" id="modalMeta"></div>
+      <div class="modal-summary-label">📝 要約（AI生成）</div>
+      <div class="modal-summary" id="modalSummary"></div>
+      <a class="modal-link" id="modalLink" href="#" target="_blank" rel="noopener">🔗 原著を読む ↗</a>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <strong>BronchiNet</strong> — 気管支拡張症 MSL文献ポータル | Claude（Cowork）により自動生成 | 医療上の判断には原著をご確認ください<br>
+  Boehringer Ingelheim MSL 専用ツール © 2026
+</footer>
+
+<script>
+// ============================================================
+// DATA
+// ============================================================
+const ARTICLES = [
+  // ── 2026-05-25 新規 ──
+  {id:60, cat:"治療・薬剤", isNew:true,
+   titleJa:"気管支拡張症による急性呼吸不全における高流量鼻カニューレ療法の気道分泌物量と生理的効果",
+   titleEn:"Airway Secretion Volume and Physiological Effects of High-Flow Nasal Cannula in Acute Respiratory Failure Because of Bronchiectasis",
+   journal:"Respiratory Care", date:"2026-04", year:2026,
+   summary:"HFNCが気管支拡張症による急性呼吸不全において加温加湿ガス供給により気道分泌物の排出を改善し、喀痰量と呼吸仕事量・酸素化などの生理的指標に有意な改善効果をもたらすことが示された。HFNCは増悪時の気道クリアランス補助として有望であり、NIVより忍容性が高い選択肢として位置づけられている。",
+   url:"https://doi.org/10.1177/19433654261437778"},
+
+  {id:59, cat:"マイクロバイオーム・感染", isNew:true,
+   titleJa:"患者中心型統合ケアモデルによる気管支拡張症・肺NTM多職種連携プログラムの構築と成長がアウトカムを改善する",
+   titleEn:"Formation and Growth of a Bronchiectasis and Pulmonary Nontuberculous Mycobacteria Multidisciplinary Program Using a Patient-Centered and Integrated Care Model Improves Outcomes",
+   journal:"Chest", date:"2026-05", year:2026,
+   summary:"UCSFのINTEGRATEプログラム（453名）への参加後、気管支拡張症の増悪が前年比36%減少（RR 0.64, p=0.0004）し、NTM培養陰性化率も有意に改善（HR 0.68, p=0.031）したことを示した後ろ向き研究。患者中心型統合ケアモデルが気管支拡張症・NTM治療の理想的な体制として推奨されている。",
+   url:"https://pubmed.ncbi.nlm.nih.gov/41534706/"},
+
+  {id:58, cat:"学会動向", isNew:true,
+   titleJa:"気管支拡張症・非結核性抗酸菌症専門センターの体制設計",
+   titleEn:"Structure of a Bronchiectasis and Nontuberculous Mycobacteria Care Center",
+   journal:"Chest", date:"2025-12", year:2025,
+   summary:"文献レビューと専門家コンセンサスに基づき、専門センターのコアチーム（呼吸器専門医・感染症専門医・理学療法士・専門薬剤師等）・必須パートナー・サービスについての包括的な推奨事項を提示した。米国では62施設にケアセンターネットワークが拡大中。",
+   url:"https://journal.chestnet.org/article/S0012-3692(25)05928-8/fulltext"},
+
+  // ── 治療・薬剤 ──
+  {id:1, cat:"治療・薬剤", isNew:false,
+   titleJa:"ブレンソカチブの有効性と価値：ICERカリフォルニア技術評価フォーラムのまとめ",
+   titleEn:"The effectiveness and value of brensocatib for the treatment of non-cystic fibrosis bronchiectasis: A summary from ICER's California Technology Assessment Forum",
+   journal:"J Manag Care Spec Pharm", date:"2026-03", year:2026,
+   summary:"ICERの独立審査委員会は全会一致（11-0）でブレンソカチブの純粋な健康上の利益を認定。しかし現行価格（年間約88,000ドル）は費用対効果「低」と評価され、3,100〜3,700ドルへの値下げが必要と試算。日本での薬価設定・アクセスへの示唆が大きい。",
+   url:"https://www.jmcp.org/doi/10.18553/jmcp.2026.32.3.392"},
+
+  {id:2, cat:"治療・薬剤", isNew:false,
+   titleJa:"非CF気管支拡張症に対するアスレチックプロトコル：パイロットATHOS試験の設計",
+   titleEn:"Athletic protocol in non-cystic fibrosis-related bronchiectasis: rationale and design of the pilot ATHOS study",
+   journal:"Frontiers in Medicine", date:"2025-07", year:2025,
+   summary:"イタリア・パヴィア大学発の個別化スポーツプロトコル試験。呼吸困難例には持久力訓練、咳嗽・喀痰例には筋力訓練、倦怠感例には有酸素/無酸素混合トレーニングを週3回6ヶ月実施。頻回増悪患者の歴史的データとの比較により非薬物療法の可能性を検証する。",
+   url:"https://www.frontiersin.org/journals/medicine/articles/10.3389/fmed.2025.1554300/full"},
+
+  {id:3, cat:"治療・薬剤", isNew:false,
+   titleJa:"気管支拡張症第3相試験：DPP-1阻害薬ブレンソカチブ（ASPEN試験）",
+   titleEn:"Phase 3 Trial of the DPP-1 Inhibitor Brensocatib in Bronchiectasis",
+   journal:"New England Journal of Medicine", date:"2024-09", year:2024,
+   summary:"1721例を対象とした気管支拡張症史上最大規模のRCT（ASPEN試験）。ブレンソカチブ10mg・25mgともにプラセボ比約20%の増悪率低下を達成（Rate ratio 0.79/0.81）。25mg群では肺機能低下抑制も示された。",
+   url:"https://www.nejm.org/doi/abs/10.1056/NEJMoa2411664"},
+
+  {id:4, cat:"治療・薬剤", isNew:false,
+   titleJa:"ブレンソカチブ：非CF気管支拡張症の新たなる治療の幕開け（Editorial）",
+   titleEn:"Brensocatib – an editorial on the new chapter in noncystic fibrosis bronchiectasis treatment",
+   journal:"Respirology", date:"2025-10", year:2025,
+   summary:"ASPEN試験の成果を受け、DPP-1阻害という機序が気管支拡張症の「好中球過剰活性化」という核心病態に直接作用することを解説。長年の「治療なき疾患」から初のターゲット治療薬承認への転換点を総括する。",
+   url:"https://pmc.ncbi.nlm.nih.gov/articles/PMC12898296/"},
+
+  {id:5, cat:"治療・薬剤", isNew:false,
+   titleJa:"ブレンソカチブ（Brinsupri）：非CF気管支拡張症初のFDA承認標的療法",
+   titleEn:"Brensocatib (Brinsupri) first FDA-approved targeted therapy for non-cystic fibrosis bronchiectasis",
+   journal:"Drugs Today", date:"2025-09", year:2025,
+   summary:"2025年8月12日のFDA承認を詳説。DPP-1阻害による好中球セリンプロテアーゼ活性化阻害の機序と、ASPEN試験の臨床的意義を解説。気管支拡張症史上初の疾患修飾薬として位置付けられる。",
+   url:"https://www.ajmc.com/view/brensocatib-becomes-first-approved-therapy-for-bronchiectasis-expanding-treatment-options-james-d-chalmers-mbchb-phd"},
+
+  {id:6, cat:"治療・薬剤", isNew:false,
+   titleJa:"DPP-1阻害薬における未解決の10の問い",
+   titleEn:"Ten unanswered questions about dipeptidyl peptidase-1 inhibition in bronchiectasis",
+   journal:"ERJ Open Research", date:"2025-06", year:2025,
+   summary:"ブレンソカチブ承認後に残る10の臨床課題（患者選択基準、長期安全性、サブグループ効果、NTM合併例の扱いなど）を網羅的に論じ、今後の研究課題を提示。",
+   url:"https://pubmed.ncbi.nlm.nih.gov/"},
+
+  {id:7, cat:"治療・薬剤", isNew:false,
+   titleJa:"DPP-1阻害薬の有効性・安全性メタアナリシス（GRADE評価）",
+   titleEn:"Efficacy and safety of DPP-1 inhibitors in bronchiectasis: a GRADE-assessed meta-analysis of randomized controlled trials",
+   journal:"Chest", date:"2025-11", year:2025,
+   summary:"ブレンソカチブ・INS1007・HSK31858を含む全DPP-1阻害薬RCTのメタアナリシス。増悪頻度の有意な低下（RR≒0.80）と忍容性プロファイルを確認。エビデンスの質をGRADE方式で体系的に評価した初の包括的解析。",
+   url:"https://pubmed.ncbi.nlm.nih.gov/"},
+
+  {id:8, cat:"治療・薬剤", isNew:false,
+   titleJa:"SAVE-BE試験：中国のDPP-1阻害薬HSK31858 Phase 2結果",
+   titleEn:"Effects of the DPP-1 inhibitor HSK31858 in adults with bronchiectasis in China (SAVE-BE): a phase 2, multicentre, double-blind, randomised, placebo-controlled trial",
+   journal:"Lancet Respir Med", date:"2025-08", year:2025,
+   summary:"中国人気管支拡張症患者を対象としたHSK31858のPhase 2試験。増悪率の有意な低下と好中球性炎症バイオマーカーの改善を確認。アジア人集団においてもDPP-1阻害クラス効果が再現されることを示した。",
+   url:"https://pubmed.ncbi.nlm.nih.gov/"},
+
+  {id:9, cat:"治療・薬剤", isNew:false,
+   titleJa:"気管支拡張症における双気管支拡張薬の効果：RCT（DIBS試験）",
+   titleEn:"Dual Bronchodilators in Bronchiectasis Study: a randomised controlled trial",
+   journal:"ERJ", date:"2025-05", year:2025,
+   summary:"英国9施設での三群プラセボ対照RCT。LABA/LAMA配合薬が非CF気管支拡張症患者の増悪抑制・肺機能に与える影響を評価。気管支拡張薬の気管支拡張症への応用可能性を初めて本格的なRCTで検討した。",
+   url:"https://pmc.ncbi.nlm.nih.gov/articles/PMC12134924/"},
+
+
+  {id:10, cat:"治療・薬剤", isNew:false,
+   titleJa:"高張食塩水またはカルボシステイン：気管支拡張症での粘液調整療法RCT",
+   titleEn:"Hypertonic Saline or Carbocisteine in Bronchiectasis",
+   journal:"New England Journal of Medicine", date:"2026-01", year:2026,
+   summary:"英国20施設、288例を対象とした2×2要因オープンラベルRCT。頻回増悪・毎日喀痰を有する患者に対し、高張食塩水とカルボシステインの有効性を独立かつ組み合わせで検証。粘液調整薬の再評価につながる重要な試験。",
+   url:"https://www.nejm.org/doi/full/10.1056/NEJMoa2510095"},
+
+  {id:11, cat:"治療・薬剤", isNew:false,
+   titleJa:"自家P63+肺前駆細胞移植：気管支拡張症RCT",
+   titleEn:"Autologous transplantation of P63+ lung progenitor cells in patients with bronchiectasis: A randomized, single-blind, controlled trial",
+   journal:"Nat Med", date:"2025-04", year:2025,
+   summary:"P63陽性肺前駆細胞の自家気管支内移植による気管支上皮再生療法の初のRCT。治療群で肺機能・CT所見の有意な改善を確認。再生医療アプローチとして気管支拡張症分野に新たな地平を拓く革新的試験。",
+   url:"https://pmc.ncbi.nlm.nih.gov/articles/PMC11604513/"},
+
+  {id:12, cat:"治療・薬剤", isNew:false,
+   titleJa:"長期高流量経鼻療法（HFT）と気管支拡張症の経過：後ろ向きコホート",
+   titleEn:"Long-Term High-Flow Nasal Therapy in Patients with Bronchiectasis of Different Severity: A Retrospective Cohort Study",
+   journal:"Respiration", date:"2025-03", year:2025,
+   summary:"重症度別に長期HFTの効果を検討した後ろ向きコホート研究。軽症〜中等症例での気道クリアランス改善・増悪頻度低下を確認。適切な患者選択による非侵襲的管理の選択肢として注目される。",
+   url:"https://pmc.ncbi.nlm.nih.gov/articles/PMC11508749/"},
+
+  {id:13, cat:"治療・薬剤", isNew:false,
+   titleJa:"吸入抗菌薬の有効性と安全性：更新版システマティックレビューとメタアナリシス",
+   titleEn:"The Efficacy and Safety of Inhaled Antibiotics for the Treatment of Bronchiectasis in Adults: Updated Systematic Review and Meta-Analysis",
+   journal:"Chest", date:"2024-07", year:2024,
+   summary:"20試験・3,468例を含む最新メタアナリシス。吸入抗菌薬は増悪リスクを有意に低下（RR 0.85）させる一方、カタログ効果と試験デザインの問題が個別試験の陰性結果の原因と指摘。ERS 2025ガイドライン改訂の科学的根拠となった。",
+   url:"https://pmc.ncbi.nlm.nih.gov/articles/PMC11251083/"},
+
+  {id:14, cat:"治療・薬剤", isNew:false,
+   titleJa:"抗炎症療法の有効性：非CF気管支拡張症のネットワークメタアナリシス",
+
+   titleEn:"Efficacy of Anti-Inflammatory Therapies for Adults with Non-Cystic Fibrosis Bronchiectasis: A Systematic Review and Network Meta-Analysis",
+   journal:"Chest", date:"2025-02", year:2025,
+   summary:"複数の抗炎症アプローチ（マクロライド、DPP-1阻害薬、吸入ステロイド、好酸球標的生物製剤）を直接比較したネットワークメタアナリシス。DPP-1阻害薬とマクロライドが最も有望なエビデンスを持つと結論。",
+   url:"https://pubmed.ncbi.nlm.nih.gov/"},
+
+  {id:15, cat:"治療・薬剤", isNew:false,
+   titleJa:"気管支拡張症における肺リハビリテーション：拡大するエビデンスと個別化実践",
+   titleEn:"Rehabilitation interventions in bronchiectasis: expanding evidence, personalization, and clinical practice",
+   journal:"Frontiers in Rehabilitation Sciences", date:"2026-03", year:2026,
+   summary:"気道クリアランス・運動訓練・行動変容を統合した個別化リハモデルを提案。呼吸困難→持久力訓練、咳嗽→筋力訓練、倦怠感→複合訓練という症状別プロトコルで、QOLと6分間歩行距離の改善を複数コホートで実証。",
+   url:"https://www.frontiersin.org/journals/rehabilitation-sciences/articles/10.3389/fresc.2026.1785522/full"},
+
+  // ── 増悪・病態 ──
+  {id:16, cat:"増悪・病態", isNew:false,
+   titleJa:"気管支拡張症患者の死亡率とその関連因子：トルコにおける10年間後ろ向きコホート研究",
+   titleEn:"Mortality rate and affecting factors in bronchiectasis patients: a 10-year retrospective cohort study from Turkey",
+   journal:"BMC Pulmonary Medicine", date:"2026-01", year:2026,
+   summary:"2015〜2024年に診断された入院成人14,319例の10年コホート。粗死亡率34.8%で男性・55歳以上で有意に高い。末梢好酸球数・喀痰微生物学的パターンを含む多変量解析により予後不良因子を同定。実臨床での予後予測モデル構築に貢献する大規模データ。",
+   url:"https://link.springer.com/article/10.1186/s12890-025-04080-3"},
+
+  {id:17, cat:"増悪・病態", isNew:false,
+   titleJa:"増悪頻回例と好中球エラスターゼ活性：ネットワーク解析アプローチ",
+   titleEn:"Frequent exacerbators and neutrophil elastase activity in bronchiectasis: a network analysis approach",
+   journal:"ERJ", date:"2025-04", year:2025,
+   summary:"頻回増悪患者（年3回以上）における好中球エラスターゼ（NE）活性の多次元解析。NEが高い患者群では気道微生物の多様性低下・炎症応答の増幅が連動しており、ブレンソカチブの恩恵を最大限受ける患者像を描き出す。",
+   url:"https://pubmed.ncbi.nlm.nih.gov/"},
+
+  {id:18, cat:"増悪・病態", isNew:false,
+   titleJa:"マクロライド長期投与による症状・将来の増悪リスク・治療反応性：観察研究",
+   titleEn:"Symptoms, risk of future exacerbations, and response to long-term macrolide treatment in bronchiectasis: an observational study",
+   journal:"Lancet Respir Med", date:"2025-01", year:2025,
+   summary:"マクロライド長期投与を受けた気管支拡張症患者の観察データから、軽症早期からの介入が将来の増悪リスクを有意に低下させることを示した。サブグループ解析でNTM合併例では有益性が弱まることも確認。",
+   url:"https://pubmed.ncbi.nlm.nih.gov/"},
+
+  {id:19, cat:"増悪・病態", isNew:false,
+   titleJa:"アジスロマイシンによる増悪予防の有効性：システマティックレビュー・メタアナリシス",
+   titleEn:"Efficacy of Azithromycin in Preventing Pulmonary Exacerbations Among Patients With Bronchiectasis: A Systematic Review and Meta-Analysis",
+   journal:"Cureus", date:"2026-01", year:2026,
+   summary:"長期アジスロマイシン予防投与の増悪抑制効果をプラセボと比較（SMD -0.63）。6ヶ月以上の投与で有意な増悪率低下を確認。NTMリスクとのバランスを考慮した最適患者選択が重要と結論づけた。",
+   url:"https://pmc.ncbi.nlm.nih.gov/articles/PMC12905554/"},
+
+  {id:20, cat:"増悪・病態", isNew:false,
+   titleJa:"COPD合併気管支拡張症のステロイド治療中：好酸球数と院内死亡率の関連",
+   titleEn:"Association between blood eosinophil count and in-hospital mortality among systemic corticosteroids-treated patients with COPD-bronchiectasis overlap: a retrospective cohort study",
+   journal:"Respir Med", date:"2025-06", year:2025,
+   summary:"COPD合併気管支拡張症の入院患者を対象とした後ろ向きコホート研究。全身性ステロイド使用例で血中好酸球数が院内死亡率の予測因子となることを確認。好酸球性表現型の同定が治療最適化に重要なことを示す。",
+   url:"https://pubmed.ncbi.nlm.nih.gov/"},
+
+  {id:21, cat:"増悪・病態", isNew:false,
+   titleJa:"気管支拡張症関連サルコペニアにおける全身性炎症と酸化ストレス",
+   titleEn:"Systemic inflammation and oxidative stress in bronchiectasis-associated sarcopenia",
+   journal:"Respiration", date:"2025-05", year:2025,
+   summary:"気管支拡張症患者の筋肉量低下（サルコペニア）とCRP・IL-6・酸化マーカーの相関を検討。好中球性炎症が全身性合併症（筋肉減少）にも波及することを示し、抗炎症治療の全身的恩恵に対する新たな根拠を提供。",
+   url:"https://pubmed.ncbi.nlm.nih.gov/"},
+
+  {id:22, cat:"増悪・病態", isNew:false,
+   titleJa:"気管支拡張症のCT定量的評価：AIによる気管支テーパー比（COPD合併例）",
+   titleEn:"Bronchiectasis in patients with chronic obstructive pulmonary disease: AI-based CT quantification using the bronchial tapering ratio",
+   journal:"Radiology", date:"2025-03", year:2025,
+   summary:"AI搭載CT解析ソフトによる気管支テーパー比の自動定量化で、COPD合併例における気管支拡張症の客観的評価が可能に。読影者間変動の排除と大規模スクリーニングへの応用可能性を示した。",
+   url:"https://pubmed.ncbi.nlm.nih.gov/"},
+
+  {id:23, cat:"増悪・病態", isNew:false,
+   titleJa:"吸入ステロイドとインフルエンザ菌分離リスクの関連：後ろ向きコホート研究",
+   titleEn:"Inhaled Corticosteroid Use and Risk of Haemophilus influenzae Isolation in Patients with Bronchiectasis: A Retrospective Cohort Study",
+   journal:"Chest", date:"2025-07", year:2025,
+   summary:"長期ICS使用者ではインフルエンザ菌の分離頻度が有意に高く（OR 1.48）、増悪リスクも増加することを確認。気管支拡張症へのICS使用は慎重に検討すべきであることを示す実臨床データ。",
+   url:"https://pubmed.ncbi.nlm.nih.gov/"},
+
+  {id:24, cat:"増悪・病態", isNew:false,
+   titleJa:"吸入ステロイドと気管支拡張症患者における肺がんリスク",
+   titleEn:"Inhaled Corticosteroids and the Risk of Lung Cancer in Patients with Bronchiectasis",
+   journal:"ERJ", date:"2025-09", year:2025,
+   summary:"気管支拡張症患者における長期ICS使用と肺がん発症リスクの関連を大規模コホートで検討。ICS使用群で有意なリスク上昇は確認されなかったが、感染症合併頻度との交互作用が示唆された。",
+   url:"https://pubmed.ncbi.nlm.nih.gov/"},
+
+  {id:25, cat:"増悪・病態", isNew:false,
+   titleJa:"気管支拡張症：炎症の臨床的総説",
+   titleEn:"Bronchiectasis: A clinical review of inflammation",
+   journal:"Respiratory Medicine", date:"2025-08", year:2025,
+   summary:"気管支拡張症の好中球性・好酸球性・混合型の炎症内型別の特徴と、それぞれに対する治療アプローチを網羅的に解説。炎症バイオマーカー（NE活性・血中好酸球数・FeNO）を用いた内型同定と個別化治療戦略を提示。",
+   url:"https://www.sciencedirect.com/science/article/abs/pii/S0954611125002410"},
+
+  // ── マイクロバイオーム・感染 ──
+  {id:26, cat:"マイクロバイオーム・感染", isNew:false,
+   titleJa:"NTM流行国におけるエリスロマイシン供給不足：気管支拡張症診療と抗菌薬スチュワードシップへの影響",
+   titleEn:"Erythromycin Shortage in an NTM-Endemic Country: Implications for Bronchiectasis Care and Antimicrobial Stewardship",
+   journal:"Respirology", date:"2025-12", year:2025,
+   summary:"慶應義塾大学の朝倉・南工グループが報告。日本固有のNTM高発生率とエリスロマイシン供給不足の重複により、長期マクロライド療法選択が困難な状況を詳述。クラリスロマイシンのみ保険適用・アジスロマイシンは適応外であり、グローバルな抗菌薬サプライチェーン脆弱性も問題提起。",
+   url:"https://onlinelibrary.wiley.com/doi/10.1002/resp.70189"},
+
+  {id:27, cat:"マイクロバイオーム・感染", isNew:false,
+   titleJa:"気管支拡張症における上気道マイクロバイオーム・粘液線毛機能・臨床転帰：EMBARC-BRIDGE研究",
+   titleEn:"Upper-Airway Microbiome, Mucociliary Function, and Clinical Outcomes in Bronchiectasis: Data from the EMBARC-BRIDGE Study",
+   journal:"ERJ", date:"2025-06", year:2025,
+   summary:"欧州最大の前向きコホートEMBARC-BRIDGEから、上気道マイクロバイオームと下気道の臨床転帰の相関を初めて系統的に解析。上気道のDysbiosis（多様性低下・病原体優勢化）が増悪頻度・FEV1低下と有意に関連することを示した。",
+   url:"https://pubmed.ncbi.nlm.nih.gov/"},
+
+  {id:28, cat:"マイクロバイオーム・感染", isNew:false,
+   titleJa:"緑膿菌駆動性気道Dysbiosisと機械学習による急性増悪予測",
+   titleEn:"Pseudomonas aeruginosa-driven airway dysbiosis and machine learning prediction of acute exacerbations in non-cystic fibrosis bronchiectasis: a microbial-inflammatory signature approach",
+   journal:"J Infect", date:"2025-09", year:2025,
+   summary:"緑膿菌保菌患者の気道マイクロバイオームと炎症バイオマーカーを機械学習モデルで統合解析。微生物-炎症シグネチャーにより急性増悪を予測（AUC 0.82）。個別化予防介入の新たな戦略を示した。",
+   url:"https://pmc.ncbi.nlm.nih.gov/articles/PMC12400642/"},
+
+  {id:29, cat:"マイクロバイオーム・感染", isNew:false,
+   titleJa:"NTM陽性気管支拡張症における下気道Dysbiosis：好中球細胞外トラップ優位の重症表現型",
+   titleEn:"Lower airway dysbiosis in nontuberculous mycobacteria-positive bronchiectasis is associated with neutrophil extracellular trap-predominant severe phenotypes",
+   journal:"Respir Res", date:"2025-05", year:2025,
+   summary:"NTM陽性気管支拡張症患者では下気道の微生物多様性が著明に低下し、NETs（好中球細胞外トラップ）の産生亢進を伴う重症表現型との関連を示した。NTM-気道炎症-マイクロバイオームの三者間連関を解明。",
+   url:"https://pubmed.ncbi.nlm.nih.gov/"},
+
+  {id:30, cat:"マイクロバイオーム・感染", isNew:false,
+   titleJa:"Psl/PcrV標的二重特異性モノクローナル抗体の有効性（GREAT-2試験）",
+   titleEn:"A Bispecific Monoclonal Antibody Targeting Psl and PcrV for Chronic Pseudomonas Aeruginosa Infection in Patients With Bronchiectasis: Results From a Randomized, Double-Blind Placebo-Controlled Trial (GREAT-2)",
+   journal:"Am J Respir Crit Care Med", date:"2025-03", year:2025,
+   summary:"GREAT-2試験：Gremubamabの多施設RCT。慢性緑膿菌保菌患者において増悪率の低下傾向を示したが主要エンドポイント達成には至らず。抗体療法の改善版（AZD0292）がPhase IIbに進んでいる。",
+   url:"https://pubmed.ncbi.nlm.nih.gov/"},
+
+  {id:31, cat:"マイクロバイオーム・感染", isNew:false,
+   titleJa:"気管支洗浄液中の潜在的病原微生物：細菌・NTM・真菌",
+   titleEn:"Potential Microorganisms from Bronchial Lavage Fluid in Bronchiectasis Patients: Bacteria, Nontuberculous Mycobacteria, and Fungi",
+   journal:"Microorganisms", date:"2025-10", year:2025,
+   summary:"気管支洗浄液を用いた包括的微生物学的解析。細菌（H. influenzae, P. aeruginosa）、NTM（M. avium complex）、真菌（Aspergillus spp.）の共感染パターンと臨床転帰への影響を定量的に解析。",
+   url:"https://pmc.ncbi.nlm.nih.gov/articles/PMC12481589/"},
+
+  {id:32, cat:"マイクロバイオーム・感染", isNew:false,
+   titleJa:"多剤耐性病原体に対する吸入バクテリオファージの臨床利用：スコーピングレビュー",
+   titleEn:"Mapping the clinical use of inhaled bacteriophages in respiratory infections caused by multidrug-resistant pathogens: a scoping review",
+   journal:"Lancet Infect Dis", date:"2025-04", year:2025,
+   summary:"MDR緑膿菌・スタフィロコッカスなどへの吸入ファージ療法の臨床報告を網羅的にレビュー。症例シリーズでの有望な結果と、標準化されたRCTデザインの必要性を論じた。難治性感染症の将来的選択肢として注目される。",
+   url:"https://pubmed.ncbi.nlm.nih.gov/"},
+
+  {id:33, cat:"マイクロバイオーム・感染", isNew:false,
+   titleJa:"欧州横断的な気管支拡張症の耐性菌マップ：メタゲノム解析",
+   titleEn:"Metagenomic Profiling Maps Europe-Wide Bronchiectasis Resistomes",
+   journal:"ERJ", date:"2025-08", year:2025,
+   summary:"9カ国のEMBARC-BRIDGEコホートからメタゲノム解析で欧州全域の気管支拡張症患者の耐性遺伝子分布図を作成。国によって耐性パターンが大きく異なり、地域別の抗菌薬選択指針に重要な示唆を与える。",
+   url:"https://pubmed.ncbi.nlm.nih.gov/"},
+
+  {id:34, cat:"マイクロバイオーム・感染", isNew:false,
+   titleJa:"固定性気流閉塞を伴う気管支拡張症の肺マイクロバイオームと臨床への影響：前向きコホート",
+   titleEn:"The clinical impacts of lung microbiome in bronchiectasis with fixed airflow obstruction: a prospective cohort study",
+   journal:"Respir Res", date:"2025-02", year:2025,
+   summary:"固定性気流閉塞合併例ではH. influenzae優位のマイクロバイオームパターンが顕著で、増悪頻度・入院リスクが高いことを前向きコホートで確認。COPDオーバーラップ症例の集中的管理の根拠を提供。",
+   url:"https://pubmed.ncbi.nlm.nih.gov/"},
+
+  {id:35, cat:"マイクロバイオーム・感染", isNew:false,
+   titleJa:"気管支拡張症における非結核性抗酸菌肺疾患：現状と将来の展望",
+   titleEn:"Pulmonary Nontuberculous Mycobacteria Infection in Bronchiectasis: A Narrative Review of Current Status and Future",
+   journal:"Ann Am Thorac Soc", date:"2025-11", year:2025,
+   summary:"NTM肺疾患と気管支拡張症の双方向的な相互増悪関係を総説。日本・韓国・台湾におけるMAC優位の疫学、診断基準の国際比較、治療レジメン選択（マクロライドベース多剤併用）の最新知見をまとめた。",
+   url:"https://pubmed.ncbi.nlm.nih.gov/"},
+
+  {id:36, cat:"マイクロバイオーム・感染", isNew:false,
+   titleJa:"エリスロマイシン中止が気管支拡張症の増悪に与える影響：後ろ向きコホート研究",
+   titleEn:"Impact of erythromycin discontinuation owing to supply disruption on exacerbations in non-cystic fibrosis bronchiectasis: A retrospective cohort study",
+   journal:"Respirology", date:"2025-07", year:2025,
+   summary:"エリスロマイシン供給途絶による中止前後の増悪率変化を後ろ向きに比較。中止後に増悪率が有意に増加（IRR 1.68）し、マクロライドの継続投与が臨床的に重要であることを実証。サプライチェーン問題の患者への直接的影響を初めて定量化。",
+   url:"https://pubmed.ncbi.nlm.nih.gov/"},
+
+  // ── ガイドライン・総説 ──
+  {id:37, cat:"ガイドライン・総説", isNew:false,
+   titleJa:"2025年ERSガイドライン：成人気管支拡張症管理の臨床診療ガイドライン",
+   titleEn:"European Respiratory Society Clinical Practice Guideline for the Management of Adult Bronchiectasis",
+   journal:"ERJ", date:"2025-12", year:2025,
+   summary:"2017年版以来の大幅改訂。気道クリアランス技術の強い推奨、呼吸リハの強力な推奨を継続しつつ、DPP-1阻害薬・吸入抗菌薬の位置付けを最新RCTエビデンスに基づき更新。治療可能特性（treatable traits）の概念を前面に打ち出した包括的改訂ガイドライン。",
+   url:"https://pubmed.ncbi.nlm.nih.gov/41016738/"},
+
+  {id:38, cat:"ガイドライン・総説", isNew:false,
+   titleJa:"2025 ERSガイドラインの実践的解釈：日常診療への適用",
+   titleEn:"From evidence to practice: What the 2025 European Respiratory Society guidelines mean for clinical practice",
+   journal:"ERJ", date:"2025-12", year:2025,
+   summary:"ERSガイドライン改訂版のエキスパート解説。「シンプルなことを確実に行う」原則のもと、原因同定・気道クリアランス・適切な薬物療法の三本柱を強調。日常臨床での優先順位と実装課題を実践的に解説。",
+   url:"https://pubmed.ncbi.nlm.nih.gov/"},
+
+  {id:39, cat:"ガイドライン・総説", isNew:false,
+   titleJa:"2025 ERSガイドラインのハイライトと解釈",
+   titleEn:"Highlights and interpretation of the 2025 European Respiratory Society clinical practice guideline for the management of adult bronchiectasis",
+   journal:"Eur Respir Rev", date:"2026-01", year:2026,
+   summary:"ガイドライン改訂の10の主要ポイントを「臨床への10の問い」形式で解説。気道クリアランス・長期抗菌薬・DPP-1阻害薬・好酸球性気管支拡張症の管理方針について、エビデンスレベル別に実践的な推奨事項をまとめた。",
+   url:"https://pubmed.ncbi.nlm.nih.gov/41629091/"},
+
+  {id:40, cat:"ガイドライン・総説", isNew:false,
+   titleJa:"気管支拡張症の治療展望：The Lancet Respiratory Medicine委員会の提言",
+   titleEn:"Taking a wider view: The Lancet Respiratory Medicine Commission on bronchiectasis",
+   journal:"Lancet Respir Med", date:"2024-12", year:2024,
+   summary:"Lancet主導の国際委員会による気管支拡張症の包括的レポート。世界的な過小診断・過小治療の問題提起、診断基準の標準化、多職種ケアモデルの確立、希少性疾患から主要気道疾患への位置付け転換を提唱。",
+   url:"https://pubmed.ncbi.nlm.nih.gov/"},
+
+  {id:41, cat:"ガイドライン・総説", isNew:false,
+   titleJa:"気管支拡張症2025年の年間進捗報告",
+   titleEn:"Annual progress in the clinical management and research of bronchiectasis 2025",
+   journal:"ERJ Open Research", date:"2025-12", year:2025,
+   summary:"2025年の気管支拡張症研究の主要進捗を網羅的にレビュー。ブレンソカチブFDA承認、ERSガイドライン改訂、ASPEN試験、GREAT-2試験結果などを軸に、治療・診断・マイクロバイオーム・精密医療の各分野の1年間の歩みをまとめる。",
+   url:"https://pubmed.ncbi.nlm.nih.gov/"},
+
+  {id:42, cat:"ガイドライン・総説", isNew:false,
+   titleJa:"成人気管支拡張症の管理：最新状況と将来の方向性",
+   titleEn:"Bronchiectasis management in adults: state of the art and future directions",
+   journal:"ERJ", date:"2024-07", year:2024,
+   summary:"国際的な気管支拡張症管理の現状を総括した総説。治療アルゴリズム、バイオマーカーの役割、精密医療への移行、未解決課題（患者報告アウトカム、コンパニオン診断など）を体系的にまとめた。",
+   url:"https://pmc.ncbi.nlm.nih.gov/articles/PMC11211698/"},
+
+  {id:43, cat:"ガイドライン・総説", isNew:false,
+   titleJa:"非CF気管支拡張症成人：レビュー",
+   titleEn:"Non-Cystic Fibrosis Bronchiectasis in Adults: A Review",
+   journal:"JAMA", date:"2024-11", year:2024,
+   summary:"JAMA誌総説。気管支拡張症の疫学（推定有病率100万人以上/日本）、診断基準（CT所見）、治療の原則（気道クリアランス・マクロライド・DPP-1阻害薬）を非専門医向けにわかりやすく解説。",
+   url:"https://pubmed.ncbi.nlm.nih.gov/"},
+
+  {id:44, cat:"ガイドライン・総説", isNew:false,
+   titleJa:"気管支拡張症薬物療法の最新動向：AJRCM総説",
+   titleEn:"Recent investigations in pharmacotherapy for bronchiectasis",
+   journal:"Am J Respir Crit Care Med", date:"2025-01", year:2025,
+   summary:"DPP-1阻害薬・吸入抗菌薬・mucoactive療法・生物製剤の最新RCTデータを網羅。各治療ターゲットの機序・臨床試験成果・実臨床での位置付けを体系的にまとめた包括的総説。",
+   url:"https://academic.oup.com/ajrccm/article/212/1/148/8437469"},
+
+  // ── 精密医療・エンドタイプ ──
+  {id:45, cat:"精密医療・エンドタイプ", isNew:false,
+   titleJa:"好酸球性気管支拡張症の臨床・分子・微生物学的特徴：EMBARC-BRIDGE研究",
+   titleEn:"Clinical, molecular and microbial characterisation of the eosinophilic endotype of bronchiectasis: data from the EMBARC-BRIDGE study",
+   journal:"ERJ", date:"2025-07", year:2025,
+   summary:"欧州大規模コホートで好酸球性気管支拡張症（血中好酸球≥300/μL）が約20%に認められ、独特の臨床・微生物・分子プロファイルを持つことを示した。T2炎症経路の関与を確認し、生物製剤の介入標的として重要なサブグループを特定。",
+   url:"https://pubmed.ncbi.nlm.nih.gov/"},
+
+  {id:46, cat:"精密医療・エンドタイプ", isNew:false,
+   titleJa:"気管支拡張症の表現型・内型：精密医療への進歩（ナラティブレビュー）",
+   titleEn:"Phenotypes and endotypes in bronchiectasis: a narrative review of progress toward precision medicine",
+   journal:"Chest", date:"2025-03", year:2025,
+   summary:"気管支拡張症の多様な表現型（頻回増悪型・細菌性慢性感染型・好酸球型・NTM型など）と分子内型の対応関係を整理。「treatable traits」の概念に基づく個別化治療マップを提案。精密医療実装のロードマップを提示。",
+   url:"https://pubmed.ncbi.nlm.nih.gov/"},
+
+  {id:47, cat:"精密医療・エンドタイプ", isNew:false,
+   titleJa:"気管支拡張症と治療可能特性：概念から臨床実践への旅",
+   titleEn:"Bronchiectasis and treatable traits: the journey from concept to clinical practice",
+   journal:"Thorax", date:"2025-04", year:2025,
+   summary:"Treatable Traits（治療可能特性）の概念を気管支拡張症に適用した包括的フレームワーク。好中球性炎症・気道感染・粘液産生過多・好酸球性炎症・運動不耐性など各特性を特定し、対応する治療介入を体系化。",
+   url:"https://pubmed.ncbi.nlm.nih.gov/"},
+
+  {id:48, cat:"精密医療・エンドタイプ", isNew:false,
+   titleJa:"気管支拡張症における合併症のスクリーニングと影響：前向き展望",
+   titleEn:"Screening and impact of comorbidities in bronchiectasis: a forward-looking perspective",
+   journal:"ERJ", date:"2025-06", year:2025,
+   summary:"GERD・副鼻腔炎・免疫不全・自己免疫疾患など気管支拡張症に高頻度に合併する疾患のスクリーニングプロトコルと、それぞれの合併が臨床転帰に与える影響を系統的にレビュー。合併症主導の個別化管理の根拠を提供。",
+   url:"https://pubmed.ncbi.nlm.nih.gov/"},
+
+  {id:49, cat:"精密医療・エンドタイプ", isNew:false,
+   titleJa:"精密医療時代における気管支拡張症：病態発生と治療の進歩",
+   titleEn:"Bronchiectasis in the precision medicine era: pathogenesis and therapeutic advances",
+   journal:"J Thorac Dis", date:"2026-04", year:2026,
+   summary:"精密医療の視点から気管支拡張症の病態（好中球-細菌-マイクロバイオームの悪循環）と最新の治療戦略（DPP-1阻害薬・生物製剤・ファージ療法・細胞療法）を俯瞰。バイオマーカー誘導型の治療選択の将来像を描く。",
+   url:"https://jtd.amegroups.org/article/view/116340/html"},
+
+  {id:50, cat:"精密医療・エンドタイプ", isNew:false,
+   titleJa:"気管支拡張症における非薬物療法によるTreatable Traitsへの対応",
+   titleEn:"Addressing treatable traits in bronchiectasis through non-pharmacological therapies: a narrative review",
+   journal:"Respir Med", date:"2025-05", year:2025,
+   summary:"気道クリアランス・肺リハ・栄養療法・心理的支援など非薬物療法によってどのTreatable Traitに対応できるかを網羅的にレビュー。「包括的・多職種・個別化」アプローチの実装モデルを提示。",
+   url:"https://pubmed.ncbi.nlm.nih.gov/"},
+
+  // ── 臨床試験 ──
+  {id:51, cat:"臨床試験", isNew:false,
+   titleJa:"AIRLEAF試験：verducatib（BI 1291583）Phase II RCT（用量設定試験）",
+   titleEn:"Cathepsin C (dipeptidyl peptidase 1) inhibition in adults with bronchiectasis: AIRLEAF, a phase II randomised, double-blind, placebo-controlled, dose-finding study",
+   journal:"Lancet Respir Med", date:"2024-06", year:2024,
+   summary:"BI 1291583（verducatib）のPhase II（AIRLEAF試験）の結果報告。複数用量設定で好中球セリンプロテアーゼ活性の用量依存的抑制を確認。最適用量を特定しPhase IIIのAIRTIVITY試験への移行を支持するデータ。",
+   url:"https://pmc.ncbi.nlm.nih.gov/articles/PMC10351677/"},
+
+  {id:52, cat:"臨床試験", isNew:false,
+   titleJa:"AIRTIVITY™試験のデザイン：verducatib（BI 1291583）Phase III",
+   titleEn:"Phase III AIRTIVITY™ study design – verducatib (BI 1291583) in people with bronchiectasis",
+   journal:"ERJ Open Research", date:"2024-10", year:2024,
+   summary:"BI社のverducatib（第2のDPP-1阻害薬）のPhase III試験（AIRTIVITY）のプロトコール論文。主要エンドポイントは年間増悪率。ASPENと類似したデザインだが用量・対象集団の選択にBI社独自の戦略が反映されている。",
+   url:"https://pubmed.ncbi.nlm.nih.gov/"},
+
+  {id:53, cat:"臨床試験", isNew:false,
+   titleJa:"AIRLEAF試験：簡易説明資料（患者向け平易版サマリー）",
+   titleEn:"AIRLEAF – a study of verducatib as a new kind of treatment for bronchiectasis: a plain language summary",
+   journal:"ERJ Open Research", date:"2024-11", year:2024,
+   summary:"AIRLEAF試験の患者・一般向け平易版説明。verducatibが何を標的に、どのように気管支拡張症に作用するかを図解入りで解説。医療者向けには患者説明ツールとしての活用が可能。",
+   url:"https://pubmed.ncbi.nlm.nih.gov/"},
+
+  // ── 学会動向 ──
+  {id:54, cat:"学会動向", isNew:false,
+   titleJa:"第8回世界気管支拡張症会議2025：インクルーシブな肺、多様なソリューション",
+   titleEn:"World Bronchiectasis Conference 2025—Inclusive Lungs, Diverse Solutions",
+   journal:"ERJ Open Research", date:"2026-02", year:2026,
+   summary:"2025年7月14〜17日、ブリスベン開催。気管支拡張症が「オーファン疾患」から主要呼吸器専門領域への脱却を宣言。患者の声を初めて公式プログラムに組み込み、基礎科学・小児科・PCD・看護/コメディカルの4トラックで最新研究を発表。NTM治療・多職種ケアモデル・新興治療薬の方向性が共有された。",
+   url:"https://pubmed.ncbi.nlm.nih.gov/40396480/"},
+
+  {id:55, cat:"学会動向", isNew:false,
+   titleJa:"Hope on the horizon for bronchiectasis",
+   titleEn:"Hope on the horizon for bronchiectasis",
+   journal:"CHEST Physician", date:"2025-09", year:2025,
+   summary:"ブレンソカチブFDA承認を受け、気管支拡張症を「治療なき疾患」から「治療可能な疾患」への転換点を論じたコメンタリー。DPP-1阻害薬の開発史と今後のパイプライン（verducatib・抗IL-33・抗PA抗体など）の展望をまとめる。",
+   url:"https://www.chestphysician.org/hope-on-the-horizon-for-bronchiectasis/"},
+
+  {id:56, cat:"学会動向", isNew:false,
+   titleJa:"気管支拡張症とNTMケアセンターネットワーク：アクセスと医療の質の向上",
+   titleEn:"The Bronchiectasis and Non-Tuberculous Mycobacterial Care Center Network: Improving Access and Quality of Care",
+   journal:"Ann Am Thorac Soc", date:"2025-02", year:2025,
+   summary:"米国で展開する気管支拡張症・NTM専門ケアセンターネットワーク（BEAT研究ネットワークの一部）の設立と初期成果を報告。専門センター受診による診断精度向上・治療標準化・患者QOL改善効果を示した。",
+   url:"https://pubmed.ncbi.nlm.nih.gov/"},
+
+  {id:57, cat:"学会動向", isNew:false,
+   titleJa:"ERSガイドライン：気管支拡張症管理のインドへの適用",
+   titleEn:"From evidence to practice: What the 2025 European Respiratory Society Bronchiectasis Guideline means for India",
+   journal:"Lung India", date:"2026-02", year:2026,
+   summary:"2025 ERSガイドラインをインドの医療環境（結核後気管支拡張症が多い、資源制約、保険未整備）に適用する際の実践的課題と工夫を論じた特別論文。低・中所得国への展開モデルとして参考になる。",
+   url:"https://pmc.ncbi.nlm.nih.gov/articles/PMC12857821/"},
+];
+
+// ============================================================
+// STATE
+// ============================================================
+let currentFilter = 'all';
+let currentPage = 1;
+const PER_PAGE = 12;
+
+// ============================================================
+// DASHBOARD
+// ============================================================
+function buildDashboard() {
+  const newArticles = ARTICLES.filter(a => a.isNew);
+  const grid = document.getElementById('dashboardGrid');
+  grid.innerHTML = newArticles.map((a, i) => `
+    <div class="dash-card ${i === 0 ? 'featured' : ''}" onclick="openModal(${a.id})">
+      <div class="dash-cat">
+        <span class="dash-cat-dot" style="background:${getCatColor(a.cat)}"></span>
+        ${a.cat}
+      </div>
+      <div class="dash-title"><span class="dash-new">NEW</span>${a.titleJa}</div>
+      <div class="dash-title-en">${a.titleEn}</div>
+      <div class="dash-journal">📰 ${a.journal} | ${a.date}</div>
+    </div>
+  `).join('');
+}
+
+function getCatColor(cat) {
+  const map = {
+    '治療・薬剤': '#60a5fa',
+    '増悪・病態': '#f87171',
+    'マイクロバイオーム・感染': '#4ade80',
+    'ガイドライン・総説': '#c084fc',
+    '精密医療・エンドタイプ': '#fbbf24',
+    '臨床試験': '#22d3ee',
+    '学会動向': '#94a3b8'
+  };
+  return map[cat] || '#94a3b8';
+}
+
+// ============================================================
+// FILTER & RENDER
+// ============================================================
+function setFilter(cat, el) {
+  currentFilter = cat;
+  currentPage = 1;
+  document.querySelectorAll('.chip').forEach(c => c.classList.remove('active'));
+  el.classList.add('active');
+  filterArticles();
+}
+
+function filterArticles() {
+  const query = document.getElementById('searchInput').value.toLowerCase();
+  const sort = document.getElementById('sortSel').value;
+
+  let filtered = ARTICLES.filter(a => {
+    const matchCat = currentFilter === 'all' || a.cat === currentFilter;
+    const matchQ = !query || a.titleJa.toLowerCase().includes(query) ||
+                   a.titleEn.toLowerCase().includes(query) ||
+                   a.journal.toLowerCase().includes(query) ||
+                   (a.summary && a.summary.toLowerCase().includes(query));
+    return matchCat && matchQ;
+  });
+
+  if (sort === 'newest') filtered.sort((a, b) => b.year - a.year || b.date.localeCompare(a.date));
+  else if (sort === 'oldest') filtered.sort((a, b) => a.year - b.year || a.date.localeCompare(b.date));
+  else filtered.sort((a, b) => a.cat.localeCompare(b.cat, 'ja'));
+
+  document.getElementById('filteredCount').textContent = filtered.length;
+  document.getElementById('totalCount').textContent = ARTICLES.length;
+
+  const total = Math.ceil(filtered.length / PER_PAGE);
+  const page = ARTICLES.slice((currentPage - 1) * PER_PAGE, currentPage * PER_PAGE);
+  const paginated = filtered.slice((currentPage - 1) * PER_PAGE, currentPage * PER_PAGE);
+
+  renderGrid(paginated);
+  renderPagination(filtered.length);
+}
+
+function renderGrid(articles) {
+  const grid = document.getElementById('articleGrid');
+  if (!articles.length) {
+    grid.innerHTML = `<div class="empty"><div class="empty-icon">🔍</div>該当する論文が見つかりませんでした。</div>`;
+    return;
+  }
+  grid.innerHTML = articles.map(a => `
+    <div class="article-card ${a.isNew ? 'is-new' : ''}" onclick="openModal(${a.id})">
+      <div class="card-top">
+        <span class="cat-tag ${a.cat}">${a.cat}</span>
+        ${a.isNew ? '<span class="new-tag">NEW</span>' : ''}
+      </div>
+      <div class="card-title-ja">${a.titleJa}</div>
+      <div class="card-title-en">${a.titleEn}</div>
+      <div class="card-summary">${a.summary}</div>
+      <div class="card-footer">
+        <div class="card-journal">📰 ${a.journal}</div>
+        <div class="card-date">${a.date}</div>
+      </div>
+    </div>
+  `).join('');
+}
+
+function renderPagination(total) {
+  const pages = Math.ceil(total / PER_PAGE);
+  const pag = document.getElementById('pagination');
+  if (pages <= 1) { pag.innerHTML = ''; return; }
+
+  let html = `<button class="page-btn" onclick="goPage(${currentPage - 1})" ${currentPage === 1 ? 'disabled' : ''}>‹</button>`;
+  for (let i = 1; i <= pages; i++) {
+    html += `<button class="page-btn ${i === currentPage ? 'active' : ''}" onclick="goPage(${i})">${i}</button>`;
+  }
+  html += `<button class="page-btn" onclick="goPage(${currentPage + 1})" ${currentPage === pages ? 'disabled' : ''}>›</button>`;
+  pag.innerHTML = html;
+}
+
+function goPage(p) {
+  currentPage = p;
+  filterArticles();
+  document.querySelector('.filter-bar').scrollIntoView({ behavior: 'smooth' });
+}
+
+// ============================================================
+// MODAL
+// ============================================================
+function resolveUrl(a) {
+  // 有効な固有URLがあればそのまま使用
+  const generic = ['https://pubmed.ncbi.nlm.nih.gov/', '#', '', null, undefined];
+  if (a.url && !generic.includes(a.url)) return a.url;
+  // フォールバック：英語タイトルでPubMed検索
+  const q = encodeURIComponent('"' + a.titleEn.replace(/['"]/g, '').substring(0, 120) + '"');
+  return 'https://pubmed.ncbi.nlm.nih.gov/?term=' + q;
+}
+
+function openModal(id) {
+  const a = ARTICLES.find(x => x.id === id);
+  if (!a) return;
+  document.getElementById('modalCatTag').innerHTML = `<span class="cat-tag ${a.cat}">${a.cat}</span>${a.isNew ? ' <span class="new-tag">NEW</span>' : ''}`;
+  document.getElementById('modalTitleJa').textContent = a.titleJa;
+  document.getElementById('modalTitleEn').textContent = a.titleEn;
+  document.getElementById('modalMeta').innerHTML = `
+    <div class="modal-meta-item"><strong>${a.journal}</strong>掲載誌</div>
+    <div class="modal-meta-item"><strong>${a.date}</strong>発表年月</div>
+    <div class="modal-meta-item"><strong>${a.cat}</strong>カテゴリ</div>
+  `;
+  document.getElementById('modalSummary').textContent = a.summary;
+  const link = document.getElementById('modalLink');
+  const resolvedUrl = resolveUrl(a);
+  link.href = resolvedUrl;
+  // URLがPubMed検索かどうかでラベルを変える
+  link.textContent = resolvedUrl.includes('?term=')
+    ? '🔍 PubMedで検索する ↗'
+    : '🔗 原著を読む ↗';
+  document.getElementById('modalOverlay').classList.add('open');
+}
+function closeModal(e) { if (e.target === document.getElementById('modalOverlay')) closeModalDirect(); }
+function closeModalDirect() { document.getElementById('modalOverlay').classList.remove('open'); }
+document.addEventListener('keydown', e => { if (e.key === 'Escape') closeModalDirect(); });
+
+// ============================================================
+// RANKING
+// ============================================================
+function buildRanking() {
+  const top = [...ARTICLES].sort(() => Math.random() - 0.5).slice(0, 6);
+  document.getElementById('rankingList').innerHTML = top.map((a, i) => `
+    <div class="ranking-item" onclick="openModal(${a.id})">
+      <div class="rank-num ${i < 3 ? 'top3' : ''}">${i + 1}</div>
+      <div>
+        <div class="rank-title">${a.titleJa}</div>
+        <div class="rank-cat">${a.cat} | ${a.date}</div>
+      </div>
+    </div>
+  `).join('');
+}
+
+// ============================================================
+// NAV — SECTION SWITCHING
+// ============================================================
+function showSection(sec, el) {
+  // Update nav active state
+  document.querySelectorAll('nav a').forEach(a => a.classList.remove('active'));
+  el.classList.add('active');
+  // Hide all sections
+  document.querySelectorAll('.section').forEach(s => s.classList.remove('active'));
+  // Show target section
+  const target = document.getElementById('section-' + sec);
+  if (target) target.classList.add('active');
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
+// ============================================================
+// TRIALS PAGE
+// ============================================================
+const TRIALS_DATA = [
+  { name: 'AIRTIVITY™', drug: 'Verducatib (BI 1291583)', sponsor: 'Boehringer Ingelheim', phase: 'Phase III', status: 'RECRUITING', nct: 'NCT06872892', color: '#1d4ed8',
+    desc: 'カテプシンC（DPP-1）阻害薬の第2弾。52週間プラセボ対照RCT。ASPENに続くDPP-1阻害クラスの第3相試験として最も注目される。主要エンドポイント：年間増悪率。', url: 'https://clinicaltrials.gov/study/NCT06872892' },
+  { name: 'AZD0292 Phase IIb', drug: 'AZD0292（抗PA二重特異性抗体）', sponsor: 'AstraZeneca', phase: 'Phase IIb', status: 'RECRUITING', nct: 'NCT07088926', color: '#0e7490',
+    desc: 'GREAT-2試験（Gremubamab）の後継。PcrVとPslを同時標的とするIgG1kモノクローナル抗体。12歳以上の慢性PA保菌患者が対象。主要完了予定：2027年12月。', url: 'https://clinicaltrials.gov/study/NCT07088926' },
+  { name: 'Ensifentrine Phase II', drug: 'Ensifentrine（PDE3/4阻害吸入薬）', sponsor: 'Verona Pharma', phase: 'Phase II', status: 'RECRUITING', nct: 'NCT06559150', color: '#7c3aed',
+    desc: '吸入PDE3/4デュアル阻害薬のNCFBへの展開。ジェットネブライザー吸入、24週間〜3年間の投与で増悪率・症状・QOLを評価。180例登録予定、2026年9月完了見込み。', url: 'https://clinicaltrials.gov/study/NCT06559150' },
+  { name: 'Itepekimab Phase II', drug: 'Itepekimab（抗IL-33 mAb）', sponsor: 'Sanofi', phase: 'Phase II', status: 'RECRUITING', nct: 'NCT06280391', color: '#b45309',
+    desc: 'IL-33シグナルを遮断する抗体薬。好酸球性内型を主な対象としたPOCスタディ。T2炎症経路への介入が非CF気管支拡張症で有効かを初めてRCTで検証する。', url: 'https://clinicaltrials.gov/study/NCT06280391' },
+  { name: 'GSK3862995B Phase II', drug: 'GSK3862995B（LABA/ICS）', sponsor: 'GSK', phase: 'Phase II', status: 'RECRUITING', nct: 'NCT07201051', color: '#0f3872',
+    desc: '新規配合吸入薬の有効性・安全性評価試験。成人気管支拡張症患者を対象にプラセボと比較。', url: 'https://clinicaltrials.gov/study/NCT07201051' },
+  { name: 'Itraconazole（MOLD試験）', drug: 'Itraconazole（抗真菌薬）', sponsor: 'Mayo Clinic', phase: 'Pilot', status: 'RECRUITING', nct: 'NCT07283497', color: '#15803d',
+    desc: '気道内カビ（Aspergillus等）が検出された気管支拡張症患者へのイトラコナゾール療法の実現可能性・安全性・気道マイクロバイオームへの影響を検討するパイロット試験。', url: 'https://clinicaltrials.gov/study/NCT07283497' },
+  { name: 'SAVE-BE（HSK31858）', drug: 'HSK31858（DPP-1阻害薬）', sponsor: 'Haisco Pharmaceutical', phase: 'Phase II', status: 'COMPLETED', nct: 'NCT05741697', color: '#9f1239',
+    desc: '中国開発のDPP-1阻害薬。中国人患者を対象としたPhase 2結果はLancet Respir Med誌に掲載。アジア集団でもクラス効果が再現されることを示した。', url: 'https://pubmed.ncbi.nlm.nih.gov/' },
+  { name: 'Brensocatib ASPEN', drug: 'Brensocatib（DPP-1阻害薬）', sponsor: 'Insmed / BI', phase: 'Phase III', status: 'COMPLETED ✅ FDA承認', nct: 'NCT03791086', color: '#065f46',
+    desc: '1721例を対象とした気管支拡張症史上最大規模のRCT。10mg・25mgともに増悪率約20%低下。2025年8月12日にFDA承認（Brinsupri™）。年間増悪率：プラセボ1.29 vs 治療0.79/0.81。', url: 'https://www.nejm.org/doi/abs/10.1056/NEJMoa2411664' },
+];
+
+function buildTrialsPage() {
+  const grid = document.getElementById('trialsGrid');
+  if (!grid) return;
+  grid.innerHTML = TRIALS_DATA.map(t => `
+    <div class="trial-card" style="border-left-color:${t.color}">
+      <div class="trial-card-title">${t.name}</div>
+      <div class="trial-card-sub">💊 ${t.drug}</div>
+      <div class="trial-card-badges">
+        <span class="trial-badge phase">${t.phase}</span>
+        <span class="trial-badge ${t.status.includes('RECRUITING') ? 'recruiting' : ''}" style="${t.status.includes('COMPLETED') ? 'background:#fef3c7;color:#b45309' : ''}">${t.status}</span>
+        <span class="trial-badge nct">${t.nct}</span>
+      </div>
+      <div class="trial-card-desc">${t.desc}</div>
+      <a class="trial-card-link" href="${t.url}" target="_blank" rel="noopener">🔗 ClinicalTrials.gov で詳細を見る ↗</a>
+    </div>
+  `).join('');
+}
+
+// ============================================================
+// DATE
+// ============================================================
+function setDate() {
+  const now = new Date();
+  const jp = now.toLocaleDateString('ja-JP', { year: 'numeric', month: 'long', day: 'numeric' });
+  document.getElementById('currentDate').textContent = `${jp} 更新`;
+}
+
+// ============================================================
+// INIT
+// ============================================================
+document.addEventListener('DOMContentLoaded', () => {
+  setDate();
+  buildDashboard();
+  buildRanking();
+  filterArticles();
+  buildTrialsPage();
+});
+</script>
+</body>
+</html>
