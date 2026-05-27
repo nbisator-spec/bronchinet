@@ -291,21 +291,21 @@
     <div class="stat-card">
       <div class="stat-icon" style="background:#dcfce7">🧪</div>
       <div>
-        <div class="stat-num">14</div>
+        <div class="stat-num" id="totalTrials">—</div>
         <div class="stat-label">注目臨床試験</div>
       </div>
     </div>
     <div class="stat-card">
       <div class="stat-icon" style="background:#fef3c7">📅</div>
       <div>
-        <div class="stat-num">7</div>
+        <div class="stat-num" id="todayArticles">—</div>
         <div class="stat-label">本日の新規論文</div>
       </div>
     </div>
     <div class="stat-card">
       <div class="stat-icon" style="background:#ede9fe">📋</div>
       <div>
-        <div class="stat-num">5</div>
+        <div class="stat-num" id="totalReports">—</div>
         <div class="stat-label">蓄積デイリーレポート</div>
       </div>
     </div>
@@ -1313,6 +1313,15 @@ let currentPage = 1;
 const PER_PAGE = 12;
 
 // ============================================================
+// STATS
+// ============================================================
+function buildStats() {
+  document.getElementById('totalArticles').textContent = ARTICLES.length;
+  document.getElementById('totalTrials').textContent = TRIALS_DATA.length;
+  document.getElementById('todayArticles').textContent = ARTICLES.filter(a => a.isNew).length;
+  document.getElementById('totalReports').textContent = document.querySelectorAll('.report-item').length;
+}
+
 // DASHBOARD
 // ============================================================
 function buildDashboard() {
@@ -1629,6 +1638,7 @@ function setDate() {
 // ============================================================
 document.addEventListener('DOMContentLoaded', () => {
   setDate();
+  buildStats();
   buildDashboard();
   buildRanking();
   filterArticles();
