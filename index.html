@@ -288,7 +288,7 @@
     <div class="stat-card" onclick="showSection('articles',document.querySelectorAll('nav a')[0]);setFilter('all',document.querySelector('.chip[data-cat=all]'))">
       <div class="stat-icon" style="background:#dbeafe">📄</div>
       <div>
-        <div class="stat-num" id="totalArticles">99</div>
+        <div class="stat-num" id="totalArticles">100</div>
         <div class="stat-label">収録論文総数</div>
       </div>
     </div>
@@ -779,6 +779,13 @@
 // DATA
 // ============================================================
 const ARTICLES = [
+  // ── 2026-05-27 新規（手動追加）──
+  {id:81, cat:"増悪・病態", isNew:true,
+   titleJa:"慢性歯周炎と気管支拡張症の双方向的関連：全国規模の人口ベースコホート研究",
+   titleEn:"Bidirectional association between chronic periodontitis and bronchiectasis: A nationwide, population-based cohort study",
+   journal:"Respiratory Medicine", date:"2026-03", year:2026,
+   summary:"韓国国民健康保険データを用いた双方向コホート研究。慢性歯周炎（CP）コホートでは気管支拡張症発症リスクがHR 3.35（95%CI 3.02–3.73）と著しく上昇し、一方気管支拡張症コホートでもCP発症リスクが有意に高かった（HR 1.07）。双方向関連が確認されたが、CPから気管支拡張症への影響がより強い。（PubMed PMID: 41862105）",
+   url:"https://doi.org/10.1016/j.rmed.2026.108782"},
   // ── COPD合併 新規追加（2026-05-27）──
   {id:80, cat:"COPD合併", isNew:true,
    titleJa:"慢性気道疾患のTreatable TraitsにおけるバイオマーカーのCOPD・気管支拡張症横断的役割",
