@@ -1463,13 +1463,21 @@ document.addEventListener('keydown', e => { if (e.key === 'Escape') closeModalDi
 // ============================================================
 // RANKING (Citation Count via Europe PMC)
 // ============================================================
-const CITATION_CACHE_KEY = 'bronchinet_citations';
+const CITATION_CACHE_KEY = 'bronchinet_citations_v2';
 const CITATION_CACHE_TTL = 24 * 60 * 60 * 1000;
 
 function extractDoi(url) {
   if (!url) return null;
-  const m = url.match(/doi\.org\/(.+)$/);
-  return m ? m[1].toLowerCase() : null;
+  // Match DOI pattern (10.XXXX/...) anywhere in the URL
+  const m = url.match(/(10\.\d{4,}\/[^\s?#"]+)/);
+  if (!m) return null;
+  return m[1].toLowerCase().replace(/\/(full|abstract|fulltext)$/, '').replace(/\/$/, '');
+}
+
+function extractPmid(url) {
+  if (!url) return null;
+  const m = url.match(/pubmed\.ncbi\.nlm\.nih\.gov\/(\d+)/);
+  return m ? m[1] : null;
 }
 
 async function fetchCitations() {
@@ -1479,23 +1487,32 @@ async function fetchCitations() {
     if ((Date.now() - (stored.ts || 0)) < CITATION_CACHE_TTL) cache = stored.data || {};
   } catch {}
 
-  const needFetch = ARTICLES.filter(a => {
-    const doi = extractDoi(a.url);
-    return doi && !(doi in cache);
-  });
+  const needDoi = ARTICLES.filter(a => { const d = extractDoi(a.url); return d && !(d in cache); });
+  const needPmid = ARTICLES.filter(a => { const p = extractPmid(a.url); return p && !(`pmid:${p}` in cache); });
 
   const batchSize = 20;
-  for (let i = 0; i < needFetch.length; i += batchSize) {
-    const batch = needFetch.slice(i, i + batchSize);
-    const dois = batch.map(a => extractDoi(a.url)).filter(Boolean);
-    const query = dois.map(d => `DOI:"${d}"`).join(' OR ');
+  const epmc = 'https://www.ebi.ac.uk/europepmc/webservices/rest/search';
+
+  for (let i = 0; i < needDoi.length; i += batchSize) {
+    const batch = needDoi.slice(i, i + batchSize);
+    const query = batch.map(a => `DOI:"${extractDoi(a.url)}"`).join(' OR ');
     try {
-      const res = await fetch(
-        `https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=${encodeURIComponent(query)}&format=json&resulttype=core&pageSize=${batchSize}`
-      );
+      const res = await fetch(`${epmc}?query=${encodeURIComponent(query)}&format=json&resulttype=core&pageSize=${batchSize}`);
       const data = await res.json();
       (data.resultList?.result || []).forEach(r => {
         if (r.doi) cache[r.doi.toLowerCase()] = r.citedByCount || 0;
+      });
+    } catch {}
+  }
+
+  for (let i = 0; i < needPmid.length; i += batchSize) {
+    const batch = needPmid.slice(i, i + batchSize);
+    const query = `(${batch.map(a => `EXT_ID:${extractPmid(a.url)}`).join(' OR ')}) AND SRC:MED`;
+    try {
+      const res = await fetch(`${epmc}?query=${encodeURIComponent(query)}&format=json&resulttype=core&pageSize=${batchSize}`);
+      const data = await res.json();
+      (data.resultList?.result || []).forEach(r => {
+        if (r.pmid) cache[`pmid:${r.pmid}`] = r.citedByCount || 0;
       });
     } catch {}
   }
@@ -1513,13 +1530,20 @@ async function buildRanking() {
   const citMap = await fetchCitations();
 
   const ranked = ARTICLES
-    .map(a => ({ ...a, cit: citMap[extractDoi(a.url)] ?? -1 }))
-    .filter(a => a.cit >= 0)
+    .map(a => {
+      const doi = extractDoi(a.url);
+      const pmid = extractPmid(a.url);
+      const cit = (doi && doi in citMap) ? citMap[doi]
+                : (pmid && `pmid:${pmid}` in citMap) ? citMap[`pmid:${pmid}`]
+                : -1;
+      return { ...a, cit };
+    })
+    .filter(a => a.cit > 0)
     .sort((a, b) => b.cit - a.cit)
     .slice(0, 8);
 
   if (ranked.length === 0) {
-    el.innerHTML = '<div style="text-align:center;padding:16px;color:var(--text-muted);font-size:12px;">データを取得できませんでした</div>';
+    el.innerHTML = '<div style="text-align:center;padding:16px;color:var(--text-muted);font-size:12px;">引用データを取得中です。しばらくお待ちください。</div>';
     return;
   }
 
