@@ -406,7 +406,7 @@
 
       <!-- RANKING -->
       <div class="sidebar-card">
-        <div class="sidebar-header purple">🏆 参照数ランキング（推定）</div>
+        <div class="sidebar-header purple">🏆 引用数ランキング</div>
         <div class="sidebar-body" id="rankingList"></div>
       </div>
 
@@ -1461,16 +1461,74 @@ function closeModalDirect() { document.getElementById('modalOverlay').classList.
 document.addEventListener('keydown', e => { if (e.key === 'Escape') closeModalDirect(); });
 
 // ============================================================
-// RANKING
+// RANKING (Citation Count via Europe PMC)
 // ============================================================
-function buildRanking() {
-  const top = [...ARTICLES].sort(() => Math.random() - 0.5).slice(0, 6);
-  document.getElementById('rankingList').innerHTML = top.map((a, i) => `
+const CITATION_CACHE_KEY = 'bronchinet_citations';
+const CITATION_CACHE_TTL = 24 * 60 * 60 * 1000;
+
+function extractDoi(url) {
+  if (!url) return null;
+  const m = url.match(/doi\.org\/(.+)$/);
+  return m ? m[1].toLowerCase() : null;
+}
+
+async function fetchCitations() {
+  let cache = {};
+  try {
+    const stored = JSON.parse(localStorage.getItem(CITATION_CACHE_KEY) || '{}');
+    if ((Date.now() - (stored.ts || 0)) < CITATION_CACHE_TTL) cache = stored.data || {};
+  } catch {}
+
+  const needFetch = ARTICLES.filter(a => {
+    const doi = extractDoi(a.url);
+    return doi && !(doi in cache);
+  });
+
+  const batchSize = 20;
+  for (let i = 0; i < needFetch.length; i += batchSize) {
+    const batch = needFetch.slice(i, i + batchSize);
+    const dois = batch.map(a => extractDoi(a.url)).filter(Boolean);
+    const query = dois.map(d => `DOI:"${d}"`).join(' OR ');
+    try {
+      const res = await fetch(
+        `https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=${encodeURIComponent(query)}&format=json&resulttype=core&pageSize=${batchSize}`
+      );
+      const data = await res.json();
+      (data.resultList?.result || []).forEach(r => {
+        if (r.doi) cache[r.doi.toLowerCase()] = r.citedByCount || 0;
+      });
+    } catch {}
+  }
+
+  try {
+    localStorage.setItem(CITATION_CACHE_KEY, JSON.stringify({ ts: Date.now(), data: cache }));
+  } catch {}
+  return cache;
+}
+
+async function buildRanking() {
+  const el = document.getElementById('rankingList');
+  el.innerHTML = '<div style="text-align:center;padding:16px;color:var(--text-muted);font-size:12px;">引用数を取得中…</div>';
+
+  const citMap = await fetchCitations();
+
+  const ranked = ARTICLES
+    .map(a => ({ ...a, cit: citMap[extractDoi(a.url)] ?? -1 }))
+    .filter(a => a.cit >= 0)
+    .sort((a, b) => b.cit - a.cit)
+    .slice(0, 8);
+
+  if (ranked.length === 0) {
+    el.innerHTML = '<div style="text-align:center;padding:16px;color:var(--text-muted);font-size:12px;">データを取得できませんでした</div>';
+    return;
+  }
+
+  el.innerHTML = ranked.map((a, i) => `
     <div class="ranking-item" onclick="openModal(${a.id})">
       <div class="rank-num ${i < 3 ? 'top3' : ''}">${i + 1}</div>
-      <div>
+      <div style="flex:1">
         <div class="rank-title">${a.titleJa}</div>
-        <div class="rank-cat">${a.cat} | ${a.date}</div>
+        <div class="rank-cat">${a.cat} | ${a.date} &nbsp;·&nbsp; <strong>${a.cit.toLocaleString()}件引用</strong></div>
       </div>
     </div>
   `).join('');
