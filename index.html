@@ -288,7 +288,7 @@
     <div class="stat-card" onclick="showSection('articles',document.querySelectorAll('nav a')[0]);setFilter('all',document.querySelector('.chip[data-cat=all]'))">
       <div class="stat-icon" style="background:#dbeafe">📄</div>
       <div>
-        <div class="stat-num" id="totalArticles">93</div>
+        <div class="stat-num" id="totalArticles">99</div>
         <div class="stat-label">収録論文総数</div>
       </div>
     </div>
@@ -779,6 +779,49 @@
 // DATA
 // ============================================================
 const ARTICLES = [
+  // ── COPD合併 新規追加（2026-05-27）──
+  {id:80, cat:"COPD合併", isNew:true,
+   titleJa:"慢性気道疾患のTreatable TraitsにおけるバイオマーカーのCOPD・気管支拡張症横断的役割",
+   titleEn:"The importance of biomarkers in the treatable-trait approach to chronic airway diseases",
+   journal:"Pulmonary Pharmacology & Therapeutics", date:"2026-02", year:2026,
+   summary:"喘息・COPD・気管支拡張症・CFにわたるTreatable Traitsアプローチにおけるバイオマーカー（血中好酸球・FeNO・定量CT・マルチオミクス）の役割を総説。COPDでの好酸球によるICS反応予測、気管支拡張症での精密治療選択への統合を提案した包括的レビュー。（PubMed PMID: 41633474）",
+   url:"https://doi.org/10.1016/j.pupt.2026.102410"},
+
+  {id:79, cat:"COPD合併", isNew:true,
+   titleJa:"慢性肺感染症における抗菌薬耐性：COPD・気管支拡張症・CFを横断する課題と展望",
+   titleEn:"Antimicrobial resistance in chronic lung infection: the road to resistance",
+   journal:"Thorax", date:"2026-04", year:2026,
+   summary:"COPD・気管支拡張症・CFにわたる慢性肺感染症の抗菌薬耐性（AMR）を総説。多剤耐性Pseudomonas等の出現が疾患重症化・死亡と直結し、マクロライド・吸入抗菌薬の長期使用が耐性促進リスクをもつことを提示。バクテリオファージ・精密医療の将来展望も論じた。（PubMed PMID: 40623822）",
+   url:"https://doi.org/10.1136/thorax-2024-222396"},
+
+  {id:78, cat:"COPD合併", isNew:true,
+   titleJa:"喘息を起点とした気道オーバーラップ症候群：COPD・気管支拡張症・OSAとの双方向性",
+   titleEn:"Airway overlap syndromes with asthma",
+   journal:"Annals of Allergy, Asthma & Immunology", date:"2025-09", year:2025,
+   summary:"COPD・気管支拡張症・閉塞性睡眠時無呼吸（OSA）と喘息のオーバーラップ症候群を包括レビュー。各オーバーラップは双方向性の関係をもち管理・予後に相互影響を及ぼす。個別化・統合的アプローチが最適診療の鍵であることを示した。（PubMed PMID: 40975490）",
+   url:"https://doi.org/10.1016/j.anai.2025.09.012"},
+
+  {id:77, cat:"COPD合併", isNew:true,
+   titleJa:"慢性閉塞性肺疾患と気管支拡張症における粘液栓形成：ナラティブレビュー",
+   titleEn:"Narrative review: mucus plugging in chronic obstructive lung diseases and bronchiectasis",
+   journal:"European Clinical Respiratory Journal", date:"2026-04", year:2026,
+   summary:"COPD・気管支拡張症・喘息にわたる粘液栓の病態・臨床的意義・治療を概説。気管支拡張症ではPA/NTM感染・増悪と相関し、COPDでは気流制限・死亡率増加と関連。デュピルマブ等生物製剤・アジスロマイシンの有効性とCTスコアリング標準化が課題。（PubMed PMID: 42038097）",
+   url:"https://doi.org/10.1080/20018525.2026.2662045"},
+
+  {id:76, cat:"COPD合併", isNew:true,
+   titleJa:"COPD・喘息・気管支拡張症の精密医療に向けた胸部CT画像解析の進歩",
+   titleEn:"Chest CT imaging toward personalized management of COPD, asthma, and bronchiectasis: pulmonologist perspectives",
+   journal:"Japanese Journal of Radiology", date:"2026-05", year:2026,
+   summary:"COPD・喘息・気管支拡張症における胸部CT定量解析（気腫・気道リモデリング・粘液栓・肺血管異常）の進歩を呼吸器内科医の視点で概説。小気道病変の間接評価・AI解析の臨床応用への課題と展望を示した京都大学からの総説。（PubMed PMID: 42183930）",
+   url:"https://doi.org/10.1007/s11604-026-02017-2"},
+
+  {id:75, cat:"COPD合併", isNew:true,
+   titleJa:"米国における気管支拡張症・COPD・喘息入院の比較：死亡率・費用・在院日数",
+   titleEn:"Hospitalisations for bronchiectasis compared to COPD and asthma in the USA",
+   journal:"ERJ Open Research", date:"2025-11", year:2025,
+   summary:"米国全支払者DB（2017-2021年, 気管支拡張症232,825例）で、気管支拡張症入院はCOPD比1.2倍・喘息比3.0倍の死亡リスク（年齢・併存症調整後）、在院日数・費用ともに最高だった。COVID-19禍でも入院減少は8%（COPD 26%・喘息 28%）と最小で、COPD合併の有無は死亡率を変えなかった。（PubMed PMID: 41220813）",
+   url:"https://doi.org/10.1183/23120541.00048-2025"},
+
   // ── 2026-05-27 新規（追加分）──
   {id:74, cat:"精密医療・エンドタイプ", isNew:true,
    titleJa:"小児気管支拡張症のTreatable Traits：現状と提案チェックリスト",
