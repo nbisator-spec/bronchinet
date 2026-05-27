@@ -1388,17 +1388,40 @@ function filterArticles() {
   const page = ARTICLES.slice((currentPage - 1) * PER_PAGE, currentPage * PER_PAGE);
   const paginated = filtered.slice((currentPage - 1) * PER_PAGE, currentPage * PER_PAGE);
 
-  renderGrid(paginated);
+  renderGrid(paginated, currentFilter === '臨床試験');
   renderPagination(filtered.length);
 }
 
-function renderGrid(articles) {
+function renderTrialCards() {
+  return `<div style="grid-column:1/-1;padding:6px 2px 4px;font-size:11px;font-weight:700;color:var(--text-muted);border-top:2px solid #22d3ee;letter-spacing:.04em;">🧪 継続中の登録試験（ClinicalTrials.gov）</div>`
+    + TRIALS_DATA.map(t => `
+    <div class="article-card" style="border-left:4px solid ${t.color};cursor:pointer" onclick="window.open('${t.url}','_blank')">
+      <div class="card-top">
+        <span class="cat-tag 臨床試験">臨床試験</span>
+        <span class="trial-badge phase" style="margin-left:6px">${t.phase}</span>
+        <span class="trial-badge ${t.status.startsWith('RECRUITING') ? 'recruiting' : ''}"
+              style="${t.status.includes('COMPLETED') ? 'background:#fef3c7;color:#b45309;' : ''}margin-left:4px">${t.status}</span>
+      </div>
+      <div class="card-title-ja">${t.name}</div>
+      <div class="card-title-en">${t.drug} ｜ スポンサー：${t.sponsor}</div>
+      <div class="card-summary">${t.desc}</div>
+      <div class="card-footer">
+        <div class="card-journal">🔗 ClinicalTrials.gov</div>
+        <div class="card-date" style="font-family:monospace;color:var(--primary)">${t.nct} ↗</div>
+      </div>
+    </div>
+  `).join('')
+    + `<div style="grid-column:1/-1;padding:6px 2px 4px;font-size:11px;font-weight:700;color:var(--text-muted);border-top:1px solid var(--border);margin-top:8px;letter-spacing:.04em;">📚 関連論文</div>`;
+}
+
+function renderGrid(articles, showTrials = false) {
   const grid = document.getElementById('articleGrid');
-  if (!articles.length) {
+  let html = showTrials ? renderTrialCards() : '';
+  if (!articles.length && !showTrials) {
     grid.innerHTML = `<div class="empty"><div class="empty-icon">🔍</div>該当する論文が見つかりませんでした。</div>`;
     return;
   }
-  grid.innerHTML = articles.map(a => `
+  html += articles.map(a => `
     <div class="article-card ${a.isNew ? 'is-new' : ''}" onclick="openModal(${a.id})">
       <div class="card-top">
         <span class="cat-tag ${a.cat}">${a.cat}</span>
@@ -1413,6 +1436,7 @@ function renderGrid(articles) {
       </div>
     </div>
   `).join('');
+  grid.innerHTML = html;
 }
 
 function renderPagination(total) {
