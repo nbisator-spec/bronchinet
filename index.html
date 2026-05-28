@@ -279,9 +279,9 @@
     <div class="dashboard-header">
       <div class="dashboard-title">
         🔥 本日のハイライト
-        <span class="dashboard-badge">NEW 23件</span>
+        <span class="dashboard-badge">NEW 3件</span>
       </div>
-      <div class="dashboard-date">最終更新：2026年5月28日 08:04 自動生成</div>
+      <div class="dashboard-date">最終更新：2026年5月29日 08:04 自動生成</div>
     </div>
     <div class="dashboard-grid" id="dashboardGrid"></div>
   </div>
@@ -425,6 +425,13 @@
       <div class="sidebar-card">
         <div class="sidebar-header orange">📅 デイリーレポート履歴</div>
         <div class="sidebar-body">
+          <div class="report-item">
+            <div>
+              <div class="report-date">2026年5月29日</div>
+              <div class="report-count">新規3件収録</div>
+            </div>
+            <span class="report-link" onclick="showSection('reports',document.querySelectorAll('nav a')[3])">▶ 開く</span>
+          </div>
           <div class="report-item">
             <div>
               <div class="report-date">2026年5月28日</div>
@@ -574,6 +581,34 @@
   <div class="reports-page-header">
     <h2>📝 デイリーレポート アーカイブ</h2>
     <p>毎朝8時に自動生成される文献サマリーの履歴。既読除外機能により、常に新規情報のみを収録しています。</p>
+  </div>
+
+  <!-- Report 2026-05-29 -->
+  <div class="report-card">
+    <div class="report-card-header">
+      <div>
+        <div class="report-card-date">📅 2026年5月29日</div>
+        <div style="font-size:12px;color:var(--text-muted);margin-top:3px;">除外済み：214論文 / 64試験</div>
+      </div>
+      <span class="report-card-count">新規 3件</span>
+    </div>
+    <ul class="report-highlight-list">
+      <li>
+        <span class="report-num">1</span>
+        <span class="report-cat-inline" style="background:#fee2e2;color:#b91c1c">増悪・病態</span>
+        <span>ドイツPROGNOSISレジストリ（38施設・1500名超）：参加中に増悪・入院が有意減少、肺機能安定維持。病因特定に基づく個別化管理の重要性を示した。<em>（ERJ Open Res, 2026）</em></span>
+      </li>
+      <li>
+        <span class="report-num">2</span>
+        <span class="report-cat-inline" style="background:#fee2e2;color:#b91c1c">増悪・病態</span>
+        <span>BAE後喀血再発の予測因子：426例の後方視的解析で体肺動脈シャントとTPR上昇が独立した再発リスク因子として同定。術前血行動態評価の重要性を示した。<em>（J Thorac Dis, 2026）</em></span>
+      </li>
+      <li>
+        <span class="report-num">3</span>
+        <span class="report-cat-inline" style="background:#ede9fe;color:#6d28d9">ガイドライン・総説</span>
+        <span>アイルランド・ゴールウェイ大グループによる非CF気管支拡張症の包括的臨床アップデート。brensocatib承認後の治療パラダイムを整理。<em>（QJM, 2026）</em></span>
+      </li>
+    </ul>
   </div>
 
   <!-- Report 2026-05-28 -->
@@ -858,141 +893,160 @@
 // DATA
 // ============================================================
 const ARTICLES = [
+  // ── 2026-05-29 新規 ──
+  {id:198, cat:"増悪・病態", isNew:true,
+   titleJa:"ドイツ気管支拡張症レジストリ参加と疾患経過との関連（PROGNOSISレジストリ）",
+   titleEn:"Association of German Bronchiectasis Registry participation with disease course",
+   journal:"ERJ Open Research", date:"2026-05-26", year:2026,
+   summary:"38施設・1500名超のドイツPROGNOSISレジストリ解析。レジストリ参加中に増悪回数（中央値2→1回、p<0.001）・入院が有意に減少し、肺機能は安定維持。特発性症例が35→28%に減少し、病因特定に基づく個別化管理の重要性が示された。（PubMed PMID: 42206015）",
+   url:"https://pubmed.ncbi.nlm.nih.gov/42206015/"},
+  {id:197, cat:"増悪・病態", isNew:true,
+   titleJa:"気管支拡張症患者における血管インターベンション（BAE）後の反復喀血の血行動態的特徴",
+   titleEn:"The hemodynamic and clinical characteristics of recurrent hemoptysis in bronchiectasis patients after vascular intervention procedures",
+   journal:"Journal of Thoracic Disease", date:"2026-04-27", year:2026,
+   summary:"BAE施行426例を中央値2年追跡した後方視的研究で、26.5%が喀血再発。多変量Cox回帰にて体肺動脈シャント（HR=2.43）と全肺血管抵抗（TPR）上昇が独立した再発予測因子として同定され、BAE前の血行動態評価の重要性が示された。（PubMed PMID: 42182664）",
+   url:"https://pubmed.ncbi.nlm.nih.gov/42182664/"},
+  {id:196, cat:"ガイドライン・総説", isNew:true,
+   titleJa:"非嚢胞性線維症気管支拡張症：最新臨床アップデート（QJM 2026）",
+   titleEn:"Update on Non-Cystic Fibrosis Bronchiectasis",
+   journal:"QJM: Monthly Journal of the Association of Physicians", date:"2026-04-29", year:2026,
+   summary:"アイルランド・ゴールウェイ大学病院のグループによるNCFBの包括的臨床レビュー。疫学・診断・気道クリアランス・抗菌療法・brensocatib等の新規治療を網羅的にアップデート。（PubMed PMID: 42057306）",
+   url:"https://pubmed.ncbi.nlm.nih.gov/42057306/"},
   // ── 2026-05-28 新規（補足） ──
-  {id:195, cat:"増悪・病態", isNew:true,
+  {id:195, cat:"増悪・病態", isNew:false,
    titleJa:"カルタゲナー症候群患者に対する両側肺移植後7年経過報告",
    titleEn:"A Case Report: Seven-Year Follow-Up of a Patient With Kartagener Syndrome Undergoing Bilateral Lung Transplantation",
    journal:"Transplantation Proceedings", date:"2026-05", year:2026,
    summary:"気管支拡張症を主病態とするカルタゲナー症候群の末期呼吸不全患者に両側肺移植を施行し7年間追跡した症例報告。手術・術後の複数の課題を乗り越えQoLが著明に改善し、PCD関連気管支拡張症の終末期治療として肺移植の有効性と課題を示した。（PubMed PMID: 42144294）",
    url:"https://pubmed.ncbi.nlm.nih.gov/42144294/"},
-  {id:194, cat:"ガイドライン・総説", isNew:true,
+  {id:194, cat:"ガイドライン・総説", isNew:false,
    titleJa:"2025年にEMA・FDA・MHRAが承認した新薬：年次レビュー（brensocatib承認含む）",
    titleEn:"Novel drugs approved by the EMA, the FDA and the MHRA in 2025: A year in review",
    journal:"British Journal of Pharmacology", date:"2026-03", year:2026,
    summary:"2025年承認の46種の新薬を包括的にレビュー。気管支拡張症分野では、DPP1阻害薬brensocatibがFDA承認を取得し、好中球プロテアーゼ活性化を阻害して肺組織破壊を防ぐ初の標的治療として紹介。54%がファーストインクラス薬という高水準の年となった。（PubMed PMID: 41771767）",
    url:"https://pubmed.ncbi.nlm.nih.gov/41771767/"},
-  {id:193, cat:"日本発", isNew:true,
+  {id:193, cat:"日本発", isNew:false,
    titleJa:"日本人ANCA関連血管炎患者におけるANCAサブタイプ別の胸部HRCT所見の差異（日本発）",
    titleEn:"Differences in chest HRCT findings in relation to ANCA subtypes in ANCA-associated vasculitis",
    journal:"Respiratory Investigation", date:"2026-05", year:2026,
    summary:"日本人AAV患者195例（RemIT-JAV-RPGNコホート）のHRCT所見を系統的に解析。牽引性気管支拡張（34%）はMPO-ANCA陽性例で多く、UIPパターン間質性肺炎はMPO群で有意に高頻度（47% vs 11%）。ANCAサブタイプにより肺病変パターンが明確に異なることを示した。（PubMed PMID: 42068960）",
    url:"https://pubmed.ncbi.nlm.nih.gov/42068960/"},
-  {id:192, cat:"増悪・病態", isNew:true,
+  {id:192, cat:"増悪・病態", isNew:false,
    titleJa:"英国のX連鎖無ガンマグロブリン血症患者における生活の質：気管支拡張症の影響",
    titleEn:"Quality of life of X-linked agammaglobulinemia patients in the United Kingdom",
    journal:"Journal of Human Immunity", date:"2026-02", year:2026,
    summary:"英国XLA患者のHRQoLを調査。気管支拡張症非合併例では健常者と同等のHRQoLだが、合併例では身体機能スコアが有意に低下（PCS 47.88 vs 55.14, p<0.001）。原発性免疫不全症における気管支拡張症予防の重要性を定量的に示した。（PubMed PMID: 42169998）",
    url:"https://pubmed.ncbi.nlm.nih.gov/42169998/"},
-  {id:191, cat:"マイクロバイオーム・感染", isNew:true,
+  {id:191, cat:"マイクロバイオーム・感染", isNew:false,
    titleJa:"気管支肺胞洗浄を活用したアレルギー性気管支肺アスペルギルス症の診断：症例報告",
    titleEn:"Allergic Bronchopulmonary Aspergillosis Aided by Bronchoalveolar Lavage: A Case Report",
    journal:"Journal of Visualized Experiments", date:"2026-05", year:2026,
    summary:"感染性気管支拡張症として10年間誤診されていた22歳男性にABPAを確定診断した症例。HRCT・気管支鏡・BALF中ガラクトマンナン・tNGSを統合した多段階診断ワークフローを構築し、早期抗炎症・抗真菌療法開始により臨床改善を達成した。（PubMed PMID: 42184259）",
    url:"https://pubmed.ncbi.nlm.nih.gov/42184259/"},
-  {id:190, cat:"マイクロバイオーム・感染", isNew:true,
+  {id:190, cat:"マイクロバイオーム・感染", isNew:false,
    titleJa:"アレルギー性気管支肺アスペルギルス症（ABPA）統合中西医診療コンセンサス2026年版",
    titleEn:"[Expert consensus on the diagnosis and treatment of allergic bronchopulmonary aspergillosis with integrated traditional Chinese and western medicine (2026 edition)]",
    journal:"Zhonghua Yi Xue Za Zhi", date:"2026-05", year:2026,
    summary:"喘息患者の1.0〜3.5%・嚢胞性線維症の7〜15%に発症するABPAの統合診療コンセンサスを策定。気管支拡張症合併を特徴とし、コルチコステロイド・抗真菌薬を基本にオマリズマブ等の生物学的製剤と漢方医学的アプローチを組み合わせた診断・管理戦略を体系化した。（PubMed PMID: 42103676）",
    url:"https://pubmed.ncbi.nlm.nih.gov/42103676/"},
-  {id:189, cat:"増悪・病態", isNew:true,
+  {id:189, cat:"増悪・病態", isNew:false,
    titleJa:"小児の原発性線毛機能不全症：微小運動疾患の包括的レビュー",
    titleEn:"Primary ciliary dyskinesia in pediatric persons: A microscopic movement malady",
    journal:"Disease-a-Month", date:"2026-05", year:2026,
    summary:"50以上の遺伝子・2000以上の病原性変異が関与するPCDの病態・診断・治療を包括的に解説。気管支拡張症が主要合併症であり、nasal NO・TEM・免疫蛍光・HSVMAを組み合わせた多角的診断が不可欠。遺伝子治療を含む将来的治療の展望も論じている。（PubMed PMID: 42135132）",
    url:"https://pubmed.ncbi.nlm.nih.gov/42135132/"},
-  {id:188, cat:"増悪・病態", isNew:true,
+  {id:188, cat:"増悪・病態", isNew:false,
    titleJa:"原発性線毛機能不全症の小児における肺構造評価：SPECスコアリングシステムの検討",
    titleEn:"Structural lung assessment in children with primary ciliary dyskinesia: evaluation with the SPEC scoring system",
    journal:"European Journal of Pediatrics", date:"2026-05", year:2026,
    summary:"PCD小児47例でPCD特異的CTスコアリング「SPEC」を検証。SPECスコアはFEV₁z-score（ρ=-0.748）・FVCz-score（ρ=-0.722）と強い負の相関を示し、既存のBhalla・modified Brodyスコアとも高い相関。小児PCD患者の治療意思決定と臨床試験転帰指標としての有用性が示された。（PubMed PMID: 42133077）",
    url:"https://pubmed.ncbi.nlm.nih.gov/42133077/"},
   // ── 2026-05-28 新規 ──
-  {id:187, cat:"ガイドライン・総説", isNew:true,
+  {id:187, cat:"ガイドライン・総説", isNew:false,
    titleJa:"慢性咳嗽の診断・治療に対する呼吸器内科医のアプローチ",
    titleEn:"The Pulmonologist's Approach to the Diagnosis and Treatment of Cough",
    journal:"Otolaryngologic Clinics of North America", date:"2026-05", year:2026,
    summary:"慢性咳嗽の多因子的な病態と原因診断戦略を呼吸器内科の観点から体系的に総説。気管支拡張症・喘息・気管支炎などの鑑別アルゴリズムを整理し、難治性咳嗽に対する段階的な専門的アプローチを提示した。（PubMed PMID: 42161710）",
    url:"https://pubmed.ncbi.nlm.nih.gov/42161710/"},
-  {id:186, cat:"日本発", isNew:true,
+  {id:186, cat:"日本発", isNew:false,
    titleJa:"DRC1変異による原発性繊毛機能不全の初の新生児症例（日本発）",
    titleEn:"First neonatal case of primary ciliary dyskinesia caused by a pathogenic DRC1 variant presenting with recurrent atelectasis and airway hypersecretion: a case report and literature review",
    journal:"BMC Pediatrics", date:"2026-05", year:2026,
    summary:"東アジアに多いDRC1遺伝子変異によるPCDが新生児期に反復無気肺・気道過分泌として発症した日本初の症例報告。PCDは典型的な内臓逆位を欠く場合、新生児期に見逃されやすく、早期遺伝子診断の重要性を強調した。（PubMed PMID: 42185991）",
    url:"https://pubmed.ncbi.nlm.nih.gov/42185991/"},
-  {id:185, cat:"日本発", isNew:true,
+  {id:185, cat:"日本発", isNew:false,
    titleJa:"DNAAF11大欠失とナンセンス変異による原発性繊毛機能不全（日本発）",
    titleEn:"Primary Ciliary Dyskinesia Caused by a Heterozygous Large Deletion in DNAAF11 Accompanied by a Hemizygous Nonsense Variant: A Case Report from Japan",
    journal:"Internal Medicine (Tokyo)", date:"2025", year:2025,
    summary:"46歳男性のPCDをDNAAF11遺伝子の大欠失（エクソン5〜11）とヘミ接合性ナンセンス変異の複合として同定した日本初の詳細報告。ロングリードシーケンシングが希少な構造的変異の診断に有効であり、不明原因の気管支拡張症患者へのゲノム解析の重要性を示した。（PubMed PMID: 41062319）",
    url:"https://pubmed.ncbi.nlm.nih.gov/41062319/"},
-  {id:184, cat:"精密医療・エンドタイプ", isNew:true,
+  {id:184, cat:"精密医療・エンドタイプ", isNew:false,
    titleJa:"成人喘息患者におけるアレルギー性気管支肺アスペルギルス症（ABPA）の放射線学的所見",
    titleEn:"Radiological manifestations of allergic bronchopulmonary aspergillosis in adult asthmatic patients",
    journal:"Monaldi Archives for Chest Disease", date:"2026-05", year:2026,
    summary:"ABPA成人喘息患者の特徴的なCT・X線所見を整理し、気管支拡張症を含む各種画像パターンの発現頻度と診断的意義を報告。ABPAの早期診断と治療開始タイミングにおける画像所見の役割を考察した。（PubMed PMID: 42099257）",
    url:"https://pubmed.ncbi.nlm.nih.gov/42099257/"},
-  {id:183, cat:"精密医療・エンドタイプ", isNew:true,
+  {id:183, cat:"精密医療・エンドタイプ", isNew:false,
    titleJa:"非CF気管支拡張症小児におけるFeNO：病因・肺機能・CT範囲との関連",
    titleEn:"Fractional Exhaled Nitric Oxide in Children with Non-Cystic Fibrosis Bronchiectasis: Associations with Etiology, Lung Function, and CT Extent",
    journal:"Pediatric Reports", date:"2026-05", year:2026,
    summary:"6〜18歳の非CF気管支拡張症小児100例でFeNOを測定し病因・肺機能・CT所見との関連を検討。FeNOはFEV1・FVCと正相関し喘息合併例で高値を示したが、CT病変範囲との相関は認めず、FeNOはT2炎症フェノタイプのマーカーとして有用と結論した。（PubMed PMID: 42201195）",
    url:"https://pubmed.ncbi.nlm.nih.gov/42201195/"},
-  {id:182, cat:"COPD合併", isNew:true,
+  {id:182, cat:"COPD合併", isNew:false,
    titleJa:"α1アンチトリプシン欠乏症における肺気腫・気管支壁肥厚・粘液栓のCT定量解析と臨床アウトカムとの関連",
    titleEn:"Quantitative CT of emphysema, wall thickness and mucus plugs in alpha-1-antitrypsin deficiency: relationship to clinical outcomes",
    journal:"European Radiology", date:"2025", year:2025,
    summary:"AATD患者のHR-CTで肺気腫・気管支壁肥厚（気管支拡張症）・粘液栓を定量解析し臨床アウトカムとの関連を検討。粘液栓が増悪頻度・死亡率と独立して関連し、AATD患者での気管支拡張症状態の早期把握の重要性を示した。（PubMed PMID: 41364209）",
    url:"https://pubmed.ncbi.nlm.nih.gov/41364209/"},
-  {id:181, cat:"マイクロバイオーム・感染", isNew:true,
+  {id:181, cat:"マイクロバイオーム・感染", isNew:false,
    titleJa:"緑膿菌感染に対する外来点滴抗菌薬療法（OPAT）の有効性と安全性",
    titleEn:"Outpatient Parenteral Antimicrobial Therapy for Pseudomonas aeruginosa Infections: Effectiveness and Safety",
    journal:"Pharmaceutics", date:"2026-05", year:2026,
    summary:"慢性肺疾患（気管支拡張症含む）患者の緑膿菌感染症に対するOPATの前向き観察研究。実臨床でのOPAT有効性・安全性プロファイルを示し、入院期間短縮と医療コスト削減への寄与を支持するエビデンスを提供した。（PubMed PMID: 42198243）",
    url:"https://pubmed.ncbi.nlm.nih.gov/42198243/"},
-  {id:180, cat:"日本発", isNew:true,
+  {id:180, cat:"日本発", isNew:false,
    titleJa:"肺NTM疾患後に発症した顕微鏡的多発血管炎：症例報告と文献レビュー（日本発）",
    titleEn:"Microscopic Polyangiitis After Pulmonary Nontuberculous Mycobacterial Disease: A Case Report and Literature Review",
    journal:"Respirology Case Reports", date:"2026-05", year:2026,
    summary:"気管支拡張症を背景にNTM肺疾患を経過した80歳日本人女性がMPO-ANCA陽性MPA（顕微鏡的多発血管炎）を発症した症例。NTM-PD後のANCA関連血管炎という稀な合併症と、感染性増悪との鑑別の重要性を示した。（PubMed PMID: 42131077）",
    url:"https://pubmed.ncbi.nlm.nih.gov/42131077/"},
-  {id:179, cat:"日本発", isNew:true,
+  {id:179, cat:"日本発", isNew:false,
    titleJa:"若年女性のMycobacterium shinjukuense肺疾患：症例報告と文献レビュー（日本発）",
    titleEn:"Mycobacterium shinjukuense pulmonary disease in a young woman: a case report and literature review",
    journal:"BMC Infectious Diseases", date:"2026-05", year:2026,
    summary:"日本で同定された希少NTM「M. shinjukuense」による気管支拡張症背景の肺疾患症例を報告し既報を総説した日本発研究。本菌の感染特性・治療反応性についてのエビデンスは乏しく、治療指針の確立が急務であることを示した。（PubMed PMID: 42098647）",
    url:"https://pubmed.ncbi.nlm.nih.gov/42098647/"},
-  {id:178, cat:"増悪・病態", isNew:true,
+  {id:178, cat:"増悪・病態", isNew:false,
    titleJa:"非CF気管支拡張症による肺移植後にARTを経て健康児を出産：初症例",
    titleEn:"First Healthy Live Birth Achieved Through Assisted Reproductive Technologies in Türkiye After Lung Transplantation: A Case Report",
    journal:"Transplantation Proceedings", date:"2026-05", year:2026,
    summary:"非CF気管支拡張症による両側肺移植後5年の35歳女性が生殖補助医療を用いて健康児出産に成功した症例報告。肺移植後妊娠における免疫抑制薬の選択・感染対策・母児管理の詳細を記述した貴重な先例である。（PubMed PMID: 42150944）",
    url:"https://pubmed.ncbi.nlm.nih.gov/42150944/"},
-  {id:177, cat:"増悪・病態", isNew:true,
+  {id:177, cat:"増悪・病態", isNew:false,
    titleJa:"関節リウマチ関連呼吸器疾患における治療のジレンマ三角形",
    titleEn:"The therapeutic dilemma triangle in rheumatoid arthritis-related respiratory disease",
    journal:"Respiratory Investigation", date:"2026-05", year:2026,
    summary:"RAにおいて気管支拡張症・ILD・気道感染が複雑に絡み合う「治療のジレンマ」を体系的に論じた総説。免疫抑制療法の有益性と感染リスクのバランス、気管支拡張症・ILD各合併症の管理優先順位を整理した。（PubMed PMID: 41985360）",
    url:"https://pubmed.ncbi.nlm.nih.gov/41985360/"},
-  {id:176, cat:"増悪・病態", isNew:true,
+  {id:176, cat:"増悪・病態", isNew:false,
    titleJa:"閉塞性細気管支炎症候群（BOS）患者における気管支拡張症：BOSのフェノタイピングに向けて",
    titleEn:"Bronchiectasis in patients with bronchiolitis obliterans syndrome: toward phenotyping BOS?",
    journal:"Bone Marrow Transplantation", date:"2026-05", year:2026,
    summary:"造血幹細胞移植後BOS患者における気管支拡張症の合併実態と臨床的意義を検討。気管支拡張症合併BOSが特有のフェノタイプを形成する可能性を提示し、BOS診療における精密医療的アプローチへの示唆を与える。（PubMed PMID: 41888296）",
    url:"https://pubmed.ncbi.nlm.nih.gov/41888296/"},
-  {id:175, cat:"増悪・病態", isNew:true,
+  {id:175, cat:"増悪・病態", isNew:false,
    titleJa:"血漿フィブリノゲン/FeNO比（FFR）：気管支拡張症における新興バイオマーカー",
    titleEn:"Plasma Fibrinogen-to-Fractional Exhaled Nitric Oxide Ratio (FFR) as an Emerging Biomarker in Bronchiectasis",
    journal:"Journal of Clinical Medicine", date:"2026-05", year:2026,
    summary:"好中球性炎症マーカー（フィブリノゲン）と好酸球性炎症マーカー（FeNO）の比（FFR）が気管支拡張症の疾患活動性・重症度と相関することを検討した研究。FFRは炎症内型の鑑別と重症度評価に有用な新規複合バイオマーカーとなり得ることが示された。（PubMed PMID: 42123116）",
    url:"https://pubmed.ncbi.nlm.nih.gov/42123116/"},
-  {id:174, cat:"治療・薬剤", isNew:true,
+  {id:174, cat:"治療・薬剤", isNew:false,
    titleJa:"肺疾患におけるジペプチジルペプチダーゼ阻害薬の役割",
    titleEn:"The Role of Dipeptidyl Peptidase Inhibitors in Pulmonary Diseases",
    journal:"Biomedicines", date:"2026-05", year:2026,
    summary:"DPP-1・DPP-4・DPP-9・DPP-10など各種DPPファミリー酵素の肺疾患への関与を網羅的に総説。ブレンソカチブを軸とするDPP-1阻害薬の気管支拡張症への最強エビデンスを整理し、各DPPの臨床応用と今後の課題を論じている。（PubMed PMID: 42193335）",
    url:"https://pubmed.ncbi.nlm.nih.gov/42193335/"},
-  {id:173, cat:"治療・薬剤", isNew:true,
+  {id:173, cat:"治療・薬剤", isNew:false,
    titleJa:"臨床的に重症度の高い気管支拡張症を合併した喘息患者へのTSLP阻害薬（テゼペルマブ）使用：ケースシリーズ",
    titleEn:"Use of an anti-TSLP agent in patients with asthma and clinically significant bronchiectasis: a case series",
    journal:"Chest", date:"2026-05", year:2026,
