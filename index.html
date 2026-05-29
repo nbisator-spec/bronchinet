@@ -257,7 +257,7 @@
       </div>
     </a>
     <div class="header-meta">
-      <div class="header-date" id="currentDate">2026年5月28日 更新</div>
+      <div class="header-date" id="currentDate">2026年5月30日 更新</div>
     </div>
   </div>
   <nav>
@@ -279,9 +279,9 @@
     <div class="dashboard-header">
       <div class="dashboard-title">
         🔥 本日のハイライト
-        <span class="dashboard-badge">NEW 3件</span>
+        <span class="dashboard-badge">NEW 2件</span>
       </div>
-      <div class="dashboard-date">最終更新：2026年5月29日 08:04 自動生成</div>
+      <div class="dashboard-date">最終更新：2026年5月30日 08:04 自動生成</div>
     </div>
     <div class="dashboard-grid" id="dashboardGrid"></div>
   </div>
@@ -291,7 +291,7 @@
     <div class="stat-card" onclick="showSection('articles',document.querySelectorAll('nav a')[0]);setFilter('all',document.querySelector('.chip[data-cat=all]'))">
       <div class="stat-icon" style="background:#dbeafe">📄</div>
       <div>
-        <div class="stat-num" id="totalArticles">141</div>
+        <div class="stat-num" id="totalArticles">143</div>
         <div class="stat-label">収録論文総数</div>
       </div>
     </div>
@@ -425,6 +425,13 @@
       <div class="sidebar-card">
         <div class="sidebar-header orange">📅 デイリーレポート履歴</div>
         <div class="sidebar-body">
+          <div class="report-item">
+            <div>
+              <div class="report-date">2026年5月30日</div>
+              <div class="report-count">新規2件収録</div>
+            </div>
+            <span class="report-link" onclick="showSection('reports',document.querySelectorAll('nav a')[3])">▶ 開く</span>
+          </div>
           <div class="report-item">
             <div>
               <div class="report-date">2026年5月29日</div>
@@ -581,6 +588,29 @@
   <div class="reports-page-header">
     <h2>📝 デイリーレポート アーカイブ</h2>
     <p>毎朝8時に自動生成される文献サマリーの履歴。既読除外機能により、常に新規情報のみを収録しています。</p>
+  </div>
+
+  <!-- Report 2026-05-30 -->
+  <div class="report-card">
+    <div class="report-card-header">
+      <div>
+        <div class="report-card-date">📅 2026年5月30日</div>
+        <div style="font-size:12px;color:var(--text-muted);margin-top:3px;">除外済み：217論文 / 66試験</div>
+      </div>
+      <span class="report-card-count">新規 2件</span>
+    </div>
+    <ul class="report-highlight-list">
+      <li>
+        <span class="report-num">1</span>
+        <span class="report-cat-inline" style="background:#fef3c7;color:#b45309">精密医療・エンドタイプ</span>
+        <span>CFTRジェノタイプ富化から機能的・縦断的エンドタイピングへの移行を論じるコレスポンデンス。気管支拡張症精密医療における次世代エンドタイプ分類フレームワークを提示。<em>（Pulmonology, 2026-05-29）</em></span>
+      </li>
+      <li>
+        <span class="report-num">2</span>
+        <span class="report-cat-inline" style="background:#fee2e2;color:#b91c1c">増悪・病態</span>
+        <span>慢性咳嗽1,061例解析：気管支拡張症とCOPDは好中球性喀痰群で高頻度。好中球増多は換気機能（FVC・FEV₁/FVC・PEFなど）低下と独立して関連。<em>（BMC Pulm Med, 2026-05-19）</em></span>
+      </li>
+    </ul>
   </div>
 
   <!-- Report 2026-05-29 -->
@@ -893,20 +923,33 @@
 // DATA
 // ============================================================
 const ARTICLES = [
+  // ── 2026-05-30 新規 ──
+  {id:200, cat:"増悪・病態", isNew:true,
+   titleJa:"喀痰好酸球増多なし慢性咳嗽患者の臨床・表現型特徴：気管支拡張症における好中球性炎症の意義",
+   titleEn:"Clinical and phenotypic characteristics of chronic cough patients without sputum eosinophilia",
+   journal:"BMC Pulmonary Medicine", date:"2026-05-19", year:2026,
+   summary:"慢性咳嗽1,061例の解析で、気管支拡張症とCOPDは中性球性・混合白血球性喀痰群でより高頻度に認められた。喀痰好中球増多は年齢・喫煙歴調整後も複数の換気機能指標（FVC・FEV₁/FVC・PEFなど）低下と独立して関連し、気管支拡張症における好中球優位型炎症の肺機能への影響が再確認された。（PubMed PMID: 42157039）",
+   url:"https://pubmed.ncbi.nlm.nih.gov/42157039/"},
+  {id:199, cat:"精密医療・エンドタイプ", isNew:true,
+   titleJa:"CFTRジェノタイプ富化から気管支拡張症の機能的・縦断的エンドタイピングへ",
+   titleEn:"From CFTR genotype enrichment to functional and longitudinal endotyping in Bronchiectasis",
+   journal:"Pulmonology", date:"2026-05-29", year:2026,
+   summary:"気管支拡張症の表現型解析において、CFTRジェノタイプに基づくアプローチから、機能的バイオマーカーと縦断的追跡を組み合わせた動的エンドタイピング戦略への転換を論じたコレスポンデンス。精密医療実装に向けた次世代エンドタイプ分類フレームワークを提示している。（PubMed PMID: 42212955）",
+   url:"https://pubmed.ncbi.nlm.nih.gov/42212955/"},
   // ── 2026-05-29 新規 ──
-  {id:198, cat:"増悪・病態", isNew:true,
+  {id:198, cat:"増悪・病態", isNew:false,
    titleJa:"ドイツ気管支拡張症レジストリ参加と疾患経過との関連（PROGNOSISレジストリ）",
    titleEn:"Association of German Bronchiectasis Registry participation with disease course",
    journal:"ERJ Open Research", date:"2026-05-26", year:2026,
    summary:"38施設・1500名超のドイツPROGNOSISレジストリ解析。レジストリ参加中に増悪回数（中央値2→1回、p<0.001）・入院が有意に減少し、肺機能は安定維持。特発性症例が35→28%に減少し、病因特定に基づく個別化管理の重要性が示された。（PubMed PMID: 42206015）",
    url:"https://pubmed.ncbi.nlm.nih.gov/42206015/"},
-  {id:197, cat:"増悪・病態", isNew:true,
+  {id:197, cat:"増悪・病態", isNew:false,
    titleJa:"気管支拡張症患者における血管インターベンション（BAE）後の反復喀血の血行動態的特徴",
    titleEn:"The hemodynamic and clinical characteristics of recurrent hemoptysis in bronchiectasis patients after vascular intervention procedures",
    journal:"Journal of Thoracic Disease", date:"2026-04-27", year:2026,
    summary:"BAE施行426例を中央値2年追跡した後方視的研究で、26.5%が喀血再発。多変量Cox回帰にて体肺動脈シャント（HR=2.43）と全肺血管抵抗（TPR）上昇が独立した再発予測因子として同定され、BAE前の血行動態評価の重要性が示された。（PubMed PMID: 42182664）",
    url:"https://pubmed.ncbi.nlm.nih.gov/42182664/"},
-  {id:196, cat:"ガイドライン・総説", isNew:true,
+  {id:196, cat:"ガイドライン・総説", isNew:false,
    titleJa:"非嚢胞性線維症気管支拡張症：最新臨床アップデート（QJM 2026）",
    titleEn:"Update on Non-Cystic Fibrosis Bronchiectasis",
    journal:"QJM: Monthly Journal of the Association of Physicians", date:"2026-04-29", year:2026,
