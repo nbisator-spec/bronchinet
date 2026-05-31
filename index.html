@@ -257,7 +257,7 @@
       </div>
     </a>
     <div class="header-meta">
-      <div class="header-date" id="currentDate">2026年5月30日 更新</div>
+      <div class="header-date" id="currentDate">2026年6月1日 更新</div>
     </div>
   </div>
   <nav>
@@ -279,9 +279,9 @@
     <div class="dashboard-header">
       <div class="dashboard-title">
         🔥 本日のハイライト
-        <span class="dashboard-badge">NEW 17件</span>
+        <span class="dashboard-badge">NEW 3件</span>
       </div>
-      <div class="dashboard-date">最終更新：2026年5月31日 補足追加</div>
+      <div class="dashboard-date">最終更新：2026-06-01 08:04 自動生成</div>
     </div>
     <div class="dashboard-grid" id="dashboardGrid"></div>
   </div>
@@ -425,6 +425,13 @@
       <div class="sidebar-card">
         <div class="sidebar-header orange">📅 デイリーレポート履歴</div>
         <div class="sidebar-body">
+          <div class="report-item">
+            <div>
+              <div class="report-date">2026年6月1日</div>
+              <div class="report-count">新規3件収録</div>
+            </div>
+            <span class="report-link" onclick="showSection('reports',document.querySelectorAll('nav a')[3])">▶ 開く</span>
+          </div>
           <div class="report-item">
             <div>
               <div class="report-date">2026年5月31日</div>
@@ -595,6 +602,34 @@
   <div class="reports-page-header">
     <h2>📝 デイリーレポート アーカイブ</h2>
     <p>毎朝8時に自動生成される文献サマリーの履歴。既読除外機能により、常に新規情報のみを収録しています。</p>
+  </div>
+
+  <!-- Report 2026-06-01 -->
+  <div class="report-card">
+    <div class="report-card-header">
+      <div>
+        <div class="report-card-date">📅 2026年6月1日</div>
+        <div style="font-size:12px;color:var(--text-muted);margin-top:3px;">除外済み：239論文 / 67試験</div>
+      </div>
+      <span class="report-card-count">新規 3件</span>
+    </div>
+    <ul class="report-highlight-list">
+      <li>
+        <span class="report-num">1</span>
+        <span class="report-cat-inline" style="background:#fee2e2;color:#b91c1c">増悪・病態</span>
+        <span>Aspergillus特異的IgGが気管支拡張症患者のFEV1急速低下を予測：台湾前向きコホート（77%が気管支拡張症）でOR 1.04、AUC 0.72と独立した危険因子を同定。30 mgA/Lカットオフで感度63.6%・特異度71.4%。<em>（J Microbiol Immunol Infect, 2025-10）</em></span>
+      </li>
+      <li>
+        <span class="report-num">2</span>
+        <span class="report-cat-inline" style="background:#d1fae5;color:#065f46">マイクロバイオーム・感染</span>
+        <span>COPD/非CF気管支拡張症患者での緑膿菌根絶療法：短期除菌成功率90.9%、単一クローン株定着が主体で宿主内耐性不均一性は限定的。単一分離株の感受性試験が治療選択に有効と示唆。<em>（BMC Microbiol, 2026-05）</em></span>
+      </li>
+      <li>
+        <span class="report-num">3</span>
+        <span class="report-cat-inline" style="background:#ede9fe;color:#6d28d9">ガイドライン・総説</span>
+        <span>2025年小児呼吸器・睡眠医学Best Papersレビュー：気管支拡張症・CF・喘息・RSVを含む100本超の候補から厳選した年次総説。小児気管支拡張症の最新エビデンスを網羅。<em>（Paediatr Respir Rev, 2026-02）</em></span>
+      </li>
+    </ul>
   </div>
 
   <!-- Report 2026-05-31 -->
@@ -1028,105 +1063,124 @@
 // DATA
 // ============================================================
 const ARTICLES = [
+  // ── 2026-06-01 新規 ──
+  {id:220, cat:"ガイドライン・総説", isNew:true,
+   titleJa:"2025年の小児呼吸器・睡眠医学：年間Best Papersレビュー",
+   titleEn:"Year in review: \"Best\" papers in pediatric pulmonary and sleep medicine in 2025",
+   journal:"Paediatric Respiratory Reviews", date:"2026-02-20", year:2026,
+   summary:"2025年の小児呼吸器・睡眠医学の注目論文を専門家がキュレーションした年次レビュー。喘息・気管支拡張症・CF・RSV・睡眠呼吸障害など100本近くの候補から厳選し、小児気管支拡張症を含む最新エビデンスの全体像を提供する包括的総説。（PubMed PMID: 41813463）",
+   url:"https://pubmed.ncbi.nlm.nih.gov/41813463/"},
+  {id:219, cat:"マイクロバイオーム・感染", isNew:true,
+   titleJa:"慢性肺疾患患者における抗菌薬圧力は緑膿菌の宿主内不均一性を顕在化させない",
+   titleEn:"Antibiotic pressure does not uncover intra-host heterogeneity of Pseudomonas aeruginosa in patients with chronic lung disease",
+   journal:"BMC Microbiology", date:"2026-05-21", year:2026,
+   summary:"COPD/非CF気管支拡張症患者30例での観察研究。緑膿菌根絶療法中の短期除菌成功率は90.9%と高く、全ゲノム解析でP. aeruginosa定着は単一クローン株が主体で宿主内耐性不均一性は限定的。単一分離株の薬感受性試験が根絶療法選択に有効である可能性を示した。（PubMed PMID: 42168836）",
+   url:"https://pubmed.ncbi.nlm.nih.gov/42168836/"},
+  {id:218, cat:"増悪・病態", isNew:true,
+   titleJa:"慢性肺疾患患者（気管支拡張症主体）におけるアスペルギルス特異的IgG陽性とFEV1急速低下の関連：前向きコホート研究",
+   titleEn:"Aspergillus-specific immunoglobulin G seropositivity and lung function decline in patients with chronic lung diseases: A prospective cohort study",
+   journal:"Journal of Microbiology, Immunology and Infection", date:"2025-10-14", year:2025,
+   summary:"台湾の前向きコホート（97例、77%が気管支拡張症）で、Aspergillus特異的IgG高値がFEV1急速低下の独立した危険因子と同定（OR 1.04、AUC 0.72）。カットオフ30 mgA/Lで感度63.6%・特異度71.4%を示し、気管支拡張症患者での真菌曝露モニタリングの臨床的意義を定量化した。（PubMed PMID: 41136312）",
+   url:"https://pubmed.ncbi.nlm.nih.gov/41136312/"},
   // ── 2026-05-31 新規（補足） ──
-  {id:217, cat:"マイクロバイオーム・感染", isNew:true,
+  {id:217, cat:"マイクロバイオーム・感染", isNew:false,
    titleJa:"PCDにおける非結核性抗酸菌症：イスラエル国家多施設コホート研究（n=231）",
    titleEn:"Non-tuberculous mycobacteria in primary ciliary dyskinesia: a national multicenter cohort study",
    journal:"Respiration", date:"2026-05-28", year:2026,
    summary:"231例のPCDコホートで10.4%にNTMが検出され（M. simiaeが主体）、急速発育菌（M. abscessus等）はFEV1低値患者に多かった。気管支拡張症を主徴とするPCDにおいてNTM合併が臨床的に重要な問題であることを多施設データで示した初の大規模研究。（PubMed PMID: 42207757）",
    url:"https://pubmed.ncbi.nlm.nih.gov/42207757/"},
-  {id:216, cat:"治療・薬剤", isNew:true,
+  {id:216, cat:"治療・薬剤", isNew:false,
    titleJa:"アジスロマイシン耐性パターンの解釈：我々は何を学び、何をすべきか（Thorax社説）",
    titleEn:"Making sense of azithromycin resistance patterns: what have we learnt and what should we do?",
    journal:"Thorax", date:"2026-05-20", year:2026,
    summary:"気管支拡張症・CF・PCD患者におけるアジスロマイシン長期療法中の耐性獲得パターンを解説した社説。耐性は必ずしも治療失敗を意味せず、マクロライド感受性の判定基準の再考と個別化した耐性モニタリング戦略の必要性を論じた。（PubMed PMID: 42161596）",
    url:"https://pubmed.ncbi.nlm.nih.gov/42161596/"},
-  {id:215, cat:"治療・薬剤", isNew:true,
+  {id:215, cat:"治療・薬剤", isNew:false,
    titleJa:"重症喘息患者に対するトリプル吸入療法の有効性：後方視的多施設コホート研究",
    titleEn:"A Retrospective Multicenter Cohort Study on the Effectiveness of Triple Inhaled Therapy in Severe Asthma",
    journal:"Journal of Investigational Allergology and Clinical Immunology", date:"2026-05-05", year:2026,
    summary:"重症喘息患者へのICS/LABA/LAMAトリプル療法の後方視的解析で、気管支拡張症合併がTT治療失敗の独立した予測因子（HR 1.91）として同定された。重症喘息における合併気管支拡張症のスクリーニングと個別化治療選択の重要性を示唆する。（PubMed PMID: 42084598）",
    url:"https://pubmed.ncbi.nlm.nih.gov/42084598/"},
-  {id:214, cat:"マイクロバイオーム・感染", isNew:true,
+  {id:214, cat:"マイクロバイオーム・感染", isNew:false,
    titleJa:"乳酸化-YTHDF1軸がDNAH5依存的線毛防御機構を促進：緑膿菌感染における新規エピジェネティック制御",
    titleEn:"The lactylation-YTHDF1 axis promotes DNAH5-dependent ciliary defense in Pseudomonas aeruginosa infection",
    journal:"American Journal of Respiratory Cell and Molecular Biology", date:"2026-05-01", year:2026,
    summary:"P. aeruginosaが宿主細胞の乳酸を枯渇させてH3K18乳酸化を低下させ、m6A結合タンパクYTHDF1によるDNAH5発現調節を障害することで線毛機能不全を誘導するメカニズムを初めて解明した。このエピジェネティック経路の解明は気管支拡張症における緑膿菌慢性感染の新規治療標的となりうる。（PubMed PMID: 41738162）",
    url:"https://pubmed.ncbi.nlm.nih.gov/41738162/"},
-  {id:213, cat:"増悪・病態", isNew:true,
+  {id:213, cat:"増悪・病態", isNew:false,
    titleJa:"好中球性重症喘息増悪における未診断線毛運動障害の高頻度：生物学的製剤選択への影響",
    titleEn:"Unrecognized ciliary motility disorders in neutrophilic severe asthma exacerbations",
    journal:"Allergy, Asthma & Clinical Immunology", date:"2026-05-08", year:2026,
    summary:"好中球性重症喘息増悪患者の61.5%にPCD関連遺伝子バリアントが同定され、これらの患者では生物学的製剤の効果が乏しい可能性が示された。気管支拡張症合併重症喘息ではPCDの見逃しに注意し、早期遺伝子スクリーニングが治療戦略選択を変えうることを示す。（PubMed PMID: 42104487）",
    url:"https://pubmed.ncbi.nlm.nih.gov/42104487/"},
-  {id:212, cat:"増悪・病態", isNew:true,
+  {id:212, cat:"増悪・病態", isNew:false,
    titleJa:"2つの慢性化膿性肺疾患（CF対PCD）における肺機能・構造と炎症の関連の相違",
    titleEn:"Function and Structure Relationships With Inflammation Differ in Two Chronic Suppurative Lung Diseases",
    journal:"Pediatric Pulmonology", date:"2026-05-01", year:2026,
    summary:"小児CF・PCD患者の肺機能・CT所見と気道炎症の相関を比較解析。CFでは肺機能低下と炎症が乖離する一方、PCD（気管支拡張症を主病態とする）では異なる相関パターンが確認され、疾患別の炎症モニタリング指標の使い分けの重要性が示された。（PubMed PMID: 42101371）",
    url:"https://pubmed.ncbi.nlm.nih.gov/42101371/"},
-  {id:211, cat:"精密医療・エンドタイプ", isNew:true,
+  {id:211, cat:"精密医療・エンドタイプ", isNew:false,
    titleJa:"CCDC39ホモ接合スプライス変異による精子鞭毛多形態異常症（MMAF）合併PCD男性不妊症例",
    titleEn:"A homozygous splicing mutation in CCDC39 caused multiple morphological abnormalities of the flagella in an infertile man with primary ciliary dyskinesia",
    journal:"Asian Journal of Andrology", date:"2026-05-29", year:2026,
    summary:"CCDC39遺伝子c.1528-2A>GホモスプライスサイトバリアントによりPCDに精子鞭毛多形態異常症（MMAF）が合併した男性不妊症例を報告。ICSIで妊娠に成功し、PCD遺伝子バリアントが男性不妊の見逃せない原因であることを示す新知見。（PubMed PMID: 42210652）",
    url:"https://pubmed.ncbi.nlm.nih.gov/42210652/"},
-  {id:210, cat:"精密医療・エンドタイプ", isNew:true,
+  {id:210, cat:"精密医療・エンドタイプ", isNew:false,
    titleJa:"カタール小児PCD患者における既知・新規遺伝子バリアントの有病率と国籍分布",
    titleEn:"Prevalence and Nationality Distribution of Known and Novel Genetic Variants in Children With Primary Ciliary Dyskinesia in the State of Qatar",
    journal:"Clinical Genetics", date:"2025-11-21", year:2025,
    summary:"カタール在住28名のPCD小児を対象に遺伝子解析を実施し8つの新規バリアントを同定。カタール国民ではDNAH11が最多であり、多様な国籍背景を持つ小児ではバリアントスペクトラムが異なることが示された。気管支拡張症を引き起こすPCDの遺伝子多様性の理解に貢献する。（PubMed PMID: 41267578）",
    url:"https://pubmed.ncbi.nlm.nih.gov/41267578/"},
-  {id:209, cat:"精密医療・エンドタイプ", isNew:true,
+  {id:209, cat:"精密医療・エンドタイプ", isNew:false,
    titleJa:"RPGRの機能喪失はF-アクチン動態を介して運動線毛を障害しPCDを引き起こす",
    titleEn:"Loss of RPGR disrupts motile cilia and causes primary ciliary dyskinesia by affecting F-actin dynamics",
    journal:"Journal of Clinical Investigation", date:"2026-03-31", year:2026,
    summary:"網膜色素変性症との関連で知られるRPGR遺伝子の機能喪失がF-アクチン過剰蓄積を通じて運動線毛を障害しPCDを引き起こすメカニズムを解明。ラトランクリンAおよびY27632によるF-アクチン調節がPCD病態を改善することを示し、気管支拡張症を伴うPCDの新規治療戦略を提示した。（PubMed PMID: 41915430）",
    url:"https://pubmed.ncbi.nlm.nih.gov/41915430/"},
-  {id:208, cat:"精密医療・エンドタイプ", isNew:true,
+  {id:208, cat:"精密医療・エンドタイプ", isNew:false,
    titleJa:"常染色体優性FOXJ1関連原発性線毛機能不全症の理解（Am J Respir Cell Mol Biol解説）",
    titleEn:"Understanding FOXJ1-Associated Autosomal Dominant Primary Ciliary Dyskinesia",
    journal:"American Journal of Respiratory Cell and Molecular Biology", date:"2026-05-11", year:2026,
    summary:"FOXJ1遺伝子のヘテロ接合機能獲得バリアントによる常染色体優性PCD（AD-PCD）の病態機序と臨床特性を解説した論説。AD-PCDは線毛構造が保たれながら運動機能が障害される特殊な表現型を示し、気管支拡張症診療で見逃されやすい新規サブタイプとして注目される。（PubMed PMID: 42113888）",
    url:"https://pubmed.ncbi.nlm.nih.gov/42113888/"},
   // ── 2026-05-31 新規 ──
-  {id:207, cat:"増悪・病態", isNew:true,
+  {id:207, cat:"増悪・病態", isNew:false,
    titleJa:"双胎早産児における内臓逆位を伴う原発性線毛機能不全症：2症例報告（DNAH5変異）",
    titleEn:"Primary Ciliary Dyskinesia With Situs Inversus in Twin Premature Infants: Two Case Reports",
    journal:"British Journal of Hospital Medicine", date:"2026-05-22", year:2026,
    summary:"在胎34週の双胎女児がDNAH5遺伝子変異による内臓逆位を伴うPCDと新生児期に診断された2症例。新生児呼吸窮迫と内臓逆位が共存する場合はPCDを積極的に疑い、遺伝子検査で早期確定診断を行うことで気管支拡張症等の不可逆的肺障害の予防につながりうることを示した。（PubMed PMID: 42216596）",
    url:"https://pubmed.ncbi.nlm.nih.gov/42216596/"},
-  {id:206, cat:"ガイドライン・総説", isNew:true,
+  {id:206, cat:"ガイドライン・総説", isNew:false,
    titleJa:"非COPD慢性呼吸器疾患（喘息・気管支拡張症・ILD）への統合ヘルスケア：系統的レビュー",
    titleEn:"Integrated healthcare services for non-COPD chronic respiratory diseases: a systematic review",
    journal:"BJGP Open", date:"2026-05-28", year:2026,
    summary:"喘息・気管支拡張症・ILDを対象とした統合ケア介入16研究の系統的レビュー。喘息・ILDでは短期的QOL改善・医療利用減少の可能性が示されたが、気管支拡張症に特化した統合ケア研究は1件も同定されず、この分野における重要なエビデンスギャップが明確化された。（PubMed PMID: 42209125）",
    url:"https://pubmed.ncbi.nlm.nih.gov/42209125/"},
-  {id:205, cat:"ガイドライン・総説", isNew:true,
+  {id:205, cat:"ガイドライン・総説", isNew:false,
    titleJa:"原発性線毛機能不全症患者の栄養と成長：系統的レビュー（Eur Respir Rev 2026）",
    titleEn:"Nutrition and growth of primary ciliary dyskinesia patients: a systematic review",
    journal:"European Respiratory Review", date:"2026-05-27", year:2026,
    summary:"過去20年間のPCD患者の成長・栄養状態・食事摂取量に関する50研究を体系的にレビュー。低栄養有病率4〜11%、ビタミンD不足54%・欠乏18〜26%と高率であり、PCD（気管支拡張症を主病態として含む）患者への栄養評価・介入の重要性とエビデンスギャップを指摘した。（PubMed PMID: 42203237）",
    url:"https://pubmed.ncbi.nlm.nih.gov/42203237/"},
-  {id:204, cat:"ガイドライン・総説", isNew:true,
+  {id:204, cat:"ガイドライン・総説", isNew:false,
    titleJa:"原発性線毛機能不全症を有する小児のフォローアップ：現状と課題（Pediatr Pulmonol 2026）",
    titleEn:"Follow-Up of Children With Primary Ciliary Dyskinesia",
    journal:"Pediatric Pulmonology", date:"2026-05-01", year:2026,
    summary:"PCD小児の外来フォローアップに関する現行文献のレビュー。高品質エビデンスの不足・個人差の大きさ・診断遅延が管理プロトコル策定を困難にしている現状を指摘し、PCD専門外来での統合管理、気管支拡張症を含む上下気道疾患のモニタリング、患者・家族教育戦略を概説した。（PubMed PMID: 42199053）",
    url:"https://pubmed.ncbi.nlm.nih.gov/42199053/"},
-  {id:203, cat:"精密医療・エンドタイプ", isNew:true,
+  {id:203, cat:"精密医療・エンドタイプ", isNew:false,
    titleJa:"ZMYND10スプライスサイト変異による原発性線毛機能不全症と原発性不妊（中国人家系）",
    titleEn:"A homozygous splice-site variant in ZMYND10 causes primary ciliary dyskinesia with primary infertility in a Chinese family",
    journal:"Frontiers in Medicine", date:"2026-05-08", year:2026,
    summary:"ZMYND10遺伝子のホモ接合スプライスサイト変異（c.511-1G>A）が気管支拡張症・慢性副鼻腔炎・内臓逆位・原発性不妊を呈するPCDを引き起こした中国人家系の症例報告。高速ビデオ顕微鏡で線毛完全不動性が確認され、外内ダイニンアームの消失とGAS8（DRC4）欠失が観察され、ZMYND10関連PCD表現型スペクトラムが拡大された。（PubMed PMID: 42180707）",
    url:"https://pubmed.ncbi.nlm.nih.gov/42180707/"},
-  {id:202, cat:"ガイドライン・総説", isNew:true,
+  {id:202, cat:"ガイドライン・総説", isNew:false,
    titleJa:"気管支肺結核の診断・治療ガイドライン（2025年版）",
    titleEn:"[Guidelines for the diagnosis and treatment of tracheobronchial tuberculosis (2025 Edition)]",
    journal:"Chinese Journal of Tuberculosis and Respiratory Diseases", date:"2026-05-12", year:2026,
    summary:"中国呼吸器学会による気管支肺結核（TBTB）の診断・治療2025年版ガイドライン。非特異的症状のため誤診・診断遅延が生じやすく、気管支拡張症・気道狭窄・肺萎縮等の重篤後遺症につながりうるTBTBに対し、最新エビデンスに基づく診断アルゴリズムと治療戦略を包括的に提示した。（PubMed PMID: 42108173）",
    url:"https://pubmed.ncbi.nlm.nih.gov/42108173/"},
-  {id:201, cat:"精密医療・エンドタイプ", isNew:true,
+  {id:201, cat:"精密医療・エンドタイプ", isNew:false,
    titleJa:"左右非対称性障害を呈するPCDおよび非典型的PCDにおけるDNAH11遺伝子バリアント",
    titleEn:"Variants in the DNAH11 gene responsible for primary ciliary dyskinesia or probably atypical primary ciliary dyskinesia presenting left-right asymmetry disorder",
    journal:"PLoS One", date:"2026-05-08", year:2026,
