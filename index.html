@@ -257,7 +257,7 @@
       </div>
     </a>
     <div class="header-meta">
-      <div class="header-date" id="currentDate">2026年6月1日 更新</div>
+      <div class="header-date" id="currentDate">2026年6月2日 更新</div>
     </div>
   </div>
   <nav>
@@ -279,9 +279,9 @@
     <div class="dashboard-header">
       <div class="dashboard-title">
         🔥 本日のハイライト
-        <span class="dashboard-badge">NEW 19件</span>
+        <span class="dashboard-badge">NEW 3件</span>
       </div>
-      <div class="dashboard-date">最終更新：2026-06-01 90日検索テスト</div>
+      <div class="dashboard-date">最終更新：2026-06-02 08:04 自動生成</div>
     </div>
     <div class="dashboard-grid" id="dashboardGrid"></div>
   </div>
@@ -425,6 +425,13 @@
       <div class="sidebar-card">
         <div class="sidebar-header orange">📅 デイリーレポート履歴</div>
         <div class="sidebar-body">
+          <div class="report-item">
+            <div>
+              <div class="report-date">2026年6月2日</div>
+              <div class="report-count">新規3件収録</div>
+            </div>
+            <span class="report-link" onclick="showSection('reports',document.querySelectorAll('nav a')[3])">▶ 開く</span>
+          </div>
           <div class="report-item">
             <div>
               <div class="report-date">2026年6月1日</div>
@@ -602,6 +609,34 @@
   <div class="reports-page-header">
     <h2>📝 デイリーレポート アーカイブ</h2>
     <p>毎朝8時に自動生成される文献サマリーの履歴。既読除外機能により、常に新規情報のみを収録しています。</p>
+  </div>
+
+  <!-- Report 2026-06-02 -->
+  <div class="report-card">
+    <div class="report-card-header">
+      <div>
+        <div class="report-card-date">📅 2026年6月2日</div>
+        <div style="font-size:12px;color:var(--text-muted);margin-top:3px;">除外済み：275論文 / 69試験</div>
+      </div>
+      <span class="report-card-count">新規 3件</span>
+    </div>
+    <ul class="report-highlight-list">
+      <li>
+        <span class="report-num">1</span>
+        <span class="report-cat-inline" style="background:#dbeafe;color:#1e40af">治療・薬剤</span>
+        <span>BE-China 9,647例横断研究：中国における気道クリアランス（ACT）実施率はわずか12.2%。重症・症状負荷の高い患者層に偏在。ERSガイドライン推奨との大きな乖離を示す実態データ。<em>（Lancet Reg Health West Pac, 2026-05）</em></span>
+      </li>
+      <li>
+        <span class="report-num">2</span>
+        <span class="report-cat-inline" style="background:#d1fae5;color:#065f46">マイクロバイオーム・感染</span>
+        <span>NTHi（非型別インフルエンザ菌）総説：気管支拡張症・COPD・喘息等CADでNTHiが疾患悪化の推進因子として機能するメカニズムと宿主-病原体相互作用を標的とした新規治療戦略を解説。<em>（Expert Rev Respir Med, 2026-01）</em></span>
+      </li>
+      <li>
+        <span class="report-num">3</span>
+        <span class="report-cat-inline" style="background:#fef3c7;color:#92400e">精密医療</span>
+        <span>α1アンチトリプシン（AAT）レビュー：好中球エラスターゼ阻害に加え抗炎症・免疫調節効果を持つAATが気管支拡張症・CF・ILDにおいても治療標的となりうる可能性と非AATD状態での補充療法研究動向を論じた。<em>（J Inflamm Res, 2026-05）</em></span>
+      </li>
+    </ul>
   </div>
 
   <!-- Report 2026-06-01 -->
@@ -1143,6 +1178,25 @@
 // DATA
 // ============================================================
 const ARTICLES = [
+  // ── 2026-06-02 新規 ──
+  {id:259, cat:"精密医療・エンドタイプ", isNew:true,
+   titleJa:"炎症性肺疾患の病態生理と治療におけるα1アンチトリプシンの役割",
+   titleEn:"The Role of Alpha-1 Antitrypsin in the Pathophysiology and Treatment of Inflammatory Lung Diseases",
+   journal:"Journal of Inflammation Research", date:"2026-05-23", year:2026,
+   summary:"α1アンチトリプシン（AAT）はNE（好中球エラスターゼ）阻害を中心とした気道恒常性維持に加え、抗炎症・免疫調節・抗アポトーシス機能を持ち、AATDに基づくCOPDを超えて気管支拡張症・CF・ILDにおいても治療標的となりうる可能性を論じた文献総説。非AATD状態でのAAT補充療法の有効性を探索する新たな研究動向と臨床的意義についても言及した。（PubMed PMID: 42221221）",
+   url:"https://pubmed.ncbi.nlm.nih.gov/42221221/"},
+  {id:258, cat:"マイクロバイオーム・感染", isNew:true,
+   titleJa:"気道における非型別インフルエンザ菌（NTHi）：疾患の前触れか推進因子か",
+   titleEn:"Haemophilus influenzae in the airways: canary in the coal mine or driver of disease?",
+   journal:"Expert Review of Respiratory Medicine", date:"2026-01-13", year:2026,
+   summary:"気管支拡張症・COPD・喘息等の慢性気道疾患（CAD）で共通して増加するNTHiが疾患の推進因子か病変環境の産物かを論じた包括的レビュー。NTHiの超変異・バイオフィルム形成・細胞内生存による適応機構と、宿主側の免疫・構造・粘膜変化が「許容ニッチ」を形成する過程を解説し、ホスト-病原体相互作用を標的とした新規治療戦略を考察した。（PubMed PMID: 41527686）",
+   url:"https://pubmed.ncbi.nlm.nih.gov/41527686/"},
+  {id:257, cat:"治療・薬剤", isNew:true,
+   titleJa:"中国における気管支拡張症の気道クリアランス管理：BE-Chinaレジストリ92病院・9647例の多施設横断研究",
+   titleEn:"Airway clearance management for bronchiectasis in China: a multicentre cross-sectional study from the Chinese bronchiectasis registry (BE-China)",
+   journal:"The Lancet Regional Health - Western Pacific", date:"2026-05-22", year:2026,
+   summary:"中国92病院9,647例のBE-Chinaコホートの横断研究。定期ACT実施率は12.2%にとどまり地域間格差が顕著。毎日の喀痰産生（OR 1.68）・マクロライド療法（OR 2.31）・非侵襲的換気使用（OR 4.11）等がACT実施と関連し、症状負荷の高い重症患者層に集中している実態を示した。（PubMed PMID: 42221461）",
+   url:"https://pubmed.ncbi.nlm.nih.gov/42221461/"},
   // ── 2026年全件補完（2026-06-01実施） ──
   {id:256, cat:"ガイドライン・総説", isNew:false,
    titleJa:"成人気管支拡張症の管理：ドイツ呼吸器学会コンセンサスガイドライン",
@@ -1265,116 +1319,116 @@ const ARTICLES = [
    summary:"日本PCD患者の約半数が保有するDRC1遺伝子エクソン1-4の大型ホモ接合欠失による症例の臨床特性を全国12施設の後方視的コホートで解析した日本発研究（福祉総合病院）。気管支拡張症進行と肺機能低下のパターンを明らかにしこのバリアント特有の予後を初めて大規模に示した。（PubMed PMID: 41570615）",
    url:"https://pubmed.ncbi.nlm.nih.gov/41570615/"},
   // ── 2026-06-01 新規（補足・90日検索テスト） ──
-  {id:236, cat:"治療・薬剤", isNew:true,
+  {id:236, cat:"治療・薬剤", isNew:false,
    titleJa:"AZU1は気管支拡張症重症度・上皮防御の仲介因子かつDPP-1阻害の標的である：国際多コホート研究（Lancet Respir Med）",
    titleEn:"Azurocidin-1 as a mediator of bronchiectasis severity, epithelial defence, and target of dipeptidyl peptidase-1 inhibition: an international, multicohort study",
    journal:"Lancet Respiratory Medicine", date:"2026-04-24", year:2026,
    summary:"好中球偽酵素AZU1が気管支拡張症の重症度・P. aeruginosa感染・増悪と独立して関連し、brensocatib（DPP-1阻害薬）がAZU1を有意に低下させることをEMBARC多コホートおよびWILLOW試験後解析で初めて証明。AZU1が気管支拡張症の新規バイオマーカーかつ治療標的として確立された重要論文。（PubMed PMID: 42044645）",
    url:"https://pubmed.ncbi.nlm.nih.gov/42044645/"},
-  {id:235, cat:"治療・薬剤", isNew:true,
+  {id:235, cat:"治療・薬剤", isNew:false,
    titleJa:"新規MAC肺疾患に対するALIS（アミカシンリポソーム吸入懸濁液）：6ヶ月二重盲検実薬対照試験（ARISE試験）",
    titleEn:"Amikacin liposome inhalation suspension in newly diagnosed Mycobacterium avium complex lung disease (ARISE): a 6-month double-blind, active comparator trial",
    journal:"Annals of the American Thoracic Society", date:"2026-04-01", year:2026,
    summary:"新規/再発非空洞性MAC肺疾患99例を対象にALIS追加vs対照を6ヶ月比較したRCT。ALIS群で6ヶ月後培養陰性化率80.6%（対照63.9%）、7ヶ月後78.8%（対照47.1%、p=0.001）と有意に改善。難治性MAC以外の初回治療へのALIS有効性を初めてRCTで示した。（PubMed PMID: 41915555）",
    url:"https://pubmed.ncbi.nlm.nih.gov/41915555/"},
-  {id:234, cat:"治療・薬剤", isNew:true,
+  {id:234, cat:"治療・薬剤", isNew:false,
    titleJa:"気管支拡張症の薬物療法と薬剤開発：DPP-1阻害薬を中心に（Expert Opin Pharmacother総説）",
    titleEn:"Pharmacotherapy options and drug development in bronchiectasis: spotlight on dipeptidyl-peptidase-1",
    journal:"Expert Opinion on Pharmacotherapy", date:"2026-04-28", year:2026,
    summary:"気管支拡張症の炎症管理における薬物療法の現状とパイプラインを網羅的にレビューし、DPP-1阻害薬（brensocatib）による好中球セリンプロテアーゼ活性化経路の標的化を中心に解説。ASPEN試験後の実臨床実装課題と今後の開発方向性を論じた。（PubMed PMID: 42048140）",
    url:"https://pubmed.ncbi.nlm.nih.gov/42048140/"},
-  {id:233, cat:"日本発", isNew:true,
+  {id:233, cat:"日本発", isNew:false,
    titleJa:"急速進行・難治性感染を呈したCVIDにおける顆粒腫性-リンパ球性間質性肺疾患（GLILD）（熊本大学）",
    titleEn:"Granulomatous-Lymphocytic Interstitial Lung Disease in Common Variable Immunodeficiency with a Rapid Progression and Refractory Infections",
    journal:"Internal Medicine (Tokyo)", date:"2026-05-30", year:2026,
    summary:"免疫グロブリン補充・低用量エリスロマイシン継続下で急速進行性GLILDを発症し免疫抑制に不応で死亡した34歳女性CVID症例（熊本大学）。気管支拡張症を高頻度に合併するCVIDにおいてGLILDが予後不良を呈しうることを示す日本発症例報告。（PubMed PMID: 42219311）",
    url:"https://pubmed.ncbi.nlm.nih.gov/42219311/"},
-  {id:232, cat:"日本発", isNew:true,
+  {id:232, cat:"日本発", isNew:false,
    titleJa:"アレルギー性気管支肺真菌症（ABPM）における診断時高IgE血症と肺機能の進行性低下との関連（国立病院機構横浜病院）",
    titleEn:"High total serum IgE level at diagnosis was associated with a progressive decline in lung function in allergic bronchopulmonary mycosis",
    journal:"Allergy, Asthma & Clinical Immunology", date:"2026-03-08", year:2026,
    summary:"気管支拡張症の主要病因の一つABPMにおいて、診断時の高IgE血症が肺機能の進行性低下と関連することを国立病院機構横浜病院から報告。IgEを早期治療介入のバイオマーカーとして活用する戦略を支持する日本発エビデンス。（PubMed PMID: 41796390）",
    url:"https://pubmed.ncbi.nlm.nih.gov/41796390/"},
-  {id:231, cat:"日本発", isNew:true,
+  {id:231, cat:"日本発", isNew:false,
    titleJa:"気管支拡張症における難治性緑膿菌感染に対する長期吸入トブラマイシン療法が有効だった1例（国立病院機構）",
    titleEn:"A Case of Effective Long-Term Tobramycin Inhalation in a Patient With Bronchiectasis and Refractory Pseudomonas aeruginosa Infection",
    journal:"Respirology Case Reports", date:"2026-03-16", year:2026,
    summary:"難治性P. aeruginosa感染を有する気管支拡張症患者に長期吸入トブラマイシン療法が有効であった国立病院機構からの症例報告。国内でエビデンスが限られる吸入トブラマイシン長期継続の安全性と感染管理効果を示した実臨床的報告。（PubMed PMID: 42022522）",
    url:"https://pubmed.ncbi.nlm.nih.gov/42022522/"},
-  {id:230, cat:"日本発", isNew:true,
+  {id:230, cat:"日本発", isNew:false,
    titleJa:"AI搭載気道セグメンテーションを用いた気管支拡張症の新規CT定量評価法（日本発）",
    titleEn:"A novel quantitative method for CT assessment of bronchiectasis using AI-based airway segmentation",
    journal:"Respiratory Research", date:"2026-03-16", year:2026,
    summary:"AI搭載自動気道セグメンテーションを用いて気管支拡張症の重症度・範囲を客観的に定量化する新規CT評価法を開発した日本発研究。従来の半定量的Reiffスコアと比較して再現性が高く、疾患進行モニタリングや治療効果判定への応用可能性を示した。（PubMed PMID: 41840608）",
    url:"https://pubmed.ncbi.nlm.nih.gov/41840608/"},
-  {id:229, cat:"増悪・病態", isNew:true,
+  {id:229, cat:"増悪・病態", isNew:false,
    titleJa:"結核が気管支拡張症発症リスクに与える影響：全国コホート研究",
    titleEn:"The impact of TB on the risk of bronchiectasis: a nationwide cohort study",
    journal:"International Journal of Tuberculosis and Lung Disease", date:"2026-04-27", year:2026,
    summary:"TB既往が気管支拡張症発症リスクに及ぼす影響を国家レベルのコホートデータで定量化。TB後気管支拡張症が重要な疾患負荷であることを大規模集団で証明し、TB治癒後の気管支拡張症予防管理プログラムの必要性を強調する。（PubMed PMID: 42046225）",
    url:"https://pubmed.ncbi.nlm.nih.gov/42046225/"},
-  {id:228, cat:"増悪・病態", isNew:true,
+  {id:228, cat:"増悪・病態", isNew:false,
    titleJa:"高IgE血症は非好酸球性気管支拡張症患者における重症増悪リスクと独立して関連する",
    titleEn:"High Serum IgE is Associated with Risk of Severe Exacerbations Among Non-Eosinophilic Bronchiectasis",
    journal:"Lung", date:"2026-04-27", year:2026,
    summary:"気管支拡張症は好中球性疾患とされてきたが、非好酸球性であっても高IgE血症が重症増悪リスクと独立して関連することを台湾国立大学コホートで示した。非アレルギー性バイオマーカーとして血清IgEが増悪予測・治療層別化に有用な可能性を示す新知見。（PubMed PMID: 42045520）",
    url:"https://pubmed.ncbi.nlm.nih.gov/42045520/"},
-  {id:227, cat:"増悪・病態", isNew:true,
+  {id:227, cat:"増悪・病態", isNew:false,
    titleJa:"気管支拡張症のリスク層別化に向けたCT体組成定量解析",
    titleEn:"Quantitative computed tomography body composition analysis for risk stratification in bronchiectasis",
    journal:"Respiratory Research", date:"2026-04-17", year:2026,
    summary:"気管支拡張症患者の胸部CTから骨格筋量・脂肪量等の体組成を定量化しリスク層別化への応用を検討した研究。日常診療で取得される胸部CTに体組成解析を組み込むことで、低コストな予後層別化が実現できる可能性を示した。（PubMed PMID: 41998633）",
    url:"https://pubmed.ncbi.nlm.nih.gov/41998633/"},
-  {id:226, cat:"増悪・病態", isNew:true,
+  {id:226, cat:"増悪・病態", isNew:false,
    titleJa:"インパルスオシロメトリー指標は気管支拡張症の機能障害・進行性肺疾患と関連する",
    titleEn:"Impulse oscillometry indices are associated with functional impairment and progressive pulmonary disease in bronchiectasis",
    journal:"Expert Review of Respiratory Medicine", date:"2026-05-25", year:2026,
    summary:"努力非依存的な気道評価法であるインパルスオシロメトリー（IOS）の各種指標が気管支拡張症の肺機能障害・疾患進行と有意に関連することを示した。スパイロメトリーが困難な患者や小児における肺機能評価の代替手法としてのIOS活用を支持する。（PubMed PMID: 42159580）",
    url:"https://pubmed.ncbi.nlm.nih.gov/42159580/"},
-  {id:225, cat:"マイクロバイオーム・感染", isNew:true,
+  {id:225, cat:"マイクロバイオーム・感染", isNew:false,
    titleJa:"気管支拡張症における黄色ブドウ球菌（S. aureus/MRSA）：疫学・臨床的影響と管理の課題（ERJ Open Res総説）",
    titleEn:"Staphylococcus aureus in bronchiectasis: epidemiology, clinical impact and challenges in management",
    journal:"ERJ Open Research", date:"2026-04-27", year:2026,
    summary:"気管支拡張症における黄色ブドウ球菌（S. aureus/MRSA）の疫学・臨床的影響・管理上の課題を包括的にレビュー。P. aeruginosa以外の主要病原体としてのS. aureusを再評価し、MRSA特異的な気道感染管理戦略の確立に向けた課題を提示した。（PubMed PMID: 42111376）",
    url:"https://pubmed.ncbi.nlm.nih.gov/42111376/"},
-  {id:224, cat:"マイクロバイオーム・感染", isNew:true,
+  {id:224, cat:"マイクロバイオーム・感染", isNew:false,
    titleJa:"非CFG気管支拡張症患者の慢性副鼻腔炎と喀痰NTM陽性の関連：米国BE・NTMレジストリ解析（n=1352）",
    titleEn:"Association of Chronic Rhinosinusitis and NTM in Sputum of Patients With Non-Cystic Fibrosis Bronchiectasis",
    journal:"Chronic Obstructive Pulmonary Diseases", date:"2026-03-25", year:2026,
    summary:"米国BE・NTMレジストリ1352例の横断解析で、CRS既往が喀痰MAC陽性と独立して関連（OR 1.5）することを初めて示した。Pseudomonas・Haemophilusとの関連はなく、上気道感染（副鼻腔炎）→気管支拡張症NTM感染という特異的な経路の重要性を示唆する。（PubMed PMID: 41738760）",
    url:"https://pubmed.ncbi.nlm.nih.gov/41738760/"},
-  {id:223, cat:"マイクロバイオーム・感染", isNew:true,
+  {id:223, cat:"マイクロバイオーム・感染", isNew:false,
    titleJa:"気管支拡張症患者におけるNTMと複合菌の共感染：偶然か必然か（Front Med総説）",
    titleEn:"Co-infection with NTM and complex in patients with bronchiectasis: coincidence or inevitability?",
    journal:"Frontiers in Medicine", date:"2026-03-11", year:2026,
    summary:"気管支拡張症患者の気道においてNTMとP. aeruginosa・Aspergillus等との共感染が高頻度に生じる実態と機序を論じたレビュー。気管支拡張症気道が多菌種混合感染の温床となる構造的・免疫学的背景を解説し、複合感染を念頭においた管理戦略の必要性を提示した。（PubMed PMID: 41889491）",
    url:"https://pubmed.ncbi.nlm.nih.gov/41889491/"},
   // ── 2026-06-01 新規 ──
-  {id:222, cat:"マイクロバイオーム・感染", isNew:true,
+  {id:222, cat:"マイクロバイオーム・感染", isNew:false,
    titleJa:"気管支拡張症コホートにおける肺非結核性抗酸菌感染と尿中モリブデン濃度の関連",
    titleEn:"Pulmonary nontuberculous mycobacterial infection is associated with urinary molybdenum concentrations in a bronchiectasis cohort",
    journal:"Environmental Epidemiology", date:"2026-03-24", year:2026,
    summary:"気管支拡張症患者120例（38%が現在NTM感染、38%が既往感染）の尿中微量金属とNTM感染の関連を検討。モリブデン濃度1 SD増加ごとに現在NTM感染のオッズが14%有意に増加（OR 1.14、95%CI 1.02–1.28）。水道水・給水管中のモリブデンとNTM感染の関連を臨床コホートで初めて検証し、気管支拡張症患者の居住環境評価の重要性を示した。（PubMed PMID: 41889435）",
    url:"https://pubmed.ncbi.nlm.nih.gov/41889435/"},
-  {id:221, cat:"増悪・病態", isNew:true,
+  {id:221, cat:"増悪・病態", isNew:false,
    titleJa:"気管支拡張症患者における肺高血圧症のHRCTおよび心エコー評価による臨床転帰（入院）予測",
    titleEn:"Clinical Outcome Prediction by High-Resolution Computed Tomography and Echocardiography Assessment of Pulmonary Hypertension in Patients with Bronchiectasis",
    journal:"Tuberculosis and Respiratory Diseases (Seoul)", date:"2025-12-09", year:2025,
    summary:"気管支拡張症130例の後方視的研究。主肺動脈径（mPA）>29 mmと2葉以上の病変が入院リスクの独立した予測因子（調整OR各2.47・2.57）。CT単独モデルが心エコー組み合わせモデルと同等の入院予測精度を示し、HRCTによる肺高血圧スクリーニングが気管支拡張症の増悪リスク層別化に有用であることを支持する。（PubMed PMID: 41362089）",
    url:"https://pubmed.ncbi.nlm.nih.gov/41362089/"},
-  {id:220, cat:"ガイドライン・総説", isNew:true,
+  {id:220, cat:"ガイドライン・総説", isNew:false,
    titleJa:"2025年の小児呼吸器・睡眠医学：年間Best Papersレビュー",
    titleEn:"Year in review: \"Best\" papers in pediatric pulmonary and sleep medicine in 2025",
    journal:"Paediatric Respiratory Reviews", date:"2026-02-20", year:2026,
    summary:"2025年の小児呼吸器・睡眠医学の注目論文を専門家がキュレーションした年次レビュー。喘息・気管支拡張症・CF・RSV・睡眠呼吸障害など100本近くの候補から厳選し、小児気管支拡張症を含む最新エビデンスの全体像を提供する包括的総説。（PubMed PMID: 41813463）",
    url:"https://pubmed.ncbi.nlm.nih.gov/41813463/"},
-  {id:219, cat:"マイクロバイオーム・感染", isNew:true,
+  {id:219, cat:"マイクロバイオーム・感染", isNew:false,
    titleJa:"慢性肺疾患患者における抗菌薬圧力は緑膿菌の宿主内不均一性を顕在化させない",
    titleEn:"Antibiotic pressure does not uncover intra-host heterogeneity of Pseudomonas aeruginosa in patients with chronic lung disease",
    journal:"BMC Microbiology", date:"2026-05-21", year:2026,
    summary:"COPD/非CF気管支拡張症患者30例での観察研究。緑膿菌根絶療法中の短期除菌成功率は90.9%と高く、全ゲノム解析でP. aeruginosa定着は単一クローン株が主体で宿主内耐性不均一性は限定的。単一分離株の薬感受性試験が根絶療法選択に有効である可能性を示した。（PubMed PMID: 42168836）",
    url:"https://pubmed.ncbi.nlm.nih.gov/42168836/"},
-  {id:218, cat:"増悪・病態", isNew:true,
+  {id:218, cat:"増悪・病態", isNew:false,
    titleJa:"慢性肺疾患患者（気管支拡張症主体）におけるアスペルギルス特異的IgG陽性とFEV1急速低下の関連：前向きコホート研究",
    titleEn:"Aspergillus-specific immunoglobulin G seropositivity and lung function decline in patients with chronic lung diseases: A prospective cohort study",
    journal:"Journal of Microbiology, Immunology and Infection", date:"2025-10-14", year:2025,
