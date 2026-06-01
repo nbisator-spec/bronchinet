@@ -279,7 +279,7 @@
     <div class="dashboard-header">
       <div class="dashboard-title">
         🔥 本日のハイライト
-        <span class="dashboard-badge">NEW 4件</span>
+        <span class="dashboard-badge">NEW 5件</span>
       </div>
       <div class="dashboard-date">最終更新：2026-06-01 手動追加</div>
     </div>
@@ -428,7 +428,7 @@
           <div class="report-item">
             <div>
               <div class="report-date">2026年6月1日</div>
-              <div class="report-count">新規4件収録</div>
+              <div class="report-count">新規5件収録</div>
             </div>
             <span class="report-link" onclick="showSection('reports',document.querySelectorAll('nav a')[3])">▶ 開く</span>
           </div>
@@ -611,7 +611,7 @@
         <div class="report-card-date">📅 2026年6月1日</div>
         <div style="font-size:12px;color:var(--text-muted);margin-top:3px;">除外済み：239論文 / 67試験</div>
       </div>
-      <span class="report-card-count">新規 4件</span>
+      <span class="report-card-count">新規 5件</span>
     </div>
     <ul class="report-highlight-list">
       <li>
@@ -633,6 +633,11 @@
         <span class="report-num">4</span>
         <span class="report-cat-inline" style="background:#fee2e2;color:#b91c1c">増悪・病態</span>
         <span>気管支拡張症130例のHRCT・心エコー解析：主肺動脈径>29 mmと2葉以上の病変が入院リスクの独立した予測因子（OR各2.47・2.57）。CT単独モデルが心エコー組み合わせモデルと同等の入院予測精度を示し、HRCTによる肺高血圧スクリーニングの有用性を支持。<em>（Tuberc Respir Dis, 2025-12）【手動追加】</em></span>
+      </li>
+      <li>
+        <span class="report-num">5</span>
+        <span class="report-cat-inline" style="background:#d1fae5;color:#065f46">マイクロバイオーム・感染</span>
+        <span>気管支拡張症患者120例のNTM感染と尿中モリブデン濃度の関連（NIH NIAID/NHLBI）：モリブデン1 SD増加ごとにNTM感染オッズ14%増（OR 1.14）。水道水・給水管由来モリブデンとNTM感染の関連を臨床コホートで初検証。<em>（Environ Epidemiol, 2026-03）【手動追加】</em></span>
       </li>
     </ul>
   </div>
@@ -1069,6 +1074,12 @@
 // ============================================================
 const ARTICLES = [
   // ── 2026-06-01 新規 ──
+  {id:222, cat:"マイクロバイオーム・感染", isNew:true,
+   titleJa:"気管支拡張症コホートにおける肺非結核性抗酸菌感染と尿中モリブデン濃度の関連",
+   titleEn:"Pulmonary nontuberculous mycobacterial infection is associated with urinary molybdenum concentrations in a bronchiectasis cohort",
+   journal:"Environmental Epidemiology", date:"2026-03-24", year:2026,
+   summary:"気管支拡張症患者120例（38%が現在NTM感染、38%が既往感染）の尿中微量金属とNTM感染の関連を検討。モリブデン濃度1 SD増加ごとに現在NTM感染のオッズが14%有意に増加（OR 1.14、95%CI 1.02–1.28）。水道水・給水管中のモリブデンとNTM感染の関連を臨床コホートで初めて検証し、気管支拡張症患者の居住環境評価の重要性を示した。（PubMed PMID: 41889435）",
+   url:"https://pubmed.ncbi.nlm.nih.gov/41889435/"},
   {id:221, cat:"増悪・病態", isNew:true,
    titleJa:"気管支拡張症患者における肺高血圧症のHRCTおよび心エコー評価による臨床転帰（入院）予測",
    titleEn:"Clinical Outcome Prediction by High-Resolution Computed Tomography and Echocardiography Assessment of Pulmonary Hypertension in Patients with Bronchiectasis",
