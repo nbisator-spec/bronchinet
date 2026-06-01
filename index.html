@@ -279,9 +279,9 @@
     <div class="dashboard-header">
       <div class="dashboard-title">
         🔥 本日のハイライト
-        <span class="dashboard-badge">NEW 3件</span>
+        <span class="dashboard-badge">NEW 4件</span>
       </div>
-      <div class="dashboard-date">最終更新：2026-06-01 08:04 自動生成</div>
+      <div class="dashboard-date">最終更新：2026-06-01 手動追加</div>
     </div>
     <div class="dashboard-grid" id="dashboardGrid"></div>
   </div>
@@ -428,7 +428,7 @@
           <div class="report-item">
             <div>
               <div class="report-date">2026年6月1日</div>
-              <div class="report-count">新規3件収録</div>
+              <div class="report-count">新規4件収録</div>
             </div>
             <span class="report-link" onclick="showSection('reports',document.querySelectorAll('nav a')[3])">▶ 開く</span>
           </div>
@@ -611,7 +611,7 @@
         <div class="report-card-date">📅 2026年6月1日</div>
         <div style="font-size:12px;color:var(--text-muted);margin-top:3px;">除外済み：239論文 / 67試験</div>
       </div>
-      <span class="report-card-count">新規 3件</span>
+      <span class="report-card-count">新規 4件</span>
     </div>
     <ul class="report-highlight-list">
       <li>
@@ -628,6 +628,11 @@
         <span class="report-num">3</span>
         <span class="report-cat-inline" style="background:#ede9fe;color:#6d28d9">ガイドライン・総説</span>
         <span>2025年小児呼吸器・睡眠医学Best Papersレビュー：気管支拡張症・CF・喘息・RSVを含む100本超の候補から厳選した年次総説。小児気管支拡張症の最新エビデンスを網羅。<em>（Paediatr Respir Rev, 2026-02）</em></span>
+      </li>
+      <li>
+        <span class="report-num">4</span>
+        <span class="report-cat-inline" style="background:#fee2e2;color:#b91c1c">増悪・病態</span>
+        <span>気管支拡張症130例のHRCT・心エコー解析：主肺動脈径>29 mmと2葉以上の病変が入院リスクの独立した予測因子（OR各2.47・2.57）。CT単独モデルが心エコー組み合わせモデルと同等の入院予測精度を示し、HRCTによる肺高血圧スクリーニングの有用性を支持。<em>（Tuberc Respir Dis, 2025-12）【手動追加】</em></span>
       </li>
     </ul>
   </div>
@@ -1064,6 +1069,12 @@
 // ============================================================
 const ARTICLES = [
   // ── 2026-06-01 新規 ──
+  {id:221, cat:"増悪・病態", isNew:true,
+   titleJa:"気管支拡張症患者における肺高血圧症のHRCTおよび心エコー評価による臨床転帰（入院）予測",
+   titleEn:"Clinical Outcome Prediction by High-Resolution Computed Tomography and Echocardiography Assessment of Pulmonary Hypertension in Patients with Bronchiectasis",
+   journal:"Tuberculosis and Respiratory Diseases (Seoul)", date:"2025-12-09", year:2025,
+   summary:"気管支拡張症130例の後方視的研究。主肺動脈径（mPA）>29 mmと2葉以上の病変が入院リスクの独立した予測因子（調整OR各2.47・2.57）。CT単独モデルが心エコー組み合わせモデルと同等の入院予測精度を示し、HRCTによる肺高血圧スクリーニングが気管支拡張症の増悪リスク層別化に有用であることを支持する。（PubMed PMID: 41362089）",
+   url:"https://pubmed.ncbi.nlm.nih.gov/41362089/"},
   {id:220, cat:"ガイドライン・総説", isNew:true,
    titleJa:"2025年の小児呼吸器・睡眠医学：年間Best Papersレビュー",
    titleEn:"Year in review: \"Best\" papers in pediatric pulmonary and sleep medicine in 2025",
