@@ -2927,7 +2927,8 @@ function filterArticles() {
   else if (sort === 'oldest') filtered.sort((a, b) => a.year - b.year || a.date.localeCompare(b.date));
   else filtered.sort((a, b) => a.cat.localeCompare(b.cat, 'ja'));
 
-  document.getElementById('filteredCount').textContent = filtered.length;
+  const trialExtra = currentFilter === '臨床試験' ? TRIALS_DATA.length : 0;
+  document.getElementById('filteredCount').textContent = filtered.length + trialExtra;
   document.getElementById('totalCount').textContent = ARTICLES.length;
 
   const total = Math.ceil(filtered.length / PER_PAGE);
