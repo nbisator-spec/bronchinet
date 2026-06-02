@@ -3226,7 +3226,7 @@ function buildTrialsPage() {
         <span class="trial-badge nct">${t.nct}</span>
       </div>
       <div class="trial-card-desc">${t.desc}</div>
-      <a class="trial-card-link" href="${t.url}" target="_blank" rel="noopener">🔗 ClinicalTrials.gov で詳細を見る ↗</a>
+      <a class="trial-card-link" href="${t.url}" target="_blank" rel="noopener">🔗 ${t.nct.startsWith('jRCT') ? 'JRCT（日本）で詳細を見る' : 'ClinicalTrials.gov で詳細を見る'} ↗</a>
     </div>
   `).join('');
 }
