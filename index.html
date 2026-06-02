@@ -48,6 +48,13 @@
   .trial-card-badges { display: flex; flex-wrap: wrap; gap: 5px; margin-bottom: 12px; }
   .trial-card-desc { font-size: 12px; color: #475569; line-height: 1.7; }
   .trial-card-link { display: inline-block; margin-top: 10px; font-size: 11px; color: var(--primary); }
+  /* ── TRIAL GROUPS ── */
+  .trial-group { margin-bottom: 28px; }
+  .trial-group-header { display: flex; align-items: center; gap: 10px; padding: 10px 16px; border-radius: 10px; margin-bottom: 14px; color: #fff; }
+  .trial-group-icon { font-size: 18px; }
+  .trial-group-name { font-size: 14px; font-weight: 800; letter-spacing: 0.3px; }
+  .trial-group-sub { font-size: 11px; opacity: 0.85; margin-left: auto; white-space: nowrap; }
+  .trial-group-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 14px; }
   /* ── GUIDELINES PAGE ── */
   .guide-page { padding: 20px 0 40px; }
   .guide-page-header { background: linear-gradient(135deg, #3b0764, #6d28d9); color:#fff; border-radius: 12px; padding: 24px; margin-bottom: 20px; }
@@ -3150,88 +3157,160 @@ function showSection(sec, el) {
 // ============================================================
 // TRIALS PAGE
 // ============================================================
-const TRIALS_DATA = [
-  // ── ClinicalTrials.gov Japan追加 2026-06-01 ──
-  { name: 'CSL787 Phase 2b（非CF気管支拡張症）', drug: 'CSL787（吸入IgG療法）', sponsor: 'CSL Behring', phase: 'Phase IIb', status: 'RECRUITING', nct: 'NCT07048262', color: '#7c3aed',
-    desc: '非CF気管支拡張症成人450例を対象にCSL787（IgG吸入液）2用量をプラセボと比較したPhase 2b多施設二重盲検RCT（日本・オーストラリア参加）。吸入IgGによる気道局所免疫補強という新規アプローチ。日本登録：jRCT2071250037。開始日：2025-09-03', url: 'https://clinicaltrials.gov/study/NCT07048262' },
-  { name: 'Clairleafᵀᴹ（Verducatib 長期延長）', drug: 'Verducatib / BI 1291583（BI）', sponsor: 'Boehringer Ingelheim', phase: 'Phase II', status: 'ACTIVE_NOT_RECRUITING', nct: 'NCT05846230', color: '#94a3b8',
-    desc: 'Airleaf™/Clairfly™試験の参加者を対象としたBI 1291583（Verducatib）長期延長試験（日本・韓国・欧州・北米）。268例登録済、現在追跡中。日本登録：jRCT2041230099。開始日：2023-09-08', url: 'https://clinicaltrials.gov/study/NCT05846230' },
-  // ── JRCT（日本臨床試験登録）全件追加 2026-06-01 ──
-  // 募集終了・研究終了（歴史的記録）
-  { name: 'ASPEN 日本サブグループ（Brensocatib）', drug: 'Brensocatib（インスメッド）', sponsor: 'インスメッド合同会社', phase: 'Phase III', status: '研究終了', nct: 'jRCT2031210048', color: '#065f46',
-    desc: 'ASPEN試験の日本登録。嚢胞性線維症を伴わない気管支拡張症患者を対象にbrensocatibを1日1回52週間投与したときの有効性・安全性・薬物動態を評価した第3相試験。日本からのASPENサブグループデータの源泉。公表日：令和7年10月29日', url: 'https://jrct.mhlw.go.jp/latest-detail/jRCT2031210048' },
-  { name: 'Verducatib Phase 1（日本）', drug: 'Verducatib / BI 1291583（BI）', sponsor: '日本ベーリンガーインゲルハイム', phase: 'Phase I', status: '研究終了', nct: 'jRCT2071210111', color: '#94a3b8',
-    desc: '日本人健康男性被験者を対象にVerducatib（BI 1291583）を単回漸増経口投与及び反復投与したときの安全性・忍容性・薬物動態を評価した第1相試験（COPD合併BE含む）。AIRTIVITY試験への布石。公表日：令和6年8月19日', url: 'https://jrct.mhlw.go.jp/latest-detail/jRCT2071210111' },
-  { name: 'Verducatib Phase 2a（日本）', drug: 'Verducatib / BI 1291583（BI）', sponsor: '日本ベーリンガーインゲルハイム', phase: 'Phase II', status: '募集終了', nct: 'jRCT2041220074', color: '#94a3b8',
-    desc: '非CF気管支拡張症患者を対象にVerducatib（BI 1291583）を1日1回24週間以上投与したときの有効性・安全性・忍容性を評価した第2相試験（日本登録）。公表日：令和5年9月6日', url: 'https://jrct.mhlw.go.jp/latest-detail/jRCT2041220074' },
-  { name: 'Verducatib 長期安全性延長（日本）', drug: 'Verducatib / BI 1291583（BI）', sponsor: '日本ベーリンガーインゲルハイム', phase: 'Phase II', status: '募集終了', nct: 'jRCT2041230099', color: '#94a3b8',
-    desc: '非CF気管支拡張症患者を対象にVerducatib（BI 1291583）を1日1回経口投与したときの長期安全性及び有効性を評価する延長試験（日本登録）。公表日：令和6年9月3日', url: 'https://jrct.mhlw.go.jp/latest-detail/jRCT2041230099' },
-  { name: 'AZD0292 Phase 1（日本人健康被験者）', drug: 'AZD0292（アストラゼネカ）', sponsor: 'アストラゼネカ株式会社', phase: 'Phase I', status: '募集終了', nct: 'jRCT2071250102', color: '#94a3b8',
-    desc: '日本人健康被験者を対象にAZD0292単回漸増投与の安全性・忍容性・薬物動態を評価した無作為化二重盲検第1相試験。GREAT-2（jRCT2071260021）の前臨床評価。公表日：令和8年3月30日', url: 'https://jrct.mhlw.go.jp/latest-detail/jRCT2071250102' },
-  { name: 'Itepekimab Phase 2（日本）', drug: 'Itepekimab（抗IL-33 mAb、サノフィ）', sponsor: 'サノフィ株式会社', phase: 'Phase II', status: '募集終了', nct: 'jRCT2031240053', color: '#b45309',
-    desc: '非CF気管支拡張症患者を対象としたitepekimab（抗IL-33モノクローナル抗体）の有効性・安全性・忍容性を検討するランダム化試験の日本登録。T2炎症経路への介入。公表日：令和7年7月17日', url: 'https://jrct.mhlw.go.jp/latest-detail/jRCT2031240053' },
-  { name: '在宅ハイフローセラピー RCT（日本）', drug: '在宅高流量鼻カニューラ酸素療法（HFNC）', sponsor: '日本国内多施設', phase: 'Phase III', status: '募集終了', nct: 'jRCT1052230157', color: '#15803d',
-    desc: '気管支拡張症患者に対する在宅ハイフローセラピーの有効性と安全性に関する多施設ランダム化比較試験（日本発）。気道クリアランス改善を主要エンドポイントとした日本初のHFNC RCT。公表日：令和8年2月12日', url: 'https://jrct.mhlw.go.jp/latest-detail/jRCT1052230157' },
-  { name: 'シプロフロキサシンDPI（日本）', drug: 'シプロフロキサシンDPI吸入製剤', sponsor: '国内多施設', phase: 'Phase III', status: '参加募集終了', nct: 'jRCT2080222134', color: '#94a3b8',
-    desc: '嚢胞性線維症以外の気管支拡張症患者を対象にシプロフロキサシンドライパウダー吸入剤（DPI）の有効性・安全性を評価した第3相試験（日本登録）。吸入抗菌薬クラスの日本試験。公表日：令和2年11月11日', url: 'https://jrct.mhlw.go.jp/latest-detail/jRCT2080222134' },
-  { name: 'AZD0292 第2相（日本）', drug: 'AZD0292（抗緑膿菌二重特異性抗体）', sponsor: 'アストラゼネカ株式会社', phase: 'Phase II', status: '募集中', nct: 'jRCT2071260021', color: '#0e7490',
-    desc: '12歳以上の慢性緑膿菌常在化を伴う気管支拡張症患者を対象にAZD0292の有効性・安全性・薬物動態を評価する第2相試験（GREAT試験の日本登録）。PcrVとPslを標的とする二重特異性抗体。公表日：令和8年5月8日', url: 'https://jrct.mhlw.go.jp/latest-detail/jRCT2071260021' },
-  { name: 'AIRTIVITY™ / Verducatib 第3相（日本）', drug: 'Verducatib / BI 1291583（DPP-1阻害薬、BI）', sponsor: '日本ベーリンガーインゲルハイム株式会社', phase: 'Phase III', status: '募集中', nct: 'jRCT2071250036', color: '#1d4ed8',
-    desc: '気管支拡張症患者を対象としてVerducatib（BI 1291583）2.5mgを1日1回最長76週間投与したときの有効性・安全性・薬物動態を評価する第3相試験（AIRTIVITY試験日本登録）。Brensocatib（Insmed）とは異なるBoehringer Ingelheim社のDPP-1阻害薬。公表日：令和8年4月14日', url: 'https://jrct.mhlw.go.jp/latest-detail/jRCT2071250036' },
-  { name: 'CSL787 吸入IgG 第2相（日本）', drug: 'CSL787（吸入IgG療法）', sponsor: 'CSLベーリング株式会社', phase: 'Phase II', status: '募集中', nct: 'jRCT2071250037', color: '#7c3aed',
-    desc: '非嚢胞性線維症性気管支拡張症の成人患者（18〜85歳）を対象にCSL787吸入投与の有効性・安全性・薬物動態を評価する第2相試験（日本登録）。気道局所免疫補強という新規アプローチ。公表日：令和7年9月8日', url: 'https://jrct.mhlw.go.jp/latest-detail/jRCT2071250037' },
-  { name: 'GSK3862995B 第1/2相（日本）', drug: 'GSK3862995B', sponsor: 'グラクソスミスクライン', phase: 'Phase 1/2', status: '募集中', nct: 'jRCT2031250446', color: '#0f3872',
-    desc: '気管支拡張症を有する被験者を対象にGSK3862995Bの有効性・安全性・免疫原性・薬物動態を評価する第1/2相試験（日本登録）。公表日：令和8年4月3日', url: 'https://jrct.mhlw.go.jp/latest-detail/jRCT2031250446' },
-  { name: 'ICoN-1 MNKD-101（日本）', drug: 'MNKD-101（吸入マンニトール）', sponsor: 'マンカインド・コーポレーション', phase: 'Phase III', status: '募集中断', nct: 'jRCT2021240037', color: '#9f1239',
-    desc: '肺MAC症患者を対象にガイドラインに準拠した治療に上乗せしたMNKD-101（吸入マンニトール）の有効性・安全性を検討する第3相試験（日本登録）。現在募集中断中。公表日：令和7年12月17日', url: 'https://jrct.mhlw.go.jp/latest-detail/jRCT2021240037' },
-  { name: 'NTM症/BE遺伝因子解析（慶應）', drug: '遺伝因子研究（観察研究）', sponsor: '慶應義塾大学 長谷川直樹', phase: '観察研究', status: '募集中', nct: 'jRCT1030200233', color: '#15803d',
-    desc: '肺非結核性抗酸菌症/気管支拡張症の遺伝因子の網羅的解析を目的とした国際多施設共同観察研究（慶應義塾大学主導）。疾患感受性遺伝子・バリアントの同定を目指す。公表日：令和4年2月3日', url: 'https://jrct.mhlw.go.jp/latest-detail/jRCT1030200233' },
-  { name: 'BASE（重症度・増悪リスク）', drug: 'BASE フレームワーク（観察研究）', sponsor: 'Assiut University', phase: '観察研究', status: 'RECRUITING', nct: 'NCT07599839', color: '#1d4ed8',
-    desc: '気管支拡張症の重症度分類と12ヶ月増悪リスク予測のためのBASEフレームワーク開発試験。機能的・放射線学的・炎症変数を組み合わせて患者をリスク層別化する前向きコホート研究。', url: 'https://clinicaltrials.gov/study/NCT07599839' },
-  { name: '気管支拡張症表現型同定モデル', drug: '潜在クラス軌跡解析（観察研究）', sponsor: 'Assiut University', phase: '観察研究', status: 'RECRUITING', nct: 'NCT07599969', color: '#0e7490',
-    desc: '潜在クラス軌跡解析を用いて非CF気管支拡張症の表現型クラスを同定し、ベースライン分類器を訓練するための前向きコホート研究。', url: 'https://clinicaltrials.gov/study/NCT07599969' },
-  { name: 'SAR445399 Phase II', drug: 'SAR445399（Sanofi）', sponsor: 'Sanofi', phase: 'Phase II', status: 'RECRUITING', nct: 'NCT07547436', color: '#7c3aed',
-    desc: '成人非CF気管支拡張症患者を対象にSAR445399（新規薬剤）の24週間投与で粘液栓スコア低下を主要エンドポイントとして評価するプラセボ対照二重盲検RCT。', url: 'https://clinicaltrials.gov/study/NCT07547436' },
-  { name: 'GDC-6988 Phase 1/2', drug: 'GDC-6988吸入（Genentech）', sponsor: 'Genentech, Inc.', phase: 'Phase 1/2', status: 'RECRUITING', nct: 'NCT06603246', color: '#b45309',
-    desc: '粘液閉塞性疾患患者を対象とした新規吸入薬GDC-6988の安全性・忍容性・薬理活性を評価するPhase 1/2試験。', url: 'https://clinicaltrials.gov/study/NCT06603246' },
-  { name: 'BE心血管合併症研究', drug: '観察研究', sponsor: 'Assiut University', phase: '観察研究', status: 'RECRUITING', nct: 'NCT05783869', color: '#475569',
-    desc: '急性増悪NCFB患者における心血管合併症が疾患重症度とQoLに与える影響を検討する観察研究。', url: 'https://clinicaltrials.gov/study/NCT05783869' },
-  { name: '肺スライディング指数（LSI）', drug: '肺超音波診断研究', sponsor: 'Assiut University', phase: '診断精度研究', status: 'RECRUITING', nct: 'NCT06983366', color: '#475569',
-    desc: '肺超音波を用いた肺スライディング指数（LSI）が気管支拡張症・COPDなど各種肺疾患の鑑別に有用かを検証するケースコントロール研究。', url: 'https://clinicaltrials.gov/study/NCT06983366' },
-  { name: 'OLE在宅療法（BiWaze）', drug: 'OLE（振動肺拡張）療法', sponsor: 'Delve Health', phase: 'N/A', status: 'RECRUITING', nct: 'NCT06926881', color: '#15803d',
-    desc: 'BiWaze Clearシステムによる振動肺拡張（OLE）療法が6ヶ月間の気道クリアランスと呼吸健康に与える影響を評価する観察研究。', url: 'https://clinicaltrials.gov/study/NCT06926881' },
-  { name: 'AIRTIVITY™', drug: 'Verducatib (BI 1291583)', sponsor: 'Boehringer Ingelheim', phase: 'Phase III', status: 'RECRUITING', nct: 'NCT06872892', color: '#1d4ed8',
-    desc: 'カテプシンC（DPP-1）阻害薬の第2弾。52週間プラセボ対照RCT。ASPENに続くDPP-1阻害クラスの第3相試験として最も注目される。主要エンドポイント：年間増悪率。', url: 'https://clinicaltrials.gov/study/NCT06872892' },
-  { name: 'AZD0292 Phase IIb', drug: 'AZD0292（抗PA二重特異性抗体）', sponsor: 'AstraZeneca', phase: 'Phase IIb', status: 'RECRUITING', nct: 'NCT07088926', color: '#0e7490',
-    desc: 'GREAT-2試験（Gremubamab）の後継。PcrVとPslを同時標的とするIgG1kモノクローナル抗体。12歳以上の慢性PA保菌患者が対象。主要完了予定：2027年12月。', url: 'https://clinicaltrials.gov/study/NCT07088926' },
-  { name: 'Ensifentrine Phase II', drug: 'Ensifentrine（PDE3/4阻害吸入薬）', sponsor: 'Verona Pharma', phase: 'Phase II', status: 'RECRUITING', nct: 'NCT06559150', color: '#7c3aed',
-    desc: '吸入PDE3/4デュアル阻害薬のNCFBへの展開。ジェットネブライザー吸入、24週間〜3年間の投与で増悪率・症状・QOLを評価。180例登録予定、2026年9月完了見込み。', url: 'https://clinicaltrials.gov/study/NCT06559150' },
-  { name: 'Itepekimab Phase II', drug: 'Itepekimab（抗IL-33 mAb）', sponsor: 'Sanofi', phase: 'Phase II', status: 'RECRUITING', nct: 'NCT06280391', color: '#b45309',
-    desc: 'IL-33シグナルを遮断する抗体薬。好酸球性内型を主な対象としたPOCスタディ。T2炎症経路への介入が非CF気管支拡張症で有効かを初めてRCTで検証する。', url: 'https://clinicaltrials.gov/study/NCT06280391' },
-  { name: 'GSK3862995B Phase II', drug: 'GSK3862995B（LABA/ICS）', sponsor: 'GSK', phase: 'Phase II', status: 'RECRUITING', nct: 'NCT07201051', color: '#0f3872',
-    desc: '新規配合吸入薬の有効性・安全性評価試験。成人気管支拡張症患者を対象にプラセボと比較。', url: 'https://clinicaltrials.gov/study/NCT07201051' },
-  { name: 'Itraconazole（MOLD試験）', drug: 'Itraconazole（抗真菌薬）', sponsor: 'Mayo Clinic', phase: 'Pilot', status: 'RECRUITING', nct: 'NCT07283497', color: '#15803d',
-    desc: '気道内カビ（Aspergillus等）が検出された気管支拡張症患者へのイトラコナゾール療法の実現可能性・安全性・気道マイクロバイオームへの影響を検討するパイロット試験。', url: 'https://clinicaltrials.gov/study/NCT07283497' },
-  { name: 'SAVE-BE（HSK31858）', drug: 'HSK31858（DPP-1阻害薬）', sponsor: 'Haisco Pharmaceutical', phase: 'Phase II', status: 'COMPLETED', nct: 'NCT05741697', color: '#9f1239',
-    desc: '中国開発のDPP-1阻害薬。中国人患者を対象としたPhase 2結果はLancet Respir Med誌に掲載。アジア集団でもクラス効果が再現されることを示した。', url: 'https://pubmed.ncbi.nlm.nih.gov/' },
-  { name: 'Brensocatib ASPEN', drug: 'Brensocatib（DPP-1阻害薬）', sponsor: 'Insmed / BI', phase: 'Phase III', status: 'COMPLETED ✅ FDA承認', nct: 'NCT03791086', color: '#065f46',
-    desc: '1721例を対象とした気管支拡張症史上最大規模のRCT。10mg・25mgともに増悪率約20%低下。2025年8月12日にFDA承認（Brinsupri™）。年間増悪率：プラセボ1.29 vs 治療0.79/0.81。', url: 'https://www.nejm.org/doi/abs/10.1056/NEJMoa2411664' },
-];
-
-function buildTrialsPage() {
-  const grid = document.getElementById('trialsGrid');
-  if (!grid) return;
-  grid.innerHTML = TRIALS_DATA.map(t => `
+// ── 試験カードレンダリング関数 ──
+function trialCard(t) {
+  const isRecruiting = ['RECRUITING','募集中'].includes(t.status);
+  const isCompleted  = t.status.includes('COMPLETED') || t.status.includes('研究終了') || t.status.includes('募集終了') || t.status.includes('参加募集終了');
+  const isActive     = t.status.includes('ACTIVE_NOT_RECRUITING') || t.status.includes('募集中断');
+  const badgeStyle   = isCompleted  ? 'background:#fef3c7;color:#b45309'
+                     : isActive     ? 'background:#e0f2fe;color:#0369a1'
+                     : '';
+  return `
     <div class="trial-card" style="border-left-color:${t.color}">
       <div class="trial-card-title">${t.name}</div>
       <div class="trial-card-sub">💊 ${t.drug}</div>
       <div class="trial-card-badges">
         <span class="trial-badge phase">${t.phase}</span>
-        <span class="trial-badge ${t.status.includes('RECRUITING') ? 'recruiting' : ''}" style="${t.status.includes('COMPLETED') ? 'background:#fef3c7;color:#b45309' : ''}">${t.status}</span>
+        <span class="trial-badge ${isRecruiting ? 'recruiting' : ''}" style="${badgeStyle}">${t.status}</span>
         <span class="trial-badge nct">${t.nct}</span>
       </div>
       <div class="trial-card-desc">${t.desc}</div>
       <a class="trial-card-link" href="${t.url}" target="_blank" rel="noopener">🔗 ${t.nct.startsWith('jRCT') ? 'JRCT（日本）で詳細を見る' : 'ClinicalTrials.gov で詳細を見る'} ↗</a>
+    </div>`;
+}
+
+// ── 薬剤グループ別試験データ ──
+const TRIAL_GROUPS = [
+
+  // ① DPP-1阻害薬
+  { name: 'DPP-1阻害薬（カテプシンC阻害）', icon: '🏆', color: '#1d4ed8',
+    sub: 'Brensocatib / Verducatib / HSK31858',
+    trials: [
+      { name: 'Brensocatib ASPEN ✅ FDA承認', drug: 'Brensocatib（Insmed）', sponsor: 'Insmed / BI', phase: 'Phase III', status: 'COMPLETED ✅ FDA承認', nct: 'NCT03791086', color: '#065f46',
+        desc: '1721例を対象とした気管支拡張症史上最大規模のRCT。10mg・25mgともに増悪率約20%低下。2025年8月12日にFDA承認（Brinsupri™）。年間増悪率：プラセボ1.29 vs 治療0.79/0.81。', url: 'https://www.nejm.org/doi/abs/10.1056/NEJMoa2411664' },
+      { name: 'ASPEN 日本サブグループ', drug: 'Brensocatib（インスメッド）', sponsor: 'インスメッド合同会社', phase: 'Phase III', status: '研究終了', nct: 'jRCT2031210048', color: '#065f46',
+        desc: 'ASPEN試験の日本登録。嚢胞性線維症を伴わない気管支拡張症患者を対象にbrensocatibを1日1回52週間投与したときの有効性・安全性・薬物動態を評価した第3相試験。公表日：令和7年10月29日', url: 'https://jrct.mhlw.go.jp/latest-detail/jRCT2031210048' },
+      { name: 'AIRTIVITY™（Verducatib Phase III）', drug: 'Verducatib / BI 1291583（Boehringer Ingelheim）', sponsor: 'Boehringer Ingelheim', phase: 'Phase III', status: 'RECRUITING', nct: 'NCT06872892', color: '#1d4ed8',
+        desc: 'カテプシンC（DPP-1）阻害薬の第2弾。52週間プラセボ対照RCT。ASPENに続くDPP-1阻害クラスの第3相試験として最も注目される。主要エンドポイント：年間増悪率。', url: 'https://clinicaltrials.gov/study/NCT06872892' },
+      { name: 'AIRTIVITY™ 日本（Verducatib Phase III）', drug: 'Verducatib / BI 1291583（日本BI）', sponsor: '日本ベーリンガーインゲルハイム', phase: 'Phase III', status: '募集中', nct: 'jRCT2071250036', color: '#1d4ed8',
+        desc: 'AIRTIVITY試験日本登録。Verducatib（BI 1291583）2.5mgを1日1回最長76週間投与。Brensocatibとは別のBoehringer IngelheimのDPP-1阻害薬。公表日：令和8年4月14日', url: 'https://jrct.mhlw.go.jp/latest-detail/jRCT2071250036' },
+      { name: 'Clairleafᵀᴹ（Verducatib 長期延長）', drug: 'Verducatib / BI 1291583（BI）', sponsor: 'Boehringer Ingelheim', phase: 'Phase II', status: 'ACTIVE_NOT_RECRUITING', nct: 'NCT05846230', color: '#3b82f6',
+        desc: 'Airleaf™/Clairfly™試験の参加者を対象としたVerducatib長期延長試験（日本・韓国・欧州・北米）。268例登録済、現在追跡中。日本登録：jRCT2041230099。開始日：2023-09-08', url: 'https://clinicaltrials.gov/study/NCT05846230' },
+      { name: 'Verducatib 長期安全性延長（日本）', drug: 'Verducatib / BI 1291583（日本BI）', sponsor: '日本ベーリンガーインゲルハイム', phase: 'Phase II', status: '募集終了', nct: 'jRCT2041230099', color: '#94a3b8',
+        desc: '非CF気管支拡張症患者を対象にVerducatib長期経口投与の安全性・有効性を評価する延長試験（日本登録）。公表日：令和6年9月3日', url: 'https://jrct.mhlw.go.jp/latest-detail/jRCT2041230099' },
+      { name: 'Verducatib Phase 2a（日本）', drug: 'Verducatib / BI 1291583（日本BI）', sponsor: '日本ベーリンガーインゲルハイム', phase: 'Phase II', status: '募集終了', nct: 'jRCT2041220074', color: '#94a3b8',
+        desc: '非CF気管支拡張症患者を対象にVerducatib 1日1回24週間以上投与の有効性・安全性・忍容性を評価した第2相試験（日本登録）。公表日：令和5年9月6日', url: 'https://jrct.mhlw.go.jp/latest-detail/jRCT2041220074' },
+      { name: 'Verducatib Phase 1（日本）', drug: 'Verducatib / BI 1291583（日本BI）', sponsor: '日本ベーリンガーインゲルハイム', phase: 'Phase I', status: '研究終了', nct: 'jRCT2071210111', color: '#94a3b8',
+        desc: '日本人健康男性被験者を対象にVerducatib単回漸増・反復投与の安全性・忍容性・薬物動態を評価した第1相試験。AIRTIVITY試験への布石。公表日：令和6年8月19日', url: 'https://jrct.mhlw.go.jp/latest-detail/jRCT2071210111' },
+      { name: 'SAVE-BE（HSK31858）', drug: 'HSK31858（DPP-1阻害薬、Haisco）', sponsor: 'Haisco Pharmaceutical', phase: 'Phase II', status: 'COMPLETED', nct: 'NCT05741697', color: '#9f1239',
+        desc: '中国開発のDPP-1阻害薬。中国人患者を対象としたPhase 2結果はLancet Respir Med誌に掲載。アジア集団でもクラス効果が再現されることを示した。', url: 'https://pubmed.ncbi.nlm.nih.gov/' },
+    ]
+  },
+
+  // ② AZD0292（抗緑膿菌抗体）
+  { name: 'AZD0292（抗緑膿菌二重特異性抗体）', icon: '🦠', color: '#0e7490',
+    sub: 'AstraZeneca — PcrV × Psl 標的',
+    trials: [
+      { name: 'AZD0292 Phase IIb GREAT-2', drug: 'AZD0292（AstraZeneca）', sponsor: 'AstraZeneca', phase: 'Phase IIb', status: 'RECRUITING', nct: 'NCT07088926', color: '#0e7490',
+        desc: 'PcrVとPslを同時標的とするIgG1kモノクローナル抗体。12歳以上の慢性PA保菌気管支拡張症患者が対象。主要完了予定：2027年12月。', url: 'https://clinicaltrials.gov/study/NCT07088926' },
+      { name: 'AZD0292 第2相（日本）', drug: 'AZD0292（アストラゼネカ）', sponsor: 'アストラゼネカ株式会社', phase: 'Phase II', status: '募集中', nct: 'jRCT2071260021', color: '#0e7490',
+        desc: '12歳以上の慢性緑膿菌常在化を伴う気管支拡張症患者を対象にAZD0292の有効性・安全性・薬物動態を評価する第2相試験（GREAT試験の日本登録）。公表日：令和8年5月8日', url: 'https://jrct.mhlw.go.jp/latest-detail/jRCT2071260021' },
+      { name: 'AZD0292 Phase 1（日本人健康被験者）', drug: 'AZD0292（アストラゼネカ）', sponsor: 'アストラゼネカ株式会社', phase: 'Phase I', status: '募集終了', nct: 'jRCT2071250102', color: '#94a3b8',
+        desc: '日本人健康被験者を対象にAZD0292単回漸増投与の安全性・忍容性・薬物動態を評価した第1相試験（GREAT-2日本登録の前段階）。公表日：令和8年3月30日', url: 'https://jrct.mhlw.go.jp/latest-detail/jRCT2071250102' },
+    ]
+  },
+
+  // ③ CSL787（吸入IgG免疫療法）
+  { name: 'CSL787（吸入IgG気道局所免疫療法）', icon: '💉', color: '#7c3aed',
+    sub: 'CSL Behring — 気道局所IgG補強',
+    trials: [
+      { name: 'CSL787 Phase 2b（非CF気管支拡張症）', drug: 'CSL787（CSL Behring）', sponsor: 'CSL Behring', phase: 'Phase IIb', status: 'RECRUITING', nct: 'NCT07048262', color: '#7c3aed',
+        desc: '非CF気管支拡張症成人450例を対象にCSL787（IgG吸入液）2用量をプラセボと比較したPhase 2b多施設二重盲検RCT（日本・オーストラリア参加）。日本登録：jRCT2071250037。開始日：2025-09-03', url: 'https://clinicaltrials.gov/study/NCT07048262' },
+      { name: 'CSL787 吸入IgG 第2相（日本）', drug: 'CSL787（CSLベーリング）', sponsor: 'CSLベーリング株式会社', phase: 'Phase II', status: '募集中', nct: 'jRCT2071250037', color: '#7c3aed',
+        desc: '非嚢胞性線維症性気管支拡張症の成人患者（18〜85歳）を対象にCSL787吸入投与の有効性・安全性・薬物動態を評価する第2相試験（日本登録）。公表日：令和7年9月8日', url: 'https://jrct.mhlw.go.jp/latest-detail/jRCT2071250037' },
+    ]
+  },
+
+  // ④ 抗炎症・生物学的製剤
+  { name: '抗炎症・生物学的製剤（T2経路・好酸球性）', icon: '🧬', color: '#b45309',
+    sub: 'Itepekimab（Sanofi）/ SAR445399 / GSK3862995B',
+    trials: [
+      { name: 'Itepekimab Phase II（Sanofi）', drug: 'Itepekimab（抗IL-33 mAb、Sanofi）', sponsor: 'Sanofi', phase: 'Phase II', status: 'RECRUITING', nct: 'NCT06280391', color: '#b45309',
+        desc: 'IL-33シグナルを遮断する抗体薬。好酸球性エンドタイプを主な対象としたPOCスタディ。T2炎症経路への介入が非CF気管支拡張症で有効かを初めてRCTで検証する。', url: 'https://clinicaltrials.gov/study/NCT06280391' },
+      { name: 'Itepekimab Phase 2（日本）', drug: 'Itepekimab（サノフィ）', sponsor: 'サノフィ株式会社', phase: 'Phase II', status: '募集終了', nct: 'jRCT2031240053', color: '#b45309',
+        desc: '非CF気管支拡張症患者を対象としたItepekimab（抗IL-33モノクローナル抗体）の有効性・安全性・忍容性を検討するランダム化試験の日本登録。公表日：令和7年7月17日', url: 'https://jrct.mhlw.go.jp/latest-detail/jRCT2031240053' },
+      { name: 'SAR445399 Phase II（Sanofi）', drug: 'SAR445399（Sanofi）', sponsor: 'Sanofi', phase: 'Phase II', status: 'RECRUITING', nct: 'NCT07547436', color: '#9a3412',
+        desc: '成人非CF気管支拡張症患者を対象にSAR445399（新規薬剤）の24週間投与で粘液栓スコア低下を主要エンドポイントとして評価するプラセボ対照二重盲検RCT。', url: 'https://clinicaltrials.gov/study/NCT07547436' },
+      { name: 'GSK3862995B Phase II（GSK）', drug: 'GSK3862995B（GSK）', sponsor: 'GSK', phase: 'Phase II', status: 'RECRUITING', nct: 'NCT07201051', color: '#0f3872',
+        desc: '成人気管支拡張症患者を対象にGSK3862995Bの有効性・安全性評価試験。新規配合吸入薬としてプラセボと比較。', url: 'https://clinicaltrials.gov/study/NCT07201051' },
+      { name: 'GSK3862995B 第1/2相（日本）', drug: 'GSK3862995B（GSK）', sponsor: 'グラクソスミスクライン', phase: 'Phase 1/2', status: '募集中', nct: 'jRCT2031250446', color: '#0f3872',
+        desc: '気管支拡張症を有する被験者を対象にGSK3862995Bの有効性・安全性・免疫原性・薬物動態を評価する第1/2相試験（日本登録）。公表日：令和8年4月3日', url: 'https://jrct.mhlw.go.jp/latest-detail/jRCT2031250446' },
+    ]
+  },
+
+  // ⑤ 吸入薬・気道クリアランス
+  { name: '吸入薬・気道クリアランス・抗真菌', icon: '💨', color: '#15803d',
+    sub: 'Ensifentrine / GDC-6988 / HFNC / Ciprofloxacin',
+    trials: [
+      { name: 'Ensifentrine Phase II', drug: 'Ensifentrine（PDE3/4阻害吸入薬、Verona Pharma）', sponsor: 'Verona Pharma', phase: 'Phase II', status: 'RECRUITING', nct: 'NCT06559150', color: '#15803d',
+        desc: '吸入PDE3/4デュアル阻害薬のNCFBへの展開。ジェットネブライザー吸入、24週間〜3年間の投与で増悪率・症状・QOLを評価。180例登録予定、2026年9月完了見込み。', url: 'https://clinicaltrials.gov/study/NCT06559150' },
+      { name: 'GDC-6988 Phase 1/2', drug: 'GDC-6988吸入（Genentech）', sponsor: 'Genentech, Inc.', phase: 'Phase 1/2', status: 'RECRUITING', nct: 'NCT06603246', color: '#16a34a',
+        desc: '粘液閉塞性疾患患者を対象とした新規吸入薬GDC-6988の安全性・忍容性・薬理活性を評価するPhase 1/2試験。', url: 'https://clinicaltrials.gov/study/NCT06603246' },
+      { name: 'Itraconazole MOLD試験', drug: 'Itraconazole（抗真菌薬、Mayo Clinic）', sponsor: 'Mayo Clinic', phase: 'Pilot', status: 'RECRUITING', nct: 'NCT07283497', color: '#15803d',
+        desc: '気道内Aspergillus等が検出された気管支拡張症患者へのイトラコナゾール療法の実現可能性・安全性・気道マイクロバイオームへの影響を検討するパイロット試験。', url: 'https://clinicaltrials.gov/study/NCT07283497' },
+      { name: 'OLE在宅療法（BiWaze）', drug: 'OLE（振動肺拡張）療法', sponsor: 'Delve Health', phase: 'N/A', status: 'RECRUITING', nct: 'NCT06926881', color: '#166534',
+        desc: 'BiWaze Clearシステムによる振動肺拡張（OLE）療法が6ヶ月間の気道クリアランスと呼吸健康に与える影響を評価する観察研究。', url: 'https://clinicaltrials.gov/study/NCT06926881' },
+      { name: '在宅ハイフローセラピー RCT（日本）', drug: '在宅HFNC（日本発RCT）', sponsor: '日本国内多施設', phase: 'Phase III', status: '募集終了', nct: 'jRCT1052230157', color: '#94a3b8',
+        desc: '気管支拡張症患者に対する在宅ハイフローセラピーの有効性と安全性に関する多施設RCT（日本発）。日本初のHFNC気管支拡張症RCT。公表日：令和8年2月12日', url: 'https://jrct.mhlw.go.jp/latest-detail/jRCT1052230157' },
+      { name: 'シプロフロキサシンDPI（日本）', drug: 'シプロフロキサシンDPI（吸入製剤）', sponsor: '国内多施設', phase: 'Phase III', status: '参加募集終了', nct: 'jRCT2080222134', color: '#94a3b8',
+        desc: '嚢胞性線維症以外の気管支拡張症患者を対象にシプロフロキサシンドライパウダー吸入剤（DPI）の有効性・安全性を評価した第3相試験（日本登録）。公表日：令和2年11月11日', url: 'https://jrct.mhlw.go.jp/latest-detail/jRCT2080222134' },
+    ]
+  },
+
+  // ⑥ NTM感染症・菌体研究
+  { name: 'NTM・気道感染症', icon: '🔬', color: '#9f1239',
+    sub: 'MAC / NTM 肺疾患 — 日本含む国際試験',
+    trials: [
+      { name: 'ICoN-1 MNKD-101（日本）', drug: 'MNKD-101（吸入マンニトール、ManKind）', sponsor: 'マンカインド・コーポレーション', phase: 'Phase III', status: '募集中断', nct: 'jRCT2021240037', color: '#9f1239',
+        desc: '肺MAC症患者を対象にガイドラインに準拠した治療に上乗せしたMNKD-101（吸入マンニトール）の有効性・安全性を検討する第3相試験（日本登録）。現在募集中断中。公表日：令和7年12月17日', url: 'https://jrct.mhlw.go.jp/latest-detail/jRCT2021240037' },
+      { name: 'NTM症/BE遺伝因子解析（慶應）', drug: '遺伝因子研究（観察研究）', sponsor: '慶應義塾大学 長谷川直樹', phase: '観察研究', status: '募集中', nct: 'jRCT1030200233', color: '#7f1d1d',
+        desc: '肺非結核性抗酸菌症/気管支拡張症の遺伝因子の網羅的解析を目的とした国際多施設共同観察研究（慶應義塾大学主導）。疾患感受性遺伝子・バリアントの同定を目指す。公表日：令和4年2月3日', url: 'https://jrct.mhlw.go.jp/latest-detail/jRCT1030200233' },
+    ]
+  },
+
+  // ⑦ 観察研究・精密医療
+  { name: '観察研究・精密医療・診断', icon: '📊', color: '#475569',
+    sub: 'フレームワーク開発・表現型・重症度',
+    trials: [
+      { name: 'BASE（重症度・増悪リスクフレームワーク）', drug: 'BASE フレームワーク（観察研究）', sponsor: 'Assiut University', phase: '観察研究', status: 'RECRUITING', nct: 'NCT07599839', color: '#1d4ed8',
+        desc: '気管支拡張症の重症度分類と12ヶ月増悪リスク予測のためのBASEフレームワーク開発試験。機能的・放射線学的・炎症変数を組み合わせて患者をリスク層別化する前向きコホート研究。', url: 'https://clinicaltrials.gov/study/NCT07599839' },
+      { name: '気管支拡張症表現型同定モデル', drug: '潜在クラス軌跡解析（観察研究）', sponsor: 'Assiut University', phase: '観察研究', status: 'RECRUITING', nct: 'NCT07599969', color: '#0e7490',
+        desc: '潜在クラス軌跡解析を用いて非CF気管支拡張症の表現型クラスを同定し、ベースライン分類器を訓練するための前向きコホート研究。', url: 'https://clinicaltrials.gov/study/NCT07599969' },
+      { name: 'BE心血管合併症研究', drug: '観察研究', sponsor: 'Assiut University', phase: '観察研究', status: 'RECRUITING', nct: 'NCT05783869', color: '#475569',
+        desc: '急性増悪NCFB患者における心血管合併症が疾患重症度とQoLに与える影響を検討する観察研究。', url: 'https://clinicaltrials.gov/study/NCT05783869' },
+      { name: '肺スライディング指数（LSI）', drug: '肺超音波診断研究', sponsor: 'Assiut University', phase: '診断精度研究', status: 'RECRUITING', nct: 'NCT06983366', color: '#475569',
+        desc: '肺超音波を用いた肺スライディング指数（LSI）が気管支拡張症・COPDなど各種肺疾患の鑑別に有用かを検証するケースコントロール研究。', url: 'https://clinicaltrials.gov/study/NCT06983366' },
+    ]
+  },
+
+]; // end TRIAL_GROUPS
+
+// 後方互換用
+const TRIALS_DATA = TRIAL_GROUPS.flatMap(g => g.trials);
+
+function buildTrialsPage() {
+  const grid = document.getElementById('trialsGrid');
+  if (!grid) return;
+  grid.innerHTML = TRIAL_GROUPS.map(g => `
+    <div class="trial-group">
+      <div class="trial-group-header" style="background:${g.color}">
+        <span class="trial-group-icon">${g.icon}</span>
+        <span class="trial-group-name">${g.name}</span>
+        <span class="trial-group-sub">${g.sub}</span>
+      </div>
+      <div class="trial-group-grid">
+        ${g.trials.map(t => trialCard(t)).join('')}
+      </div>
     </div>
   `).join('');
 }
