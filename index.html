@@ -3151,6 +3151,19 @@ function showSection(sec, el) {
 // TRIALS PAGE
 // ============================================================
 const TRIALS_DATA = [
+  // ── JRCT（日本臨床試験登録）追加 2026-06-01 ──
+  { name: 'AZD0292 第2相（日本）', drug: 'AZD0292（抗緑膿菌二重特異性抗体）', sponsor: 'アストラゼネカ株式会社', phase: 'Phase II', status: '募集中', nct: 'jRCT2071260021', color: '#0e7490',
+    desc: '12歳以上の慢性緑膿菌常在化を伴う気管支拡張症患者を対象にAZD0292の有効性・安全性・薬物動態を評価する第2相試験（GREAT試験の日本登録）。PcrVとPslを標的とする二重特異性抗体。公表日：令和8年5月8日', url: 'https://jrct.mhlw.go.jp/latest-detail/jRCT2071260021' },
+  { name: 'BI 1291583 / Brensocatib 第3相（日本）', drug: 'BI 1291583（DPP-1阻害薬）', sponsor: '日本ベーリンガーインゲルハイム株式会社', phase: 'Phase III', status: '募集中', nct: 'jRCT2071250036', color: '#1d4ed8',
+    desc: '気管支拡張症患者を対象としてBI 1291583（brensocatib）2.5mgを1日1回最長76週間投与したときの有効性・安全性・薬物動態を評価する第3相試験（AIRTIVITY試験日本登録）。DPP-1阻害薬クラスで最注目の治験。公表日：令和8年4月14日', url: 'https://jrct.mhlw.go.jp/latest-detail/jRCT2071250036' },
+  { name: 'CSL787 吸入IgG 第2相（日本）', drug: 'CSL787（吸入IgG療法）', sponsor: 'CSLベーリング株式会社', phase: 'Phase II', status: '募集中', nct: 'jRCT2071250037', color: '#7c3aed',
+    desc: '非嚢胞性線維症性気管支拡張症の成人患者（18〜85歳）を対象にCSL787吸入投与の有効性・安全性・薬物動態を評価する第2相試験（日本登録）。気道局所免疫補強という新規アプローチ。公表日：令和7年9月8日', url: 'https://jrct.mhlw.go.jp/latest-detail/jRCT2071250037' },
+  { name: 'GSK3862995B 第1/2相（日本）', drug: 'GSK3862995B', sponsor: 'グラクソスミスクライン', phase: 'Phase 1/2', status: '募集中', nct: 'jRCT2031250446', color: '#0f3872',
+    desc: '気管支拡張症を有する被験者を対象にGSK3862995Bの有効性・安全性・免疫原性・薬物動態を評価する第1/2相試験（日本登録）。公表日：令和8年4月3日', url: 'https://jrct.mhlw.go.jp/latest-detail/jRCT2031250446' },
+  { name: 'ICoN-1 MNKD-101（日本）', drug: 'MNKD-101（吸入マンニトール）', sponsor: 'マンカインド・コーポレーション', phase: 'Phase III', status: '募集中断', nct: 'jRCT2021240037', color: '#9f1239',
+    desc: '肺MAC症患者を対象にガイドラインに準拠した治療に上乗せしたMNKD-101（吸入マンニトール）の有効性・安全性を検討する第3相試験（日本登録）。現在募集中断中。公表日：令和7年12月17日', url: 'https://jrct.mhlw.go.jp/latest-detail/jRCT2021240037' },
+  { name: 'NTM症/BE遺伝因子解析（慶應）', drug: '遺伝因子研究（観察研究）', sponsor: '慶應義塾大学 長谷川直樹', phase: '観察研究', status: '募集中', nct: 'jRCT1030200233', color: '#15803d',
+    desc: '肺非結核性抗酸菌症/気管支拡張症の遺伝因子の網羅的解析を目的とした国際多施設共同観察研究（慶應義塾大学主導）。疾患感受性遺伝子・バリアントの同定を目指す。公表日：令和4年2月3日', url: 'https://jrct.mhlw.go.jp/latest-detail/jRCT1030200233' },
   { name: 'BASE（重症度・増悪リスク）', drug: 'BASE フレームワーク（観察研究）', sponsor: 'Assiut University', phase: '観察研究', status: 'RECRUITING', nct: 'NCT07599839', color: '#1d4ed8',
     desc: '気管支拡張症の重症度分類と12ヶ月増悪リスク予測のためのBASEフレームワーク開発試験。機能的・放射線学的・炎症変数を組み合わせて患者をリスク層別化する前向きコホート研究。', url: 'https://clinicaltrials.gov/study/NCT07599839' },
   { name: '気管支拡張症表現型同定モデル', drug: '潜在クラス軌跡解析（観察研究）', sponsor: 'Assiut University', phase: '観察研究', status: 'RECRUITING', nct: 'NCT07599969', color: '#0e7490',
