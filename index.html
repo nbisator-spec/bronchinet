@@ -286,9 +286,9 @@
     <div class="dashboard-header">
       <div class="dashboard-title">
         🔥 本日のハイライト
-        <span class="dashboard-badge">NEW 1件</span>
+        <span class="dashboard-badge">NEW 2件</span>
       </div>
-      <div class="dashboard-date">最終更新：2026-06-03 07:04 自動生成</div>
+      <div class="dashboard-date">最終更新：2026-06-03 08:04 自動生成</div>
     </div>
     <div class="dashboard-grid" id="dashboardGrid"></div>
   </div>
@@ -435,7 +435,7 @@
           <div class="report-item">
             <div>
               <div class="report-date">2026年6月3日</div>
-              <div class="report-count">新規1件収録</div>
+              <div class="report-count">新規2件収録</div>
             </div>
             <span class="report-link" onclick="showSection('reports',document.querySelectorAll('nav a')[3])">▶ 開く</span>
           </div>
@@ -632,11 +632,16 @@
         <div class="report-card-date">📅 2026年6月3日</div>
         <div style="font-size:12px;color:var(--text-muted);margin-top:3px;">除外済み：298論文 / 72試験</div>
       </div>
-      <span class="report-card-count">新規 1件</span>
+      <span class="report-card-count">新規 2件</span>
     </div>
     <ul class="report-highlight-list">
       <li>
         <span class="report-num">1</span>
+        <span class="report-cat-inline" style="background:#fee2e2;color:#b91c1c">増悪・病態</span>
+        <span>CVID合併気管支拡張症の免疫学的予測因子：39研究の系統的レビューで脾腫が気管支拡張症リスク増加、総Bリンパ球高値がリスク低下と関連。CVIDにおける免疫学的バイオマーカーの臨床的意義を明確化した。<em>（Immunol Med, 2026-06-02）</em></span>
+      </li>
+      <li>
+        <span class="report-num">2</span>
         <span class="report-cat-inline" style="background:#fee2e2;color:#b91c1c">増悪・病態</span>
         <span>EffConvNeXt深層学習モデル：EfficientNetB1とConvNeXtTinyを統合したハイブリッドモデルがトルコの5,899枚の胸部X線から嚢胞性気管支拡張症・肺炎・正常を98.25%の精度で自動分類。XAIアプローチで臨床実装可能性を示した。<em>（J Imaging Inform Med, 2025-09）</em></span>
       </li>
@@ -1211,7 +1216,13 @@
 // ============================================================
 const ARTICLES = [
   // ── 2026-06-03 新規 ──
-  {id:260, cat:"増悪・病態", isNew:true,
+  {id:261, cat:"増悪・病態", isNew:true,
+   titleEn:"Associations between disease factors and clinical outcomes in common variable immunodeficiency: a systematic literature review.",
+   titleJa:"分類不能型免疫不全症（CVID）における疾患因子と臨床転帰の関連：系統的文献レビュー",
+   journal:"Immunological medicine", date:"2026-06-02", year:2026,
+   summary:"CVIDに関する39研究を統合した系統的レビュー。脾腫が気管支拡張症リスク増加と関連し，総Bリンパ球高値が気管支拡張症および死亡リスク低下と関連することが示された。リンパ球増殖マーカーおよびBリンパ球サブセットと臨床転帰の関連が，CVIDにおける気管支拡張症の免疫学的病態理解に寄与する。（PubMed PMID: 42227882）",
+   url:"https://pubmed.ncbi.nlm.nih.gov/42227882/", authors:"Lopes Joao Pedro M et al."},
+  {id:260, cat:"増悪・病態", isNew:false,
    titleEn:"A Deep Learning-Based EffConvNeXt Model for Automatic Classification of Cystic Bronchiectasis: An Explainable AI Approach",
    titleJa:"嚢胞性気管支拡張症の自動分類のための深層学習EffConvNeXtモデル：説明可能AIアプローチ",
    journal:"J Imaging Inform Med", date:"2025-09", year:2025,
