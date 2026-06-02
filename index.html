@@ -286,9 +286,9 @@
     <div class="dashboard-header">
       <div class="dashboard-title">
         🔥 本日のハイライト
-        <span class="dashboard-badge">NEW 3件</span>
+        <span class="dashboard-badge">NEW 1件</span>
       </div>
-      <div class="dashboard-date">最終更新：2026-06-02 20:30 自動生成</div>
+      <div class="dashboard-date">最終更新：2026-06-03 07:04 自動生成</div>
     </div>
     <div class="dashboard-grid" id="dashboardGrid"></div>
   </div>
@@ -432,6 +432,13 @@
       <div class="sidebar-card">
         <div class="sidebar-header orange">📅 デイリーレポート履歴</div>
         <div class="sidebar-body">
+          <div class="report-item">
+            <div>
+              <div class="report-date">2026年6月3日</div>
+              <div class="report-count">新規1件収録</div>
+            </div>
+            <span class="report-link" onclick="showSection('reports',document.querySelectorAll('nav a')[3])">▶ 開く</span>
+          </div>
           <div class="report-item">
             <div>
               <div class="report-date">2026年6月2日</div>
@@ -616,6 +623,24 @@
   <div class="reports-page-header">
     <h2>📝 デイリーレポート アーカイブ</h2>
     <p>毎朝8時に自動生成される文献サマリーの履歴。既読除外機能により、常に新規情報のみを収録しています。</p>
+  </div>
+
+  <!-- Report 2026-06-03 -->
+  <div class="report-card">
+    <div class="report-card-header">
+      <div>
+        <div class="report-card-date">📅 2026年6月3日</div>
+        <div style="font-size:12px;color:var(--text-muted);margin-top:3px;">除外済み：298論文 / 72試験</div>
+      </div>
+      <span class="report-card-count">新規 1件</span>
+    </div>
+    <ul class="report-highlight-list">
+      <li>
+        <span class="report-num">1</span>
+        <span class="report-cat-inline" style="background:#fee2e2;color:#b91c1c">増悪・病態</span>
+        <span>EffConvNeXt深層学習モデル：EfficientNetB1とConvNeXtTinyを統合したハイブリッドモデルがトルコの5,899枚の胸部X線から嚢胞性気管支拡張症・肺炎・正常を98.25%の精度で自動分類。XAIアプローチで臨床実装可能性を示した。<em>（J Imaging Inform Med, 2025-09）</em></span>
+      </li>
+    </ul>
   </div>
 
   <!-- Report 2026-06-02 -->
@@ -1185,20 +1210,27 @@
 // DATA
 // ============================================================
 const ARTICLES = [
+  // ── 2026-06-03 新規 ──
+  {id:260, cat:"増悪・病態", isNew:true,
+   title:"A Deep Learning-Based EffConvNeXt Model for Automatic Classification of Cystic Bronchiectasis: An Explainable AI Approach",
+   titleJa:"嚢胞性気管支拡張症の自動分類のための深層学習EffConvNeXtモデル：説明可能AIアプローチ",
+   journal:"J Imaging Inform Med", date:"2025-09", year:2025,
+   pmid:"40999297",
+   summary:"EfficientNetB1とConvNeXtTinyを統合したEffConvNeXtがトルコの5,899枚の胸部X線から嚢胞性気管支拡張症・肺炎・正常を98.25%の精度で分類し個別モデルを上回った。XAI（説明可能AI）アプローチにより臨床診断支援ツールとしての実装可能性を示した。"},
   // ── 2026-06-02 新規 ──
-  {id:259, cat:"精密医療・エンドタイプ", isNew:true,
+  {id:259, cat:"精密医療・エンドタイプ", isNew:false,
    titleJa:"炎症性肺疾患の病態生理と治療におけるα1アンチトリプシンの役割",
    titleEn:"The Role of Alpha-1 Antitrypsin in the Pathophysiology and Treatment of Inflammatory Lung Diseases",
    journal:"Journal of Inflammation Research", date:"2026-05-23", year:2026,
    summary:"α1アンチトリプシン（AAT）はNE（好中球エラスターゼ）阻害を中心とした気道恒常性維持に加え、抗炎症・免疫調節・抗アポトーシス機能を持ち、AATDに基づくCOPDを超えて気管支拡張症・CF・ILDにおいても治療標的となりうる可能性を論じた文献総説。非AATD状態でのAAT補充療法の有効性を探索する新たな研究動向と臨床的意義についても言及した。（PubMed PMID: 42221221）",
    url:"https://pubmed.ncbi.nlm.nih.gov/42221221/", authors:"Spittle Daniella A et al."},
-  {id:258, cat:"マイクロバイオーム・感染", isNew:true,
+  {id:258, cat:"マイクロバイオーム・感染", isNew:false,
    titleJa:"気道における非型別インフルエンザ菌（NTHi）：疾患の前触れか推進因子か",
    titleEn:"Haemophilus influenzae in the airways: canary in the coal mine or driver of disease?",
    journal:"Expert Review of Respiratory Medicine", date:"2026-01-13", year:2026,
    summary:"気管支拡張症・COPD・喘息等の慢性気道疾患（CAD）で共通して増加するNTHiが疾患の推進因子か病変環境の産物かを論じた包括的レビュー。NTHiの超変異・バイオフィルム形成・細胞内生存による適応機構と、宿主側の免疫・構造・粘膜変化が「許容ニッチ」を形成する過程を解説し、ホスト-病原体相互作用を標的とした新規治療戦略を考察した。（PubMed PMID: 41527686）",
    url:"https://pubmed.ncbi.nlm.nih.gov/41527686/", authors:"Ackland Jodie et al."},
-  {id:257, cat:"治療・薬剤", isNew:true,
+  {id:257, cat:"治療・薬剤", isNew:false,
    titleJa:"中国における気管支拡張症の気道クリアランス管理：BE-Chinaレジストリ92病院・9647例の多施設横断研究",
    titleEn:"Airway clearance management for bronchiectasis in China: a multicentre cross-sectional study from the Chinese bronchiectasis registry (BE-China)",
    journal:"The Lancet Regional Health - Western Pacific", date:"2026-05-22", year:2026,
@@ -3262,6 +3294,10 @@ const TRIAL_GROUPS = [
         desc: '気道内Aspergillus等が検出された気管支拡張症患者へのイトラコナゾール療法の実現可能性・安全性・気道マイクロバイオームへの影響を検討するパイロット試験。', url: 'https://clinicaltrials.gov/study/NCT07283497' },
       { name: 'OLE在宅療法（BiWaze）', drug: 'OLE（振動肺拡張）療法', sponsor: 'Delve Health', phase: 'N/A', status: 'RECRUITING', nct: 'NCT06926881', color: '#166534',
         desc: 'BiWaze Clearシステムによる振動肺拡張（OLE）療法が6ヶ月間の気道クリアランスと呼吸健康に与える影響を評価する観察研究。', url: 'https://clinicaltrials.gov/study/NCT06926881' },
+      { name: '高浸透圧食塩水 Phase IV（UNC）', drug: '高浸透圧食塩水吸入（7% NaCl）', sponsor: 'University of North Carolina, Chapel Hill', phase: 'Phase IV', status: 'RECRUITING', nct: 'NCT06242795', color: '#15803d',
+        desc: '非嚢胞性線維症性気管支拡張症（NCFB）患者を対象に高浸透圧食塩水（7%）吸入の有効性・安全性を検証するPhase IVランダム化試験。粘液線毛クリアランス改善と増悪予防効果を主要評価。', url: 'https://clinicaltrials.gov/study/NCT06242795' },
+      { name: 'OPEP装置 QOL評価（フランス）', drug: 'OPEP（振動陽圧呼気）装置', sponsor: 'Centre Hospitalier Universitaire, Amiens', phase: 'N/A', status: 'RECRUITING', nct: 'NCT06820983', color: '#16a34a',
+        desc: 'OPEP（振動陽圧呼気）装置の使用が気管支拡張症患者のQOL・生活機能に与える影響を評価するフランス・CHU Amienの観察・介入研究。欧州での気道クリアランスデバイス普及実態データの収集を目的とする。', url: 'https://clinicaltrials.gov/study/NCT06820983' },
       { name: '在宅ハイフローセラピー RCT（日本）', drug: '在宅HFNC（日本発RCT）', sponsor: '日本国内多施設', phase: 'Phase III', status: '募集終了', nct: 'jRCT1052230157', color: '#94a3b8',
         desc: '気管支拡張症患者に対する在宅ハイフローセラピーの有効性と安全性に関する多施設RCT（日本発）。日本初のHFNC気管支拡張症RCT。公表日：令和8年2月12日', url: 'https://jrct.mhlw.go.jp/latest-detail/jRCT1052230157' },
       { name: 'シプロフロキサシンDPI（日本）', drug: 'シプロフロキサシンDPI（吸入製剤）', sponsor: '国内多施設', phase: 'Phase III', status: '参加募集終了', nct: 'jRCT2080222134', color: '#94a3b8',
@@ -3292,6 +3328,8 @@ const TRIAL_GROUPS = [
         desc: '急性増悪NCFB患者における心血管合併症が疾患重症度とQoLに与える影響を検討する観察研究。', url: 'https://clinicaltrials.gov/study/NCT05783869' },
       { name: '肺スライディング指数（LSI）', drug: '肺超音波診断研究', sponsor: 'Assiut University', phase: '診断精度研究', status: 'RECRUITING', nct: 'NCT06983366', color: '#475569',
         desc: '肺超音波を用いた肺スライディング指数（LSI）が気管支拡張症・COPDなど各種肺疾患の鑑別に有用かを検証するケースコントロール研究。', url: 'https://clinicaltrials.gov/study/NCT06983366' },
+      { name: '下気道マイクロバイオーム適応進化（浙江大学）', drug: '微生物定着観察研究', sponsor: 'Second Affiliated Hospital, Zhejiang University', phase: '観察研究', status: 'RECRUITING', nct: 'NCT04966793', color: '#334155',
+        desc: '気管支拡張症患者の下気道における微生物定着の分布と経時的適応進化を追う前向き観察研究（中国・浙江大学）。マイクロバイオームの変化パターンと疾患増悪・予後との関連を縦断的に評価する。', url: 'https://clinicaltrials.gov/study/NCT04966793' },
     ]
   },
 
