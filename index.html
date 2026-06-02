@@ -3151,7 +3151,24 @@ function showSection(sec, el) {
 // TRIALS PAGE
 // ============================================================
 const TRIALS_DATA = [
-  // ── JRCT（日本臨床試験登録）追加 2026-06-01 ──
+  // ── JRCT（日本臨床試験登録）全件追加 2026-06-01 ──
+  // 募集終了・研究終了（歴史的記録）
+  { name: 'ASPEN 日本サブグループ（Brensocatib）', drug: 'Brensocatib（インスメッド）', sponsor: 'インスメッド合同会社', phase: 'Phase III', status: '研究終了', nct: 'jRCT2031210048', color: '#065f46',
+    desc: 'ASPEN試験の日本登録。嚢胞性線維症を伴わない気管支拡張症患者を対象にbrensocatibを1日1回52週間投与したときの有効性・安全性・薬物動態を評価した第3相試験。日本からのASPENサブグループデータの源泉。公表日：令和7年10月29日', url: 'https://jrct.mhlw.go.jp/latest-detail/jRCT2031210048' },
+  { name: 'BI 1291583 Phase 1（日本）', drug: 'BI 1291583（Verducatib前身）', sponsor: '日本ベーリンガーインゲルハイム', phase: 'Phase I', status: '研究終了', nct: 'jRCT2071210111', color: '#94a3b8',
+    desc: '日本人健康男性被験者を対象にBI 1291583を単回漸増経口投与及び反復投与したときの安全性・忍容性・薬物動態を評価した第1相試験（COPD合併BE含む）。AIRTIVITY試験への布石。公表日：令和6年8月19日', url: 'https://jrct.mhlw.go.jp/latest-detail/jRCT2071210111' },
+  { name: 'BI 1291583 Phase 2a（日本）', drug: 'BI 1291583', sponsor: '日本ベーリンガーインゲルハイム', phase: 'Phase II', status: '募集終了', nct: 'jRCT2041220074', color: '#94a3b8',
+    desc: '非CF気管支拡張症患者を対象にBI 1291583を1日1回24週間以上投与したときの有効性・安全性・忍容性を評価した第2相試験（日本登録）。公表日：令和5年9月6日', url: 'https://jrct.mhlw.go.jp/latest-detail/jRCT2041220074' },
+  { name: 'BI 1291583 長期安全性（日本）', drug: 'BI 1291583（長期試験）', sponsor: '日本ベーリンガーインゲルハイム', phase: 'Phase II', status: '募集終了', nct: 'jRCT2041230099', color: '#94a3b8',
+    desc: '非CF気管支拡張症患者を対象にBI 1291583を1日1回経口投与したときの長期安全性及び有効性を評価する延長試験（日本登録）。公表日：令和6年9月3日', url: 'https://jrct.mhlw.go.jp/latest-detail/jRCT2041230099' },
+  { name: 'AZD0292 Phase 1（日本人健康被験者）', drug: 'AZD0292（アストラゼネカ）', sponsor: 'アストラゼネカ株式会社', phase: 'Phase I', status: '募集終了', nct: 'jRCT2071250102', color: '#94a3b8',
+    desc: '日本人健康被験者を対象にAZD0292単回漸増投与の安全性・忍容性・薬物動態を評価した無作為化二重盲検第1相試験。GREAT-2（jRCT2071260021）の前臨床評価。公表日：令和8年3月30日', url: 'https://jrct.mhlw.go.jp/latest-detail/jRCT2071250102' },
+  { name: 'Itepekimab Phase 2（日本）', drug: 'Itepekimab（抗IL-33 mAb、サノフィ）', sponsor: 'サノフィ株式会社', phase: 'Phase II', status: '募集終了', nct: 'jRCT2031240053', color: '#b45309',
+    desc: '非CF気管支拡張症患者を対象としたitepekimab（抗IL-33モノクローナル抗体）の有効性・安全性・忍容性を検討するランダム化試験の日本登録。T2炎症経路への介入。公表日：令和7年7月17日', url: 'https://jrct.mhlw.go.jp/latest-detail/jRCT2031240053' },
+  { name: '在宅ハイフローセラピー RCT（日本）', drug: '在宅高流量鼻カニューラ酸素療法（HFNC）', sponsor: '日本国内多施設', phase: 'Phase III', status: '募集終了', nct: 'jRCT1052230157', color: '#15803d',
+    desc: '気管支拡張症患者に対する在宅ハイフローセラピーの有効性と安全性に関する多施設ランダム化比較試験（日本発）。気道クリアランス改善を主要エンドポイントとした日本初のHFNC RCT。公表日：令和8年2月12日', url: 'https://jrct.mhlw.go.jp/latest-detail/jRCT1052230157' },
+  { name: 'シプロフロキサシンDPI（日本）', drug: 'シプロフロキサシンDPI吸入製剤', sponsor: '国内多施設', phase: 'Phase III', status: '参加募集終了', nct: 'jRCT2080222134', color: '#94a3b8',
+    desc: '嚢胞性線維症以外の気管支拡張症患者を対象にシプロフロキサシンドライパウダー吸入剤（DPI）の有効性・安全性を評価した第3相試験（日本登録）。吸入抗菌薬クラスの日本試験。公表日：令和2年11月11日', url: 'https://jrct.mhlw.go.jp/latest-detail/jRCT2080222134' },
   { name: 'AZD0292 第2相（日本）', drug: 'AZD0292（抗緑膿菌二重特異性抗体）', sponsor: 'アストラゼネカ株式会社', phase: 'Phase II', status: '募集中', nct: 'jRCT2071260021', color: '#0e7490',
     desc: '12歳以上の慢性緑膿菌常在化を伴う気管支拡張症患者を対象にAZD0292の有効性・安全性・薬物動態を評価する第2相試験（GREAT試験の日本登録）。PcrVとPslを標的とする二重特異性抗体。公表日：令和8年5月8日', url: 'https://jrct.mhlw.go.jp/latest-detail/jRCT2071260021' },
   { name: 'BI 1291583 / Brensocatib 第3相（日本）', drug: 'BI 1291583（DPP-1阻害薬）', sponsor: '日本ベーリンガーインゲルハイム株式会社', phase: 'Phase III', status: '募集中', nct: 'jRCT2071250036', color: '#1d4ed8',
