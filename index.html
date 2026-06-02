@@ -1212,11 +1212,11 @@
 const ARTICLES = [
   // ── 2026-06-03 新規 ──
   {id:260, cat:"増悪・病態", isNew:true,
-   title:"A Deep Learning-Based EffConvNeXt Model for Automatic Classification of Cystic Bronchiectasis: An Explainable AI Approach",
+   titleEn:"A Deep Learning-Based EffConvNeXt Model for Automatic Classification of Cystic Bronchiectasis: An Explainable AI Approach",
    titleJa:"嚢胞性気管支拡張症の自動分類のための深層学習EffConvNeXtモデル：説明可能AIアプローチ",
    journal:"J Imaging Inform Med", date:"2025-09", year:2025,
-   pmid:"40999297",
-   summary:"EfficientNetB1とConvNeXtTinyを統合したEffConvNeXtがトルコの5,899枚の胸部X線から嚢胞性気管支拡張症・肺炎・正常を98.25%の精度で分類し個別モデルを上回った。XAI（説明可能AI）アプローチにより臨床診断支援ツールとしての実装可能性を示した。"},
+   summary:"EfficientNetB1とConvNeXtTinyを統合したEffConvNeXtがトルコの5,899枚の胸部X線から嚢胞性気管支拡張症・肺炎・正常を98.25%の精度で分類し個別モデルを上回った。XAI（説明可能AI）アプローチにより臨床診断支援ツールとしての実装可能性を示した。（PubMed PMID: 40999297）",
+   url:"https://pubmed.ncbi.nlm.nih.gov/40999297/"},
   // ── 2026-06-02 新規 ──
   {id:259, cat:"精密医療・エンドタイプ", isNew:false,
    titleJa:"炎症性肺疾患の病態生理と治療におけるα1アンチトリプシンの役割",
@@ -2084,10 +2084,10 @@ const ARTICLES = [
    summary:"日本人COPD患者における気管支拡張症の有病率・臨床特性・アウトカムを前向きコホートで検討した研究（石巻赤十字病院）。日本人COPDにおける気管支拡張症合併の実態を初めて前向きに明らかにし、COPD合併気管支拡張症への包括的アプローチの重要性を示した。（PubMed PMID: 40743857）",
    url:"https://doi.org/10.1016/j.resinv.2025.07.016"},
   {id:117, cat:"日本発", isNew:false,
-   titleJa:"日本における気管支拡張症の疫学：大阪大学単施設後ろ向きコホート研究",
+   titleJa:"日本における気管支拡張症の疫学：単施設後ろ向きコホート研究（国立病院機構刀根山医療センター）",
    titleEn:"Epidemiology of bronchiectasis at a single center in Japan: a retrospective cohort study",
    journal:"BMC Pulm Med", date:"2024-10", year:2024,
-   summary:"大阪大学における気管支拡張症患者の臨床特性・NTM感染・治療アウトカムを後ろ向きコホートで検討（大阪大学）。日本人気管支拡張症患者でのNTM感染の高頻度と予後への影響、長期マクロライド投与の効果を明らかにした。（PubMed PMID: 39448945）",
+   summary:"国立病院機構刀根山医療センター（大阪）における気管支拡張症患者の臨床特性・NTM感染・治療アウトカムを後ろ向きコホートで検討。日本人気管支拡張症患者でのNTM感染の高頻度と予後への影響、長期マクロライド投与の効果を明らかにした。（PubMed PMID: 39448945）",
    url:"https://doi.org/10.1186/s12890-024-03337-7", authors:"Hashimoto Kazuki et al."},
   {id:116, cat:"日本発", isNew:false,
    titleJa:"非嚢胞性線維症気管支拡張症に対する長期マクロライド療法の有効性と安全性：システマティックレビュー＆メタ解析",
@@ -2909,8 +2909,8 @@ function buildDashboard() {
         <span class="dash-cat-dot" style="background:${getCatColor(a.cat)}"></span>
         ${a.cat}
       </div>
-      <div class="dash-title"><span class="dash-new">NEW</span>${a.titleJa}</div>
-      <div class="dash-title-en">${a.titleEn}</div>
+      <div class="dash-title"><span class="dash-new">NEW</span>${a.titleJa || a.titleEn || ''}</div>
+      <div class="dash-title-en">${a.titleEn || a.titleJa || ''}</div>
       <div class="dash-journal">📰 ${a.journal} | ${a.date}</div>
     </div>
   `).join('');
@@ -3055,7 +3055,7 @@ function openModal(id) {
   if (!a) return;
   document.getElementById('modalCatTag').innerHTML = `<span class="cat-tag ${a.cat}">${a.cat}</span>${a.isNew ? ' <span class="new-tag">NEW</span>' : ''}`;
   document.getElementById('modalTitleJa').textContent = a.titleJa;
-  document.getElementById('modalTitleEn').textContent = a.titleEn;
+  document.getElementById('modalTitleEn').textContent = a.titleEn || '';
   document.getElementById('modalMeta').innerHTML = `
     <div class="modal-meta-item"><strong>${a.journal}</strong>掲載誌</div>
     <div class="modal-meta-item"><strong>${a.date}</strong>発表年月</div>
