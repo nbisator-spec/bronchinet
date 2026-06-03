@@ -322,9 +322,9 @@
     <div class="dashboard-header">
       <div class="dashboard-title">
         🔥 本日のハイライト
-        <span class="dashboard-badge">NEW 0件</span>
+        <span class="dashboard-badge">NEW 3件</span>
       </div>
-      <div class="dashboard-date">最終更新：2026-06-04 07:04 自動生成</div>
+      <div class="dashboard-date">最終更新：2026-06-04 08:04 自動生成</div>
     </div>
     <div class="dashboard-grid" id="dashboardGrid"></div>
   </div>
@@ -471,7 +471,7 @@
           <div class="report-item">
             <div>
               <div class="report-date">2026年6月4日</div>
-              <div class="report-count">新規0件・臨床試験1件</div>
+              <div class="report-count">新規3件・臨床試験1件</div>
             </div>
             <span class="report-link" onclick="showSection('reports',document.querySelectorAll('nav a')[3])">▶ 開く</span>
           </div>
@@ -673,19 +673,30 @@
     <div class="report-card-header">
       <div>
         <div class="report-card-date">📅 2026年6月4日</div>
-        <div style="font-size:12px;color:var(--text-muted);margin-top:3px;">除外済み：300論文 / 80試験</div>
+        <div style="font-size:12px;color:var(--text-muted);margin-top:3px;">除外済み：314論文 / 99試験</div>
       </div>
-      <span class="report-card-count">新規 0件</span>
+      <span class="report-card-count">新規 3件 + 試験1件</span>
     </div>
     <ul class="report-highlight-list">
       <li>
         <span class="report-num">1</span>
-        <span class="report-cat-inline" style="background:#d1fae5;color:#065f46">臨床試験</span>
-        <span>【新規臨床試験】NCT07023354 (Phase 1) – Boehringer Ingelheimによるverducatib（BI 1291583）の肝機能障害患者での薬物動態試験が新規登録。第III相AIRTIVITY試験と並行して開発が着実に進行中。</span>
+        <span class="report-cat-inline" style="background:#dbeafe;color:#1e40af">治療・薬剤</span>
+        <span>吸入抗菌薬メタ解析（Int J Antimicrob Agents, 2026-06-01）: NCFBで増悪15%減少（RR 0.86）・除菌改善（RR 2.16）を確認、一方で耐性菌増加（RR 1.97）も。21 SR・69 RCTを統合したエビデンスマップ。<a href="https://pubmed.ncbi.nlm.nih.gov/42229866/" target="_blank" style="color:var(--primary)">PMID:42229866</a></span>
       </li>
       <li>
-        <span class="report-num" style="background:#94a3b8">—</span>
-        <span style="color:var(--text-muted);font-size:12px;">PubMed論文（過去30日分）：本日新規なし。全84件が既読インデックスにより除外済み。</span>
+        <span class="report-num">2</span>
+        <span class="report-cat-inline" style="background:#fee2e2;color:#b91c1c">増悪・病態</span>
+        <span>小児PIBO総説（Curr Opin Pediatr, 2026-06-04）: インフラマゾーム活性化・遺伝的感受性が病態の鍵。フェノタイプ別標的治療の開発が今後の課題。<a href="https://pubmed.ncbi.nlm.nih.gov/42234623/" target="_blank" style="color:var(--primary)">PMID:42234623</a></span>
+      </li>
+      <li>
+        <span class="report-num">3</span>
+        <span class="report-cat-inline" style="background:#fee2e2;color:#b91c1c">増悪・病態</span>
+        <span>カルタゲナー症候群合併脳膿瘍症例（Surg Neurol Int, 2026-05-29）: 気管支拡張症基礎患者での頚部誤診→右前頭葉脳膿瘍の注意喚起症例。外科的ドレナージで完全回復。<a href="https://pubmed.ncbi.nlm.nih.gov/42232444/" target="_blank" style="color:var(--primary)">PMID:42232444</a></span>
+      </li>
+      <li>
+        <span class="report-num">4</span>
+        <span class="report-cat-inline" style="background:#d1fae5;color:#065f46">臨床試験</span>
+        <span>【新規臨床試験】NCT07023354 (Phase 1) – Boehringer Ingelheimによるverducatib（BI 1291583）の肝機能障害患者での薬物動態試験が新規登録。第III相AIRTIVITY試験と並行して開発が着実に進行中。</span>
       </li>
     </ul>
   </div>
@@ -1280,6 +1291,25 @@
 // DATA
 // ============================================================
 const ARTICLES = [
+  // ── 2026-06-04 新規 ──
+  {id:278, cat:"治療・薬剤", isNew:true,
+   titleJa:"下気道感染症に対する吸入抗菌薬の有効性と安全性：システマティックレビューのアップデートメタ解析とエビデンスマップ",
+   titleEn:"The efficacy and safety of inhaled antibiotics in the treatment of lower respiratory tract infection: An updated meta-analysis and evidence map of systematic reviews.",
+   journal:"International Journal of Antimicrobial Agents", date:"2026-06", year:2026,
+   summary:"21件のSRと69件のRCT（CF・非CF気管支拡張症・VAP）を統合した包括的エビデンスマップにより、NCFBでの吸入抗菌薬は増悪頻度を有意に減少させ（RR 0.86）、細菌学的除菌率を改善する（RR 2.16）一方、気管支攣縮（RR 1.43）および耐性菌出現（RR 1.97）のリスクも有意に上昇。ネブライザー種類・標的病原体別の効果差が明確化された。（PubMed PMID: 42229866）",
+   url:"https://pubmed.ncbi.nlm.nih.gov/42229866/"},
+  {id:279, cat:"増悪・病態", isNew:true,
+   titleJa:"小児の感染後気管支閉塞症：病態・治療戦略・今後の方向性",
+   titleEn:"Post-infectious bronchiolitis obliterans in children: pathogenesis, treatment strategies, and future directions.",
+   journal:"Current Opinion in Pediatrics", date:"2026-06", year:2026,
+   summary:"感染後気管支閉塞症（PIBO）の病態としてNETs形成、インフラマゾーム活性化（IL-18・カスパーゼ1）、遺伝的感受性が主要機序として注目されており、診断は臨床・機能・画像の統合評価が必要。疾患修飾療法のエビデンスは限られており、フェノタイプ別の標的治療開発が今後の鍵となる。（PubMed PMID: 42234623）",
+   url:"https://pubmed.ncbi.nlm.nih.gov/42234623/"},
+  {id:280, cat:"増悪・病態", isNew:true,
+   titleJa:"カルタゲナー症候群患者における右前頭葉脳膿瘍の診断的落とし穴：頚部病変として誤認された症例報告",
+   titleEn:"Diagnostic pitfall: Right frontal brain abscess presenting as presumed cervical pathology in a patient with Kartagener syndrome - A case report.",
+   journal:"Surgical Neurology International", date:"2026-05", year:2026,
+   summary:"気管支拡張症を伴うカルタゲナー症候群の27歳男性が左上肢の脱力・しびれで発症、頚部病変として1ヶ月間誤認された右前頭葉脳膿瘍の症例。頭部MRIで診断後、外科的ドレナージとメロペネム＋バンコマイシンにより完全な神経学的回復を達成した。（PubMed PMID: 42232444）",
+   url:"https://pubmed.ncbi.nlm.nih.gov/42232444/"},
   // ── 2026-06-03 新規（3ヶ月分リサーチ） ──
   {id:262, cat:"臨床試験", isNew:false,
    titleJa:"AIR-NET試験：EMBARCネットワークによる既存抗炎症薬の適応的プラットフォーム試験のデザイン",
