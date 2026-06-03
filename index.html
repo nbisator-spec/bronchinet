@@ -3,6 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
 <title>BronchiNet｜気管支拡張症　文献ポータル</title>
 <style>
   :root {
@@ -244,6 +245,41 @@
 </style>
 </head>
 <body>
+<!-- ▼ 簡易パスワードゲート（client側のみ・偶然の閲覧防止用） -->
+<div id="pw-gate" style="position:fixed;inset:0;z-index:99999;background:#0f172a;
+     display:flex;align-items:center;justify-content:center;font-family:sans-serif;">
+  <div style="text-align:center;color:#fff;max-width:320px;padding:24px;">
+    <div style="font-size:28px;font-weight:700;margin-bottom:8px;">🫁 BronchiNet</div>
+    <p style="color:#94a3b8;margin-bottom:20px;">パスワードを入力してください</p>
+    <input id="pw-input" type="password" autofocus
+      style="width:100%;padding:12px;border-radius:8px;border:none;font-size:16px;box-sizing:border-box;">
+    <button id="pw-btn"
+      style="width:100%;margin-top:12px;padding:12px;border:none;border-radius:8px;
+      background:#2563eb;color:#fff;font-size:16px;cursor:pointer;">入る</button>
+    <p id="pw-err" style="color:#f87171;height:18px;margin-top:8px;font-size:14px;"></p>
+  </div>
+</div>
+<script>
+(function () {
+  var PASSWORD = "bronchinet2026"; // ← 共有用パスワード。変えたい時はこの行だけ編集
+  var KEY = "bronchinet_auth";
+  function unlock(){ document.getElementById("pw-gate").style.display = "none"; }
+  if (sessionStorage.getItem(KEY) === "1") unlock();
+  function check(){
+    if (document.getElementById("pw-input").value === PASSWORD){
+      sessionStorage.setItem(KEY, "1");
+      unlock();
+    } else {
+      document.getElementById("pw-err").textContent = "パスワードが違います";
+    }
+  }
+  document.getElementById("pw-btn").addEventListener("click", check);
+  document.getElementById("pw-input").addEventListener("keydown", function(e){
+    if (e.key === "Enter") check();
+  });
+})();
+</script>
+<!-- ▲ 簡易パスワードゲートここまで -->
 
 <!-- HEADER -->
 <header>
