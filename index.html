@@ -324,7 +324,7 @@
         🔥 本日のハイライト
         <span class="dashboard-badge">NEW 3件</span>
       </div>
-      <div class="dashboard-date">最終更新：2026-06-04 08:04 自動生成</div>
+      <div class="dashboard-date">最終更新：2026-06-05 07:04 自動生成</div>
     </div>
     <div class="dashboard-grid" id="dashboardGrid"></div>
   </div>
@@ -468,6 +468,13 @@
       <div class="sidebar-card">
         <div class="sidebar-header orange">📅 デイリーレポート履歴</div>
         <div class="sidebar-body">
+          <div class="report-item">
+            <div>
+              <div class="report-date">2026年6月5日</div>
+              <div class="report-count">新規3件・臨床試験2件</div>
+            </div>
+            <span class="report-link" onclick="showSection('reports',document.querySelectorAll('nav a')[3])">▶ 開く</span>
+          </div>
           <div class="report-item">
             <div>
               <div class="report-date">2026年6月4日</div>
@@ -666,6 +673,39 @@
   <div class="reports-page-header">
     <h2>📝 デイリーレポート アーカイブ</h2>
     <p>毎朝8時に自動生成される文献サマリーの履歴。既読除外機能により、常に新規情報のみを収録しています。</p>
+  </div>
+
+  <!-- Report 2026-06-05 -->
+  <div class="report-card">
+    <div class="report-card-header">
+      <div>
+        <div class="report-card-date">📅 2026年6月5日</div>
+        <div style="font-size:12px;color:var(--text-muted);margin-top:3px;">除外済み：約317論文 / 約101試験</div>
+      </div>
+      <span class="report-card-count">新規 3件 + 試験2件</span>
+    </div>
+    <ul class="report-highlight-list">
+      <li>
+        <span class="report-num">1</span>
+        <span class="report-cat-inline" style="background:#fee2e2;color:#b91c1c">増悪・病態</span>
+        <span>歩行＋ハッフィング（Respirology, 2026-06-04）: 気管支拡張症増悪時の気道クリアランスにおける運動ベース新選択肢。ACBTやOPEPと比較したRCTへのエディトリアル。<a href="https://pubmed.ncbi.nlm.nih.gov/42240484/" target="_blank" style="color:var(--primary)">PMID:42240484</a></span>
+      </li>
+      <li>
+        <span class="report-num">2</span>
+        <span class="report-cat-inline" style="background:#fee2e2;color:#b91c1c">増悪・病態</span>
+        <span>CF三剤調節薬下での肺病変進行（Thorax, 2026-06-03）: OE-MRI＋MBW延長法が46例・18ヶ月追跡でFEV1/LCI感知外の肺構造悪化を検出。調節薬下でも進行あり。<a href="https://pubmed.ncbi.nlm.nih.gov/42235961/" target="_blank" style="color:var(--primary)">PMID:42235961</a></span>
+      </li>
+      <li>
+        <span class="report-num">3</span>
+        <span class="report-cat-inline" style="background:#fee2e2;color:#b91c1c">増悪・病態</span>
+        <span>CFにおけるHRCT vs 肺機能（World J Radiol, 2026-05-28）: インドCF小児32例・1年追跡でBhalla CT スコア50%増加、FEV1は不変。HRCTが機能検査より感度優位。<a href="https://pubmed.ncbi.nlm.nih.gov/42238223/" target="_blank" style="color:var(--primary)">PMID:42238223</a></span>
+      </li>
+      <li>
+        <span class="report-num">4</span>
+        <span class="report-cat-inline" style="background:#d1fae5;color:#065f46">臨床試験</span>
+        <span>【新規臨床試験】NCT05351242 – 持続性細菌性肺感染症に対する温熱療法試験（COPD Trial Network, Denmark）が新規登録。NCT07060079 – UCL主導の慢性呼吸器疾患における睡眠時無呼吸評価試験も新規登録。</span>
+      </li>
+    </ul>
   </div>
 
   <!-- Report 2026-06-04 -->
@@ -1291,20 +1331,42 @@
 // DATA
 // ============================================================
 const ARTICLES = [
+  // ── 2026-06-05 新規 ──
+  {id:281, cat:"増悪・病態", isNew:true,
+   titleJa:"歩行とハッフィングの組み合わせ：気管支拡張症増悪時の気道クリアランスにおける実用的な新選択肢？",
+   titleEn:"Walking With Huffing: A Practical New Option for Airway Clearance During Bronchiectasis Exacerbations?",
+   journal:"Respirology", date:"2026-06", year:2026,
+   pmid:"42240484",
+   summary:"気管支拡張症増悪時の気道クリアランスとして「歩行＋ハッフィング」をACBT・OPEPと比較したRCTへのエディトリアル。運動ベースの気道クリアランス法が実践的かつ患者受け入れしやすい選択肢として位置づけられると論じている。（PubMed PMID: 42240484）",
+   url:"https://pubmed.ncbi.nlm.nih.gov/42240484/"},
+  {id:282, cat:"増悪・病態", isNew:true,
+   titleJa:"OE-MRIと多回呼気ガス洗い出し延長法が三剤CFTR調節薬下でも嚢胞性線維症の肺病変進行を検出する",
+   titleEn:"Oxygen-enhanced MRI and multiple breath washout with Short extension reveal cystic fibrosis lung disease progression despite triple modulator therapy.",
+   journal:"Thorax", date:"2026-06", year:2026,
+   pmid:"42235961",
+   summary:"CF患者46例の18ヶ月追跡で、OE-MRIとMBW延長法がFEV1・LCIでは検出できない肺構造・機能の悪化を捕捉した。CFTR調節薬（三剤）使用下でも肺病変は進行する可能性が示された。（PubMed PMID: 42235961）",
+   url:"https://pubmed.ncbi.nlm.nih.gov/42235961/"},
+  {id:283, cat:"増悪・病態", isNew:true,
+   titleJa:"嚢胞性線維症における放射線学的進行と最小限の肺機能低下：前向き研究からの知見",
+   titleEn:"Radiologic progression with minimal functional decline in cystic fibrosis: Insights from a prospective study.",
+   journal:"World Journal of Radiology", date:"2026-05", year:2026,
+   pmid:"42238223",
+   summary:"インドのCF小児32例を1年間追跡し、HRCTのBhallaスコアが50%増加する一方でFEV1等は有意変化なしであった。HRCTが機能検査より早期に肺構造悪化を検出できることが示された。（PubMed PMID: 42238223）",
+   url:"https://pubmed.ncbi.nlm.nih.gov/42238223/"},
   // ── 2026-06-04 新規 ──
-  {id:278, cat:"治療・薬剤", isNew:true,
+  {id:278, cat:"治療・薬剤", isNew:false,
    titleJa:"下気道感染症に対する吸入抗菌薬の有効性と安全性：システマティックレビューのアップデートメタ解析とエビデンスマップ",
    titleEn:"The efficacy and safety of inhaled antibiotics in the treatment of lower respiratory tract infection: An updated meta-analysis and evidence map of systematic reviews.",
    journal:"International Journal of Antimicrobial Agents", date:"2026-06", year:2026,
    summary:"21件のSRと69件のRCT（CF・非CF気管支拡張症・VAP）を統合した包括的エビデンスマップにより、NCFBでの吸入抗菌薬は増悪頻度を有意に減少させ（RR 0.86）、細菌学的除菌率を改善する（RR 2.16）一方、気管支攣縮（RR 1.43）および耐性菌出現（RR 1.97）のリスクも有意に上昇。ネブライザー種類・標的病原体別の効果差が明確化された。（PubMed PMID: 42229866）",
    url:"https://pubmed.ncbi.nlm.nih.gov/42229866/"},
-  {id:279, cat:"増悪・病態", isNew:true,
+  {id:279, cat:"増悪・病態", isNew:false,
    titleJa:"小児の感染後気管支閉塞症：病態・治療戦略・今後の方向性",
    titleEn:"Post-infectious bronchiolitis obliterans in children: pathogenesis, treatment strategies, and future directions.",
    journal:"Current Opinion in Pediatrics", date:"2026-06", year:2026,
    summary:"感染後気管支閉塞症（PIBO）の病態としてNETs形成、インフラマゾーム活性化（IL-18・カスパーゼ1）、遺伝的感受性が主要機序として注目されており、診断は臨床・機能・画像の統合評価が必要。疾患修飾療法のエビデンスは限られており、フェノタイプ別の標的治療開発が今後の鍵となる。（PubMed PMID: 42234623）",
    url:"https://pubmed.ncbi.nlm.nih.gov/42234623/"},
-  {id:280, cat:"増悪・病態", isNew:true,
+  {id:280, cat:"増悪・病態", isNew:false,
    titleJa:"カルタゲナー症候群患者における右前頭葉脳膿瘍の診断的落とし穴：頚部病変として誤認された症例報告",
    titleEn:"Diagnostic pitfall: Right frontal brain abscess presenting as presumed cervical pathology in a patient with Kartagener syndrome - A case report.",
    journal:"Surgical Neurology International", date:"2026-05", year:2026,
