@@ -322,9 +322,9 @@
     <div class="dashboard-header">
       <div class="dashboard-title">
         🔥 本日のハイライト
-        <span class="dashboard-badge">NEW 1件</span>
+        <span class="dashboard-badge">NEW 2件</span>
       </div>
-      <div class="dashboard-date">最終更新：2026-06-06 07:04 自動生成</div>
+      <div class="dashboard-date">最終更新：2026-06-06 08:04 自動生成</div>
     </div>
     <div class="dashboard-grid" id="dashboardGrid"></div>
   </div>
@@ -334,7 +334,7 @@
     <div class="stat-card" onclick="showSection('articles',document.querySelectorAll('nav a')[0]);setFilter('all',document.querySelector('.chip[data-cat=all]'))">
       <div class="stat-icon" style="background:#dbeafe">📄</div>
       <div>
-        <div class="stat-num" id="totalArticles">151</div>
+        <div class="stat-num" id="totalArticles">153</div>
         <div class="stat-label">収録論文総数</div>
       </div>
     </div>
@@ -471,7 +471,7 @@
           <div class="report-item">
             <div>
               <div class="report-date">2026年6月6日</div>
-              <div class="report-count">新規1件収録</div>
+              <div class="report-count">新規2件・試験5件収録</div>
             </div>
             <span class="report-link" onclick="showSection('reports',document.querySelectorAll('nav a')[3])">▶ 開く</span>
           </div>
@@ -680,6 +680,34 @@
   <div class="reports-page-header">
     <h2>📝 デイリーレポート アーカイブ</h2>
     <p>毎朝8時に自動生成される文献サマリーの履歴。既読除外機能により、常に新規情報のみを収録しています。</p>
+  </div>
+
+  <!-- Report 2026-06-06 -->
+  <div class="report-card">
+    <div class="report-card-header">
+      <div>
+        <div class="report-card-date">📅 2026年6月6日</div>
+        <div style="font-size:12px;color:var(--text-muted);margin-top:3px;">除外済み：322論文 / 83試験</div>
+      </div>
+      <span class="report-card-count">新規 2件 + 試験5件</span>
+    </div>
+    <ul class="report-highlight-list">
+      <li>
+        <span class="report-num">1</span>
+        <span class="report-cat-inline" style="background:#fee2e2;color:#b91c1c">増悪・病態</span>
+        <span>生殖可能年数と気管支拡張症リスク（Chronic Obstr Pulm Dis, 2026-06-03）: WHI閉経後女性96,996名コホートでHT非使用者において生殖可能年数≥40年はリスク22%低下（aHR=0.78）。性ホルモン環境が病態に関与する可能性。<a href="https://pubmed.ncbi.nlm.nih.gov/42247305/" target="_blank" style="color:var(--primary)">PMID:42247305</a></span>
+      </li>
+      <li>
+        <span class="report-num">2</span>
+        <span class="report-cat-inline" style="background:#fef3c7;color:#b45309">精密医療</span>
+        <span>喘息RCT適格基準の再評価（Eur Respir J, 2026-06-04）: CHRONICLE研究で気管支拡張症・COPD除外基準は治療効果に有意影響なし。スピロメトリー除外は一般化可能性を不当に制限している可能性。<a href="https://pubmed.ncbi.nlm.nih.gov/42242757/" target="_blank" style="color:var(--primary)">PMID:42242757</a></span>
+      </li>
+      <li>
+        <span class="report-num">3</span>
+        <span class="report-cat-inline" style="background:#d1fae5;color:#065f46">臨床試験</span>
+        <span>【新規臨床試験5件】NCT06897761（小児デジタル呼吸ゲーム/Atlas大学・トルコ）、NCT06344000（疾患進行・栄養状態/HUST・中国）、NCT04582279（移植後肺超音波/Mayo Clinic）、NCT04783155（移植後吸気筋訓練/Mayo Clinic）、NCT04611516（PCD耳鼻咽喉科国際コホート/Bern大学）が新規登録。</span>
+      </li>
+    </ul>
   </div>
 
   <!-- Report 2026-06-05 -->
@@ -1344,7 +1372,21 @@
 // ============================================================
 const ARTICLES = [
   // ── 2026-06-06 新規 ──
-  {id:285, cat:"増悪・病態", isNew:true,
+  {id:287, cat:"精密医療・エンドタイプ", isNew:true,
+   title:"A self-controlled case series to evaluate the effects of clinical trial eligibility criteria on biologic-associated reductions in severe asthma exacerbations: an analysis of the CHRONICLE Study.",
+   titleJa:"重症喘息試験適格基準が生物学的製剤効果に与える影響：CHRONICLE研究の自己対照ケースシリーズ解析",
+   journal:"European Respiratory Journal", date:"2026-06",
+   pmid:"42242757",
+   summary:"重症喘息RCTにおいて気管支拡張症・COPD・FEVに基づく除外基準は最多の患者を除外しているが、実臨床コホート（CHRONICLE、480例）での解析では治療効果への有意な影響は認められなかった。喫煙歴・増悪既往・FeNO・血中好酸球数による基準は治療反応性を有意に修飾しており、気管支拡張症に基づく除外は一般化可能性を不当に制限している可能性がある。",
+   url:"https://pubmed.ncbi.nlm.nih.gov/42242757/"},
+  {id:286, cat:"増悪・病態", isNew:true,
+   title:"Reproductive Lifespan and Adult-Onset Bronchiectasis in U.S. Postmenopausal Women: An Investigation of the Women's Health Initiative Cohort.",
+   titleJa:"米国閉経後女性における生殖可能年数と成人発症気管支拡張症：WHIコホート調査",
+   journal:"Chronic Obstructive Pulmonary Diseases", date:"2026-06",
+   pmid:"42247305",
+   summary:"閉経後米国女性96,996名のWHIコホートで、生殖可能年数が短いほど気管支拡張症リスクが高いことが示された。HT非使用者に限ると生殖可能年数≥40年の群は<30年群と比べてリスクが22%低く（aHR=0.78）、性ホルモン環境が気管支拡張症の病態に関与する可能性が示唆される。",
+   url:"https://pubmed.ncbi.nlm.nih.gov/42247305/"},
+  {id:285, cat:"増悪・病態", isNew:false,
    title:"Bone Disease in Non-Cystic Fibrosis Bronchiectasis: Connections, Mechanisms, and Care Gaps",
    titleJa:"NCFBにおける骨疾患：関連性・機構・ケアギャップ",
    journal:"Chest", date:"2026-06",
