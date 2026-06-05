@@ -324,7 +324,7 @@
         🔥 本日のハイライト
         <span class="dashboard-badge">NEW 1件</span>
       </div>
-      <div class="dashboard-date">最終更新：2026-06-05 08:04 自動生成</div>
+      <div class="dashboard-date">最終更新：2026-06-06 07:04 自動生成</div>
     </div>
     <div class="dashboard-grid" id="dashboardGrid"></div>
   </div>
@@ -468,6 +468,13 @@
       <div class="sidebar-card">
         <div class="sidebar-header orange">📅 デイリーレポート履歴</div>
         <div class="sidebar-body">
+          <div class="report-item">
+            <div>
+              <div class="report-date">2026年6月6日</div>
+              <div class="report-count">新規1件収録</div>
+            </div>
+            <span class="report-link" onclick="showSection('reports',document.querySelectorAll('nav a')[3])">▶ 開く</span>
+          </div>
           <div class="report-item">
             <div>
               <div class="report-date">2026年6月5日</div>
@@ -1336,8 +1343,15 @@
 // DATA
 // ============================================================
 const ARTICLES = [
+  // ── 2026-06-06 新規 ──
+  {id:285, cat:"増悪・病態", isNew:true,
+   title:"Bone Disease in Non-Cystic Fibrosis Bronchiectasis: Connections, Mechanisms, and Care Gaps",
+   titleJa:"NCFBにおける骨疾患：関連性・機構・ケアギャップ",
+   journal:"Chest", date:"2026-06",
+   pmid:"42242549",
+   summary:"NCFBにおける骨粗鬆症の有病率は12〜70%と幅広く、慢性炎症・低酸素・栄養障害・ステロイド暴露・腸内マイクロバイオーム異常が骨リモデリング障害の主要機序として同定された。現行ガイドラインに骨健康スクリーニングの推奨がなく、早期介入と学際的管理体制の確立が急務と結論付けている。"},
   // ── 2026-06-05 新規 ──
-  {id:284, cat:"増悪・病態", isNew:true,
+  {id:284, cat:"増悪・病態", isNew:false,
    titleJa:"ETI 2年間治療が嚢胞性線維症における構造的肺疾患の経時変化に与える影響：RECOVERトライアル",
    titleEn:"Impact of 2 years of treatment with elexacaftor/tezacaftor/ivacaftor on longitudinal changes in structural lung disease in people with cystic fibrosis: results from the RECOVER trial.",
    journal:"Annals of the American Thoracic Society", date:"2026-06", year:2026,
