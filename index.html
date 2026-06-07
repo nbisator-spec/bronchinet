@@ -324,7 +324,7 @@
         🔥 本日のハイライト
         <span class="dashboard-badge">NEW 2件</span>
       </div>
-      <div class="dashboard-date">最終更新：2026-06-06 08:04 自動生成</div>
+      <div class="dashboard-date">最終更新：2026-06-08 07:04 自動生成</div>
     </div>
     <div class="dashboard-grid" id="dashboardGrid"></div>
   </div>
@@ -334,7 +334,7 @@
     <div class="stat-card" onclick="showSection('articles',document.querySelectorAll('nav a')[0]);setFilter('all',document.querySelector('.chip[data-cat=all]'))">
       <div class="stat-icon" style="background:#dbeafe">📄</div>
       <div>
-        <div class="stat-num" id="totalArticles">153</div>
+        <div class="stat-num" id="totalArticles">155</div>
         <div class="stat-label">収録論文総数</div>
       </div>
     </div>
@@ -468,6 +468,13 @@
       <div class="sidebar-card">
         <div class="sidebar-header orange">📅 デイリーレポート履歴</div>
         <div class="sidebar-body">
+          <div class="report-item">
+            <div>
+              <div class="report-date">2026年6月8日</div>
+              <div class="report-count">新規2件・試験新規なし</div>
+            </div>
+            <span class="report-link" onclick="showSection('reports',document.querySelectorAll('nav a')[3])">▶ 開く</span>
+          </div>
           <div class="report-item">
             <div>
               <div class="report-date">2026年6月6日</div>
@@ -1371,15 +1378,30 @@
 // DATA
 // ============================================================
 const ARTICLES = [
+  // ── 2026-06-08 新規 ──
+  {id:289, cat:"増悪・病態", isNew:true,
+   title:"Scimitar syndrome and horseshoe lung presenting with syncope and hemoptysis in late childhood, management challenges, and outcomes: a case report.",
+   titleJa:"晩期小児期に失神・喀血で発症したscimitar症候群とhorseshoe肺：治療の課題と転帰（症例報告）",
+   journal:"Journal of Medical Case Reports", date:"2026-06",
+   pmid:"42251376",
+   summary:"15歳男性でのscimitar症候群＋horseshoe肺＋気管支拡張症合併の症例。経カテーテル動脈塞栓術は奏効せず右下葉区域切除術に至り、複雑な血管解剖・気管支拡張症を伴う場合は外科的切除が推奨されることを示した。",
+   url:"https://pubmed.ncbi.nlm.nih.gov/42251376/"},
+  {id:288, cat:"増悪・病態", isNew:true,
+   title:"Longitudinal Changes in Lung Morphology and Perfusion Detected by Magnetic Resonance Imaging in Patients with Primary Ciliary Dyskinesia From Infancy Through Adulthood.",
+   titleJa:"原発性線毛機能不全患者における乳幼児期から成人期にわたる肺形態・灌流のMRIによる縦断的変化",
+   journal:"Chest", date:"2026-06",
+   pmid:"42248298",
+   summary:"PCD患者75名の189件MRI検査を解析。乳幼児期から気管支拡張・粘液栓が高頻度（各100%・80%）に認められ、MRIグローバルスコアは成人期に有意に上昇（14.5→26.7）、FEV1%やBSIと中等度相関した。臨床試験エンドポイントとしてのMRI活用を支持する結果である。",
+   url:"https://pubmed.ncbi.nlm.nih.gov/42248298/"},
   // ── 2026-06-06 新規 ──
-  {id:287, cat:"精密医療・エンドタイプ", isNew:true,
+  {id:287, cat:"精密医療・エンドタイプ", isNew:false,
    title:"A self-controlled case series to evaluate the effects of clinical trial eligibility criteria on biologic-associated reductions in severe asthma exacerbations: an analysis of the CHRONICLE Study.",
    titleJa:"重症喘息試験適格基準が生物学的製剤効果に与える影響：CHRONICLE研究の自己対照ケースシリーズ解析",
    journal:"European Respiratory Journal", date:"2026-06",
    pmid:"42242757",
    summary:"重症喘息RCTにおいて気管支拡張症・COPD・FEVに基づく除外基準は最多の患者を除外しているが、実臨床コホート（CHRONICLE、480例）での解析では治療効果への有意な影響は認められなかった。喫煙歴・増悪既往・FeNO・血中好酸球数による基準は治療反応性を有意に修飾しており、気管支拡張症に基づく除外は一般化可能性を不当に制限している可能性がある。",
    url:"https://pubmed.ncbi.nlm.nih.gov/42242757/"},
-  {id:286, cat:"増悪・病態", isNew:true,
+  {id:286, cat:"増悪・病態", isNew:false,
    title:"Reproductive Lifespan and Adult-Onset Bronchiectasis in U.S. Postmenopausal Women: An Investigation of the Women's Health Initiative Cohort.",
    titleJa:"米国閉経後女性における生殖可能年数と成人発症気管支拡張症：WHIコホート調査",
    journal:"Chronic Obstructive Pulmonary Diseases", date:"2026-06",
