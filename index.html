@@ -1402,15 +1402,15 @@
 // ============================================================
 const ARTICLES = [
   // ── 2026-06-08 新規 ──
-  {id:289, cat:"増悪・病態", isNew:false,
-   title:"Scimitar syndrome and horseshoe lung presenting with syncope and hemoptysis in late childhood, management challenges, and outcomes: a case report.",
+  {id:289, cat:"増悪・病態", isNew:true,
+   titleEn:"Scimitar syndrome and horseshoe lung presenting with syncope and hemoptysis in late childhood, management challenges, and outcomes: a case report.",
    titleJa:"晩期小児期に失神・喀血で発症したscimitar症候群とhorseshoe肺：治療の課題と転帰（症例報告）",
    journal:"Journal of Medical Case Reports", date:"2026-06",
    pmid:"42251376",
    summary:"15歳男性でのscimitar症候群＋horseshoe肺＋気管支拡張症合併の症例。経カテーテル動脈塞栓術は奏効せず右下葉区域切除術に至り、複雑な血管解剖・気管支拡張症を伴う場合は外科的切除が推奨されることを示した。",
    url:"https://pubmed.ncbi.nlm.nih.gov/42251376/"},
-  {id:288, cat:"増悪・病態", isNew:false,
-   title:"Longitudinal Changes in Lung Morphology and Perfusion Detected by Magnetic Resonance Imaging in Patients with Primary Ciliary Dyskinesia From Infancy Through Adulthood.",
+  {id:288, cat:"増悪・病態", isNew:true,
+   titleEn:"Longitudinal Changes in Lung Morphology and Perfusion Detected by Magnetic Resonance Imaging in Patients with Primary Ciliary Dyskinesia From Infancy Through Adulthood.",
    titleJa:"原発性線毛機能不全患者における乳幼児期から成人期にわたる肺形態・灌流のMRIによる縦断的変化",
    journal:"Chest", date:"2026-06",
    pmid:"42248298",
@@ -1418,21 +1418,21 @@ const ARTICLES = [
    url:"https://pubmed.ncbi.nlm.nih.gov/42248298/"},
   // ── 2026-06-06 新規 ──
   {id:287, cat:"精密医療・エンドタイプ", isNew:false,
-   title:"A self-controlled case series to evaluate the effects of clinical trial eligibility criteria on biologic-associated reductions in severe asthma exacerbations: an analysis of the CHRONICLE Study.",
+   titleEn:"A self-controlled case series to evaluate the effects of clinical trial eligibility criteria on biologic-associated reductions in severe asthma exacerbations: an analysis of the CHRONICLE Study.",
    titleJa:"重症喘息試験適格基準が生物学的製剤効果に与える影響：CHRONICLE研究の自己対照ケースシリーズ解析",
    journal:"European Respiratory Journal", date:"2026-06",
    pmid:"42242757",
    summary:"重症喘息RCTにおいて気管支拡張症・COPD・FEVに基づく除外基準は最多の患者を除外しているが、実臨床コホート（CHRONICLE、480例）での解析では治療効果への有意な影響は認められなかった。喫煙歴・増悪既往・FeNO・血中好酸球数による基準は治療反応性を有意に修飾しており、気管支拡張症に基づく除外は一般化可能性を不当に制限している可能性がある。",
    url:"https://pubmed.ncbi.nlm.nih.gov/42242757/"},
   {id:286, cat:"増悪・病態", isNew:false,
-   title:"Reproductive Lifespan and Adult-Onset Bronchiectasis in U.S. Postmenopausal Women: An Investigation of the Women's Health Initiative Cohort.",
+   titleEn:"Reproductive Lifespan and Adult-Onset Bronchiectasis in U.S. Postmenopausal Women: An Investigation of the Women's Health Initiative Cohort.",
    titleJa:"米国閉経後女性における生殖可能年数と成人発症気管支拡張症：WHIコホート調査",
    journal:"Chronic Obstructive Pulmonary Diseases", date:"2026-06",
    pmid:"42247305",
    summary:"閉経後米国女性96,996名のWHIコホートで、生殖可能年数が短いほど気管支拡張症リスクが高いことが示された。HT非使用者に限ると生殖可能年数≥40年の群は<30年群と比べてリスクが22%低く（aHR=0.78）、性ホルモン環境が気管支拡張症の病態に関与する可能性が示唆される。",
    url:"https://pubmed.ncbi.nlm.nih.gov/42247305/"},
   {id:285, cat:"増悪・病態", isNew:false,
-   title:"Bone Disease in Non-Cystic Fibrosis Bronchiectasis: Connections, Mechanisms, and Care Gaps",
+   titleEn:"Bone Disease in Non-Cystic Fibrosis Bronchiectasis: Connections, Mechanisms, and Care Gaps",
    titleJa:"NCFBにおける骨疾患：関連性・機構・ケアギャップ",
    journal:"Chest", date:"2026-06",
    pmid:"42242549",
@@ -3327,7 +3327,7 @@ function filterArticles() {
   let filtered = ARTICLES.filter(a => {
     const matchCat = currentFilter === 'all' || a.cat === currentFilter;
     const matchQ = !query || a.titleJa.toLowerCase().includes(query) ||
-                   a.titleEn.toLowerCase().includes(query) ||
+                   (a.titleEn || a.title || '').toLowerCase().includes(query) ||
                    a.journal.toLowerCase().includes(query) ||
                    (a.summary && a.summary.toLowerCase().includes(query)) ||
                    (a.authors && a.authors.toLowerCase().includes(query));
@@ -3386,7 +3386,7 @@ function renderGrid(articles, showTrials = false) {
         ${a.isNew ? '<span class="new-tag">NEW</span>' : ''}
       </div>
       <div class="card-title-ja">${a.titleJa}</div>
-      <div class="card-title-en">${a.titleEn}</div>
+      <div class="card-title-en">${a.titleEn || a.title || ''}</div>
       <div class="card-summary">${a.summary}</div>
       <div class="card-footer">
         <div class="card-journal">📰 ${a.journal}</div>
@@ -3424,7 +3424,7 @@ function resolveUrl(a) {
   const generic = ['https://pubmed.ncbi.nlm.nih.gov/', '#', '', null, undefined];
   if (a.url && !generic.includes(a.url)) return a.url;
   // フォールバック：英語タイトルでPubMed検索
-  const q = encodeURIComponent('"' + a.titleEn.replace(/['"]/g, '').substring(0, 120) + '"');
+  const q = encodeURIComponent('"' + (a.titleEn || a.title || '').replace(/['"]/g, '').substring(0, 120) + '"');
   return 'https://pubmed.ncbi.nlm.nih.gov/?term=' + q;
 }
 
@@ -3433,7 +3433,7 @@ function openModal(id) {
   if (!a) return;
   document.getElementById('modalCatTag').innerHTML = `<span class="cat-tag ${a.cat}">${a.cat}</span>${a.isNew ? ' <span class="new-tag">NEW</span>' : ''}`;
   document.getElementById('modalTitleJa').textContent = a.titleJa;
-  document.getElementById('modalTitleEn').textContent = a.titleEn || '';
+  document.getElementById('modalTitleEn').textContent = a.titleEn || a.title || '';
   document.getElementById('modalMeta').innerHTML = `
     <div class="modal-meta-item"><strong>${a.journal}</strong>掲載誌</div>
     <div class="modal-meta-item"><strong>${a.date}</strong>発表年月</div>
