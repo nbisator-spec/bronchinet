@@ -327,9 +327,9 @@
     <div class="dashboard-header">
       <div class="dashboard-title">
         🔥 本日のハイライト
-        <span class="dashboard-badge">NEW 3件</span>
+        <span class="dashboard-badge">NEW 1件</span>
       </div>
-      <div class="dashboard-date">最終更新：2026-06-10 07:04 自動生成</div>
+      <div class="dashboard-date">最終更新：2026-06-10 08:04 自動生成</div>
     </div>
     <div class="dashboard-grid" id="dashboardGrid"></div>
   </div>
@@ -476,7 +476,7 @@
           <div class="report-item">
             <div>
               <div class="report-date">2026年6月10日</div>
-              <div class="report-count">新規3件・試験新規なし</div>
+              <div class="report-count">新規4件・試験新規なし</div>
             </div>
             <span class="report-link" onclick="showSection('reports',document.querySelectorAll('nav a')[3])">▶ 開く</span>
           </div>
@@ -706,6 +706,39 @@
   <div class="reports-page-header">
     <h2>📝 デイリーレポート アーカイブ</h2>
     <p>毎朝8時に自動生成される文献サマリーの履歴。既読除外機能により、常に新規情報のみを収録しています。</p>
+  </div>
+
+  <!-- Report 2026-06-10 -->
+  <div class="report-card">
+    <div class="report-card-header">
+      <div>
+        <div class="report-card-date">📅 2026年6月10日</div>
+        <div style="font-size:12px;color:var(--text-muted);margin-top:3px;">除外済み：332論文 / 105試験</div>
+      </div>
+      <span class="report-card-count">新規 4件・試験新規なし</span>
+    </div>
+    <ul class="report-highlight-list">
+      <li>
+        <span class="report-num">1</span>
+        <span class="report-cat-inline" style="background:#e0e7ff;color:#3730a3">ガイドライン</span>
+        <span>ERS2025気管支拡張症ガイドラインのプライマリケア実装ガイド（NPJ Prim Care Respir Med, 2026-06）: 早期診断・NTM検査・免疫グロブリン測定などの標準化検査と増悪管理の実践的手順を整理。ICSの限定的役割と緑膿菌感染例への長期抗菌薬療法の適応基準を明確化。<a href="https://pubmed.ncbi.nlm.nih.gov/42259823/" target="_blank" style="color:var(--primary)">PMID:42259823</a></span>
+      </li>
+      <li>
+        <span class="report-num">2</span>
+        <span class="report-cat-inline" style="background:#fef3c7;color:#b45309">精密医療</span>
+        <span>小児気管支拡張症3表現型の開発・検証（Thorax, 2026-06）: 「持続湿性咳嗽型」が病変葉数・入院回数で有意に重症。臨床試験の患者選定への応用が期待。<a href="https://pubmed.ncbi.nlm.nih.gov/42259636/" target="_blank" style="color:var(--primary)">PMID:42259636</a></span>
+      </li>
+      <li>
+        <span class="report-num">3</span>
+        <span class="report-cat-inline" style="background:#fef3c7;color:#b45309">精密医療</span>
+        <span>PCDのマルチオミクスによる5エンドタイプ同定（Ann Am Thorac Soc, 2026-06）: DPP-1関連好中球優位型（78%）含む5炎症エンドタイプを確認。唾液炎症プロファイルが血漿と一致し、非侵襲的治療反応モニタリングへの応用を示唆。<a href="https://pubmed.ncbi.nlm.nih.gov/42258623/" target="_blank" style="color:var(--primary)">PMID:42258623</a></span>
+      </li>
+      <li>
+        <span class="report-num">4</span>
+        <span class="report-cat-inline" style="background:#fee2e2;color:#b91c1c">増悪・病態</span>
+        <span>小児PCD稀少遺伝子変異2症例（Medicine, 2026-06-05）: RSPH4A同義置換バリアント（スプライシング影響）とNFE2L2欠失がDNAH9-PCD重症度を修飾する可能性。トリオWESの早期施行で内臓逆位なしPCDも診断促進。1例では気管支拡張症の出現なし。<a href="https://pubmed.ncbi.nlm.nih.gov/42260890/" target="_blank" style="color:var(--primary)">PMID:42260890</a></span>
+      </li>
+    </ul>
   </div>
 
   <!-- Report 2026-06-09 -->
@@ -1449,21 +1482,28 @@
 // ============================================================
 const ARTICLES = [
   // ── 2026-06-10 新規 ──
-  {id:295, cat:"ガイドライン・総説", isNew:true,
+  {id:296, cat:"増悪・病態", isNew:true,
+   titleEn:"Pediatric primary ciliary dyskinesia with rare genetic variants: Synonymous RSPH4A and potential NFE2L2 modifier of DNAH9 phenotype - 2-case report.",
+   titleJa:"稀な遺伝子変異を伴う小児原発性線毛機能不全症：RSPH4A同義置換バリアントとDNAH9表現型に対するNFE2L2修飾効果の可能性（2症例報告）",
+   journal:"Medicine (Baltimore)", date:"2026-06-05",
+   pmid:"42260890",
+   summary:"慢性湿性咳嗽を呈した2例の小児PCD症例を報告し、高スプライシング影響予測を持つRSPH4A同義置換変異（c.1764G>T）とNFE2L2欠失がDNAH9関連PCD重症度を修飾する可能性を示した。早期トリオ全エクソーム解析が内臓逆位のない小児でもPCD診断を促進できると示唆され、1例では経過観察中に気管支拡張症の出現は認められなかった。",
+   url:"https://pubmed.ncbi.nlm.nih.gov/42260890/"},
+  {id:295, cat:"ガイドライン・総説", isNew:false,
    titleEn:"The European respiratory society guideline for adult bronchiectasis 2025: summary and implementation guide for primary care.",
    titleJa:"2025年ERS気管支拡張症ガイドライン：プライマリケア向け要約と実践実装ガイド",
    journal:"NPJ Primary Care Respiratory Medicine", date:"2026-06",
    pmid:"42259823",
    summary:"2025年ERS気管支拡張症ガイドラインをプライマリケア向けに要約した実装ガイドで、早期診断・遅診断削減、NTM検査・免疫グロブリン測定などの標準化検査、増悪管理の実践的手順を整理。吸入ステロイドの限定的役割と緑膿菌感染例への長期抗菌薬療法の適応基準も明確化されている。",
    url:"https://pubmed.ncbi.nlm.nih.gov/42259823/"},
-  {id:294, cat:"精密医療・エンドタイプ", isNew:true,
+  {id:294, cat:"精密医療・エンドタイプ", isNew:false,
    titleEn:"Paediatric bronchiectasis phenotypes and their association with clinical outcomes: development and validation in two prospective clinical cohorts.",
    titleJa:"小児気管支拡張症の表現型とその臨床アウトカムとの関連：2つの前向きコホートによる開発・検証研究",
    journal:"Thorax", date:"2026-06",
    pmid:"42259636",
    summary:"潜在クラス分析を用いて小児気管支拡張症の3表現型（「基準良好型」「喘鳴・呼吸困難型」「持続湿性咳嗽型」）を開発し2コホートで検証。「持続湿性咳嗽型」は病変葉数と入院回数が有意に多く、臨床試験の対象者選定への応用が期待される。",
    url:"https://pubmed.ncbi.nlm.nih.gov/42259636/"},
-  {id:293, cat:"精密医療・エンドタイプ", isNew:true,
+  {id:293, cat:"精密医療・エンドタイプ", isNew:false,
    titleEn:"Multi-Omics Analysis Defines Endotypes and Systemic Inflammation in Primary Ciliary Dyskinesia: A Comparison with Healthy Controls.",
    titleJa:"原発性線毛機能不全症のエンドタイプと全身炎症をマルチオミクス解析で解明：健常対照との比較研究",
    journal:"Annals of the American Thoracic Society", date:"2026-06",
