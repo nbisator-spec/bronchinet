@@ -322,9 +322,9 @@
     <div class="dashboard-header">
       <div class="dashboard-title">
         🔥 本日のハイライト
-        <span class="dashboard-badge">NEW 0件</span>
+        <span class="dashboard-badge">NEW 3件</span>
       </div>
-      <div class="dashboard-date">最終更新：2026-06-08 08:04 自動生成</div>
+      <div class="dashboard-date">最終更新：2026-06-09 08:04 自動生成</div>
     </div>
     <div class="dashboard-grid" id="dashboardGrid"></div>
   </div>
@@ -334,7 +334,7 @@
     <div class="stat-card" onclick="showSection('articles',document.querySelectorAll('nav a')[0]);setFilter('all',document.querySelector('.chip[data-cat=all]'))">
       <div class="stat-icon" style="background:#dbeafe">📄</div>
       <div>
-        <div class="stat-num" id="totalArticles">155</div>
+        <div class="stat-num" id="totalArticles">158</div>
         <div class="stat-label">収録論文総数</div>
       </div>
     </div>
@@ -468,6 +468,13 @@
       <div class="sidebar-card">
         <div class="sidebar-header orange">📅 デイリーレポート履歴</div>
         <div class="sidebar-body">
+          <div class="report-item">
+            <div>
+              <div class="report-date">2026年6月9日</div>
+              <div class="report-count">新規3件・試験新規なし</div>
+            </div>
+            <span class="report-link" onclick="showSection('reports',document.querySelectorAll('nav a')[3])">▶ 開く</span>
+          </div>
           <div class="report-item">
             <div>
               <div class="report-date">2026年6月8日</div>
@@ -687,6 +694,34 @@
   <div class="reports-page-header">
     <h2>📝 デイリーレポート アーカイブ</h2>
     <p>毎朝8時に自動生成される文献サマリーの履歴。既読除外機能により、常に新規情報のみを収録しています。</p>
+  </div>
+
+  <!-- Report 2026-06-09 -->
+  <div class="report-card">
+    <div class="report-card-header">
+      <div>
+        <div class="report-card-date">📅 2026年6月9日</div>
+        <div style="font-size:12px;color:var(--text-muted);margin-top:3px;">除外済み：328論文 / 85試験</div>
+      </div>
+      <span class="report-card-count">新規 3件・試験新規なし</span>
+    </div>
+    <ul class="report-highlight-list">
+      <li>
+        <span class="report-num">1</span>
+        <span class="report-cat-inline" style="background:#fee2e2;color:#b91c1c">増悪・病態</span>
+        <span>結核後気管支拡張症・増悪（Clin Case Rep, 2026-06）: ウガンダ60歳男性。亜適切治療結核による重症構造的肺損傷（BE＋肺気腫＋線維化）にPseudomonas/Klebsiella急性増悪合併。培養感受性に基づく抗菌薬治療で改善。低資源環境での早期BE管理の重要性を提起。<a href="https://pubmed.ncbi.nlm.nih.gov/42256969/" target="_blank" style="color:var(--primary)">PMID:42256969</a></span>
+      </li>
+      <li>
+        <span class="report-num">2</span>
+        <span class="report-cat-inline" style="background:#fee2e2;color:#b91c1c">増悪・病態</span>
+        <span>NFKB1免疫不全と気管支拡張症（Clin Exp Immunol, 2026-06）: 中国人NFKB1変異患者4例で3種新規変異を同定・機能解析。中国人患者は欧米と比べ気管支拡張症・肝炎合併多く、NFKB1疑い例では早期遺伝子検査とIVIG導入が重要。<a href="https://pubmed.ncbi.nlm.nih.gov/42252100/" target="_blank" style="color:var(--primary)">PMID:42252100</a></span>
+      </li>
+      <li>
+        <span class="report-num">3</span>
+        <span class="report-cat-inline" style="background:#dbeafe;color:#1d4ed8">治療・薬剤</span>
+        <span>ICS長期使用と腱断裂（Case Rep Orthop, 2026-06）: 気管支拡張症患者の長期ICS使用が加齢・機械的ストレスと相乗し両側膝蓋腱断裂を来した症例。ICS長期使用患者の筋骨格系副作用への注意と投与量再評価を提起。<a href="https://pubmed.ncbi.nlm.nih.gov/42253777/" target="_blank" style="color:var(--primary)">PMID:42253777</a></span>
+      </li>
+    </ul>
   </div>
 
   <!-- Report 2026-06-08 -->
@@ -1401,15 +1436,37 @@
 // DATA
 // ============================================================
 const ARTICLES = [
+  // ── 2026-06-09 新規 ──
+  {id:292, cat:"治療・薬剤", isNew:true,
+   titleEn:"Bilateral Patellar Tendon Rupture in a 64-Year-Old Man: Possible Interaction of Inhaled Corticosteroids, Age and Mechanical Stress.",
+   titleJa:"64歳男性における両側膝蓋腱断裂：吸入コルチコステロイド・加齢・機械的ストレスの相互作用の可能性（症例報告）",
+   journal:"Case Reports in Orthopedics", date:"2026-06",
+   pmid:"42253777",
+   summary:"気管支拡張症で長期ICS使用中の64歳男性が低エネルギー外傷で両側膝蓋腱断裂を来した症例。ICS長期使用は加齢・機械的ストレスと相乗的に腱脆弱性を亢進させる可能性があり、気管支拡張症患者におけるICS適応と投与量の継続的な再評価の重要性が提起された。",
+   url:"https://pubmed.ncbi.nlm.nih.gov/42253777/"},
+  {id:291, cat:"増悪・病態", isNew:true,
+   titleEn:"Clinical, Genetic, and Functional Characterization of Novel NFKB1 Variants in Chinese Patients with Primary Immunodeficiency.",
+   titleJa:"中国人原発性免疫不全患者におけるNFKB1新規変異の臨床・遺伝・機能的特徴解析",
+   journal:"Clinical and Experimental Immunology", date:"2026-06",
+   pmid:"42252100",
+   summary:"中国人NFKB1変異患者4例で3種の新規変異を同定し機能解析を実施。フレームシフト変異はNMDを介した半量不全を、Arg187Trp変異はDNA結合能消失を引き起こすことが判明した。中国人患者は欧米コホートと比べ気管支拡張症・肝炎合併が多く、NFKB1関連疾患の疑いでは早期遺伝子検査とIVIG導入が重要と示唆される。",
+   url:"https://pubmed.ncbi.nlm.nih.gov/42252100/"},
+  {id:290, cat:"増悪・病態", isNew:true,
+   titleEn:"Severe Post-Tuberculosis Bronchiectasis With Bullous Lung Disease Complicated by Acute Infective Exacerbation: A Case Report From Uganda.",
+   titleJa:"ウガンダからの症例報告：肺気腫合併重症結核後気管支拡張症における急性感染性増悪",
+   journal:"Clinical Case Reports", date:"2026-06",
+   pmid:"42256969",
+   summary:"亜適切治療結核の60歳男性で、広範な構造的肺損傷（気管支拡張・多発性肺気腫・線維化）にPseudomonas aeruginosaとKlebsiellaによる急性感染性増悪を合併した症例。培養感受性に基づく抗菌薬治療で改善が得られ、低資源環境での結核後気管支拡張症における早期認識と適切な増悪管理の重要性が強調された。",
+   url:"https://pubmed.ncbi.nlm.nih.gov/42256969/"},
   // ── 2026-06-08 新規 ──
-  {id:289, cat:"増悪・病態", isNew:true,
+  {id:289, cat:"増悪・病態", isNew:false,
    titleEn:"Scimitar syndrome and horseshoe lung presenting with syncope and hemoptysis in late childhood, management challenges, and outcomes: a case report.",
    titleJa:"晩期小児期に失神・喀血で発症したscimitar症候群とhorseshoe肺：治療の課題と転帰（症例報告）",
    journal:"Journal of Medical Case Reports", date:"2026-06",
    pmid:"42251376",
    summary:"15歳男性でのscimitar症候群＋horseshoe肺＋気管支拡張症合併の症例。経カテーテル動脈塞栓術は奏効せず右下葉区域切除術に至り、複雑な血管解剖・気管支拡張症を伴う場合は外科的切除が推奨されることを示した。",
    url:"https://pubmed.ncbi.nlm.nih.gov/42251376/"},
-  {id:288, cat:"増悪・病態", isNew:true,
+  {id:288, cat:"増悪・病態", isNew:false,
    titleEn:"Longitudinal Changes in Lung Morphology and Perfusion Detected by Magnetic Resonance Imaging in Patients with Primary Ciliary Dyskinesia From Infancy Through Adulthood.",
    titleJa:"原発性線毛機能不全患者における乳幼児期から成人期にわたる肺形態・灌流のMRIによる縦断的変化",
    journal:"Chest", date:"2026-06",
