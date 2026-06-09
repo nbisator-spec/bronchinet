@@ -329,7 +329,7 @@
         🔥 本日のハイライト
         <span class="dashboard-badge">NEW 3件</span>
       </div>
-      <div class="dashboard-date">最終更新：2026-06-09 08:04 自動生成</div>
+      <div class="dashboard-date">最終更新：2026-06-10 07:04 自動生成</div>
     </div>
     <div class="dashboard-grid" id="dashboardGrid"></div>
   </div>
@@ -339,7 +339,7 @@
     <div class="stat-card" onclick="showSection('articles',document.querySelectorAll('nav a')[0]);setFilter('all',document.querySelector('.chip[data-cat=all]'))">
       <div class="stat-icon" style="background:#dbeafe">📄</div>
       <div>
-        <div class="stat-num" id="totalArticles">158</div>
+        <div class="stat-num" id="totalArticles">161</div>
         <div class="stat-label">収録論文総数</div>
       </div>
     </div>
@@ -473,6 +473,13 @@
       <div class="sidebar-card">
         <div class="sidebar-header orange">📅 デイリーレポート履歴</div>
         <div class="sidebar-body">
+          <div class="report-item">
+            <div>
+              <div class="report-date">2026年6月10日</div>
+              <div class="report-count">新規3件・試験新規なし</div>
+            </div>
+            <span class="report-link" onclick="showSection('reports',document.querySelectorAll('nav a')[3])">▶ 開く</span>
+          </div>
           <div class="report-item">
             <div>
               <div class="report-date">2026年6月9日</div>
@@ -1441,22 +1448,44 @@
 // DATA
 // ============================================================
 const ARTICLES = [
+  // ── 2026-06-10 新規 ──
+  {id:295, cat:"ガイドライン・総説", isNew:true,
+   titleEn:"The European respiratory society guideline for adult bronchiectasis 2025: summary and implementation guide for primary care.",
+   titleJa:"2025年ERS気管支拡張症ガイドライン：プライマリケア向け要約と実践実装ガイド",
+   journal:"NPJ Primary Care Respiratory Medicine", date:"2026-06",
+   pmid:"42259823",
+   summary:"2025年ERS気管支拡張症ガイドラインをプライマリケア向けに要約した実装ガイドで、早期診断・遅診断削減、NTM検査・免疫グロブリン測定などの標準化検査、増悪管理の実践的手順を整理。吸入ステロイドの限定的役割と緑膿菌感染例への長期抗菌薬療法の適応基準も明確化されている。",
+   url:"https://pubmed.ncbi.nlm.nih.gov/42259823/"},
+  {id:294, cat:"精密医療・エンドタイプ", isNew:true,
+   titleEn:"Paediatric bronchiectasis phenotypes and their association with clinical outcomes: development and validation in two prospective clinical cohorts.",
+   titleJa:"小児気管支拡張症の表現型とその臨床アウトカムとの関連：2つの前向きコホートによる開発・検証研究",
+   journal:"Thorax", date:"2026-06",
+   pmid:"42259636",
+   summary:"潜在クラス分析を用いて小児気管支拡張症の3表現型（「基準良好型」「喘鳴・呼吸困難型」「持続湿性咳嗽型」）を開発し2コホートで検証。「持続湿性咳嗽型」は病変葉数と入院回数が有意に多く、臨床試験の対象者選定への応用が期待される。",
+   url:"https://pubmed.ncbi.nlm.nih.gov/42259636/"},
+  {id:293, cat:"精密医療・エンドタイプ", isNew:true,
+   titleEn:"Multi-Omics Analysis Defines Endotypes and Systemic Inflammation in Primary Ciliary Dyskinesia: A Comparison with Healthy Controls.",
+   titleJa:"原発性線毛機能不全症のエンドタイプと全身炎症をマルチオミクス解析で解明：健常対照との比較研究",
+   journal:"Annals of the American Thoracic Society", date:"2026-06",
+   pmid:"42258623",
+   summary:"PCD患者51例にトランスクリプトミクス・プロテオミクス・メタゲノミクスを統合適用し、DPP-1関連好中球優位型（78%）を含む5つの炎症エンドタイプを同定。唾液炎症プロファイルが血漿と高度に一致し、気管支拡張症への新規抗炎症薬の治療反応モニタリングへの非侵襲的応用が示唆される。",
+   url:"https://pubmed.ncbi.nlm.nih.gov/42258623/"},
   // ── 2026-06-09 新規 ──
-  {id:292, cat:"治療・薬剤", isNew:true,
+  {id:292, cat:"治療・薬剤", isNew:false,
    titleEn:"Bilateral Patellar Tendon Rupture in a 64-Year-Old Man: Possible Interaction of Inhaled Corticosteroids, Age and Mechanical Stress.",
    titleJa:"64歳男性における両側膝蓋腱断裂：吸入コルチコステロイド・加齢・機械的ストレスの相互作用の可能性（症例報告）",
    journal:"Case Reports in Orthopedics", date:"2026-06",
    pmid:"42253777",
    summary:"気管支拡張症で長期ICS使用中の64歳男性が低エネルギー外傷で両側膝蓋腱断裂を来した症例。ICS長期使用は加齢・機械的ストレスと相乗的に腱脆弱性を亢進させる可能性があり、気管支拡張症患者におけるICS適応と投与量の継続的な再評価の重要性が提起された。",
    url:"https://pubmed.ncbi.nlm.nih.gov/42253777/"},
-  {id:291, cat:"増悪・病態", isNew:true,
+  {id:291, cat:"増悪・病態", isNew:false,
    titleEn:"Clinical, Genetic, and Functional Characterization of Novel NFKB1 Variants in Chinese Patients with Primary Immunodeficiency.",
    titleJa:"中国人原発性免疫不全患者におけるNFKB1新規変異の臨床・遺伝・機能的特徴解析",
    journal:"Clinical and Experimental Immunology", sjr:"Q1", date:"2026-06",
    pmid:"42252100",
    summary:"中国人NFKB1変異患者4例で3種の新規変異を同定し機能解析を実施。フレームシフト変異はNMDを介した半量不全を、Arg187Trp変異はDNA結合能消失を引き起こすことが判明した。中国人患者は欧米コホートと比べ気管支拡張症・肝炎合併が多く、NFKB1関連疾患の疑いでは早期遺伝子検査とIVIG導入が重要と示唆される。",
    url:"https://pubmed.ncbi.nlm.nih.gov/42252100/"},
-  {id:290, cat:"増悪・病態", isNew:true,
+  {id:290, cat:"増悪・病態", isNew:false,
    titleEn:"Severe Post-Tuberculosis Bronchiectasis With Bullous Lung Disease Complicated by Acute Infective Exacerbation: A Case Report From Uganda.",
    titleJa:"ウガンダからの症例報告：肺気腫合併重症結核後気管支拡張症における急性感染性増悪",
    journal:"Clinical Case Reports", date:"2026-06",
