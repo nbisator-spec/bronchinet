@@ -328,9 +328,9 @@
     <div class="dashboard-header">
       <div class="dashboard-title">
         🔥 本日のハイライト
-        <span class="dashboard-badge">NEW 5件</span>
+        <span class="dashboard-badge">NEW 0件</span>
       </div>
-      <div class="dashboard-date">最終更新：2026-06-11 07:04 自動生成</div>
+      <div class="dashboard-date">最終更新：2026-06-11 08:04 自動生成</div>
     </div>
     <div class="dashboard-grid" id="dashboardGrid"></div>
   </div>
@@ -474,6 +474,13 @@
       <div class="sidebar-card">
         <div class="sidebar-header orange">📅 デイリーレポート履歴</div>
         <div class="sidebar-body">
+          <div class="report-item">
+            <div>
+              <div class="report-date">2026年6月11日（08:04）</div>
+              <div class="report-count">新規0件・試験新規なし</div>
+            </div>
+            <span class="report-link" onclick="showSection('reports',document.querySelectorAll('nav a')[3])">▶ 開く</span>
+          </div>
           <div class="report-item">
             <div>
               <div class="report-date">2026年6月11日</div>
@@ -714,6 +721,23 @@
   <div class="reports-page-header">
     <h2>📝 デイリーレポート アーカイブ</h2>
     <p>毎朝8時に自動生成される文献サマリーの履歴。既読除外機能により、常に新規情報のみを収録しています。</p>
+  </div>
+
+  <!-- Report 2026-06-11 08:04 -->
+  <div class="report-card">
+    <div class="report-card-header">
+      <div>
+        <div class="report-card-date">📅 2026年6月11日（08:04 再確認）</div>
+        <div style="font-size:12px;color:var(--text-muted);margin-top:3px;">除外済み：262論文 / 87試験</div>
+      </div>
+      <span class="report-card-count">新規 0件・試験新規なし</span>
+    </div>
+    <ul class="report-highlight-list">
+      <li>
+        <span class="report-num">—</span>
+        <span style="font-size:13px;color:var(--text-muted)">過去30日間の全PubMed検索結果（90件）が既読済み。新規論文なし。ClinicalTrials.gov全15件も既読済み。JRCT自動検索はタイムアウト。</span>
+      </li>
+    </ul>
   </div>
 
   <!-- Report 2026-06-11 -->
@@ -1528,35 +1552,35 @@
 // ============================================================
 const ARTICLES = [
   // ── 2026-06-11 新規 ──
-  {id:301, cat:"増悪・病態", isNew:true,
+  {id:301, cat:"増悪・病態", isNew:false,
    titleEn:"Mounier Kuhn Syndrome - A Case Report.",
    titleJa:"Mounier Kuhn症候群（気管気管支肥大症）：症例報告",
    journal:"Int Med Case Rep J", date:"2026-06",
    pmid:"42267336",
    summary:"50歳男性に気管気管支肥大症（Mounier Kuhn症候群）を発見。HRCTで気管支肥大・後壁憩室・両側末梢気管支拡張症を確認し、気管支鏡でウェブ状壁変形と分泌物を認めた。保存的治療（抗菌薬・去痰薬）で改善退院。",
    url:"https://doi.org/10.2147/IMCRJ.S600936"},
-  {id:300, cat:"増悪・病態", isNew:true,
+  {id:300, cat:"増悪・病態", isNew:false,
    titleEn:"Is It Time to Focus Efforts to Better Understand Group 3 Pulmonary Hypertension in Patients With Cystic Fibrosis and Non-Cystic Fibrosis Bronchiectasis?",
    titleJa:"CF・非CF気管支拡張症患者の3群肺高血圧の解明に向けた取り組みを強化する時か？（社説）",
    journal:"Chest", date:"2026-06",
    pmid:"42264559",
    summary:"CF・非CF気管支拡張症における3群肺高血圧（Group 3 PH）の重要性と未解決課題を論じる社説。進行性肺疾患における前毛細血管性PHが過少認識されており、CFTR調節薬時代における体系的評価の必要性を強調している。",
    url:"https://doi.org/10.1016/j.chest.2026.02.002"},
-  {id:299, cat:"治療・薬剤", isNew:true,
+  {id:299, cat:"治療・薬剤", isNew:false,
    titleEn:"Antiinflammatory Therapy in Bronchiectasis: Successes, Failures, and a Call for a More Precise Approach.",
    titleJa:"気管支拡張症における抗炎症療法：成功・失敗と精密アプローチへの提言（社説）",
    journal:"Chest", date:"2026-06",
    pmid:"42264557",
    summary:"気管支拡張症における抗炎症療法のこれまでの成功と失敗を概観し、より精密なアプローチの必要性を訴える社説。DPP-1阻害薬の成功を踏まえ、患者層別化と生物学的エンドタイプに基づく治療選択が今後の鍵になると論じている。",
    url:"https://doi.org/10.1016/j.chest.2026.02.009"},
-  {id:298, cat:"増悪・病態", isNew:true,
+  {id:298, cat:"増悪・病態", isNew:false,
    titleEn:"Differentiating benign from malignant pulmonary nodules in the context of bronchiectasis: a retrospective study.",
    titleJa:"気管支拡張症における良性・悪性肺結節の鑑別：後ろ向き研究",
    journal:"Ann Med", date:"2026-06",
    pmid:"42262976",
    summary:"143例の気管支拡張症合併肺結節患者を解析し、純すりガラス/混合GGO型が悪性予測の唯一の独立因子（OR 8.53）であることを確認。悪性結節の多くは浸潤性腺癌（86.9%）であり、CT評価において結節形態の重要性が示された。",
    url:"https://doi.org/10.1080/07853890.2026.2681234"},
-  {id:297, cat:"増悪・病態", isNew:true,
+  {id:297, cat:"増悪・病態", isNew:false,
    titleEn:"Pulmonary Hypertension Prevalence and Significance in Lung Transplant Recipients With Cystic Fibrosis and Non-Cystic Fibrosis Bronchiectasis.",
    titleJa:"CF・非CF気管支拡張症の肺移植患者における肺高血圧の有病率と意義",
    journal:"Chest", date:"2026-01",
