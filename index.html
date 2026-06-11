@@ -189,6 +189,9 @@
   .jp-note-modal { font-size: 13px; line-height: 1.7; padding: 12px 14px; margin: 12px 0; }
   .ev-chip.jp-toggle { border-color: #f3b4b4; color: #be0000; font-weight: 700; }
   .ev-chip.jp-toggle.active { background: #be0000; color: #fff; border-color: #be0000; }
+  .ev-chip.core-toggle { border-color: #93c5fd; color: #1d4ed8; font-weight: 700; }
+  .ev-chip.core-toggle.active { background: #1d4ed8; color: #fff; border-color: #1d4ed8; }
+  .scope-tag { display: inline-block; font-size: 10px; font-weight: 700; padding: 2px 7px; border-radius: 5px; margin-left: 6px; vertical-align: middle; background: #f1f5f9; color: #64748b; border: 1px dashed #cbd5e1; }
   .card-authors .au-ico { opacity: 0.6; }
   .sjr-badge { display:inline-block; font-size:9px; font-weight:800; padding:1px 5px; border-radius:4px; margin-left:6px; vertical-align:middle; letter-spacing:0.3px; }
   .sjr-Q1 { background:#dcfce7; color:#15803d; }
@@ -431,6 +434,7 @@
           <div class="ev-chip" data-ev="症例報告" onclick="setEvFilter('症例報告',this)">📝 症例報告</div>
           <div class="ev-chip" data-ev="社説・論説" onclick="setEvFilter('社説・論説',this)">✍️ 社説・論説</div>
           <div class="ev-chip jp-toggle" onclick="toggleJp(this)" title="日本の臨床的含意（MSL注釈）が付いた論文だけ表示">🇯🇵 日本の視点</div>
+          <div class="ev-chip core-toggle" onclick="toggleCore(this)" title="PCD・CF・免疫不全など隣接疾患を除外し、非CF気管支拡張症の中核論文だけ表示">🎯 非CF中核のみ</div>
         </div>
       </div>
 
@@ -1598,6 +1602,7 @@ const ARTICLES = [
    pmid:"42267336",
    authors:"Mutesi J; Niwagaba P; Wanda HY; Salunkhe K; Mutesi C; Kikomeko S; Baluku JB",
    ev:"症例報告",
+   scope:"先天奇形",
    summary:"50歳男性に気管気管支拡張症（Mounier Kuhn症候群）を診断—HRCTで気管・主気管支の拡張、後壁気管憩室、両側末梢気管支拡張症を確認し、気管支鏡でウェブ状の壁変形を認めた。マラリア重複感染を伴い、抗マラリア薬・静注抗菌薬・去痰薬による保存的治療で改善退院した。",
    url:"https://doi.org/10.2147/IMCRJ.S600936"},
   {id:300, cat:"増悪・病態", isNew:false,
@@ -1644,6 +1649,7 @@ const ARTICLES = [
    pmid:"42260890",
    authors:"Guo C; Zhu Y; Lu H; Liu K",
    ev:"症例報告",
+   scope:"PCD",
    summary:"慢性湿性咳嗽を呈した2例の小児PCD症例を報告し、高スプライシング影響予測を持つRSPH4A同義置換変異（c.1764G>T）とNFE2L2欠失がDNAH9関連PCD重症度を修飾する可能性を示した。早期トリオ全エクソーム解析が内臓逆位のない小児でもPCD診断を促進できると示唆され、1例では経過観察中に気管支拡張症の出現は認められなかった。",
    url:"https://pubmed.ncbi.nlm.nih.gov/42260890/"},
   {id:295, cat:"ガイドライン・総説", isNew:false,
@@ -1672,6 +1678,7 @@ const ARTICLES = [
    pmid:"42258623",
    authors:"Mosquera RA; Magana-Ceballos IG; De Jesus Rojas W; Huang X; Koochak H; Tellez ME; Castillo-Moguel JA; Bishehsari F; Mahdavinia M; Ramos-Benitez MJ; Harris T; Yadav A; Owens K; Lemus-Rangel R; Romero M; Zuleta S; Luz A; Baltazar-Fernandez A; McBeth KE; Hashmi S; Rosario Ortiz G; Santoyo-Rios J; Loyo-Rodriguez JF; Colasurdo GN",
    ev:"原著",
+   scope:"PCD",
    summary:"PCD患者51例にトランスクリプトミクス・プロテオミクス・メタゲノミクスを統合適用し、DPP-1関連好中球優位型（78%）を含む5つの炎症エンドタイプを同定。唾液炎症プロファイルが血漿と高度に一致し、気管支拡張症への新規抗炎症薬の治療反応モニタリングへの非侵襲的応用が示唆される。",
    url:"https://pubmed.ncbi.nlm.nih.gov/42258623/"},
   // ── 2026-06-09 新規 ──
@@ -1691,6 +1698,7 @@ const ARTICLES = [
    pmid:"42252100",
    authors:"Zhang J; Cai H; Zhu T; Shen M",
    ev:"原著",
+   scope:"免疫不全",
    summary:"中国人NFKB1変異患者4例で3種の新規変異を同定し機能解析を実施。フレームシフト変異はNMDを介した半量不全を、Arg187Trp変異はDNA結合能消失を引き起こすことが判明した。中国人患者は欧米コホートと比べ気管支拡張症・肝炎合併が多く、NFKB1関連疾患の疑いでは早期遺伝子検査とIVIG導入が重要と示唆される。",
    url:"https://pubmed.ncbi.nlm.nih.gov/42252100/"},
   {id:290, cat:"増悪・病態", isNew:false,
@@ -1710,6 +1718,7 @@ const ARTICLES = [
    pmid:"42251376",
    authors:"Khorashadizadeh M; Vahedi M; Doostparast A; Ghandhari M; Behforouz A; Ghahramani S",
    ev:"原著",
+   scope:"先天奇形",
    summary:"15歳男性のscimitar症候群＋horseshoe肺＋部分肺静脈還流異常・右肺低形成の症例。経カテーテル動脈塞栓術は奏効せず右下葉区域切除術に至り、感染・気管支拡張症・複雑な血管解剖を伴う場合は外科的切除が推奨されると論じた。",
    url:"https://pubmed.ncbi.nlm.nih.gov/42251376/"},
   {id:288, cat:"増悪・病態", isNew:false,
@@ -1719,6 +1728,7 @@ const ARTICLES = [
    pmid:"42248298",
    authors:"Wucherpfennig L; Silani MS; Eichinger M; Triphan SMF; Stahl M; Graeber SY; Thee S; Urbantat RM; Döllinger F; Hämmerling S; Sommerburg O; Schenk JP; Alrajab A; Heussel CP; Wege S; Kauczor HU; Wielpütz MO; Mall MA",
    ev:"原著",
+   scope:"PCD",
    summary:"PCD患者75名の189件MRI検査を解析。乳幼児期から気管支拡張・粘液栓が高頻度（各100%・80%）に認められ、MRIグローバルスコアは成人期に有意に上昇（14.5→26.7）、FEV1%やBSIと中等度相関した。臨床試験エンドポイントとしてのMRI活用を支持する結果である。",
    url:"https://pubmed.ncbi.nlm.nih.gov/42248298/"},
   // ── 2026-06-06 新規 ──
@@ -1729,6 +1739,7 @@ const ARTICLES = [
    pmid:"42242757",
    authors:"Boakye-Dankwa E; Kiddle SJ; Koo HN; Harper AR; Ambrose CS; Douglas IJ; Quint JK",
    ev:"原著",
+   scope:"喘息",
    summary:"重症喘息RCTにおいて気管支拡張症・COPD・FEVに基づく除外基準は最多の患者を除外しているが、実臨床コホート（CHRONICLE、480例）での解析では治療効果への有意な影響は認められなかった。喫煙歴・増悪既往・FeNO・血中好酸球数による基準は治療反応性を有意に修飾しており、気管支拡張症に基づく除外は一般化可能性を不当に制限している可能性がある。",
    url:"https://pubmed.ncbi.nlm.nih.gov/42242757/"},
   {id:286, cat:"増悪・病態", isNew:false,
@@ -1756,6 +1767,7 @@ const ARTICLES = [
    pmid:"41973991",
    authors:"McNally P; Lester K; Cregan R; Elnazir B; Persaud T; Rea D; Twomey E; Williamson M; Cox DW; Linnane B; McGrane S; Kirwan L; O'Regan P; Bonte M; Makani P; Caudri D; Dodd JD; McKone EF; Saunders C; Semple T; Davies JC; Tiddens HAWM",
    ev:"RCT",
+   scope:"CF",
    summary:"CF患者79例（F508del均一またはF508del＋最小機能変異保有）を24ヶ月追跡。ETI開始12ヶ月での気管支壁肥厚・粘液栓・空気閉塞の改善は24ヶ月時点でも維持されたが、気管支拡張の改善は認められず安定維持にとどまった。肺血管動静脈比の変化からETIが肺血管圧に有益な影響を与える可能性も示唆。（PubMed PMID: 41973991）",
    url:"https://pubmed.ncbi.nlm.nih.gov/41973991/"},
   {id:281, cat:"増悪・病態", isNew:false,
@@ -1774,6 +1786,7 @@ const ARTICLES = [
    pmid:"42235961",
    authors:"Short C; Semple T; Abkir M; Efthyvoulou C; Padley S; Rosenthal M; McNally P; Tiddens H; Caudri D; Tibiletti M; Parker GJ; Davies JC",
    ev:"原著",
+   scope:"CF",
    summary:"CF患者46例の18ヶ月追跡で、OE-MRIとMBW延長法がFEV1・LCIでは検出できない肺構造・機能の悪化を捕捉した。CFTR調節薬（三剤）使用下でも肺病変は進行する可能性が示された。（PubMed PMID: 42235961）",
    url:"https://pubmed.ncbi.nlm.nih.gov/42235961/"},
   {id:283, cat:"増悪・病態", isNew:false,
@@ -1783,6 +1796,7 @@ const ARTICLES = [
    pmid:"42238223",
    authors:"Suhail JM; Wagay MI; Parry AH; Bhat IM; Sheikh RR; Bhat MA",
    ev:"原著",
+   scope:"CF",
    summary:"インドのCF小児32例を1年間追跡し、HRCTのBhallaスコアが50%増加する一方でFEV1等は有意変化なしであった。HRCTが機能検査より早期に肺構造悪化を検出できることが示された。（PubMed PMID: 42238223）",
    url:"https://pubmed.ncbi.nlm.nih.gov/42238223/"},
   // ── 2026-06-04 新規 ──
@@ -1800,6 +1814,7 @@ const ARTICLES = [
    journal:"Current Opinion in Pediatrics", sjr:"Q1", date:"2026-06", year:2026,
    authors:"Ben-Meir E; Teper A; Strug L; Ratjen F; Kerem E",
    ev:"原著",
+   scope:"閉塞性細気管支炎",
    summary:"感染後閉塞性細気管支炎（PIBO）の病態として好中球性炎症、インフラマゾーム活性化（IL-18・カスパーゼ1）、遺伝的感受性が主要機序として注目されており、診断は臨床・機能・画像の統合評価が必要。疾患修飾療法のエビデンスは限られており、フェノタイプ別の標的治療開発が今後の鍵となる。（PubMed PMID: 42234623）",
    url:"https://pubmed.ncbi.nlm.nih.gov/42234623/"},
   {id:280, cat:"増悪・病態", isNew:false,
@@ -1808,6 +1823,7 @@ const ARTICLES = [
    journal:"Surgical Neurology International", sjr:"Q3", date:"2026-05", year:2026,
    authors:"Yasar B; Hamurcu MY; Kavcar M; Besnek A; Uzunoglu I",
    ev:"症例報告",
+   scope:"PCD",
    summary:"気管支拡張症を伴うカルタゲナー症候群の27歳男性が左上肢の脱力・しびれで発症、頚部病変として1ヶ月間誤認された右前頭葉脳膿瘍の症例。頭部MRIで診断後、外科的ドレナージとメロペネム＋バンコマイシンにより完全な神経学的回復を達成した。（PubMed PMID: 42232444）",
    url:"https://pubmed.ncbi.nlm.nih.gov/42232444/"},
   // ── 2026-06-03 新規（3ヶ月分リサーチ） ──
@@ -1945,6 +1961,7 @@ const ARTICLES = [
    titleJa:"分類不能型免疫不全症（CVID）における疾患因子と臨床転帰の関連：系統的文献レビュー",
    journal:"Immunological medicine", sjr:"Q2", date:"2026-06-02", year:2026,
    ev:"原著",
+   scope:"免疫不全",
    summary:"CVIDに関する39研究を統合した系統的レビュー。脾腫が気管支拡張症リスク増加と関連し，総Bリンパ球高値が気管支拡張症および死亡リスク低下と関連することが示された。リンパ球増殖マーカーおよびBリンパ球サブセットと臨床転帰の関連が，CVIDにおける気管支拡張症の免疫学的病態理解に寄与する。（PubMed PMID: 42227882）",
    url:"https://pubmed.ncbi.nlm.nih.gov/42227882/", authors:"Lopes Joao Pedro M et al."},
   {id:260, cat:"増悪・病態", isNew:false,
@@ -2081,6 +2098,7 @@ const ARTICLES = [
    titleEn:"mRNA therapy improves the composition and motility in CCDC40-deficient cilia in vitro and in vivo",
    journal:"American Journal of Respiratory Cell and Molecular Biology", sjr:"Q1", if:"5.3", date:"2026-03-30", year:2026,
    ev:"原著",
+   scope:"PCD",
    summary:"PCD（原発性線毛機能不全症）の中でも重篤なCCDC40病的バリアント例に対し、mRNA療法で線毛の構造組成と運動機能を回復できることを試験管内・生体内で初めて示した革新的研究。気管支拡張症に至るPCDの根本病態を修正する遺伝子治療戦略の新たな可能性を開いた。（PubMed PMID: 42089334）",
    url:"https://pubmed.ncbi.nlm.nih.gov/42089334/", authors:"Wohlgemuth Kai et al."},
   {id:241, cat:"精密医療・エンドタイプ", isNew:false,
@@ -2095,6 +2113,7 @@ const ARTICLES = [
    titleEn:"Genetic aetiologies of bronchiectasis revisited: A new diagnosis of primary ciliary dyskinesia in adulthood",
    journal:"Clinical Medicine (London)", date:"2026-01-14", year:2026,
    ev:"症例報告",
+   scope:"PCD",
    summary:"初期検査でPCDが除外されていたにも関わらず成人期に再評価でPCDと診断された気管支拡張症症例を報告。遺伝的病因検索が不十分だった成人気管支拡張症患者の一部でPCDが見逃されている実態を示し、包括的遺伝子スクリーニングの導入を推奨した。（PubMed PMID: 41544978）",
    url:"https://pubmed.ncbi.nlm.nih.gov/41544978/", authors:"Riley Dylan et al."},
   {id:239, cat:"ガイドライン・総説", isNew:false,
@@ -2116,6 +2135,7 @@ const ARTICLES = [
    titleEn:"Clinical characteristics and severity of primary ciliary dyskinesia caused by large homozygous deletion including exons 1-4 of DRC1: A multicenter retrospective cohort study",
    journal:"Respiratory Investigation", sjr:"Q2", if:"2.0", date:"2026-01-21", year:2026,
    ev:"原著",
+   scope:"PCD",
    summary:"日本PCD患者の約半数が保有するDRC1遺伝子エクソン1-4の大型ホモ接合欠失による症例の臨床特性を全国12施設の後方視的コホートで解析した日本発研究（結核予防会複十字病院）。気管支拡張症進行と肺機能低下のパターンを明らかにしこのバリアント特有の予後を初めて大規模に示した。（PubMed PMID: 41570615）",
    url:"https://pubmed.ncbi.nlm.nih.gov/41570615/", authors:"Ito Masashi et al."},
   // ── 2026-06-01 新規（補足・90日検索テスト） ──
@@ -2146,6 +2166,7 @@ const ARTICLES = [
    titleEn:"Granulomatous-Lymphocytic Interstitial Lung Disease in Common Variable Immunodeficiency with a Rapid Progression and Refractory Infections",
    journal:"Internal Medicine (Tokyo)", sjr:"Q3", if:"1.1", date:"2026-05-30", year:2026,
    ev:"原著",
+   scope:"免疫不全",
    summary:"免疫グロブリン補充・低用量エリスロマイシン継続下で急速進行性GLILDを発症し免疫抑制に不応で死亡した34歳女性CVID症例（熊本大学）。気管支拡張症を高頻度に合併するCVIDにおいてGLILDが予後不良を呈しうることを示す日本発症例報告。（PubMed PMID: 42219311）",
    url:"https://pubmed.ncbi.nlm.nih.gov/42219311/", authors:"Tokunaga Ryuki et al."},
   {id:232, cat:"日本発", isNew:false,
@@ -2260,6 +2281,7 @@ const ARTICLES = [
    titleEn:"Non-tuberculous mycobacteria in primary ciliary dyskinesia: a national multicenter cohort study",
    journal:"Respiration", sjr:"Q2", if:"3.8", date:"2026-05-28", year:2026,
    ev:"原著",
+   scope:"PCD",
    summary:"231例のPCDコホートで10.4%にNTMが検出され（M. simiaeが主体）、急速発育菌（M. abscessus等）はFEV1低値患者に多かった。気管支拡張症を主徴とするPCDにおいてNTM合併が臨床的に重要な問題であることを多施設データで示した初の大規模研究。（PubMed PMID: 42207757）",
    url:"https://pubmed.ncbi.nlm.nih.gov/42207757/", authors:"Bar-On Ophir et al."},
   {id:216, cat:"治療・薬剤", isNew:false,
@@ -2274,6 +2296,7 @@ const ARTICLES = [
    titleEn:"A Retrospective Multicenter Cohort Study on the Effectiveness of Triple Inhaled Therapy in Severe Asthma",
    journal:"Journal of Investigational Allergology and Clinical Immunology", sjr:"Q2", date:"2026-05-05", year:2026,
    ev:"原著",
+   scope:"喘息",
    summary:"重症喘息患者へのICS/LABA/LAMAトリプル療法の後方視的解析で、気管支拡張症合併がTT治療失敗の独立した予測因子（HR 1.91）として同定された。重症喘息における合併気管支拡張症のスクリーニングと個別化治療選択の重要性を示唆する。（PubMed PMID: 42084598）",
    url:"https://pubmed.ncbi.nlm.nih.gov/42084598/", authors:"Dacal Rivas David et al."},
   {id:214, cat:"マイクロバイオーム・感染", isNew:false,
@@ -2281,6 +2304,7 @@ const ARTICLES = [
    titleEn:"The lactylation-YTHDF1 axis promotes DNAH5-dependent ciliary defense in Pseudomonas aeruginosa infection",
    journal:"American Journal of Respiratory Cell and Molecular Biology", sjr:"Q1", if:"5.3", date:"2026-05-01", year:2026,
    ev:"原著",
+   scope:"PCD",
    summary:"P. aeruginosaが宿主細胞の乳酸を枯渇させてH3K18乳酸化を低下させ、m6A結合タンパクYTHDF1によるDNAH5発現調節を障害することで線毛機能不全を誘導するメカニズムを初めて解明した。このエピジェネティック経路の解明は気管支拡張症における緑膿菌慢性感染の新規治療標的となりうる。（PubMed PMID: 41738162）",
    url:"https://pubmed.ncbi.nlm.nih.gov/41738162/", authors:"Wang Jing et al."},
   {id:213, cat:"増悪・病態", isNew:false,
@@ -2288,6 +2312,7 @@ const ARTICLES = [
    titleEn:"Unrecognized ciliary motility disorders in neutrophilic severe asthma exacerbations",
    journal:"Allergy, Asthma & Clinical Immunology", sjr:"Q2", if:"2.4", date:"2026-05-08", year:2026,
    ev:"原著",
+   scope:"喘息",
    summary:"好中球性重症喘息増悪患者の61.5%にPCD関連遺伝子バリアントが同定され、これらの患者では生物学的製剤の効果が乏しい可能性が示された。気管支拡張症合併重症喘息ではPCDの見逃しに注意し、早期遺伝子スクリーニングが治療戦略選択を変えうることを示す。（PubMed PMID: 42104487）",
    url:"https://pubmed.ncbi.nlm.nih.gov/42104487/", authors:"Thawanaphong Sarita et al."},
   {id:212, cat:"増悪・病態", isNew:false,
@@ -2302,6 +2327,7 @@ const ARTICLES = [
    titleEn:"A homozygous splicing mutation in CCDC39 caused multiple morphological abnormalities of the flagella in an infertile man with primary ciliary dyskinesia",
    journal:"Asian Journal of Andrology", sjr:"Q1", date:"2026-05-29", year:2026,
    ev:"原著",
+   scope:"PCD",
    summary:"CCDC39遺伝子c.1528-2A>GホモスプライスサイトバリアントによりPCDに精子鞭毛多形態異常症（MMAF）が合併した男性不妊症例を報告。ICSIで妊娠に成功し、PCD遺伝子バリアントが男性不妊の見逃せない原因であることを示す新知見。（PubMed PMID: 42210652）",
    url:"https://pubmed.ncbi.nlm.nih.gov/42210652/", authors:"Tao Wen et al."},
   {id:210, cat:"精密医療・エンドタイプ", isNew:false,
@@ -2309,6 +2335,7 @@ const ARTICLES = [
    titleEn:"Prevalence and Nationality Distribution of Known and Novel Genetic Variants in Children With Primary Ciliary Dyskinesia in the State of Qatar",
    journal:"Clinical Genetics", sjr:"Q2", date:"2025-11-21", year:2025,
    ev:"原著",
+   scope:"PCD",
    summary:"カタール在住28名のPCD小児を対象に遺伝子解析を実施し8つの新規バリアントを同定。カタール国民ではDNAH11が最多であり、多様な国籍背景を持つ小児ではバリアントスペクトラムが異なることが示された。気管支拡張症を引き起こすPCDの遺伝子多様性の理解に貢献する。（PubMed PMID: 41267578）",
    url:"https://pubmed.ncbi.nlm.nih.gov/41267578/", authors:"AbdulWahab Atqah et al."},
   {id:209, cat:"精密医療・エンドタイプ", isNew:false,
@@ -2316,6 +2343,7 @@ const ARTICLES = [
    titleEn:"Loss of RPGR disrupts motile cilia and causes primary ciliary dyskinesia by affecting F-actin dynamics",
    journal:"Journal of Clinical Investigation", sjr:"Q1", if:"13.6", date:"2026-03-31", year:2026,
    ev:"原著",
+   scope:"PCD",
    summary:"網膜色素変性症との関連で知られるRPGR遺伝子の機能喪失がF-アクチン過剰蓄積を通じて運動線毛を障害しPCDを引き起こすメカニズムを解明。ラトランクリンAおよびY27632によるF-アクチン調節がPCD病態を改善することを示し、気管支拡張症を伴うPCDの新規治療戦略を提示した。（PubMed PMID: 41915430）",
    url:"https://pubmed.ncbi.nlm.nih.gov/41915430/", authors:"Wu Yang et al."},
   {id:208, cat:"精密医療・エンドタイプ", isNew:false,
@@ -2323,6 +2351,7 @@ const ARTICLES = [
    titleEn:"Understanding FOXJ1-Associated Autosomal Dominant Primary Ciliary Dyskinesia",
    journal:"American Journal of Respiratory Cell and Molecular Biology", sjr:"Q1", if:"5.3", date:"2026-05-11", year:2026,
    ev:"原著",
+   scope:"PCD",
    summary:"FOXJ1遺伝子のヘテロ接合機能獲得バリアントによる常染色体優性PCD（AD-PCD）の病態機序と臨床特性を解説した論説。AD-PCDは線毛構造が保たれながら運動機能が障害される特殊な表現型を示し、気管支拡張症診療で見逃されやすい新規サブタイプとして注目される。（PubMed PMID: 42113888）",
    url:"https://pubmed.ncbi.nlm.nih.gov/42113888/", authors:"Hao Meihua et al."},
   // ── 2026-05-31 新規 ──
@@ -2331,6 +2360,7 @@ const ARTICLES = [
    titleEn:"Primary Ciliary Dyskinesia With Situs Inversus in Twin Premature Infants: Two Case Reports",
    journal:"British Journal of Hospital Medicine", sjr:"Q3", date:"2026-05-22", year:2026,
    ev:"症例報告",
+   scope:"PCD",
    summary:"在胎34週の双胎女児がDNAH5遺伝子変異による内臓逆位を伴うPCDと新生児期に診断された2症例。新生児呼吸窮迫と内臓逆位が共存する場合はPCDを積極的に疑い、遺伝子検査で早期確定診断を行うことで気管支拡張症等の不可逆的肺障害の予防につながりうることを示した。（PubMed PMID: 42216596）",
    url:"https://pubmed.ncbi.nlm.nih.gov/42216596/", authors:"Ma Rui et al."},
   {id:206, cat:"ガイドライン・総説", isNew:false,
@@ -2345,6 +2375,7 @@ const ARTICLES = [
    titleEn:"Nutrition and growth of primary ciliary dyskinesia patients: a systematic review",
    journal:"European Respiratory Review", sjr:"Q1", if:"10.4", date:"2026-05-27", year:2026,
    ev:"メタ解析・SR",
+   scope:"PCD",
    summary:"過去20年間のPCD患者の成長・栄養状態・食事摂取量に関する50研究を体系的にレビュー。低栄養有病率4〜11%、ビタミンD不足54%・欠乏18〜26%と高率であり、PCD（気管支拡張症を主病態として含む）患者への栄養評価・介入の重要性とエビデンスギャップを指摘した。（PubMed PMID: 42203237）",
    url:"https://pubmed.ncbi.nlm.nih.gov/42203237/", authors:"Karavasiloglou Nena et al."},
   {id:204, cat:"ガイドライン・総説", isNew:false,
@@ -2352,6 +2383,7 @@ const ARTICLES = [
    titleEn:"Follow-Up of Children With Primary Ciliary Dyskinesia",
    journal:"Pediatric Pulmonology", sjr:"Q1", if:"2.3", date:"2026-05-01", year:2026,
    ev:"総説",
+   scope:"PCD",
    summary:"PCD小児の外来フォローアップに関する現行文献のレビュー。高品質エビデンスの不足・個人差の大きさ・診断遅延が管理プロトコル策定を困難にしている現状を指摘し、PCD専門外来での統合管理、気管支拡張症を含む上下気道疾患のモニタリング、患者・家族教育戦略を概説した。（PubMed PMID: 42199053）",
    url:"https://pubmed.ncbi.nlm.nih.gov/42199053/", authors:"Rubbo Bruna et al."},
   {id:203, cat:"精密医療・エンドタイプ", isNew:false,
@@ -2359,6 +2391,7 @@ const ARTICLES = [
    titleEn:"A homozygous splice-site variant in ZMYND10 causes primary ciliary dyskinesia with primary infertility in a Chinese family",
    journal:"Frontiers in Medicine", sjr:"Q1", if:"3.0", date:"2026-05-08", year:2026,
    ev:"原著",
+   scope:"PCD",
    summary:"ZMYND10遺伝子のホモ接合スプライスサイト変異（c.511-1G>A）が気管支拡張症・慢性副鼻腔炎・内臓逆位・原発性不妊を呈するPCDを引き起こした中国人家系の症例報告。高速ビデオ顕微鏡で線毛完全不動性が確認され、外内ダイニンアームの消失とGAS8（DRC4）欠失が観察され、ZMYND10関連PCD表現型スペクトラムが拡大された。（PubMed PMID: 42180707）",
    url:"https://pubmed.ncbi.nlm.nih.gov/42180707/", authors:"He Jie et al."},
   {id:202, cat:"ガイドライン・総説", isNew:false,
@@ -2373,6 +2406,7 @@ const ARTICLES = [
    titleEn:"Variants in the DNAH11 gene responsible for primary ciliary dyskinesia or probably atypical primary ciliary dyskinesia presenting left-right asymmetry disorder",
    journal:"PLoS One", sjr:"Q1", if:"2.6", date:"2026-05-08", year:2026,
    ev:"症例報告",
+   scope:"PCD",
    summary:"PCD主要原因遺伝子DNAH11のバリアントを解析し、左右非対称性障害を呈するPCDおよび非典型的PCDの遺伝子型・表現型相関を明らかにした。DNAH11バリアントは線毛構造が保たれながら運動が異常となる特殊なPCDサブタイプを引き起こし、気管支拡張症の遺伝子診断における次世代シーケンシングパネルの有用性を支持する。（PubMed PMID: 42102130）",
    url:"https://pubmed.ncbi.nlm.nih.gov/42102130/", authors:"Zhao Kai et al."},
   // ── 2026-05-30 新規 ──
@@ -2418,6 +2452,7 @@ const ARTICLES = [
    titleEn:"A Case Report: Seven-Year Follow-Up of a Patient With Kartagener Syndrome Undergoing Bilateral Lung Transplantation",
    journal:"Transplantation Proceedings", sjr:"Q3", date:"2026-05", year:2026,
    ev:"症例報告",
+   scope:"PCD",
    summary:"気管支拡張症を主病態とするカルタゲナー症候群の末期呼吸不全患者に両側肺移植を施行し7年間追跡した症例報告。手術・術後の複数の課題を乗り越えQoLが著明に改善し、PCD関連気管支拡張症の終末期治療として肺移植の有効性と課題を示した。（PubMed PMID: 42144294）",
    url:"https://pubmed.ncbi.nlm.nih.gov/42144294/", authors:"Yilmaz Emre et al."},
   {id:194, cat:"ガイドライン・総説", isNew:false,
@@ -2439,6 +2474,7 @@ const ARTICLES = [
    titleEn:"Quality of life of X-linked agammaglobulinemia patients in the United Kingdom",
    journal:"Journal of Human Immunity", date:"2026-02", year:2026,
    ev:"原著",
+   scope:"免疫不全",
    summary:"英国XLA患者のHRQoLを調査。気管支拡張症非合併例では健常者と同等のHRQoLだが、合併例では身体機能スコアが有意に低下（PCS 47.88 vs 55.14, p<0.001）。原発性免疫不全症における気管支拡張症予防の重要性を定量的に示した。（PubMed PMID: 42169998）",
    url:"https://pubmed.ncbi.nlm.nih.gov/42169998/", authors:"Shillitoe Ben et al."},
   {id:191, cat:"マイクロバイオーム・感染", isNew:false,
@@ -2460,6 +2496,7 @@ const ARTICLES = [
    titleEn:"Primary ciliary dyskinesia in pediatric persons: A microscopic movement malady",
    journal:"Disease-a-Month", sjr:"Q2", date:"2026-05", year:2026,
    ev:"原著",
+   scope:"PCD",
    summary:"50以上の遺伝子・2000以上の病原性変異が関与するPCDの病態・診断・治療を包括的に解説。気管支拡張症が主要合併症であり、nasal NO・TEM・免疫蛍光・HSVMAを組み合わせた多角的診断が不可欠。遺伝子治療を含む将来的治療の展望も論じている。（PubMed PMID: 42135132）",
    url:"https://pubmed.ncbi.nlm.nih.gov/42135132/", authors:"Greydanus Donald E et al."},
   {id:188, cat:"増悪・病態", isNew:false,
@@ -2467,6 +2504,7 @@ const ARTICLES = [
    titleEn:"Structural lung assessment in children with primary ciliary dyskinesia: evaluation with the SPEC scoring system",
    journal:"European Journal of Pediatrics", sjr:"Q1", if:"2.6", date:"2026-05", year:2026,
    ev:"原著",
+   scope:"PCD",
    summary:"PCD小児47例でPCD特異的CTスコアリング「SPEC」を検証。SPECスコアはFEV₁z-score（ρ=-0.748）・FVCz-score（ρ=-0.722）と強い負の相関を示し、既存のBhalla・modified Brodyスコアとも高い相関。小児PCD患者の治療意思決定と臨床試験転帰指標としての有用性が示された。（PubMed PMID: 42133077）",
    url:"https://pubmed.ncbi.nlm.nih.gov/42133077/", authors:"Akca Din&#xe7; Gamze et al."},
   // ── 2026-05-28 新規 ──
@@ -2482,6 +2520,7 @@ const ARTICLES = [
    titleEn:"First neonatal case of primary ciliary dyskinesia caused by a pathogenic DRC1 variant presenting with recurrent atelectasis and airway hypersecretion: a case report and literature review",
    journal:"BMC Pediatrics", sjr:"Q1", date:"2026-05", year:2026,
    ev:"原著",
+   scope:"PCD",
    summary:"東アジアに多いDRC1遺伝子変異によるPCDが新生児期に反復無気肺・気道過分泌として発症した日本初の症例報告。PCDは典型的な内臓逆位を欠く場合、新生児期に見逃されやすく、早期遺伝子診断の重要性を強調した。（PubMed PMID: 42185991）",
    url:"https://pubmed.ncbi.nlm.nih.gov/42185991/", authors:"Kato Kimiya et al."},
   {id:185, cat:"日本発", isNew:false,
@@ -2489,6 +2528,7 @@ const ARTICLES = [
    titleEn:"Primary Ciliary Dyskinesia Caused by a Heterozygous Large Deletion in DNAAF11 Accompanied by a Hemizygous Nonsense Variant: A Case Report from Japan",
    journal:"Internal Medicine (Tokyo)", sjr:"Q3", if:"1.1", date:"2025", year:2025,
    ev:"症例報告",
+   scope:"PCD",
    summary:"46歳男性のPCDをDNAAF11遺伝子の大欠失（エクソン5〜11）とヘミ接合性ナンセンス変異の複合として同定した日本初の詳細報告。ロングリードシーケンシングが希少な構造的変異の診断に有効であり、不明原因の気管支拡張症患者へのゲノム解析の重要性を示した。（PubMed PMID: 41062319）",
    url:"https://pubmed.ncbi.nlm.nih.gov/41062319/", authors:"Ito Masashi et al."},
   {id:184, cat:"精密医療・エンドタイプ", isNew:false,
@@ -2653,6 +2693,7 @@ const ARTICLES = [
    titleEn:"Use of Recombinant Human Deoxyribonuclease I in Primary Ciliary Dyskinesia Bronchiectasis-A Real Life Pilot Study",
    journal:"Medical Sciences (Basel)", sjr:"Q1", if:"4.4", date:"2026-03", year:2026,
    ev:"原著",
+   scope:"PCD",
    summary:"PCD由来気管支拡張症患者8例へのrhDNase投与パイロット研究。6ヶ月間の肺機能は安定し、増悪回数は3.1回から2.3回に減少した。非CF気管支拡張症での既報とは異なり、PCD患者での安全性を示した。（PubMed PMID: 41892848）",
    url:"https://doi.org/10.3390/medsci14010133", authors:"Heching Moshe et al."},
   {id:138, cat:"精密医療・エンドタイプ", isNew:false,
@@ -2677,6 +2718,7 @@ const ARTICLES = [
    journal:"European Respiratory Journal", sjr:"Q1", if:"21.2", date:"2026-05", year:2026,
    authors:"Hu S; Shen X; Wang J; Lu H; Liu Y; Gu S; Ge A; Yang J; Mao B; Ringshausen FC; Shoemark A; Xu JF",
    ev:"原著",
+   scope:"PCD",
    summary:"気管支拡張症患者における鼻腔一酸化窒素（nNO）と臨床的特徴を組み合わせたPCDスクリーニングの精度を検討。nNO単独より組み合わせスコアリングが高い感度・特異度を示し、診断未確定の気管支拡張症患者への有用なスクリーニングツールとなり得ることを示した。（PubMed PMID: 42134984）",
    url:"https://doi.org/10.1183/13993003.02796-2025"},
   {id:141, cat:"精密医療・エンドタイプ", isNew:false,
@@ -2691,6 +2733,7 @@ const ARTICLES = [
    titleEn:"PCDSOS: a novel clinical predictive tool for screening primary ciliary dyskinesia in adult bronchiectasis patients-a multicenter derivation and external validation study",
    journal:"BMC Medicine", sjr:"Q1", if:"8.3", date:"2026-03", year:2026,
    ev:"原著",
+   scope:"PCD",
    summary:"気管支拡張症成人患者のPCDスクリーニングに特化した新規臨床予測ツール「PCDSOS」を多施設コホートで開発・外部検証。年齢・側性異常・副鼻腔炎・早期発症・喀痰産生量などを組み合わせたスコアが高い診断精度を達成した。（PubMed PMID: 41803868）",
    url:"https://doi.org/10.1186/s12916-026-04780-5", authors:"Zhou Wangji et al."},
   {id:143, cat:"精密医療・エンドタイプ", isNew:false,
@@ -3381,6 +3424,7 @@ const ARTICLES = [
    titleEn:"Early Life Disease Burden and Outcomes in Children Diagnosed With Primary Ciliary Dyskinesia in Infancy",
    journal:"Pediatric Pulmonology", sjr:"Q1", if:"2.3", date:"2026-05", year:2026,
    ev:"原著",
+   scope:"PCD",
    summary:"早期診断されたPCD乳児35例で、2歳までに外来増悪66%・入院増悪29%・Pseudomonas検出14%が発生し、7歳時に閉塞性肺機能パターンを示した。吸入高張食塩水は緑膿菌獲得を有意に抑制（0% vs 29%）したが、入院率は上昇し、さらなる前向き検討が必要とされた。",
    url:"https://doi.org/10.1002/ppul.71658", authors:"Kumar Madhan et al."},
 
@@ -4013,6 +4057,7 @@ const ARTICLES = [
 let currentFilter = 'all';
 let currentEv = 'all';
 let jpOnly = false;
+let coreOnly = false;
 let currentPage = 1;
 const PER_PAGE = 12;
 
@@ -4100,6 +4145,17 @@ function toggleJp(el) {
   el.classList.toggle('active', jpOnly);
   filterArticles();
 }
+function toggleCore(el) {
+  coreOnly = !coreOnly;
+  currentPage = 1;
+  el.classList.toggle('active', coreOnly);
+  filterArticles();
+}
+const SCOPE_LABEL = { 'CF': '嚢胞性線維症', 'PCD': '原発性線毛機能不全', '免疫不全': '免疫不全', '先天奇形': '先天奇形', '閉塞性細気管支炎': '閉塞性細気管支炎', '喘息': '喘息', '他疾患': '関連疾患' };
+function scopeTag(scope) {
+  if (!scope) return '';
+  return `<span class="scope-tag" title="非CF気管支拡張症の中核ではなく関連・隣接疾患の論文です">隣接: ${SCOPE_LABEL[scope] || scope}</span>`;
+}
 
 function fmtAuthors(s, max) {
   max = max || 3;
@@ -4121,10 +4177,10 @@ function csvCell(v) {
 function exportCSV() {
   const rows = getFiltered();
   if (!rows.length) { bnToast('対象が0件です'); return; }
-  const head = ['カテゴリ', 'エビデンス区分', 'タイトル(和)', 'タイトル(英)', '著者', '雑誌', 'IF', 'SJR', '発表', 'PMID', '要約', '日本の視点', 'URL'];
+  const head = ['カテゴリ', '範囲', 'エビデンス区分', 'タイトル(和)', 'タイトル(英)', '著者', '雑誌', 'IF', 'SJR', '発表', 'PMID', '要約', '日本の視点', 'URL'];
   const lines = [head.map(csvCell).join(',')];
   rows.forEach(a => {
-    lines.push([a.cat, a.ev || '', a.titleJa || '', a.titleEn || a.title || '', a.authors || '', a.journal || '', a.if || '', a.sjr || '', a.date || '', a.pmid || '', a.summary || '', a.jpView || '', resolveUrl(a)].map(csvCell).join(','));
+    lines.push([a.cat, a.scope ? '隣接:' + (SCOPE_LABEL[a.scope] || a.scope) : '中核', a.ev || '', a.titleJa || '', a.titleEn || a.title || '', a.authors || '', a.journal || '', a.if || '', a.sjr || '', a.date || '', a.pmid || '', a.summary || '', a.jpView || '', resolveUrl(a)].map(csvCell).join(','));
   });
   const csv = '﻿' + lines.join('\r\n');
   const blob = new Blob([csv], { type: 'text/csv;charset=utf-8' });
@@ -4179,12 +4235,13 @@ function getFiltered() {
     const matchCat = currentFilter === 'all' || a.cat === currentFilter;
     const matchEv = currentEv === 'all' || a.ev === currentEv;
     const matchJp = !jpOnly || !!a.jpView;
+    const matchCore = !coreOnly || !a.scope;
     const matchQ = !query || a.titleJa.toLowerCase().includes(query) ||
                    (a.titleEn || a.title || '').toLowerCase().includes(query) ||
                    a.journal.toLowerCase().includes(query) ||
                    (a.summary && a.summary.toLowerCase().includes(query)) ||
                    (a.authors && a.authors.toLowerCase().includes(query));
-    return matchCat && matchEv && matchJp && matchQ;
+    return matchCat && matchEv && matchJp && matchCore && matchQ;
   });
   if (sort === 'newest') filtered.sort((a, b) => b.year - a.year || b.date.localeCompare(a.date));
   else if (sort === 'oldest') filtered.sort((a, b) => a.year - b.year || a.date.localeCompare(b.date));
@@ -4197,6 +4254,7 @@ function filterDesc() {
   parts.push(currentFilter === 'all' ? '全カテゴリ' : currentFilter);
   if (currentEv !== 'all') parts.push('区分:' + currentEv);
   if (jpOnly) parts.push('🇯🇵日本の視点あり');
+  if (coreOnly) parts.push('🎯非CF中核のみ');
   if (q) parts.push('検索:「' + q + '」');
   return parts.join(' / ');
 }
@@ -4248,7 +4306,7 @@ function renderGrid(articles, showTrials = false) {
   html += articles.map(a => `
     <div class="article-card ${a.isNew ? 'is-new' : ''}" onclick="openModal(${a.id})">
       <div class="card-top">
-        <span class="cat-tag ${a.cat}">${a.cat}</span>${a.ev ? evBadge(a.ev) : ''}
+        <span class="cat-tag ${a.cat}">${a.cat}</span>${a.ev ? evBadge(a.ev) : ''}${a.scope ? scopeTag(a.scope) : ''}
         ${a.isNew ? '<span class="new-tag">NEW</span>' : ''}
       </div>
       <div class="card-title-ja">${a.titleJa}</div>
@@ -4299,7 +4357,7 @@ function resolveUrl(a) {
 function openModal(id) {
   const a = ARTICLES.find(x => x.id === id);
   if (!a) return;
-  document.getElementById('modalCatTag').innerHTML = `<span class="cat-tag ${a.cat}">${a.cat}</span>${a.ev ? ' ' + evBadge(a.ev) : ''}${a.isNew ? ' <span class="new-tag">NEW</span>' : ''}`;
+  document.getElementById('modalCatTag').innerHTML = `<span class="cat-tag ${a.cat}">${a.cat}</span>${a.ev ? ' ' + evBadge(a.ev) : ''}${a.scope ? ' ' + scopeTag(a.scope) : ''}${a.isNew ? ' <span class="new-tag">NEW</span>' : ''}`;
   document.getElementById('modalTitleJa').textContent = a.titleJa;
   document.getElementById('modalTitleEn').textContent = a.titleEn || a.title || '';
   document.getElementById('modalMeta').innerHTML = `
