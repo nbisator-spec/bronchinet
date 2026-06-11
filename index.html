@@ -148,6 +148,14 @@
   .articles-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px; }
   .articles-count { font-size: 13px; color: var(--text-muted); }
   .articles-count strong { color: var(--text); }
+  .export-tools { display: flex; gap: 8px; }
+  .export-btn { font-size: 12px; font-weight: 600; padding: 6px 12px; border-radius: 8px; border: 1px solid var(--border); background: #fff; color: var(--primary); cursor: pointer; transition: all .15s; white-space: nowrap; }
+  .export-btn:hover { background: var(--primary-light); border-color: var(--primary); }
+  .export-btn.digest { background: var(--primary); color: #fff; border-color: var(--primary); }
+  .export-btn.digest:hover { background: var(--primary-dark); }
+  .bn-toast { position: fixed; bottom: 24px; left: 50%; transform: translateX(-50%) translateY(20px); background: #1e293b; color: #fff; font-size: 13px; font-weight: 600; padding: 11px 20px; border-radius: 10px; box-shadow: 0 6px 20px rgba(0,0,0,.25); opacity: 0; pointer-events: none; transition: all .25s; z-index: 9999; }
+  .bn-toast.show { opacity: 1; transform: translateX(-50%) translateY(0); }
+  @media (max-width: 640px) { .articles-header { flex-direction: column; align-items: flex-start; gap: 8px; } .export-btn { font-size: 11px; padding: 5px 9px; } }
   .article-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
   .article-card { background: var(--card-bg); border: 1px solid var(--border); border-radius: 10px; padding: 15px; cursor: pointer; transition: all 0.2s; position: relative; overflow: hidden; }
   .article-card:hover { box-shadow: 0 4px 16px rgba(0,0,0,0.1); transform: translateY(-2px); border-color: #93c5fd; }
@@ -423,6 +431,10 @@
       <!-- ARTICLES -->
       <div class="articles-header">
         <div class="articles-count">表示中：<strong id="filteredCount">0</strong>件 / 全<strong id="totalCount">0</strong>件</div>
+        <div class="export-tools">
+          <button class="export-btn digest" onclick="copyDigest()" title="現在の絞り込み結果をメルマガ用テキストとしてクリップボードにコピーします">📋 ダイジェストをコピー</button>
+          <button class="export-btn" onclick="exportCSV()" title="現在の絞り込み結果をCSV（Excel対応）でダウンロードします">⬇️ CSV出力</button>
+        </div>
       </div>
       <div class="article-grid" id="articleGrid"></div>
       <div class="pagination" id="pagination"></div>
@@ -4062,10 +4074,73 @@ function fmtAuthors(s, max) {
   if (arr.length <= max) return arr.join(', ');
   return arr.slice(0, max).join(', ') + ` … 他${arr.length - max}名（計${arr.length}名）`;
 }
-function filterArticles() {
+function bnToast(msg) {
+  let t = document.getElementById('bnToast');
+  if (!t) { t = document.createElement('div'); t.id = 'bnToast'; t.className = 'bn-toast'; document.body.appendChild(t); }
+  t.textContent = msg; t.classList.add('show');
+  clearTimeout(t._tm); t._tm = setTimeout(() => t.classList.remove('show'), 2400);
+}
+function csvCell(v) {
+  v = (v == null ? '' : String(v));
+  if (/[",\n\r]/.test(v)) v = '"' + v.replace(/"/g, '""') + '"';
+  return v;
+}
+function exportCSV() {
+  const rows = getFiltered();
+  if (!rows.length) { bnToast('対象が0件です'); return; }
+  const head = ['カテゴリ', 'エビデンス区分', 'タイトル(和)', 'タイトル(英)', '著者', '雑誌', 'IF', 'SJR', '発表', 'PMID', '要約', 'URL'];
+  const lines = [head.map(csvCell).join(',')];
+  rows.forEach(a => {
+    lines.push([a.cat, a.ev || '', a.titleJa || '', a.titleEn || a.title || '', a.authors || '', a.journal || '', a.if || '', a.sjr || '', a.date || '', a.pmid || '', a.summary || '', resolveUrl(a)].map(csvCell).join(','));
+  });
+  const csv = '﻿' + lines.join('\r\n');
+  const blob = new Blob([csv], { type: 'text/csv;charset=utf-8' });
+  const url = URL.createObjectURL(blob);
+  const d = new Date().toISOString().slice(0, 10);
+  const link = document.createElement('a');
+  link.href = url; link.download = `bronchiectasis_${d}_${rows.length}件.csv`;
+  document.body.appendChild(link); link.click(); link.remove();
+  setTimeout(() => URL.revokeObjectURL(url), 1000);
+  bnToast(`CSVを出力しました（${rows.length}件）`);
+}
+function buildDigest() {
+  const rows = getFiltered();
+  const d = new Date().toISOString().slice(0, 10);
+  let out = `# 気管支拡張症 文献ダイジェスト（${d}）\n対象: ${filterDesc()} ／ 全${rows.length}件\n`;
+  const groups = {};
+  rows.forEach(a => { (groups[a.cat] = groups[a.cat] || []).push(a); });
+  Object.keys(groups).forEach(cat => {
+    out += `\n\n## ${cat}（${groups[cat].length}件）\n`;
+    groups[cat].forEach((a, i) => {
+      const meta = [a.journal, a.if ? `IF ${a.if}${a.sjr ? '/' + a.sjr : ''}` : '', a.ev || '', a.date].filter(Boolean).join(' | ');
+      out += `\n${i + 1}. ${a.titleJa}\n   ${a.titleEn || a.title || ''}\n   ${meta}${a.pmid ? ` | PMID ${a.pmid}` : ''}\n`;
+      if (a.authors) out += `   著者: ${fmtAuthors(a.authors, 5)}\n`;
+      if (a.summary) out += `   ${a.summary}\n`;
+      out += `   🔗 ${resolveUrl(a)}\n`;
+    });
+  });
+  out += `\n---\nBronchiNet 気管支拡張症ポータルより自動生成（${d}）`;
+  return out;
+}
+function copyDigest() {
+  const n = getFiltered().length;
+  if (!n) { bnToast('対象が0件です'); return; }
+  const text = buildDigest();
+  const done = () => bnToast(`ダイジェストをコピーしました（${n}件）`);
+  if (navigator.clipboard && navigator.clipboard.writeText) {
+    navigator.clipboard.writeText(text).then(done, () => fallbackCopy(text, done));
+  } else { fallbackCopy(text, done); }
+}
+function fallbackCopy(text, done) {
+  const ta = document.createElement('textarea');
+  ta.value = text; ta.style.position = 'fixed'; ta.style.opacity = '0';
+  document.body.appendChild(ta); ta.select();
+  try { document.execCommand('copy'); done(); } catch (e) { bnToast('コピーに失敗しました'); }
+  ta.remove();
+}
+function getFiltered() {
   const query = document.getElementById('searchInput').value.toLowerCase();
   const sort = document.getElementById('sortSel').value;
-
   let filtered = ARTICLES.filter(a => {
     const matchCat = currentFilter === 'all' || a.cat === currentFilter;
     const matchEv = currentEv === 'all' || a.ev === currentEv;
@@ -4076,11 +4151,22 @@ function filterArticles() {
                    (a.authors && a.authors.toLowerCase().includes(query));
     return matchCat && matchEv && matchQ;
   });
-
   if (sort === 'newest') filtered.sort((a, b) => b.year - a.year || b.date.localeCompare(a.date));
   else if (sort === 'oldest') filtered.sort((a, b) => a.year - b.year || a.date.localeCompare(b.date));
   else filtered.sort((a, b) => a.cat.localeCompare(b.cat, 'ja'));
-
+  return filtered;
+}
+function filterDesc() {
+  const q = document.getElementById('searchInput').value.trim();
+  const parts = [];
+  parts.push(currentFilter === 'all' ? '全カテゴリ' : currentFilter);
+  if (currentEv !== 'all') parts.push('区分:' + currentEv);
+  if (q) parts.push('検索:「' + q + '」');
+  return parts.join(' / ');
+}
+function filterArticles() {
+  const sort = document.getElementById('sortSel').value;
+  let filtered = getFiltered();
   const showTrials = currentFilter === '臨床試験' && currentEv === 'all';
   const trialExtra = showTrials ? TRIALS_DATA.length : 0;
   document.getElementById('filteredCount').textContent = filtered.length + trialExtra;
