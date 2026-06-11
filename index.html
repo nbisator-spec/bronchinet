@@ -184,6 +184,11 @@
   .ev-chip:hover { border-color:var(--primary); }
   .ev-chip.active { background:var(--primary); color:#fff; border-color:var(--primary); }
   .card-authors { font-size: 11px; color: #475569; margin: 2px 0 4px; display: -webkit-box; -webkit-line-clamp: 1; -webkit-box-orient: vertical; overflow: hidden; }
+  .jp-note { font-size: 11.5px; line-height: 1.55; color: #7f1d1d; background: #fff5f5; border-left: 3px solid #be0000; border-radius: 4px; padding: 6px 9px; margin: 6px 0 2px; }
+  .jp-note .jp-flag { font-weight: 800; color: #be0000; margin-right: 4px; }
+  .jp-note-modal { font-size: 13px; line-height: 1.7; padding: 12px 14px; margin: 12px 0; }
+  .ev-chip.jp-toggle { border-color: #f3b4b4; color: #be0000; font-weight: 700; }
+  .ev-chip.jp-toggle.active { background: #be0000; color: #fff; border-color: #be0000; }
   .card-authors .au-ico { opacity: 0.6; }
   .sjr-badge { display:inline-block; font-size:9px; font-weight:800; padding:1px 5px; border-radius:4px; margin-left:6px; vertical-align:middle; letter-spacing:0.3px; }
   .sjr-Q1 { background:#dcfce7; color:#15803d; }
@@ -425,6 +430,7 @@
           <div class="ev-chip" data-ev="原著" onclick="setEvFilter('原著',this)">📄 原著</div>
           <div class="ev-chip" data-ev="症例報告" onclick="setEvFilter('症例報告',this)">📝 症例報告</div>
           <div class="ev-chip" data-ev="社説・論説" onclick="setEvFilter('社説・論説',this)">✍️ 社説・論説</div>
+          <div class="ev-chip jp-toggle" onclick="toggleJp(this)" title="日本の臨床的含意（MSL注釈）が付いた論文だけ表示">🇯🇵 日本の視点</div>
         </div>
       </div>
 
@@ -1647,6 +1653,7 @@ const ARTICLES = [
    pmid:"42259823",
    authors:"Mosgrove F; Kocks JW; Kompatsiari E; Timothy A; Hedberg T; Long MB; Aliberti S; Chalmers JD",
    ev:"原著",
+   jpView:"ERS2025は国際標準だが、日本には独立したBE診療ガイドラインがなくNTM多発・マクロライド伝統など国内文脈への適応が必要。ICSの限定的役割はNTMリスクの観点からも本邦で支持されやすい。",
    summary:"2025年ERS気管支拡張症ガイドラインをプライマリケア向けに要約した実装ガイドで、早期診断・遅診断削減、NTM検査・免疫グロブリン測定などの標準化検査、増悪管理の実践的手順を整理。吸入ステロイドの限定的役割と緑膿菌感染例への長期抗菌薬療法の適応基準も明確化されている。",
    url:"https://pubmed.ncbi.nlm.nih.gov/42259823/"},
   {id:294, cat:"精密医療・エンドタイプ", isNew:false,
@@ -2124,6 +2131,7 @@ const ARTICLES = [
    titleEn:"Amikacin liposome inhalation suspension in newly diagnosed Mycobacterium avium complex lung disease (ARISE): a 6-month double-blind, active comparator trial",
    journal:"Annals of the American Thoracic Society", sjr:"Q1", if:"5.4", date:"2026-04-01", year:2026,
    ev:"RCT",
+   jpView:"アミカシンリポソーム吸入（ARIKAYCE）は難治性MAC肺症に国内承認済み（2021年）。NTM多発の日本では本剤の位置づけが特に重要。",
    summary:"新規/再発非空洞性MAC肺疾患99例を対象にALIS追加vs対照を6ヶ月比較したRCT。ALIS群で6ヶ月後培養陰性化率80.6%（対照63.9%）、7ヶ月後78.8%（対照47.1%、p=0.001）と有意に改善。難治性MAC以外の初回治療へのALIS有効性を初めてRCTで示した。（PubMed PMID: 41915555）",
    url:"https://pubmed.ncbi.nlm.nih.gov/41915555/", authors:"Daley Charles L et al."},
   {id:234, cat:"治療・薬剤", isNew:false,
@@ -2516,6 +2524,7 @@ const ARTICLES = [
    titleEn:"Microscopic Polyangiitis After Pulmonary Nontuberculous Mycobacterial Disease: A Case Report and Literature Review",
    journal:"Respirology Case Reports", sjr:"Q3", date:"2026-05", year:2026,
    ev:"原著",
+   jpView:"NTM肺症後の顕微鏡的多発血管炎を扱う本邦症例。NTM多発国の日本で留意すべき病態連関を示す。",
    summary:"気管支拡張症を背景にNTM肺疾患を経過した80歳日本人女性がMPO-ANCA陽性MPA（顕微鏡的多発血管炎）を発症した症例。NTM-PD後のANCA関連血管炎という稀な合併症と、感染性増悪との鑑別の重要性を示した。（PubMed PMID: 42131077）",
    url:"https://pubmed.ncbi.nlm.nih.gov/42131077/", authors:"Takahashi Hidenori et al."},
   {id:179, cat:"マイクロバイオーム・感染", isNew:false,
@@ -2598,6 +2607,7 @@ const ARTICLES = [
    journal:"Drugs", sjr:"Q1", if:"14.4", date:"2025-12", year:2025,
    authors:"Keam SJ",
    ev:"総説",
+   jpView:"FDA初承認のレビュー。日本では未承認であり、今後はPMDA申請や国内開発の動向が焦点となる。",
    summary:"DPP-1阻害薬ブレンソカチブの初承認に関する薬剤プロファイル総説。ASPEN試験で非CF気管支拡張症患者における増悪率低下（25mg/日でRR 0.79）を示し、2024年に米国FDAで初承認された。（PubMed PMID: 41348269）",
    url:"https://doi.org/10.1007/s40265-025-02255-0"},
   {id:132, cat:"治療・薬剤", isNew:false,
@@ -2886,6 +2896,7 @@ const ARTICLES = [
    journal:"Respiratory Investigation", sjr:"Q2", if:"2.0", date:"2026-04", year:2026,
    authors:"Matsumoto T; Suga H; Kajiwara Y; Matoba T; Kaneko A; Fujiki T; Kusakabe Y; Nakayama E; Yamamoto N; Tashima M; Ito C; Aihara K",
    ev:"観察研究",
+   jpView:"国内のエリスロマイシン供給停止が増悪に与える影響を扱う本邦研究。マクロライド依存度の高い日本のBE/NTM診療における供給リスクを可視化。",
    summary:"大阪・済生会野江病院の後ろ向きコホート研究。供給不足によるエリスロマイシン中断後、非CF気管支拡張症患者の増悪率が有意に増加し（中断前0.58回/年 vs 中断後1.12回/年）、マクロライド継続療法の重要性を示した。（PubMed PMID: 42013504）",
    url:"https://doi.org/10.1016/j.resinv.2026.101431"},
   {id:170, cat:"日本発", isNew:false,
@@ -2894,6 +2905,7 @@ const ARTICLES = [
    journal:"Respiratory Investigation", sjr:"Q2", if:"2.0", date:"2026-04", year:2026,
    authors:"Takeda K; Takazono T; Mukae H",
    ev:"総説",
+   jpView:"日本はMAC肺症の有病率が世界的に高く、BE-NTMオーバーラップが主要表現型。NTM併存評価は国内BE診療の必須事項。",
    summary:"長崎大学病院からのNTM肺疾患の疫学・予後因子・治療方針に関するレビュー。気管支拡張症合併・菌種・空洞形成・BMIなどが予後に影響する因子として同定され、日本の実臨床データに基づく治療決定アルゴリズムを提示している。（PubMed PMID: 41996845）",
    url:"https://doi.org/10.1016/j.resinv.2026.101430"},
   {id:171, cat:"日本発", isNew:false,
@@ -2958,6 +2970,7 @@ const ARTICLES = [
    journal:"Int J Rheum Dis", sjr:"Q3", date:"2026-02", year:2026,
    authors:"Omura S; Kida T; Inoue H; Shimada Y; Nakagomi D; Abe Y; Takizawa N; Nomura A; Kukida Y; Kondo N; Takagi H; Endo K; Hirata S; Azuma N; Takeuchi T; Fukui S; Kamada K; Yanai R; Matsuo Y; Shimojima Y; Nishioka R; Okazaki R; Takata T; Moriyama M; Takatani A; Miyawaki Y; Shirai T; Dobashi H; Ito T; Matsumoto I; Takada T; Ito-Ihara T; Yajima N; Kawaguchi T; Seno T; Kohno M; Wada M; Kawahito Y",
    ev:"観察研究",
+   jpView:"日本のANCA関連血管炎コホート（J-CANVAS）。RA・膠原病合併BEは国内で多く、免疫抑制・生物学的製剤使用時の感染リスク評価に直結。",
    summary:"J-CANVAS（日本人ANCA関連血管炎コホート）データを用いてMPA・GPA患者における気管支拡張症合併と重症感染症リスクの関連を多施設観察研究で検討（京都府立医科大学）。気管支拡張症合併が免疫抑制治療中の重症感染症リスクの独立した予測因子である可能性を示した。（PubMed PMID: 41672947）",
    url:"https://doi.org/10.1111/1756-185x.70570"},
   {id:121, cat:"日本発", isNew:false,
@@ -2966,6 +2979,7 @@ const ARTICLES = [
    journal:"Respir Investig", sjr:"Q2", if:"2.0", date:"2026-01", year:2026,
    authors:"Morimoto K; Chalmers JD; Burgel PR; Daley CL; De Soyza A; Mauger D; Metersky ML; Zhang X; Li S; Goto Y; Teper A; Fernandez C; Hasegawa N",
    ev:"RCT",
+   jpView:"ASPEN試験の日本人サブ解析。国内の気管支拡張症は欧米よりNTM・後天性の比重が高く、日本人での有効性・安全性データはDPP-1阻害薬の国内導入を見据える上で重要。本剤は国内未承認（2025年時点）。",
    summary:"ASPENトライアルにおける日本人NCFB患者サブグループ解析（結核予防会複十字病院）。Brensocatib 10mg・25mgが日本人患者においても増悪率減少・肺機能低下抑制・患者報告症状改善において全体集団と同様の有効性と安全性を示すことが確認された。（PubMed PMID: 41519018）",
    url:"https://doi.org/10.1016/j.resinv.2025.101357"},
   {id:120, cat:"日本発", isNew:false,
@@ -2990,6 +3004,7 @@ const ARTICLES = [
    journal:"Respir Investig", sjr:"Q2", if:"2.0", date:"2025-07", year:2025,
    authors:"Kobayashi S; Yamada M; Ishida M; Ono M; Satoh H; Hanagama M; Yanai M",
    ev:"観察研究",
+   jpView:"日本人COPDにおけるBE合併を前向きに評価。国内のCOPD-BEオーバーラップ管理に資する本邦コホート。",
    summary:"日本人COPD患者における気管支拡張症の有病率・臨床特性・アウトカムを前向きコホートで検討した研究（石巻赤十字病院）。日本人COPDにおける気管支拡張症合併の実態を初めて前向きに明らかにし、COPD合併気管支拡張症への包括的アプローチの重要性を示した。（PubMed PMID: 40743857）",
    url:"https://doi.org/10.1016/j.resinv.2025.07.016"},
   {id:117, cat:"日本発", isNew:false,
@@ -2997,6 +3012,7 @@ const ARTICLES = [
    titleEn:"Epidemiology of bronchiectasis at a single center in Japan: a retrospective cohort study",
    journal:"BMC Pulm Med", sjr:"Q2", if:"2.8", date:"2024-10", year:2024,
    ev:"観察研究",
+   jpView:"本邦単施設の疫学研究。NTM・後天性主体という国内BE像を示す基礎データ。",
    summary:"国立病院機構刀根山医療センター（大阪）における気管支拡張症患者の臨床特性・NTM感染・治療アウトカムを後ろ向きコホートで検討。日本人気管支拡張症患者でのNTM感染の高頻度と予後への影響、長期マクロライド投与の効果を明らかにした。（PubMed PMID: 39448945）",
    url:"https://doi.org/10.1186/s12890-024-03337-7", authors:"Hashimoto Kazuki et al."},
   {id:116, cat:"日本発", isNew:false,
@@ -3005,6 +3021,7 @@ const ARTICLES = [
    journal:"Respir Investig", sjr:"Q2", if:"2.0", date:"2024-09", year:2024,
    authors:"Nakagawa N; Ito M; Asakura T; Horita N; Obase Y; Mukae H",
    ev:"メタ解析・SR",
+   jpView:"日本はびまん性汎細気管支炎（DPB）研究を通じマクロライド少量長期療法を確立した経緯があり、本邦の臨床に親和性が高いエビデンス。",
    summary:"NCFB患者における長期マクロライド療法の重症増悪予防効果・安全性（耐性菌出現・長期使用リスク）を系統的に評価したメタ解析（東京大学）。マクロライド療法の有効性と適正使用に関する重要なエビデンスを提供した。（PubMed PMID: 39326270）",
    url:"https://doi.org/10.1016/j.resinv.2024.09.004"},
   {id:115, cat:"日本発", isNew:false,
@@ -3043,6 +3060,7 @@ const ARTICLES = [
    titleEn:"Nationwide survey of refractory asthma with bronchiectasis by inflammatory subtypes",
    journal:"Respir Res", sjr:"Q1", if:"5.0", date:"2022-12", year:2022,
    ev:"原著",
+   jpView:"喘息合併BEの全国調査（本邦）。喘息-BEオーバーラップ（ACO含む）の国内実態と炎症サブタイプを提示。",
    summary:"日本全国81施設216例の難治性喘息合併気管支拡張症をType 2炎症サブタイプ（FeNO・好酸球）で分類した全国調査（京都大学主導）。Type 2低群で肺炎・感染性増悪・グラム陰性菌検出が最多であり、炎症型分類が管理戦略選択に重要であることを示した。（PubMed PMID: 36539765）",
    url:"https://doi.org/10.1186/s12931-022-02289-y", authors:"Nomura Natsuko et al."},
   {id:110, cat:"日本発", isNew:false,
@@ -3089,6 +3107,7 @@ const ARTICLES = [
    journal:"Rheumatol Int", sjr:"Q2", date:"2021-07", year:2021,
    authors:"Honne K; Bando M; Mieno MN; Iwamoto M; Minota S",
    ev:"原著",
+   jpView:"国内RA診療で、生物学的DMARD使用時の重症肺炎リスクとしてBEがILDと同等に重要であることを示す本邦データ。",
    summary:"RA患者424名でbDMARD治療前のCT評価を行い、気管支拡張症・ILD・正常群で重症肺炎の発生を比較した後ろ向きコホート研究（自治医科大学）。気管支拡張症群はILD群と同様に正常群より有意に重症肺炎リスクが高く、bDMARD使用RA患者での気管支拡張症評価の重要性が示された。（PubMed PMID: 34251498）",
    url:"https://doi.org/10.1007/s00296-021-04934-z"},
   // ── 2026-05-27 新規（PubMed再スキャン 23件）──
@@ -3502,6 +3521,7 @@ const ARTICLES = [
    journal:"New England Journal of Medicine", sjr:"Q1", if:"78.5", date:"2024-09", year:2024,
    authors:"Chalmers JD; Burgel PR; Daley CL; De Soyza A; Haworth CS; Mauger D; Loebinger MR; McShane PJ; Ringshausen FC; Blasi F; Shteinberg M; Mange K; Teper A; Fernandez C; Zambrano M; Fan C; Zhang X; Metersky ML",
    ev:"RCT",
+   jpView:"ブレンソカチブの主要第III相（ASPEN）。FDA承認（2025年8月）。国内は未承認だが日本人サブ解析が併存し、DPP-1阻害という新規クラスの国内展開が注目される。",
    summary:"1721例を対象とした気管支拡張症史上最大規模のRCT（ASPEN試験）。ブレンソカチブ10mg・25mgともにプラセボ比約20%の増悪率低下を達成（Rate ratio 0.79/0.81）。25mg群では肺機能低下抑制も示された。",
    url:"https://www.nejm.org/doi/abs/10.1056/NEJMoa2411664"},
 
@@ -3680,6 +3700,7 @@ const ARTICLES = [
    journal:"Chest", sjr:"Q1", if:"8.6", date:"2025-07", year:2025,
    ev:"原著",
    authors:"Afrose D; Rønn CP; Eklöf J; Vognsen AK; Tønnesen LL; Bertelsen BB; Boel JB; Andersen CØ; Dessau RBC; Pinholt M; Jensen JU; Sivapalan P",
+   jpView:"ICS使用とインフルエンザ菌分離の関連。NTM多発国の日本ではICSによる気道感染リスクの観点からも適応判断に資する。",
    summary:"長期ICS使用者ではインフルエンザ菌の分離頻度が有意に高く（OR 1.48）、増悪リスクも増加することを確認。気管支拡張症へのICS使用は慎重に検討すべきであることを示す実臨床データ。",
    url:"https://pubmed.ncbi.nlm.nih.gov/"},
 
@@ -3689,6 +3710,7 @@ const ARTICLES = [
    journal:"ERJ", sjr:"Q1", if:"21.2", date:"2025-09", year:2025,
    ev:"原著",
    authors:"Lee C; Lee GY; Shin J; Lee JY; Lee JH",
+   jpView:"ICSの安全性シグナル（肺癌リスク）。NTM・感染リスクが懸念される日本のBE診療では、ICS適応の慎重な評価を後押しする知見。",
    summary:"気管支拡張症患者における長期ICS使用と肺がん発症リスクの関連を大規模コホートで検討。ICS使用群で有意なリスク上昇は確認されなかったが、感染症合併頻度との交互作用が示唆された。",
    url:"https://pubmed.ncbi.nlm.nih.gov/"},
 
@@ -3708,6 +3730,7 @@ const ARTICLES = [
    journal:"Respirology", sjr:"Q1", if:"6.3", date:"2025-12", year:2025,
    authors:"Asakura T; Namkoong H",
    ev:"原著",
+   jpView:"NTM多発国（＝日本）でのエリスロマイシン供給不安に直結する実務課題。代替マクロライドや投与戦略の検討が国内で現実的な論点。",
    summary:"慶應義塾大学の朝倉・南工グループが報告。日本固有のNTM高発生率とエリスロマイシン供給不足の重複により、長期マクロライド療法選択が困難な状況を詳述。クラリスロマイシンのみ保険適用・アジスロマイシンは適応外であり、グローバルな抗菌薬サプライチェーン脆弱性も問題提起。",
    url:"https://onlinelibrary.wiley.com/doi/10.1002/resp.70189"},
 
@@ -3805,6 +3828,7 @@ const ARTICLES = [
    titleEn:"European Respiratory Society Clinical Practice Guideline for the Management of Adult Bronchiectasis",
    journal:"ERJ", sjr:"Q1", if:"21.2", date:"2025-12", year:2025,
    ev:"ガイドライン",
+   jpView:"ERS2025診療ガイドライン本体。国内未整備のBEガイドラインを補完する国際標準として参照価値が高い一方、NTM多発の日本では検査・治療の重み付けに調整が要る。",
    summary:"2017年版以来の大幅改訂。気道クリアランス技術の強い推奨、呼吸リハの強力な推奨を継続しつつ、DPP-1阻害薬・吸入抗菌薬の位置付けを最新RCTエビデンスに基づき更新。治療可能特性（treatable traits）の概念を前面に打ち出した包括的改訂ガイドライン。",
    url:"https://pubmed.ncbi.nlm.nih.gov/41016738/", authors:"Chalmers James D et al."},
 
@@ -3928,6 +3952,7 @@ const ARTICLES = [
    journal:"Lancet Respir Med", sjr:"Q1", if:"32.8", date:"2024-06", year:2024,
    authors:"Chalmers JD; Gupta A; Chotirmall SH; Armstrong A; Eickholz P; Hasegawa N; McShane PJ; O'Donnell AE; Shteinberg M; Watz H; Eleftheraki A; Diefenbach C; Sauter W",
    ev:"原著",
+   jpView:"verducatibの第II相用量設定（AIRLEAF）。AIRTIVITY（第III相）へ接続する国際試験で、日本も開発に関与。",
    summary:"BI 1291583（verducatib）のPhase II（AIRLEAF試験）の結果報告。複数用量設定で好中球セリンプロテアーゼ活性の用量依存的抑制を確認。最適用量を特定しPhase IIIのAIRTIVITY試験への移行を支持するデータ。",
    url:"https://pmc.ncbi.nlm.nih.gov/articles/PMC10351677/"},
 
@@ -3936,6 +3961,7 @@ const ARTICLES = [
    titleEn:"Phase III AIRTIVITY™ study design – verducatib (BI 1291583) in people with bronchiectasis",
    journal:"ERJ Open Research", sjr:"Q1", if:"4.0", date:"2024-10", year:2024,
    ev:"RCT",
+   jpView:"BI社verducatib（BI 1291583）の国際第III相（AIRTIVITY）。jRCTに登録され国内施設も参加。第2のDPP-1阻害薬として国内開発が進行中。",
    summary:"BI社のverducatib（第2のDPP-1阻害薬）のPhase III試験（AIRTIVITY）のプロトコール論文。主要エンドポイントは年間増悪率。ASPENと類似したデザインだが用量・対象集団の選択にBI社独自の戦略が反映されている。",
    url:"https://pubmed.ncbi.nlm.nih.gov/"},
 
@@ -3986,6 +4012,7 @@ const ARTICLES = [
 // ============================================================
 let currentFilter = 'all';
 let currentEv = 'all';
+let jpOnly = false;
 let currentPage = 1;
 const PER_PAGE = 12;
 
@@ -4063,8 +4090,14 @@ function evBadge(ev) {
 function setEvFilter(ev, el) {
   currentEv = ev;
   currentPage = 1;
-  document.querySelectorAll('.ev-chip').forEach(c => c.classList.remove('active'));
+  document.querySelectorAll('.ev-chip:not(.jp-toggle)').forEach(c => c.classList.remove('active'));
   el.classList.add('active');
+  filterArticles();
+}
+function toggleJp(el) {
+  jpOnly = !jpOnly;
+  currentPage = 1;
+  el.classList.toggle('active', jpOnly);
   filterArticles();
 }
 
@@ -4088,10 +4121,10 @@ function csvCell(v) {
 function exportCSV() {
   const rows = getFiltered();
   if (!rows.length) { bnToast('対象が0件です'); return; }
-  const head = ['カテゴリ', 'エビデンス区分', 'タイトル(和)', 'タイトル(英)', '著者', '雑誌', 'IF', 'SJR', '発表', 'PMID', '要約', 'URL'];
+  const head = ['カテゴリ', 'エビデンス区分', 'タイトル(和)', 'タイトル(英)', '著者', '雑誌', 'IF', 'SJR', '発表', 'PMID', '要約', '日本の視点', 'URL'];
   const lines = [head.map(csvCell).join(',')];
   rows.forEach(a => {
-    lines.push([a.cat, a.ev || '', a.titleJa || '', a.titleEn || a.title || '', a.authors || '', a.journal || '', a.if || '', a.sjr || '', a.date || '', a.pmid || '', a.summary || '', resolveUrl(a)].map(csvCell).join(','));
+    lines.push([a.cat, a.ev || '', a.titleJa || '', a.titleEn || a.title || '', a.authors || '', a.journal || '', a.if || '', a.sjr || '', a.date || '', a.pmid || '', a.summary || '', a.jpView || '', resolveUrl(a)].map(csvCell).join(','));
   });
   const csv = '﻿' + lines.join('\r\n');
   const blob = new Blob([csv], { type: 'text/csv;charset=utf-8' });
@@ -4116,6 +4149,7 @@ function buildDigest() {
       out += `\n${i + 1}. ${a.titleJa}\n   ${a.titleEn || a.title || ''}\n   ${meta}${a.pmid ? ` | PMID ${a.pmid}` : ''}\n`;
       if (a.authors) out += `   著者: ${fmtAuthors(a.authors, 5)}\n`;
       if (a.summary) out += `   ${a.summary}\n`;
+      if (a.jpView) out += `   🇯🇵 日本の視点: ${a.jpView}\n`;
       out += `   🔗 ${resolveUrl(a)}\n`;
     });
   });
@@ -4144,12 +4178,13 @@ function getFiltered() {
   let filtered = ARTICLES.filter(a => {
     const matchCat = currentFilter === 'all' || a.cat === currentFilter;
     const matchEv = currentEv === 'all' || a.ev === currentEv;
+    const matchJp = !jpOnly || !!a.jpView;
     const matchQ = !query || a.titleJa.toLowerCase().includes(query) ||
                    (a.titleEn || a.title || '').toLowerCase().includes(query) ||
                    a.journal.toLowerCase().includes(query) ||
                    (a.summary && a.summary.toLowerCase().includes(query)) ||
                    (a.authors && a.authors.toLowerCase().includes(query));
-    return matchCat && matchEv && matchQ;
+    return matchCat && matchEv && matchJp && matchQ;
   });
   if (sort === 'newest') filtered.sort((a, b) => b.year - a.year || b.date.localeCompare(a.date));
   else if (sort === 'oldest') filtered.sort((a, b) => a.year - b.year || a.date.localeCompare(b.date));
@@ -4161,6 +4196,7 @@ function filterDesc() {
   const parts = [];
   parts.push(currentFilter === 'all' ? '全カテゴリ' : currentFilter);
   if (currentEv !== 'all') parts.push('区分:' + currentEv);
+  if (jpOnly) parts.push('🇯🇵日本の視点あり');
   if (q) parts.push('検索:「' + q + '」');
   return parts.join(' / ');
 }
@@ -4219,6 +4255,7 @@ function renderGrid(articles, showTrials = false) {
       <div class="card-title-en">${a.titleEn || a.title || ''}</div>
       ${a.authors ? `<div class="card-authors" title="${a.authors.replace(/"/g,'&quot;')}"><span class="au-ico">👥</span> ${fmtAuthors(a.authors)}</div>` : ''}
       <div class="card-summary">${a.summary}</div>
+      ${a.jpView ? `<div class="jp-note"><span class="jp-flag">🇯🇵 日本の視点</span> ${a.jpView}</div>` : ''}
       <div class="card-footer">
         <div class="card-journal">📰 ${a.journal}${a.sjr ? `<span class="sjr-badge sjr-${a.sjr}">${a.sjr}</span>` : ''}${a.if ? `<span class="if-badge">IF ${a.if}</span>` : ''}</div>
         <div class="card-date">${a.date}</div>
@@ -4272,6 +4309,10 @@ function openModal(id) {
     ${a.authors ? `<div class="modal-meta-item" style="flex-basis:100%"><strong style="font-weight:600">${fmtAuthors(a.authors, 10)}</strong>著者</div>` : ''}
   `;
   document.getElementById('modalSummary').textContent = a.summary;
+  let mj = document.getElementById('modalJp');
+  if (!mj) { mj = document.createElement('div'); mj.id = 'modalJp'; mj.className = 'jp-note jp-note-modal'; document.getElementById('modalSummary').after(mj); }
+  if (a.jpView) { mj.innerHTML = `<span class="jp-flag">🇯🇵 日本の視点（MSL注釈）</span> ${a.jpView}`; mj.style.display = 'block'; }
+  else { mj.style.display = 'none'; }
   const link = document.getElementById('modalLink');
   const resolvedUrl = resolveUrl(a);
   link.href = resolvedUrl;
