@@ -338,6 +338,7 @@
     <a onclick="showSection('trials',this)">🧪 臨床試験</a>
     <a onclick="showSection('guidelines',this)">📋 ガイドライン</a>
     <a onclick="showSection('reports',this)">📝 デイリーレポート</a>
+    <a onclick="showSection('trends',this)">📊 トレンド</a>
   </nav>
 </header>
 
@@ -352,9 +353,9 @@
     <div class="dashboard-header">
       <div class="dashboard-title">
         🔥 本日のハイライト
-        <span class="dashboard-badge">NEW 0件</span>
+        <span class="dashboard-badge">NEW 8件</span>
       </div>
-      <div class="dashboard-date">最終更新：2026-06-11 08:04 自動生成</div>
+      <div class="dashboard-date">最終更新：2026-06-12 07:04 自動生成</div>
     </div>
     <div class="dashboard-grid" id="dashboardGrid"></div>
   </div>
@@ -764,6 +765,39 @@
   <div class="reports-page-header">
     <h2>📝 デイリーレポート アーカイブ</h2>
     <p>毎朝8時に自動生成される文献サマリーの履歴。既読除外機能により、常に新規情報のみを収録しています。</p>
+  </div>
+
+  <!-- Report 2026-06-12 07:04 -->
+  <div class="report-card">
+    <div class="report-card-header">
+      <div>
+        <div class="report-card-date">📅 2026年6月12日（07:04 自動生成）</div>
+        <div style="font-size:12px;color:var(--text-muted);margin-top:3px;">除外済み：約340論文 / 87試験</div>
+      </div>
+      <span class="report-card-count">新規 8件・試験新規なし</span>
+    </div>
+    <ul class="report-highlight-list">
+      <li>
+        <span class="report-num">1</span>
+        <span class="report-cat-inline" style="background:#dcfce7;color:#166534">治療・薬剤</span>
+        <span>icenticaftor（CFTRポテンシエーター）の非CF気管支拡張症Phase 2 RCT（AJRCCM, 2026-06）: brensocatib・verducatibとは異なる作用機序の新規治療戦略。Chalmers JD・Guan WJらによる国際多施設試験。※抄録非公開。<a href="https://pubmed.ncbi.nlm.nih.gov/41738200/" target="_blank" style="color:var(--primary)">PMID:41738200</a></span>
+      </li>
+      <li>
+        <span class="report-num">2</span>
+        <span class="report-cat-inline" style="background:#fef9c3;color:#854d0e">日本発</span>
+        <span>M. brisbanense肺疾患の日本初症例（Intern Med, 2026-06）: 気管支拡張症既往73歳女性。大阪大学から報告。全ゲノムシーケンスでerm遺伝子陰性確認後にマクロライド系多剤療法を開始し改善。<a href="https://pubmed.ncbi.nlm.nih.gov/42270391/" target="_blank" style="color:var(--primary)">PMID:42270391</a></span>
+      </li>
+      <li>
+        <span class="report-num">3</span>
+        <span class="report-cat-inline" style="background:#fee2e2;color:#b91c1c">増悪・病態</span>
+        <span>重篤神経疾患小児の気管支拡張合併（Pediatr Pulmonol, 2026-06）: 34名のCT解析で最大64%に気管支拡張を確認。嚥下障害・運動障害による3表現型を同定。隣接: 他疾患。<a href="https://pubmed.ncbi.nlm.nih.gov/42272182/" target="_blank" style="color:var(--primary)">PMID:42272182</a></span>
+      </li>
+      <li>
+        <span class="report-num">4-8</span>
+        <span class="report-cat-inline" style="background:#ede9fe;color:#5b21b6">精密医療</span>
+        <span>PCD関連4件（Eur Respir J・Cells・Intern Med J・他）、CF関連2件（Mucosal Immunol・Front Pediatr）。隣接疾患カテゴリ。</span>
+      </li>
+    </ul>
   </div>
 
   <!-- Report 2026-06-11 08:04 -->
@@ -1566,6 +1600,18 @@
 </div>
 </div>
 
+<!-- TRENDS DASHBOARD -->
+<div class="section" id="section-trends">
+  <div class="trends-page">
+    <div class="trends-page-header">
+      <h2>📊 トレンド可視化ダッシュボード</h2>
+      <p>収録文献のメタデータから、研究動向・エビデンス構成・薬剤パイプライン・主要研究者を可視化します。</p>
+    </div>
+    <div class="trends-grid" id="trendsGrid"></div>
+    <div class="trends-note">※ 本ダッシュボードは収録済み文献の集計であり、領域全体の網羅的統計ではありません。月別件数は各文献の発表年月に基づきます。</div>
+  </div>
+</div>
+
 <!-- MODAL -->
 <div class="modal-overlay" id="modalOverlay" onclick="closeModal(event)">
   <div class="modal" id="modalContent">
@@ -1594,6 +1640,73 @@
 // DATA
 // ============================================================
 const ARTICLES = [
+  // ── 2026-06-12 新規 ──
+  {id:302, cat:"治療・薬剤", isNew:true, ev:"臨床試験",
+   titleEn:"The CFTR potentiator icenticaftor for treatment of bronchiectasis: an international phase 2, double-blind, randomized placebo-controlled trial.",
+   titleJa:"気管支拡張症治療のためのCFTRポテンシエーターicenticaftor：国際Phase 2二重盲検無作為化プラセボ対照試験",
+   journal:"Am J Respir Crit Care Med", sjr:"Q1", if:"19.4", date:"2026-06",
+   pmid:"41738200",
+   authors:"Guan WJ; Haworth CS; Tiddens HAWM; Loebinger MR; Hill AT; Sibila O; Ringshausen FC; Stuart BD; Wang Y; Elborn JS; Zhong NS; Chalmers JD",
+   jpView:"icenticaftor（CFTRポテンシエーター、ノバルティス社）はCFTR機能を増強する新アプローチ；brensocatib・verducatibとは作用機序が異なる。国内未承認（2026年時点）",
+   summary:"CFTRポテンシエーターicenticaftor（旧QBW251）の非CF気管支拡張症に対する国際Phase 2二重盲検プラセボ対照試験の結果をAJRCCMが報告した。※抄録非公開のため、要約はタイトルに基づく",
+   url:"https://doi.org/10.1093/ajrccm/aamag032"},
+  {id:303, cat:"日本発", isNew:true, ev:"症例報告",
+   titleEn:"Mycobacterium brisbanense Pulmonary Disease Treated with a Macrolide-Based Multidrug Regimen: A Case Report.",
+   titleJa:"マクロライド系多剤併用療法で治療したMycobacterium brisbanense肺疾患：症例報告",
+   journal:"Intern Med", sjr:"Q3", if:"1.5", date:"2026-06",
+   pmid:"42270391",
+   authors:"Nakaya Y; Hashimoto K; Fukushima K; Fatimah M; Matsumoto Y; Funauchi A; Tsukaguchi A; Yamauchi K; Miyazaki A; Iwahashi Y; Tone M; Naito M; Shiroyama T; Hirata H; Takeda Y; Nakamura S; Kumanogoh A",
+   jpView:"大阪大学グループによる日本初のM. brisbanense気管支拡張症合併症例報告。全ゲノムシーケンスによるerm遺伝子確認がマクロライド選択の根拠であり、NTM診療における薬剤感受性評価の多様性を示す。",
+   summary:"気管支拡張症既往の73歳女性にM. brisbanense肺疾患が発症した日本初の症例を大阪大学が報告。全ゲノムシーケンスでerm遺伝子陰性・クラリスロマイシン低MICを確認しマクロライド系多剤併用療法を開始、臨床的・画像的改善を達成した。",
+   url:"https://doi.org/10.2169/internalmedicine.7351-26"},
+  {id:304, cat:"増悪・病態", isNew:true, ev:"原著", scope:"他疾患",
+   titleEn:"Structural Lung Disease in Children and Adolescents With Severe Neurological Disorders.",
+   titleJa:"重篤な神経疾患を有する小児・青年における肺構造疾患",
+   journal:"Pediatr Pulmonol", sjr:"Q2", if:"3.2", date:"2026-06",
+   pmid:"42272182",
+   authors:"Bernard DAF; Dahl C; Salhöfer L; Pauly A; Steindor M; Olivier M; Schara-Schmidt U; Welsner M; Schweiger B; Zensen S; Drews MA; Haubold J; Forsting M; Umutlu L; Opitz M; Stehling F",
+   summary:"重篤な神経障害を持つ34名の小児のCT解析で気管支拡張（最大64%）・気管支壁肥厚（62%）などの構造異常が高頻度。嚥下障害・運動障害との関連で3表現型が同定され、CT所見の91%で治療方針が変更された。",
+   url:"https://doi.org/10.1002/ppul.71698"},
+  {id:305, cat:"精密医療・エンドタイプ", isNew:true, ev:"原著", scope:"PCD",
+   titleEn:"Tidal breathing nasal nitric oxide measurement as a test for primary ciliary dyskinesia in young children.",
+   titleJa:"幼児における原発性線毛機能不全の検査としての安静時呼吸鼻腔一酸化窒素測定",
+   journal:"Eur Respir J", sjr:"Q1", if:"21.2", date:"2026-06",
+   pmid:"41611251",
+   authors:"Leigh MW; Shapiro AJ; Chawla KK; Hazucha MJ; Brown DE; Lin FC; Jiang L; Carson JL; Davis SD; Dell SD; Sagel SD; Rosenfeld M; Milla C; Sullivan KM; Zariwala MA; Ferkol TW; Knowles MR",
+   summary:"6歳未満幼児での安静時呼吸nNO計測に年齢別カットオフ値（2ヶ月=13.9〜5歳=47.7 nL/min）を設定し、PCD同定感度98%・特異度高を8施設107名で検証。velum closure法が困難な幼児への有効な代替検査として確立した。",
+   url:"https://doi.org/10.1183/13993003.01540-2025"},
+  {id:306, cat:"精密医療・エンドタイプ", isNew:true, ev:"原著", scope:"CF",
+   titleEn:"Single-cell profiling of BAL in preschool cystic fibrosis reveals macrophage dysregulation and ivacaftor-modified inflammatory programs in the early life lung.",
+   titleJa:"就学前CF児のBALシングルセルプロファイリング：早期肺のマクロファージ機能不全とivacaftor修飾炎症プログラム",
+   journal:"Mucosal Immunol", sjr:"Q1", if:"7.0", date:"2026-03",
+   pmid:"41921915",
+   authors:"Maksimovic J; Shanthikumar S; Howitt G; Dixit G; Hickey PF; Anttila C; Brown DV; Gubbels L; Senabouth A; Amann-Zalcenstein D; Powell JE; Ranganathan SC; Oshlack A; Neeland MR",
+   summary:"45例のBALから19万超の細胞を含む最大規模の小児下気道アトラスを構築し、就学前CF児マクロファージのTNF・IFN・コレステロール恒常性経路の異常を同定。ivacaftorが一部機能障害を回復したがlumacaftor/ivacaftorでは転写変化は検出されなかった。",
+   url:"https://doi.org/10.1016/j.mucimm.2026.03.012"},
+  {id:307, cat:"マイクロバイオーム・感染", isNew:true, ev:"症例報告", scope:"CF",
+   titleEn:"Infection in a young man with cystic fibrosis: a case report and literature review.",
+   titleJa:"嚢胞性線維症の若年男性における感染症：症例報告と文献レビュー",
+   journal:"Front Pediatr", sjr:"Q2", if:"2.6", date:"2026-05",
+   pmid:"42272701",
+   authors:"Luo L; Guo Z; Chen W; Zheng Y; Chen C; Li Q; Wang N; Ji Y; Hua J",
+   summary:"中国人CF患者（21歳男性）にBAL mNGSでM. abscessus等のNTMを同定した症例。リネゾリド・モキシフロキサシン・アジスロマイシン・ミノサイクリン4剤で臨床安定を達成したが、CFTRモジュレーターは経済的制約で延期された。",
+   url:"https://doi.org/10.3389/fped.2026.1737211"},
+  {id:308, cat:"精密医療・エンドタイプ", isNew:true, ev:"原著", scope:"PCD",
+   titleEn:"Diagnosing primary ciliary dyskinesia in Australian adults: 10 years of testing.",
+   titleJa:"オーストラリア成人の原発性線毛機能不全診断：10年間の検査実績",
+   journal:"Intern Med J", sjr:"Q3", if:"2.6", date:"2026-06",
+   pmid:"42268986",
+   authors:"Robinson PJ",
+   summary:"メルボルン王立小児病院での10年間で成人91名がPCD診断検査を受け28名（31%）がPCDと診断。紹介理由の最多は気管支拡張症であり、成人の慢性気道疾患においてPCDを念頭に置いた専門検査の重要性を強調する。",
+   url:"https://doi.org/10.1111/imj.70487"},
+  {id:309, cat:"精密医療・エンドタイプ", isNew:true, ev:"原著", scope:"PCD",
+   titleEn:"Functional Characterization of a Novel Homozygous Single-Nucleotide Intronic Deletion in a Consanguineous Portuguese Family with Primary Ciliary Dyskinesia.",
+   titleJa:"PCD患者ポルトガル近縁家系における新規DNAH5イントロン1塩基欠失の機能解析",
+   journal:"Cells", sjr:"Q2", if:"5.1", date:"2026-06",
+   pmid:"42274615",
+   authors:"Hilário C; Raimundo S; Dias C; Saramago J; Oliveira T; Pereira R; Quental S; Freixo JP; Gales L; Oliveira J; Sá R; Sousa M",
+   summary:"ポルトガル近親婚家系のDNAH5新規ホモ接合性イントロン欠失（c.13723+4del）をHSVM・TEM・蛍光免疫染色・mRNA解析で統合的に解析し、エクソン78スキッピングによるODA欠失を確認して病原性変異と認定した。",
+   url:"https://doi.org/10.3390/cells15111022"},
   // ── 2026-06-11 新規 ──
   {id:301, cat:"増悪・病態", isNew:false,
    titleEn:"Mounier Kuhn Syndrome - A Case Report.",
