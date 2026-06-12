@@ -276,6 +276,48 @@
     .dashboard-grid { grid-template-columns: 1fr; }
     .stats-bar { grid-template-columns: repeat(2, 1fr); }
     .sidebar { display: none; }
+    .trials-grid { grid-template-columns: 1fr; }
+    .trial-group-grid { grid-template-columns: 1fr; }
+  }
+
+  /* ── スマートフォン最適化 ── */
+  @media (max-width: 600px) {
+    .container { padding: 0 12px; }
+    /* ヘッダー */
+    .header-top { padding: 9px 14px; }
+    .logo-icon { width: 30px; height: 30px; }
+    .logo-text { font-size: 18px; }
+    .logo-sub { font-size: 10px; white-space: nowrap; }
+    .header-date { font-size: 10px; padding: 3px 7px; white-space: nowrap; }
+    .header-meta { gap: 8px; }
+    nav { padding: 0 10px; gap: 0; }
+    nav a { padding: 9px 11px; font-size: 12px; }
+    /* ダッシュボード */
+    .dashboard { padding: 16px; }
+    .dashboard-header { flex-direction: column; align-items: flex-start; gap: 6px; }
+    .dashboard-title { font-size: 15px; flex-wrap: wrap; }
+    .dashboard-date { font-size: 11px; }
+    /* 統計: スマホは2列維持で十分 */
+    .stat-num { font-size: 20px; }
+    /* カード内の長い英語タイトル・ID・URLの折返し */
+    .card-title-en, .card-title-ja, .trial-card-title, .trial-card-sub,
+    .modal-title-en, .modal-title-ja, .card-authors { overflow-wrap: anywhere; word-break: break-word; }
+    /* モーダル余白を圧縮 */
+    .modal-overlay { padding: 10px; }
+    .modal-header { padding: 16px 16px 12px; }
+    .modal-body { padding: 16px; }
+    .modal-title-ja { font-size: 16px; }
+    .modal-meta { gap: 12px; padding: 10px; }
+    /* フィルタ・検索 */
+    .filter-bar { padding: 12px; }
+    .filter-bar-top { gap: 8px; }
+    .chip { padding: 5px 11px; font-size: 11px; }
+    /* 試験カード余白 */
+    .trial-card { padding: 14px; }
+    .trials-page-header, .guide-page-header, .reports-page-header { padding: 18px 16px; }
+    /* 試験グループ見出し: サブ見出しを折返し可にして横はみ出し防止 */
+    .trial-group-header { flex-wrap: wrap; gap: 6px 8px; }
+    .trial-group-sub { white-space: normal; margin-left: 0; flex-basis: 100%; opacity: 0.9; }
   }
 </style>
 </head>
