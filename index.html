@@ -4428,7 +4428,7 @@ function renderTrialCards() {
       <div class="card-title-en">${t.drug} ｜ スポンサー：${t.sponsor}</div>
       <div class="card-summary">${t.desc}</div>
       <div class="card-footer">
-        <div class="card-journal">🔗 ClinicalTrials.gov</div>
+        <div class="card-journal">🔗 ${t.nct.startsWith('jRCT') ? 'JRCT' : /^\d{4}-\d{6}/.test(t.nct) ? 'CTIS（EU）' : 'ClinicalTrials.gov'}</div>
         <div class="card-date" style="font-family:monospace;color:var(--primary)">${t.nct} ↗</div>
       </div>
     </div>
@@ -4661,7 +4661,7 @@ function trialCard(t) {
         <span class="trial-badge nct">${t.nct}</span>
       </div>
       <div class="trial-card-desc">${t.desc}</div>
-      <a class="trial-card-link" href="${t.url}" target="_blank" rel="noopener">🔗 ${t.nct.startsWith('jRCT') ? 'JRCT（日本）で詳細を見る' : 'ClinicalTrials.gov で詳細を見る'} ↗</a>
+      <a class="trial-card-link" href="${t.url}" target="_blank" rel="noopener">🔗 ${t.nct.startsWith('jRCT') ? 'JRCT（日本）で詳細を見る' : /^\d{4}-\d{6}/.test(t.nct) ? 'CTIS（EU）で詳細を見る' : 'ClinicalTrials.gov で詳細を見る'} ↗</a>
     </div>`;
 }
 
@@ -4785,6 +4785,37 @@ const TRIAL_GROUPS = [
     ]
   },
 
+
+  // ⑧ EU試験（CTIS登録）
+  { name: 'EU試験（CTIS登録）', icon: '🇪🇺', color: '#0f3872',
+    sub: 'EU Clinical Trials Information System（欧州公式登録）',
+    trials: [
+      { name: "AIRTIVITY EU（Verducatib Phase III）", drug: "Verducatib / BI 1291583（Boehringer Ingelheim）", sponsor: "Boehringer Ingelheim International GmbH", phase: "Phase III", status: "EU登録", nct: "2024-518589-29-00", color: "#1d4ed8",
+        desc: "DPP-1（カテプシンC）阻害薬VerducatibのEU第III相（AIRTIVITY）。 実施国：Poland・Romania・Belgium・Finland・Germany・Croatia。開始：21/08/2025。スポンサー：Boehringer Ingelheim International GmbH。（CTIS 2024-518589-29-00）", url: "https://euclinicaltrials.eu/ctis-public/view/2024-518589-29-00" },
+      { name: "Verducatib 長期安全性ロールオーバー（EU）", drug: "Verducatib / BI 1291583（Boehringer Ingelheim）", sponsor: "Boehringer Ingelheim International GmbH", phase: "Phase II", status: "EU登録", nct: "2023-503290-38-00", color: "#3b82f6",
+        desc: "Verducatib先行試験参加者対象の長期安全性・有効性ロールオーバー試験。 実施国：Netherlands・Hungary・Portugal・Czechia・Italy・France。開始：05/09/2023。スポンサー：Boehringer Ingelheim International GmbH。（CTIS 2023-503290-38-00）", url: "https://euclinicaltrials.eu/ctis-public/view/2023-503290-38-00" },
+      { name: "Verducatib Phase II（EU・Airleaf）", drug: "Verducatib / BI 1291583（Boehringer Ingelheim）", sponsor: "Boehringer Ingelheim International GmbH", phase: "Phase II", status: "EU登録", nct: "2022-502835-21-00", color: "#3b82f6",
+        desc: "非CF気管支拡張症を対象としたVerducatibの第II相（Airleaf）EU登録。 実施国：Belgium・Spain・France・Italy・Germany・Netherlands。開始：23/02/2024。スポンサー：Boehringer Ingelheim International GmbH。（CTIS 2022-502835-21-00）", url: "https://euclinicaltrials.eu/ctis-public/view/2022-502835-21-00" },
+      { name: "GSK3862995B Phase II（EU）", drug: "GSK3862995B（GSK）", sponsor: "GSK PLC", phase: "Phase II", status: "EU登録", nct: "2025-522892-27-00", color: "#ea580c",
+        desc: "気管支拡張症を対象としたGSK3862995Bの第II相プラセボ対照試験。 実施国：Denmark・France・Spain・Italy・Germany・Poland。開始：21/03/2026。スポンサー：GSK PLC。（CTIS 2025-522892-27-00）", url: "https://euclinicaltrials.eu/ctis-public/view/2025-522892-27-00" },
+      { name: "Sanofi 抗炎症 PoC（EU）", drug: "Itepekimab/SAR系（Sanofi）", sponsor: "Sanofi-Aventis Recherche & Developpement", phase: "Phase II", status: "EU登録", nct: "2023-508663-70-00", color: "#ea580c",
+        desc: "気管支拡張症を対象としたSanofiの概念実証（PoC）プラセボ対照試験。 実施国：Italy・Czechia・Spain・Denmark・Netherlands・France。開始：18/06/2024。スポンサー：Sanofi-Aventis Recherche & Developpement。（CTIS 2023-508663-70-00）", url: "https://euclinicaltrials.eu/ctis-public/view/2023-508663-70-00" },
+      { name: "CSL787 Phase IIb（EU）", drug: "CSL787（CSL Behring）", sponsor: "CSL Behring LLC", phase: "Phase II", status: "EU登録", nct: "2024-518821-13-00", color: "#7e22ce",
+        desc: "吸入IgG気道局所免疫療法CSL787の第IIb相用量設定試験。 実施国：Spain・Belgium・Germany・Greece・Denmark・Netherlands。開始：—。スポンサー：CSL Behring LLC。（CTIS 2024-518821-13-00）", url: "https://euclinicaltrials.eu/ctis-public/view/2024-518821-13-00" },
+      { name: "AZD0292 Phase IIb（EU）", drug: "AZD0292（AstraZeneca）", sponsor: "AstraZeneca AB", phase: "Phase II", status: "EU登録", nct: "2025-523009-14-00", color: "#0e7490",
+        desc: "抗緑膿菌二重特異性抗体AZD0292の第IIb相多用量プラセボ対照試験。 実施国：Netherlands・Italy・Greece・Denmark・Belgium・Spain。開始：16/12/2025。スポンサー：AstraZeneca AB。（CTIS 2025-523009-14-00）", url: "https://euclinicaltrials.eu/ctis-public/view/2025-523009-14-00" },
+      { name: "Ensifentrine Phase II（EU）", drug: "Ensifentrine（Verona Pharma）", sponsor: "Verona Pharma PLC", phase: "Phase II", status: "EU登録", nct: "2024-514845-12-00", color: "#15803d",
+        desc: "気管支拡張症被験者を対象としたEnsifentrineの第II相プラセボ対照試験。 実施国：Spain・Italy。開始：28/03/2025。スポンサー：Verona Pharma PLC。（CTIS 2024-514845-12-00）", url: "https://euclinicaltrials.eu/ctis-public/view/2024-514845-12-00" },
+      { name: "Gremubamab Phase II（EU）", drug: "Gremubamab（NHS Tayside / Dundee大）", sponsor: "NHS Tayside", phase: "Phase II", status: "EU登録", nct: "2022-502494-41-00", color: "#9f1239",
+        desc: "緑膿菌感染を伴う気管支拡張症を対象とした抗体Gremubamabの第2相試験。 実施国：Spain。開始：21/11/2023。スポンサー：NHS Tayside。（CTIS 2022-502494-41-00）", url: "https://euclinicaltrials.eu/ctis-public/view/2022-502494-41-00" },
+      { name: "ColiFin 吸入コリスチン（EU）", drug: "Colistin吸入（Marburg大）", sponsor: "Philipps-Universitaet Marburg", phase: "Phase II", status: "EU登録", nct: "2023-509277-22-00", color: "#15803d",
+        desc: "新規無症候性緑膿菌定着の成人気管支拡張症に対する吸入コリスチン（ColiFin）試験。 実施国：Germany。開始：22/06/2022。スポンサー：Philipps-Universitaet Marburg。（CTIS 2023-509277-22-00）", url: "https://euclinicaltrials.eu/ctis-public/view/2023-509277-22-00" },
+      { name: "RESP30X 吸入NO Phase I/IIa（EU）", drug: "吸入一酸化窒素（Thirty Respiratory）", sponsor: "Thirty Respiratory Limited", phase: "Phase I and Phase ", status: "EU登録", nct: "2023-508706-23-00", color: "#15803d",
+        desc: "気管支拡張症等を対象とした噴霧吸入一酸化窒素RESP30Xの第1/2a相試験。 実施国：Romania・Bulgaria・Poland。開始：—。スポンサー：Thirty Respiratory Limited。（CTIS 2023-508706-23-00）", url: "https://euclinicaltrials.eu/ctis-public/view/2023-508706-23-00" },
+      { name: "Chiesi Phase I（EU）", drug: "Chiesi 開発品（Chiesi）", sponsor: "Chiesi Farmaceutici S.p.A.", phase: "Human Pharmacology", status: "EU登録", nct: "2024-518150-17-00", color: "#64748b",
+        desc: "気管支拡張症領域におけるChiesi開発品の第I相（ヒト薬理）試験。 実施国：Belgium。開始：10/03/2025。スポンサー：Chiesi Farmaceutici S.p.A.。（CTIS 2024-518150-17-00）", url: "https://euclinicaltrials.eu/ctis-public/view/2024-518150-17-00" },
+    ]
+  },
 ]; // end TRIAL_GROUPS
 
 // 後方互換用
