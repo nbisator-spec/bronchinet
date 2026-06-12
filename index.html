@@ -400,9 +400,9 @@
     <div class="dashboard-header">
       <div class="dashboard-title">
         🔥 本日のハイライト
-        <span class="dashboard-badge">NEW 9件</span>
+        <span class="dashboard-badge">NEW 2件</span>
       </div>
-      <div class="dashboard-date">最終更新：2026-06-12 07:04 自動生成</div>
+      <div class="dashboard-date">最終更新：2026-06-13 07:04 自動生成</div>
     </div>
     <div class="dashboard-grid" id="dashboardGrid"></div>
   </div>
@@ -566,6 +566,13 @@
       <div class="sidebar-card">
         <div class="sidebar-header orange">📅 デイリーレポート履歴</div>
         <div class="sidebar-body">
+          <div class="report-item">
+            <div>
+              <div class="report-date">2026年6月13日（07:04）</div>
+              <div class="report-count">新規2件・試験1件新規</div>
+            </div>
+            <span class="report-link" onclick="showSection('reports',document.querySelectorAll('nav a')[3])">▶ 開く</span>
+          </div>
           <div class="report-item">
             <div>
               <div class="report-date">2026年6月12日（07:04）</div>
@@ -820,6 +827,29 @@
   <div class="reports-page-header">
     <h2>📝 デイリーレポート アーカイブ</h2>
     <p>毎朝8時に自動生成される文献サマリーの履歴。既読除外機能により、常に新規情報のみを収録しています。</p>
+  </div>
+
+  <!-- Report 2026-06-13 07:04 -->
+  <div class="report-card">
+    <div class="report-card-header">
+      <div>
+        <div class="report-card-date">📅 2026年6月13日（07:04 自動生成）</div>
+        <div style="font-size:12px;color:var(--text-muted);margin-top:3px;">除外済み：約349論文 / 87試験</div>
+      </div>
+      <span class="report-card-count">新規 2件・試験1件</span>
+    </div>
+    <ul class="report-highlight-list">
+      <li>
+        <span class="report-num">1</span>
+        <span class="report-cat-inline" style="background:#fee2e2;color:#b91c1c">増悪・病態</span>
+        <span>CVID長期未診断が続発性AAアミロイドーシス（ネフローゼ症候群）を引き起こした症例報告（J Clin Med, 2026-05, IF2.9）: 気管支拡張症・再発感染を呈する患者への免疫評価の重要性を提示。<a href="https://pubmed.ncbi.nlm.nih.gov/42278892/" target="_blank" style="color:var(--primary)">PMID:42278892</a></span>
+      </li>
+      <li>
+        <span class="report-num">2</span>
+        <span class="report-cat-inline" style="background:#fee2e2;color:#b91c1c">増悪・病態</span>
+        <span>CF成人でCT Bhallスコアと肺超音波スコアの強相関を確認（Diagnostics, 2026-06, SJR:Q2）: 非侵襲的肺超音波のCT補完ツールとしての有用性と経時的変化検出の限界を検証した前向きコホート。<a href="https://pubmed.ncbi.nlm.nih.gov/42279590/" target="_blank" style="color:var(--primary)">PMID:42279590</a></span>
+      </li>
+    </ul>
   </div>
 
   <!-- Report 2026-06-12 07:04 -->
@@ -1700,8 +1730,25 @@
 // DATA
 // ============================================================
 const ARTICLES = [
+  // ── 2026-06-13 新規 ──
+  {id:311, cat:"増悪・病態", isNew:true, ev:"症例報告", scope:"他疾患",
+   titleEn:"Prolonged Infections and Inflammatory Diseases in Common Variable Immune Deficiency as a Cause of AA Amyloidosis.",
+   titleJa:"免疫不全（CVID）における遷延感染・炎症性疾患が引き起こすAAアミロイドーシス",
+   journal:"J Clin Med", sjr:"Q2", if:"2.9", date:"2026-05", year:2026,
+   pmid:"42278892",
+   authors:"Reznik EV; Iarovoi MD; Latysheva EA; Latysheva TV",
+   summary:"CVIDを長期間見落とされ、再発感染・気管支拡張症・気管支炎を経て続発性AAアミロイドーシス（ネフローゼ症候群）を発症した37歳男性の症例報告。免疫グロブリン補充療法によるCVIDの早期診断・治療が感染性増悪抑制とアミロイド進行阻止に不可欠であることを示した。",
+   url:"https://pubmed.ncbi.nlm.nih.gov/42278892/"},
+  {id:312, cat:"増悪・病態", isNew:true, ev:"原著", scope:"CF",
+   titleEn:"Correlation Between CT-Derived Bhalla Score and Lung Ultrasound Score in Adult Patients with Cystic Fibrosis.",
+   titleJa:"CF成人患者におけるCT由来Bhallスコアと肺超音波スコアの相関",
+   journal:"Diagnostics (Basel)", sjr:"Q2", date:"2026-06", year:2026,
+   pmid:"42279590",
+   authors:"Stoicescu R; Iacob ER; Stoicescu ER; Manolescu D; Oancea C",
+   summary:"CF成人13例24回評価の前向きコホートでCT Bhallスコアと肺超音波スコアの強い正相関を確認し、肺超音波が放射線被曝なしでCT構造評価を補完できることを示した。経時的変化の検出には限界があり、特定場面でのCT継続の重要性も指摘した。",
+   url:"https://pubmed.ncbi.nlm.nih.gov/42279590/"},
   // ── 2026-06-12 新規 ──
-  {id:310, cat:"マイクロバイオーム・感染", isNew:true, ev:"総説",
+  {id:310, cat:"マイクロバイオーム・感染", isNew:false, ev:"総説",
    titleEn:"Bridging the airway microbiome and targeted therapy in bronchiectasis: multi-omics insights, endotypes and emerging therapies.",
    titleJa:"気管支拡張症における気道マイクロバイオームと標的治療の橋渡し：マルチオミクスの知見、エンドタイプと新興治療",
    journal:"Eur Respir J", sjr:"Q1", if:"21.2", date:"2026-06",
@@ -1709,7 +1756,7 @@ const ARTICLES = [
    authors:"Thornton CS; Schaupp L; Tunney MM; Mall MA",
    summary:"気管支拡張症の気道マイクロバイオームと宿主免疫・炎症の統合的マルチオミクス研究をレビューし、低多様性・病原体優位・好中球性炎症エンドタイプの形成機序を考察した総説（Eur Respir J）。バクテリオファージ療法・生菌製剤・精密抗菌薬管理などのマイクロバイオーム調節戦略を評価し、国際レジストリへのマルチオミクス統合による精密医療実現へのロードマップを提示した。",
    url:"https://pubmed.ncbi.nlm.nih.gov/42276744/"},
-  {id:302, cat:"治療・薬剤", isNew:true, ev:"臨床試験",
+  {id:302, cat:"治療・薬剤", isNew:false, ev:"臨床試験",
    titleEn:"The CFTR potentiator icenticaftor for treatment of bronchiectasis: an international phase 2, double-blind, randomized placebo-controlled trial.",
    titleJa:"気管支拡張症治療のためのCFTRポテンシエーターicenticaftor：国際Phase 2二重盲検無作為化プラセボ対照試験",
    journal:"Am J Respir Crit Care Med", sjr:"Q1", if:"19.4", date:"2026-06",
@@ -1718,7 +1765,7 @@ const ARTICLES = [
    jpView:"icenticaftor（CFTRポテンシエーター、ノバルティス社）はCFTR機能を増強する新アプローチ；brensocatib・verducatibとは作用機序が異なる。国内未承認（2026年時点）",
    summary:"CFTRポテンシエーターicenticaftor（旧QBW251）の非CF気管支拡張症に対する国際Phase 2二重盲検プラセボ対照試験の結果をAJRCCMが報告した。※抄録非公開のため、要約はタイトルに基づく",
    url:"https://doi.org/10.1093/ajrccm/aamag032"},
-  {id:303, cat:"日本発", isNew:true, ev:"症例報告",
+  {id:303, cat:"日本発", isNew:false, ev:"症例報告",
    titleEn:"Mycobacterium brisbanense Pulmonary Disease Treated with a Macrolide-Based Multidrug Regimen: A Case Report.",
    titleJa:"マクロライド系多剤併用療法で治療したMycobacterium brisbanense肺疾患：症例報告",
    journal:"Intern Med", sjr:"Q3", if:"1.1", date:"2026-06",
@@ -1727,7 +1774,7 @@ const ARTICLES = [
    jpView:"大阪大学グループによる日本初のM. brisbanense気管支拡張症合併症例報告。全ゲノムシーケンスによるerm遺伝子確認がマクロライド選択の根拠であり、NTM診療における薬剤感受性評価の多様性を示す。",
    summary:"気管支拡張症既往の73歳女性にM. brisbanense肺疾患が発症した日本初の症例を大阪大学が報告。全ゲノムシーケンスでerm遺伝子陰性・クラリスロマイシン低MICを確認しマクロライド系多剤併用療法を開始、臨床的・画像的改善を達成した。",
    url:"https://doi.org/10.2169/internalmedicine.7351-26"},
-  {id:304, cat:"増悪・病態", isNew:true, ev:"原著", scope:"他疾患",
+  {id:304, cat:"増悪・病態", isNew:false, ev:"原著", scope:"他疾患",
    titleEn:"Structural Lung Disease in Children and Adolescents With Severe Neurological Disorders.",
    titleJa:"重篤な神経疾患を有する小児・青年における肺構造疾患",
    journal:"Pediatr Pulmonol", sjr:"Q2", if:"2.3", date:"2026-06",
@@ -1735,7 +1782,7 @@ const ARTICLES = [
    authors:"Bernard DAF; Dahl C; Salhöfer L; Pauly A; Steindor M; Olivier M; Schara-Schmidt U; Welsner M; Schweiger B; Zensen S; Drews MA; Haubold J; Forsting M; Umutlu L; Opitz M; Stehling F",
    summary:"重篤な神経障害を持つ34名の小児のCT解析で気管支拡張（最大64%）・気管支壁肥厚（62%）などの構造異常が高頻度。嚥下障害・運動障害との関連で3表現型が同定され、CT所見の91%で治療方針が変更された。",
    url:"https://doi.org/10.1002/ppul.71698"},
-  {id:305, cat:"精密医療・エンドタイプ", isNew:true, ev:"原著", scope:"PCD",
+  {id:305, cat:"精密医療・エンドタイプ", isNew:false, ev:"原著", scope:"PCD",
    titleEn:"Tidal breathing nasal nitric oxide measurement as a test for primary ciliary dyskinesia in young children.",
    titleJa:"幼児における原発性線毛機能不全の検査としての安静時呼吸鼻腔一酸化窒素測定",
    journal:"Eur Respir J", sjr:"Q1", if:"21.2", date:"2026-06",
@@ -1743,7 +1790,7 @@ const ARTICLES = [
    authors:"Leigh MW; Shapiro AJ; Chawla KK; Hazucha MJ; Brown DE; Lin FC; Jiang L; Carson JL; Davis SD; Dell SD; Sagel SD; Rosenfeld M; Milla C; Sullivan KM; Zariwala MA; Ferkol TW; Knowles MR",
    summary:"6歳未満幼児での安静時呼吸nNO計測に年齢別カットオフ値（2ヶ月=13.9〜5歳=47.7 nL/min）を設定し、PCD同定感度98%・特異度高を8施設107名で検証。velum closure法が困難な幼児への有効な代替検査として確立した。",
    url:"https://doi.org/10.1183/13993003.01540-2025"},
-  {id:306, cat:"精密医療・エンドタイプ", isNew:true, ev:"原著", scope:"CF",
+  {id:306, cat:"精密医療・エンドタイプ", isNew:false, ev:"原著", scope:"CF",
    titleEn:"Single-cell profiling of BAL in preschool cystic fibrosis reveals macrophage dysregulation and ivacaftor-modified inflammatory programs in the early life lung.",
    titleJa:"就学前CF児のBALシングルセルプロファイリング：早期肺のマクロファージ機能不全とivacaftor修飾炎症プログラム",
    journal:"Mucosal Immunol", sjr:"Q1", date:"2026-03",
@@ -1751,7 +1798,7 @@ const ARTICLES = [
    authors:"Maksimovic J; Shanthikumar S; Howitt G; Dixit G; Hickey PF; Anttila C; Brown DV; Gubbels L; Senabouth A; Amann-Zalcenstein D; Powell JE; Ranganathan SC; Oshlack A; Neeland MR",
    summary:"45例のBALから19万超の細胞を含む最大規模の小児下気道アトラスを構築し、就学前CF児マクロファージのTNF・IFN・コレステロール恒常性経路の異常を同定。ivacaftorが一部機能障害を回復したがlumacaftor/ivacaftorでは転写変化は検出されなかった。",
    url:"https://doi.org/10.1016/j.mucimm.2026.03.012"},
-  {id:307, cat:"マイクロバイオーム・感染", isNew:true, ev:"症例報告", scope:"CF",
+  {id:307, cat:"マイクロバイオーム・感染", isNew:false, ev:"症例報告", scope:"CF",
    titleEn:"Infection in a young man with cystic fibrosis: a case report and literature review.",
    titleJa:"嚢胞性線維症の若年男性における感染症：症例報告と文献レビュー",
    journal:"Front Pediatr", sjr:"Q2", date:"2026-05",
@@ -1759,7 +1806,7 @@ const ARTICLES = [
    authors:"Luo L; Guo Z; Chen W; Zheng Y; Chen C; Li Q; Wang N; Ji Y; Hua J",
    summary:"中国人CF患者（21歳男性）にBAL mNGSでM. abscessus等のNTMを同定した症例。リネゾリド・モキシフロキサシン・アジスロマイシン・ミノサイクリン4剤で臨床安定を達成したが、CFTRモジュレーターは経済的制約で延期された。",
    url:"https://doi.org/10.3389/fped.2026.1737211"},
-  {id:308, cat:"精密医療・エンドタイプ", isNew:true, ev:"原著", scope:"PCD",
+  {id:308, cat:"精密医療・エンドタイプ", isNew:false, ev:"原著", scope:"PCD",
    titleEn:"Diagnosing primary ciliary dyskinesia in Australian adults: 10 years of testing.",
    titleJa:"オーストラリア成人の原発性線毛機能不全診断：10年間の検査実績",
    journal:"Intern Med J", sjr:"Q3", date:"2026-06",
@@ -1767,7 +1814,7 @@ const ARTICLES = [
    authors:"Robinson PJ",
    summary:"メルボルン王立小児病院での10年間で成人91名がPCD診断検査を受け28名（31%）がPCDと診断。紹介理由の最多は気管支拡張症であり、成人の慢性気道疾患においてPCDを念頭に置いた専門検査の重要性を強調する。",
    url:"https://doi.org/10.1111/imj.70487"},
-  {id:309, cat:"精密医療・エンドタイプ", isNew:true, ev:"原著", scope:"PCD",
+  {id:309, cat:"精密医療・エンドタイプ", isNew:false, ev:"原著", scope:"PCD",
    titleEn:"Functional Characterization of a Novel Homozygous Single-Nucleotide Intronic Deletion in a Consanguineous Portuguese Family with Primary Ciliary Dyskinesia.",
    titleJa:"PCD患者ポルトガル近縁家系における新規DNAH5イントロン1塩基欠失の機能解析",
    journal:"Cells", sjr:"Q2", date:"2026-06",
@@ -4844,6 +4891,8 @@ const TRIAL_GROUPS = [
         desc: '肺超音波を用いた肺スライディング指数（LSI）が気管支拡張症・COPDなど各種肺疾患の鑑別に有用かを検証するケースコントロール研究。', url: 'https://clinicaltrials.gov/study/NCT06983366' },
       { name: '下気道マイクロバイオーム適応進化（浙江大学）', drug: '微生物定着観察研究', sponsor: 'Second Affiliated Hospital, Zhejiang University', phase: '観察研究', status: 'RECRUITING', nct: 'NCT04966793', color: '#334155',
         desc: '気管支拡張症患者の下気道における微生物定着の分布と経時的適応進化を追う前向き観察研究（中国・浙江大学）。マイクロバイオームの変化パターンと疾患増悪・予後との関連を縦断的に評価する。', url: 'https://clinicaltrials.gov/study/NCT04966793' },
+      { name: 'CF小気道閉塞の見落とし検出（Gelb）', drug: '診断・機能評価研究', sponsor: 'Gelb, Arthur F., M.D.', phase: 'N/A', status: 'RECRUITING', nct: 'NCT03839992', color: '#64748b',
+        desc: '嚢胞性線維症患者において通常検査で見落とされやすい小気道閉塞を検出・評価する研究。CF患者の気管支拡張症合併例を含む閉塞性変化の系統的評価を目的とする。', url: 'https://clinicaltrials.gov/study/NCT03839992' },
     ]
   },
 
