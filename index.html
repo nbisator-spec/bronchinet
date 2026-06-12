@@ -400,7 +400,7 @@
     <div class="dashboard-header">
       <div class="dashboard-title">
         🔥 本日のハイライト
-        <span class="dashboard-badge">NEW 8件</span>
+        <span class="dashboard-badge">NEW 9件</span>
       </div>
       <div class="dashboard-date">最終更新：2026-06-12 07:04 自動生成</div>
     </div>
@@ -566,6 +566,13 @@
       <div class="sidebar-card">
         <div class="sidebar-header orange">📅 デイリーレポート履歴</div>
         <div class="sidebar-body">
+          <div class="report-item">
+            <div>
+              <div class="report-date">2026年6月12日（07:04）</div>
+              <div class="report-count">新規9件・EU試験7件新規</div>
+            </div>
+            <span class="report-link" onclick="showSection('reports',document.querySelectorAll('nav a')[3])">▶ 開く</span>
+          </div>
           <div class="report-item">
             <div>
               <div class="report-date">2026年6月11日（08:04）</div>
@@ -822,9 +829,14 @@
         <div class="report-card-date">📅 2026年6月12日（07:04 自動生成）</div>
         <div style="font-size:12px;color:var(--text-muted);margin-top:3px;">除外済み：約340論文 / 87試験</div>
       </div>
-      <span class="report-card-count">新規 8件・試験新規なし</span>
+      <span class="report-card-count">新規 9件・EU試験7件</span>
     </div>
     <ul class="report-highlight-list">
+      <li>
+        <span class="report-num">0</span>
+        <span class="report-cat-inline" style="background:#dbeafe;color:#1e40af">マイクロバイオーム</span>
+        <span>気道マイクロバイオームと標的治療の橋渡し：マルチオミクス・エンドタイプ・新興治療（Eur Respir J, 2026-06, IF21.2）: バクテリオファージ療法・生菌製剤・精密抗菌薬管理を統合した精密医療ロードマップ。<a href="https://pubmed.ncbi.nlm.nih.gov/42276744/" target="_blank" style="color:var(--primary)">PMID:42276744</a></span>
+      </li>
       <li>
         <span class="report-num">1</span>
         <span class="report-cat-inline" style="background:#dcfce7;color:#166534">治療・薬剤</span>
@@ -1689,6 +1701,14 @@
 // ============================================================
 const ARTICLES = [
   // ── 2026-06-12 新規 ──
+  {id:310, cat:"マイクロバイオーム・感染", isNew:true, ev:"総説",
+   titleEn:"Bridging the airway microbiome and targeted therapy in bronchiectasis: multi-omics insights, endotypes and emerging therapies.",
+   titleJa:"気管支拡張症における気道マイクロバイオームと標的治療の橋渡し：マルチオミクスの知見、エンドタイプと新興治療",
+   journal:"Eur Respir J", sjr:"Q1", if:"21.2", date:"2026-06",
+   pmid:"42276744",
+   authors:"Thornton CS; Schaupp L; Tunney MM; Mall MA",
+   summary:"気管支拡張症の気道マイクロバイオームと宿主免疫・炎症の統合的マルチオミクス研究をレビューし、低多様性・病原体優位・好中球性炎症エンドタイプの形成機序を考察した総説（Eur Respir J）。バクテリオファージ療法・生菌製剤・精密抗菌薬管理などのマイクロバイオーム調節戦略を評価し、国際レジストリへのマルチオミクス統合による精密医療実現へのロードマップを提示した。",
+   url:"https://pubmed.ncbi.nlm.nih.gov/42276744/"},
   {id:302, cat:"治療・薬剤", isNew:true, ev:"臨床試験",
    titleEn:"The CFTR potentiator icenticaftor for treatment of bronchiectasis: an international phase 2, double-blind, randomized placebo-controlled trial.",
    titleJa:"気管支拡張症治療のためのCFTRポテンシエーターicenticaftor：国際Phase 2二重盲検無作為化プラセボ対照試験",
@@ -4856,6 +4876,20 @@ const TRIAL_GROUPS = [
         desc: "気管支拡張症等を対象とした噴霧吸入一酸化窒素RESP30Xの第1/2a相試験。 実施国：Romania・Bulgaria・Poland。開始：—。スポンサー：Thirty Respiratory Limited。（CTIS 2023-508706-23-00）", url: "https://euclinicaltrials.eu/ctis-public/view/2023-508706-23-00" },
       { name: "Chiesi Phase I（EU）", drug: "Chiesi 開発品（Chiesi）", sponsor: "Chiesi Farmaceutici S.p.A.", phase: "Human Pharmacology", status: "EU登録", nct: "2024-518150-17-00", color: "#64748b",
         desc: "気管支拡張症領域におけるChiesi開発品の第I相（ヒト薬理）試験。 実施国：Belgium。開始：10/03/2025。スポンサー：Chiesi Farmaceutici S.p.A.。（CTIS 2024-518150-17-00）", url: "https://euclinicaltrials.eu/ctis-public/view/2024-518150-17-00" },
+      { name: "高張食塩水+ELTGOL気道クリアランス Phase IV（スペイン）", drug: "7%高張食塩水吸入（Girona大）", sponsor: "Hospital Universitari De Girona Doctor Josep Trueta", phase: "Phase IV", status: "EU登録", nct: "2024-511677-29-01", color: "#15803d",
+        desc: "気管支拡張症患者を対象に、ELTGOL（呼気流量制限手技）理学療法前に7%高張食塩水を吸入する効果を検証するPhase IV試験（スペイン・Girona）。粘膜線毛クリアランス改善における吸入高張食塩水の事前投与の有用性を評価する。（CTIS 2024-511677-29-01）", url: "https://euclinicaltrials.eu/ctis-public/view/2024-511677-29-01" },
+      { name: "慢性緑膿菌気管支拡張症への吸入抗菌薬戦略比較（バルセロナ）", drug: "吸入抗菌薬（複数戦略比較）（Mar Parc Barcelona）", sponsor: "Consorci Mar Parc De Salut De Barcelona", phase: "Phase IV", status: "EU登録", nct: "2023-510220-72-00", color: "#15803d",
+        desc: "慢性緑膿菌定着を伴う気管支拡張症における吸入抗菌薬療法の薬理学的戦略を比較評価するPhase IV試験（スペイン・バルセロナ）。各種吸入抗菌薬レジメンの有効性・安全性・粘液クリアランスへの影響を長期的に検討する。（CTIS 2023-510220-72-00）", url: "https://euclinicaltrials.eu/ctis-public/view/2023-510220-72-00" },
+      { name: "気管支拡張症 Phase III/IV 優越性RCT（Sant Pau・バルセロナ）", drug: "未公開（Fundació Sant Pau Barcelona）", sponsor: "Fundacio Institut De Recerca De L'Hospital De La Santa Creu I Sant Pau", phase: "Phase III/IV", status: "EU登録", nct: "2025-524454-34-00", color: "#7e22ce",
+        desc: "Sant Pau Hospital（バルセロナ）が主導する気管支拡張症対象の無作為化二重盲検プラセボ対照 Phase III/IV 優越性試験。介入の詳細はCTIS登録を参照。（CTIS 2025-524454-34-00）", url: "https://euclinicaltrials.eu/ctis-public/view/2025-524454-34-00" },
+      { name: "早期気道感染への抗菌薬2レジメン比較（Créteil・France）", drug: "抗菌薬（2レジメン比較）（Créteil）", sponsor: "Centre Hospitalier Intercommunal Creteil", phase: "Phase II", status: "EU登録", nct: "2023-504755-26-00", color: "#15803d",
+        desc: "早期気道感染の治療における2種類の抗菌薬レジメンを比較するPhase II試験（フランス・Créteil）。気管支拡張症等の慢性肺疾患患者を対象に、早期介入での微生物学的・臨床的アウトカムを検討する。（CTIS 2023-504755-26-00）", url: "https://euclinicaltrials.eu/ctis-public/view/2023-504755-26-00" },
+      { name: "原発性抗体免疫不全の気道疾患進行抑制 Phase III（オランダ）", drug: "未公開（UMC Utrecht）", sponsor: "Universitair Medisch Centrum Utrecht", phase: "Phase III", status: "EU登録", nct: "2024-513124-41-00", color: "#0e7490",
+        desc: "原発性抗体免疫不全（CVID等）を有する患者の気道疾患（気管支拡張症を含む）の進行を抑制する介入を検討するPhase III試験（オランダ・Utrecht大学医療センター）。免疫グロブリン補充療法等の最適化によるアウトカム改善を評価する。（CTIS 2024-513124-41-00）", url: "https://euclinicaltrials.eu/ctis-public/view/2024-513124-41-00" },
+      { name: "小児構造的肺疾患の肺健康改善介入 Phase IV（Rigshospitalet）", drug: "未公開（Rigshospitalet・デンマーク）", sponsor: "Rigshospitalet", phase: "Phase IV", status: "EU登録", nct: "2024-518730-88-00", color: "#0e7490",
+        desc: "構造的肺疾患・奇形を有する小児・青年の肺健康増進を目的とした無作為化試験（デンマーク・Rigshospitalet）。PCD・気管支拡張症・先天性肺疾患を有する小児の長期的な肺機能維持・改善戦略を検討する。（CTIS 2024-518730-88-00）", url: "https://euclinicaltrials.eu/ctis-public/view/2024-518730-88-00" },
+      { name: "気管支拡張症48週多施設二重盲検RCT（スウェーデン）", drug: "未公開（Västra Götalandsregionen）", sponsor: "Vaestra Goetalandsregionen", phase: "Phase IV", status: "EU登録", nct: "2025-524872-51-00", color: "#64748b",
+        desc: "スウェーデン・ヴェストラ・イェータランドが主導する48週間の多施設無作為化二重盲検プラセボ対照優越性試験。気管支拡張症を対象とした介入の長期有効性・安全性を評価する。（CTIS 2025-524872-51-00）", url: "https://euclinicaltrials.eu/ctis-public/view/2025-524872-51-00" },
     ]
   },
 ]; // end TRIAL_GROUPS
