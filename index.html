@@ -400,9 +400,9 @@
     <div class="dashboard-header">
       <div class="dashboard-title">
         🔥 本日のハイライト
-        <span class="dashboard-badge">NEW 3件</span>
+        <span class="dashboard-badge">NEW 5件</span>
       </div>
-      <div class="dashboard-date">最終更新：2026-06-13 07:04 自動生成</div>
+      <div class="dashboard-date">最終更新：2026-06-14 07:04 自動生成</div>
     </div>
     <div class="dashboard-grid" id="dashboardGrid"></div>
   </div>
@@ -566,6 +566,13 @@
       <div class="sidebar-card">
         <div class="sidebar-header orange">📅 デイリーレポート履歴</div>
         <div class="sidebar-body">
+          <div class="report-item">
+            <div>
+              <div class="report-date">2026年6月14日（07:04）</div>
+              <div class="report-count">新規5件（KAKEN科研費）</div>
+            </div>
+            <span class="report-link" onclick="showSection('reports',document.querySelectorAll('nav a')[3])">▶ 開く</span>
+          </div>
           <div class="report-item">
             <div>
               <div class="report-date">2026年6月13日（07:04）</div>
@@ -827,6 +834,44 @@
   <div class="reports-page-header">
     <h2>📝 デイリーレポート アーカイブ</h2>
     <p>毎朝8時に自動生成される文献サマリーの履歴。既読除外機能により、常に新規情報のみを収録しています。</p>
+  </div>
+
+  <!-- Report 2026-06-14 07:04 -->
+  <div class="report-card">
+    <div class="report-card-header">
+      <div>
+        <div class="report-card-date">📅 2026年6月14日（07:04 自動生成）</div>
+        <div style="font-size:12px;color:var(--text-muted);margin-top:3px;">除外済み：約354論文 / 87試験</div>
+      </div>
+      <span class="report-card-count">新規 5件（KAKEN科研費）</span>
+    </div>
+    <ul class="report-highlight-list">
+      <li>
+        <span class="report-num">1</span>
+        <span class="report-cat-inline" style="background:#f0fdf4;color:#166534">学会動向</span>
+        <span>KAKEN：線毛機能不全症候群（PCD）の診断精度向上に資する研究（竹内 万彦 ほか）: PCD関連気管支拡張症の早期診断・管理向上に資する国内研究パイプライン。<a href="https://cir.nii.ac.jp/crid/1040291932566699520" target="_blank" style="color:var(--primary)">CiNii</a></span>
+      </li>
+      <li>
+        <span class="report-num">2</span>
+        <span class="report-cat-inline" style="background:#f0fdf4;color:#166534">学会動向</span>
+        <span>KAKEN：網羅的菌叢解析を用いた慢性下気道感染症の病態の解明（矢寺 和博）: 気管支拡張症・NTM等の下気道マイクロバイオームと疾患進行の関連を探索。<a href="https://cir.nii.ac.jp/crid/1040291932593157760" target="_blank" style="color:var(--primary)">CiNii</a></span>
+      </li>
+      <li>
+        <span class="report-num">3</span>
+        <span class="report-cat-inline" style="background:#f0fdf4;color:#166534">学会動向</span>
+        <span>KAKEN：難治性喘息・COPDに併存する気管支拡張の早期病態の解明（松本 久子 ほか）: 閉塞性気道疾患オーバーラップの病態理解と早期介入戦略。<a href="https://cir.nii.ac.jp/crid/1040854882529016192" target="_blank" style="color:var(--primary)">CiNii</a></span>
+      </li>
+      <li>
+        <span class="report-num">4</span>
+        <span class="report-cat-inline" style="background:#f0fdf4;color:#166534">学会動向</span>
+        <span>KAKEN：気管支拡張症の基礎疾患と形態学的特徴および下気道細菌叢との関連（田坂 定智）: CT形態とマイクロバイオームを統合した精密医療・エンドタイプ分類の基盤整備。<a href="https://cir.nii.ac.jp/crid/1040854882537727488" target="_blank" style="color:var(--primary)">CiNii</a></span>
+      </li>
+      <li>
+        <span class="report-num">5</span>
+        <span class="report-cat-inline" style="background:#f0fdf4;color:#166534">学会動向</span>
+        <span>KAKEN：咳嗽・喀痰の診療ガイドライン2019喀痰総論の改訂エビデンス構築（金子 猛 ほか）: 気管支拡張症の喀痰管理・粘液線毛クリアランスにも関連するガイドライン改訂研究。<a href="https://cir.nii.ac.jp/crid/1040003825724723072" target="_blank" style="color:var(--primary)">CiNii</a></span>
+      </li>
+    </ul>
   </div>
 
   <!-- Report 2026-06-13 07:04 -->
@@ -1735,6 +1780,37 @@
 // DATA
 // ============================================================
 const ARTICLES = [
+  // ── 2026-06-14 新規 ──
+  {id:344, cat:"学会動向", isNew:true,
+   titleJa:"線毛機能不全症候群の診断精度向上に資する研究",
+   journal:"科研費（KAKEN）", date:"研究課題", year:2026,
+   summary:"線毛機能不全症候群（PCD）の診断精度向上を目指す国内科研費課題。PCD関連気管支拡張症の早期診断・管理向上に資する研究パイプライン。",
+   authors:"竹内 万彦・千代延 和貴・長尾 みづほ ほか",
+   url:"https://cir.nii.ac.jp/crid/1040291932566699520"},
+  {id:345, cat:"学会動向", isNew:true,
+   titleJa:"網羅的菌叢解析を用いた慢性下気道感染症の病態の解明",
+   journal:"科研費（KAKEN）", date:"研究課題", year:2026,
+   summary:"メタゲノム解析を活用した慢性下気道感染症（気管支拡張症・NTM等）の病態解明を目的とした国内科研費課題。下気道マイクロバイオームと疾患進行の関係を探索。",
+   authors:"矢寺 和博",
+   url:"https://cir.nii.ac.jp/crid/1040291932593157760"},
+  {id:346, cat:"学会動向", isNew:true,
+   titleJa:"難治性喘息・COPDなどの閉塞性気道疾患に併存する気管支拡張の早期病態の解明",
+   journal:"科研費（KAKEN）", date:"研究課題", year:2026,
+   summary:"難治性喘息・COPDに合併する気管支拡張の早期病態解明を目指す国内科研費課題。閉塞性気道疾患と気管支拡張症オーバーラップの病態理解と早期介入戦略に関わる。",
+   authors:"松本 久子・田辺 直也・佐藤 晋 ほか",
+   url:"https://cir.nii.ac.jp/crid/1040854882529016192"},
+  {id:347, cat:"学会動向", isNew:true,
+   titleJa:"気管支拡張症の基礎疾患と形態学的特徴および下気道細菌叢との関連",
+   journal:"科研費（KAKEN）", date:"研究課題", year:2026,
+   summary:"気管支拡張症の基礎疾患・CT形態学的特徴と下気道マイクロバイオームの関連を検討する国内科研費課題。精密医療・エンドタイプ分類の基盤データ整備に貢献。",
+   authors:"田坂 定智",
+   url:"https://cir.nii.ac.jp/crid/1040854882537727488"},
+  {id:348, cat:"学会動向", isNew:true,
+   titleJa:"「咳嗽・喀痰の診療ガイドライン2019」喀痰総論の改訂に向けたエビデンスの構築",
+   journal:"科研費（KAKEN）", date:"研究課題", year:2026,
+   summary:"咳嗽・喀痰ガイドライン（2019年版）の喀痰総論改訂に向けたエビデンス整備を目的とした国内科研費課題。気管支拡張症の喀痰管理・粘液線毛クリアランスにも関連する。",
+   authors:"金子 猛・武山 廉・原永 修作 ほか",
+   url:"https://cir.nii.ac.jp/crid/1040003825724723072"},
   // ── CiNii Research（科研費・業界動向）初回収録 ──
   {id:329, cat:"学会動向", isNew:false,
    titleJa:"COPD併存気管支拡張症の病態解明と超硫黄分子レドックス指標の検証",
@@ -1934,7 +2010,7 @@ const ARTICLES = [
    authors:"増本 彩乃・大内 洋・有村 雅子 ほか",
    url:"https://www.jstage.jst.go.jp/article/jjsre/47/6/47_539/_article/-char/ja/"},
   // ── 2026-06-13 新規 ──
-  {id:311, cat:"増悪・病態", isNew:true, ev:"症例報告", scope:"他疾患",
+  {id:311, cat:"増悪・病態", isNew:false, ev:"症例報告", scope:"他疾患",
    titleEn:"Prolonged Infections and Inflammatory Diseases in Common Variable Immune Deficiency as a Cause of AA Amyloidosis.",
    titleJa:"免疫不全（CVID）における遷延感染・炎症性疾患が引き起こすAAアミロイドーシス",
    journal:"J Clin Med", sjr:"Q2", if:"2.9", date:"2026-05", year:2026,
@@ -1942,7 +2018,7 @@ const ARTICLES = [
    authors:"Reznik EV; Iarovoi MD; Latysheva EA; Latysheva TV",
    summary:"CVIDを長期間見落とされ、再発感染・気管支拡張症・気管支炎を経て続発性AAアミロイドーシス（ネフローゼ症候群）を発症した37歳男性の症例報告。免疫グロブリン補充療法によるCVIDの早期診断・治療が感染性増悪抑制とアミロイド進行阻止に不可欠であることを示した。",
    url:"https://pubmed.ncbi.nlm.nih.gov/42278892/"},
-  {id:312, cat:"増悪・病態", isNew:true, ev:"原著", scope:"CF",
+  {id:312, cat:"増悪・病態", isNew:false, ev:"原著", scope:"CF",
    titleEn:"Correlation Between CT-Derived Bhalla Score and Lung Ultrasound Score in Adult Patients with Cystic Fibrosis.",
    titleJa:"CF成人患者におけるCT由来Bhallスコアと肺超音波スコアの相関",
    journal:"Diagnostics (Basel)", sjr:"Q2", date:"2026-06", year:2026,
@@ -1950,7 +2026,7 @@ const ARTICLES = [
    authors:"Stoicescu R; Iacob ER; Stoicescu ER; Manolescu D; Oancea C",
    summary:"CF成人13例24回評価の前向きコホートでCT Bhallスコアと肺超音波スコアの強い正相関を確認し、肺超音波が放射線被曝なしでCT構造評価を補完できることを示した。経時的変化の検出には限界があり、特定場面でのCT継続の重要性も指摘した。",
    url:"https://pubmed.ncbi.nlm.nih.gov/42279590/"},
-  {id:343, cat:"増悪・病態", isNew:true, ev:"観察研究",
+  {id:343, cat:"増悪・病態", isNew:false, ev:"観察研究",
    titleEn:"Risk of Pulmonary Aspergillosis in Tuberculosis Survivors: A Nationwide Population-based Study.",
    titleJa:"結核生存者における肺アスペルギルス症リスク：全国規模の人口ベースコホート研究",
    journal:"Int J Antimicrob Agents", sjr:"Q1", date:"2026-06-12", year:2026,
