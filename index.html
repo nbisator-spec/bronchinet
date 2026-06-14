@@ -224,6 +224,22 @@
   .ls-litlink { display:inline-block; margin-top:10px; font-size:12px; font-weight:700; color:var(--primary); cursor:pointer; }
   .ls-litlink:hover { text-decoration:underline; }
   @media (max-width:600px){ .ls-grid{ grid-template-columns:1fr; } }
+  /* ── トレンド ダッシュボード ── */
+  .trends-page { padding:20px 0 40px; }
+  .trends-page-header { background:linear-gradient(135deg,#3b0764,#7c3aed); color:#fff; border-radius:12px; padding:24px; margin-bottom:20px; }
+  .trends-page-header h2 { font-size:20px; font-weight:800; margin-bottom:6px; }
+  .trends-page-header p { color:#e9d5ff; font-size:13px; }
+  .trends-grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(330px,1fr)); gap:14px; }
+  .trend-card { background:var(--card-bg); border:1px solid var(--border); border-radius:12px; padding:16px 18px; }
+  .trend-card-title { font-size:13px; font-weight:800; color:var(--text); margin-bottom:14px; display:flex; align-items:center; gap:7px; }
+  .trend-card-title .tc-sub { font-size:10px; font-weight:600; color:var(--text-muted); margin-left:auto; }
+  .tbar-row { display:flex; align-items:center; gap:8px; margin:5px 0; font-size:11.5px; }
+  .tbar-label { width:96px; flex-shrink:0; color:var(--text); white-space:nowrap; overflow:hidden; text-overflow:ellipsis; text-align:right; }
+  .tbar-track { flex:1; background:var(--bg); border-radius:5px; height:15px; overflow:hidden; }
+  .tbar-fill { height:100%; border-radius:5px; min-width:2px; transition:width .4s; }
+  .tbar-val { width:30px; flex-shrink:0; font-weight:700; color:var(--text-muted); font-size:10.5px; }
+  .trends-note { font-size:11px; color:var(--text-muted); margin-top:16px; line-height:1.6; }
+  @media (max-width:600px){ .trends-grid{ grid-template-columns:1fr; } .tbar-label{ width:78px; } }
   .card-date { font-size: 11px; color: var(--text-muted); }
   .card-link { font-size: 11px; color: var(--primary); text-decoration: none; display: flex; align-items: center; gap: 3px; }
   .card-link:hover { text-decoration: underline; }
@@ -5367,6 +5383,103 @@ function lsShowLit(kw) {
   if (box) { box.value = kw[0]; filterArticles(); }
 }
 
+// ============================================================
+// トレンド可視化ダッシュボード
+// ============================================================
+function tBars(entries, color, max) {
+  const mx = max || Math.max(...entries.map(e => e[1]), 1);
+  return entries.map(([label, val]) => `
+    <div class="tbar-row">
+      <span class="tbar-label" title="${String(label).replace(/"/g,'&quot;')}">${label}</span>
+      <span class="tbar-track"><span class="tbar-fill" style="width:${Math.round(val / mx * 100)}%;background:${color}"></span></span>
+      <span class="tbar-val">${val}</span>
+    </div>`).join('');
+}
+function tCount(arr, keyFn) {
+  const m = {};
+  arr.forEach(x => { const k = keyFn(x); if (k) m[k] = (m[k] || 0) + 1; });
+  return m;
+}
+function tSort(obj, desc = true, limit) {
+  let e = Object.entries(obj).sort((a, b) => desc ? b[1] - a[1] : a[1] - b[1]);
+  return limit ? e.slice(0, limit) : e;
+}
+function buildTrends() {
+  const grid = document.getElementById('trendsGrid');
+  if (!grid) return;
+  const A = ARTICLES.filter(a => a.titleJa || a.titleEn);
+  const cards = [];
+
+  // ① 年別文献数（年代順）
+  const byYear = tCount(A, a => a.year);
+  const years = Object.entries(byYear).filter(e => /^\d{4}$/.test(e[0]) && +e[0] >= 2021).sort((a, b) => +a[0] - +b[0]);
+  cards.push(['📈 年別 収録文献数', '発表年', tBars(years, '#7c3aed')]);
+
+  // ② カテゴリ構成
+  cards.push(['🗂️ カテゴリ構成', `全${A.length}件`, tBars(tSort(tCount(A, a => a.cat)), '#1d4ed8')]);
+
+  // ③ エビデンス区分
+  const ev = tSort(tCount(A.filter(a => a.ev), a => a.ev));
+  cards.push(['🔬 エビデンス区分', '付与分のみ', tBars(ev, '#0e7490')]);
+
+  // ④ 掲載誌の質（SJR四分位）
+  const q = tCount(A.filter(a => a.sjr), a => a.sjr);
+  const qOrder = ['Q1', 'Q2', 'Q3', 'Q4'].filter(k => q[k]).map(k => [k, q[k]]);
+  const qColor = { Q1: '#15803d', Q2: '#1d4ed8', Q3: '#b45309', Q4: '#64748b' };
+  cards.push(['🏅 掲載誌の質（SJR四分位）', 'SJR付与分', qOrder.map(([k, v]) =>
+    `<div class="tbar-row"><span class="tbar-label">${k}</span><span class="tbar-track"><span class="tbar-fill" style="width:${Math.round(v / Math.max(...qOrder.map(x => x[1])) * 100)}%;background:${qColor[k]}"></span></span><span class="tbar-val">${v}</span></div>`).join('')]);
+
+  // ⑤ 薬剤パイプライン（試験フェーズ別）
+  const phase = tCount(TRIALS_DATA, t => {
+    const p = (t.phase || '').replace(/\s/g, '');
+    if (/III/.test(p)) return 'Phase III';
+    if (/IIb/.test(p)) return 'Phase IIb';
+    if (/II/.test(p)) return 'Phase II';
+    if (/I\b|^PhaseI$|Phase1/.test(p)) return 'Phase I';
+    if (/観察|診断/.test(t.phase)) return '観察/診断';
+    return 'その他';
+  });
+  cards.push(['💊 薬剤パイプライン（試験フェーズ）', `全${TRIALS_DATA.length}試験`, tBars(tSort(phase), '#be0000')]);
+
+  // ⑥ データソース構成
+  const src = tCount(A, a => {
+    const u = a.url || '';
+    if (u.includes('pubmed')) return 'PubMed';
+    if (u.includes('jstage')) return 'J-STAGE';
+    if (u.includes('cir.nii')) return 'CiNii';
+    if (u.includes('doi.org')) return 'DOI/出版社';
+    if (u.includes('pmc.ncbi')) return 'PMC';
+    return 'その他';
+  });
+  cards.push(['🌐 データソース構成', `全${A.length}件`, tBars(tSort(src), '#0891b2')]);
+
+  // ⑦ 主要研究者 TOP10（著者頻度）
+  const an = {};
+  A.forEach(a => {
+    if (!a.authors) return;
+    a.authors.split(/[;・]| et al\.?/).forEach(raw => {
+      const n = raw.trim().replace(/\s+/g, ' ');
+      if (n && n.length >= 2 && !/^\d+$/.test(n)) an[n] = (an[n] || 0) + 1;
+    });
+  });
+  const topAuth = tSort(an, true).filter(e => e[1] >= 2).slice(0, 10);
+  cards.push(['👥 頻出研究者 TOP10', '著者別出現数', tBars(topAuth, '#9333ea')]);
+
+  // ⑧ 日本コンテンツ
+  const jp = [
+    ['日本発', A.filter(a => a.cat === '日本発').length],
+    ['日本の視点', A.filter(a => a.jpView).length],
+    ['和文献(JST/CiNii)', A.filter(a => /jstage|cir\.nii/.test(a.url || '')).length],
+  ];
+  cards.push(['🇯🇵 日本関連コンテンツ', `全${A.length}件中`, tBars(jp, '#be0000')]);
+
+  grid.innerHTML = cards.map(([title, sub, body]) => `
+    <div class="trend-card">
+      <div class="trend-card-title">${title}<span class="tc-sub">${sub}</span></div>
+      ${body}
+    </div>`).join('');
+}
+
 function buildTrialsPage() {
   const grid = document.getElementById('trialsGrid');
   if (!grid) return;
@@ -5404,6 +5517,7 @@ document.addEventListener('DOMContentLoaded', () => {
   filterArticles();
   buildTrialsPage();
   buildLandscape();
+  buildTrends();
 });
 </script>
 </body>
