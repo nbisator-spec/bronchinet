@@ -5500,6 +5500,23 @@ function buildTrends() {
   const topAuth = tSort(an, true).filter(e => e[1] >= 2).slice(0, 10);
   cards.push(['👥 頻出研究者 TOP10', '著者別出現数', tBars(topAuth, '#9333ea')]);
 
+  // ⑦b 日本の研究者 TOP10（PubMed 5年書誌解析・別ソース）
+  // 出典: PubMed "bronchiectasis[tiab] AND Japan[Affiliation]" 2021/06-2026/06、254件中252件を解析。
+  // Japan所属の著者を抽出し論文数で集計（同姓イニシャルは同名異人の可能性あり）。
+  const jpAuthors = [
+    ['森本耕三 (複十字病院)', 25],
+    ['長谷川直樹 (慶應大)', 17],
+    ['田辺直也 (京都大)', 15],
+    ['朝倉崇徳 (慶應大)', 13],
+    ['平井豊博 (京都大)', 12],
+    ['迎 寛 (長崎大)', 12],
+    ['竹内健二 (三重大)', 11],
+    ['伊藤 樹 (複十字病院)', 11],
+    ['福永興壱 (慶應大)', 10],
+    ['慶長直人 (結核研)', 9],
+  ];
+  cards.push(['🔬 日本の研究者 TOP10', 'PubMed 5年・論文数', tBars(jpAuthors, '#be0000')]);
+
   // ⑧ 日本コンテンツ
   const jp = [
     ['日本発', A.filter(a => a.cat === '日本発').length],
