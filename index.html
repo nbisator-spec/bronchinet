@@ -437,9 +437,9 @@
     <div class="dashboard-header">
       <div class="dashboard-title">
         🔥 本日のハイライト
-        <span class="dashboard-badge">NEW 5件</span>
+        <span class="dashboard-badge">NEW 1件</span>
       </div>
-      <div class="dashboard-date">最終更新：2026-06-14 07:04 自動生成</div>
+      <div class="dashboard-date">最終更新：2026-06-15 07:04 自動生成</div>
     </div>
     <div class="dashboard-grid" id="dashboardGrid"></div>
   </div>
@@ -603,6 +603,13 @@
       <div class="sidebar-card">
         <div class="sidebar-header orange">📅 デイリーレポート履歴</div>
         <div class="sidebar-body">
+          <div class="report-item">
+            <div>
+              <div class="report-date">2026年6月15日（07:04）</div>
+              <div class="report-count">新規1件（気管支学・症例報告）</div>
+            </div>
+            <span class="report-link" onclick="showSection('reports',document.querySelectorAll('nav a')[3])">▶ 開く</span>
+          </div>
           <div class="report-item">
             <div>
               <div class="report-date">2026年6月14日（07:04）</div>
@@ -882,6 +889,24 @@
   <div class="reports-page-header">
     <h2>📝 デイリーレポート アーカイブ</h2>
     <p>毎朝8時に自動生成される文献サマリーの履歴。既読除外機能により、常に新規情報のみを収録しています。</p>
+  </div>
+
+  <!-- Report 2026-06-15 07:04 -->
+  <div class="report-card">
+    <div class="report-card-header">
+      <div>
+        <div class="report-card-date">📅 2026年6月15日（07:04 自動生成）</div>
+        <div style="font-size:12px;color:var(--text-muted);margin-top:3px;">除外済み：約354論文 / 87試験</div>
+      </div>
+      <span class="report-card-count">新規 1件（症例報告）</span>
+    </div>
+    <ul class="report-highlight-list">
+      <li>
+        <span class="report-num">1</span>
+        <span class="report-cat-inline" style="background:#fee2e2;color:#b91c1c">増悪・病態</span>
+        <span>反復BAE後に右冠動脈-気管支動脈瘻を発症した症例（気管支学, 2026-01-25）: 気管支拡張症の喀血管理で用いるBAEの稀少な血管合併症。術後の心電図変化・胸痛モニタリングの必要性を提起。<a href="https://cir.nii.ac.jp/crid/1390869987441311872" target="_blank" style="color:var(--primary)">CiNii</a></span>
+      </li>
+    </ul>
   </div>
 
   <!-- Report 2026-06-14 07:04 -->
@@ -1828,32 +1853,42 @@
 // DATA
 // ============================================================
 const ARTICLES = [
+  // ── 2026-06-15 新規 ──
+  {id:349, cat:"増悪・病態", isNew:true,
+   titleJa:"反復する気管支動脈塞栓術後に発症した右冠動脈―気管支動脈瘻の1例",
+   titleEn:"A Case of Right Coronary Artery-Bronchial Artery Fistula Developing After Repeated Bronchial Arterial Embolization",
+   journal:"気管支学", date:"2026-01-25", year:2026,
+   ev:"症例報告",
+   summary:"反復する気管支動脈塞栓術（BAE）後に右冠動脈-気管支動脈瘻を発症した稀な症例。気管支拡張症の喀血管理で頻用されるBAEの稀少な血管合併症として、術後の心血管系合併症モニタリングの必要性を示す。",
+   authors:"近藤 大地・山本 学・牛島 祐哉 ほか",
+   jpView:"BAEは日本での気管支拡張症・NTM症による喀血管理で頻用される手技。右冠動脈-気管支動脈瘻は極めて稀な合併症であり、反復BAE施行例では術後の心電図変化や胸痛への注意が必要であることを示す症例。",
+   url:"https://cir.nii.ac.jp/crid/1390869987441311872"},
   // ── 2026-06-14 新規 ──
-  {id:344, cat:"学会動向", isNew:true,
+  {id:344, cat:"学会動向", isNew:false,
    titleJa:"線毛機能不全症候群の診断精度向上に資する研究",
    journal:"科研費（KAKEN）", date:"研究課題", year:2026,
    summary:"線毛機能不全症候群（PCD）の診断精度向上を目指す国内科研費課題。PCD関連気管支拡張症の早期診断・管理向上に資する研究パイプライン。",
    authors:"竹内 万彦・千代延 和貴・長尾 みづほ ほか",
    url:"https://cir.nii.ac.jp/crid/1040291932566699520"},
-  {id:345, cat:"学会動向", isNew:true,
+  {id:345, cat:"学会動向", isNew:false,
    titleJa:"網羅的菌叢解析を用いた慢性下気道感染症の病態の解明",
    journal:"科研費（KAKEN）", date:"研究課題", year:2026,
    summary:"メタゲノム解析を活用した慢性下気道感染症（気管支拡張症・NTM等）の病態解明を目的とした国内科研費課題。下気道マイクロバイオームと疾患進行の関係を探索。",
    authors:"矢寺 和博",
    url:"https://cir.nii.ac.jp/crid/1040291932593157760"},
-  {id:346, cat:"学会動向", isNew:true,
+  {id:346, cat:"学会動向", isNew:false,
    titleJa:"難治性喘息・COPDなどの閉塞性気道疾患に併存する気管支拡張の早期病態の解明",
    journal:"科研費（KAKEN）", date:"研究課題", year:2026,
    summary:"難治性喘息・COPDに合併する気管支拡張の早期病態解明を目指す国内科研費課題。閉塞性気道疾患と気管支拡張症オーバーラップの病態理解と早期介入戦略に関わる。",
    authors:"松本 久子・田辺 直也・佐藤 晋 ほか",
    url:"https://cir.nii.ac.jp/crid/1040854882529016192"},
-  {id:347, cat:"学会動向", isNew:true,
+  {id:347, cat:"学会動向", isNew:false,
    titleJa:"気管支拡張症の基礎疾患と形態学的特徴および下気道細菌叢との関連",
    journal:"科研費（KAKEN）", date:"研究課題", year:2026,
    summary:"気管支拡張症の基礎疾患・CT形態学的特徴と下気道マイクロバイオームの関連を検討する国内科研費課題。精密医療・エンドタイプ分類の基盤データ整備に貢献。",
    authors:"田坂 定智",
    url:"https://cir.nii.ac.jp/crid/1040854882537727488"},
-  {id:348, cat:"学会動向", isNew:true,
+  {id:348, cat:"学会動向", isNew:false,
    titleJa:"「咳嗽・喀痰の診療ガイドライン2019」喀痰総論の改訂に向けたエビデンスの構築",
    journal:"科研費（KAKEN）", date:"研究課題", year:2026,
    summary:"咳嗽・喀痰ガイドライン（2019年版）の喀痰総論改訂に向けたエビデンス整備を目的とした国内科研費課題。気管支拡張症の喀痰管理・粘液線毛クリアランスにも関連する。",
