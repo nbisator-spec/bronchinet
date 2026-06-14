@@ -204,6 +204,26 @@
   .sjr-Q3 { background:#fef3c7; color:#b45309; }
   .sjr-Q4 { background:#f1f5f9; color:#64748b; }
   .if-badge { display:inline-block; font-size:9px; font-weight:800; padding:1px 5px; border-radius:4px; margin-left:4px; vertical-align:middle; letter-spacing:0.2px; background:#fae8ff; color:#a21caf; }
+  /* ── 競合ランドスケープ ── */
+  .ls-class { margin-bottom:26px; }
+  .ls-class-title { font-size:13px; font-weight:800; color:#fff; padding:8px 14px; border-radius:9px; margin-bottom:12px; display:flex; align-items:center; gap:8px; }
+  .ls-grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(330px,1fr)); gap:14px; }
+  .ls-card { background:var(--card-bg); border:1px solid var(--border); border-radius:12px; padding:16px; border-top:4px solid var(--primary); }
+  .ls-drug { font-size:16px; font-weight:800; color:var(--text); }
+  .ls-company { font-size:11.5px; color:var(--text-muted); margin:2px 0 10px; }
+  .ls-status-row { display:flex; gap:6px; margin-bottom:12px; flex-wrap:wrap; }
+  .ls-status { font-size:11px; font-weight:700; padding:3px 9px; border-radius:6px; background:var(--bg); border:1px solid var(--border); }
+  .ls-status b { font-weight:800; }
+  .ls-sec-label { font-size:10px; font-weight:800; color:var(--text-muted); letter-spacing:.05em; margin:10px 0 5px; text-transform:uppercase; }
+  .ls-trial { font-size:11.5px; line-height:1.5; padding:4px 0; border-bottom:1px dashed var(--border); display:flex; gap:6px; align-items:baseline; cursor:pointer; }
+  .ls-trial:last-child { border-bottom:none; }
+  .ls-region { font-size:9px; font-weight:800; padding:1px 5px; border-radius:4px; flex-shrink:0; }
+  .ls-region.us { background:#dbeafe; color:#1d4ed8; }
+  .ls-region.eu { background:#e0e7ff; color:#4338ca; }
+  .ls-region.jp { background:#fff0f0; color:#be0000; }
+  .ls-litlink { display:inline-block; margin-top:10px; font-size:12px; font-weight:700; color:var(--primary); cursor:pointer; }
+  .ls-litlink:hover { text-decoration:underline; }
+  @media (max-width:600px){ .ls-grid{ grid-template-columns:1fr; } }
   .card-date { font-size: 11px; color: var(--text-muted); }
   .card-link { font-size: 11px; color: var(--primary); text-decoration: none; display: flex; align-items: center; gap: 3px; }
   .card-link:hover { text-decoration: underline; }
@@ -383,6 +403,7 @@
   <nav>
     <a class="active" onclick="showSection('articles',this)">📚 文献一覧</a>
     <a onclick="showSection('trials',this)">🧪 臨床試験</a>
+    <a onclick="showSection('landscape',this)">🏁 競合ランドスケープ</a>
     <a onclick="showSection('guidelines',this)">📋 ガイドライン</a>
     <a onclick="showSection('reports',this)">📝 デイリーレポート</a>
     <a onclick="showSection('trends',this)">📊 トレンド</a>
@@ -743,6 +764,17 @@
     <p>気管支拡張症領域で現在進行中・注目すべき主要臨床試験。リクルート状況・フェーズ・NCT番号を一覧で確認できます。</p>
   </div>
   <div class="trials-grid" id="trialsGrid"></div>
+</div>
+</div>
+
+<!-- ==================== SECTION: 競合ランドスケープ ==================== -->
+<div class="section" id="section-landscape">
+<div class="trials-page">
+  <div class="trials-page-header" style="background:linear-gradient(135deg,#0f3872,#1a56a8)">
+    <h2>🏁 競合ランドスケープ</h2>
+    <p>気管支拡張症の開発品を薬剤別に集約。クラス・企業・各地域（🇺🇸/🇪🇺/🇯🇵）の開発状況、進行中試験（CT.gov/JRCT/CTIS）、関連文献数を横断的に把握できます。承認状況は2026年時点・要再確認。</p>
+  </div>
+  <div id="landscapeGrid"></div>
 </div>
 </div>
 
@@ -5241,6 +5273,100 @@ const TRIAL_GROUPS = [
 // 後方互換用
 const TRIALS_DATA = TRIAL_GROUPS.flatMap(g => g.trials);
 
+// ============================================================
+// 競合ランドスケープ（薬剤別）
+// ============================================================
+// 開発状況は japan_context.md の検証済み事実（2026年時点・要再確認）
+const LANDSCAPE = [
+  { cls: 'DPP-1阻害薬（カテプシンC阻害）', icon: '🏆', color: '#1d4ed8', drugs: [
+    { name: 'Brensocatib', company: 'Insmed（インスメッド合同会社）', kw: ['Brensocatib','ブレンソカチブ','INS1007','Brinsupri','ブリンスプリ','ASPEN'],
+      us: '✅ FDA承認 (2025/8)', eu: '申請/審査', jp: '上市準備段階（未承認）' },
+    { name: 'Verducatib (BI 1291583)', company: '日本ベーリンガーインゲルハイム', kw: ['Verducatib','BI 1291583','ベルデュカチブ','AIRTIVITY','Airleaf','Clairleaf'],
+      us: 'Phase III', eu: 'Phase III', jp: 'Phase III（治験中）' },
+    { name: 'HSK31858', company: 'Haisco（中国）', kw: ['HSK31858','SAVE-BE'],
+      us: '—', eu: '—', jp: '—', other: '中国 Phase 2 完了' },
+  ]},
+  { cls: '抗緑膿菌抗体', icon: '🦠', color: '#0e7490', drugs: [
+    { name: 'AZD0292', company: 'AstraZeneca（アストラゼネカ）', kw: ['AZD0292','GREAT-2'],
+      us: 'Phase IIb', eu: 'Phase IIb', jp: '登録あり（治験）' },
+  ]},
+  { cls: '吸入免疫療法', icon: '💉', color: '#7e22ce', drugs: [
+    { name: 'CSL787', company: 'CSL Behring（CSLベーリング）', kw: ['CSL787'],
+      us: 'Phase 2b', eu: 'Phase IIb', jp: 'Phase 2（登録）' },
+  ]},
+  { cls: '気道クリアランス・PDE阻害', icon: '💨', color: '#15803d', drugs: [
+    { name: 'Ensifentrine', company: 'Verona Pharma', kw: ['Ensifentrine','エンシフェントリン'],
+      us: 'Phase II', eu: 'Phase II', jp: '—' },
+  ]},
+  { cls: '抗炎症・生物学的製剤', icon: '🧬', color: '#ea580c', drugs: [
+    { name: 'Itepekimab (抗IL-33)', company: 'Sanofi（サノフィ）', kw: ['Itepekimab','SAR440340','イテペキマブ'],
+      us: 'Phase II', eu: 'PoC (Ph2)', jp: 'Phase 2（登録）' },
+    { name: 'SAR445399', company: 'Sanofi（サノフィ）', kw: ['SAR445399'],
+      us: 'Phase II', eu: '—', jp: '—' },
+    { name: 'GSK3862995B', company: 'GSK', kw: ['GSK3862995B','GSK3862995'],
+      us: 'Phase II', eu: 'Phase II', jp: '—' },
+  ]},
+];
+
+function lsRegion(nct) {
+  if (!nct) return null;
+  if (nct.startsWith('jRCT')) return 'jp';
+  if (/^\d{4}-\d{6}/.test(nct)) return 'eu';
+  if (nct.startsWith('NCT')) return 'us';
+  return null;
+}
+function lsMatch(text, kw) {
+  const t = (text || '').toLowerCase();
+  return kw.some(k => t.includes(k.toLowerCase()));
+}
+function buildLandscape() {
+  const grid = document.getElementById('landscapeGrid');
+  if (!grid) return;
+  grid.innerHTML = LANDSCAPE.map(group => {
+    const cards = group.drugs.map(d => {
+      // 紐付く試験（薬剤名・別名でマッチ）
+      const trials = TRIALS_DATA.filter(t => lsMatch(t.name + ' ' + t.drug, d.kw));
+      const trialHtml = trials.length ? trials.map(t => {
+        const r = lsRegion(t.nct);
+        const rlabel = r === 'jp' ? '🇯🇵JP' : r === 'eu' ? '🇪🇺EU' : r === 'us' ? '🇺🇸US' : '—';
+        return `<div class="ls-trial" onclick="window.open('${t.url}','_blank')">
+          <span class="ls-region ${r || ''}">${rlabel}</span>
+          <span>${t.phase}・${t.status}<br><span style="color:var(--text-muted);font-family:monospace;font-size:10px">${t.nct}</span></span>
+        </div>`;
+      }).join('') : '<div style="font-size:11px;color:var(--text-muted)">登録試験なし</div>';
+      // 紐付く文献数
+      const lits = ARTICLES.filter(a => lsMatch((a.titleEn||'') + ' ' + (a.titleJa||'') + ' ' + (a.summary||''), d.kw));
+      const statusBadge = (flag, label, val) => val && val !== '—'
+        ? `<span class="ls-status">${flag} <b>${val}</b></span>` : '';
+      return `<div class="ls-card" style="border-top-color:${group.color}">
+        <div class="ls-drug">${d.name}</div>
+        <div class="ls-company">🏢 ${d.company}</div>
+        <div class="ls-status-row">
+          ${statusBadge('🇺🇸', 'US', d.us)}
+          ${statusBadge('🇪🇺', 'EU', d.eu)}
+          ${statusBadge('🇯🇵', 'JP', d.jp)}
+          ${d.other ? `<span class="ls-status">🌏 <b>${d.other}</b></span>` : ''}
+        </div>
+        <div class="ls-sec-label">🧪 進行中試験（${trials.length}）</div>
+        ${trialHtml}
+        ${lits.length ? `<span class="ls-litlink" onclick="lsShowLit(${JSON.stringify(d.kw).replace(/"/g,'&quot;')})">📚 関連文献 ${lits.length}件を見る →</span>` : '<div style="font-size:11px;color:var(--text-muted);margin-top:10px">関連文献なし</div>'}
+      </div>`;
+    }).join('');
+    return `<div class="ls-class">
+      <div class="ls-class-title" style="background:${group.color}">${group.icon} ${group.cls}</div>
+      <div class="ls-grid">${cards}</div>
+    </div>`;
+  }).join('');
+}
+// 薬剤の関連文献を文献一覧で表示
+function lsShowLit(kw) {
+  showSection('articles', document.querySelectorAll('nav a')[0]);
+  // カテゴリ等をリセットし、検索ボックスに代表キーワードを入れる
+  if (typeof setFilter === 'function') setFilter('all', document.querySelector('.chip[data-cat=all]'));
+  const box = document.getElementById('searchInput');
+  if (box) { box.value = kw[0]; filterArticles(); }
+}
+
 function buildTrialsPage() {
   const grid = document.getElementById('trialsGrid');
   if (!grid) return;
@@ -5277,6 +5403,7 @@ document.addEventListener('DOMContentLoaded', () => {
   buildRanking();
   filterArticles();
   buildTrialsPage();
+  buildLandscape();
 });
 </script>
 </body>
