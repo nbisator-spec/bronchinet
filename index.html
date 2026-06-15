@@ -196,6 +196,8 @@
   .ev-chip.jp-toggle.active { background: #be0000; color: #fff; border-color: #be0000; }
   .ev-chip.core-toggle { border-color: #93c5fd; color: #1d4ed8; font-weight: 700; }
   .ev-chip.core-toggle.active { background: #1d4ed8; color: #fff; border-color: #1d4ed8; }
+  .ev-chip.ev-chip-dpp1 { border-color: #d8b4fe; color: #7c3aed; font-weight: 700; }
+  .ev-chip.ev-chip-dpp1.active { background: #7c3aed; color: #fff; border-color: #7c3aed; }
   .scope-tag { display: inline-block; font-size: 10px; font-weight: 700; padding: 2px 7px; border-radius: 5px; margin-left: 6px; vertical-align: middle; background: #f1f5f9; color: #64748b; border: 1px dashed #cbd5e1; }
   .card-authors .au-ico { opacity: 0.6; }
   .sjr-badge { display:inline-block; font-size:9px; font-weight:800; padding:1px 5px; border-radius:4px; margin-left:6px; vertical-align:middle; letter-spacing:0.3px; }
@@ -510,6 +512,7 @@
         <div class="ev-chips">
           <span class="ev-filter-label">エビデンス区分:</span>
           <div class="ev-chip active" data-ev="all" onclick="setEvFilter('all',this)">すべて</div>
+          <div class="ev-chip ev-chip-dpp1" data-ev="DPP1" onclick="setEvFilter('DPP1',this)" title="DPP-1（カテプシンC）阻害薬クラスの話題を横断表示（brensocatib/verducatib/HSK31858 ほか）">💊 DPP-1</div>
           <div class="ev-chip" data-ev="ガイドライン" onclick="setEvFilter('ガイドライン',this)">📋 ガイドライン</div>
           <div class="ev-chip" data-ev="メタ解析・SR" onclick="setEvFilter('メタ解析・SR',this)">📊 メタ解析・SR</div>
           <div class="ev-chip" data-ev="RCT" onclick="setEvFilter('RCT',this)">🧪 RCT</div>
@@ -1973,7 +1976,7 @@ const ARTICLES = [
    summary:"気管支拡張症に関連する科研費（KAKEN）研究課題：「iPS細胞を用いた難治性気管支拡張症の新規診断法の確立と治療法の開発」。日本国内の研究パイプライン把握用（CiNii Research経由）。",
    authors:"後藤 慎平・竹内 万彦",
    url:"https://cir.nii.ac.jp/crid/1040862776833060480"},
-  {id:342, cat:"学会動向", isNew:false,
+  {id:342, dpp1:true, cat:"学会動向", isNew:false,
    titleJa:"インスメッド日本法人社長 中村誠氏 気管支拡張症薬・ブレンソカチブ上市へ MR50人採用 : 26年は濃密で意義のあるエキサイティングな年に",
    journal:"ミクス（業界紙）", date:"2026-01", year:2026,
    summary:"インスメッド日本法人社長へのインタビュー業界紙記事。気管支拡張症治療薬ブレンソカチブの日本上市に向けたMR体制（50人採用）など事業展開を報じる（CiNii Research経由）。",
@@ -2009,7 +2012,7 @@ const ARTICLES = [
    summary:"喘息と気管支拡張症の合併・鑑別・好酸球性病態を論じた特集総説（日本内科学会雑誌）。",
    authors:"松本 久子",
    url:"https://www.jstage.jst.go.jp/article/naika/114/6/114_985/_article/-char/ja/"},
-  {id:317, cat:"治療・薬剤", isNew:false,
+  {id:317, dpp1:true, cat:"治療・薬剤", isNew:false,
    titleJa:"VIII．気管支拡張症の新たな治療",
    titleEn:"VIII. Novel Therapies for Bronchiectasis",
    journal:"日本内科学会雑誌", date:"2025", year:2025,
@@ -2438,7 +2441,7 @@ const ARTICLES = [
    summary:"好中球性気道炎症を標的に、EMBARC研究ネットワークで複数の既存（リパーパス）抗炎症薬を同時評価する無作為化・非盲検・多因子・多施設の適応的プラットフォーム試験AIR-NETのデザインと論拠を報告。好中球プロテアーゼ阻害が第II/III相で増悪を減少させた知見を踏まえ、追加の好中球標的治療を効率的に検証する基盤を構築する。（PubMed PMID: 41809869）",
    jpView:"好中球性炎症を標的とする既存薬再評価のプラットフォーム試験。日本は長期マクロライド療法の伝統が強く、新規抗炎症薬の国内位置づけは欧米と異なりうる。",
    url:"https://pubmed.ncbi.nlm.nih.gov/41809869/"},
-  {id:263, cat:"治療・薬剤", isNew:false,
+  {id:263, dpp1:true, cat:"治療・薬剤", isNew:false,
    titleJa:"気管支拡張症の新規抗炎症療法：実臨床におけるDPP-1阻害の至適用量選択に関するviewpoint（Oxford）",
    titleEn:"A new anti-inflammatory treatment for bronchiectasis: a viewpoint on optimal dose selection for DPP1 inhibition in clinical practice",
    journal:"American journal of respiratory and critical care medicine", sjr:"Q1", if:"19.4", date:"2026-03", year:2026,
@@ -2611,7 +2614,7 @@ const ARTICLES = [
    summary:"気管支拡張症の世界的有病率増加を背景にドイツ呼吸器学会が発表した成人気管支拡張症の包括的コンセンサスガイドライン。診断・病因分類・肺機能評価・気道クリアランス・抗菌療法からbrensocatib等の新規抗炎症薬まで網羅した実臨床向け指針。（PubMed PMID: 41861044）",
    jpView:"日本に独立GLが無いため、ERS以外の各国コンセンサスGLも国内診療の比較参照として有益。",
    url:"https://pubmed.ncbi.nlm.nih.gov/41861044/", authors:"Ringshausen Felix C et al."},
-  {id:255, cat:"治療・薬剤", isNew:false,
+  {id:255, dpp1:true, cat:"治療・薬剤", isNew:false,
    titleJa:"気管支拡張症における好中球性炎症への挑戦：マクロライドからカテプシンC阻害薬まで（J Inflamm Res）",
    titleEn:"Tackling Neutrophilic Inflammation in Bronchiectasis: From Macrolides to Cathepsin C Inhibitors",
    journal:"Journal of Inflammation Research", sjr:"Q2", if:"4.1", date:"2026-04-11", year:2026,
@@ -2627,7 +2630,7 @@ const ARTICLES = [
    summary:"気管支拡張症患者の気道局所にIgGを吸入投与することで免疫学的防御機能を補強する新規アプローチ（CSL787）のランダム化第1相試験の結果を報告。安全性プロファイルと抗菌有効性の初期データを提示し、気管支拡張症の局所免疫療法として今後の開発につながる可能性を示した。（PubMed PMID: 42085293）",
    jpView:"CSL787は日本でも第2相（jRCT2071250037）が登録済み。吸入IgGという新規モダリティとして国内パイプラインでも注目（2026年時点）。",
    url:"https://pubmed.ncbi.nlm.nih.gov/42085293/", authors:"Downey Damian G et al."},
-  {id:253, cat:"治療・薬剤", isNew:false,
+  {id:253, dpp1:true, cat:"治療・薬剤", isNew:false,
    titleJa:"非CF気管支拡張症成人に対する抗炎症療法の有効性：系統的レビューとネットワークメタ解析（Chest）",
    titleEn:"Efficacy of Antiinflammatory Therapies for Adults With Non-Cystic Fibrosis Bronchiectasis: A Systematic Review and Network Meta-Analysis",
    journal:"Chest", sjr:"Q1", if:"8.6", date:"2026-01-12", year:2026,
@@ -2751,7 +2754,7 @@ const ARTICLES = [
    summary:"日本PCD患者の約半数が保有するDRC1遺伝子エクソン1-4の大型ホモ接合欠失による症例の臨床特性を全国12施設の後方視的コホートで解析した日本発研究（結核予防会複十字病院）。気管支拡張症進行と肺機能低下のパターンを明らかにしこのバリアント特有の予後を初めて大規模に示した。（PubMed PMID: 41570615）",
    url:"https://pubmed.ncbi.nlm.nih.gov/41570615/", authors:"Ito Masashi et al."},
   // ── 2026-06-01 新規（補足・90日検索テスト） ──
-  {id:236, cat:"治療・薬剤", isNew:false,
+  {id:236, dpp1:true, cat:"治療・薬剤", isNew:false,
    titleJa:"AZU1は気管支拡張症重症度・上皮防御の仲介因子かつDPP-1阻害の標的である：国際多コホート研究（Lancet Respir Med）",
    titleEn:"Azurocidin-1 as a mediator of bronchiectasis severity, epithelial defence, and target of dipeptidyl peptidase-1 inhibition: an international, multicohort study",
    journal:"Lancet Respiratory Medicine", sjr:"Q1", if:"32.8", date:"2026-04-24", year:2026,
@@ -2767,7 +2770,7 @@ const ARTICLES = [
    jpView:"アミカシンリポソーム吸入（ARIKAYCE）は難治性MAC肺症に国内承認済み（2021年）。NTM多発の日本では本剤の位置づけが特に重要。",
    summary:"新規/再発非空洞性MAC肺疾患99例を対象にALIS追加vs対照を6ヶ月比較したRCT。ALIS群で6ヶ月後培養陰性化率80.6%（対照63.9%）、7ヶ月後78.8%（対照47.1%、p=0.001）と有意に改善。難治性MAC以外の初回治療へのALIS有効性を初めてRCTで示した。（PubMed PMID: 41915555）",
    url:"https://pubmed.ncbi.nlm.nih.gov/41915555/", authors:"Daley Charles L et al."},
-  {id:234, cat:"治療・薬剤", isNew:false,
+  {id:234, dpp1:true, cat:"治療・薬剤", isNew:false,
    titleJa:"気管支拡張症の薬物療法と薬剤開発：DPP-1阻害薬を中心に（Expert Opin Pharmacother総説）",
    titleEn:"Pharmacotherapy options and drug development in bronchiectasis: spotlight on dipeptidyl-peptidase-1",
    journal:"Expert Opinion on Pharmacotherapy", sjr:"Q2", if:"2.7", date:"2026-04-28", year:2026,
@@ -3072,7 +3075,7 @@ const ARTICLES = [
    scope:"PCD",
    summary:"気管支拡張症を主病態とするカルタゲナー症候群の末期呼吸不全患者に両側肺移植を施行し7年間追跡した症例報告。手術・術後の複数の課題を乗り越えQoLが著明に改善し、PCD関連気管支拡張症の終末期治療として肺移植の有効性と課題を示した。（PubMed PMID: 42144294）",
    url:"https://pubmed.ncbi.nlm.nih.gov/42144294/", authors:"Yilmaz Emre et al."},
-  {id:194, cat:"ガイドライン・総説", isNew:false,
+  {id:194, dpp1:true, cat:"ガイドライン・総説", isNew:false,
    titleJa:"2025年にEMA・FDA・MHRAが承認した新薬：年次レビュー（brensocatib承認含む）",
    titleEn:"Novel drugs approved by the EMA, the FDA and the MHRA in 2025: A year in review",
    journal:"British Journal of Pharmacology", sjr:"Q1", if:"7.7", date:"2026-03", year:2026,
@@ -3220,7 +3223,7 @@ const ARTICLES = [
    ev:"原著",
    summary:"好中球性炎症マーカー（フィブリノゲン）と好酸球性炎症マーカー（FeNO）の比（FFR）が気管支拡張症の疾患活動性・重症度と相関することを検討した研究。FFRは炎症内型の鑑別と重症度評価に有用な新規複合バイオマーカーとなり得ることが示された。（PubMed PMID: 42123116）",
    url:"https://pubmed.ncbi.nlm.nih.gov/42123116/", authors:"Matthaiou Andreas M et al."},
-  {id:174, cat:"治療・薬剤", isNew:false,
+  {id:174, dpp1:true, cat:"治療・薬剤", isNew:false,
    titleJa:"肺疾患におけるジペプチジルペプチダーゼ阻害薬の役割",
    titleEn:"The Role of Dipeptidyl Peptidase Inhibitors in Pulmonary Diseases",
    journal:"Biomedicines", sjr:"Q1", if:"3.9", date:"2026-05", year:2026,
@@ -3244,7 +3247,7 @@ const ARTICLES = [
    ev:"原著",
    summary:"気管支拡張症増悪入院患者を対象に、ACBT・OPEP・運動+ハフィングの3つの気道クリアランス技術を比較した無作為化対照試験。入院期間・肺機能・QoLに有意差はなく、増悪中の気道クリアランス技術の選択には患者の好みを考慮できることが示唆された。（PubMed PMID: 42155584）",
    url:"https://doi.org/10.1002/resp.70265"},
-  {id:129, cat:"治療・薬剤", isNew:false,
+  {id:129, dpp1:true, cat:"治療・薬剤", isNew:false,
    titleJa:"気管支拡張症におけるDPP-1阻害に関する10の未解決問題",
    titleEn:"Ten unanswered questions about dipeptidyl peptidase-1 inhibition in bronchiectasis",
    journal:"Lancet Respiratory Medicine", sjr:"Q1", if:"32.8", date:"2026-03", year:2026,
@@ -3253,7 +3256,7 @@ const ARTICLES = [
    summary:"ブレンソカチブ承認後も残るDPP-1阻害療法の未解決課題10点を論じた総説。最適な患者選択・治療期間・バイオマーカー・他剤との併用・PCD合併例への適用など、今後の研究課題を体系的に整理している。（PubMed PMID: 41839192）",
    jpView:"DPP-1阻害の未解決課題を提示。日本でも治験が進むクラスであり、エンドタイプ選択や歯周・皮膚の安全性など国内導入時の論点を先読みする材料となる。",
    url:"https://doi.org/10.1016/S2213-2600(26)00077-9"},
-  {id:130, cat:"治療・薬剤", isNew:false,
+  {id:130, dpp1:true, cat:"治療・薬剤", isNew:false,
    titleJa:"気管支拡張症の炎症をターゲットとした治療：最新エビデンス",
    titleEn:"Targeting Inflammation in Bronchiectasis",
    journal:"Drugs", sjr:"Q1", if:"14.4", date:"2026-04", year:2026,
@@ -3262,7 +3265,7 @@ const ARTICLES = [
    summary:"気管支拡張症における好中球性・好酸球性炎症を標的とした治療薬の最新エビデンスを包括的に総説。DPP-1阻害薬（ブレンソカチブ）・NEI・IL-5/8経路・吸入療法の現状と課題をまとめている。（PubMed PMID: 41954871）",
    jpView:"気管支拡張症の抗炎症療法の最新像。マクロライド長期療法の伝統を持つ日本にとり、DPP-1阻害薬という新クラスを既存療法のなかに位置づける総説として有用。",
    url:"https://doi.org/10.1007/s40265-026-02314-0"},
-  {id:131, cat:"治療・薬剤", isNew:false,
+  {id:131, dpp1:true, cat:"治療・薬剤", isNew:false,
    titleJa:"ブレンソカチブ：初承認",
    titleEn:"Brensocatib: First Approval",
    journal:"Drugs", sjr:"Q1", if:"14.4", date:"2025-12", year:2025,
@@ -3278,7 +3281,7 @@ const ARTICLES = [
    ev:"総説",
    summary:"気管支拡張症に対する各種治療法の分子メカニズムを体系的に整理したレビュー。抗菌薬・抗炎症薬・粘液調整薬・気道クリアランス・免疫調整療法の作用機序と臨床的意義を包括的に論じている。（PubMed PMID: 41789076）",
    url:"https://doi.org/10.3389/fimmu.2026.1735598", authors:"Yu Long et al."},
-  {id:133, cat:"治療・薬剤", isNew:false,
+  {id:133, dpp1:true, cat:"治療・薬剤", isNew:false,
    titleJa:"気管支拡張症に対する抗炎症療法",
    titleEn:"Anti-inflammatory therapies for bronchiectasis",
    journal:"Current Opinion in Infectious Diseases", sjr:"Q1", if:"4", date:"2026-01", year:2026,
@@ -3637,7 +3640,7 @@ const ARTICLES = [
    jpView:"日本のANCA関連血管炎コホート（J-CANVAS）。RA・膠原病合併BEは国内で多く、免疫抑制・生物学的製剤使用時の感染リスク評価に直結。",
    summary:"J-CANVAS（日本人ANCA関連血管炎コホート）データを用いてMPA・GPA患者における気管支拡張症合併と重症感染症リスクの関連を多施設観察研究で検討（京都府立医科大学）。気管支拡張症合併が免疫抑制治療中の重症感染症リスクの独立した予測因子である可能性を示した。（PubMed PMID: 41672947）",
    url:"https://doi.org/10.1111/1756-185x.70570"},
-  {id:121, cat:"日本発", isNew:false,
+  {id:121, dpp1:true, cat:"日本発", isNew:false,
    titleJa:"日本人NCFB患者におけるブレンソカチブの有効性と安全性：ASPENトライアルの日本人サブグループ解析",
    titleEn:"Efficacy and safety of brensocatib in Japanese patients with non-cystic fibrosis bronchiectasis: Analysis of the ASPEN trial",
    journal:"Respir Investig", sjr:"Q2", if:"2.0", date:"2026-01", year:2026,
@@ -4164,7 +4167,7 @@ const ARTICLES = [
    url:"https://journal.chestnet.org/article/S0012-3692(25)05928-8/fulltext"},
 
   // ── 治療・薬剤 ──
-  {id:1, cat:"治療・薬剤", isNew:false,
+  {id:1, dpp1:true, cat:"治療・薬剤", isNew:false,
    titleJa:"ブレンソカチブの有効性と価値：ICERカリフォルニア技術評価フォーラムのまとめ",
    titleEn:"The effectiveness and value of brensocatib for the treatment of non-cystic fibrosis bronchiectasis: A summary from ICER's California Technology Assessment Forum",
    journal:"J Manag Care Spec Pharm", sjr:"Q1", if:"2.9", date:"2026-03", year:2026,
@@ -4183,7 +4186,7 @@ const ARTICLES = [
    summary:"イタリア・パヴィア大学発の個別化スポーツプロトコル試験。呼吸困難例には持久力訓練、咳嗽・喀痰例には筋力訓練、倦怠感例には有酸素/無酸素混合トレーニングを週3回6ヶ月実施。頻回増悪患者の歴史的データとの比較により非薬物療法の可能性を検証する。",
    url:"https://www.frontiersin.org/journals/medicine/articles/10.3389/fmed.2025.1554300/full"},
 
-  {id:3, cat:"治療・薬剤", isNew:false,
+  {id:3, dpp1:true, cat:"治療・薬剤", isNew:false,
    titleJa:"気管支拡張症第3相試験：DPP-1阻害薬ブレンソカチブ（ASPEN試験）",
    titleEn:"Phase 3 Trial of the DPP-1 Inhibitor Brensocatib in Bronchiectasis",
    journal:"New England Journal of Medicine", sjr:"Q1", if:"78.5", date:"2024-09", year:2024,
@@ -4193,7 +4196,7 @@ const ARTICLES = [
    summary:"1721例を対象とした気管支拡張症史上最大規模のRCT（ASPEN試験）。ブレンソカチブ10mg・25mgともにプラセボ比約20%の増悪率低下を達成（Rate ratio 0.79/0.81）。25mg群では肺機能低下抑制も示された。",
    url:"https://www.nejm.org/doi/abs/10.1056/NEJMoa2411664"},
 
-  {id:4, cat:"治療・薬剤", isNew:false,
+  {id:4, dpp1:true, cat:"治療・薬剤", isNew:false,
    titleJa:"ブレンソカチブ：非CF気管支拡張症の新たなる治療の幕開け（Editorial）",
    titleEn:"Brensocatib – an editorial on the new chapter in noncystic fibrosis bronchiectasis treatment",
    journal:"Respirology", sjr:"Q1", if:"6.3", date:"2025-10", year:2025,
@@ -4203,7 +4206,7 @@ const ARTICLES = [
    jpView:"DPP-1阻害というクラス初の標的療法登場の意義を論じるEditorial。日本でもInsmedによるbrensocatibの上市準備が進むとされ(2026年時点未承認)、対症療法中心だった国内診療の転換点となりうる。",
    url:"https://pmc.ncbi.nlm.nih.gov/articles/PMC12898296/"},
 
-  {id:5, cat:"治療・薬剤", isNew:false,
+  {id:5, dpp1:true, cat:"治療・薬剤", isNew:false,
    titleJa:"ブレンソカチブ（Brinsupri）：非CF気管支拡張症初のFDA承認標的療法",
    titleEn:"Brensocatib (Brinsupri) first FDA-approved targeted therapy for non-cystic fibrosis bronchiectasis",
    journal:"Drugs Today", sjr:"Q2", date:"2025-09", year:2025,
@@ -4213,7 +4216,7 @@ const ARTICLES = [
    jpView:"Brensocatib(Brinsupri)は気管支拡張症初の標的療法として2025年にFDA承認。日本は未承認だがInsmed日本法人が上市準備中(2026年時点)。クラスを牽引する基準薬として位置づけを理解すべき一報。",
    url:"https://www.ajmc.com/view/brensocatib-becomes-first-approved-therapy-for-bronchiectasis-expanding-treatment-options-james-d-chalmers-mbchb-phd"},
 
-  {id:6, cat:"治療・薬剤", isNew:false,
+  {id:6, dpp1:true, cat:"治療・薬剤", isNew:false,
    titleJa:"DPP-1阻害薬における未解決の10の問い",
    titleEn:"Ten unanswered questions about dipeptidyl peptidase-1 inhibition in bronchiectasis",
    journal:"ERJ Open Research", sjr:"Q1", if:"4.0", date:"2025-06", year:2025,
@@ -4223,7 +4226,7 @@ const ARTICLES = [
    jpView:"DPP-1阻害薬クラスの未解決論点(適応・バイオマーカー・長期安全性)の整理。brensocatib・verducatib(別化合物)双方の治験/上市が進む日本で、国内MSL活動の論点を先取りするのに有用。",
    url:"https://pubmed.ncbi.nlm.nih.gov/"},
 
-  {id:7, cat:"治療・薬剤", isNew:false,
+  {id:7, dpp1:true, cat:"治療・薬剤", isNew:false,
    titleJa:"DPP-1阻害薬の有効性・安全性メタアナリシス（GRADE評価）",
    titleEn:"Efficacy and safety of DPP-1 inhibitors in bronchiectasis: a GRADE-assessed meta-analysis of randomized controlled trials",
    journal:"Chest", sjr:"Q1", if:"8.6", date:"2025-11", year:2025,
@@ -4233,7 +4236,7 @@ const ARTICLES = [
    jpView:"DPP-1阻害薬クラスのエビデンスをGRADEで統合。日本未承認段階での科学的支持の強さを把握でき、国内KOLとのディスカッションの土台になる。",
    url:"https://pubmed.ncbi.nlm.nih.gov/"},
 
-  {id:8, cat:"治療・薬剤", isNew:false,
+  {id:8, dpp1:true, cat:"治療・薬剤", isNew:false,
    titleJa:"SAVE-BE試験：中国のDPP-1阻害薬HSK31858 Phase 2結果",
    titleEn:"Effects of the DPP-1 inhibitor HSK31858 in adults with bronchiectasis in China (SAVE-BE): a phase 2, multicentre, double-blind, randomised, placebo-controlled trial",
    journal:"Lancet Respir Med", sjr:"Q1", if:"32.8", date:"2025-08", year:2025,
@@ -4286,7 +4289,7 @@ const ARTICLES = [
    jpView:"吸入抗菌薬(トブラマイシン等)は本邦では気管支拡張症への適応・エビデンスが限定的で国際標準と差がある。本メタ解析は国内での位置づけや適応外使用の判断材料として重要。",
    url:"https://pmc.ncbi.nlm.nih.gov/articles/PMC11251083/", authors:"Cordeiro Ricardo et al."},
 
-  {id:14, cat:"治療・薬剤", isNew:false,
+  {id:14, dpp1:true, cat:"治療・薬剤", isNew:false,
    titleJa:"抗炎症療法の有効性：非CF気管支拡張症のネットワークメタアナリシス",
 
    titleEn:"Efficacy of Anti-Inflammatory Therapies for Adults with Non-Cystic Fibrosis Bronchiectasis: A Systematic Review and Network Meta-Analysis",
@@ -4314,7 +4317,7 @@ const ARTICLES = [
    summary:"2015〜2024年に診断された入院成人14,319例の10年コホート。粗死亡率34.8%で男性・55歳以上で有意に高い。末梢好酸球数・喀痰微生物学的パターンを含む多変量解析により予後不良因子を同定。実臨床での予後予測モデル構築に貢献する大規模データ。",
    url:"https://link.springer.com/article/10.1186/s12890-025-04080-3"},
 
-  {id:17, cat:"増悪・病態", isNew:false,
+  {id:17, dpp1:true, cat:"増悪・病態", isNew:false,
    titleJa:"増悪頻回例と好中球エラスターゼ活性：ネットワーク解析アプローチ",
    titleEn:"Frequent exacerbators and neutrophil elastase activity in bronchiectasis: a network analysis approach",
    journal:"ERJ", sjr:"Q1", if:"21.2", date:"2025-04", year:2025,
@@ -4390,7 +4393,7 @@ const ARTICLES = [
    summary:"気管支拡張症患者における長期ICS使用と肺がん発症リスクの関連を大規模コホートで検討。ICS使用群で有意なリスク上昇は確認されなかったが、感染症合併頻度との交互作用が示唆された。",
    url:"https://pubmed.ncbi.nlm.nih.gov/"},
 
-  {id:25, cat:"増悪・病態", isNew:false,
+  {id:25, dpp1:true, cat:"増悪・病態", isNew:false,
    titleJa:"気管支拡張症：炎症の臨床的総説",
    titleEn:"Bronchiectasis: A clinical review of inflammation",
    journal:"Respiratory Medicine", sjr:"Q1", if:"3.1", date:"2025-08", year:2025,
@@ -4566,7 +4569,7 @@ const ARTICLES = [
    jpView:"日本には非CF気管支拡張症に特化した独立診療ガイドラインが存在しない(2026年時点)。高インパクト誌の総説は、ERS/BTS等と並ぶ実践的参照として国内臨床で活用しやすい。",
    url:"https://pubmed.ncbi.nlm.nih.gov/"},
 
-  {id:44, cat:"ガイドライン・総説", isNew:false,
+  {id:44, dpp1:true, cat:"ガイドライン・総説", isNew:false,
    titleJa:"気管支拡張症薬物療法の最新動向：AJRCM総説",
    titleEn:"Recent investigations in pharmacotherapy for bronchiectasis",
    journal:"Am J Respir Crit Care Med", sjr:"Q1", if:"19.4", date:"2025-01", year:2025,
@@ -4611,7 +4614,7 @@ const ARTICLES = [
    summary:"GERD・副鼻腔炎・免疫不全・自己免疫疾患など気管支拡張症に高頻度に合併する疾患のスクリーニングプロトコルと、それぞれの合併が臨床転帰に与える影響を系統的にレビュー。合併症主導の個別化管理の根拠を提供。",
    url:"https://pubmed.ncbi.nlm.nih.gov/"},
 
-  {id:49, cat:"精密医療・エンドタイプ", isNew:false,
+  {id:49, dpp1:true, cat:"精密医療・エンドタイプ", isNew:false,
    titleJa:"精密医療時代における気管支拡張症：病態発生と治療の進歩",
    titleEn:"Bronchiectasis in the precision medicine era: pathogenesis and therapeutic advances",
    journal:"J Thorac Dis", sjr:"Q2", if:"1.9", date:"2026-04", year:2026,
@@ -4631,7 +4634,7 @@ const ARTICLES = [
    url:"https://pubmed.ncbi.nlm.nih.gov/"},
 
   // ── 臨床試験 ──
-  {id:51, cat:"治療・薬剤", isNew:false,
+  {id:51, dpp1:true, cat:"治療・薬剤", isNew:false,
    titleJa:"AIRLEAF試験：verducatib（BI 1291583）Phase II RCT（用量設定試験）",
    titleEn:"Cathepsin C (dipeptidyl peptidase 1) inhibition in adults with bronchiectasis: AIRLEAF, a phase II randomised, double-blind, placebo-controlled, dose-finding study",
    journal:"Lancet Respir Med", sjr:"Q1", if:"32.8", date:"2024-06", year:2024,
@@ -4641,7 +4644,7 @@ const ARTICLES = [
    summary:"BI 1291583（verducatib）のPhase II（AIRLEAF試験）の結果報告。複数用量設定で好中球セリンプロテアーゼ活性の用量依存的抑制を確認。最適用量を特定しPhase IIIのAIRTIVITY試験への移行を支持するデータ。",
    url:"https://pmc.ncbi.nlm.nih.gov/articles/PMC10351677/"},
 
-  {id:52, cat:"臨床試験", isNew:false,
+  {id:52, dpp1:true, cat:"臨床試験", isNew:false,
    titleJa:"AIRTIVITY™試験のデザイン：verducatib（BI 1291583）Phase III",
    titleEn:"Phase III AIRTIVITY™ study design – verducatib (BI 1291583) in people with bronchiectasis",
    journal:"ERJ Open Research", sjr:"Q1", if:"4.0", date:"2024-10", year:2024,
@@ -4650,7 +4653,7 @@ const ARTICLES = [
    summary:"BI社のverducatib（第2のDPP-1阻害薬）のPhase III試験（AIRTIVITY）のプロトコール論文。主要エンドポイントは年間増悪率。ASPENと類似したデザインだが用量・対象集団の選択にBI社独自の戦略が反映されている。",
    url:"https://pubmed.ncbi.nlm.nih.gov/"},
 
-  {id:53, cat:"臨床試験", isNew:false,
+  {id:53, dpp1:true, cat:"臨床試験", isNew:false,
    titleJa:"AIRLEAF試験：簡易説明資料（患者向け平易版サマリー）",
    titleEn:"AIRLEAF – a study of verducatib as a new kind of treatment for bronchiectasis: a plain language summary",
    journal:"ERJ Open Research", sjr:"Q1", if:"4.0", date:"2024-11", year:2024,
@@ -4666,7 +4669,7 @@ const ARTICLES = [
    summary:"2025年7月14〜17日、ブリスベン開催。気管支拡張症が「オーファン疾患」から主要呼吸器専門領域への脱却を宣言。患者の声を初めて公式プログラムに組み込み、基礎科学・小児科・PCD・看護/コメディカルの4トラックで最新研究を発表。NTM治療・多職種ケアモデル・新興治療薬の方向性が共有された。",
    url:"https://pubmed.ncbi.nlm.nih.gov/40396480/", authors:"Thomson Rachel Mary et al."},
 
-  {id:55, cat:"学会動向", isNew:false,
+  {id:55, dpp1:true, cat:"学会動向", isNew:false,
    titleJa:"Hope on the horizon for bronchiectasis",
    titleEn:"Hope on the horizon for bronchiectasis",
    journal:"CHEST Physician", date:"2025-09", year:2025,
@@ -4894,7 +4897,7 @@ function getFiltered() {
   const sort = document.getElementById('sortSel').value;
   let filtered = ARTICLES.filter(a => {
     const matchCat = currentFilter === 'all' || a.cat === currentFilter;
-    const matchEv = currentEv === 'all' || a.ev === currentEv;
+    const matchEv = currentEv === 'all' || (currentEv === 'DPP1' ? !!a.dpp1 : a.ev === currentEv);
     const matchJp = !jpOnly || !!a.jpView;
     const matchCore = !coreOnly || !a.scope;
     const matchFav = !favOnly || isFav(a.id);
@@ -4914,7 +4917,7 @@ function filterDesc() {
   const q = document.getElementById('searchInput').value.trim();
   const parts = [];
   parts.push(currentFilter === 'all' ? '全カテゴリ' : currentFilter);
-  if (currentEv !== 'all') parts.push('区分:' + currentEv);
+  if (currentEv !== 'all') parts.push(currentEv === 'DPP1' ? '💊DPP-1阻害薬' : '区分:' + currentEv);
   if (jpOnly) parts.push('🇯🇵日本の視点あり');
   if (coreOnly) parts.push('🎯非CF中核のみ');
   if (q) parts.push('検索:「' + q + '」');
