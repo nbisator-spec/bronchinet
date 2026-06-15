@@ -439,9 +439,9 @@
     <div class="dashboard-header">
       <div class="dashboard-title">
         🔥 本日のハイライト
-        <span class="dashboard-badge">NEW 1件</span>
+        <span class="dashboard-badge">NEW 3件</span>
       </div>
-      <div class="dashboard-date">最終更新：2026-06-15 07:04 自動生成</div>
+      <div class="dashboard-date">最終更新：2026-06-16 07:04 自動生成</div>
     </div>
     <div class="dashboard-grid" id="dashboardGrid"></div>
   </div>
@@ -606,6 +606,13 @@
       <div class="sidebar-card">
         <div class="sidebar-header orange">📅 デイリーレポート履歴</div>
         <div class="sidebar-body">
+          <div class="report-item">
+            <div>
+              <div class="report-date">2026年6月16日（07:04）</div>
+              <div class="report-count">新規3件・試験2件新規</div>
+            </div>
+            <span class="report-link" onclick="showSection('reports',document.querySelectorAll('nav a')[3])">▶ 開く</span>
+          </div>
           <div class="report-item">
             <div>
               <div class="report-date">2026年6月15日（07:04）</div>
@@ -892,6 +899,39 @@
   <div class="reports-page-header">
     <h2>📝 デイリーレポート アーカイブ</h2>
     <p>毎朝8時に自動生成される文献サマリーの履歴。既読除外機能により、常に新規情報のみを収録しています。</p>
+  </div>
+
+  <!-- Report 2026-06-16 07:04 -->
+  <div class="report-card">
+    <div class="report-card-header">
+      <div>
+        <div class="report-card-date">📅 2026年6月16日（07:04 自動生成）</div>
+        <div style="font-size:12px;color:var(--text-muted);margin-top:3px;">除外済み：約357論文 / 89試験</div>
+      </div>
+      <span class="report-card-count">新規 3件・試験 2件</span>
+    </div>
+    <ul class="report-highlight-list">
+      <li>
+        <span class="report-num">1</span>
+        <span class="report-cat-inline" style="background:#dcfce7;color:#166534">マイクロバイオーム・感染</span>
+        <span>喀血BAE施行患者の構造的肺疾患別細菌叢プロファイル（Front Med, 2026）: 気管支拡張症ではPseudomonas 29.2%が最多（非構造異常群1.4%と比べ有意に高頻度）。経験的抗菌薬選択への示唆。<a href="https://pubmed.ncbi.nlm.nih.gov/42292178/" target="_blank" style="color:var(--primary)">PubMed</a></span>
+      </li>
+      <li>
+        <span class="report-num">2</span>
+        <span class="report-cat-inline" style="background:#fee2e2;color:#b91c1c">増悪・病態</span>
+        <span>体肺動脈シャント塞栓術後の右心血行動態（JVIR, 2026）: SV有意増加・右室EF改善（43.0→48.8%）。術前NT-proBNPが予測因子の可能性。<a href="https://pubmed.ncbi.nlm.nih.gov/42288249/" target="_blank" style="color:var(--primary)">PubMed</a></span>
+      </li>
+      <li>
+        <span class="report-num">3</span>
+        <span class="report-cat-inline" style="background:#dcfce7;color:#166534">マイクロバイオーム・感染</span>
+        <span>気管支拡張症におけるNTM有病率SR/メタ解析（New Microbes New Infect, 2026）: NTM有病率0.158、MAC最頻種（0.094）。日本でのNTM疫学状況に合致。<a href="https://pubmed.ncbi.nlm.nih.gov/42291459/" target="_blank" style="color:var(--primary)">PubMed</a></span>
+      </li>
+      <li>
+        <span class="report-num">4</span>
+        <span class="report-cat-inline" style="background:#cffafe;color:#0e7490">臨床試験</span>
+        <span>新規試験①：息切れ知覚観察研究（NCT07648082 / Leicester）、②：NTM肺疾患への吸入高張食塩水（NCT07647575 / 台北栄総）</span>
+      </li>
+    </ul>
   </div>
 
   <!-- Report 2026-06-15 07:04 -->
@@ -1856,8 +1896,38 @@
 // DATA
 // ============================================================
 const ARTICLES = [
+  // ── 2026-06-16 新規 ──
+  {id:352, cat:"マイクロバイオーム・感染", isNew:true,
+   titleJa:"喀血に対するBAE施行患者における構造的肺疾患別の細菌叢プロファイルの差異",
+   titleEn:"Distinct bacterial profiles according to structural lung disease in patients undergoing bronchial artery embolization for hemoptysis",
+   journal:"Frontiers in Medicine", sjr:"Q1", if:"3.0", date:"2026-05", year:2026,
+   ev:"原著",
+   authors:"Ko UW et al.",
+   summary:"188例（気管支拡張症96例含む）のBAE施行例で細菌叢を解析すると、気管支拡張症では緑膿菌（29.2%）が最多で構造的肺疾患なし群（1.4%）と比べ有意に高頻度（p<0.001）。喀血時の経験的抗菌薬選択には背景疾患（構造的肺疾患の種類）を考慮することを推奨した。",
+   jpView:"気管支拡張症患者のBAE後において緑膿菌が主要感染因子である知見は、本邦でも吸入抗菌薬（トブラマイシン等）や全身抗菌薬の適応選択に示唆を与える。緑膿菌適応の有無が治療戦略を左右する国内診療への参考データとなる。",
+   url:"https://pubmed.ncbi.nlm.nih.gov/42292178/"},
+
+  {id:351, cat:"増悪・病態", isNew:true,
+   titleJa:"気管支拡張症患者における体肺動脈シャント塞栓術後の右心血行動態への影響",
+   titleEn:"Impact of systemic-to-pulmonary artery shunt embolization on right heart hemodynamics in patients with bronchiectasis",
+   journal:"Journal of Vascular and Interventional Radiology", sjr:"Q1", date:"2026-06", year:2026,
+   ev:"原著",
+   authors:"Wu H et al.",
+   summary:"20例の気管支拡張症患者に体肺動脈シャント（SPS）塞栓術を施行し、術後に一回拍出量（SV）が有意増加（p=0.048）、心臓MRIで右室駆出率も43.0%→48.8%に改善（p=0.034）した。術前NT-proBNP高値が術後SV改善の予測因子となりうる可能性を示した。",
+   url:"https://pubmed.ncbi.nlm.nih.gov/42288249/"},
+
+  {id:350, cat:"マイクロバイオーム・感染", isNew:true,
+   titleJa:"気管支拡張症におけるNTM有病率：系統的レビューとメタ解析",
+   titleEn:"Prevalence of nontuberculous mycobacteria in bronchiectasis: A systematic review and meta-analysis",
+   journal:"New Microbes and New Infections", sjr:"Q3", date:"2026-06", year:2026,
+   ev:"メタ解析・SR",
+   authors:"Rostamian M et al.",
+   summary:"気管支拡張症患者におけるNTM全体有病率は0.158（95%CI: 0.084–0.276）、NTM肺疾患有病率も同様に0.158（0.067–0.328）。種別ではMAC（Mycobacterium avium complex）が最頻（0.094）であり、MACが気管支拡張症における主要NTM病原体であることをSR/メタ解析で裏付けた。",
+   jpView:"日本はNTM（特にMAC）肺疾患の有病率が世界的に高く、本メタ解析でのMAC最頻種（0.094）は国内の気管支拡張症-NTM診療の疫学的バックグラウンドを裏付ける。NTM同定検査の積極実施と早期治療介入の継続的な重要性を示すエビデンス。",
+   url:"https://pubmed.ncbi.nlm.nih.gov/42291459/"},
+
   // ── 2026-06-15 新規 ──
-  {id:349, cat:"増悪・病態", isNew:true,
+  {id:349, cat:"増悪・病態", isNew:false,
    titleJa:"反復する気管支動脈塞栓術後に発症した右冠動脈―気管支動脈瘻の1例",
    titleEn:"A Case of Right Coronary Artery-Bronchial Artery Fistula Developing After Repeated Bronchial Arterial Embolization",
    journal:"気管支学", date:"2026-01-25", year:2026,
@@ -5290,6 +5360,8 @@ const TRIAL_GROUPS = [
         desc: '肺MAC症患者を対象にガイドラインに準拠した治療に上乗せしたMNKD-101（吸入マンニトール）の有効性・安全性を検討する第3相試験（日本登録）。現在募集中断中。公表日：令和7年12月17日', url: 'https://jrct.mhlw.go.jp/latest-detail/jRCT2021240037' },
       { name: 'NTM症/BE遺伝因子解析（慶應）', drug: '遺伝因子研究（観察研究）', sponsor: '慶應義塾大学 長谷川直樹', phase: '観察研究', status: '募集中', nct: 'jRCT1030200233', color: '#7f1d1d',
         desc: '肺非結核性抗酸菌症/気管支拡張症の遺伝因子の網羅的解析を目的とした国際多施設共同観察研究（慶應義塾大学主導）。疾患感受性遺伝子・バリアントの同定を目指す。公表日：令和4年2月3日', url: 'https://jrct.mhlw.go.jp/latest-detail/jRCT1030200233' },
+      { name: 'NTM肺疾患への吸入高張食塩水（台北栄総）', drug: '吸入高張食塩水（Taipei Veterans General Hospital）', sponsor: 'Taipei Veterans General Hospital, Taiwan', phase: 'N/A', status: 'RECRUITING', nct: 'NCT07647575', color: '#be185d',
+        desc: 'NTM肺疾患患者を対象とした吸入高張食塩水の有効性・安全性を評価する研究（台湾・台北栄総）。NTM-気管支拡張症オーバーラップ例における粘液線毛クリアランス改善を目的とした介入研究。', url: 'https://clinicaltrials.gov/study/NCT07647575' },
     ]
   },
 
@@ -5309,6 +5381,8 @@ const TRIAL_GROUPS = [
         desc: '気管支拡張症患者の下気道における微生物定着の分布と経時的適応進化を追う前向き観察研究（中国・浙江大学）。マイクロバイオームの変化パターンと疾患増悪・予後との関連を縦断的に評価する。', url: 'https://clinicaltrials.gov/study/NCT04966793' },
       { name: 'CF小気道閉塞の見落とし検出（Gelb）', drug: '診断・機能評価研究', sponsor: 'Gelb, Arthur F., M.D.', phase: 'N/A', status: 'RECRUITING', nct: 'NCT03839992', color: '#64748b',
         desc: '嚢胞性線維症患者において通常検査で見落とされやすい小気道閉塞を検出・評価する研究。CF患者の気管支拡張症合併例を含む閉塞性変化の系統的評価を目的とする。', url: 'https://clinicaltrials.gov/study/NCT03839992' },
+      { name: '息切れ知覚観察研究（Leicester）', drug: '観察研究（呼吸器疾患における呼吸困難知覚）', sponsor: 'University Hospitals, Leicester', phase: 'N/A', status: 'RECRUITING', nct: 'NCT07648082', color: '#475569',
+        desc: '呼吸器疾患（気管支拡張症を含む）における息切れ・呼吸困難の患者知覚を評価する観察研究（英国・Leicester）。QoLや患者報告アウトカムへの示唆を目的とする。', url: 'https://clinicaltrials.gov/study/NCT07648082' },
     ]
   },
 
