@@ -4978,8 +4978,9 @@ function getFiltered() {
                    (a.authors && a.authors.toLowerCase().includes(query));
     return matchCat && matchEv && matchJp && matchCore && matchFav && matchQ;
   });
-  if (sort === 'newest') filtered.sort((a, b) => b.year - a.year || b.date.localeCompare(a.date));
-  else if (sort === 'oldest') filtered.sort((a, b) => a.year - b.year || a.date.localeCompare(b.date));
+  const dkey = a => /^\d{4}/.test(a.date) ? a.date : '';
+  if (sort === 'newest') filtered.sort((a, b) => b.year - a.year || dkey(b).localeCompare(dkey(a)));
+  else if (sort === 'oldest') filtered.sort((a, b) => a.year - b.year || dkey(a).localeCompare(dkey(b)));
   else filtered.sort((a, b) => a.cat.localeCompare(b.cat, 'ja'));
   return filtered;
 }
