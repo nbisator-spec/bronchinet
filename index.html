@@ -439,7 +439,7 @@
     <div class="dashboard-header">
       <div class="dashboard-title">
         🔥 本日のハイライト
-        <span class="dashboard-badge">NEW 1件</span>
+        <span class="dashboard-badge">NEW 3件</span>
       </div>
       <div class="dashboard-date">最終更新：2026-06-17 07:04 自動生成</div>
     </div>
@@ -609,7 +609,7 @@
           <div class="report-item">
             <div>
               <div class="report-date">2026年6月17日（07:04）</div>
-              <div class="report-count">新規1件（Thorax社説・好酸球性エンドタイプ）</div>
+              <div class="report-count">新規3件（好酸球性エンドタイプ原著・TB後BE他）</div>
             </div>
             <span class="report-link" onclick="showSection('reports',document.querySelectorAll('nav a')[3])">▶ 開く</span>
           </div>
@@ -915,13 +915,23 @@
         <div class="report-card-date">📅 2026年6月17日（07:04 自動生成）</div>
         <div style="font-size:12px;color:var(--text-muted);margin-top:3px;">除外済み：約358論文 / 89試験</div>
       </div>
-      <span class="report-card-count">新規 1件（社説）</span>
+      <span class="report-card-count">新規 3件</span>
     </div>
     <ul class="report-highlight-list">
       <li>
         <span class="report-num">1</span>
         <span class="report-cat-inline" style="background:#ede9fe;color:#5b21b6">精密医療・エンドタイプ</span>
         <span>好酸球性エンドタイプを解明：EMBARC-BRIDGE研究への社説（Thorax, 2026）: 血中好酸球数のみによるエンドタイプ定義の限界を論じ、気道内LC-MS/MS直接測定の精密医療応用を考察。<a href="https://pubmed.ncbi.nlm.nih.gov/41690777/" target="_blank" style="color:var(--primary)">PubMed</a></span>
+      </li>
+      <li>
+        <span class="report-num">2</span>
+        <span class="report-cat-inline" style="background:#ede9fe;color:#5b21b6">精密医療・エンドタイプ</span>
+        <span>好酸球性エンドタイプ原著：EMBARC-BRIDGE（Thorax Q1, 2026）: 喀痰LC-MS/MS解析にてBEC≥300/μL群でAspergillus PCR陽性率26.7%・感作率24.5%と有意高値。好酸球性エンドタイプ×真菌の重複エンドタイプを実証。<a href="https://pubmed.ncbi.nlm.nih.gov/41690778/" target="_blank" style="color:var(--primary)">PubMed</a></span>
+      </li>
+      <li>
+        <span class="report-num">3</span>
+        <span class="report-cat-inline" style="background:#fee2e2;color:#b91c1c">増悪・病態</span>
+        <span>TB後気管支拡張症の疫学（Infect Dis Poverty Q1, 2026）: タイ全国59,027例コホートでTB後の気管支拡張症再入院HR=3.8（CI 2.9-4.9）。TBサバイバーへの呼吸器サーベイランス強化の必要性。<a href="https://pubmed.ncbi.nlm.nih.gov/42298652/" target="_blank" style="color:var(--primary)">PubMed</a></span>
       </li>
     </ul>
   </div>
@@ -1922,6 +1932,25 @@
 // ============================================================
 const ARTICLES = [
   // ── 2026-06-17 新規 ──
+  {id:355, cat:"精密医療・エンドタイプ", isNew:true,
+   titleJa:"気管支拡張症の好酸球性エンドタイプの臨床的・分子的・微生物学的特性評価：EMBARC-BRIDGE研究データ",
+   titleEn:"Clinical, molecular and microbial characterisation of the eosinophilic endotype of bronchiectasis: data from the EMBARC-BRIDGE study",
+   journal:"Thorax", sjr:"Q1", if:"7.7", date:"2026-06", year:2026,
+   ev:"原著",
+   authors:"Pollock J et al.",
+   summary:"安定期気管支拡張症180例の喀痰をLC-MS/MSで定量化した好酸球タンパク（Gal-10・ECP・EDN等）は放射線学的重症度・FEV1と弱い相関を示した。BEC≥300/μLの好酸球性BE群ではAspergillus PCR陽性率（26.7% vs 7.7%）・感作率（24.5% vs 3.8%）が有意に高く、好酸球性エンドタイプにおける真菌関連との重複が示唆された。",
+   jpView:"好酸球性エンドタイプとAspergillus感作/感染の関連は、日本でもABPM（アレルギー性気管支肺真菌症）合併例が比較的多いことを踏まえ、好酸球数≥300/μL患者へのAspergillus特異的IgE・喀痰PCR検索強化を支持するデータ。",
+   url:"https://pubmed.ncbi.nlm.nih.gov/41690778/"},
+
+  {id:354, cat:"増悪・病態", isNew:true,
+   titleJa:"入院肺結核患者の再入院と生存：タイ全国記録コホート解析（2017-2022年）",
+   titleEn:"Readmission and survival of hospitalized pulmonary tuberculosis patients: a nationwide record-based cohort analysis in Thailand (2017-2022)",
+   journal:"Infectious Diseases of Poverty", sjr:"Q1", date:"2026-06", year:2026,
+   ev:"観察研究",
+   authors:"Htet KKK et al.",
+   summary:"タイの肺TB入院患者59,027例と非TB対照群1:1コホートで、TB後の再入院リスクを検討。気管支拡張症への再入院ハザード比はHR=3.8（95%CI 2.9-4.9）と高リスク因子の一つであり、TBサバイバーにおける呼吸器合併症（気管支拡張症・気胸・心嚢炎）モニタリングの必要性を示した。",
+   url:"https://pubmed.ncbi.nlm.nih.gov/42298652/"},
+
   {id:353, cat:"精密医療・エンドタイプ", isNew:true,
    titleJa:"真実の顆粒：気管支拡張症における好酸球性エンドタイプの解明",
    titleEn:"Granules of truth: unpacking the eosinophilic endotype in bronchiectasis",
