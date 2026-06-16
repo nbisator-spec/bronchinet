@@ -439,9 +439,9 @@
     <div class="dashboard-header">
       <div class="dashboard-title">
         🔥 本日のハイライト
-        <span class="dashboard-badge">NEW 3件</span>
+        <span class="dashboard-badge">NEW 1件</span>
       </div>
-      <div class="dashboard-date">最終更新：2026-06-16 07:04 自動生成</div>
+      <div class="dashboard-date">最終更新：2026-06-17 07:04 自動生成</div>
     </div>
     <div class="dashboard-grid" id="dashboardGrid"></div>
   </div>
@@ -606,6 +606,13 @@
       <div class="sidebar-card">
         <div class="sidebar-header orange">📅 デイリーレポート履歴</div>
         <div class="sidebar-body">
+          <div class="report-item">
+            <div>
+              <div class="report-date">2026年6月17日（07:04）</div>
+              <div class="report-count">新規1件（Thorax社説・好酸球性エンドタイプ）</div>
+            </div>
+            <span class="report-link" onclick="showSection('reports',document.querySelectorAll('nav a')[3])">▶ 開く</span>
+          </div>
           <div class="report-item">
             <div>
               <div class="report-date">2026年6月16日（07:04）</div>
@@ -899,6 +906,24 @@
   <div class="reports-page-header">
     <h2>📝 デイリーレポート アーカイブ</h2>
     <p>毎朝8時に自動生成される文献サマリーの履歴。既読除外機能により、常に新規情報のみを収録しています。</p>
+  </div>
+
+  <!-- Report 2026-06-17 07:04 -->
+  <div class="report-card">
+    <div class="report-card-header">
+      <div>
+        <div class="report-card-date">📅 2026年6月17日（07:04 自動生成）</div>
+        <div style="font-size:12px;color:var(--text-muted);margin-top:3px;">除外済み：約358論文 / 89試験</div>
+      </div>
+      <span class="report-card-count">新規 1件（社説）</span>
+    </div>
+    <ul class="report-highlight-list">
+      <li>
+        <span class="report-num">1</span>
+        <span class="report-cat-inline" style="background:#ede9fe;color:#5b21b6">精密医療・エンドタイプ</span>
+        <span>好酸球性エンドタイプを解明：EMBARC-BRIDGE研究への社説（Thorax, 2026）: 血中好酸球数のみによるエンドタイプ定義の限界を論じ、気道内LC-MS/MS直接測定の精密医療応用を考察。<a href="https://pubmed.ncbi.nlm.nih.gov/41690777/" target="_blank" style="color:var(--primary)">PubMed</a></span>
+      </li>
+    </ul>
   </div>
 
   <!-- Report 2026-06-16 07:04 -->
@@ -1896,8 +1921,19 @@
 // DATA
 // ============================================================
 const ARTICLES = [
+  // ── 2026-06-17 新規 ──
+  {id:353, cat:"精密医療・エンドタイプ", isNew:true,
+   titleJa:"真実の顆粒：気管支拡張症における好酸球性エンドタイプの解明",
+   titleEn:"Granules of truth: unpacking the eosinophilic endotype in bronchiectasis",
+   journal:"Thorax", sjr:"Q1", if:"7.7", date:"2026-06", year:2026,
+   ev:"社説・論説",
+   authors:"Arbiv OA, Thornton CS",
+   summary:"気道内LC-MS/MS法による好酸球タンパク（Gal-10・ECP・EDN等）直接測定と血中好酸球数（BEC≥300/μL）の乖離を詳細に検討したEMBARC-BRIDGE研究に付随する社説。血中好酸球数のみによるエンドタイプ定義の限界を論じ、精密医療における気道直接測定の実臨床応用の意義を考察する。",
+   jpView:"気管支拡張症の好酸球性エンドタイプに基づく精密医療は、日本においても独立した診療ガイドラインが未整備な中、治療可能な形質（Treatable Traits）アプローチの枠組みとして実臨床への適用が期待される。",
+   url:"https://pubmed.ncbi.nlm.nih.gov/41690777/"},
+
   // ── 2026-06-16 新規 ──
-  {id:352, cat:"マイクロバイオーム・感染", isNew:true,
+  {id:352, cat:"マイクロバイオーム・感染", isNew:false,
    titleJa:"喀血に対するBAE施行患者における構造的肺疾患別の細菌叢プロファイルの差異",
    titleEn:"Distinct bacterial profiles according to structural lung disease in patients undergoing bronchial artery embolization for hemoptysis",
    journal:"Frontiers in Medicine", sjr:"Q1", if:"3.0", date:"2026-05", year:2026,
@@ -1907,7 +1943,7 @@ const ARTICLES = [
    jpView:"気管支拡張症患者のBAE後において緑膿菌が主要感染因子である知見は、本邦でも吸入抗菌薬（トブラマイシン等）や全身抗菌薬の適応選択に示唆を与える。緑膿菌適応の有無が治療戦略を左右する国内診療への参考データとなる。",
    url:"https://pubmed.ncbi.nlm.nih.gov/42292178/"},
 
-  {id:351, cat:"増悪・病態", isNew:true,
+  {id:351, cat:"増悪・病態", isNew:false,
    titleJa:"気管支拡張症患者における体肺動脈シャント塞栓術後の右心血行動態への影響",
    titleEn:"Impact of systemic-to-pulmonary artery shunt embolization on right heart hemodynamics in patients with bronchiectasis",
    journal:"Journal of Vascular and Interventional Radiology", sjr:"Q1", date:"2026-06", year:2026,
@@ -1916,7 +1952,7 @@ const ARTICLES = [
    summary:"20例の気管支拡張症患者に体肺動脈シャント（SPS）塞栓術を施行し、術後に一回拍出量（SV）が有意増加（p=0.048）、心臓MRIで右室駆出率も43.0%→48.8%に改善（p=0.034）した。術前NT-proBNP高値が術後SV改善の予測因子となりうる可能性を示した。",
    url:"https://pubmed.ncbi.nlm.nih.gov/42288249/"},
 
-  {id:350, cat:"マイクロバイオーム・感染", isNew:true,
+  {id:350, cat:"マイクロバイオーム・感染", isNew:false,
    titleJa:"気管支拡張症におけるNTM有病率：系統的レビューとメタ解析",
    titleEn:"Prevalence of nontuberculous mycobacteria in bronchiectasis: A systematic review and meta-analysis",
    journal:"New Microbes and New Infections", sjr:"Q3", date:"2026-06", year:2026,
