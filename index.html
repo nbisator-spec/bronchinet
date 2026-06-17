@@ -68,6 +68,9 @@
   .guide-card-title { font-size: 13px; font-weight: 700; color: var(--text); margin-bottom: 4px; line-height: 1.4; }
   .guide-card-meta { font-size: 11px; color: var(--text-muted); margin-bottom: 6px; }
   .guide-card-desc { font-size: 12px; color: #475569; line-height: 1.6; }
+  a.res-card { text-decoration: none; color: inherit; }
+  a.res-card .guide-card-title { color: var(--primary); }
+  a.res-card .guide-card-title::after { content: " ↗"; font-size: 11px; color: var(--text-muted); }
   /* ── REPORTS PAGE ── */
   .reports-page { padding: 20px 0 40px; }
   .reports-page-header { background: linear-gradient(135deg, #78350f, #b45309); color:#fff; border-radius: 12px; padding: 24px; margin-bottom: 20px; }
@@ -423,6 +426,7 @@
     <a onclick="showSection('trials',this)">🧪 臨床試験</a>
     <a onclick="showSection('landscape',this)">🏁 競合ランドスケープ</a>
     <a onclick="showSection('guidelines',this)">📋 ガイドライン</a>
+    <a onclick="showSection('resources',this)">🔗 リソース</a>
     <a onclick="showSection('reports',this)">📝 デイリーレポート</a>
     <a onclick="showSection('trends',this)">📊 トレンド</a>
   </nav>
@@ -904,6 +908,104 @@
       <div class="guide-card-desc">DPP-1阻害薬・吸入抗菌薬・粘液調整薬・生物製剤の最新RCTデータを網羅。各治療ターゲットの機序・臨床試験成果・実臨床での位置付けを体系的にまとめた。</div>
     </div>
   </div>
+</div>
+</div>
+
+<!-- ==================== SECTION: リソース ==================== -->
+<div class="section" id="section-resources">
+<div class="guide-page">
+  <div class="guide-page-header">
+    <h2>🔗 主要レジストリ・リソース</h2>
+    <p>気管支拡張症・NTM診療と研究の一次情報源。国際レジストリ、診療ガイドライン、学会・会議、国内資源、患者支援団体の公式リンク集です（各リンクは外部公式サイト・新しいタブで開きます）。</p>
+  </div>
+
+  <div class="guide-section-title">🌐 国際レジストリ・研究ネットワーク</div>
+  <a class="guide-card res-card" href="https://www.bronchiectasis.net" target="_blank" rel="noopener noreferrer">
+    <div class="guide-card-icon">🇪🇺</div>
+    <div>
+      <div class="guide-card-title">EMBARC — 欧州気管支拡張症登録（European Bronchiectasis Registry）</div>
+      <div class="guide-card-meta">bronchiectasis.net ・ University of Dundee（J. Chalmers主導）</div>
+      <div class="guide-card-desc">汎欧州の大規模レジストリ。重症度指標（BSI）計算ツール、患者報告アウトカム（BHQ/CAAT）、GREAT-2/AIR-NET等の試験情報、ダウンロード可能なスライド資料を公開。気管支拡張症研究の国際ハブ。</div>
+    </div>
+  </a>
+  <a class="guide-card res-card" href="https://www.bronchandntm.org" target="_blank" rel="noopener noreferrer">
+    <div class="guide-card-icon">🇺🇸</div>
+    <div>
+      <div class="guide-card-title">US Bronchiectasis &amp; NTM Research Registry（BRR）</div>
+      <div class="guide-card-meta">bronchandntm.org ・ COPD Foundation / Bronchiectasis and NTM Association</div>
+      <div class="guide-card-desc">米国の非CF気管支拡張症・NTM患者5,000例超を集めたレジストリ。北米の疫学・自然史・治療実態データの基盤で、多施設臨床試験の計画にも活用される。</div>
+    </div>
+  </a>
+  <a class="guide-card res-card" href="https://www.world-bronchiectasis-conference.org" target="_blank" rel="noopener noreferrer">
+    <div class="guide-card-icon">🌍</div>
+    <div>
+      <div class="guide-card-title">World Bronchiectasis Conference（WBC）</div>
+      <div class="guide-card-meta">第9回 2026年6月24–27日・独ハノーバー ・ EMBARC主催</div>
+      <div class="guide-card-desc">世界気管支拡張症会議。気管支拡張症・NTMの最新研究演題、Rising Stars（若手研究者）プログラム、国際ネットワーキングの場。過去回のAbstract Bookも公開。</div>
+    </div>
+  </a>
+
+  <div class="guide-section-title">📋 主要診療ガイドライン</div>
+  <a class="guide-card res-card" href="https://pubmed.ncbi.nlm.nih.gov/41016738/" target="_blank" rel="noopener noreferrer">
+    <div class="guide-card-icon">📘</div>
+    <div>
+      <div class="guide-card-title">ERS 2025 成人気管支拡張症 臨床診療ガイドライン</div>
+      <div class="guide-card-meta">Chalmers JD et al. ・ Eur Respir J 2025（2025年12月）・ PMID: 41016738</div>
+      <div class="guide-card-desc">2017年版以来の大幅改訂。Treatable Traitsを全面採用し、DPP-1阻害薬（ブレンソカチブ）を位置づけ。日本に独立ガイドラインが無いため、国内診療の主要参照となる。</div>
+    </div>
+  </a>
+  <a class="guide-card res-card" href="https://www.brit-thoracic.org.uk/quality-improvement/guidelines/bronchiectasis-in-adults/" target="_blank" rel="noopener noreferrer">
+    <div class="guide-card-icon">📗</div>
+    <div>
+      <div class="guide-card-title">BTS 成人気管支拡張症ガイドライン ＆ Quality Standards</div>
+      <div class="guide-card-meta">British Thoracic Society ・ Hill AT et al, Thorax 2019</div>
+      <div class="guide-card-desc">英国胸部学会のガイドライン。段階的な患者管理アルゴリズムと品質基準（Quality Standards）を提供。ERSと並ぶ実践的参照。</div>
+    </div>
+  </a>
+  <a class="guide-card res-card" href="https://europeanlung.org/en/information-hub/factsheets/managing-bronchiectasis-in-adults/" target="_blank" rel="noopener noreferrer">
+    <div class="guide-card-icon">📙</div>
+    <div>
+      <div class="guide-card-title">ELF 患者向けガイド「Managing bronchiectasis in adults」</div>
+      <div class="guide-card-meta">European Lung Foundation（ERS患者組織）</div>
+      <div class="guide-card-desc">ERSガイドラインの推奨を患者・一般向けに平易に解説。患者教育・説明資料として活用できる。</div>
+    </div>
+  </a>
+
+  <div class="guide-section-title">🗾 日本の主要リソース</div>
+  <a class="guide-card res-card" href="https://www.jrs.or.jp" target="_blank" rel="noopener noreferrer">
+    <div class="guide-card-icon">🏛️</div>
+    <div>
+      <div class="guide-card-title">日本呼吸器学会（JRS）</div>
+      <div class="guide-card-meta">jrs.or.jp</div>
+      <div class="guide-card-desc">国内呼吸器診療の学会。関連する診療指針・ステートメント・学術情報。気管支拡張症の独立ガイドラインは無く、関連領域（NTM・COPD等）の指針を参照。</div>
+    </div>
+  </a>
+  <a class="guide-card res-card" href="https://jrct.mhlw.go.jp" target="_blank" rel="noopener noreferrer">
+    <div class="guide-card-icon">🧬</div>
+    <div>
+      <div class="guide-card-title">JRCT — 臨床研究等提出・公開システム</div>
+      <div class="guide-card-meta">jrct.mhlw.go.jp ・ 厚生労働省</div>
+      <div class="guide-card-desc">国内の臨床試験・研究の検索システム。AIRTIVITY（verducatib）日本人サブグループ等、国内登録試験の最新ステータスを確認できる。</div>
+    </div>
+  </a>
+
+  <div class="guide-section-title">👥 患者・情報支援（NTM / BE）</div>
+  <a class="guide-card res-card" href="https://ntminfo.org" target="_blank" rel="noopener noreferrer">
+    <div class="guide-card-icon">🫁</div>
+    <div>
+      <div class="guide-card-title">NTM Info &amp; Research（NTMir）</div>
+      <div class="guide-card-meta">ntminfo.org</div>
+      <div class="guide-card-desc">NTM肺疾患・気管支拡張症の患者向け情報・サポート団体（米国）。ウェビナー、Provider Referral List、多言語の患者パンフレットを提供。</div>
+    </div>
+  </a>
+  <a class="guide-card res-card" href="https://www.copdfoundation.org/bronchiectasis-and-ntm" target="_blank" rel="noopener noreferrer">
+    <div class="guide-card-icon">💙</div>
+    <div>
+      <div class="guide-card-title">COPD Foundation — Bronchiectasis &amp; NTM</div>
+      <div class="guide-card-meta">copdfoundation.org</div>
+      <div class="guide-card-desc">米国の患者・研究支援団体。BRRレジストリの母体であり、患者教育資料・研究助成・コミュニティ支援を展開。</div>
+    </div>
+  </a>
 </div>
 </div>
 
