@@ -439,9 +439,9 @@
     <div class="dashboard-header">
       <div class="dashboard-title">
         🔥 本日のハイライト
-        <span class="dashboard-badge">NEW 5件</span>
+        <span class="dashboard-badge">NEW 1件</span>
       </div>
-      <div class="dashboard-date">最終更新：2026-06-18 07:04 自動生成</div>
+      <div class="dashboard-date">最終更新：2026-06-18 11:00 自動生成</div>
     </div>
     <div class="dashboard-grid" id="dashboardGrid"></div>
   </div>
@@ -608,8 +608,8 @@
         <div class="sidebar-body">
           <div class="report-item">
             <div>
-              <div class="report-date">2026年6月18日（07:04）</div>
-              <div class="report-count">新規5件（Pa除菌・SA肺炎日本発・PIBO他）</div>
+              <div class="report-date">2026年6月18日（07:04+）</div>
+              <div class="report-count">新規6件（Pa除菌・SA肺炎日本発・AT他）</div>
             </div>
             <span class="report-link" onclick="showSection('reports',document.querySelectorAll('nav a')[3])">▶ 開く</span>
           </div>
@@ -915,38 +915,43 @@
     <p>毎朝8時に自動生成される文献サマリーの履歴。既読除外機能により、常に新規情報のみを収録しています。</p>
   </div>
 
-  <!-- Report 2026-06-18 07:04 -->
+  <!-- Report 2026-06-18 07:04+ -->
   <div class="report-card">
     <div class="report-card-header">
       <div>
-        <div class="report-card-date">📅 2026年6月18日（07:04 自動生成）</div>
-        <div style="font-size:12px;color:var(--text-muted);margin-top:3px;">除外済み：約360論文 / 89試験</div>
+        <div class="report-card-date">📅 2026年6月18日（07:04+ 自動生成）</div>
+        <div style="font-size:12px;color:var(--text-muted);margin-top:3px;">除外済み：約362論文 / 89試験</div>
       </div>
-      <span class="report-card-count">新規 5件</span>
+      <span class="report-card-count">新規 6件</span>
     </div>
     <ul class="report-highlight-list">
       <li>
         <span class="report-num">1</span>
+        <span class="report-cat-inline" style="background:#fee2e2;color:#b91c1c">増悪・病態</span>
+        <span>AT小児19例：アタキシア・テランジエクタジアの26.3%に気管支拡張症が発症、死亡率31.5%と予後不良（Pediatr Allergy Immunol Pulmonol Q3, 2026）。<a href="https://pubmed.ncbi.nlm.nih.gov/42308133/" target="_blank" style="color:var(--primary)">PubMed</a></span>
+      </li>
+      <li>
+        <span class="report-num">2</span>
         <span class="report-cat-inline" style="background:#dcfce7;color:#166534">マイクロバイオーム・感染</span>
         <span>Pa除菌リアルワールド：非CF気管支拡張症における緑膿菌除菌治療の実態をポルトガル多施設後方視的解析（Arch Bronconeumol Q2, IF 9.2, 2026）。<a href="https://pubmed.ncbi.nlm.nih.gov/42303502/" target="_blank" style="color:var(--primary)">PubMed</a></span>
       </li>
       <li>
-        <span class="report-num">2</span>
+        <span class="report-num">3</span>
         <span class="report-cat-inline" style="background:#fef9c3;color:#854d0e">日本発</span>
         <span>SA肺炎リスク因子（東京医科大学）: 気道SA常在化48例でIPF合併・WBC高値が肺炎発症の独立リスク因子（J Thorac Dis Q2, 2026）。<a href="https://pubmed.ncbi.nlm.nih.gov/42306681/" target="_blank" style="color:var(--primary)">PubMed</a></span>
       </li>
       <li>
-        <span class="report-num">3</span>
+        <span class="report-num">4</span>
         <span class="report-cat-inline" style="background:#fee2e2;color:#b91c1c">増悪・病態</span>
         <span>PIBO長期治療：感染後細気管支炎閉塞症乳幼児30例で構造的気管支拡張は12ヶ月後も有意改善せず（Respir Med Q1 / IF 3.1, 2026）。<a href="https://pubmed.ncbi.nlm.nih.gov/42303000/" target="_blank" style="color:var(--primary)">PubMed</a></span>
       </li>
       <li>
-        <span class="report-num">4</span>
+        <span class="report-num">5</span>
         <span class="report-cat-inline" style="background:#fee2e2;color:#b91c1c">増悪・病態</span>
         <span>PCD小児24例：67%に気管支拡張、診断中央値98ヶ月と大幅遅延（Chinese J Contemp Pediatr, 2026）。<a href="https://pubmed.ncbi.nlm.nih.gov/42304999/" target="_blank" style="color:var(--primary)">PubMed</a></span>
       </li>
       <li>
-        <span class="report-num">5</span>
+        <span class="report-num">6</span>
         <span class="report-cat-inline" style="background:#fee2e2;color:#b91c1c">増悪・病態</span>
         <span>SSP表現型：香港223例で気管支拡張症での1年再発率0%、COPD/ILD群では遷延性空気漏れOR 4.02（J Thorac Dis Q2, 2026）。<a href="https://pubmed.ncbi.nlm.nih.gov/42306734/" target="_blank" style="color:var(--primary)">PubMed</a></span>
       </li>
@@ -1977,7 +1982,16 @@
 // ============================================================
 const ARTICLES = [
   // ── 2026-06-18 新規 ──
-  {id:360, cat:"増悪・病態", isNew:true,
+  {id:361, cat:"増悪・病態", isNew:true,
+   titleJa:"小児のアタキシア・テランジエクタジア：単施設における臨床的・免疫学的所見と転帰",
+   titleEn:"Clinical, Immunological Findings, and Outcomes of Children with Ataxia-Telangiectasia: A Single Center Experience.",
+   journal:"Pediatric Allergy, Immunology, and Pulmonology", sjr:"Q3", date:"2026-06-17", year:2026,
+   ev:"観察研究",
+   authors:"Cetinoglu S et al.",
+   summary:"免疫不全を伴う多系統神経変性疾患ATの小児19例（2003-2024年、トルコ単施設）を後方視的解析。気管支拡張症は26.3%（5例）に発症し、IgA欠乏57.9%・死亡率31.5%と予後不良であり、早期多学的フォローアップと反復性副鼻腔肺感染の予防的管理が転帰改善の鍵と結論づけた。",
+   url:"https://pubmed.ncbi.nlm.nih.gov/42308133/"},
+
+  {id:360, cat:"増悪・病態", isNew:false,
    titleJa:"各種基礎肺疾患における続発性自然気胸の臨床表現型：後方視的研究と文献レビュー",
    titleEn:"Clinical phenotypes of secondary spontaneous pneumothorax (SSP) in different underlying lung diseases: a retrospective study and literature review",
    journal:"Journal of Thoracic Disease", sjr:"Q2", if:"1.9", date:"2026-05-27", year:2026,
@@ -1986,7 +2000,7 @@ const ARTICLES = [
    summary:"香港の223例続発性自然気胸を後方視的に解析。気管支拡張症での1年再発率は0%と最低で、COPD/ILD群では遷延性空気漏れリスクが有意に高かった（>14日OR 4.02、95%CI 1.49-10.88）。基礎疾患別の個別化管理が重要と結論づけた。",
    url:"https://pubmed.ncbi.nlm.nih.gov/42306734/"},
 
-  {id:359, cat:"増悪・病態", isNew:true,
+  {id:359, cat:"増悪・病態", isNew:false,
    titleJa:"小児原発性線毛機能不全症候群24例の報告",
    titleEn:"Report of 24 cases of primary ciliary dyskinesia in children",
    journal:"Chinese Journal of Contemporary Pediatrics", date:"2026-06-15", year:2026,
@@ -1995,7 +2009,7 @@ const ARTICLES = [
    summary:"中国・湖南省人民病院のPCD小児24例（2014-2025年）の後方視的解析。67%（16例）に気管支拡張症を確認し、診断中央値は98ヶ月と大幅に遅延。鼻NO測定（全例2.4〜27 nL/min）と遺伝子検査（陽性率85.7%）の早期診断における有用性を強調した。",
    url:"https://pubmed.ncbi.nlm.nih.gov/42304999/"},
 
-  {id:358, cat:"増悪・病態", isNew:true,
+  {id:358, cat:"増悪・病態", isNew:false,
    titleJa:"感染後細気管支炎閉塞症の乳幼児に対する長期治療の多次元評価",
    titleEn:"Multidimensional evaluation of clinical symptoms, pulmonary function, and imaging in long-term treatment of infants with post-infectious bronchiolitis obliterans",
    journal:"Respiratory Medicine", sjr:"Q1", if:"3.1", date:"2026-06-16", year:2026,
@@ -2004,7 +2018,7 @@ const ARTICLES = [
    summary:"PIBO乳幼児30例に標準化治療プロトコル（ブデソニド・AジスロマイシンN・モンテルカスト等）を実施。臨床症状は3ヶ月、肺機能は9ヶ月で有意改善（p<0.05）した一方、気管支拡張・無気肺などの構造的異常は12ヶ月後も有意改善に至らず、長期管理の必要性を示した。",
    url:"https://pubmed.ncbi.nlm.nih.gov/42303000/"},
 
-  {id:357, cat:"日本発", isNew:true,
+  {id:357, cat:"日本発", isNew:false,
    titleJa:"気道黄色ブドウ球菌常在化患者における肺炎発症の臨床的リスク因子",
    titleEn:"Clinical factors associated with the development of Staphylococcus aureus pneumonia in patients with airway colonization",
    journal:"Journal of Thoracic Disease", sjr:"Q2", if:"1.9", date:"2026-05-27", year:2026,
@@ -2014,7 +2028,7 @@ const ARTICLES = [
    summary:"東京医科大学病院での後方視的研究（気道SA常在化48例）。10.4%（5例）がSA肺炎を発症し、発症者では安定期WBC（AUC 0.840）・好中球・好酸球数が有意に高かった。IPF合併が独立した発症リスク因子として同定された。",
    url:"https://pubmed.ncbi.nlm.nih.gov/42306681/"},
 
-  {id:356, cat:"マイクロバイオーム・感染", isNew:true,
+  {id:356, cat:"マイクロバイオーム・感染", isNew:false,
    titleJa:"非嚢胞性線維症気管支拡張症における緑膿菌除菌：多施設リアルワールド解析",
    titleEn:"Eradication of Pseudomonas aeruginosa in Non-Cystic Fibrosis Bronchiectasis: A Multicentre Real-World Analysis",
    journal:"Archivos de Bronconeumologia", sjr:"Q2", if:"9.2", date:"2026-06-04", year:2026,
