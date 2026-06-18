@@ -443,9 +443,9 @@
     <div class="dashboard-header">
       <div class="dashboard-title">
         🔥 本日のハイライト
-        <span class="dashboard-badge">NEW 1件</span>
+        <span class="dashboard-badge">NEW 2件</span>
       </div>
-      <div class="dashboard-date">最終更新：2026-06-18 11:00 自動生成</div>
+      <div class="dashboard-date">最終更新：2026-06-19 07:04 自動生成</div>
     </div>
     <div class="dashboard-grid" id="dashboardGrid"></div>
   </div>
@@ -610,6 +610,13 @@
       <div class="sidebar-card">
         <div class="sidebar-header orange">📅 デイリーレポート履歴</div>
         <div class="sidebar-body">
+          <div class="report-item">
+            <div>
+              <div class="report-date">2026年6月19日（07:04）</div>
+              <div class="report-count">新規2件（細菌培養・Enterobacterales予後）</div>
+            </div>
+            <span class="report-link" onclick="showSection('reports',document.querySelectorAll('nav a')[3])">▶ 開く</span>
+          </div>
           <div class="report-item">
             <div>
               <div class="report-date">2026年6月18日（07:04+）</div>
@@ -1015,6 +1022,29 @@
   <div class="reports-page-header">
     <h2>📝 デイリーレポート アーカイブ</h2>
     <p>毎朝8時に自動生成される文献サマリーの履歴。既読除外機能により、常に新規情報のみを収録しています。</p>
+  </div>
+
+  <!-- Report 2026-06-19 07:04 -->
+  <div class="report-card">
+    <div class="report-card-header">
+      <div>
+        <div class="report-card-date">📅 2026年6月19日（07:04 自動生成）</div>
+        <div style="font-size:12px;color:var(--text-muted);margin-top:3px;">除外済み：約363論文 / 89試験</div>
+      </div>
+      <span class="report-card-count">新規 2件</span>
+    </div>
+    <ul class="report-highlight-list">
+      <li>
+        <span class="report-num">1</span>
+        <span class="report-cat-inline" style="background:#dcfce7;color:#166534">マイクロバイオーム・感染</span>
+        <span>細菌培養と重症度：エジプト60例のBALF培養でH. influenzae最多（40%）、Pseudomonas感染例で酸素飽和度低下・Rieffスコア最重症（BMC Pulm Med Q2, IF 2.8, 2026）。<a href="https://pubmed.ncbi.nlm.nih.gov/42310653/" target="_blank" style="color:var(--primary)">PubMed</a></span>
+      </li>
+      <li>
+        <span class="report-num">2</span>
+        <span class="report-cat-inline" style="background:#fee2e2;color:#b91c1c">増悪・病態</span>
+        <span>Enterobacterales・栄養指数：中国4634例の後ろ向きコホートでEnterobacterales分離が人工呼吸・長期死亡リスク独立増加、PNI高値は保護的（Arch Bronconeumol Q2, IF 9.2, 2026）。<a href="https://pubmed.ncbi.nlm.nih.gov/42309932/" target="_blank" style="color:var(--primary)">PubMed</a></span>
+      </li>
+    </ul>
   </div>
 
   <!-- Report 2026-06-18 07:04+ -->
@@ -2083,8 +2113,27 @@
 // DATA
 // ============================================================
 const ARTICLES = [
+  // ── 2026-06-19 新規 ──
+  {id:363, cat:"増悪・病態", isNew:true,
+   titleJa:"入院気管支拡張症におけるEnterobacteralesと予後栄養指数：人工呼吸と長期死亡との関連",
+   titleEn:"Enterobacterales and Prognostic Nutritional Index in Hospitalised Bronchiectasis: Associations With Mechanical Ventilation and Long-Term Mortality.",
+   journal:"Archivos de bronconeumologia", sjr:"Q2", if:"9.2", date:"2026-06-03", year:2026,
+   ev:"観察研究",
+   authors:"Sun J et al.",
+   jpView:"入院BE増悪患者でPNI（予後栄養指数）が人工呼吸・死亡の保護因子であることは、高齢者比率が高い本邦のNTM-BE患者への栄養管理の重要性を示唆する（ただし中国単施設データ）。",
+   summary:"中国単施設4634例の後ろ向きコホート研究。Enterobacterales分離（4.9%）は人工呼吸器装着（aOR 2.39）・疾患特異的死亡（aHR 1.49）と独立に関連し、特にE. coliが全死因・疾患特異的死亡双方のリスクを増加させた。予後栄養指数（PNI）の高値は死亡・人工呼吸器リスクを低下させた。",
+   url:"https://pubmed.ncbi.nlm.nih.gov/42309932/"},
+  {id:362, cat:"マイクロバイオーム・感染", isNew:true,
+   titleJa:"気管支拡張症患者の細菌学と疾患重症度との関連",
+   titleEn:"The bacteriology of bronchiectasis patients and relation to disease severity.",
+   journal:"BMC Pulmonary Medicine", sjr:"Q2", if:"2.8", date:"2026-06-17", year:2026,
+   ev:"観察研究",
+   authors:"Farhat ES et al.",
+   summary:"エジプト単施設60例でBAL液培養を施行。H. influenzae（40%）＞Pseudomonas（26.7%）＞Klebsiella（20%）の順に分離され、Pseudomonas感染例で酸素飽和度低下と修正Rieffスコア重症化が最も顕著であった。",
+   url:"https://pubmed.ncbi.nlm.nih.gov/42310653/"},
+
   // ── 2026-06-18 新規 ──
-  {id:361, cat:"増悪・病態", isNew:true,
+  {id:361, cat:"増悪・病態", isNew:false,
    titleJa:"小児のアタキシア・テランジエクタジア：単施設における臨床的・免疫学的所見と転帰",
    titleEn:"Clinical, Immunological Findings, and Outcomes of Children with Ataxia-Telangiectasia: A Single Center Experience.",
    journal:"Pediatric Allergy, Immunology, and Pulmonology", sjr:"Q3", date:"2026-06-17", year:2026,
