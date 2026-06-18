@@ -443,7 +443,7 @@
     <div class="dashboard-header">
       <div class="dashboard-title">
         🔥 本日のハイライト
-        <span class="dashboard-badge">NEW 2件</span>
+        <span class="dashboard-badge">NEW 3件</span>
       </div>
       <div class="dashboard-date">最終更新：2026-06-19 07:04 自動生成</div>
     </div>
@@ -612,8 +612,8 @@
         <div class="sidebar-body">
           <div class="report-item">
             <div>
-              <div class="report-date">2026年6月19日（07:04）</div>
-              <div class="report-count">新規2件（細菌培養・Enterobacterales予後）</div>
+              <div class="report-date">2026年6月19日（07:04+）</div>
+              <div class="report-count">新規3件（細菌培養・Enterobacterales予後・PCD小児QoL）</div>
             </div>
             <span class="report-link" onclick="showSection('reports',document.querySelectorAll('nav a')[3])">▶ 開く</span>
           </div>
@@ -1024,14 +1024,14 @@
     <p>毎朝8時に自動生成される文献サマリーの履歴。既読除外機能により、常に新規情報のみを収録しています。</p>
   </div>
 
-  <!-- Report 2026-06-19 07:04 -->
+  <!-- Report 2026-06-19 07:04+ -->
   <div class="report-card">
     <div class="report-card-header">
       <div>
-        <div class="report-card-date">📅 2026年6月19日（07:04 自動生成）</div>
-        <div style="font-size:12px;color:var(--text-muted);margin-top:3px;">除外済み：約363論文 / 89試験</div>
+        <div class="report-card-date">📅 2026年6月19日（07:04+ 自動生成）</div>
+        <div style="font-size:12px;color:var(--text-muted);margin-top:3px;">除外済み：約364論文 / 89試験</div>
       </div>
-      <span class="report-card-count">新規 2件</span>
+      <span class="report-card-count">新規 3件</span>
     </div>
     <ul class="report-highlight-list">
       <li>
@@ -1043,6 +1043,11 @@
         <span class="report-num">2</span>
         <span class="report-cat-inline" style="background:#fee2e2;color:#b91c1c">増悪・病態</span>
         <span>Enterobacterales・栄養指数：中国4634例の後ろ向きコホートでEnterobacterales分離が人工呼吸・長期死亡リスク独立増加、PNI高値は保護的（Arch Bronconeumol Q2, IF 9.2, 2026）。<a href="https://pubmed.ncbi.nlm.nih.gov/42309932/" target="_blank" style="color:var(--primary)">PubMed</a></span>
+      </li>
+      <li>
+        <span class="report-num">3</span>
+        <span class="report-cat-inline" style="background:#fee2e2;color:#b91c1c">増悪・病態</span>
+        <span>PCD小児QoL：PCD小児30例でFEV1/FVC低下が加齢とともに進行し、SGRQスコアは増悪頻度と正相関・肺機能と負相関。HRCTの構造所見はQoLと直接相関しなかった（Pediatr Pulmonol Q1, IF 2.3, 2026）。<a href="https://pubmed.ncbi.nlm.nih.gov/42313717/" target="_blank" style="color:var(--primary)">PubMed</a></span>
       </li>
     </ul>
   </div>
@@ -2114,6 +2119,14 @@
 // ============================================================
 const ARTICLES = [
   // ── 2026-06-19 新規 ──
+  {id:364, cat:"増悪・病態", isNew:true,
+   titleJa:"原発性線毛機能不全症（PCD）小児における肺の構造的・機能的状態とQOLの関係",
+   titleEn:"The Relationship Between Structural and Functional Pulmonary Status and Quality of Life in Children With Primary Ciliary Dyskinesia.",
+   journal:"Pediatric Pulmonology", sjr:"Q1", if:"2.3", date:"2026-06-19", year:2026,
+   ev:"観察研究",
+   authors:"Sarıhan NH et al.",
+   summary:"遺伝的に確認されたPCD小児30例を対象に、肺機能検査・CT（Bhallスコア）・QoL（SGRQ）の横断的関連を検討。FEV1・FVCは加齢とともに低下し、SGRQスコアは増悪頻度と正相関・肺機能と負相関を示したが、HRCTの構造的所見はQoLスコアと直接相関しなかった。",
+   url:"https://pubmed.ncbi.nlm.nih.gov/42313717/"},
   {id:363, cat:"増悪・病態", isNew:true,
    titleJa:"入院気管支拡張症におけるEnterobacteralesと予後栄養指数：人工呼吸と長期死亡との関連",
    titleEn:"Enterobacterales and Prognostic Nutritional Index in Hospitalised Bronchiectasis: Associations With Mechanical Ventilation and Long-Term Mortality.",
