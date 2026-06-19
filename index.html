@@ -445,7 +445,7 @@
         🔥 本日のハイライト
         <span class="dashboard-badge">NEW 3件</span>
       </div>
-      <div class="dashboard-date">最終更新：2026-06-19 07:04 自動生成</div>
+      <div class="dashboard-date">最終更新：2026-06-20 07:04 自動生成</div>
     </div>
     <div class="dashboard-grid" id="dashboardGrid"></div>
   </div>
@@ -610,6 +610,13 @@
       <div class="sidebar-card">
         <div class="sidebar-header orange">📅 デイリーレポート履歴</div>
         <div class="sidebar-body">
+          <div class="report-item">
+            <div>
+              <div class="report-date">2026年6月20日（07:04）</div>
+              <div class="report-count">新規3件（RA肺疾患総説・Pa VOC・PCD症例）</div>
+            </div>
+            <span class="report-link" onclick="showSection('reports',document.querySelectorAll('nav a')[3])">▶ 開く</span>
+          </div>
           <div class="report-item">
             <div>
               <div class="report-date">2026年6月19日（07:04+）</div>
@@ -1022,6 +1029,34 @@
   <div class="reports-page-header">
     <h2>📝 デイリーレポート アーカイブ</h2>
     <p>毎朝8時に自動生成される文献サマリーの履歴。既読除外機能により、常に新規情報のみを収録しています。</p>
+  </div>
+
+  <!-- Report 2026-06-20 07:04 -->
+  <div class="report-card">
+    <div class="report-card-header">
+      <div>
+        <div class="report-card-date">📅 2026年6月20日（07:04 自動生成）</div>
+        <div style="font-size:12px;color:var(--text-muted);margin-top:3px;">除外済み：約367論文 / 89試験</div>
+      </div>
+      <span class="report-card-count">新規 3件</span>
+    </div>
+    <ul class="report-highlight-list">
+      <li>
+        <span class="report-num">1</span>
+        <span class="report-cat-inline" style="background:#f3e8ff;color:#6b21a8">ガイドライン・総説</span>
+        <span>RA肺疾患総説：RAにおけるILD・気管支拡張症・COPD・気管支炎の病態・スクリーニング・管理戦略を包括的にレビュー。高分解能CT推奨のエビデンスと気管支拡張症の罹患率・死亡率への影響を概説（Nat Rev Rheumatol Q1, 2026）。<a href="https://pubmed.ncbi.nlm.nih.gov/42315602/" target="_blank" style="color:var(--primary)">PubMed</a></span>
+      </li>
+      <li>
+        <span class="report-num">2</span>
+        <span class="report-cat-inline" style="background:#dcfce7;color:#166534">マイクロバイオーム・感染</span>
+        <span>Pa VOC解析：CF・気管支拡張症・COPD由来48株のP. aeruginosaのVOCを網羅解析。急性株は芳香族（アセトフェノン）、慢性株は脂肪族化合物が優位。LasR欠損は硫黄系VOC低下と関連（Sci Rep Q1, IF 3.9, 2026）。<a href="https://pubmed.ncbi.nlm.nih.gov/42315557/" target="_blank" style="color:var(--primary)">PubMed</a></span>
+      </li>
+      <li>
+        <span class="report-num">3</span>
+        <span class="report-cat-inline" style="background:#fee2e2;color:#b91c1c">増悪・病態</span>
+        <span>PCD/DNAH11症例：9歳中国人女児でDNAH11複合ヘテロ変異（ミスセンス＋エクソン30-54重複）を同定しPCD確定診断。全エクソームへのCNV解析統合の重要性を示す（Front Genet Q2, 2026）。<a href="https://pubmed.ncbi.nlm.nih.gov/42317261/" target="_blank" style="color:var(--primary)">PubMed</a></span>
+      </li>
+    </ul>
   </div>
 
   <!-- Report 2026-06-19 07:04+ -->
@@ -2118,8 +2153,35 @@
 // DATA
 // ============================================================
 const ARTICLES = [
+  // ── 2026-06-20 新規 ──
+  {id:367, cat:"増悪・病態", isNew:true,
+   titleJa:"症例報告：原発性線毛機能不全症の高疑い表現型小児におけるエクソン30-54重複を含む新規複合ヘテロ接合変異",
+   titleEn:"Case report: novel compound heterozygous variants including an exon 30-54 duplication in a child with a highly suggestive primary ciliary dyskinesia phenotype.",
+   journal:"Frontiers in Genetics", sjr:"Q2", date:"2026-06-04", year:2026,
+   ev:"症例報告",
+   authors:"Wang S et al.",
+   summary:"9歳中国人女児でDNAH11遺伝子の複合ヘテロ変異（父由来ミスセンスc.6556A>C・母由来エクソン30-54重複）を同定しPCDを確定診断。トリオ全エクソーム解析へのCNV解析統合の重要性を示す症例報告。",
+   url:"https://pubmed.ncbi.nlm.nih.gov/42317261/"},
+  {id:366, cat:"マイクロバイオーム・感染", isNew:true,
+   titleJa:"臨床的緑膿菌株を追跡するための揮発性有機化合物プロファイリング",
+   titleEn:"Volatile organic compound profiling for tracking clinical Pseudomonas aeruginosa isolates.",
+   journal:"Scientific reports", sjr:"Q1", if:"3.9", date:"2026-06-18", year:2026,
+   ev:"原著",
+   authors:"García-Barceló MT et al.",
+   summary:"CF・気管支拡張症・COPD由来の臨床P. aeruginosa株48株のVOC（揮発性有機化合物）を網羅解析。急性感染株は芳香族化合物（アセトフェノン）優位、慢性感染株は脂肪族化合物優位であり、LasR機能欠損株は硫黄系VOC産生低下を示した。",
+   url:"https://pubmed.ncbi.nlm.nih.gov/42315557/"},
+  {id:365, cat:"ガイドライン・総説", isNew:true,
+   titleJa:"関節リウマチにおける肺疾患",
+   titleEn:"Lung disease in rheumatoid arthritis.",
+   journal:"Nature reviews. Rheumatology", sjr:"Q1", date:"2026-06-18", year:2026,
+   ev:"総説",
+   authors:"Bendstrup E et al.",
+   jpView:"RA関連気管支拡張症・ILDは日本でも見逃されやすい合併症であり、生物学的DMARD投与患者での定期的CT・肺機能モニタリング強化を論じる際の根拠資料となる。",
+   summary:"RAにおける肺合併症（ILD・COPD・気管支拡張症・気管支炎）の病態・スクリーニング・管理戦略を包括的にレビュー。高分解能CT推奨のエビデンスと、RA-ILD治療エビデンスの限界、気管支拡張症の罹患率・死亡率への影響を概説。",
+   url:"https://pubmed.ncbi.nlm.nih.gov/42315602/"},
+
   // ── 2026-06-19 新規 ──
-  {id:364, cat:"増悪・病態", isNew:true,
+  {id:364, cat:"増悪・病態", isNew:false,
    titleJa:"原発性線毛機能不全症（PCD）小児における肺の構造的・機能的状態とQOLの関係",
    titleEn:"The Relationship Between Structural and Functional Pulmonary Status and Quality of Life in Children With Primary Ciliary Dyskinesia.",
    journal:"Pediatric Pulmonology", sjr:"Q1", if:"2.3", date:"2026-06-19", year:2026,
@@ -2127,7 +2189,7 @@ const ARTICLES = [
    authors:"Sarıhan NH et al.",
    summary:"遺伝的に確認されたPCD小児30例を対象に、肺機能検査・CT（Bhallスコア）・QoL（SGRQ）の横断的関連を検討。FEV1・FVCは加齢とともに低下し、SGRQスコアは増悪頻度と正相関・肺機能と負相関を示したが、HRCTの構造的所見はQoLスコアと直接相関しなかった。",
    url:"https://pubmed.ncbi.nlm.nih.gov/42313717/"},
-  {id:363, cat:"増悪・病態", isNew:true,
+  {id:363, cat:"増悪・病態", isNew:false,
    titleJa:"入院気管支拡張症におけるEnterobacteralesと予後栄養指数：人工呼吸と長期死亡との関連",
    titleEn:"Enterobacterales and Prognostic Nutritional Index in Hospitalised Bronchiectasis: Associations With Mechanical Ventilation and Long-Term Mortality.",
    journal:"Archivos de bronconeumologia", sjr:"Q2", if:"9.2", date:"2026-06-03", year:2026,
@@ -2136,7 +2198,7 @@ const ARTICLES = [
    jpView:"入院BE増悪患者でPNI（予後栄養指数）が人工呼吸・死亡の保護因子であることは、高齢者比率が高い本邦のNTM-BE患者への栄養管理の重要性を示唆する（ただし中国単施設データ）。",
    summary:"中国単施設4634例の後ろ向きコホート研究。Enterobacterales分離（4.9%）は人工呼吸器装着（aOR 2.39）・疾患特異的死亡（aHR 1.49）と独立に関連し、特にE. coliが全死因・疾患特異的死亡双方のリスクを増加させた。予後栄養指数（PNI）の高値は死亡・人工呼吸器リスクを低下させた。",
    url:"https://pubmed.ncbi.nlm.nih.gov/42309932/"},
-  {id:362, cat:"マイクロバイオーム・感染", isNew:true,
+  {id:362, cat:"マイクロバイオーム・感染", isNew:false,
    titleJa:"気管支拡張症患者の細菌学と疾患重症度との関連",
    titleEn:"The bacteriology of bronchiectasis patients and relation to disease severity.",
    journal:"BMC Pulmonary Medicine", sjr:"Q2", if:"2.8", date:"2026-06-17", year:2026,
