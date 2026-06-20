@@ -473,9 +473,9 @@
     <div class="dashboard-header">
       <div class="dashboard-title">
         🔥 本日のハイライト
-        <span class="dashboard-badge">NEW 3件</span>
+        <span class="dashboard-badge">NEW 2件</span>
       </div>
-      <div class="dashboard-date">最終更新：2026-06-20 07:04 自動生成</div>
+      <div class="dashboard-date">最終更新：2026-06-21 07:04 自動生成</div>
     </div>
     <div class="dashboard-grid" id="dashboardGrid"></div>
   </div>
@@ -640,6 +640,13 @@
       <div class="sidebar-card">
         <div class="sidebar-header orange">📅 デイリーレポート履歴</div>
         <div class="sidebar-body">
+          <div class="report-item">
+            <div>
+              <div class="report-date">2026年6月21日（07:04）</div>
+              <div class="report-count">新規2件（BE-COPD/喘息合併メタ解析・PCD診断精度）</div>
+            </div>
+            <span class="report-link" onclick="showSection('reports',document.querySelectorAll('nav a')[3])">▶ 開く</span>
+          </div>
           <div class="report-item">
             <div>
               <div class="report-date">2026年6月20日（07:04）</div>
@@ -1080,6 +1087,29 @@
   <div class="reports-page-header">
     <h2>📝 デイリーレポート アーカイブ</h2>
     <p>毎朝8時に自動生成される文献サマリーの履歴。既読除外機能により、常に新規情報のみを収録しています。</p>
+  </div>
+
+  <!-- Report 2026-06-21 07:04 -->
+  <div class="report-card">
+    <div class="report-card-header">
+      <div>
+        <div class="report-card-date">📅 2026年6月21日（07:04 自動生成）</div>
+        <div style="font-size:12px;color:var(--text-muted);margin-top:3px;">除外済み：約369論文 / 89試験</div>
+      </div>
+      <span class="report-card-count">新規 2件</span>
+    </div>
+    <ul class="report-highlight-list">
+      <li>
+        <span class="report-num">1</span>
+        <span class="report-cat-inline" style="background:#fef3c7;color:#92400e">COPD合併</span>
+        <span>BE-COPD/喘息合併率メタ解析：52研究・81,779名の解析でBE患者のCOPD合併率18%・喘息16%を定量化。地域差・研究デザインで変動大（I²=99%）。表現型主導アプローチの重要性を示す（BMC Pulm Med Q2, IF 2.8, 2026）。<a href="https://pubmed.ncbi.nlm.nih.gov/42321713/" target="_blank" style="color:var(--primary)">PubMed</a></span>
+      </li>
+      <li>
+        <span class="report-num">2</span>
+        <span class="report-cat-inline" style="background:#fee2e2;color:#b91c1c">増悪・病態</span>
+        <span>成人PCD臨床診断精度：156名の後ろ向き研究で4臨床基準（≥2）の感度95%・特異度88%、鼻腔NO（nNO&lt;77 nL/min）感度88%・特異度98%。不妊を加えた5基準で感度100%達成（Chest Q1, IF 8.6, 2026）。<a href="https://pubmed.ncbi.nlm.nih.gov/42248299/" target="_blank" style="color:var(--primary)">PubMed</a></span>
+      </li>
+    </ul>
   </div>
 
   <!-- Report 2026-06-20 07:04 -->
@@ -2204,8 +2234,28 @@
 // DATA
 // ============================================================
 const ARTICLES = [
+  // ── 2026-06-21 新規 ──
+  {id:369, cat:"COPD合併", isNew:true,
+   titleJa:"気管支拡張症患者におけるCOPDまたは喘息の合併：系統的レビューとメタ解析",
+   titleEn:"Coexistence of COPD or asthma in patients with bronchiectasis: a systematic review and meta-analysis.",
+   journal:"BMC Pulmonary Medicine", sjr:"Q2", if:"2.8", date:"2026-06-19", year:2026,
+   ev:"メタ解析・SR",
+   authors:"Wen Y, Zhang Y, Chen Y, Fan R",
+   aui:"Wen Zhang Chen Fan",
+   summary:"52研究（81,779名）のメタ解析でBE患者のCOPD合併率18%（95%CI: 14-22%）、喘息合併率16%（95%CI: 11-20%）と推計。女性比率が喘息有病率の弱い予測因子（β=3.97）だが異質性（I²=99%）の大部分は未測定因子に起因し、表現型主導の統合管理アプローチを支持する。",
+   url:"https://pubmed.ncbi.nlm.nih.gov/42321713/"},
+  {id:368, cat:"増悪・病態", isNew:true,
+   titleJa:"成人原発性線毛機能不全症の診断における臨床表現型の精度",
+   titleEn:"Accuracy of Clinical Phenotype for Diagnosing Adults With Primary Ciliary Dyskinesia.",
+   journal:"Chest", sjr:"Q1", if:"8.6", date:"2026-06-04", year:2026,
+   ev:"観察研究",
+   authors:"Marino A, Zysman-Colman ZN, Agbonze J, Leigh MW et al.",
+   aui:"Marino Zysman-Colman Agbonze Leigh Davis Ferkol Olivier Knowles Zariwala Landry Swaleh Shapiro",
+   summary:"成人PCD疑い例156名（うち確定診断41名26%）で主要4臨床基準（≥2項目充足）の感度95%・特異度88%を確認。鼻腔NO（nNO<77 nL/min）は感度88%・特異度98%を示し、不妊/妊孕性低下を5番目の基準として追加すると感度が100%に向上した。",
+   url:"https://pubmed.ncbi.nlm.nih.gov/42248299/"},
+
   // ── 2026-06-20 新規 ──
-  {id:367, cat:"増悪・病態", isNew:true,
+  {id:367, cat:"増悪・病態", isNew:false,
    titleJa:"症例報告：原発性線毛機能不全症の高疑い表現型小児におけるエクソン30-54重複を含む新規複合ヘテロ接合変異",
    titleEn:"Case report: novel compound heterozygous variants including an exon 30-54 duplication in a child with a highly suggestive primary ciliary dyskinesia phenotype.",
    journal:"Frontiers in Genetics", sjr:"Q2", date:"2026-06-04", year:2026,
@@ -2213,7 +2263,7 @@ const ARTICLES = [
    authors:"Wang S et al.",
    aui:"Wang Zhang Wu He Chen Xu Lv Ji Wang", summary:"9歳中国人女児でDNAH11遺伝子の複合ヘテロ変異（父由来ミスセンスc.6556A>C・母由来エクソン30-54重複）を同定しPCDを確定診断。トリオ全エクソーム解析へのCNV解析統合の重要性を示す症例報告。",
    url:"https://pubmed.ncbi.nlm.nih.gov/42317261/"},
-  {id:366, cat:"マイクロバイオーム・感染", isNew:true,
+  {id:366, cat:"マイクロバイオーム・感染", isNew:false,
    titleJa:"臨床的緑膿菌株を追跡するための揮発性有機化合物プロファイリング",
    titleEn:"Volatile organic compound profiling for tracking clinical Pseudomonas aeruginosa isolates.",
    journal:"Scientific reports", sjr:"Q1", if:"3.9", date:"2026-06-18", year:2026,
@@ -2221,7 +2271,7 @@ const ARTICLES = [
    authors:"García-Barceló MT et al.",
    aui:"García-Barceló Martorell González-Alsina Doménech-Sánchez Gomila Albertí Mateu-Borràs", summary:"CF・気管支拡張症・COPD由来の臨床P. aeruginosa株48株のVOC（揮発性有機化合物）を網羅解析。急性感染株は芳香族化合物（アセトフェノン）優位、慢性感染株は脂肪族化合物優位であり、LasR機能欠損株は硫黄系VOC産生低下を示した。",
    url:"https://pubmed.ncbi.nlm.nih.gov/42315557/"},
-  {id:365, cat:"ガイドライン・総説", isNew:true,
+  {id:365, cat:"ガイドライン・総説", isNew:false,
    titleJa:"関節リウマチにおける肺疾患",
    titleEn:"Lung disease in rheumatoid arthritis.",
    journal:"Nature reviews. Rheumatology", sjr:"Q1", date:"2026-06-18", year:2026,
