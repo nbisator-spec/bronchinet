@@ -71,6 +71,33 @@
   a.res-card { text-decoration: none; color: inherit; }
   a.res-card .guide-card-title { color: var(--primary); }
   a.res-card .guide-card-title::after { content: " ↗"; font-size: 11px; color: var(--text-muted); }
+  .kol-controls { display:flex; align-items:center; gap:8px; flex-wrap:wrap; margin:4px 0 14px; }
+  .kol-ctl-label { font-size:12px; color:var(--text-muted); }
+  .kol-sort { font-size:12px; padding:5px 12px; border-radius:14px; border:1px solid var(--border); background:#fff; color:#475569; cursor:pointer; }
+  .kol-sort.active { background:var(--primary); color:#fff; border-color:var(--primary); }
+  .kol-grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(330px,1fr)); gap:12px; }
+  .kol-grid-compact { grid-template-columns:repeat(auto-fill,minmax(250px,1fr)); }
+  .kol-card { background:var(--card-bg); border:1px solid var(--border); border-radius:10px; padding:14px; display:flex; flex-direction:column; gap:8px; }
+  .kol-card:hover { box-shadow:0 4px 12px rgba(0,0,0,0.07); }
+  .kol-top { display:flex; align-items:baseline; gap:8px; }
+  .kol-rank { font-size:13px; font-weight:800; color:var(--primary); min-width:26px; }
+  .kol-name { font-size:14px; font-weight:700; color:var(--text); }
+  .kol-name-en { font-size:11px; color:var(--text-muted); margin-left:6px; font-weight:500; }
+  .kol-inst { font-size:11.5px; color:#475569; }
+  .kol-metrics { display:flex; gap:6px; flex-wrap:wrap; }
+  .kol-met { font-size:10px; font-weight:700; padding:2px 7px; border-radius:10px; background:#f1f5f9; color:#334155; }
+  .kol-met b { color:var(--primary); font-size:11px; }
+  .kol-role { font-size:10px; font-weight:800; padding:2px 8px; border-radius:10px; }
+  .kol-role.pi { background:#dcfce7; color:#15803d; }
+  .kol-role.work { background:#dbeafe; color:#1d4ed8; }
+  .kol-role.next { background:#fae8ff; color:#a21caf; }
+  .kol-focus { font-size:11.5px; color:#475569; line-height:1.5; }
+  .kol-tags { display:flex; gap:5px; flex-wrap:wrap; }
+  .kol-tag { font-size:10px; padding:1px 7px; border-radius:8px; background:#eef2ff; color:#4338ca; }
+  .kol-links { display:flex; gap:8px; margin-top:2px; }
+  .kol-link { font-size:11px; font-weight:700; color:var(--primary); cursor:pointer; text-decoration:none; border:1px solid var(--border); padding:3px 9px; border-radius:7px; }
+  .kol-link:hover { background:#f1f5f9; }
+  .kol-note { font-size:11px; color:var(--text-muted); margin:10px 0 4px; line-height:1.6; }
   /* ── REPORTS PAGE ── */
   .reports-page { padding: 20px 0 40px; }
   .reports-page-header { background: linear-gradient(135deg, #78350f, #b45309); color:#fff; border-radius: 12px; padding: 24px; margin-bottom: 20px; }
@@ -425,6 +452,7 @@
     <a class="active" onclick="showSection('articles',this)">📚 文献一覧</a>
     <a onclick="showSection('trials',this)">🧪 臨床試験</a>
     <a onclick="showSection('landscape',this)">🏁 競合ランドスケープ</a>
+    <a onclick="showSection('researchers',this)">👥 研究者</a>
     <a onclick="showSection('guidelines',this)">📋 ガイドライン</a>
     <a onclick="showSection('resources',this)">🔗 リソース</a>
     <a onclick="showSection('reports',this)">📝 デイリーレポート</a>
@@ -840,6 +868,27 @@
     <p>気管支拡張症の開発品を薬剤別に集約。クラス・企業・各地域（🇺🇸/🇪🇺/🇯🇵）の開発状況、進行中試験（CT.gov/JRCT/CTIS）、関連文献数を横断的に把握できます。承認状況は2026年時点・要再確認。</p>
   </div>
   <div id="landscapeGrid"></div>
+</div>
+</div>
+
+<!-- ==================== SECTION: 研究者（KOL） ==================== -->
+<div class="section" id="section-researchers">
+<div class="guide-page">
+  <div class="guide-page-header">
+    <h2>👥 研究者ダッシュボード（KOLマッピング）</h2>
+    <p>気管支拡張症領域の主要研究者を、面会準備・KOLエンゲージメントの起点として整理。日本人研究者はPubMed書誌解析（<code>bronchiectasis[tiab] AND Japan[Affiliation]</code>, 2021–2026、252論文）に基づく論文数・役割（筆頭/責任）・専門テーマです。各カードから本ポータル内の論文絞り込み・PubMed著者検索ができます。</p>
+  </div>
+  <div class="kol-controls">
+    <span class="kol-ctl-label">並び替え:</span>
+    <button class="kol-sort active" data-sort="n" onclick="sortKol('n',this)">論文数</button>
+    <button class="kol-sort" data-sort="last" onclick="sortKol('last',this)">責任著者（PI指標）</button>
+    <button class="kol-sort" data-sort="first" onclick="sortKol('first',this)">筆頭著者（実働指標）</button>
+  </div>
+  <div class="guide-section-title">🗾 日本の主要研究者（過去5年・Japan所属）</div>
+  <div id="kolJpGrid" class="kol-grid"></div>
+  <p class="kol-note">※ 同姓イニシャル（例: Ito M / Ito Y）は機械集計上の名寄せ限界があり、論文数は参考値。役割: <b>PI型</b>=責任著者が多く研究室を主宰／<b>実働型</b>=筆頭著者として手を動かす中核／<b>新世代</b>=今後を牽引する若手・中堅。</p>
+  <div class="guide-section-title">🌐 国際的キーオピニオンリーダー（本ポータル収録論文での頻度）</div>
+  <div id="kolGlobalGrid" class="kol-grid kol-grid-compact"></div>
 </div>
 </div>
 
@@ -6058,6 +6107,101 @@ function tSort(obj, desc = true, limit) {
   let e = Object.entries(obj).sort((a, b) => desc ? b[1] - a[1] : a[1] - b[1]);
   return limit ? e.slice(0, limit) : e;
 }
+// ============================================================
+// 研究者（KOL）ダッシュボード
+// 日本人: PubMed "bronchiectasis[tiab] AND Japan[Affiliation]" 2021-2026 / 252論文の書誌解析
+// ============================================================
+const KOL_JP = [
+  { nameJa:'森本 耕三', en:'Morimoto K', inst:'複十字病院（結核予防会）', n:25, first:3, last:6, role:'pi', focus:'NTM・気管支拡張症の疫学（国内第一人者）', tags:['NTM','疫学'] },
+  { nameJa:'長谷川 直樹', en:'Hasegawa N', inst:'慶應義塾大学 感染症学', n:17, first:0, last:4, role:'pi', focus:'呼吸器感染症・NTM・パイプライン研究', tags:['NTM','感染症'], trial:'NTM症/BE遺伝因子解析（jRCT1030200233）' },
+  { nameJa:'田辺 直也', en:'Tanabe N', inst:'京都大学 呼吸器内科', n:15, first:7, last:1, role:'work', focus:'定量CT・AI気道セグメンテーション・粘液栓', tags:['画像AI','粘液栓','DPP-1'] },
+  { nameJa:'朝倉 崇徳', en:'Asakura T', inst:'慶應義塾大学 呼吸器内科', n:13, first:2, last:0, role:'next', focus:'非CF気管支拡張症の病態・医療政策（EM供給）', tags:['NTM','病態','政策'] },
+  { nameJa:'平井 豊博', en:'Hirai T', inst:'京都大学 呼吸器内科', n:12, first:0, last:8, role:'pi', focus:'気道病変・画像（京大呼吸器主宰）', tags:['画像','COPD'] },
+  { nameJa:'迎 寛', en:'Mukae H', inst:'長崎大学 呼吸器内科', n:12, first:0, last:7, role:'pi', focus:'呼吸器感染症（長崎大主宰）', tags:['感染症'] },
+  { nameJa:'竹内 健二', en:'Takeuchi K', inst:'三重大学', n:11, first:1, last:3, role:'pi', focus:'PCD診断・日本人創始者変異の疫学', tags:['PCD','遺伝'] },
+  { nameJa:'伊藤 樹', en:'Ito M', inst:'複十字病院（結核予防会）', n:11, first:7, last:0, role:'work', focus:'PCD・遺伝性気管支拡張症の精密医療', tags:['PCD','遺伝'] },
+  { nameJa:'福永 興壱', en:'Fukunaga K', inst:'慶應義塾大学 呼吸器内科', n:10, first:0, last:3, role:'pi', focus:'呼吸器・喘息（慶應呼吸器主宰）', tags:['喘息'] },
+  { nameJa:'慶長 直人', en:'Keicho N', inst:'結核研究所', n:9, first:0, last:6, role:'pi', focus:'肺NTMのゲノム・宿主遺伝因子', tags:['NTM','ゲノム'] },
+  { nameJa:'松本 久子', en:'Matsumoto H', inst:'京都大学／近畿大学', n:9, first:1, last:2, role:'next', focus:'喘息-気管支拡張症オーバーラップ', tags:['喘息','ACO'] },
+  { nameJa:'南宮 湖', en:'Namkoong H', inst:'慶應義塾大学', n:9, first:1, last:1, role:'next', focus:'肺NTMのGWAS・宿主感受性ゲノム', tags:['NTM','GWAS'] },
+  { nameJa:'伊藤 穣', en:'Ito Y', inst:'名古屋市立大学 呼吸器内科', n:9, first:3, last:1, role:'next', focus:'NTM臨床・気道マイクロバイオーム', tags:['NTM','微生物叢'] },
+  { nameJa:'小場 恭子', en:'Obase Y', inst:'長崎大学 呼吸器内科', n:8, first:1, last:0, role:'next', focus:'音声/咳バイオメトリクス・呼吸器感染症', tags:['デジタル','感染症'] },
+  { nameJa:'土方 美奈子 ら（慶長G）', en:'Hijikata M', inst:'結核研究所', n:8, first:0, last:0, role:'work', focus:'NTM感受性遺伝子（宮林・若林と同グループ）', tags:['NTM','遺伝'] },
+];
+// 国際KOL: 所属はThorax(EMBARC-BRIDGE)等の抄録で確認済みのもの
+const KOL_GLOBAL = [
+  { en:'Chalmers JD', inst:'University of Dundee（EMBARC代表・ERSガイドライン議長）', n:25, focus:'BE全般・レジストリ・治療開発' },
+  { en:'Aliberti S', inst:'Humanitas University, Milan', n:17, focus:'BE表現型・国際レジストリ' },
+  { en:'Sibila O', inst:'Hospital Clínic, Barcelona', n:10, focus:'マイクロバイオーム・バイオマーカー' },
+  { en:'Long MB', inst:'University of Dundee', n:10, focus:'好酸球・炎症（Chalmers G）' },
+  { en:'Chotirmall SH', inst:'NTU, Singapore', n:10, focus:'気道マイクロバイオーム・真菌' },
+  { en:'Choi H', inst:'韓国（Korea）', n:9, focus:'NTM・アジアのBE疫学' },
+  { en:'Loebinger MR', inst:'Royal Brompton Hospital, London', n:8, focus:'NTM・BE臨床試験' },
+  { en:'Ringshausen FC', inst:'Hannover（独BEレジストリ PROGNOSIS）', n:8, focus:'レジストリ・疫学' },
+  { en:'Xu JF', inst:'Shanghai（BE-China レジストリ）', n:8, focus:'中国のBE疫学・気道クリアランス' },
+  { en:'Shoemark A', inst:'University of Dundee', n:7, focus:'PCD・線毛・バイオマーカー' },
+  { en:'Shteinberg M', inst:'Carmel Medical Center, Haifa', n:7, focus:'BE・CF・併存症' },
+  { en:'Haworth CS', inst:'Royal Papworth Hospital, Cambridge', n:6, focus:'NTM・吸入抗菌薬' },
+];
+let kolSortKey = 'n';
+function sortKol(key, el){
+  kolSortKey = key;
+  document.querySelectorAll('.kol-sort').forEach(b=>b.classList.remove('active'));
+  el.classList.add('active');
+  buildKol();
+}
+function kolSearch(en){
+  const navs = document.querySelectorAll('nav a');
+  const artNav = [...navs].find(a=>/文献一覧/.test(a.textContent));
+  showSection('articles', artNav);
+  const sb = document.getElementById('searchInput');
+  if (sb){ sb.value = en.split(' ')[0]; sb.dispatchEvent(new Event('input',{bubbles:true})); }
+  window.scrollTo({top:0,behavior:'smooth'});
+}
+const ROLE_LABEL = { pi:'PI型', work:'実働型', next:'新世代' };
+function buildKol(){
+  const jp = document.getElementById('kolJpGrid');
+  if (!jp) return;
+  const arr = KOL_JP.slice().sort((a,b)=> (b[kolSortKey]||0)-(a[kolSortKey]||0) || b.n-a.n);
+  jp.innerHTML = arr.map((k,idx)=>{
+    const pm = `https://pubmed.ncbi.nlm.nih.gov/?term=${encodeURIComponent(k.en+'[au]')}+AND+bronchiectasis`;
+    return `<div class="kol-card">
+      <div class="kol-top"><span class="kol-rank">${idx+1}</span>
+        <span><span class="kol-name">${k.nameJa}</span><span class="kol-name-en">${k.en}</span></span></div>
+      <div class="kol-inst">🏛️ ${k.inst}</div>
+      <div class="kol-metrics">
+        <span class="kol-met">論文 <b>${k.n}</b></span>
+        <span class="kol-met">筆頭 <b>${k.first}</b></span>
+        <span class="kol-met">責任 <b>${k.last}</b></span>
+        <span class="kol-role ${k.role}">${ROLE_LABEL[k.role]}</span>
+      </div>
+      <div class="kol-focus">${k.focus}</div>
+      <div class="kol-tags">${(k.tags||[]).map(t=>`<span class="kol-tag">${t}</span>`).join('')}</div>
+      ${k.trial?`<div class="kol-focus">🧪 関与試験: ${k.trial}</div>`:''}
+      <div class="kol-links">
+        <span class="kol-link" onclick="kolSearch('${k.en}')">📄 収録論文を見る</span>
+        <a class="kol-link" href="${pm}" target="_blank" rel="noopener noreferrer">🔗 PubMed著者検索</a>
+      </div>
+    </div>`;
+  }).join('');
+  const g = document.getElementById('kolGlobalGrid');
+  if (g){
+    const garr = KOL_GLOBAL.slice().sort((a,b)=>b.n-a.n);
+    g.innerHTML = garr.map(k=>{
+      const pm = `https://pubmed.ncbi.nlm.nih.gov/?term=${encodeURIComponent(k.en+'[au]')}+AND+bronchiectasis`;
+      return `<div class="kol-card">
+        <div class="kol-top"><span class="kol-name">${k.en}</span></div>
+        <div class="kol-inst">🏛️ ${k.inst}</div>
+        <div class="kol-metrics"><span class="kol-met">収録論文 <b>${k.n}</b></span></div>
+        <div class="kol-focus">${k.focus}</div>
+        <div class="kol-links">
+          <span class="kol-link" onclick="kolSearch('${k.en}')">📄 収録論文</span>
+          <a class="kol-link" href="${pm}" target="_blank" rel="noopener noreferrer">🔗 PubMed</a>
+        </div>
+      </div>`;
+    }).join('');
+  }
+}
 function buildTrends() {
   const grid = document.getElementById('trendsGrid');
   if (!grid) return;
@@ -6188,6 +6332,7 @@ document.addEventListener('DOMContentLoaded', () => {
   filterArticles();
   buildTrialsPage();
   buildLandscape();
+  buildKol();
   buildTrends();
 });
 </script>
