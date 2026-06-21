@@ -473,9 +473,9 @@
     <div class="dashboard-header">
       <div class="dashboard-title">
         🔥 本日のハイライト
-        <span class="dashboard-badge">NEW 2件</span>
+        <span class="dashboard-badge">NEW 0件</span>
       </div>
-      <div class="dashboard-date">最終更新：2026-06-21 07:04 自動生成</div>
+      <div class="dashboard-date">最終更新：2026-06-22 07:04 自動生成</div>
     </div>
     <div class="dashboard-grid" id="dashboardGrid"></div>
   </div>
@@ -640,6 +640,13 @@
       <div class="sidebar-card">
         <div class="sidebar-header orange">📅 デイリーレポート履歴</div>
         <div class="sidebar-body">
+          <div class="report-item">
+            <div>
+              <div class="report-date">2026年6月22日（07:04）</div>
+              <div class="report-count">新規0件（全ソース確認済み・新規なし）</div>
+            </div>
+            <span class="report-link" onclick="showSection('reports',document.querySelectorAll('nav a')[3])">▶ 開く</span>
+          </div>
           <div class="report-item">
             <div>
               <div class="report-date">2026年6月21日（07:04）</div>
@@ -1087,6 +1094,23 @@
   <div class="reports-page-header">
     <h2>📝 デイリーレポート アーカイブ</h2>
     <p>毎朝8時に自動生成される文献サマリーの履歴。既読除外機能により、常に新規情報のみを収録しています。</p>
+  </div>
+
+  <!-- Report 2026-06-22 07:04 -->
+  <div class="report-card">
+    <div class="report-card-header">
+      <div>
+        <div class="report-card-date">📅 2026年6月22日（07:04 自動生成）</div>
+        <div style="font-size:12px;color:var(--text-muted);margin-top:3px;">除外済み：約369論文 / 89試験</div>
+      </div>
+      <span class="report-card-count">新規 0件</span>
+    </div>
+    <ul class="report-highlight-list">
+      <li>
+        <span class="report-num">—</span>
+        <span>本日は全ソース（PubMed 9クエリ・J-STAGE・CiNii・ClinicalTrials.gov・JRCT・CTIS）を確認しましたが、新規アイテムはありませんでした。過去30日分の論文・試験はすべて既読済みです。</span>
+      </li>
+    </ul>
   </div>
 
   <!-- Report 2026-06-21 07:04 -->
@@ -2235,7 +2259,7 @@
 // ============================================================
 const ARTICLES = [
   // ── 2026-06-21 新規 ──
-  {id:369, cat:"COPD合併", isNew:true,
+  {id:369, cat:"COPD合併", isNew:false,
    titleJa:"気管支拡張症患者におけるCOPDまたは喘息の合併：系統的レビューとメタ解析",
    titleEn:"Coexistence of COPD or asthma in patients with bronchiectasis: a systematic review and meta-analysis.",
    journal:"BMC Pulmonary Medicine", sjr:"Q2", if:"2.8", date:"2026-06-19", year:2026,
@@ -2244,7 +2268,7 @@ const ARTICLES = [
    aui:"Wen Zhang Chen Fan",
    summary:"52研究（81,779名）のメタ解析でBE患者のCOPD合併率18%（95%CI: 14-22%）、喘息合併率16%（95%CI: 11-20%）と推計。女性比率が喘息有病率の弱い予測因子（β=3.97）だが異質性（I²=99%）の大部分は未測定因子に起因し、表現型主導の統合管理アプローチを支持する。",
    url:"https://pubmed.ncbi.nlm.nih.gov/42321713/"},
-  {id:368, cat:"増悪・病態", isNew:true,
+  {id:368, cat:"増悪・病態", isNew:false,
    titleJa:"成人原発性線毛機能不全症の診断における臨床表現型の精度",
    titleEn:"Accuracy of Clinical Phenotype for Diagnosing Adults With Primary Ciliary Dyskinesia.",
    journal:"Chest", sjr:"Q1", if:"8.6", date:"2026-06-04", year:2026,
