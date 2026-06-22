@@ -473,9 +473,9 @@
     <div class="dashboard-header">
       <div class="dashboard-title">
         🔥 本日のハイライト
-        <span class="dashboard-badge">NEW 0件</span>
+        <span class="dashboard-badge">NEW 2件</span>
       </div>
-      <div class="dashboard-date">最終更新：2026-06-22 07:04 自動生成</div>
+      <div class="dashboard-date">最終更新：2026-06-23 07:04 自動生成</div>
     </div>
     <div class="dashboard-grid" id="dashboardGrid"></div>
   </div>
@@ -640,6 +640,13 @@
       <div class="sidebar-card">
         <div class="sidebar-header orange">📅 デイリーレポート履歴</div>
         <div class="sidebar-body">
+          <div class="report-item">
+            <div>
+              <div class="report-date">2026年6月23日（07:04）</div>
+              <div class="report-count">新規2件（咳過敏性パターン・NTM症例シリーズ）</div>
+            </div>
+            <span class="report-link" onclick="showSection('reports',document.querySelectorAll('nav a')[3])">▶ 開く</span>
+          </div>
           <div class="report-item">
             <div>
               <div class="report-date">2026年6月22日（07:04）</div>
@@ -1094,6 +1101,29 @@
   <div class="reports-page-header">
     <h2>📝 デイリーレポート アーカイブ</h2>
     <p>毎朝8時に自動生成される文献サマリーの履歴。既読除外機能により、常に新規情報のみを収録しています。</p>
+  </div>
+
+  <!-- Report 2026-06-23 07:04 -->
+  <div class="report-card">
+    <div class="report-card-header">
+      <div>
+        <div class="report-card-date">📅 2026年6月23日（07:04 自動生成）</div>
+        <div style="font-size:12px;color:var(--text-muted);margin-top:3px;">除外済み：約371論文 / 89試験</div>
+      </div>
+      <span class="report-card-count">新規 2件</span>
+    </div>
+    <ul class="report-highlight-list">
+      <li>
+        <span class="report-num">1</span>
+        <span class="report-cat-inline" style="background:#fee2e2;color:#b91c1c">増悪・病態</span>
+        <span>咳過敏性質問票（CHQ）の多疾患比較：慢性咳嗽300例の前向き研究で気管支拡張症・喘息はCOPD・IPFより幅広いCHQ関連を示し、CHQが多次元的症状プロファイルを捉えることを確認（Respir Med Q1, IF 3.1, 2026）。<a href="https://pubmed.ncbi.nlm.nih.gov/42323027/" target="_blank" style="color:var(--primary)">PubMed</a></span>
+      </li>
+      <li>
+        <span class="report-num">2</span>
+        <span class="report-cat-inline" style="background:#dcfce7;color:#166534">マイクロバイオーム・感染</span>
+        <span>NTM感染症14例シリーズ（トルコ）：M. avium/M. intracellulareが各5例で最多、肺病変10例、感受性検査誘導治療で9例が完全応答。気管支拡張症もリスク因子の1つ（Infect Dis Clin Microbiol Q4, 2026）。<a href="https://pubmed.ncbi.nlm.nih.gov/42327528/" target="_blank" style="color:var(--primary)">PubMed</a></span>
+      </li>
+    </ul>
   </div>
 
   <!-- Report 2026-06-22 07:04 -->
@@ -2258,6 +2288,27 @@
 // DATA
 // ============================================================
 const ARTICLES = [
+  // ── 2026-06-23 新規 ──
+  {id:371, cat:"増悪・病態", isNew:true,
+   titleJa:"呼吸器疾患における咳過敏性パターンの探索",
+   titleEn:"Exploring Cough Hypersensitivity Patterns Across Respiratory Diseases.",
+   journal:"Respiratory Medicine", sjr:"Q1", if:"3.1", date:"2026-06-20", year:2026,
+   ev:"観察研究",
+   authors:"Koo HK, An TJ, Joo H, Rhee CK, Kim SK, Min KH, Kim DK, Jang SH, Shin JW, Yoon HK, Song WJ, Kim JW, Moon JY",
+   aui:"Koo An Joo Rhee Kim Min Kim Jang Shin Yoon Song Kim Moon",
+   summary:"慢性咳嗽患者300例を対象に咳過敏性質問票（CHQ）を用いた前向き多施設研究。気管支拡張症と喘息ではCOPD・IPFと比べCHQ関連が幅広く認められ、CHQが従来の咳測定ツールでは捉えられない多次元的症状プロファイルを把握できることが示された。",
+   url:"https://pubmed.ncbi.nlm.nih.gov/42323027/"},
+  {id:370, cat:"マイクロバイオーム・感染", isNew:true,
+   titleJa:"三次医療センターにおける非結核性抗酸菌感染症14例の臨床的解析（トルコ）",
+   titleEn:"Nontuberculosis Mycobacterial Infections: A Series of 14 Cases from a Tertiary Care Center in Türkiye.",
+   journal:"Infect Dis Clin Microbiol", sjr:"Q4", date:"2026-05-26", year:2026,
+   ev:"症例報告",
+   authors:"Ertürk D, Kaçar-Şahin MT, Demir S, Candevir A, Kömür S, Kuşçu F, Kibar F, İnal AS ほか",
+   aui:"Ertürk Kaçar-Şahin Demir Candevir Kömür Kuşçu Kibar İnal Kurtaran Taşova",
+   summary:"トルコの三次医療センターで診断されたNTM感染症14例の後ろ向き解析。M. aviumとM. intracellulareが各5例で最多、肺病変は10例に認められ、クラリスロマイシン・リネゾリド・アミカシンへの感受性が高かった。感受性検査に基づく治療で12例中9例が完全臨床応答を達成。",
+   jpView:"日本はNTM症（特にMAC）の罹患率が世界的に高く、本報告の菌種分布と薬剤感受性プロファイルは本邦のNTM管理と比較する上で参考となる。感受性検査に基づく治療選択の重要性は日本の診療指針とも一致する。",
+   url:"https://pubmed.ncbi.nlm.nih.gov/42327528/"},
+
   // ── 2026-06-21 新規 ──
   {id:369, cat:"COPD合併", isNew:false,
    titleJa:"気管支拡張症患者におけるCOPDまたは喘息の合併：系統的レビューとメタ解析",
