@@ -473,9 +473,9 @@
     <div class="dashboard-header">
       <div class="dashboard-title">
         🔥 本日のハイライト
-        <span class="dashboard-badge">NEW 2件</span>
+        <span class="dashboard-badge">NEW 5件</span>
       </div>
-      <div class="dashboard-date">最終更新：2026-06-23 07:04 自動生成</div>
+      <div class="dashboard-date">最終更新：2026-06-24 07:04 自動生成</div>
     </div>
     <div class="dashboard-grid" id="dashboardGrid"></div>
   </div>
@@ -640,6 +640,13 @@
       <div class="sidebar-card">
         <div class="sidebar-header orange">📅 デイリーレポート履歴</div>
         <div class="sidebar-body">
+          <div class="report-item">
+            <div>
+              <div class="report-date">2026年6月24日（07:04）</div>
+              <div class="report-count">新規5件（SLE合併BE・PA定着マイクロバイオーム・呼吸器マイクロバイオーム総説・後結核性肺疾患・RCQ妥当性）</div>
+            </div>
+            <span class="report-link" onclick="showSection('reports',document.querySelectorAll('nav a')[3])">▶ 開く</span>
+          </div>
           <div class="report-item">
             <div>
               <div class="report-date">2026年6月23日（07:04）</div>
@@ -1101,6 +1108,44 @@
   <div class="reports-page-header">
     <h2>📝 デイリーレポート アーカイブ</h2>
     <p>毎朝8時に自動生成される文献サマリーの履歴。既読除外機能により、常に新規情報のみを収録しています。</p>
+  </div>
+
+  <!-- Report 2026-06-24 07:04 -->
+  <div class="report-card">
+    <div class="report-card-header">
+      <div>
+        <div class="report-card-date">📅 2026年6月24日（07:04 自動生成）</div>
+        <div style="font-size:12px;color:var(--text-muted);margin-top:3px;">除外済み：約376論文 / 89試験</div>
+      </div>
+      <span class="report-card-count">新規 5件</span>
+    </div>
+    <ul class="report-highlight-list">
+      <li>
+        <span class="report-num">1</span>
+        <span class="report-cat-inline" style="background:#fee2e2;color:#b91c1c">増悪・病態</span>
+        <span>SLE患者の気管支拡張症リスク：韓国全国コホートで対照比1.46倍（95%CI 1.22–1.76）と有意に高く、発症後は死亡率・入院率も増大。自己免疫疾患患者への呼吸器スクリーニングの重要性を示す（RMD Open Q1, 2026）。<a href="https://pubmed.ncbi.nlm.nih.gov/42331395/" target="_blank" style="color:var(--primary)">PubMed</a></span>
+      </li>
+      <li>
+        <span class="report-num">2</span>
+        <span class="report-cat-inline" style="background:#dcfce7;color:#166534">マイクロバイオーム・感染</span>
+        <span>非CF気管支拡張症における緑膿菌定着とBALFマイクロバイオーム（中国・64例）：PA定着群は重症度スコア高値、肺機能低下、微生物叢多様性著明減少・Pseudomonas優勢を確認（Microbiol Spectr Q1, IF 3.8, 2026）。<a href="https://pubmed.ncbi.nlm.nih.gov/42334217/" target="_blank" style="color:var(--primary)">PubMed</a></span>
+      </li>
+      <li>
+        <span class="report-num">3</span>
+        <span class="report-cat-inline" style="background:#dcfce7;color:#166534">マイクロバイオーム・感染</span>
+        <span>呼吸器マイクロバイオームの状態遷移モデル：気管支拡張症を含む慢性気道疾患にわたって粘膜免疫・腸-肺軸・代謝産物が微生物叢安定性を規定するエコロジー枠組みを総説（FEMS Microbiol Ecol Q1, 2026）。<a href="https://pubmed.ncbi.nlm.nih.gov/42329775/" target="_blank" style="color:var(--primary)">PubMed</a></span>
+      </li>
+      <li>
+        <span class="report-num">4</span>
+        <span class="report-cat-inline" style="background:#fee2e2;color:#b91c1c">増悪・病態</span>
+        <span>青年期結核生存者の後結核性肺疾患（ペルー・101例）：治療成功後24ヵ月を通じてFEV1・小気道抵抗が持続悪化し、CTで気管支拡張症・網状影を確認。治療後呼吸機能評価の必要性（Pediatrics Q1, 2026）。<a href="https://pubmed.ncbi.nlm.nih.gov/42331351/" target="_blank" style="color:var(--primary)">PubMed</a></span>
+      </li>
+      <li>
+        <span class="report-num">5</span>
+        <span class="report-cat-inline" style="background:#fee2e2;color:#b91c1c">増悪・病態</span>
+        <span>RCQ（Rapid Cough Questionnaire）の多疾患妥当性検証（韓国・300例）：気管支拡張症含む全サブグループでLCQと高相関（r=0.93）、簡易咳評価ツールの臨床実用性を支持（BMJ Open Respir Res Q1, 2026）。<a href="https://pubmed.ncbi.nlm.nih.gov/42331391/" target="_blank" style="color:var(--primary)">PubMed</a></span>
+      </li>
+    </ul>
   </div>
 
   <!-- Report 2026-06-23 07:04 -->
@@ -2288,8 +2333,56 @@
 // DATA
 // ============================================================
 const ARTICLES = [
+  // ── 2026-06-24 新規 ──
+  {id:372, cat:"増悪・病態", isNew:true,
+   titleJa:"全身性エリテマトーデスにおける気管支拡張症の発症率と疾病負荷：韓国全国コホート研究",
+   titleEn:"Incidence and disease burden of bronchiectasis in systemic lupus erythematosus: a nationwide population-based study in Korea.",
+   journal:"RMD Open", sjr:"Q1", date:"2026-06-22", year:2026,
+   ev:"観察研究",
+   authors:"Min G, Kye DE, Lee H, Eun Y, Kang HK, Choi H, Yang B, Lee H ほか",
+   aui:"Min Kye Lee Eun Kang Choi Yang Lee",
+   summary:"韓国の全国保険データベースを用いたマッチドコホート研究で、SLE患者における気管支拡張症の発症リスクは対照群の1.46倍（95%CI 1.22–1.76）と有意に高いことが示された。SLEで気管支拡張症を発症した患者は死亡率・救急受診・入院率がすべて有意に高く、自己免疫疾患患者への積極的な呼吸器スクリーニングの重要性が示唆される。",
+   url:"https://pubmed.ncbi.nlm.nih.gov/42331395/"},
+  {id:373, cat:"マイクロバイオーム・感染", isNew:true,
+   titleJa:"非CF気管支拡張症患者の気管支肺胞洗浄液における緑膿菌定着と微生物叢多様性の解析",
+   titleEn:"Analysis of clinical characteristics and bronchoalveolar lavage fluid microbial community diversity in non-cystic fibrosis bronchiectasis patients with Pseudomonas aeruginosa colonization.",
+   journal:"Microbiology Spectrum", sjr:"Q1", if:"3.8", date:"2026-06-23", year:2026,
+   ev:"観察研究",
+   authors:"Peng T, Liu C, Li P, Xiong X, Wang Y, Zhang P, Li J, Zhang Q, Zhang W, Ying Y ほか",
+   aui:"Peng Liu Li Xiong Wang Zhang Li Zhang Zhang Ying",
+   jpView:"日本の非CF気管支拡張症においても緑膿菌定着は予後不良因子として知られるが、吸入抗菌薬の保険適応は2026年時点で限定的であり、本研究が示す微生物叢多様性低下と重症度の関連は、定着早期介入の意義を支持するエビデンスとなりうる。",
+   summary:"非CF気管支拡張症64例をPseudomonas aeruginosa（PA）定着群（n=29）と非定着群（n=35）に分け、BALF 16S rRNA解析でマイクロバイオームを比較した観察研究。PA定着群では疾患重症度（BSI・Bhalla・E-FACEDスコア）が有意に高く肺機能が低下し、BALFの微生物叢多様性が著明に減少してPseudomonas優勢・常在菌抑制のパターンを呈した。",
+   url:"https://pubmed.ncbi.nlm.nih.gov/42334217/"},
+  {id:374, cat:"マイクロバイオーム・感染", isNew:true,
+   titleJa:"呼吸器マイクロバイオーム：健康から疾患へのダイナミクス",
+   titleEn:"The respiratory microbiome: dynamics from health to disease.",
+   journal:"FEMS Microbiology Ecology", sjr:"Q1", date:"2026-06-22", year:2026,
+   ev:"総説",
+   authors:"Lin W, Sun Z, Chen J, Huang S ほか",
+   aui:"Lin Sun Chen Huang",
+   summary:"喘息・COPD・CF・気管支拡張症・呼吸器感染症を横断し、呼吸器マイクロバイオームを「状態遷移」エコロジーの枠組みで整理したミニレビュー。粘膜免疫・粘液・腸-肺軸・代謝産物が微生物叢の安定性と疾患感受性を制御するメカニズムを論じ、マイクロバイオーム指向の精密介入に向けた方法論的優先課題を提示する。",
+   url:"https://pubmed.ncbi.nlm.nih.gov/42329775/"},
+  {id:375, cat:"増悪・病態", isNew:true,
+   titleJa:"青年期結核生存者の後結核性肺疾患：ペルー・リマにおける前向きコホート研究",
+   titleEn:"Posttuberculosis Lung Disease in Adolescents in Lima, Peru.",
+   journal:"Pediatrics", sjr:"Q1", date:"2026-06-23", year:2026,
+   ev:"観察研究",
+   authors:"Chiang SS, Andronikou S, Roman Sinche B, Furman M, Schaaf HS, Sant'Anna CC, Otero HJ, Tanzer JR, Lecca L, Byrne AL ほか",
+   aui:"Chiang Andronikou Roman Furman Schaaf Sant'Anna Otero Tanzer Lecca Byrne",
+   summary:"ペルーで結核治療成功した青年101例と健常対照101例を24ヵ月追跡した前向きコホート研究。結核生存者はFEV1・FVC・小気道抵抗（R5・AX）が対照群より有意に悪化したまま持続し、CTでは気管支拡張症・網状影・結節等の構造的異常が多く認められ、治療完了後の呼吸機能評価の必要性が示された。",
+   url:"https://pubmed.ncbi.nlm.nih.gov/42331351/"},
+  {id:376, cat:"増悪・病態", isNew:true,
+   titleJa:"多様な肺疾患を横断したRapid Cough Questionnaireの臨床的妥当性検証",
+   titleEn:"Clinical validation of the Rapid Cough Questionnaire across diverse lung diseases.",
+   journal:"BMJ Open Respiratory Research", sjr:"Q1", date:"2026-06-22", year:2026,
+   ev:"観察研究",
+   authors:"Koo HK, An TJ, Joo H, Rhee CK, Kim YH, Kim SK, Min KH, Kim DK, Shin JW, Yoon HK, Jang SH, Park YB, Kim JW, Moon JY ほか",
+   aui:"Koo An Joo Rhee Kim Kim Min Kim Shin Yoon Jang Park Kim Moon",
+   summary:"COPD・喘息・IPF・気管支拡張症を含む慢性咳嗽患者300例を対象に、簡易版咳評価ツールRCQ（Rapid Cough Questionnaire）の妥当性を多施設前向き研究で検証。RCQはLCQと強い相関（r=0.93）を示し、気管支拡張症を含む全疾患サブグループで一貫した性能が確認され、日常臨床および大規模研究での実用性が支持された。",
+   url:"https://pubmed.ncbi.nlm.nih.gov/42331391/"},
+
   // ── 2026-06-23 新規 ──
-  {id:371, cat:"増悪・病態", isNew:true,
+  {id:371, cat:"増悪・病態", isNew:false,
    titleJa:"呼吸器疾患における咳過敏性パターンの探索",
    titleEn:"Exploring Cough Hypersensitivity Patterns Across Respiratory Diseases.",
    journal:"Respiratory Medicine", sjr:"Q1", if:"3.1", date:"2026-06-20", year:2026,
@@ -2298,7 +2391,7 @@ const ARTICLES = [
    aui:"Koo An Joo Rhee Kim Min Kim Jang Shin Yoon Song Kim Moon",
    summary:"慢性咳嗽患者300例を対象に咳過敏性質問票（CHQ）を用いた前向き多施設研究。気管支拡張症と喘息ではCOPD・IPFと比べCHQ関連が幅広く認められ、CHQが従来の咳測定ツールでは捉えられない多次元的症状プロファイルを把握できることが示された。",
    url:"https://pubmed.ncbi.nlm.nih.gov/42323027/"},
-  {id:370, cat:"マイクロバイオーム・感染", isNew:true,
+  {id:370, cat:"マイクロバイオーム・感染", isNew:false,
    titleJa:"三次医療センターにおける非結核性抗酸菌感染症14例の臨床的解析（トルコ）",
    titleEn:"Nontuberculosis Mycobacterial Infections: A Series of 14 Cases from a Tertiary Care Center in Türkiye.",
    journal:"Infect Dis Clin Microbiol", sjr:"Q4", date:"2026-05-26", year:2026,
