@@ -473,9 +473,9 @@
     <div class="dashboard-header">
       <div class="dashboard-title">
         🔥 本日のハイライト
-        <span class="dashboard-badge">NEW 5件</span>
+        <span class="dashboard-badge">NEW 1件</span>
       </div>
-      <div class="dashboard-date">最終更新：2026-06-24 07:04 自動生成</div>
+      <div class="dashboard-date">最終更新：2026-06-25 07:04 自動生成</div>
     </div>
     <div class="dashboard-grid" id="dashboardGrid"></div>
   </div>
@@ -640,6 +640,13 @@
       <div class="sidebar-card">
         <div class="sidebar-header orange">📅 デイリーレポート履歴</div>
         <div class="sidebar-body">
+          <div class="report-item">
+            <div>
+              <div class="report-date">2026年6月25日（07:04）</div>
+              <div class="report-count">新規1件・EU試験1件（Singapore COPD総説・Sanofi SAR445399 CTIS登録）</div>
+            </div>
+            <span class="report-link" onclick="showSection('reports',document.querySelectorAll('nav a')[3])">▶ 開く</span>
+          </div>
           <div class="report-item">
             <div>
               <div class="report-date">2026年6月24日（07:04）</div>
@@ -1108,6 +1115,29 @@
   <div class="reports-page-header">
     <h2>📝 デイリーレポート アーカイブ</h2>
     <p>毎朝8時に自動生成される文献サマリーの履歴。既読除外機能により、常に新規情報のみを収録しています。</p>
+  </div>
+
+  <!-- Report 2026-06-25 07:04 -->
+  <div class="report-card">
+    <div class="report-card-header">
+      <div>
+        <div class="report-card-date">📅 2026年6月25日（07:04 自動生成）</div>
+        <div style="font-size:12px;color:var(--text-muted);margin-top:3px;">除外済み：約377論文 / 90試験</div>
+      </div>
+      <span class="report-card-count">新規 1件・EU試験 1件</span>
+    </div>
+    <ul class="report-highlight-list">
+      <li>
+        <span class="report-num">1</span>
+        <span class="report-cat-inline" style="background:#fef3c7;color:#92400e">COPD合併</span>
+        <span>シンガポールCOPD概説：気管支拡張症が主要合併症として明示。合併症が医療資源利用・予後悪化に寄与。dupilumab・FeNO活用による精密医療の展望も論じる（Int J COPD 2026）。<a href="https://pubmed.ncbi.nlm.nih.gov/42338669/" target="_blank" style="color:var(--primary)">PubMed</a></span>
+      </li>
+      <li>
+        <span class="report-num">2</span>
+        <span class="report-cat-inline" style="background:#e0e7ff;color:#3730a3">EU新規試験</span>
+        <span>Sanofi社SAR445399の非CF気管支拡張症対象Phase 2a試験がEU CTIS登録（2025-523403-29-00）。同化合物のClinicalTrials.gov登録（NCT07547436）は既報告。<a href="https://euclinicaltrials.eu/ctis-public/view/2025-523403-29-00" target="_blank" style="color:var(--primary)">CTIS</a></span>
+      </li>
+    </ul>
   </div>
 
   <!-- Report 2026-06-24 07:04 -->
@@ -2333,8 +2363,19 @@
 // DATA
 // ============================================================
 const ARTICLES = [
+  // ── 2026-06-25 新規 ──
+  {id:377, cat:"COPD合併", isNew:true,
+   titleJa:"シンガポールにおけるCOPD：有病率・疾病負担・治療の最新概説",
+   titleEn:"Chronic Obstructive Pulmonary Disease in Singapore: Current Perspectives on Prevalence, Disease Burden, and Treatment.",
+   journal:"International Journal of Chronic Obstructive Pulmonary Disease", date:"2026-06-18", year:2026,
+   ev:"総説",
+   authors:"Yii A, Maldonado Sanchez Y, Lai Q, Chen W",
+   aui:"Yii Maldonado Sanchez Lai Chen",
+   summary:"シンガポールにおけるCOPD疫学・治療パターンを包括的に総説し、気管支拡張症・心血管疾患・糖尿病などの合併症が医療利用増大と予後悪化に寄与することを整理した。dupilumabをはじめとする生物学的製剤・FeNOバイオマーカー活用による精密医療の展開を展望し、早期診断と新規生物学的製剤採用によるアウトカム改善の機会を論じている。",
+   url:"https://pubmed.ncbi.nlm.nih.gov/42338669/"},
+
   // ── 2026-06-24 新規 ──
-  {id:372, cat:"増悪・病態", isNew:true,
+  {id:372, cat:"増悪・病態", isNew:false,
    titleJa:"全身性エリテマトーデスにおける気管支拡張症の発症率と疾病負荷：韓国全国コホート研究",
    titleEn:"Incidence and disease burden of bronchiectasis in systemic lupus erythematosus: a nationwide population-based study in Korea.",
    journal:"RMD Open", sjr:"Q1", date:"2026-06-22", year:2026,
@@ -2343,7 +2384,7 @@ const ARTICLES = [
    aui:"Min Kye Lee Eun Kang Choi Yang Lee",
    summary:"韓国の全国保険データベースを用いたマッチドコホート研究で、SLE患者における気管支拡張症の発症リスクは対照群の1.46倍（95%CI 1.22–1.76）と有意に高いことが示された。SLEで気管支拡張症を発症した患者は死亡率・救急受診・入院率がすべて有意に高く、自己免疫疾患患者への積極的な呼吸器スクリーニングの重要性が示唆される。",
    url:"https://pubmed.ncbi.nlm.nih.gov/42331395/"},
-  {id:373, cat:"マイクロバイオーム・感染", isNew:true,
+  {id:373, cat:"マイクロバイオーム・感染", isNew:false,
    titleJa:"非CF気管支拡張症患者の気管支肺胞洗浄液における緑膿菌定着と微生物叢多様性の解析",
    titleEn:"Analysis of clinical characteristics and bronchoalveolar lavage fluid microbial community diversity in non-cystic fibrosis bronchiectasis patients with Pseudomonas aeruginosa colonization.",
    journal:"Microbiology Spectrum", sjr:"Q1", if:"3.8", date:"2026-06-23", year:2026,
@@ -2353,7 +2394,7 @@ const ARTICLES = [
    jpView:"日本の非CF気管支拡張症においても緑膿菌定着は予後不良因子として知られるが、吸入抗菌薬の保険適応は2026年時点で限定的であり、本研究が示す微生物叢多様性低下と重症度の関連は、定着早期介入の意義を支持するエビデンスとなりうる。",
    summary:"非CF気管支拡張症64例をPseudomonas aeruginosa（PA）定着群（n=29）と非定着群（n=35）に分け、BALF 16S rRNA解析でマイクロバイオームを比較した観察研究。PA定着群では疾患重症度（BSI・Bhalla・E-FACEDスコア）が有意に高く肺機能が低下し、BALFの微生物叢多様性が著明に減少してPseudomonas優勢・常在菌抑制のパターンを呈した。",
    url:"https://pubmed.ncbi.nlm.nih.gov/42334217/"},
-  {id:374, cat:"マイクロバイオーム・感染", isNew:true,
+  {id:374, cat:"マイクロバイオーム・感染", isNew:false,
    titleJa:"呼吸器マイクロバイオーム：健康から疾患へのダイナミクス",
    titleEn:"The respiratory microbiome: dynamics from health to disease.",
    journal:"FEMS Microbiology Ecology", sjr:"Q1", date:"2026-06-22", year:2026,
@@ -2362,7 +2403,7 @@ const ARTICLES = [
    aui:"Lin Sun Chen Huang",
    summary:"喘息・COPD・CF・気管支拡張症・呼吸器感染症を横断し、呼吸器マイクロバイオームを「状態遷移」エコロジーの枠組みで整理したミニレビュー。粘膜免疫・粘液・腸-肺軸・代謝産物が微生物叢の安定性と疾患感受性を制御するメカニズムを論じ、マイクロバイオーム指向の精密介入に向けた方法論的優先課題を提示する。",
    url:"https://pubmed.ncbi.nlm.nih.gov/42329775/"},
-  {id:375, cat:"増悪・病態", isNew:true,
+  {id:375, cat:"増悪・病態", isNew:false,
    titleJa:"青年期結核生存者の後結核性肺疾患：ペルー・リマにおける前向きコホート研究",
    titleEn:"Posttuberculosis Lung Disease in Adolescents in Lima, Peru.",
    journal:"Pediatrics", sjr:"Q1", date:"2026-06-23", year:2026,
@@ -2371,7 +2412,7 @@ const ARTICLES = [
    aui:"Chiang Andronikou Roman Furman Schaaf Sant'Anna Otero Tanzer Lecca Byrne",
    summary:"ペルーで結核治療成功した青年101例と健常対照101例を24ヵ月追跡した前向きコホート研究。結核生存者はFEV1・FVC・小気道抵抗（R5・AX）が対照群より有意に悪化したまま持続し、CTでは気管支拡張症・網状影・結節等の構造的異常が多く認められ、治療完了後の呼吸機能評価の必要性が示された。",
    url:"https://pubmed.ncbi.nlm.nih.gov/42331351/"},
-  {id:376, cat:"増悪・病態", isNew:true,
+  {id:376, cat:"増悪・病態", isNew:false,
    titleJa:"多様な肺疾患を横断したRapid Cough Questionnaireの臨床的妥当性検証",
    titleEn:"Clinical validation of the Rapid Cough Questionnaire across diverse lung diseases.",
    journal:"BMJ Open Respiratory Research", sjr:"Q1", date:"2026-06-22", year:2026,
@@ -6168,6 +6209,8 @@ const TRIAL_GROUPS = [
   { name: 'EU試験（CTIS登録）', icon: '🇪🇺', color: '#0f3872',
     sub: 'EU Clinical Trials Information System（欧州公式登録）',
     trials: [
+      { name: "SAR445399 Phase 2a（EU・Sanofi）", drug: "SAR445399（Sanofi）", sponsor: "Sanofi-Aventis Recherche & Developpement", phase: "Phase II", status: "EU登録", nct: "2025-523403-29-00", color: "#ea580c",
+        desc: "非CF気管支拡張症成人を対象としたSanofi治験化合物SAR445399の第2a相無作為化二重盲検プラセボ対照並行群間試験。 実施国：Germany（2サイト）。スポンサー：Sanofi-Aventis Recherche & Developpement。（CTIS 2025-523403-29-00）", url: "https://euclinicaltrials.eu/ctis-public/view/2025-523403-29-00" },
       { name: "AIRTIVITY EU（Verducatib Phase III）", drug: "Verducatib / BI 1291583（Boehringer Ingelheim）", sponsor: "Boehringer Ingelheim International GmbH", phase: "Phase III", status: "EU登録", nct: "2024-518589-29-00", color: "#1d4ed8",
         desc: "DPP-1（カテプシンC）阻害薬VerducatibのEU第III相（AIRTIVITY）。 実施国：Poland・Romania・Belgium・Finland・Germany・Croatia。開始：21/08/2025。スポンサー：Boehringer Ingelheim International GmbH。（CTIS 2024-518589-29-00）", url: "https://euclinicaltrials.eu/ctis-public/view/2024-518589-29-00" },
       { name: "Verducatib 長期安全性ロールオーバー（EU）", drug: "Verducatib / BI 1291583（Boehringer Ingelheim）", sponsor: "Boehringer Ingelheim International GmbH", phase: "Phase II", status: "EU登録", nct: "2023-503290-38-00", color: "#3b82f6",
