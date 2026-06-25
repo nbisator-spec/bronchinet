@@ -473,9 +473,9 @@
     <div class="dashboard-header">
       <div class="dashboard-title">
         🔥 本日のハイライト
-        <span class="dashboard-badge">NEW 1件</span>
+        <span class="dashboard-badge">NEW 3件</span>
       </div>
-      <div class="dashboard-date">最終更新：2026-06-25 07:04 自動生成</div>
+      <div class="dashboard-date">最終更新：2026-06-26 07:04 自動生成</div>
     </div>
     <div class="dashboard-grid" id="dashboardGrid"></div>
   </div>
@@ -640,6 +640,13 @@
       <div class="sidebar-card">
         <div class="sidebar-header orange">📅 デイリーレポート履歴</div>
         <div class="sidebar-body">
+          <div class="report-item">
+            <div>
+              <div class="report-date">2026年6月26日（07:04）</div>
+              <div class="report-count">新規3件（症状中心モデル総説・粘液溶解薬SR/メタ解析・Aspergillus多種IgG診断）</div>
+            </div>
+            <span class="report-link" onclick="showSection('reports',document.querySelectorAll('nav a')[3])">▶ 開く</span>
+          </div>
           <div class="report-item">
             <div>
               <div class="report-date">2026年6月25日（07:04）</div>
@@ -1115,6 +1122,34 @@
   <div class="reports-page-header">
     <h2>📝 デイリーレポート アーカイブ</h2>
     <p>毎朝8時に自動生成される文献サマリーの履歴。既読除外機能により、常に新規情報のみを収録しています。</p>
+  </div>
+
+  <!-- Report 2026-06-26 07:04 -->
+  <div class="report-card">
+    <div class="report-card-header">
+      <div>
+        <div class="report-card-date">📅 2026年6月26日（07:04 自動生成）</div>
+        <div style="font-size:12px;color:var(--text-muted);margin-top:3px;">除外済み：約380論文 / 90試験</div>
+      </div>
+      <span class="report-card-count">新規 3件</span>
+    </div>
+    <ul class="report-highlight-list">
+      <li>
+        <span class="report-num">1</span>
+        <span class="report-cat-inline" style="background:#f3e8ff;color:#6b21a8">ガイドライン・総説</span>
+        <span>ERS症状中心モデルへの転換総説：症状が疾患活動性・増悪リスクのバイオマーカーとして機能することを整理し、DPP-1阻害を含む治療戦略と症状プロファイルの対応を論述。日本でのガイドライン整備の議論基盤となる（Eur Respir Rev Q1, IF 10.4, 2026）。<a href="https://pubmed.ncbi.nlm.nih.gov/42342265/" target="_blank" style="color:var(--primary)">PubMed</a></span>
+      </li>
+      <li>
+        <span class="report-num">2</span>
+        <span class="report-cat-inline" style="background:#dbeafe;color:#1e40af">治療・薬剤</span>
+        <span>粘液溶解薬SR/メタ解析（n=7,051）：8種類の粘液溶解薬（carbocisteine・高張食塩水・NAC等）は増悪頻度に有意差なし（p=0.22、very low certainty）。日本で広く使用されるcarbocisteine等の科学的根拠の再評価を示唆（Eur Respir Rev Q1, IF 10.4, 2026）。<a href="https://pubmed.ncbi.nlm.nih.gov/42342264/" target="_blank" style="color:var(--primary)">PubMed</a></span>
+      </li>
+      <li>
+        <span class="report-num">3</span>
+        <span class="report-cat-inline" style="background:#dcfce7;color:#166534">マイクロバイオーム・感染</span>
+        <span>Aspergillus多種IgG診断（イタリア・n=274）：気管支拡張症患者でA.fumigatus IgG陰性でも49.5%がA.niger/A.flavusに陽性。単一種IgG測定のみでは真菌曝露を過小評価するため、診断パネルへの複数種IgG組み込みを推奨（Pathogens Q1, IF 3.3, 2026）。<a href="https://pubmed.ncbi.nlm.nih.gov/42347209/" target="_blank" style="color:var(--primary)">PubMed</a></span>
+      </li>
+    </ul>
   </div>
 
   <!-- Report 2026-06-25 07:04 -->
@@ -2363,8 +2398,42 @@
 // DATA
 // ============================================================
 const ARTICLES = [
+  // ── 2026-06-26 新規 ──
+  {id:378, dpp1:true, cat:"ガイドライン・総説", isNew:true,
+   titleJa:"気管支拡張症における症状の重要性",
+   titleEn:"The importance of symptoms in bronchiectasis.",
+   journal:"European Respiratory Review", sjr:"Q1", if:"10.4", date:"2026-06-24", year:2026,
+   ev:"総説",
+   authors:"De Angelis A, Marrades P, Perea L, Faner R, Iorfida A, Aliberti S, Chalmers JD, Sibila O",
+   aui:"De Angelis Marrades Perea Faner Iorfida Aliberti Chalmers Sibila",
+   summary:"ERS 2025ガイドラインを踏まえ、咳・喀痰・呼吸困難などの症状が疾患活動性と将来の増悪リスクを反映するバイオマーカーとして機能することを論じ、気道クリアランス・粘液溶解薬・抗生物質・DPP-1阻害を含む治療戦略を症状プロファイルと紐づけた。「増悪歴重視」から「症状中心・多次元的アプローチ」への典型転換を総説として示す。",
+   jpView:"2025 ERSガイドラインが「増悪駆動」から「症状中心・治療可能形質」モデルへの転換を提唱した文脈を整理した総説であり、日本でガイドライン整備が進む際の議論基盤となる。",
+   url:"https://pubmed.ncbi.nlm.nih.gov/42342265/"},
+
+  {id:379, cat:"治療・薬剤", isNew:true,
+   titleJa:"気管支拡張症における粘液溶解薬：系統的レビューとメタ解析",
+   titleEn:"Mucoactive agents in bronchiectasis: a systematic review and meta-analysis.",
+   journal:"European Respiratory Review", sjr:"Q1", if:"10.4", date:"2026-06-24", year:2026,
+   ev:"メタ解析・SR",
+   authors:"McCullough B, Busby J, O'Neill B, Connolly B, McLeese RH, Linden D, McAuley DF, Elborn JS, De Soyza A, Chalmers JD, Clarke M, Bradley JM",
+   aui:"McCullough Busby O'Neill Connolly McLeese Linden McAuley Elborn De Soyza Chalmers Clarke Bradley",
+   summary:"24研究（n=7,051）で8種類の粘液溶解薬（ambroxol・carbocisteine・高張食塩水・NAC等）を評価したSR/メタ解析。年間増悪頻度は有意差なし（-0.40件/年、p=0.22、very low certainty）、FEV1%予測値は小幅改善（+3.23%、p=0.03）のみ。特定薬剤・サブグループを対象とした大規模試験の必要性を示す。",
+   jpView:"日本では気道クリアランス療法の一環として粘液溶解薬（カルボシステイン等）が広く使用されるが、本SRは増悪抑制エビデンスが「Very low certainty」であることを示しており、治療選択の科学的根拠の再評価を促す。",
+   url:"https://pubmed.ncbi.nlm.nih.gov/42342264/"},
+
+  {id:380, cat:"マイクロバイオーム・感染", isNew:true,
+   titleJa:"慢性肺疾患におけるAspergillus niger・A.flavusの臨床的意義：A.fumigatusを超えて",
+   titleEn:"Beyond: The Clinical Burden of Aspergillus niger and Aspergillus flavus in Chronic Pulmonary Diseases.",
+   journal:"Pathogens", sjr:"Q1", if:"3.3", date:"2026-06-01", year:2026,
+   ev:"観察研究",
+   authors:"Brizzolara L, Intra J, Faverio P, Biffi A, Basta F, Delfini C, Novati N, Zucchetti E, Luppi F, Lavitrano M, Casati M",
+   aui:"Brizzolara Intra Faverio Biffi Basta Delfini Novati Zucchetti Luppi Lavitrano Casati",
+   summary:"イタリア・モンツァでの後ろ向き研究（n=274）。気管支拡張症・過敏性肺炎・ILD患者においてA.fumigatus IgG陰性でも49.5%がA.niger or A.flavusに陽性と判明。単一種IgG測定のみでは真菌曝露を大幅に過小評価するため、診断パネルへの複数アスペルギルス種IgG組み込みを推奨する。",
+   jpView:"日本では真菌性感作にSchizophyllum等の特殊な種が比較的多い文脈があるが、本稿が示すA.niger/A.flavus IgGの追加測定アプローチは、気管支拡張症患者の真菌関連診断パネル拡充の科学的根拠として参照できる。",
+   url:"https://pubmed.ncbi.nlm.nih.gov/42347209/"},
+
   // ── 2026-06-25 新規 ──
-  {id:377, cat:"COPD合併", isNew:true,
+  {id:377, cat:"COPD合併", isNew:false,
    titleJa:"シンガポールにおけるCOPD：有病率・疾病負担・治療の最新概説",
    titleEn:"Chronic Obstructive Pulmonary Disease in Singapore: Current Perspectives on Prevalence, Disease Burden, and Treatment.",
    journal:"International Journal of Chronic Obstructive Pulmonary Disease", date:"2026-06-18", year:2026,
