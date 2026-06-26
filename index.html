@@ -473,9 +473,9 @@
     <div class="dashboard-header">
       <div class="dashboard-title">
         🔥 本日のハイライト
-        <span class="dashboard-badge">NEW 3件</span>
+        <span class="dashboard-badge">NEW 4件</span>
       </div>
-      <div class="dashboard-date">最終更新：2026-06-26 07:04 自動生成</div>
+      <div class="dashboard-date">最終更新：2026-06-27 07:04 自動生成</div>
     </div>
     <div class="dashboard-grid" id="dashboardGrid"></div>
   </div>
@@ -640,6 +640,13 @@
       <div class="sidebar-card">
         <div class="sidebar-header orange">📅 デイリーレポート履歴</div>
         <div class="sidebar-body">
+          <div class="report-item">
+            <div>
+              <div class="report-date">2026年6月27日（07:04）</div>
+              <div class="report-count">新規4件（EMBARC頻回増悪表現型大規模解析・Aspergillus真菌エンドタイプ総説・炎症指標CAR・AT合併BE症例）</div>
+            </div>
+            <span class="report-link" onclick="showSection('reports',document.querySelectorAll('nav a')[3])">▶ 開く</span>
+          </div>
           <div class="report-item">
             <div>
               <div class="report-date">2026年6月26日（07:04）</div>
@@ -1122,6 +1129,39 @@
   <div class="reports-page-header">
     <h2>📝 デイリーレポート アーカイブ</h2>
     <p>毎朝8時に自動生成される文献サマリーの履歴。既読除外機能により、常に新規情報のみを収録しています。</p>
+  </div>
+
+  <!-- Report 2026-06-27 07:04 -->
+  <div class="report-card">
+    <div class="report-card-header">
+      <div>
+        <div class="report-card-date">📅 2026年6月27日（07:04 自動生成）</div>
+        <div style="font-size:12px;color:var(--text-muted);margin-top:3px;">除外済み：約385論文 / 90試験</div>
+      </div>
+      <span class="report-card-count">新規 4件</span>
+    </div>
+    <ul class="report-highlight-list">
+      <li>
+        <span class="report-num">1</span>
+        <span class="report-cat-inline" style="background:#fee2e2;color:#991b1b">増悪・病態</span>
+        <span>EMBARC大規模解析（30か国・19,324例）：増悪回数1回増えるごとにIRR 1.45〜3.56と累積リスク上昇を実証。重症増悪1回で将来の重症増悪リスクが4倍（IRR 3.96）に。頻回増悪表現型は原因・地域を問わず一貫。DPP-1阻害早期介入の根拠を強化（AJRCCM Q1, IF 19.4）。<a href="https://pubmed.ncbi.nlm.nih.gov/42348458/" target="_blank" style="color:var(--primary)">PubMed</a></span>
+      </li>
+      <li>
+        <span class="report-num">2</span>
+        <span class="report-cat-inline" style="background:#ede9fe;color:#5b21b6">精密医療・エンドタイプ</span>
+        <span>Aspergillus真菌フェノタイプ包括ナラティブレビュー：EMBARC登録者の約25%がAspergillus関連免疫シグナル陽性でより重症。マイコビオームと細菌のクロスキングダム相互作用を踏まえた2型/非2型炎症エンドタイプ別管理アプローチを提唱（Int J Mol Sci Q1, 2026）。<a href="https://pubmed.ncbi.nlm.nih.gov/42352989/" target="_blank" style="color:var(--primary)">PubMed</a></span>
+      </li>
+      <li>
+        <span class="report-num">3</span>
+        <span class="report-cat-inline" style="background:#fee2e2;color:#991b1b">増悪・病態</span>
+        <span>炎症複合指標の比較（Turkey, n=97）：CRPアルブミン比（CAR）がAUC=0.995と最高の増悪鑑別能。HALPとSIIが独立予測因子。低コスト日常バイオマーカーとして実用性を提唱（Life Q1, IF 3.4, 2026）。<a href="https://pubmed.ncbi.nlm.nih.gov/42355476/" target="_blank" style="color:var(--primary)">PubMed</a></span>
+      </li>
+      <li>
+        <span class="report-num">4</span>
+        <span class="report-cat-inline" style="background:#fee2e2;color:#991b1b">増悪・病態</span>
+        <span>毛細血管拡張性運動失調症（AT）合併気管支拡張症：15歳例の症例報告と文献レビュー。誤嚥・免疫不全・神経障害の三主徴から気道構造破壊。慢性呼吸器症状を呈する小児でのAT早期認識と多職種管理の重要性を強調（J Clin Med Q2, IF 2.9, 2026）。<a href="https://pubmed.ncbi.nlm.nih.gov/42355692/" target="_blank" style="color:var(--primary)">PubMed</a></span>
+      </li>
+    </ul>
   </div>
 
   <!-- Report 2026-06-26 07:04 -->
@@ -2398,8 +2438,51 @@
 // DATA
 // ============================================================
 const ARTICLES = [
+  // ── 2026-06-27 新規 ──
+  {id:381, cat:"増悪・病態", isNew:true,
+   titleJa:"気管支拡張症における頻回増悪表現型の再検討：EMBARCレジストリデータ",
+   titleEn:"The frequent exacerbator phenotype in bronchiectasis revisited: Data from EMBARC registry.",
+   journal:"American Journal of Respiratory and Critical Care Medicine", sjr:"Q1", if:"19.4", date:"2026-06-25", year:2026,
+   ev:"観察研究",
+   authors:"Sibila O, Perea L, Burgel PR, Polverino E, Hull RC, Long MB, Chotirmall SH, Shteinberg M, Rademacher J, Choi H, Goeminne P, Ringshausen F, De Soyza A, Aliberti S, Chalmers JD ほか",
+   aui:"Sibila Perea Burgel Polverino Hull Long Chotirmall Shteinberg Pollock Stobo Lind Haworth Dimakou Bossios Loebinger Dhar Xu Mersch Rademacher Choi Lorent Blasi Vendrell Goeminne Ringshausen De Soyza Aliberti Chalmers",
+   summary:"欧州気管支拡張症レジストリ（EMBARC）30か国19,324例の5年追跡解析で、増悪回数が1回増えるごとに将来の増悪リスクが累積的に上昇することを示した（IRR 1.45〜3.56）。さらに1回の重症増悪（入院要）は将来の重症増悪リスクを4倍近く高め（IRR 3.96）、この頻回増悪表現型の一貫性は疾患原因・地域を問わず確認された。",
+   jpView:"EMBARCの19,324例が示す「増悪蓄積モデル」は、日本のNTM主体コホートにおいても増悪早期抑制・DPP-1阻害薬（Verducatib/Brensocatib）の介入タイミングを議論する際の重要なエビデンス基盤となる。",
+   url:"https://pubmed.ncbi.nlm.nih.gov/42348458/"},
+
+  {id:382, cat:"精密医療・エンドタイプ", isNew:true,
+   titleJa:"非嚢胞性線維症気管支拡張症におけるAspergillus属：臨床表現型・分子エンドタイプ・実践的管理（ナラティブレビュー）",
+   titleEn:"Aspergillus spp. in Non-Cystic Fibrosis Bronchiectasis: Clinical Phenotypes, Molecular Endotypes, and Practical Management-A Narrative Review.",
+   journal:"International Journal of Molecular Sciences", sjr:"Q1", date:"2026-06-10", year:2026,
+   ev:"総説",
+   authors:"Bertuccio FR, Pisanu L, Arminio M, Arlando L, Tafa M, Gallo E, Asperges E, Valsecchi P, Cascina A, Corsico AG, Conio V, Stella GM",
+   aui:"Bertuccio Pisanu Arminio Arlando Tafa Cosseta Gallo Asperges Valsecchi Cascina Corsico Conio Stella",
+   summary:"EMBARCデータで約25%の患者がAspergillus関連免疫学的シグナルを示し、ABPA・感作・特異的IgGなどのフェノタイプが疾患重症化と関連することを概説した。マイコビオームと細菌間のクロスキングダム相互作用を踏まえ、炎症エンドタイプ別（2型 vs 非2型）のバイオマーカー誘導管理アプローチを提唱している。",
+   jpView:"日本ではSchizophyllum等の非アスペルギルス真菌によるABPMの割合が比較的高いとされており、Aspergillus特化の本知見を日本コンテキストで解釈する際は真菌種の違いへの留意が必要。",
+   url:"https://pubmed.ncbi.nlm.nih.gov/42352989/"},
+
+  {id:383, cat:"増悪・病態", isNew:true,
+   titleJa:"気管支拡張症における全身炎症指標の比較評価：増悪表現型の同定",
+   titleEn:"Comparative Evaluation of Systemic Inflammatory Indices in Bronchiectasis: Identification of Exacerbation Phenotype.",
+   journal:"Life (Basel, Switzerland)", sjr:"Q1", if:"3.4", date:"2026-06-04", year:2026,
+   ev:"観察研究",
+   authors:"Günaydın S, Aksoy HB, Şimşek ŞM",
+   aui:"Gunaydın Aksoy Simsek",
+   summary:"非CFB患者97例（安定期39例・増悪期58例）でNLR・PLR・SII・PIV・CAR・HALPスコアを比較し、CRPアルブミン比（CAR）が最高の鑑別能（AUC=0.995）を示した。HALPとSIIが増悪の独立予測因子であり、日常診療で活用可能な低コストバイオマーカーとして提唱された。",
+   url:"https://pubmed.ncbi.nlm.nih.gov/42355476/"},
+
+  {id:384, cat:"増悪・病態", isNew:true,
+   titleJa:"毛細血管拡張性運動失調症と合併気管支拡張症：症例報告と文献レビュー",
+   titleEn:"Ataxia-Telangiectasia and Associated Bronchiectasis: Case Report and Literature Review.",
+   journal:"Journal of Clinical Medicine", sjr:"Q2", if:"2.9", date:"2026-06-11", year:2026,
+   ev:"症例報告",
+   authors:"Taraș R, Dima M, Axente M, Cinteză EE, Paraschiva CP, Toma CL, Vidlescu R, Ionescu MD",
+   aui:"Taras Dima Axente Cinteza Paraschiva Toma Vidlescu Ionescu",
+   summary:"15歳の毛細血管拡張性運動失調症（AT）患者における気管支拡張症二次発症の症例報告と文献レビュー。反復性誤嚥性肺炎・免疫不全・小脳失調の三主徴が気道構造破壊を引き起こし、慢性呼吸器症状を呈する小児でのAT早期認識と多職種管理の重要性が示された。",
+   url:"https://pubmed.ncbi.nlm.nih.gov/42355692/"},
+
   // ── 2026-06-26 新規 ──
-  {id:378, dpp1:true, cat:"ガイドライン・総説", isNew:true,
+  {id:378, dpp1:true, cat:"ガイドライン・総説", isNew:false,
    titleJa:"気管支拡張症における症状の重要性",
    titleEn:"The importance of symptoms in bronchiectasis.",
    journal:"European Respiratory Review", sjr:"Q1", if:"10.4", date:"2026-06-24", year:2026,
@@ -2410,7 +2493,7 @@ const ARTICLES = [
    jpView:"2025 ERSガイドラインが「増悪駆動」から「症状中心・治療可能形質」モデルへの転換を提唱した文脈を整理した総説であり、日本でガイドライン整備が進む際の議論基盤となる。",
    url:"https://pubmed.ncbi.nlm.nih.gov/42342265/"},
 
-  {id:379, cat:"治療・薬剤", isNew:true,
+  {id:379, cat:"治療・薬剤", isNew:false,
    titleJa:"気管支拡張症における粘液溶解薬：系統的レビューとメタ解析",
    titleEn:"Mucoactive agents in bronchiectasis: a systematic review and meta-analysis.",
    journal:"European Respiratory Review", sjr:"Q1", if:"10.4", date:"2026-06-24", year:2026,
@@ -2421,7 +2504,7 @@ const ARTICLES = [
    jpView:"日本では気道クリアランス療法の一環として粘液溶解薬（カルボシステイン等）が広く使用されるが、本SRは増悪抑制エビデンスが「Very low certainty」であることを示しており、治療選択の科学的根拠の再評価を促す。",
    url:"https://pubmed.ncbi.nlm.nih.gov/42342264/"},
 
-  {id:380, cat:"マイクロバイオーム・感染", isNew:true,
+  {id:380, cat:"マイクロバイオーム・感染", isNew:false,
    titleJa:"慢性肺疾患におけるAspergillus niger・A.flavusの臨床的意義：A.fumigatusを超えて",
    titleEn:"Beyond: The Clinical Burden of Aspergillus niger and Aspergillus flavus in Chronic Pulmonary Diseases.",
    journal:"Pathogens", sjr:"Q1", if:"3.3", date:"2026-06-01", year:2026,
