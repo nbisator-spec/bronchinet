@@ -473,9 +473,9 @@
     <div class="dashboard-header">
       <div class="dashboard-title">
         🔥 本日のハイライト
-        <span class="dashboard-badge">NEW 4件</span>
+        <span class="dashboard-badge">NEW 1件</span>
       </div>
-      <div class="dashboard-date">最終更新：2026-06-27 07:04 自動生成</div>
+      <div class="dashboard-date">最終更新：2026-06-28 07:04 自動生成</div>
     </div>
     <div class="dashboard-grid" id="dashboardGrid"></div>
   </div>
@@ -640,6 +640,13 @@
       <div class="sidebar-card">
         <div class="sidebar-header orange">📅 デイリーレポート履歴</div>
         <div class="sidebar-body">
+          <div class="report-item">
+            <div>
+              <div class="report-date">2026年6月28日（07:04）</div>
+              <div class="report-count">新規1件（気管支拡張症看護・英国調査）</div>
+            </div>
+            <span class="report-link" onclick="showSection('reports',document.querySelectorAll('nav a')[3])">▶ 開く</span>
+          </div>
           <div class="report-item">
             <div>
               <div class="report-date">2026年6月27日（07:04）</div>
@@ -1129,6 +1136,24 @@
   <div class="reports-page-header">
     <h2>📝 デイリーレポート アーカイブ</h2>
     <p>毎朝8時に自動生成される文献サマリーの履歴。既読除外機能により、常に新規情報のみを収録しています。</p>
+  </div>
+
+  <!-- Report 2026-06-28 07:04 -->
+  <div class="report-card">
+    <div class="report-card-header">
+      <div>
+        <div class="report-card-date">📅 2026年6月28日（07:04 自動生成）</div>
+        <div style="font-size:12px;color:var(--text-muted);margin-top:3px;">除外済み：約386論文 / 90試験</div>
+      </div>
+      <span class="report-card-count">新規 1件</span>
+    </div>
+    <ul class="report-highlight-list">
+      <li>
+        <span class="report-num">1</span>
+        <span class="report-cat-inline" style="background:#f1f5f9;color:#475569">学会動向</span>
+        <span>英国看護師72名調査：気管支拡張症患者のケアにおける看護師の実態を明らかにし、プライマリ〜三次医療のすべての設定でCNSが患者アセスメントと多職種連携に必須であることを示した。気管支拡張症の認知度向上と専門看護師育成の必要性を提唱（Br J Nurs Q3, 2026）。<a href="https://pubmed.ncbi.nlm.nih.gov/42360894/" target="_blank" style="color:var(--primary)">PubMed</a></span>
+      </li>
+    </ul>
   </div>
 
   <!-- Report 2026-06-27 07:04 -->
@@ -2438,8 +2463,19 @@
 // DATA
 // ============================================================
 const ARTICLES = [
+  // ── 2026-06-28 新規 ──
+  {id:385, cat:"学会動向", isNew:true,
+   titleJa:"気管支拡張症患者に対するナース主導型介入とケア：英国パイロット調査",
+   titleEn:"Nurse-led interventions and care for people with bronchiectasis: a pilot study.",
+   journal:"British Journal of Nursing", sjr:"Q3", date:"2026-06-26", year:2026,
+   ev:"観察研究",
+   authors:"Daly R, Fowler SJ, Ludlow S, Rickards E",
+   aui:"Daly Fowler Ludlow Rickards",
+   summary:"英国の気管支拡張症患者を担当する看護師72名を対象とした実態調査で、プライマリケア・二次・三次医療のすべての設定において看護師が患者ニーズのアセスメントと多職種連携の調整を担う重要な役割を果たしていることが明らかになった。気管支拡張症は専門外の医療者や患者への認知度が低く、専門看護師（CNS）のさらなる育成と患者教育の体系化が必要であることが示された。",
+   url:"https://pubmed.ncbi.nlm.nih.gov/42360894/"},
+
   // ── 2026-06-27 新規 ──
-  {id:381, cat:"増悪・病態", isNew:true,
+  {id:381, cat:"増悪・病態", isNew:false,
    titleJa:"気管支拡張症における頻回増悪表現型の再検討：EMBARCレジストリデータ",
    titleEn:"The frequent exacerbator phenotype in bronchiectasis revisited: Data from EMBARC registry.",
    journal:"American Journal of Respiratory and Critical Care Medicine", sjr:"Q1", if:"19.4", date:"2026-06-25", year:2026,
@@ -2450,7 +2486,7 @@ const ARTICLES = [
    jpView:"EMBARCの19,324例が示す「増悪蓄積モデル」は、日本のNTM主体コホートにおいても増悪早期抑制・DPP-1阻害薬（Verducatib/Brensocatib）の介入タイミングを議論する際の重要なエビデンス基盤となる。",
    url:"https://pubmed.ncbi.nlm.nih.gov/42348458/"},
 
-  {id:382, cat:"精密医療・エンドタイプ", isNew:true,
+  {id:382, cat:"精密医療・エンドタイプ", isNew:false,
    titleJa:"非嚢胞性線維症気管支拡張症におけるAspergillus属：臨床表現型・分子エンドタイプ・実践的管理（ナラティブレビュー）",
    titleEn:"Aspergillus spp. in Non-Cystic Fibrosis Bronchiectasis: Clinical Phenotypes, Molecular Endotypes, and Practical Management-A Narrative Review.",
    journal:"International Journal of Molecular Sciences", sjr:"Q1", date:"2026-06-10", year:2026,
@@ -2461,7 +2497,7 @@ const ARTICLES = [
    jpView:"日本ではSchizophyllum等の非アスペルギルス真菌によるABPMの割合が比較的高いとされており、Aspergillus特化の本知見を日本コンテキストで解釈する際は真菌種の違いへの留意が必要。",
    url:"https://pubmed.ncbi.nlm.nih.gov/42352989/"},
 
-  {id:383, cat:"増悪・病態", isNew:true,
+  {id:383, cat:"増悪・病態", isNew:false,
    titleJa:"気管支拡張症における全身炎症指標の比較評価：増悪表現型の同定",
    titleEn:"Comparative Evaluation of Systemic Inflammatory Indices in Bronchiectasis: Identification of Exacerbation Phenotype.",
    journal:"Life (Basel, Switzerland)", sjr:"Q1", if:"3.4", date:"2026-06-04", year:2026,
@@ -2471,7 +2507,7 @@ const ARTICLES = [
    summary:"非CFB患者97例（安定期39例・増悪期58例）でNLR・PLR・SII・PIV・CAR・HALPスコアを比較し、CRPアルブミン比（CAR）が最高の鑑別能（AUC=0.995）を示した。HALPとSIIが増悪の独立予測因子であり、日常診療で活用可能な低コストバイオマーカーとして提唱された。",
    url:"https://pubmed.ncbi.nlm.nih.gov/42355476/"},
 
-  {id:384, cat:"増悪・病態", isNew:true,
+  {id:384, cat:"増悪・病態", isNew:false,
    titleJa:"毛細血管拡張性運動失調症と合併気管支拡張症：症例報告と文献レビュー",
    titleEn:"Ataxia-Telangiectasia and Associated Bronchiectasis: Case Report and Literature Review.",
    journal:"Journal of Clinical Medicine", sjr:"Q2", if:"2.9", date:"2026-06-11", year:2026,
