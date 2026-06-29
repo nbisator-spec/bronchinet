@@ -473,9 +473,9 @@
     <div class="dashboard-header">
       <div class="dashboard-title">
         🔥 本日のハイライト
-        <span class="dashboard-badge">NEW 2件</span>
+        <span class="dashboard-badge">NEW 1件</span>
       </div>
-      <div class="dashboard-date">最終更新：2026-06-29 07:04 自動生成</div>
+      <div class="dashboard-date">最終更新：2026-06-30 07:04 自動生成</div>
     </div>
     <div class="dashboard-grid" id="dashboardGrid"></div>
   </div>
@@ -640,6 +640,13 @@
       <div class="sidebar-card">
         <div class="sidebar-header orange">📅 デイリーレポート履歴</div>
         <div class="sidebar-body">
+          <div class="report-item">
+            <div>
+              <div class="report-date">2026年6月30日（07:04）</div>
+              <div class="report-count">新規1件（PCD-QOL質問票スペイン語版検証・Respiratory Medicine）</div>
+            </div>
+            <span class="report-link" onclick="showSection('reports',document.querySelectorAll('nav a')[3])">▶ 開く</span>
+          </div>
           <div class="report-item">
             <div>
               <div class="report-date">2026年6月29日（07:04）</div>
@@ -1143,6 +1150,24 @@
   <div class="reports-page-header">
     <h2>📝 デイリーレポート アーカイブ</h2>
     <p>毎朝8時に自動生成される文献サマリーの履歴。既読除外機能により、常に新規情報のみを収録しています。</p>
+  </div>
+
+  <!-- Report 2026-06-30 07:04 -->
+  <div class="report-card">
+    <div class="report-card-header">
+      <div>
+        <div class="report-card-date">📅 2026年6月30日（07:04 自動生成）</div>
+        <div style="font-size:12px;color:var(--text-muted);margin-top:3px;">除外済み：約388論文 / 90試験超</div>
+      </div>
+      <span class="report-card-count">新規 1件</span>
+    </div>
+    <ul class="report-highlight-list">
+      <li>
+        <span class="report-num">1</span>
+        <span class="report-cat-inline" style="background:#ede9fe;color:#5b21b6">精密医療・エンドタイプ</span>
+        <span>気管支拡張症の遺伝的原因である原発性線毛機能不全症（PCD）患者対象のQOL-PCD質問票スペイン語版を21名で検証し、良好な内的一貫性・再現性を確認。PCD関連気管支拡張症エンドタイプのPRO標準化に貢献（Respiratory Medicine Q1 IF:3.1, 2026）。<a href="https://pubmed.ncbi.nlm.nih.gov/42248373/" target="_blank" style="color:var(--primary)">PubMed</a></span>
+      </li>
+    </ul>
   </div>
 
   <!-- Report 2026-06-29 07:04 -->
@@ -2493,8 +2518,19 @@
 // DATA
 // ============================================================
 const ARTICLES = [
+  // ── 2026-06-30 新規 ──
+  {id:388, cat:"精密医療・エンドタイプ", isNew:true,
+   titleJa:"スペイン成人原発性線毛機能不全症（PCD）患者向けQOL質問票のクロスカルチャー適応とパイロット心理測定検証",
+   titleEn:"Cross-cultural adaptation and pilot psychometric validation of a quality-of-life questionnaire for adults with Primary Ciliary Dyskinesia in Spain.",
+   journal:"Respiratory Medicine", sjr:"Q1", if:"3.1", date:"2026-06-04", year:2026,
+   ev:"検証研究",
+   authors:"Carretero-Vilarroig L, Jaijo T, Lucas JS, Behan L ほか",
+   aui:"Carretero-Vilarroig Jaijo Lucas Behan Dasi Sanchez-Thevenet Armengot-Carceller Reula",
+   summary:"気管支拡張症の重要な遺伝的原因である原発性線毛機能不全症（PCD）患者のQOL-PCD質問票（40項目）のスペイン語版を21名のPCD成人患者で文化的適応・検証し、良好な内的一貫性と再現性を確認した。PCD関連気管支拡張症における患者報告アウトカム（PRO）の標準化は、疾患特異的エンドタイプに基づく精密医療アプローチの基盤として重要である。",
+   url:"https://pubmed.ncbi.nlm.nih.gov/42248373/"},
+
   // ── 2026-06-29 新規 ──
-  {id:387, cat:"ガイドライン・総説", isNew:true,
+  {id:387, cat:"ガイドライン・総説", isNew:false,
    titleJa:"気管支拡張症と最新動向（病態理解の変遷を含めて）",
    titleEn:"Bronchiectasis: Overview of current trends including evolution of pathophysiology concepts",
    journal:"日本内科学会雑誌", date:"2025-06-10", year:2025,
@@ -2504,7 +2540,7 @@ const ARTICLES = [
    jpView:"朝倉崇徳氏による日本内科学会誌気管支拡張症特集号（2025年6月）の序論。日本には独立したNCFB診療ガイドラインが存在しない（2026年時点）中、最新の病態理解とERS 2025動向を整理した概説として国内臨床現場との対話に活用可能。",
    url:"https://cir.nii.ac.jp/crid/1390027033818213120"},
 
-  {id:386, cat:"増悪・病態", isNew:true,
+  {id:386, cat:"増悪・病態", isNew:false,
    titleJa:"CNIO複合指標（心・栄養・炎症・酸素）と外来肺リハビリテーション後3ヶ月の機能的転帰：仮説生成的コホート研究",
    titleEn:"A Derivation Study of a Cardio-Nutrition-Inflammation-Oxygen Index and 3-Month Functional Outcomes After Outpatient Pulmonary Rehabilitation.",
    journal:"Nutrients", sjr:"Q1", date:"2026-06-11", year:2026,
