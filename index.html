@@ -473,9 +473,9 @@
     <div class="dashboard-header">
       <div class="dashboard-title">
         🔥 本日のハイライト
-        <span class="dashboard-badge">NEW 8件</span>
+        <span class="dashboard-badge">NEW 2件</span>
       </div>
-      <div class="dashboard-date">最終更新：2026-07-02 07:04 自動生成</div>
+      <div class="dashboard-date">最終更新：2026-07-03 07:04 自動生成</div>
     </div>
     <div class="dashboard-grid" id="dashboardGrid"></div>
   </div>
@@ -640,6 +640,13 @@
       <div class="sidebar-card">
         <div class="sidebar-header orange">📅 デイリーレポート履歴</div>
         <div class="sidebar-body">
+          <div class="report-item">
+            <div>
+              <div class="report-date">2026年7月3日（07:04）</div>
+              <div class="report-count">新規2件（気管支拡張症の粘液栓とQOL・緑膿菌感染の関連/Sci Rep・韓国人コホートでの好酸球数と増悪リスク/Tuberc Respir Dis）</div>
+            </div>
+            <span class="report-link" onclick="showSection('reports',document.querySelectorAll('nav a')[3])">▶ 開く</span>
+          </div>
           <div class="report-item">
             <div>
               <div class="report-date">2026年7月2日（07:04）</div>
@@ -1164,6 +1171,29 @@
   <div class="reports-page-header">
     <h2>📝 デイリーレポート アーカイブ</h2>
     <p>毎朝8時に自動生成される文献サマリーの履歴。既読除外機能により、常に新規情報のみを収録しています。</p>
+  </div>
+
+  <!-- Report 2026-07-03 07:04 -->
+  <div class="report-card">
+    <div class="report-card-header">
+      <div>
+        <div class="report-card-date">📅 2026年7月3日（07:04 自動生成）</div>
+        <div style="font-size:12px;color:var(--text-muted);margin-top:3px;">除外済み：約404論文 / 134試験超</div>
+      </div>
+      <span class="report-card-count">新規 2件・臨床試験 0件</span>
+    </div>
+    <ul class="report-highlight-list">
+      <li>
+        <span class="report-num">1</span>
+        <span class="report-cat-inline" style="background:#fee2e2;color:#991b1b">増悪・病態</span>
+        <span>気管支拡張症患者133例の横断研究で、CT上の粘液栓（66%に検出）がQoL-B呼吸器症状・CAATスコアの悪化、および慢性緑膿菌感染と有意に関連（調整OR 5.6）。粘液栓が疾患活動性を反映する画像バイオマーカーとなりうると報告（Sci Rep Q1 IF:3.9, 2026）。<a href="https://pubmed.ncbi.nlm.nih.gov/42386893/" target="_blank" style="color:var(--primary)">PubMed</a></span>
+      </li>
+      <li>
+        <span class="report-num">2</span>
+        <span class="report-cat-inline" style="background:#ede9fe;color:#5b21b6">精密医療・エンドタイプ</span>
+        <span>韓国人気管支拡張症患者492例の後ろ向きコホートで、末梢血好酸球数と増悪・重症度スコアに有意な関連なし。経口ステロイド使用・高齢・低FEV1%が増悪の独立危険因子と同定され、地域特性を踏まえた管理の必要性を示唆（Tuberc Respir Dis Q2 IF:2.5, 2026）。<a href="https://pubmed.ncbi.nlm.nih.gov/42387912/" target="_blank" style="color:var(--primary)">PubMed</a></span>
+      </li>
+    </ul>
   </div>
 
   <!-- Report 2026-07-02 07:04 -->
@@ -2653,7 +2683,28 @@
 // DATA
 // ============================================================
 const ARTICLES = [
-  {id:406, cat:"マイクロバイオーム・感染", isNew:true,
+  // ── 2026-07-03 新規 ──
+  {id:408, cat:"精密医療・エンドタイプ", isNew:true,
+   titleJa:"韓国人気管支拡張症患者における血中好酸球数、疾患重症度、増悪リスク：後ろ向きコホート研究",
+   titleEn:"Blood Eosinophil Count, Disease Severity, and Exacerbation Risk in Korean Patients with Bronchiectasis: A Retrospective Cohort Study.",
+   journal:"Tuberculosis and respiratory diseases", sjr:"Q2", if:"2.5", date:"2026-07-02", year:2026,
+   ev:"観察研究",
+   authors:"Kim SH, Kye DE, Kim GH, Yang J, Cho JY ほか",
+   aui:"Kim Kye Kim Yang Cho Lee Park Kwon Yi Lee Yang",
+   summary:"韓国の単施設で気管支拡張症患者492名を後ろ向きに解析した結果、末梢血好酸球数と増悪回数・重症度スコア（BSI・FACED）との間に有意な関連は認められなかった。一方、経口ステロイド使用・高齢・低いFEV1%予測値が増悪の独立した危険因子として同定され、地域特性を踏まえた管理の重要性が示された。",
+   pmid:"42387912",
+   url:"https://pubmed.ncbi.nlm.nih.gov/42387912/"},
+  {id:407, cat:"増悪・病態", isNew:true,
+   titleJa:"気管支拡張症における粘液栓の臨床的影響",
+   titleEn:"Clinical impact of mucus plugs in bronchiectasis.",
+   journal:"Scientific reports", sjr:"Q1", if:"3.9", date:"2026-07-01", year:2026,
+   ev:"観察研究",
+   authors:"De Angelis A, Perea L, Marrades P, Iorfida A, Mendoza N ほか",
+   aui:"De Angelis Perea Marrades Iorfida Mendoza Amaro Martinez-Olondris You Rodriguez-Lobato Benegas Sanchez Voza Agusti Faner Chalmers Aliberti Sibila",
+   summary:"気管支拡張症患者133名の横断研究で、CT上の粘液栓（66%に認めた）はQoL-B呼吸器症状スコアやCAATスコアの悪化と有意に関連し、粘液栓量が多いほど症状が重かった。さらに粘液栓の存在は慢性緑膿菌感染と独立して関連しており（調整オッズ比5.6）、疾患活動性を反映する画像バイオマーカーとなりうることが示唆された。",
+   pmid:"42386893",
+   url:"https://pubmed.ncbi.nlm.nih.gov/42386893/"},
+  {id:406, cat:"マイクロバイオーム・感染", isNew:false,
    titleJa:"気管支拡張と気管支拡張症の鑑別：インフルエンザ関連肺アスペルギルス症からの教訓",
    titleEn:"Bronchial dilation versus bronchiectasis-lessons learned from Influenza-associated pulmonary aspergillosis.",
    journal:"American journal of respiratory and critical care medicine", sjr:"Q1", if:"21.7", date:"2026-07-01", year:2026,
@@ -2663,7 +2714,7 @@ const ARTICLES = [
    summary:"インフルエンザ関連肺アスペルギルス症（IAPA）の症例を通じ、画像上の一過性気管支拡張と不可逆的な気管支拡張症を鑑別する重要性を論じたAJRCCM誌の論説。急性感染後に見られる気道拡張所見の解釈における注意点を提示している。",
    pmid:"42085263",
    url:"https://pubmed.ncbi.nlm.nih.gov/42085263/"},
-  {id:405, cat:"マイクロバイオーム・感染", isNew:true,
+  {id:405, cat:"マイクロバイオーム・感染", isNew:false,
    titleJa:"慢性緑膿菌感染により気管支拡張症様表現型を誘導する新規マウスモデル",
    titleEn:"A novel mouse model of chronic Pseudomonas aeruginosa infection inducing bronchiectasis-like phenotype.",
    journal:"Animal models and experimental medicine", sjr:"Q1", date:"2026-06-30", year:2026,
@@ -2673,7 +2724,7 @@ const ARTICLES = [
    summary:"緑膿菌を含浸させた寒天ビーズとパパインをマウス気管内に反復投与することで、気道拡張・炎症細胞浸潤・肺機能低下を伴う気管支拡張症様病態を再現する新規動物モデルを開発。これまで確立された動物モデルが乏しかった同疾患の病態解明・治療評価への応用が期待される。",
    pmid:"42381239",
    url:"https://pubmed.ncbi.nlm.nih.gov/42381239/"},
-  {id:404, cat:"治療・薬剤", isNew:true,
+  {id:404, cat:"治療・薬剤", isNew:false,
    titleJa:"小児慢性肺疾患における予防的抗菌薬投与：効果・耐性・将来のケアモデルのバランス",
    titleEn:"Prophylactic antibiotics in chronic pediatric lung disease: balancing benefit, resistance, and future care models.",
    journal:"Expert review of respiratory medicine", sjr:"Q2", if:"2.7", date:"2026-02-26", year:2026,
@@ -2684,7 +2735,7 @@ const ARTICLES = [
    jpView:"日本はびまん性汎細気管支炎治療の歴史的経緯から長期少量マクロライド療法が診療文化として定着しており、本レビューの予防的抗菌薬適正使用に関する議論は国内NCFB診療の実践見直しにも参考になる（2026年時点）。",
    pmid:"41729069",
    url:"https://pubmed.ncbi.nlm.nih.gov/41729069/"},
-  {id:403, cat:"増悪・病態", isNew:true,
+  {id:403, cat:"増悪・病態", isNew:false,
    titleJa:"原発性線毛機能不全症（PCD）における肺増悪とその治療：ナラティブレビュー",
    titleEn:"Pulmonary Exacerbations and Treatment in PCD: A Narrative Review.",
    journal:"Pediatric pulmonology", sjr:"Q1", if:"2.3", date:"2026-07", year:2026,
@@ -2694,7 +2745,7 @@ const ARTICLES = [
    summary:"PCDにおける肺増悪の定義・頻度・病態（緑膿菌感染や好中球エラスターゼ等の炎症マーカー）・危険因子・治療戦略を概観したレビュー。将来的な肺機能低下の予測因子としてlung clearance indexが有望と述べている。",
    pmid:"42381478",
    url:"https://pubmed.ncbi.nlm.nih.gov/42381478/"},
-  {id:402, cat:"増悪・病態", isNew:true,
+  {id:402, cat:"増悪・病態", isNew:false,
    titleJa:"バングラデシュの三次医療機関における成人気管支拡張症患者の嚢胞性線維症有病率と肺機能障害パターン：横断研究",
    titleEn:"Prevalence of Cystic Fibrosis and Pattern of Lung Function Impairment in Adults Presenting With Bronchiectasis at a Tertiary Care Hospital in Resource Poor Country Bangladesh: A Cross-Sectional Study.",
    journal:"Health science reports", sjr:"Q2", date:"2026-06-30", year:2026,
@@ -2704,7 +2755,7 @@ const ARTICLES = [
    summary:"バングラデシュの成人気管支拡張症患者130例中12例（9.2%）が発汗塩化物試験で嚢胞性線維症の診断基準を満たしたと報告。南アジアにおいても成人気管支拡張症の背景疾患としてCFを見逃さない重要性を指摘している。",
    pmid:"42382502",
    url:"https://pubmed.ncbi.nlm.nih.gov/42382502/"},
-  {id:401, cat:"増悪・病態", isNew:true,
+  {id:401, cat:"増悪・病態", isNew:false,
    titleJa:"部分肺静脈還流異常を合併したカルタゲナー症候群の1例",
    titleEn:"Kartagener syndrome with partial anomalous pulmonary venous drainage: a case report.",
    journal:"Journal of medical case reports", sjr:"Q3", date:"2026-06-30", year:2026,
@@ -2714,7 +2765,7 @@ const ARTICLES = [
    summary:"内臓逆位・気管支拡張症・慢性副鼻腔炎を三徴とするカルタゲナー症候群の患者に、まれに部分肺静脈還流異常が合併した症例を報告。多断面画像による早期認識と個別化した周術期管理の重要性を強調している。",
    pmid:"42380971",
    url:"https://pubmed.ncbi.nlm.nih.gov/42380971/"},
-  {id:400, cat:"増悪・病態", isNew:true,
+  {id:400, cat:"増悪・病態", isNew:false,
    titleJa:"気管支拡張症患者における不安・抑うつ・疲労・社会的孤立の影響",
    titleEn:"Impact of anxiety, depression, fatigue, and social isolation in patients with bronchiectasis.",
    journal:"Expert review of respiratory medicine", sjr:"Q2", if:"2.7", date:"2026-02-05", year:2026,
@@ -2724,7 +2775,7 @@ const ARTICLES = [
    summary:"気管支拡張症患者では不安・抑うつ・疲労・社会的孤立といった心理社会的負担がQOLに大きく影響することを論じたエディトリアル。呼吸リハビリテーションを含む多職種介入における心理社会的評価の重要性を強調している。",
    pmid:"41603793",
    url:"https://pubmed.ncbi.nlm.nih.gov/41603793/"},
-  {id:399, cat:"ガイドライン・総説", isNew:true,
+  {id:399, cat:"ガイドライン・総説", isNew:false,
    titleJa:"気管支拡張症の成人患者に対する気道クリアランス法に関する欧州呼吸器学会の声明",
    titleEn:"European Respiratory Society statement on airway clearance techniques for adults with bronchiectasis.",
    journal:"呼吸理学療法学", date:"2026", year:2026,
