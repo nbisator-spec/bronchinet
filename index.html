@@ -473,9 +473,9 @@
     <div class="dashboard-header">
       <div class="dashboard-title">
         🔥 本日のハイライト
-        <span class="dashboard-badge">NEW 6件</span>
+        <span class="dashboard-badge">NEW 2件</span>
       </div>
-      <div class="dashboard-date">最終更新：2026-07-04 07:04 自動生成</div>
+      <div class="dashboard-date">最終更新：2026-07-05 07:04 自動生成</div>
     </div>
     <div class="dashboard-grid" id="dashboardGrid"></div>
   </div>
@@ -640,6 +640,13 @@
       <div class="sidebar-card">
         <div class="sidebar-header orange">📅 デイリーレポート履歴</div>
         <div class="sidebar-body">
+          <div class="report-item">
+            <div>
+              <div class="report-date">2026年7月5日（07:04）</div>
+              <div class="report-count">新規2件（非CF気管支拡張症小児の運動療法RCT/J Sci Med Sport・気管支拡張症の好中球エラスターゼとサンプル間相関/Tuberc Respir Dis）</div>
+            </div>
+            <span class="report-link" onclick="showSection('reports',document.querySelectorAll('nav a')[3])">▶ 開く</span>
+          </div>
           <div class="report-item">
             <div>
               <div class="report-date">2026年7月4日（07:04）</div>
@@ -1178,6 +1185,29 @@
   <div class="reports-page-header">
     <h2>📝 デイリーレポート アーカイブ</h2>
     <p>毎朝8時に自動生成される文献サマリーの履歴。既読除外機能により、常に新規情報のみを収録しています。</p>
+  </div>
+
+  <!-- Report 2026-07-05 07:04 -->
+  <div class="report-card">
+    <div class="report-card-header">
+      <div>
+        <div class="report-card-date">📅 2026年7月5日（07:04 自動生成）</div>
+        <div style="font-size:12px;color:var(--text-muted);margin-top:3px;">除外済み：約412論文 / 134試験超</div>
+      </div>
+      <span class="report-card-count">新規 2件・臨床試験 0件</span>
+    </div>
+    <ul class="report-highlight-list">
+      <li>
+        <span class="report-num">1</span>
+        <span class="report-cat-inline" style="background:#dbeafe;color:#1d4ed8">治療・薬剤</span>
+        <span>非嚢胞性線維症気管支拡張症の小児47例を対象とした8週間の遊び活動型運動療法プログラムのオーストラリア多施設RCT。増悪非発症割合・増悪までの期間は介入群で良好な傾向を示したが有意差はつかなかった（J Sci Med Sport Q1, 2026）。<a href="https://pubmed.ncbi.nlm.nih.gov/41720729/" target="_blank" style="color:var(--primary)">PubMed</a></span>
+      </li>
+      <li>
+        <span class="report-num">2</span>
+        <span class="report-cat-inline" style="background:#fee2e2;color:#991b1b">増悪・病態</span>
+        <span>ベトナム人気管支拡張症患者24例で、気管支洗浄液・喀痰中の好中球エラスターゼを比較。病変部で有意に高値、喀痰中活性は重症度と相関し、喀痰がNEの代替検体として妥当と確認（Tuberc Respir Dis Q2 IF:2.5, 2025）。<a href="https://pubmed.ncbi.nlm.nih.gov/39806808/" target="_blank" style="color:var(--primary)">PubMed</a></span>
+      </li>
+    </ul>
   </div>
 
   <!-- Report 2026-07-04 07:04 -->
@@ -2728,8 +2758,29 @@
 // DATA
 // ============================================================
 const ARTICLES = [
+  // ── 2026-07-05 新規 ──
+  {id:415, cat:"治療・薬剤", isNew:true,
+   titleJa:"非嚢胞性線維症気管支拡張症の小児における遊び活動型運動療法プログラムの短期・長期効果：ランダム化比較試験",
+   titleEn:"Short and long-term effects of a play-based therapeutic exercise programme in children with non-cystic fibrosis bronchiectasis: A randomised controlled trial.",
+   journal:"Journal of science and medicine in sport", sjr:"Q1", date:"2026-02-10", year:2026,
+   ev:"RCT",
+   authors:"Jones T, O'Grady KF, Goyal V ほか",
+   aui:"Jones O'Grady Goyal McCallum Drovandi Baque Brookes Terranova Chang Trost",
+   summary:"気管支拡張症の小児47例を対象に、8週間の遊び活動型運動療法プログラムの効果を検証したオーストラリアの多施設ランダム化比較試験。12ヶ月時点の増悪非発症割合や増悪までの期間は介入群で良好な傾向を示したが統計学的有意差はなく、身体活動量の増加も介入直後のみで持続しなかった。",
+   pmid:"41720729",
+   url:"https://pubmed.ncbi.nlm.nih.gov/41720729/"},
+  {id:416, cat:"増悪・病態", isNew:true,
+   titleJa:"気管支拡張症の障害肺葉における好中球エラスターゼの増加と喀痰・気管支洗浄液間レベルの相関",
+   titleEn:"Increased Neutrophil Elastase in Affected Lobes of Bronchiectasis and Correlation of Its Levels between Sputum and Bronchial Lavage Fluid.",
+   journal:"Tuberculosis and respiratory diseases", sjr:"Q2", if:"2.5", date:"2025-01-14", year:2025,
+   ev:"観察研究",
+   authors:"Nguyen-Ho L, Trinh HKT, Le-Thuong V ほか",
+   aui:"Nguyen-Ho Trinh Le-Thuong Le Vo Vu Tran-Van Chalmers",
+   summary:"ベトナム人気管支拡張症患者24例を対象に、気管支洗浄液（病変部・正常部）と喀痰における好中球エラスターゼ(NE)濃度・活性を比較したコホート研究。NEは病変部洗浄液・喀痰で正常部より有意に高く、喀痰中NE活性は重症度とも相関し、喀痰がNEの代替検体として妥当であることを確認した。",
+   pmid:"39806808",
+   url:"https://pubmed.ncbi.nlm.nih.gov/39806808/"},
   // ── 2026-07-04 新規 ──
-  {id:409, cat:"増悪・病態", isNew:true,
+  {id:409, cat:"増悪・病態", isNew:false,
    titleJa:"慢性副鼻腔炎患者における併存疾患の役割・評価・影響",
    titleEn:"The role, evaluation, and effects of comorbidities in patients with chronic rhinosinusitis.",
    journal:"The journal of allergy and clinical immunology. In practice", sjr:"Q1", date:"2026-07-01", year:2026,
@@ -2739,7 +2790,7 @@ const ARTICLES = [
    summary:"慢性副鼻腔炎（CRS）にしばしば併存する嚢胞性線維症・好酸球性多発血管炎性肉芽腫症・多発血管炎性肉芽腫症・免疫不全・気管支拡張症の5疾患について、臨床的特徴と鑑別診断のポイントを整理したレビュー。気管支拡張症合併例は難治性・非典型的なCRS経過を示し得るため、早期に疑い評価することが診断遅延の是正と個別化治療につながると強調している。",
    pmid:"42386153",
    url:"https://pubmed.ncbi.nlm.nih.gov/42386153/"},
-  {id:410, cat:"精密医療・エンドタイプ", isNew:true,
+  {id:410, cat:"精密医療・エンドタイプ", isNew:false,
    titleJa:"原発性線毛機能不全症（PCD）のヒト細胞モデル活用：スコーピングレビュー",
    titleEn:"Utilising human cellular models of primary ciliary dyskinesia: a scoping review.",
    journal:"European respiratory review : an official journal of the European Respiratory Society", sjr:"Q1", if:"10.4", date:"2026-07-01", year:2026,
@@ -2749,7 +2800,7 @@ const ARTICLES = [
    summary:"PCDのヒト気道細胞モデル（気液界面培養・スフェロイド・オルガノイド・iPS細胞由来モデル）に関する2000〜2024年の文献を対象としたスコーピングレビューで、612件中10件が採用基準を満たした。モデリング手法や線毛機能などの評価指標が研究間で標準化されておらず、遺伝子治療・薬剤スクリーニングなど治療応用を加速するには評価法の統一が必要と結論している。",
    pmid:"42386308",
    url:"https://pubmed.ncbi.nlm.nih.gov/42386308/"},
-  {id:411, cat:"精密医療・エンドタイプ", isNew:true,
+  {id:411, cat:"精密医療・エンドタイプ", isNew:false,
    titleJa:"原発性線毛機能不全症（PCD）の前臨床ヒトモデル",
    titleEn:"Preclinical human models of primary ciliary dyskinesia.",
    journal:"European respiratory review : an official journal of the European Respiratory Society", sjr:"Q1", if:"10.4", date:"2026-07-01", year:2026,
@@ -2759,7 +2810,7 @@ const ARTICLES = [
    summary:"PCDに対する遺伝子標的治療（低分子・オリゴヌクレオチド・mRNA療法・遺伝子置換・ゲノム編集）の開発を加速するため、気道上皮の気液界面培養やiPS細胞由来オルガノイド・スフェロイド・肺オンチップなど前臨床ヒトモデルを概観したレビュー。標的とすべき細胞・分化段階の特定や、線毛運動解析・電顕・粘液線毛クリアランス評価などアウトカム測定の標準化が今後の課題と指摘している。",
    pmid:"42386312",
    url:"https://pubmed.ncbi.nlm.nih.gov/42386312/"},
-  {id:412, cat:"マイクロバイオーム・感染", isNew:true,
+  {id:412, cat:"マイクロバイオーム・感染", isNew:false,
    titleJa:"非結核性抗酸菌症（NTM-PD）と肺結核における下気道マイクロバイオータの比較解析",
    titleEn:"Differential analysis of the lower respiratory tract microbiota between patients with non-tuberculous mycobacterial pulmonary disease and pulmonary tuberculosis.",
    journal:"BMC microbiology", sjr:"Q1", if:"4.2", date:"2026-07-01", year:2026,
@@ -2769,7 +2820,7 @@ const ARTICLES = [
    summary:"NTM肺症（NTM-PD）患者113例と肺結核（PTB）患者105例を対象に、気管支肺胞洗浄液の標的次世代シーケンシングでマイクロバイオームを比較。NTM-PD群では喀血・気管支拡張症・COPD合併がPTB群より多く、緑膿菌やAspergillus属の検出頻度が高いなど、両疾患を鑑別しうる特徴的な微生物プロファイルが示された。",
    pmid:"42387366",
    url:"https://pubmed.ncbi.nlm.nih.gov/42387366/"},
-  {id:413, cat:"増悪・病態", isNew:true,
+  {id:413, cat:"増悪・病態", isNew:false,
    titleJa:"肺結核治療終了後のスパイロメトリー：その必要性",
    titleEn:"Spirometry after treatment completion for pulmonary tuberculosis - a necessity?",
    journal:"Monaldi archives for chest disease = Archivio Monaldi per le malattie del torace", sjr:"Q3", if:"0.8", date:"2026-07-01", year:2026,
@@ -2779,7 +2830,7 @@ const ARTICLES = [
    summary:"抗結核治療終了後1年以内の成人175例を前向きに評価した研究で、57.1%にスパイロメトリー異常（拘束性30.3%、閉塞性16.6%、PRISm 10.3%）を認め、線維化・気管支拡張症・肺気腫などの構造的後遺症を伴う結核後肺疾患（PTLD）が高頻度に残存することを示した。菌陽性例では閉塞性障害や重度構造損傷のリスクが高く、微生物学的治癒が呼吸機能の回復を意味しないため、治療終了時のスパイロメトリー評価の常時実施を提言している。",
    pmid:"42388067",
    url:"https://pubmed.ncbi.nlm.nih.gov/42388067/"},
-  {id:414, cat:"ガイドライン・総説", isNew:true,
+  {id:414, cat:"ガイドライン・総説", isNew:false,
    titleJa:"アルファ1アンチトリプシン欠乏症（AATD）の診断と管理に関するスペイン臨床診療ガイドライン：2026年改訂版",
    titleEn:"Spanish Clinical Practice Guidelines for the Diagnosis and Management of Alpha-1 Antitrypsin Deficiency: 2026 Update.",
    journal:"Archivos de bronconeumologia", sjr:"Q2", if:"9.2", date:"2026-06-13", year:2026,
