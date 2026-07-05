@@ -473,9 +473,9 @@
     <div class="dashboard-header">
       <div class="dashboard-title">
         🔥 本日のハイライト
-        <span class="dashboard-badge">NEW 2件</span>
+        <span class="dashboard-badge">NEW 1件</span>
       </div>
-      <div class="dashboard-date">最終更新：2026-07-05 07:04 自動生成</div>
+      <div class="dashboard-date">最終更新：2026-07-06 07:04 自動生成</div>
     </div>
     <div class="dashboard-grid" id="dashboardGrid"></div>
   </div>
@@ -640,6 +640,13 @@
       <div class="sidebar-card">
         <div class="sidebar-header orange">📅 デイリーレポート履歴</div>
         <div class="sidebar-body">
+          <div class="report-item">
+            <div>
+              <div class="report-date">2026年7月6日（07:04）</div>
+              <div class="report-count">新規1件（非CF気管支拡張症のAchromobacter xylosoxidans気道感染症例/Arch Bronconeumol）</div>
+            </div>
+            <span class="report-link" onclick="showSection('reports',document.querySelectorAll('nav a')[3])">▶ 開く</span>
+          </div>
           <div class="report-item">
             <div>
               <div class="report-date">2026年7月5日（07:04）</div>
@@ -1185,6 +1192,24 @@
   <div class="reports-page-header">
     <h2>📝 デイリーレポート アーカイブ</h2>
     <p>毎朝8時に自動生成される文献サマリーの履歴。既読除外機能により、常に新規情報のみを収録しています。</p>
+  </div>
+
+  <!-- Report 2026-07-06 07:04 -->
+  <div class="report-card">
+    <div class="report-card-header">
+      <div>
+        <div class="report-card-date">📅 2026年7月6日（07:04 自動生成）</div>
+        <div style="font-size:12px;color:var(--text-muted);margin-top:3px;">除外済み：約414論文 / 134試験超</div>
+      </div>
+      <span class="report-card-count">新規 1件・臨床試験 0件</span>
+    </div>
+    <ul class="report-highlight-list">
+      <li>
+        <span class="report-num">1</span>
+        <span class="report-cat-inline" style="background:#dbeafe;color:#1d4ed8">治療・薬剤</span>
+        <span>スペインの非嚢胞性線維症気管支拡張症患者にみられた稀少菌Achromobacter xylosoxidansによる慢性気道感染を吸入レボフロキサシンで管理した症例報告（Arch Bronconeumol Q2 IF:9.2, 2026）。<a href="https://pubmed.ncbi.nlm.nih.gov/41760467/" target="_blank" style="color:var(--primary)">PubMed</a></span>
+      </li>
+    </ul>
   </div>
 
   <!-- Report 2026-07-05 07:04 -->
@@ -2758,8 +2783,19 @@
 // DATA
 // ============================================================
 const ARTICLES = [
+  // ── 2026-07-06 新規 ──
+  {id:417, cat:"治療・薬剤", isNew:true,
+   titleJa:"非嚢胞性線維症気管支拡張症患者における慢性Achromobacter xylosoxidans気道感染に対する吸入レボフロキサシンでの管理成功例",
+   titleEn:"Successful Management of Chronic Achromobacter xylosoxidans Bronchial Infection With Nebulized Levofloxacin in a Patient With Non-cystic Fibrosis Bronchiectasis.",
+   journal:"Archivos de bronconeumologia", sjr:"Q2", if:"9.2", date:"2026-02-16", year:2026,
+   ev:"症例報告",
+   authors:"Castellanos López L, Mira Palomino C, Raboso Moreno B",
+   aui:"Castellanos-López Mira-Palomino Raboso-Moreno",
+   summary:"スペインの非嚢胞性線維症気管支拡張症患者にみられた稀少な多剤耐性傾向菌Achromobacter xylosoxidansによる慢性気道感染を、吸入レボフロキサシンで管理した症例報告。抄録は非公開のため詳細な経過は原著確認が必要。",
+   pmid:"41760467",
+   url:"https://pubmed.ncbi.nlm.nih.gov/41760467/"},
   // ── 2026-07-05 新規 ──
-  {id:415, cat:"治療・薬剤", isNew:true,
+  {id:415, cat:"治療・薬剤", isNew:false,
    titleJa:"非嚢胞性線維症気管支拡張症の小児における遊び活動型運動療法プログラムの短期・長期効果：ランダム化比較試験",
    titleEn:"Short and long-term effects of a play-based therapeutic exercise programme in children with non-cystic fibrosis bronchiectasis: A randomised controlled trial.",
    journal:"Journal of science and medicine in sport", sjr:"Q1", date:"2026-02-10", year:2026,
@@ -2769,7 +2805,7 @@ const ARTICLES = [
    summary:"気管支拡張症の小児47例を対象に、8週間の遊び活動型運動療法プログラムの効果を検証したオーストラリアの多施設ランダム化比較試験。12ヶ月時点の増悪非発症割合や増悪までの期間は介入群で良好な傾向を示したが統計学的有意差はなく、身体活動量の増加も介入直後のみで持続しなかった。",
    pmid:"41720729",
    url:"https://pubmed.ncbi.nlm.nih.gov/41720729/"},
-  {id:416, cat:"増悪・病態", isNew:true,
+  {id:416, cat:"増悪・病態", isNew:false,
    titleJa:"気管支拡張症の障害肺葉における好中球エラスターゼの増加と喀痰・気管支洗浄液間レベルの相関",
    titleEn:"Increased Neutrophil Elastase in Affected Lobes of Bronchiectasis and Correlation of Its Levels between Sputum and Bronchial Lavage Fluid.",
    journal:"Tuberculosis and respiratory diseases", sjr:"Q2", if:"2.5", date:"2025-01-14", year:2025,
