@@ -473,9 +473,9 @@
     <div class="dashboard-header">
       <div class="dashboard-title">
         🔥 本日のハイライト
-        <span class="dashboard-badge">NEW 1件</span>
+        <span class="dashboard-badge">NEW 0件</span>
       </div>
-      <div class="dashboard-date">最終更新：2026-07-06 07:04 自動生成</div>
+      <div class="dashboard-date">最終更新：2026-07-07 07:04 自動生成</div>
     </div>
     <div class="dashboard-grid" id="dashboardGrid"></div>
   </div>
@@ -640,6 +640,13 @@
       <div class="sidebar-card">
         <div class="sidebar-header orange">📅 デイリーレポート履歴</div>
         <div class="sidebar-body">
+          <div class="report-item">
+            <div>
+              <div class="report-date">2026年7月7日（07:04）</div>
+              <div class="report-count">新規なし（既読済みアイテムを全件除外、genuinely newな文献・試験は検出されず）</div>
+            </div>
+            <span class="report-link" onclick="showSection('reports',document.querySelectorAll('nav a')[3])">▶ 開く</span>
+          </div>
           <div class="report-item">
             <div>
               <div class="report-date">2026年7月6日（07:04）</div>
@@ -1192,6 +1199,22 @@
   <div class="reports-page-header">
     <h2>📝 デイリーレポート アーカイブ</h2>
     <p>毎朝8時に自動生成される文献サマリーの履歴。既読除外機能により、常に新規情報のみを収録しています。</p>
+  </div>
+
+  <!-- Report 2026-07-07 07:04 -->
+  <div class="report-card">
+    <div class="report-card-header">
+      <div>
+        <div class="report-card-date">📅 2026年7月7日（07:04 自動生成）</div>
+        <div style="font-size:12px;color:var(--text-muted);margin-top:3px;">除外済み：約162論文 / 120試験</div>
+      </div>
+      <span class="report-card-count">新規 0件・臨床試験 0件</span>
+    </div>
+    <ul class="report-highlight-list">
+      <li>
+        <span>本日はPubMed 9クエリ・J-STAGE・CiNii・ClinicalTrials.gov・JRCT・CTISのいずれからも、ポータル掲載基準を満たす新規文献・試験は検出されませんでした。</span>
+      </li>
+    </ul>
   </div>
 
   <!-- Report 2026-07-06 07:04 -->
@@ -2784,7 +2807,7 @@
 // ============================================================
 const ARTICLES = [
   // ── 2026-07-06 新規 ──
-  {id:417, cat:"治療・薬剤", isNew:true,
+  {id:417, cat:"治療・薬剤", isNew:false,
    titleJa:"非嚢胞性線維症気管支拡張症患者における慢性Achromobacter xylosoxidans気道感染に対する吸入レボフロキサシンでの管理成功例",
    titleEn:"Successful Management of Chronic Achromobacter xylosoxidans Bronchial Infection With Nebulized Levofloxacin in a Patient With Non-cystic Fibrosis Bronchiectasis.",
    journal:"Archivos de bronconeumologia", sjr:"Q2", if:"9.2", date:"2026-02-16", year:2026,
