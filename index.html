@@ -473,9 +473,9 @@
     <div class="dashboard-header">
       <div class="dashboard-title">
         🔥 本日のハイライト
-        <span class="dashboard-badge">NEW 0件</span>
+        <span class="dashboard-badge">NEW 1件</span>
       </div>
-      <div class="dashboard-date">最終更新：2026-07-07 07:04 自動生成</div>
+      <div class="dashboard-date">最終更新：2026-07-08 07:04 自動生成</div>
     </div>
     <div class="dashboard-grid" id="dashboardGrid"></div>
   </div>
@@ -640,6 +640,13 @@
       <div class="sidebar-card">
         <div class="sidebar-header orange">📅 デイリーレポート履歴</div>
         <div class="sidebar-body">
+          <div class="report-item">
+            <div>
+              <div class="report-date">2026年7月8日（07:04）</div>
+              <div class="report-count">新規1件・EU試験1件（PCD早期構造的肺変化・Macroleaveマクロライド中止試験CTIS登録）</div>
+            </div>
+            <span class="report-link" onclick="showSection('reports',document.querySelectorAll('nav a')[3])">▶ 開く</span>
+          </div>
           <div class="report-item">
             <div>
               <div class="report-date">2026年7月7日（07:04）</div>
@@ -1199,6 +1206,29 @@
   <div class="reports-page-header">
     <h2>📝 デイリーレポート アーカイブ</h2>
     <p>毎朝8時に自動生成される文献サマリーの履歴。既読除外機能により、常に新規情報のみを収録しています。</p>
+  </div>
+
+  <!-- Report 2026-07-08 07:04 -->
+  <div class="report-card">
+    <div class="report-card-header">
+      <div>
+        <div class="report-card-date">📅 2026年7月8日（07:04 自動生成）</div>
+        <div style="font-size:12px;color:var(--text-muted);margin-top:3px;">除外済み：約82論文 / 120試験</div>
+      </div>
+      <span class="report-card-count">新規 1件・EU試験 1件</span>
+    </div>
+    <ul class="report-highlight-list">
+      <li>
+        <span class="report-num">1</span>
+        <span class="report-cat-inline" style="background:#fee2e2;color:#991b1b">増悪・病態</span>
+        <span>オーストラリアの3歳未満PCD患児15例の胸部CTで早期構造的肺変化を横断評価。気管支拡張症は全葉の38%（下葉63%）に認められ、早期診断・介入確立の重要性を示唆（Pediatr Pulmonol Q1 IF:2.3, 2026）。<a href="https://pubmed.ncbi.nlm.nih.gov/42411566/" target="_blank" style="color:var(--primary)">PubMed</a></span>
+      </li>
+      <li>
+        <span class="report-num">2</span>
+        <span class="report-cat-inline" style="background:#e0e7ff;color:#3730a3">EU新規試験</span>
+        <span>安定期の非CF気管支拡張症患者185例を対象に長期マクロライド（アジスロマイシン）中止の影響を検証するPhase III多施設RCT「Macroleave」がEU CTIS登録（2025-521493-33-00、フランス・Créteil）。<a href="https://euclinicaltrials.eu/ctis-public/view/2025-521493-33-00" target="_blank" style="color:var(--primary)">CTIS</a></span>
+      </li>
+    </ul>
   </div>
 
   <!-- Report 2026-07-07 07:04 -->
@@ -2806,6 +2836,17 @@
 // DATA
 // ============================================================
 const ARTICLES = [
+  // ── 2026-07-08 新規 ──
+  {id:418, cat:"増悪・病態", isNew:true,
+   titleJa:"原発性線毛機能不全症（PCD）における早期の構造的肺変化",
+   titleEn:"Early Structural Lung Changes in Primary Ciliary Dyskinesia (PCD).",
+   journal:"Pediatric pulmonology", sjr:"Q1", if:"2.3", date:"2026-07-01", year:2026,
+   ev:"観察研究",
+   authors:"Robinson P, Yokote M",
+   aui:"Robinson Yokote",
+   summary:"オーストラリアの3歳未満PCD患児15例を対象に、臨床的に安定した状態で胸部CTによる構造的肺変化を横断的に評価した研究。気管支壁肥厚は全葉の50%、気管支拡張症は38%の葉に認められ、いずれも下葉でより高頻度（気管支拡張症63%）であり、早期診断と有効な介入確立の重要性を示唆した。",
+   pmid:"42411566",
+   url:"https://pubmed.ncbi.nlm.nih.gov/42411566/"},
   // ── 2026-07-06 新規 ──
   {id:417, cat:"治療・薬剤", isNew:false,
    titleJa:"非嚢胞性線維症気管支拡張症患者における慢性Achromobacter xylosoxidans気道感染に対する吸入レボフロキサシンでの管理成功例",
@@ -6988,6 +7029,8 @@ const TRIAL_GROUPS = [
         desc: "構造的肺疾患・奇形を有する小児・青年の肺健康増進を目的とした無作為化試験（デンマーク・Rigshospitalet）。PCD・気管支拡張症・先天性肺疾患を有する小児の長期的な肺機能維持・改善戦略を検討する。（CTIS 2024-518730-88-00）", url: "https://euclinicaltrials.eu/ctis-public/view/2024-518730-88-00" },
       { name: "気管支拡張症48週多施設二重盲検RCT（スウェーデン）", drug: "未公開（Västra Götalandsregionen）", sponsor: "Vaestra Goetalandsregionen", phase: "Phase IV", status: "EU登録", nct: "2025-524872-51-00", color: "#64748b",
         desc: "スウェーデン・ヴェストラ・イェータランドが主導する48週間の多施設無作為化二重盲検プラセボ対照優越性試験。気管支拡張症を対象とした介入の長期有効性・安全性を評価する。（CTIS 2025-524872-51-00）", url: "https://euclinicaltrials.eu/ctis-public/view/2025-524872-51-00" },
+      { name: "Macroleave（マクロライド長期中止試験・EU）", drug: "アジスロマイシン中止（Créteil）", sponsor: "Centre Hospitalier Intercommunal Creteil", phase: "Phase III", status: "EU登録", nct: "2025-521493-33-00", color: "#15803d",
+        desc: "安定期の非CF気管支拡張症患者185例を対象に、長期マクロライド（アジスロマイシン）中止の影響を検証する多施設無作為化比較試験（フランス・Créteil）。増悪までの期間・年間重症増悪回数・QOL・マクロライド耐性菌出現を評価。実施国：France（2施設）。（CTIS 2025-521493-33-00）", url: "https://euclinicaltrials.eu/ctis-public/view/2025-521493-33-00" },
     ]
   },
 ]; // end TRIAL_GROUPS
