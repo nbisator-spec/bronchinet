@@ -473,9 +473,9 @@
     <div class="dashboard-header">
       <div class="dashboard-title">
         🔥 本日のハイライト
-        <span class="dashboard-badge">NEW 1件</span>
+        <span class="dashboard-badge">NEW 4件</span>
       </div>
-      <div class="dashboard-date">最終更新：2026-07-08 07:04 自動生成</div>
+      <div class="dashboard-date">最終更新：2026-07-09 07:04 自動生成</div>
     </div>
     <div class="dashboard-grid" id="dashboardGrid"></div>
   </div>
@@ -640,6 +640,13 @@
       <div class="sidebar-card">
         <div class="sidebar-header orange">📅 デイリーレポート履歴</div>
         <div class="sidebar-body">
+          <div class="report-item">
+            <div>
+              <div class="report-date">2026年7月9日（07:04）</div>
+              <div class="report-count">新規4件・臨床試験1件（環境由来NTM症例・BAE後喀血再発予測・IEIの気管支拡張症・クロファジミン10年経験）</div>
+            </div>
+            <span class="report-link" onclick="showSection('reports',document.querySelectorAll('nav a')[3])">▶ 開く</span>
+          </div>
           <div class="report-item">
             <div>
               <div class="report-date">2026年7月8日（07:04）</div>
@@ -1206,6 +1213,44 @@
   <div class="reports-page-header">
     <h2>📝 デイリーレポート アーカイブ</h2>
     <p>毎朝8時に自動生成される文献サマリーの履歴。既読除外機能により、常に新規情報のみを収録しています。</p>
+  </div>
+
+  <!-- Report 2026-07-09 07:04 -->
+  <div class="report-card">
+    <div class="report-card-header">
+      <div>
+        <div class="report-card-date">📅 2026年7月9日（07:04 自動生成）</div>
+        <div style="font-size:12px;color:var(--text-muted);margin-top:3px;">除外済み：約85論文 / 133試験</div>
+      </div>
+      <span class="report-card-count">新規 4件・臨床試験 1件</span>
+    </div>
+    <ul class="report-highlight-list">
+      <li>
+        <span class="report-num">1</span>
+        <span class="report-cat-inline" style="background:#dcfce7;color:#166534">マイクロバイオーム・感染</span>
+        <span>ハワイのNTM高浸淫地域で気管支拡張症発症直後に環境由来Mycobacterium intracellulare subsp. chimaera肺症が成立した経過を全ゲノム解析で裏付けた症例報告（Clin Infect Dis Q1, 2026）。<a href="https://pubmed.ncbi.nlm.nih.gov/41518593/" target="_blank" style="color:var(--primary)">PubMed</a></span>
+      </li>
+      <li>
+        <span class="report-num">2</span>
+        <span class="report-cat-inline" style="background:#fee2e2;color:#991b1b">増悪・病態</span>
+        <span>喀血に対する気管支動脈塞栓術（BAE）後の再発予測因子を65研究・12,143例のシステマティックレビューで整理、気管支拡張症は独立予測因子の一つ（Cardiovasc Intervent Radiol Q1, 2026）。<a href="https://pubmed.ncbi.nlm.nih.gov/42414635/" target="_blank" style="color:var(--primary)">PubMed</a></span>
+      </li>
+      <li>
+        <span class="report-num">3</span>
+        <span class="report-cat-inline" style="background:#fee2e2;color:#991b1b">増悪・病態</span>
+        <span>原発性免疫不全症（IEI）の遺伝学的確定コホート131例で気管支拡張症有病率27%、心肺機能障害・死亡率上昇（15% vs 3%）と関連（J Clin Immunol Q1, 2026）。<a href="https://pubmed.ncbi.nlm.nih.gov/42414785/" target="_blank" style="color:var(--primary)">PubMed</a></span>
+      </li>
+      <li>
+        <span class="report-num">4</span>
+        <span class="report-cat-inline" style="background:#dcfce7;color:#166534">マイクロバイオーム・感染</span>
+        <span>ベルギー2施設でのクロファジミン10年使用経験（102コース、56%が気管支拡張症合併）、忍容性は概ね良好（BMC Pulm Med Q2 IF:2.8, 2026）。<a href="https://pubmed.ncbi.nlm.nih.gov/42414984/" target="_blank" style="color:var(--primary)">PubMed</a></span>
+      </li>
+      <li>
+        <span class="report-num">5</span>
+        <span class="report-cat-inline" style="background:#cffafe;color:#0e7490">臨床試験</span>
+        <span>ABPAの真菌学的状態（陽性/陰性）別に増悪率・治療反応などの予後を比較する中国発多施設観察研究がClinicalTrials.gov新規登録（NCT07690345）。<a href="https://clinicaltrials.gov/study/NCT07690345" target="_blank" style="color:var(--primary)">ClinicalTrials.gov</a></span>
+      </li>
+    </ul>
   </div>
 
   <!-- Report 2026-07-08 07:04 -->
@@ -2836,8 +2881,49 @@
 // DATA
 // ============================================================
 const ARTICLES = [
+  // ── 2026-07-09 新規 ──
+  {id:422, cat:"マイクロバイオーム・感染", isNew:true,
+   titleJa:"非結核性抗酸菌感染症に対するクロファジミン使用：ベルギーにおける10年間の経験",
+   titleEn:"Clofazimine use for nontuberculous mycobacterial infections: 10-year experience in Belgium.",
+   journal:"BMC pulmonary medicine", sjr:"Q2", if:"2.8", date:"2026-07-07", year:2026,
+   ev:"観察研究",
+   authors:"Piot A, Missault S, Vande Weygaerde Y ほか",
+   aui:"Piot Missault Vande Weygaerde Jain Van Bleyenbergh Bosteels Spriet Buyle Van Braeckel Lorent",
+   summary:"ベルギーの2施設で2015〜2024年に行われたクロファジミン含有治療102コースを後方視的に解析（56%が気管支拡張症合併）。主にMAC肺症難治例やM. abscessus複合体感染に用いられ、皮膚色素沈着(38%)等の有害事象はあったが重篤例はなく忍容性は概ね良好であった。",
+   pmid:"42414984",
+   url:"https://pubmed.ncbi.nlm.nih.gov/42414984/"},
+  {id:421, cat:"マイクロバイオーム・感染", isNew:true,
+   titleJa:"気管支拡張症発症後まもなく環境由来のMycobacterium intracellulare subsp. chimaera肺症を来した症例の記録",
+   titleEn:"Documenting Environmentally Acquired Mycobacterium intracellulare subsp. chimaera Pulmonary Disease Soon After Bronchiectasis Onset.",
+   journal:"Clinical infectious diseases", sjr:"Q1", date:"2026-07-08", year:2026,
+   ev:"症例報告",
+   authors:"Honda JR, Wilsey RN, Raulerson CK ほか",
+   aui:"Honda Wilsey Raulerson Ding Castaneda Joyner",
+   summary:"ハワイのNTM高浸淫地域における一症例で、気管支拡張症発症後に自宅環境からの長期曝露を背景としてMycobacterium intracellulare subsp. chimaeraによる肺NTM症を発症した経過を環境サンプリングと合わせて記録した。全ゲノム解析で患者由来株と自宅環境由来株の関連が示唆され、環境曝露からのNTM感染成立時期を具体的に裏付ける事例となった。",
+   pmid:"41518593",
+   url:"https://pubmed.ncbi.nlm.nih.gov/41518593/"},
+  {id:420, cat:"増悪・病態", isNew:true,
+   titleJa:"原発性免疫不全症（IEI）における気管支拡張症：遺伝学的に確定したコホートでの有病率・予測因子・心肺合併症",
+   titleEn:"Bronchiectasis in Inborn Errors of Immunity: Prevalence, Predictors, and Cardiopulmonary Complications in a Genetically Characterized Cohort.",
+   journal:"Journal of clinical immunology", sjr:"Q1", date:"2026-07-08", year:2026,
+   ev:"観察研究",
+   authors:"Marangu-Boore D, Myint-Hpu K, Kang E ほか",
+   aui:"Marangu-Boore Myint-Hpu Kang Notarangelo Delmonte",
+   summary:"米国NIHの遺伝学的に確定したIEIコホート131例を横断解析し、気管支拡張症の有病率は27%で、高齢での初回CTや複合免疫不全・液性免疫不全優位・免疫調節異常疾患が独立予測因子であった。気管支拡張症合併例は心肺機能障害が強く、死亡率も有意に高かった（15% vs 3%）。",
+   pmid:"42414785",
+   url:"https://pubmed.ncbi.nlm.nih.gov/42414785/"},
+  {id:419, cat:"増悪・病態", isNew:true,
+   titleJa:"喀血に対する気管支動脈塞栓術(BAE)後の再発予測因子：SWiMガイドラインを用いたシステマティックレビューとエビデンス統合解析",
+   titleEn:"Predictors of Recurrence Following Bronchial Artery Embolisation (BAE) for Haemoptysis: A Systematic Review and Evidence Synthesis Analyses Using SWiM Guidelines.",
+   journal:"Cardiovascular and interventional radiology", sjr:"Q1", date:"2026-07-07", year:2026,
+   ev:"メタ解析・SR",
+   authors:"Sethi D, Iyer TR, Abu-Al-Timen S",
+   aui:"Sethi Iyer Abu-Al-Timen",
+   summary:"65研究・12,143例を対象にBAE後の喀血再発予測因子をメタ解析によらないエビデンス統合（SWiM）手法で検討したシステマティックレビュー。多変量解析では気管支拡張症やアスペルギルス症、全身-肺動脈シャントなどが独立した再発予測因子として同定された。",
+   pmid:"42414635",
+   url:"https://pubmed.ncbi.nlm.nih.gov/42414635/"},
   // ── 2026-07-08 新規 ──
-  {id:418, cat:"増悪・病態", isNew:true,
+  {id:418, cat:"増悪・病態", isNew:false,
    titleJa:"原発性線毛機能不全症（PCD）における早期の構造的肺変化",
    titleEn:"Early Structural Lung Changes in Primary Ciliary Dyskinesia (PCD).",
    journal:"Pediatric pulmonology", sjr:"Q1", if:"2.3", date:"2026-07-01", year:2026,
@@ -6965,6 +7051,8 @@ const TRIAL_GROUPS = [
   { name: '観察研究・精密医療・診断', icon: '📊', color: '#475569',
     sub: 'フレームワーク開発・表現型・重症度',
     trials: [
+      { name: 'ABPA真菌学的状態と予後（千仏山医院）', drug: '観察研究（真菌陽性/陰性層別化）', sponsor: 'Qianfoshan Hospital', phase: '観察研究', status: 'RECRUITING', nct: 'NCT07690345', color: '#0e7490',
+        desc: 'ISHAM 2024基準で診断したABPA患者を喀痰・BALFの真菌培養/GM/mNGS結果に基づき真菌陽性・陰性群に層別化し、12ヶ月間の増悪率や治療反応などの予後を比較する多施設双方向コホート研究（中国）。', url: 'https://clinicaltrials.gov/study/NCT07690345' },
       { name: 'BASE（重症度・増悪リスクフレームワーク）', drug: 'BASE フレームワーク（観察研究）', sponsor: 'Assiut University', phase: '観察研究', status: 'RECRUITING', nct: 'NCT07599839', color: '#1d4ed8',
         desc: '気管支拡張症の重症度分類と12ヶ月増悪リスク予測のためのBASEフレームワーク開発試験。機能的・放射線学的・炎症変数を組み合わせて患者をリスク層別化する前向きコホート研究。', url: 'https://clinicaltrials.gov/study/NCT07599839' },
       { name: '気管支拡張症表現型同定モデル', drug: '潜在クラス軌跡解析（観察研究）', sponsor: 'Assiut University', phase: '観察研究', status: 'RECRUITING', nct: 'NCT07599969', color: '#0e7490',
