@@ -473,9 +473,9 @@
     <div class="dashboard-header">
       <div class="dashboard-title">
         🔥 本日のハイライト
-        <span class="dashboard-badge">NEW 4件</span>
+        <span class="dashboard-badge">NEW 2件</span>
       </div>
-      <div class="dashboard-date">最終更新：2026-07-09 07:04 自動生成</div>
+      <div class="dashboard-date">最終更新：2026-07-10 07:04 自動生成</div>
     </div>
     <div class="dashboard-grid" id="dashboardGrid"></div>
   </div>
@@ -640,6 +640,13 @@
       <div class="sidebar-card">
         <div class="sidebar-header orange">📅 デイリーレポート履歴</div>
         <div class="sidebar-body">
+          <div class="report-item">
+            <div>
+              <div class="report-date">2026年7月10日（07:04）</div>
+              <div class="report-count">新規2件（骨形成不全症の肺病変・IL7R変異による非典型的SCIDの気管支拡張症合併）</div>
+            </div>
+            <span class="report-link" onclick="showSection('reports',document.querySelectorAll('nav a')[3])">▶ 開く</span>
+          </div>
           <div class="report-item">
             <div>
               <div class="report-date">2026年7月9日（07:04）</div>
@@ -1213,6 +1220,29 @@
   <div class="reports-page-header">
     <h2>📝 デイリーレポート アーカイブ</h2>
     <p>毎朝8時に自動生成される文献サマリーの履歴。既読除外機能により、常に新規情報のみを収録しています。</p>
+  </div>
+
+  <!-- Report 2026-07-10 07:04 -->
+  <div class="report-card">
+    <div class="report-card-header">
+      <div>
+        <div class="report-card-date">📅 2026年7月10日（07:04 自動生成）</div>
+        <div style="font-size:12px;color:var(--text-muted);margin-top:3px;">除外済み：約104論文 / 70試験</div>
+      </div>
+      <span class="report-card-count">新規 2件・臨床試験 0件</span>
+    </div>
+    <ul class="report-highlight-list">
+      <li>
+        <span class="report-num">1</span>
+        <span class="report-cat-inline" style="background:#fee2e2;color:#991b1b">増悪・病態</span>
+        <span>骨形成不全症(OI)成人60例の多施設横断研究で胸部CTの85.7%に気管支拡張症を含む肺異常を確認、呼吸器合併症がOIに内在する病態の可能性を示唆（Chest Q1 IF9.8, 2026）。<a href="https://pubmed.ncbi.nlm.nih.gov/41865786/" target="_blank" style="color:var(--primary)">PubMed</a></span>
+      </li>
+      <li>
+        <span class="report-num">2</span>
+        <span class="report-cat-inline" style="background:#fee2e2;color:#991b1b">増悪・病態</span>
+        <span>IL7R変異による非典型的重症複合免疫不全症(SCID)の小児例でCVID様の結節性リンパ過形成と気管支拡張症を合併した症例報告（Pediatr Allergy Immunol Q1, 2026）。<a href="https://pubmed.ncbi.nlm.nih.gov/42418284/" target="_blank" style="color:var(--primary)">PubMed</a></span>
+      </li>
+    </ul>
   </div>
 
   <!-- Report 2026-07-09 07:04 -->
@@ -2881,8 +2911,31 @@
 // DATA
 // ============================================================
 const ARTICLES = [
+  // ── 2026-07-10 新規 ──
+  {id:424, cat:"増悪・病態", isNew:true,
+   titleJa:"IL7R変異による非典型的重症複合免疫不全症でCVIDを模倣した結節性リンパ過形成の1例",
+   titleEn:"Nodular lymphoid hyperplasia in atypical SCID due to IL7R mutations mimicking CVID.",
+   journal:"Pediatric allergy and immunology", sjr:"Q1", date:"2026-07", year:2026,
+   ev:"症例報告",
+   scope:"免疫不全",
+   authors:"Liu H, Zhang X, Shen Y ほか",
+   aui:"Liu Zhang Shen Liu Yang",
+   summary:"IL7Rα変異による非典型的重症複合免疫不全症(SCID)の小児例で、分類不能型免疫不全症(CVID)類似の結節性リンパ過形成を呈した症例報告。気管支拡張症を含む反復性呼吸器感染症を合併しており、原発性免疫不全症の鑑別における遺伝学的評価の重要性を示した。",
+   pmid:"42418284",
+   url:"https://pubmed.ncbi.nlm.nih.gov/42418284/"},
+  {id:423, cat:"増悪・病態", isNew:true,
+   titleJa:"骨形成不全症の成人患者における肺疾患の評価：多施設横断研究",
+   titleEn:"Evaluation of Lung Disease in Adults With Osteogenesis Imperfecta: A Cross-Sectional, Multicenter Study.",
+   journal:"Chest", sjr:"Q1", if:"9.8", date:"2026-03-20", year:2026,
+   ev:"観察研究",
+   scope:"他疾患",
+   authors:"Derocher CE, Carter EM, Dyer D ほか",
+   aui:"Derocher Carter Dyer Krakow Wu Sandhaus Raggio",
+   summary:"骨形成不全症(OI)成人60例を対象とした多施設横断研究で、胸部CTの85.7%（48/56例）に気管支壁肥厚・すりガラス影・無気肺・気管支拡張症などの異常を認めた。側弯の程度と肺機能障害の相関は乏しく（R=0.127、p=0.338）、呼吸器合併症はOIに内在する病態である可能性が示唆された。",
+   pmid:"41865786",
+   url:"https://pubmed.ncbi.nlm.nih.gov/41865786/"},
   // ── 2026-07-09 新規 ──
-  {id:422, cat:"マイクロバイオーム・感染", isNew:true,
+  {id:422, cat:"マイクロバイオーム・感染", isNew:false,
    titleJa:"非結核性抗酸菌感染症に対するクロファジミン使用：ベルギーにおける10年間の経験",
    titleEn:"Clofazimine use for nontuberculous mycobacterial infections: 10-year experience in Belgium.",
    journal:"BMC pulmonary medicine", sjr:"Q2", if:"2.8", date:"2026-07-07", year:2026,
@@ -2892,7 +2945,7 @@ const ARTICLES = [
    summary:"ベルギーの2施設で2015〜2024年に行われたクロファジミン含有治療102コースを後方視的に解析（56%が気管支拡張症合併）。主にMAC肺症難治例やM. abscessus複合体感染に用いられ、皮膚色素沈着(38%)等の有害事象はあったが重篤例はなく忍容性は概ね良好であった。",
    pmid:"42414984",
    url:"https://pubmed.ncbi.nlm.nih.gov/42414984/"},
-  {id:421, cat:"マイクロバイオーム・感染", isNew:true,
+  {id:421, cat:"マイクロバイオーム・感染", isNew:false,
    titleJa:"気管支拡張症発症後まもなく環境由来のMycobacterium intracellulare subsp. chimaera肺症を来した症例の記録",
    titleEn:"Documenting Environmentally Acquired Mycobacterium intracellulare subsp. chimaera Pulmonary Disease Soon After Bronchiectasis Onset.",
    journal:"Clinical infectious diseases", sjr:"Q1", date:"2026-07-08", year:2026,
@@ -2902,7 +2955,7 @@ const ARTICLES = [
    summary:"ハワイのNTM高浸淫地域における一症例で、気管支拡張症発症後に自宅環境からの長期曝露を背景としてMycobacterium intracellulare subsp. chimaeraによる肺NTM症を発症した経過を環境サンプリングと合わせて記録した。全ゲノム解析で患者由来株と自宅環境由来株の関連が示唆され、環境曝露からのNTM感染成立時期を具体的に裏付ける事例となった。",
    pmid:"41518593",
    url:"https://pubmed.ncbi.nlm.nih.gov/41518593/"},
-  {id:420, cat:"増悪・病態", isNew:true,
+  {id:420, cat:"増悪・病態", isNew:false,
    titleJa:"原発性免疫不全症（IEI）における気管支拡張症：遺伝学的に確定したコホートでの有病率・予測因子・心肺合併症",
    titleEn:"Bronchiectasis in Inborn Errors of Immunity: Prevalence, Predictors, and Cardiopulmonary Complications in a Genetically Characterized Cohort.",
    journal:"Journal of clinical immunology", sjr:"Q1", date:"2026-07-08", year:2026,
@@ -2912,7 +2965,7 @@ const ARTICLES = [
    summary:"米国NIHの遺伝学的に確定したIEIコホート131例を横断解析し、気管支拡張症の有病率は27%で、高齢での初回CTや複合免疫不全・液性免疫不全優位・免疫調節異常疾患が独立予測因子であった。気管支拡張症合併例は心肺機能障害が強く、死亡率も有意に高かった（15% vs 3%）。",
    pmid:"42414785",
    url:"https://pubmed.ncbi.nlm.nih.gov/42414785/"},
-  {id:419, cat:"増悪・病態", isNew:true,
+  {id:419, cat:"増悪・病態", isNew:false,
    titleJa:"喀血に対する気管支動脈塞栓術(BAE)後の再発予測因子：SWiMガイドラインを用いたシステマティックレビューとエビデンス統合解析",
    titleEn:"Predictors of Recurrence Following Bronchial Artery Embolisation (BAE) for Haemoptysis: A Systematic Review and Evidence Synthesis Analyses Using SWiM Guidelines.",
    journal:"Cardiovascular and interventional radiology", sjr:"Q1", date:"2026-07-07", year:2026,
