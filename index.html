@@ -473,9 +473,9 @@
     <div class="dashboard-header">
       <div class="dashboard-title">
         🔥 本日のハイライト
-        <span class="dashboard-badge">NEW 2件</span>
+        <span class="dashboard-badge">NEW 1件</span>
       </div>
-      <div class="dashboard-date">最終更新：2026-07-10 07:04 自動生成</div>
+      <div class="dashboard-date">最終更新：2026-07-11 07:04 自動生成</div>
     </div>
     <div class="dashboard-grid" id="dashboardGrid"></div>
   </div>
@@ -640,6 +640,13 @@
       <div class="sidebar-card">
         <div class="sidebar-header orange">📅 デイリーレポート履歴</div>
         <div class="sidebar-body">
+          <div class="report-item">
+            <div>
+              <div class="report-date">2026年7月11日（07:04）</div>
+              <div class="report-count">新規1件（気管支拡張症における誤嚥・GERDの多職種連携レビュー）</div>
+            </div>
+            <span class="report-link" onclick="showSection('reports',document.querySelectorAll('nav a')[3])">▶ 開く</span>
+          </div>
           <div class="report-item">
             <div>
               <div class="report-date">2026年7月10日（07:04）</div>
@@ -1220,6 +1227,24 @@
   <div class="reports-page-header">
     <h2>📝 デイリーレポート アーカイブ</h2>
     <p>毎朝8時に自動生成される文献サマリーの履歴。既読除外機能により、常に新規情報のみを収録しています。</p>
+  </div>
+
+  <!-- Report 2026-07-11 07:04 -->
+  <div class="report-card">
+    <div class="report-card-header">
+      <div>
+        <div class="report-card-date">📅 2026年7月11日（07:04 自動生成）</div>
+        <div style="font-size:12px;color:var(--text-muted);margin-top:3px;">除外済み：約84論文 / 70試験</div>
+      </div>
+      <span class="report-card-count">新規 1件・臨床試験 0件</span>
+    </div>
+    <ul class="report-highlight-list">
+      <li>
+        <span class="report-num">1</span>
+        <span class="report-cat-inline" style="background:#fee2e2;color:#991b1b">増悪・病態</span>
+        <span>気管支拡張症における誤嚥・GERDを修正可能な併存因子として位置づけ、呼吸器内科・消化器内科・耳鼻咽喉科の多職種連携による評価アプローチを症例形式で提示した総説（Chest Q1 IF9.8, 2026）。<a href="https://pubmed.ncbi.nlm.nih.gov/42425405/" target="_blank" style="color:var(--primary)">PubMed</a></span>
+      </li>
+    </ul>
   </div>
 
   <!-- Report 2026-07-10 07:04 -->
@@ -2911,8 +2936,20 @@
 // DATA
 // ============================================================
 const ARTICLES = [
+  // ── 2026-07-11 新規 ──
+  {id:425, cat:"増悪・病態", isNew:true,
+   titleJa:"気管支拡張症における誤嚥とGERD：高リスク集団における呼吸器内科・消化器内科・耳鼻咽喉科の連携",
+   titleEn:"Aspiration and GERD in Bronchiectasis: Bridging Pulmonology, Gastroenterology, and Otolaryngology in an At-Risk Population.",
+   journal:"Chest", sjr:"Q1", if:"9.8", date:"2026-07-09", year:2026,
+   ev:"総説",
+   authors:"Zha BS, Young V, Kathpalia P ほか",
+   aui:"Zha Young Kathpalia Varghese Aksamit",
+   summary:"気管支拡張症における誤嚥・胃食道逆流症(GERD)を、非結核性抗酸菌(NTM)感染を含む増悪・慢性感染の修正可能な関与因子として位置づけ、症例ベースの形式で呼吸器内科・消化器内科・耳鼻咽喉科の専門家チームによる評価と診療アプローチを提示した総説。嚥下機能障害・逆流性疾患の検査選択と解釈、多職種連携の意義、基本的な管理戦略について臨床的視点をまとめている。",
+   jpView:"日本には非CF気管支拡張症に特化した独立診療ガイドラインが存在せず（2026年時点）、本総説が示す誤嚥・GERD評価の多職種連携フレームワークは、NTM合併例を含む国内臨床にも参考となりうる。",
+   pmid:"42425405",
+   url:"https://pubmed.ncbi.nlm.nih.gov/42425405/"},
   // ── 2026-07-10 新規 ──
-  {id:424, cat:"増悪・病態", isNew:true,
+  {id:424, cat:"増悪・病態", isNew:false,
    titleJa:"IL7R変異による非典型的重症複合免疫不全症でCVIDを模倣した結節性リンパ過形成の1例",
    titleEn:"Nodular lymphoid hyperplasia in atypical SCID due to IL7R mutations mimicking CVID.",
    journal:"Pediatric allergy and immunology", sjr:"Q1", date:"2026-07", year:2026,
@@ -2923,7 +2960,7 @@ const ARTICLES = [
    summary:"IL7Rα変異による非典型的重症複合免疫不全症(SCID)の小児例で、分類不能型免疫不全症(CVID)類似の結節性リンパ過形成を呈した症例報告。気管支拡張症を含む反復性呼吸器感染症を合併しており、原発性免疫不全症の鑑別における遺伝学的評価の重要性を示した。",
    pmid:"42418284",
    url:"https://pubmed.ncbi.nlm.nih.gov/42418284/"},
-  {id:423, cat:"増悪・病態", isNew:true,
+  {id:423, cat:"増悪・病態", isNew:false,
    titleJa:"骨形成不全症の成人患者における肺疾患の評価：多施設横断研究",
    titleEn:"Evaluation of Lung Disease in Adults With Osteogenesis Imperfecta: A Cross-Sectional, Multicenter Study.",
    journal:"Chest", sjr:"Q1", if:"9.8", date:"2026-03-20", year:2026,
