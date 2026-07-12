@@ -2,7 +2,7 @@
  * 方針: ページ本体は「ネットワーク優先」— 毎日の更新を即反映し、
  *        オフライン時のみキャッシュを返す。アイコン等の静的資産はキャッシュ優先。
  */
-const CACHE = "bronchinet-v1";
+const CACHE = "bronchinet-v2";
 const STATIC_ASSETS = ["./icon-192.png", "./icon-512.png", "./apple-touch-icon.png", "./manifest.json"];
 
 self.addEventListener("install", (e) => {
@@ -22,8 +22,9 @@ self.addEventListener("fetch", (e) => {
   const req = e.request;
   if (req.method !== "GET") return;
 
-  // ページ本体（ナビゲーション）: ネットワーク優先 → 成功したらキャッシュ更新 → 失敗時キャッシュ
-  if (req.mode === "navigate") {
+  // ページ本体（ナビゲーション）と文献データ(articles.json): ネットワーク優先
+  //   → 毎朝の更新を即反映。成功したらキャッシュ更新、失敗時（オフライン）はキャッシュを返す
+  if (req.mode === "navigate" || new URL(req.url).pathname.endsWith("/articles.json")) {
     e.respondWith(
       fetch(req)
         .then((res) => {
