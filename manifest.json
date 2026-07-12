@@ -1,0 +1,15 @@
+{
+  "name": "BronchiNet｜気管支拡張症 文献ポータル",
+  "short_name": "BronchiNet",
+  "description": "気管支拡張症の最新文献・臨床試験・研究者情報ポータル",
+  "lang": "ja",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#1d4ed8",
+  "theme_color": "#1d4ed8",
+  "icons": [
+    { "src": "icon-192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any maskable" }
+  ]
+}

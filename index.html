@@ -4,7 +4,16 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="robots" content="noindex, nofollow">
+<meta name="description" content="気管支拡張症の最新文献・臨床試験・研究者情報ポータル BronchiNet">
 <title>BronchiNet｜気管支拡張症　文献ポータル</title>
+<!-- PWA: ホーム画面追加でアプリとして動作 -->
+<link rel="manifest" href="manifest.json">
+<meta name="theme-color" content="#1d4ed8">
+<link rel="icon" type="image/png" sizes="192x192" href="icon-192.png">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="apple-mobile-web-app-title" content="BronchiNet">
 <style>
   :root {
     --primary: #1a56a8;
@@ -1129,6 +1138,20 @@
   <div class="guide-page-header">
     <h2>🔗 主要レジストリ・リソース</h2>
     <p>気管支拡張症・NTM診療と研究の一次情報源。国際レジストリ、診療ガイドライン、学会・会議、国内資源、患者支援団体の公式リンク集です（各リンクは外部公式サイト・新しいタブで開きます）。</p>
+  </div>
+
+  <div class="guide-section-title">📱 スマートフォンでアプリとして使う</div>
+  <div class="guide-card res-card" style="cursor:default;">
+    <div class="guide-card-icon">📲</div>
+    <div>
+      <div class="guide-card-title">ホーム画面に追加すると、アプリのように全画面で起動できます</div>
+      <div class="guide-card-meta">iPhone / iPad（Safari）・ Android（Chrome）対応 ・ オフラインでも閲覧可</div>
+      <div class="guide-card-desc">
+        <strong>iPhone:</strong> Safariでこのページを開く → 画面下の「共有」ボタン（□に↑）をタップ → 「ホーム画面に追加」を選択 → 「追加」。<br>
+        <strong>Android:</strong> Chromeでこのページを開く → 右上の「⋮」メニュー → 「ホーム画面に追加（アプリをインストール）」。<br>
+        追加後はホーム画面のBronchiNetアイコンから、アドレスバーのない全画面表示で起動します。一度表示したページは電波の弱い場所でも閲覧できます。
+      </div>
+    </div>
   </div>
 
   <div class="guide-section-title">🌐 国際レジストリ・研究ネットワーク</div>
@@ -7567,6 +7590,13 @@ document.addEventListener('DOMContentLoaded', () => {
   buildKol();
   buildTrends();
 });
+
+// PWA: Service Worker登録（オフライン閲覧・ホーム画面アプリ化）
+if ("serviceWorker" in navigator && location.protocol === "https:") {
+  window.addEventListener("load", function(){
+    navigator.serviceWorker.register("sw.js").catch(function(){ /* 未対応環境は無視 */ });
+  });
+}
 </script>
 </body>
 </html>
