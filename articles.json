@@ -2,7 +2,7 @@
  {
   "id": 450,
   "cat": "臨床試験",
-  "isNew": true,
+  "isNew": false,
   "titleJa": "非結核性抗酸菌症肺疾患患者における運動プログラム（NTM-Exercise）：ランダム化比較試験プロトコル",
   "titleEn": "Exercise programme in patients with non-tuberculous mycobacterial pulmonary disease (NTM-Exercise): protocol of a randomised controlled trial.",
   "journal": "BMJ Open",
@@ -19,7 +19,7 @@
  {
   "id": 451,
   "cat": "増悪・病態",
-  "isNew": true,
+  "isNew": false,
   "titleJa": "女性における生殖関連因子と関節リウマチ関連間質性肺疾患または気管支拡張症のリスクとの関連",
   "titleEn": "Reproductive factors and risk of rheumatoid arthritis-associated interstitial lung disease or bronchiectasis in women.",
   "journal": "Rheumatology (Oxford, England)",
@@ -36,7 +36,7 @@
  {
   "id": 452,
   "cat": "増悪・病態",
-  "isNew": true,
+  "isNew": false,
   "titleJa": "気管支拡張症手術後の早期不良転帰に関する解釈可能な予後予測モデル",
   "titleEn": "An interpretable prognostic model for early unfavorable outcomes after bronchiectasis surgery.",
   "journal": "BMC Pulmonary Medicine",
