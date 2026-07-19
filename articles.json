@@ -1,5 +1,22 @@
 [
  {
+  "id": 453,
+  "cat": "マイクロバイオーム・感染",
+  "isNew": true,
+  "titleJa": "多様な臨床的背景における肺ノカルジア症：診断上の課題と画像所見の多様性を示す症例集積",
+  "titleEn": "Pulmonary Nocardiosis in Diverse Clinical Settings: A Case Series Highlighting Diagnostic Challenges and Radiological Spectrum.",
+  "journal": "Annals of African Medicine",
+  "sjr": "Q3",
+  "date": "2026-07-15",
+  "year": 2026,
+  "ev": "症例報告",
+  "authors": "Raja NSR, Jereen V, Arthi A ほか",
+  "aui": "Raja Jereen Arthi Kumar Mathavan",
+  "summary": "インドの医療機関から報告された肺ノカルジア症3例の症例集積で、糖尿病、気管支拡張症、免疫抑制療法という異なる基礎疾患を背景に、いずれも修正抗酸菌染色を用いた気管支肺胞洗浄検体でNocardia感染が確認された。ST合剤を基本にイミペネムやリネゾリドを併用した治療を完遂した症例では症状改善と部分的な画像所見の改善が得られ、気管支拡張症などの基礎疾患を有する患者で非定型肺浸潤の鑑別にノカルジア症を念頭に置く重要性が示された。",
+  "pmid": "42471770",
+  "url": "https://pubmed.ncbi.nlm.nih.gov/42471770/"
+ },
+ {
   "id": 450,
   "cat": "臨床試験",
   "isNew": false,
