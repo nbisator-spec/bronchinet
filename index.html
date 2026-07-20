@@ -3912,7 +3912,44 @@ const TRIAL_GROUPS = [
   },
 
 
-  // ⑧ EU試験（CTIS登録）
+  // ⑧ 米国で進行中の試験（ClinicalTrials.gov）
+  { name: '米国で進行中の試験（ClinicalTrials.gov）', icon: '🇺🇸', color: '#b91c1c',
+    sub: 'US recruiting / active — 介入・レジストリ・観察研究',
+    trials: [
+      { name: 'Rev-56 吸入（Phase 1a/1b）', drug: 'Rev-56 吸入（Revagenix）', sponsor: 'Revagenix, Inc.', phase: 'Phase 1a/1b', status: 'NOT_YET_RECRUITING', nct: 'NCT07709494', color: '#1d4ed8',
+        desc: '新規吸入抗菌薬Rev-56の第1a/1b相。健常人での単回漸増（Part A）に続き、慢性緑膿菌感染を伴う非CF気管支拡張症患者で安全性・忍容性・微生物学的応答・薬物動態を評価。64例・主要完了2027年6月。', url: 'https://clinicaltrials.gov/study/NCT07709494' },
+      { name: 'Simeox 200 気道クリアランス（米国市販後）', drug: 'Simeox 200 機器（間欠的肺内排出）', sponsor: 'Inogen Inc.', phase: '機器・観察', status: 'NOT_YET_RECRUITING', nct: 'NCT07443124', color: '#0891b2',
+        desc: '気道クリアランス機器Simeox 200の市販後単群観察研究。18〜85歳の気管支拡張症・慢性粘液過分泌患者で短期的な排痰改善（湿性喀痰重量）のベースラインを確立。35例。', url: 'https://clinicaltrials.gov/study/NCT07443124' },
+      { name: 'LibAirty 気道クリアランス 実臨床評価（RELACS）', drug: 'LibAirty 気道クリアランスシステム', sponsor: 'Synchrony-Medical, Ltd', phase: '機器・観察', status: 'RECRUITING', nct: 'NCT07135284', color: '#0891b2',
+        desc: '在宅使用するLibAirtyシステムの実臨床評価（RELACS）。成人気管支拡張症200例で、症状改善・肺増悪の頻度・医療資源利用への効果を評価。主要完了2027年2月。', url: 'https://clinicaltrials.gov/study/NCT07135284' },
+      { name: '呼吸筋トレーニングと運動耐容能（非CF-BE）', drug: 'LungTrainers（呼吸筋トレーニング）', sponsor: 'Mayo Clinic', phase: '機器・行動介入', status: 'RECRUITING', nct: 'NCT05860803', color: '#0891b2',
+        desc: '在宅・健康コーチ支援型の呼吸・呼吸筋トレーニングが運動耐容能・肺機能・呼吸筋機能・臨床状態を改善するか検証する非CF気管支拡張症50例の試験。主要完了2026年12月。', url: 'https://clinicaltrials.gov/study/NCT05860803' },
+      { name: 'US Bronchiectasis & NTM Research Registry（BRR）', drug: '—（多施設レジストリ）', sponsor: 'COPD Foundation', phase: '観察・レジストリ', status: 'RECRUITING', nct: 'NCT01822834', color: '#047857',
+        desc: '米国の非CF気管支拡張症・NTM患者を多施設で集積するレジストリ。5,000例規模で北米の疫学・自然史・治療実態データの基盤となり、多施設臨床試験の計画にも活用される。', url: 'https://clinicaltrials.gov/study/NCT01822834' },
+      { name: 'Natural History of Bronchiectasis（NIH/NHLBI）', drug: '—（自然史研究）', sponsor: 'National Heart, Lung, and Blood Institute (NHLBI)', phase: '観察・自然史', status: 'RECRUITING', nct: 'NCT00943514', color: '#047857',
+        desc: 'NIH/NHLBIによる気管支拡張症の自然史研究。慢性・反復性気道感染を呈する患者を長期追跡し、原因疾患（CF・自己免疫・CVID等）別の病態・進行を解明。900例。', url: 'https://clinicaltrials.gov/study/NCT00943514' },
+      { name: 'NTM気管支拡張症の肺マイクロバイオーム（NYU）', drug: '—（気管支鏡・気道細菌叢）', sponsor: 'NYU Langone Health', phase: '観察・マイクロバイオーム', status: 'RECRUITING', nct: 'NCT02779478', color: '#7c3aed',
+        desc: '肺NTM疾患と気道マイクロバイオーム変化の関連を調べるバイオマーカーコホート。NTM疑い例を対象に誘発喀痰・上気道検体で気道細菌叢を評価。1,000例・主要完了2030年。', url: 'https://clinicaltrials.gov/study/NCT02779478' },
+      { name: 'CF/非CF気管支拡張症のXe-MRIフェノタイピング', drug: 'Xenon（超偏極ガスMRI）', sponsor: 'Cincinnati Children’s Hospital', phase: '観察・画像', status: 'RECRUITING', nct: 'NCT04793867', color: '#7c3aed',
+        desc: 'CF・非CF気管支拡張症の小児を対象に、キセノンMRI等の画像バイオマーカーで肺病変の重症度・進行・治療応答を予測できるか検証。スパイロメトリー変化に先行する所見の同定を狙う。', url: 'https://clinicaltrials.gov/study/NCT04793867' },
+      { name: '原発性線毛機能不全症(PCD)の肺病態', drug: '—（遺伝子・線毛機能）', sponsor: 'University of North Carolina, Chapel Hill', phase: '観察・PCD', status: 'RECRUITING', nct: 'NCT00807482', color: '#7c3aed',
+        desc: '呼吸線毛の機能に重要な遺伝子と、PCDを引き起こす変異の影響を解明する病態研究。Kartagener症候群を含む気管支拡張症の遺伝的原因の理解に資する。1,800例。', url: 'https://clinicaltrials.gov/study/NCT00807482' },
+      { name: 'COPD Patient-Powered Research Network', drug: '—（患者報告アウトカム）', sponsor: 'COPD Foundation', phase: '観察・レジストリ', status: 'RECRUITING', nct: 'NCT02803242', color: '#64748b',
+        desc: 'COPD患者主導型研究ネットワーク。75,000例規模のオンライン患者登録で患者報告アウトカムを長期収集。気管支拡張症・COPDオーバーラップの文脈で参照される。', url: 'https://clinicaltrials.gov/study/NCT02803242' },
+      { name: '慢性肺疾患の遠隔/対面 維持運動療法', drug: '—（遠隔リハビリ）', sponsor: 'MGH Institute of Health Professions', phase: 'リハビリ', status: 'RECRUITING', nct: 'NCT06304207', color: '#64748b',
+        desc: '慢性肺疾患患者を対象に、遠隔リハビリと対面での8週間維持運動プログラムを比較するパイロット試験。退院後の運動療法継続の効果を検証。30例。', url: 'https://clinicaltrials.gov/study/NCT06304207' },
+      { name: 'スマホ音響による気道評価（AWARE）', drug: 'AWARE（音響波形呼吸評価）', sponsor: 'Indiana University', phase: '診断', status: 'RECRUITING', nct: 'NCT06512064', color: '#64748b',
+        desc: 'スマートフォンのスピーカー/マイクで気道径・気流閉塞を評価し、気道疾患の診断・増悪検出を支援できるか検証。喘息・COPD・CF・線毛機能障害・気管支拡張症を横断・800例。', url: 'https://clinicaltrials.gov/study/NCT06512064' },
+      { name: 'SonoHeal 気道クリアランス（実現可能性）', drug: 'SonoHeal（音響振動）機器', sponsor: 'Cognita Labs LLC', phase: '機器・観察', status: 'ACTIVE_NOT_RECRUITING', nct: 'NCT07568119', color: '#64748b',
+        desc: '音響振動による気道クリアランス機器SonoHealの早期実現可能性・受容性を評価し、標準治療（高頻度胸壁振動）と予備的に比較。CF・非CF気管支拡張症・COPD・15例。', url: 'https://clinicaltrials.gov/study/NCT07568119' },
+      { name: '肺移植後の拒絶除外のための肺超音波', drug: '—（肺超音波診断）', sponsor: 'Mayo Clinic', phase: '診断', status: 'RECRUITING', nct: 'NCT04582279', color: '#64748b',
+        desc: '肺移植後の拒絶・感染を非侵襲的に診断する肺超音波アーチファクト解析研究。移植後気管支拡張症を含む対象で診断法を開発。90例。', url: 'https://clinicaltrials.gov/study/NCT04582279' },
+      { name: '肺移植後の吸気筋トレーニング', drug: 'POWERBreathe Plus（吸気筋トレーニング）', sponsor: 'Mayo Clinic', phase: 'リハビリ', status: 'RECRUITING', nct: 'NCT04783155', color: '#64748b',
+        desc: '肺移植後患者を対象に吸気筋トレーニングが運動耐容能・QOL・短期臨床アウトカムに与える効果を検証。移植後気管支拡張症の機能回復に焦点。30例。', url: 'https://clinicaltrials.gov/study/NCT04783155' },
+    ]
+  },
+
+  // ⑨ EU試験（CTIS登録）
   { name: 'EU試験（CTIS登録）', icon: '🇪🇺', color: '#0f3872',
     sub: 'EU Clinical Trials Information System（欧州公式登録）',
     trials: [
