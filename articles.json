@@ -336,7 +336,8 @@
   "aui": "Chalmers Mall Nielsen Chang Aliberti Blasi Korkmaz Lorent Taggart Loebinger",
   "summary": "気管支拡張症の好中球由来バイオマーカー（好中球エラスターゼ活性等）を、疾患活動性の評価と共通の治療標的の同定に活かす視点を整理した総説。好中球性炎症とCatC（DPP-1）阻害の位置づけを論じた。",
   "pmid": "40639876",
-  "url": "https://pubmed.ncbi.nlm.nih.gov/40639876/"
+  "url": "https://pubmed.ncbi.nlm.nih.gov/40639876/",
+  "jpView": "好中球性炎症を共通標的とする視点は、DPP-1阻害薬（国内治験中のverducatib＝AIRTIVITY・jRCT2071250036、2026年時点未承認）のバイオマーカー戦略と直結する。国内KOLとのエンドタイプ議論の土台になる。"
  },
  {
   "id": 458,
@@ -355,7 +356,8 @@
   "aui": "Chalmers Mall Chotirmall O'Donnell Flume Hasegawa Ringshausen Watz Xu Shteinberg McShane",
   "summary": "気管支拡張症における好中球セリンプロテアーゼ（NE・カテプシンG・PR3）を標的とする治療戦略の総説。慢性的なNSP活性過剰が構造的肺破壊を招く機序と、CatC（DPP-1）阻害を含む介入の意義を論じた。",
   "pmid": "39467608",
-  "url": "https://pubmed.ncbi.nlm.nih.gov/39467608/"
+  "url": "https://pubmed.ncbi.nlm.nih.gov/39467608/",
+  "jpView": "NSP（NE・カテプシンG・PR3）標的化を体系化した総説。DPP-1阻害というクラスの科学的根拠を把握でき、国内未承認段階でのverducatib（Boehringer）の医学的支持の強さを語る材料になる。"
  },
  {
   "id": 459,
@@ -394,7 +396,8 @@
   "aui": "Mall Davies Donaldson Jain Chalmers Shteinberg",
   "summary": "CF肺疾患における好中球セリンプロテアーゼ（NSP）の病態的役割と治療標的としての妥当性を論じた総説。CF・非CF気管支拡張症に共通する好中球性炎症機序を整理し、CatC（DPP-1）阻害の根拠を提示した。",
   "pmid": "39293854",
-  "url": "https://pubmed.ncbi.nlm.nih.gov/39293854/"
+  "url": "https://pubmed.ncbi.nlm.nih.gov/39293854/",
+  "jpView": "CF・非CFに共通する好中球性炎症とNSP標的化の根拠を整理。日本で治験中のDPP-1阻害薬（verducatib）の作用機序を、CF領域の知見と横断的に理解するのに役立つ。"
  },
  {
   "id": 461,
@@ -431,7 +434,8 @@
   "aui": "Badorrek Diefenbach Kögler Eleftheraki Seitz Hohlfeld",
   "summary": "verducatib（BI 1291583）の健常人を対象とした第I相試験。CatC阻害により好中球エラスターゼ・PR3等のNSP活性化を用量依存的に抑制し、安全性・忍容性・薬物動態を確認。第2相への移行を支持した。",
   "pmid": "39175217",
-  "url": "https://pubmed.ncbi.nlm.nih.gov/39175217/"
+  "url": "https://pubmed.ncbi.nlm.nih.gov/39175217/",
+  "jpView": "verducatib（BI 1291583）の第I相。本剤はAIRTIVITY第III相が日本を含め進行中（jRCT2071250036、2026年時点未承認）。開発初期データとして国内展開の裏付けとなる。Brensocatib（Insmed）とは別化合物・別企業。"
  },
  {
   "id": 463,
@@ -450,7 +454,8 @@
   "aui": "Chalmers Badorrek Diefenbach Kögler Sauter Kreideweiss Hohlfeld",
   "summary": "BI 1291583（verducatib）の前臨床から第I相までの開発を統合したレビュー。可逆的・高選択的なCatC阻害薬で活性型NSP産生を用量依存的に強く抑制し、気管支拡張症の第2相試験を支持する根拠をまとめた。",
   "pmid": "38529344",
-  "url": "https://pubmed.ncbi.nlm.nih.gov/38529344/"
+  "url": "https://pubmed.ncbi.nlm.nih.gov/38529344/",
+  "jpView": "verducatib（Boehringer）の前臨床〜第I相開発の統合レビュー。国内でAIRTIVITY治験が進む本剤の機序・開発根拠を一望でき、KOL・治験施設との対話に使える。"
  },
  {
   "id": 464,
@@ -469,7 +474,8 @@
   "aui": "Kreideweiss Schänzle Schnapp Vintonyak Grundl",
   "summary": "verducatib（BI 1291583）の前臨床薬理。カテプシンC（CatC/DPP-1）を選択的かつ可逆的に阻害し、好中球セリンプロテアーゼ（NSP）の活性化を抑制する。気管支拡張症におけるプロテアーゼ／抗プロテアーゼ不均衡の是正という創薬根拠を提示した。",
   "pmid": "37542002",
-  "url": "https://pubmed.ncbi.nlm.nih.gov/37542002/"
+  "url": "https://pubmed.ncbi.nlm.nih.gov/37542002/",
+  "jpView": "verducatib（BI 1291583）の非臨床薬理。DPP-1阻害の選択性・可逆性という分子特性は、同クラス内での差別化（対brensocatib）を語る際の基礎資料になる。"
  },
  {
   "id": 465,
@@ -488,7 +494,8 @@
   "aui": "Chalmers Gupta Chotirmall Armstrong Eickholz Hasegawa McShane O'Donnell Shteinberg Watz Eleftheraki Diefenbach Sauter",
   "summary": "verducatib（BI 1291583）の第2相AIRLEAF試験のデザイン論文。非CF気管支拡張症でCatC阻害の有効性・安全性・用量反応を検証する多施設無作為化比較試験の設計を提示。主要結果は後にERJ 2025で報告された。",
   "pmid": "37465817",
-  "url": "https://pubmed.ncbi.nlm.nih.gov/37465817/"
+  "url": "https://pubmed.ncbi.nlm.nih.gov/37465817/",
+  "jpView": "verducatib第2相AIRLEAFの試験デザイン。後続の第III相AIRTIVITYは日本も参加（jRCT2071250036）しており、国内治験の位置づけを理解する前提資料。"
  },
  {
   "id": 455,
@@ -803,7 +810,8 @@
   "aui": "Shteinberg Haworth Pollock Cohen Loebinger Jrbashyan Dimakou Abo Helo Aliberti Stein Ringshausen Adir De Soyza Vendrell Burgel Sibila Bossios Lind Viligorska Robertson Kauppi Milenkovic Menendez Munteanu Obradovic Nowinski Amorim Torres Lorent Van Braeckel Anwar Battalglia Shoemark Boersma Goeminne Blasi Polverino Chalmers",
   "summary": "EMBARCレジストリの気管支拡張症患者16,640例を解析し、鼻茸を伴う慢性副鼻腔炎(CRSwNP)が7.3%、伴わないCRS(CRSnNP)が20.9%に認められ、いずれも症状増悪の頻度上昇と関連する一方、入院・死亡率は低いという結果であった。特発性気管支拡張症ではCRSwNPが好酸球高値やIgE高値などのタイプ2バイオマーカー上昇と独立して関連したが、PCDや免疫不全に続発する気管支拡張症ではこの関連は認められなかった。",
   "pmid": "42445230",
-  "url": "https://pubmed.ncbi.nlm.nih.gov/42445230/"
+  "url": "https://pubmed.ncbi.nlm.nih.gov/42445230/",
+  "jpView": "慢性副鼻腔炎と気管支拡張症・2型炎症の関連。好酸球性の一群は将来的に生物学的製剤の対象となりうるが、非CF気管支拡張症への生物学的製剤は日本では適応外（2026年時点・治験段階）である点に留意。"
  },
  {
   "id": 434,
@@ -1091,7 +1099,8 @@
   "aui": "Piot Missault Vande Weygaerde Jain Van Bleyenbergh Bosteels Spriet Buyle Van Braeckel Lorent",
   "summary": "ベルギーの2施設で2015〜2024年に行われたクロファジミン含有治療102コースを後方視的に解析（56%が気管支拡張症合併）。主にMAC肺症難治例やM. abscessus複合体感染に用いられ、皮膚色素沈着(38%)等の有害事象はあったが重篤例はなく忍容性は概ね良好であった。",
   "pmid": "42414984",
-  "url": "https://pubmed.ncbi.nlm.nih.gov/42414984/"
+  "url": "https://pubmed.ncbi.nlm.nih.gov/42414984/",
+  "jpView": "クロファジミンのNTM（MAC難治・M. abscessus）使用経験。日本はMAC症の有病率が世界的に高く難治例も多いため、CFZを含む多剤併用の忍容性データは国内実臨床の関心に合致する。"
  },
  {
   "id": 421,
@@ -1108,7 +1117,8 @@
   "aui": "Honda Wilsey Raulerson Ding Castaneda Joyner",
   "summary": "ハワイのNTM高浸淫地域における一症例で、気管支拡張症発症後に自宅環境からの長期曝露を背景としてMycobacterium intracellulare subsp. chimaeraによる肺NTM症を発症した経過を環境サンプリングと合わせて記録した。全ゲノム解析で患者由来株と自宅環境由来株の関連が示唆され、環境曝露からのNTM感染成立時期を具体的に裏付ける事例となった。",
   "pmid": "41518593",
-  "url": "https://pubmed.ncbi.nlm.nih.gov/41518593/"
+  "url": "https://pubmed.ncbi.nlm.nih.gov/41518593/",
+  "jpView": "自宅環境曝露によるM. chimaera肺症。日本もNTM高浸淫国で浴室・給湯・土壌等の環境曝露が課題とされ、環境source特定の手法は国内の疫学・患者指導に示唆を与える。"
  },
  {
   "id": 420,
@@ -1284,7 +1294,8 @@
   "aui": "Mi Dong Xu Liang Wu Liang",
   "summary": "NTM肺症（NTM-PD）患者113例と肺結核（PTB）患者105例を対象に、気管支肺胞洗浄液の標的次世代シーケンシングでマイクロバイオームを比較。NTM-PD群では喀血・気管支拡張症・COPD合併がPTB群より多く、緑膿菌やAspergillus属の検出頻度が高いなど、両疾患を鑑別しうる特徴的な微生物プロファイルが示された。",
   "pmid": "42387366",
-  "url": "https://pubmed.ncbi.nlm.nih.gov/42387366/"
+  "url": "https://pubmed.ncbi.nlm.nih.gov/42387366/",
+  "jpView": "NTM肺症と肺結核の下気道マイクロバイオーム比較。NTM有病率が高く結核既往例も多い日本では、両者の鑑別・併存を意識した微生物学的評価が実臨床で重要。"
  },
  {
   "id": 413,
@@ -1320,7 +1331,8 @@
   "aui": "Calle Rubio López-Campos Casas Maldonado Torres Durán Rigau Comas Barrecheguren Bustamante Cabero Pérez Cadenas Menéndez Callejas González Castillo Corullón Curi Chércoles Dasí Fernández Diab González Villaescusa Goyanes Hernández Pérez Lázaro Asegurado Martínez Delgado Martínez González Michel de la Rosa Moya Álvarez Pastor Parra García Peñalver Pons Delgado Priegue Carrera Rodríguez Frías Rodríguez García Ruiz-Serrano de la Espada Miravitlles",
   "summary": "GRADE/ADOLOPMENT手法に基づくスペイン呼吸器学会（SEPAR）のAATD診断・管理ガイドライン改訂版。COPD診断時の全例、成人発症喘息で気流閉塞が持続する例、原因不明の気管支拡張症患者にAATDスクリーニングを推奨し、血清AAT値と遺伝子型/表現型による2段階診断、重症AATD例への増強療法の適応基準（AAT<57.2mg/dL・気腫所見・肺機能低下）を明示している。",
   "pmid": "42392940",
-  "url": "https://pubmed.ncbi.nlm.nih.gov/42392940/"
+  "url": "https://pubmed.ncbi.nlm.nih.gov/42392940/",
+  "jpView": "AATD診断・スクリーニングのGL（スペイン）。α1-アンチトリプシン欠乏は日本人・東アジアでは稀とされ、原因不明の気管支拡張症でのAATD検索の優先度は欧米と異なる点に留意。"
  },
  {
   "id": 408,
@@ -1445,7 +1457,8 @@
   "aui": "Majumder Biswas Rahman Islam Rahman Paul Hamza Kabir Islam Chowdhury Chakrabortty Ahmed Rahman",
   "summary": "バングラデシュの成人気管支拡張症患者130例中12例（9.2%）が発汗塩化物試験で嚢胞性線維症の診断基準を満たしたと報告。南アジアにおいても成人気管支拡張症の背景疾患としてCFを見逃さない重要性を指摘している。",
   "pmid": "42382502",
-  "url": "https://pubmed.ncbi.nlm.nih.gov/42382502/"
+  "url": "https://pubmed.ncbi.nlm.nih.gov/42382502/",
+  "jpView": "成人気管支拡張症の背景にCFが9.2%（南アジア）。日本ではCFは極めて稀だが、若年発症・非典型例でCFを見逃さない姿勢は国内でも共通の教訓。"
  },
  {
   "id": 401,
@@ -1528,7 +1541,8 @@
   "authors": "Harnan S, Franklin M, Angus CA, Soriano JB, Johannessen A ほか",
   "aui": "Harnan Franklin Angus Soriano Johannessen Sutton Garcia-Aymerich Auer Carroll Simpson Powell Anderson Joos",
   "summary": "WHO欧州53か国を対象に14の呼吸器疾患の罹患率・有病率・死亡率・DALY・社会的コストを系統的にマッピング。気管支拡張症はわずか1〜5か国分の疫学データしか存在せず、CF・A1AD・睡眠時無呼吸と並んでエビデンスギャップが最大の疾患の一つと特定された。",
-  "url": "https://pubmed.ncbi.nlm.nih.gov/42376020/"
+  "url": "https://pubmed.ncbi.nlm.nih.gov/42376020/",
+  "jpView": "気管支拡張症は疫学データが乏しくエビデンスギャップが最大級と指摘。日本も全国的な有病率データが限られており、国内レジストリ整備の必要性を裏付ける。"
  },
  {
   "id": 396,
@@ -2375,7 +2389,8 @@
   "year": 2026,
   "summary": "メタゲノム解析を活用した慢性下気道感染症（気管支拡張症・NTM等）の病態解明を目的とした国内科研費課題。下気道マイクロバイオームと疾患進行の関係を探索。",
   "authors": "矢寺 和博",
-  "url": "https://cir.nii.ac.jp/crid/1040291932593157760"
+  "url": "https://cir.nii.ac.jp/crid/1040291932593157760",
+  "jpView": "国内科研費による下気道メタゲノム研究。NTM・気管支拡張症が主要課題の日本発の基礎-臨床研究として、国内研究動向の把握に有用。"
  },
  {
   "id": 346,
@@ -4452,7 +4467,8 @@
   "ev": "原著",
   "summary": "気管支拡張症患者120例（38%が現在NTM感染、38%が既往感染）の尿中微量金属とNTM感染の関連を検討。モリブデン濃度1 SD増加ごとに現在NTM感染のオッズが14%有意に増加（OR 1.14、95%CI 1.02–1.28）。水道水・給水管中のモリブデンとNTM感染の関連を臨床コホートで初めて検証し、気管支拡張症患者の居住環境評価の重要性を示した。（PubMed PMID: 41889435）",
   "url": "https://pubmed.ncbi.nlm.nih.gov/41889435/",
-  "authors": "Semancik Christopher S et al."
+  "authors": "Semancik Christopher S et al.",
+  "jpView": "尿中モリブデンとNTM感染の関連。日本はNTM高浸淫国で水系環境曝露が示唆されており、給水・微量金属と感染リスクの知見は国内の環境疫学・患者指導に関連する。"
  },
  {
   "id": 221,
@@ -4789,7 +4805,8 @@
   "year": 2026,
   "ev": "ガイドライン",
   "summary": "中国呼吸器学会による気管支肺結核（TBTB）の診断・治療2025年版ガイドライン。非特異的症状のため誤診・診断遅延が生じやすく、気管支拡張症・気道狭窄・肺萎縮等の重篤後遺症につながりうるTBTBに対し、最新エビデンスに基づく診断アルゴリズムと治療戦略を包括的に提示した。（PubMed PMID: 42108173）",
-  "url": "https://pubmed.ncbi.nlm.nih.gov/42108173/"
+  "url": "https://pubmed.ncbi.nlm.nih.gov/42108173/",
+  "jpView": "気管支肺結核の診断・治療GL（中国）。結核後の気管支拡張症・気道狭窄は日本でも重要な病因で、結核既往を背景とする気管支拡張症の管理に示唆を与える。"
  },
  {
   "id": 201,
@@ -4892,7 +4909,8 @@
   "ev": "原著",
   "summary": "アイルランド・ゴールウェイ大学病院のグループによるNCFBの包括的臨床レビュー。疫学・診断・気道クリアランス・抗菌療法・brensocatib等の新規治療を網羅的にアップデート。（PubMed PMID: 42057306）",
   "url": "https://pubmed.ncbi.nlm.nih.gov/42057306/",
-  "authors": "Hawkins Padraig et al."
+  "authors": "Hawkins Padraig et al.",
+  "jpView": "NCFBの包括レビュー。日本には非CF気管支拡張症の独立診療ガイドラインが無く（2026年時点）、brensocatib等の新規治療を含む本総説は国内実臨床の参照点になりうる。"
  },
  {
   "id": 195,
@@ -4980,7 +4998,8 @@
   "ev": "症例報告",
   "summary": "感染性気管支拡張症として10年間誤診されていた22歳男性にABPAを確定診断した症例。HRCT・気管支鏡・BALF中ガラクトマンナン・tNGSを統合した多段階診断ワークフローを構築し、早期抗炎症・抗真菌療法開始により臨床改善を達成した。（PubMed PMID: 42184259）",
   "url": "https://pubmed.ncbi.nlm.nih.gov/42184259/",
-  "authors": "Zhang Hongyun et al."
+  "authors": "Zhang Hongyun et al.",
+  "jpView": "感染性気管支拡張症として長年誤診されABPAと確定した症例。日本ではアスペルギルス以外の真菌（Schizophyllum等）によるABPMも比較的多く、BAL・tNGSを含む多段階診断の有用性は国内でも参考になる。"
  },
  {
   "id": 190,
@@ -4993,7 +5012,8 @@
   "year": 2026,
   "ev": "原著",
   "summary": "喘息患者の1.0〜3.5%・嚢胞性線維症の7〜15%に発症するABPAの統合診療コンセンサスを策定。気管支拡張症合併を特徴とし、コルチコステロイド・抗真菌薬を基本にオマリズマブ等の生物学的製剤と漢方医学的アプローチを組み合わせた診断・管理戦略を体系化した。（PubMed PMID: 42103676）",
-  "url": "https://pubmed.ncbi.nlm.nih.gov/42103676/"
+  "url": "https://pubmed.ncbi.nlm.nih.gov/42103676/",
+  "jpView": "ABPAの統合診療コンセンサス（中国）。気管支拡張症合併を特徴とするABPAは、日本では非アスペルギルス真菌の関与という特徴があり、診断基準の国内適用時の留意点を考える材料になる。"
  },
  {
   "id": 189,
@@ -5410,7 +5430,8 @@
   "ev": "総説",
   "summary": "気管支拡張症における抗炎症療法の最新エビデンスを総説。DPP-1阻害薬・好中球エラスターゼ阻害薬・吸入コルチコステロイド・マクロライドの抗炎症効果と今後の治療戦略を論じている。（PubMed PMID: 41593454）",
   "pmid": "41593454",
-  "url": "https://doi.org/10.1097/QCO.0000000000001186"
+  "url": "https://doi.org/10.1097/QCO.0000000000001186",
+  "jpView": "抗炎症療法（DPP-1阻害・NE阻害・ICS・マクロライド）を俯瞰。日本はDPB由来の長期少量マクロライド療法に馴染みが深く、新規DPP-1阻害薬（国内治験中）との位置づけ整理に役立つ。"
  },
  {
   "id": 134,
@@ -6019,7 +6040,8 @@
   "ev": "総説",
   "summary": "2025年の気管支拡張症臨床管理と研究の主要な進歩を包括的にまとめた中国語年間レビュー。DPP-1阻害薬承認・EMBARC登録研究の新知見・マイクロバイオーム研究・精密医療アプローチなど重要トピックを収録している。（PubMed PMID: 41820045）",
   "pmid": "41820045",
-  "url": "https://doi.org/10.3760/cma.j.cn112147-20251110-00698"
+  "url": "https://doi.org/10.3760/cma.j.cn112147-20251110-00698",
+  "jpView": "2025年の気管支拡張症進歩の年間総説（中国語）。DPP-1阻害薬承認・EMBARC・マイクロバイオーム等を収録。アジア圏の視点を含み、日本の状況（GL不在・NTM多発）との対比材料になる。"
  },
  {
   "id": 168,
@@ -6037,7 +6059,8 @@
   "ev": "総説",
   "summary": "2025年の肺内科領域の主要な進歩を総括したAnn Intern Med年間レビュー。気管支拡張症ではブレンソカチブの承認・ASPEN試験追加解析・DPP-1阻害の新たなエビデンスを含む重要な臨床知見を収録している。（PubMed PMID: 41974006）",
   "pmid": "41974006",
-  "url": "https://doi.org/10.7326/ANNALS-26-00985"
+  "url": "https://doi.org/10.7326/ANNALS-26-00985",
+  "jpView": "2025年の総括レビュー。brensocatib（Insmed・米FDA承認2025年8月／日本はASPEN日本人サブグループ jRCT2031210048・2026年時点国内未承認）を含む年間動向の把握に有用。"
  },
  {
   "id": 169,
@@ -6620,7 +6643,8 @@
   "summary": "NTM肺疾患（気管支拡張症合併を含む）の診断に向けたメタボロミクスとAI支援メタボロミクスの現状と課題を総説。代謝産物バイオマーカーとAI技術の組み合わせによる早期診断向上の可能性を整理した。（PubMed PMID: 42179456）",
   "pmid": "42179456",
   "url": "https://doi.org/10.1016/j.nmni.2026.101759",
-  "authors": "Murthy Madhan Kumar et al."
+  "authors": "Murthy Madhan Kumar et al.",
+  "jpView": "NTM肺症のメタボロミクス／AI診断の総説。NTM有病率が高い日本では早期診断の負担が大きく、非侵襲バイオマーカーによる診断効率化は国内アンメットニーズに合致する。"
  },
  {
   "id": 100,
@@ -6693,7 +6717,8 @@
   "summary": "気管支拡張症の原因となるABPA/ABPMが肺結核として誤診される因子を89例のMDT確認コホートで説明可能機械学習を用いて解析。ABPA/ABPMの正確な診断向上に向けた実践的知見を提供した。（PubMed PMID: 42136879）",
   "pmid": "42136879",
   "url": "https://doi.org/10.2147/JAA.S605864",
-  "authors": "Chen Xuemei et al."
+  "authors": "Chen Xuemei et al.",
+  "jpView": "ABPA/ABPMが結核と誤診される因子の解析。結核既往が多くNTMも高頻度の日本では、気管支拡張症の背景としての真菌性疾患の鑑別が実臨床で重要。"
  },
  {
   "id": 96,
@@ -6711,7 +6736,8 @@
   "ev": "原著",
   "summary": "中国218名のNTM肺疾患患者を性別で層別化し、臨床特性・放射線学的表現型の差異を後ろ向きに検討した研究。男女でNTM-PD（気管支拡張症合併含む）の臨床・画像表現型が有意に異なることを明らかにした。（PubMed PMID: 42132246）",
   "pmid": "42132246",
-  "url": "https://doi.org/10.1080/17476348.2026.2675633"
+  "url": "https://doi.org/10.1080/17476348.2026.2675633",
+  "jpView": "NTM肺症の性差（臨床・画像）。日本では中年以降女性の結節・気管支拡張型MAC症が特徴的で、性差を踏まえた表現型理解は国内の典型像と符合する。"
  },
  {
   "id": 95,
@@ -7000,7 +7026,8 @@
   "ev": "総説",
   "summary": "喘息・COPD・気管支拡張症・CFにわたるTreatable Traitsアプローチにおけるバイオマーカー（血中好酸球・FeNO・定量CT・マルチオミクス）の役割を総説。COPDでの好酸球によるICS反応予測、気管支拡張症での精密治療選択への統合を提案した包括的レビュー。（PubMed PMID: 41633474）",
   "pmid": "41633474",
-  "url": "https://doi.org/10.1016/j.pupt.2026.102410"
+  "url": "https://doi.org/10.1016/j.pupt.2026.102410",
+  "jpView": "Treatable Traitsのバイオマーカー総説。独立GLの無い日本で、好酸球・FeNO・定量CTを用いた形質ベース管理は、国際GLを実務に落とす入口になりうる。"
  },
  {
   "id": 79,
@@ -7111,7 +7138,8 @@
   "pmid": "42168836",
   "aui": "Göpel Groth Minke Schulenburg Kalsdorf Kirchhoff Tueffers Rabe Boutin Nurjadi Rupp",
   "url": "https://doi.org/10.1186/s12866-026-05147-9",
-  "authors": "G&#xf6;pel Lisa et al."
+  "authors": "G&#xf6;pel Lisa et al.",
+  "jpView": "緑膿菌除菌療法の検討。日本では吸入抗菌薬（トブラマイシン等）のエビデンス・適応が限定的で国際標準と差があり、除菌戦略の国内実装には制約がある点に留意。"
  },
  {
   "id": 71,
@@ -7164,7 +7192,8 @@
   "ev": "原著",
   "summary": "349例の確認済みCT気管支拡張症患者をAATD遺伝子型別に解析したところ、Pi*ZZが70.5%を占めたが、Pi*SZ（18.6%）やその他遺伝子型（10.9%）にも相当数が存在した。気管支拡張症に伴うAATDはPi*ZZ以外の遺伝子型にも広がっており、従来よりも広い疾患負荷が明らかになった。",
   "url": "https://pubmed.ncbi.nlm.nih.gov/41668877/",
-  "authors": "Mandurino Mirizzi Francesca et al."
+  "authors": "Mandurino Mirizzi Francesca et al.",
+  "jpView": "AATD遺伝子型別の気管支拡張症特性。AATDが稀な日本では頻度は低いが、非Pi*ZZ型にも及ぶという知見は、国内で稀な本病因を検討する際の参考になる。"
  },
  {
   "id": 64,
@@ -7770,7 +7799,8 @@
   "ev": "原著",
   "summary": "気管支洗浄液を用いた包括的微生物学的解析。細菌（H. influenzae, P. aeruginosa）、NTM（M. avium complex）、真菌（Aspergillus spp.）の共感染パターンと臨床転帰への影響を定量的に解析。",
   "pmid": "41036295",
-  "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12481589/"
+  "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12481589/",
+  "jpView": "細菌・NTM・真菌の共感染パターン解析。日本はNTM・（Aspergillus以外を含む）真菌の関与が課題であり、包括的な微生物評価の視点は国内診療に適合する。"
  },
  {
   "id": 33,
@@ -8117,7 +8147,8 @@
   "ev": "原著",
   "summary": "2025年7月14〜17日、ブリスベン開催。気管支拡張症が「オーファン疾患」から主要呼吸器専門領域への脱却を宣言。患者の声を初めて公式プログラムに組み込み、基礎科学・小児科・PCD・看護/コメディカルの4トラックで最新研究を発表。NTM治療・多職種ケアモデル・新興治療薬の方向性が共有された。",
   "url": "https://pubmed.ncbi.nlm.nih.gov/40396480/",
-  "authors": "Thomson Rachel Mary et al."
+  "authors": "Thomson Rachel Mary et al.",
+  "jpView": "世界気管支拡張症会議2025の総括。NTM治療・多職種ケア・新興治療薬が焦点で、NTM多発国である日本のKOLにとって国際動向の把握に有用。"
  },
  {
   "id": 55,
@@ -8130,7 +8161,8 @@
   "date": "2025-09",
   "year": 2025,
   "summary": "ブレンソカチブFDA承認を受け、気管支拡張症を「治療なき疾患」から「治療可能な疾患」への転換点を論じたコメンタリー。DPP-1阻害薬の開発史と今後のパイプライン（verducatib・抗IL-33・抗PA抗体など）の展望をまとめる。",
-  "url": "https://www.chestphysician.org/hope-on-the-horizon-for-bronchiectasis/"
+  "url": "https://www.chestphysician.org/hope-on-the-horizon-for-bronchiectasis/",
+  "jpView": "DPP-1阻害クラスの開発史とパイプライン（verducatib・抗IL-33・抗PA抗体）を概観。いずれも国内治験が進行（AIRTIVITY・itepekimab・AZD0292のjRCT登録あり）しており、国内パイプライン俯瞰に最適。"
  },
  {
   "id": 56,
@@ -8165,6 +8197,7 @@
   "ev": "原著",
   "summary": "2025 ERSガイドラインをインドの医療環境（結核後気管支拡張症が多い、資源制約、保険未整備）に適用する際の実践的課題と工夫を論じた特別論文。低・中所得国への展開モデルとして参考になる。",
   "pmid": "41474419",
-  "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12857821/"
+  "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12857821/",
+  "jpView": "2025 ERSガイドラインを資源制約国（インド）に適用する視点。独立GLを持たない日本（2026年時点）もERSを参照する立場で、結核後・NTM主体という疫学差を踏まえた適用の考え方が参考になる。"
  }
 ]
