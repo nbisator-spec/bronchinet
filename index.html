@@ -4100,7 +4100,40 @@ const TRIAL_GROUPS = [
     ]
   },
 
-  // ⑨ EU試験（CTIS登録）
+  // ⑨ 中国で進行中の試験（ClinicalTrials.gov）
+  { name: '中国で進行中の試験（ClinicalTrials.gov）', icon: '🇨🇳', color: '#b91c1c',
+    sub: 'China recruiting / active — DPP-1・新規薬剤・レジストリ',
+    trials: [
+      { name: 'HSK31858 第III相（有効性・安全性）', drug: 'HSK31858（DPP-1阻害薬・Haisco）', sponsor: 'Haisco Pharmaceutical', phase: 'Phase III', status: 'RECRUITING', nct: 'NCT06660992', color: '#7c3aed',
+        desc: '中国発DPP-1阻害薬HSK31858の非CF気管支拡張症に対する第III相（無作為化二重盲検プラセボ対照・多施設、669例）。既収録の第2相SAVE-BE（Lancet Respir Med掲載）に続く後期開発。主要完了2026年11月。', url: 'https://clinicaltrials.gov/study/NCT06660992' },
+      { name: 'HSK31858 第III相（長期安全性）', drug: 'HSK31858（DPP-1阻害薬・Haisco）', sponsor: 'Haisco Pharmaceutical', phase: 'Phase III', status: 'RECRUITING', nct: 'NCT07616375', color: '#7c3aed',
+        desc: 'HSK31858の非CF気管支拡張症に対する第III相・単群非盲検の長期安全性試験（669例）。主要完了2029年1月。', url: 'https://clinicaltrials.gov/study/NCT07616375' },
+      { name: 'HSK31858 第II相（気道粘液過分泌）', drug: 'HSK31858（DPP-1阻害薬・Haisco）', sponsor: 'Haisco Pharmaceutical', phase: 'Phase II', status: 'ENROLLING_BY_INVITATION', nct: 'NCT06820749', color: '#7c3aed',
+        desc: '慢性気道炎症性疾患の気道粘液過分泌患者を対象としたHSK31858の第II相（無作為化二重盲検プラセボ対照、309例）。DPP-1阻害の適応拡大を探る。', url: 'https://clinicaltrials.gov/study/NCT06820749' },
+      { name: 'RSS0343 第II相', drug: 'RSS0343（Jiangsu Hengrui）', sponsor: 'Jiangsu HengRui Medicine', phase: 'Phase II', status: 'RECRUITING', nct: 'NCT06775340', color: '#1d4ed8',
+        desc: '中国Hengrui創製の新規薬剤RSS0343の非CF気管支拡張症に対する第II相。安全性・忍容性・薬力学・有効性を評価（252例）。主要完了2027年11月。', url: 'https://clinicaltrials.gov/study/NCT06775340' },
+      { name: 'RSS0343 第I相（健常人）', drug: 'RSS0343（Reistone）', sponsor: 'Reistone Biopharma', phase: 'Phase I', status: 'RECRUITING', nct: 'NCT07289464', color: '#3b82f6',
+        desc: 'RSS0343の健常人での反復経口投与による安全性・忍容性・薬物動態・QT/QTc評価の第I相（48例）。', url: 'https://clinicaltrials.gov/study/NCT07289464' },
+      { name: 'RSS0343 第I相（薬物相互作用）', drug: 'RSS0343（Reistone）', sponsor: 'Reistone Biopharma', phase: 'Phase I', status: 'NOT_YET_RECRUITING', nct: 'NCT07696091', color: '#3b82f6',
+        desc: 'リファンピシン・クラリスロマイシンがRSS0343の薬物動態に与える影響を検討する第I相・単施設試験（40例）。', url: 'https://clinicaltrials.gov/study/NCT07696091' },
+      { name: 'REGEND001 自家基底層幹細胞移植', drug: 'REGEND001（自家気道基底層幹細胞）', sponsor: 'Ruijin Hospital（上海瑞金病院）', phase: 'Phase I', status: 'RECRUITING', nct: 'NCT06987214', color: '#0891b2',
+        desc: '患者自身の気管支基底層幹細胞を採取・拡大して移植する再生医療REGEND001の、慢性構造性肺疾患（気管支拡張症）に対する安全性・有効性を評価する第I相・トランスレーショナル研究（10例）。', url: 'https://clinicaltrials.gov/study/NCT06987214' },
+      { name: '麗肺清腸顆粒 第II相（中医薬）', drug: '麗肺清腸顆粒（中医薬）＋体位ドレナージ', sponsor: '広州医科大学 第一附属病院', phase: 'Phase II', status: 'NOT_YET_RECRUITING', nct: 'NCT07523165', color: '#b45309',
+        desc: '中医薬「麗肺清腸顆粒」の安定期気管支拡張症に対する有効性・安全性を検証する多施設無作為化二重盲検プラセボ対照試験（150例）。本剤の基礎研究（好中球細胞外トラップ抑制）は既に本ポータルに収録。', url: 'https://clinicaltrials.gov/study/NCT07523165' },
+      { name: 'ERASE II：吸入トブラマイシンによる緑膿菌除菌の長期影響', drug: 'トブラマイシン吸入（観察）', sponsor: '上海市肺病院', phase: '観察', status: 'RECRUITING', nct: 'NCT06760273', color: '#0e7490',
+        desc: '緑膿菌除菌成功後の長期予後を評価する前向き追跡研究（ERASE試験の続報）。吸入トブラマイシンによる除菌の臨床的意義を検証（364例）。', url: 'https://clinicaltrials.gov/study/NCT06760273' },
+      { name: 'トブラマイシン吸入液の臨床的有用性（RWD）', drug: 'トブラマイシン吸入液', sponsor: '山東第一医科大学 千佛山病院', phase: '観察', status: 'ACTIVE_NOT_RECRUITING', nct: 'NCT06106789', color: '#0e7490',
+        desc: '抗菌薬エアロゾル吸入の使用実態を文献・専門家調査・リアルワールドデータで検討する大規模研究（1600例規模）。', url: 'https://clinicaltrials.gov/study/NCT06106789' },
+      { name: 'C-BRIDGE：中国気管支拡張症レジストリ', drug: '—（レジストリ・ゲノム・エンドタイプ）', sponsor: '上海市肺病院', phase: '観察・レジストリ', status: 'RECRUITING', nct: 'NCT06900062', color: '#047857',
+        desc: '中国の気管支拡張症をデータベース・ゲノミクス・エンドタイピングで解析する国家的レジストリ研究。EMBARC（EU）・BRR（US）に並ぶアジアの大規模基盤（1500例）。', url: 'https://clinicaltrials.gov/study/NCT06900062' },
+      { name: '慢性気道疾患・多疾患併存コホート（中日友好病院）', drug: '—（前向きコホート）', sponsor: 'China-Japan Friendship Hospital', phase: '観察・コホート', status: 'RECRUITING', nct: 'NCT06798077', color: '#047857',
+        desc: 'COPD・喘息・気管支拡張症を含む慢性気道疾患の多疾患併存が治療決定・予後に与える影響を検討する前向きコホート（2000例）。', url: 'https://clinicaltrials.gov/study/NCT06798077' },
+      { name: '中国人NCFBEのフェノタイプ・エンドタイプ研究（AZ）', drug: '—（観察・フォローアップ）', sponsor: 'AstraZeneca', phase: '観察', status: 'RECRUITING', nct: 'NCT07245407', color: '#64748b',
+        desc: 'AstraZeneca主導の、中国人非CF気管支拡張症患者のフェノタイプ・エンドタイプを解明するトランスレーショナル観察研究（320例）。', url: 'https://clinicaltrials.gov/study/NCT07245407' },
+    ]
+  },
+
+  // ⑩ EU試験（CTIS登録）
   { name: 'EU試験（CTIS登録）', icon: '🇪🇺', color: '#0f3872',
     sub: 'EU Clinical Trials Information System（欧州公式登録）',
     trials: [
