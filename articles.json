@@ -2,7 +2,7 @@
  {
   "id": 482,
   "cat": "ガイドライン・総説",
-  "isNew": true,
+  "isNew": false,
   "titleJa": "成人気管支拡張症の管理：米国胸部専門医学会（ACCP）臨床診療ガイドライン",
   "titleEn": "Management of Adult Bronchiectasis: An American College of Chest Physicians Clinical Practice Guideline.",
   "journal": "Chest",
@@ -21,7 +21,7 @@
  {
   "id": 481,
   "cat": "ガイドライン・総説",
-  "isNew": true,
+  "isNew": false,
   "titleJa": "腎移植患者における気管支拡張症：ナラティブレビュー",
   "titleEn": "Bronchiectasis in renal transplant patients: a narrative review.",
   "journal": "BMJ Open Respiratory Research",
@@ -39,7 +39,7 @@
  {
   "id": 480,
   "cat": "日本発",
-  "isNew": true,
+  "isNew": false,
   "titleJa": "急性期を超えた高流量鼻カニュラ(HFNC)の役割拡大：在宅使用・リハビリテーション・緩和ケア",
   "titleEn": "Expanding roles of high-flow nasal cannula beyond acute care: Home use, rehabilitation, and palliative care.",
   "journal": "Respiratory Investigation",
@@ -58,7 +58,7 @@
  {
   "id": 479,
   "cat": "増悪・病態",
-  "isNew": true,
+  "isNew": false,
   "titleJa": "神経障害児における神経-呼吸機能障害の理解",
   "titleEn": "Understanding neuro-pulmonary dysfunction in children with neurodisability.",
   "journal": "Breathe (Sheffield, England)",
@@ -76,7 +76,7 @@
  {
   "id": 478,
   "cat": "増悪・病態",
-  "isNew": true,
+  "isNew": false,
   "titleJa": "限局性気管支拡張症の稀な原因としての胸椎骨棘",
   "titleEn": "Thoracic vertebral osteophytes as a rare cause of focal bronchiectasis.",
   "journal": "Thorax",
@@ -94,7 +94,7 @@
  {
   "id": 477,
   "cat": "マイクロバイオーム・感染",
-  "isNew": true,
+  "isNew": false,
   "titleJa": "難治性浸潤影・気管支拡張症を呈したアレルギー性気管支肺アスペルギルス症における高吸収粘液栓",
   "titleEn": "High-attenuation mucus in allergic bronchopulmonary aspergillosis presenting as refractory consolidation and bronchiectasis.",
   "journal": "BMJ case reports",
@@ -113,7 +113,7 @@
  {
   "id": 476,
   "cat": "増悪・病態",
-  "isNew": true,
+  "isNew": false,
   "titleJa": "洞房結節動脈由来の冠動脈-気管支動脈瘻を有する気管支拡張症患者の1例：マルチモダリティ画像による評価",
   "titleEn": "Coronary-bronchial artery fistula arising from the sinoatrial nodal artery in a patient with bronchiectasis: a multimodality imaging case report.",
   "journal": "European Heart Journal. Case Reports",
@@ -131,7 +131,7 @@
  {
   "id": 475,
   "cat": "増悪・病態",
-  "isNew": true,
+  "isNew": false,
   "titleJa": "反復喀血の稀な症例に対する集学的治療：7年間の臨床経過からの診断・治療上の知見",
   "titleEn": "Multidisciplinary collaborative treatment of a rare case of chronic hemoptysis: diagnostic and therapeutic insights from a 7-year clinical course.",
   "journal": "Frontiers in Medicine",
@@ -149,7 +149,7 @@
  {
   "id": 474,
   "cat": "増悪・病態",
-  "isNew": true,
+  "isNew": false,
   "titleJa": "両アレル性RSPH4A機能喪失変異による原発性線毛機能不全症（中国人患者例）",
   "titleEn": "Biallelic RSPH4A loss-of-function variants cause primary ciliary dyskinesia in a Chinese patient.",
   "journal": "Frontiers in Genetics",
@@ -167,7 +167,7 @@
  {
   "id": 473,
   "cat": "増悪・病態",
-  "isNew": true,
+  "isNew": false,
   "titleJa": "偽優性遺伝を示す原発性線毛機能不全症家系の臨床遺伝学的検討：中国人集団における初のDNAAF1関連家系報告",
   "titleEn": "Clinical and Genetic Study of a Pseudo-Dominant Primary Ciliary Dyskinesia Pedigree: The First DNAAF1-Associated Family Reported in Chinese Population.",
   "journal": "Molecular Genetics & Genomic Medicine",
