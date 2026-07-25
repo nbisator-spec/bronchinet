@@ -1,8 +1,25 @@
 [
  {
+  "id": 487,
+  "cat": "治療・薬剤",
+  "isNew": true,
+  "titleJa": "アクセス制限下でのCFTRモジュレーター治療継続：CYP3A4阻害を用いてエレキサカフトル/テザカフトル/イバカフトルの効果を維持した症例報告",
+  "titleEn": "Case Report: When access is limited: using CYP3A4 inhibition to maintain clinical benefit from elexacaftor/tezacaftor/ivacaftor.",
+  "journal": "Frontiers in Pharmacology",
+  "sjr": "Q1",
+  "date": "2026-07-08",
+  "year": 2026,
+  "ev": "症例報告",
+  "authors": "Hiscock K, Wood M, Johnson E ほか",
+  "aui": "Hiscock Wood Johnson Smith Evans",
+  "summary": "オーストラリアの嚢胞性線維症(CF)成人女性（遺伝子型G542X/T1246I）は、遺伝子型基準により公的助成でのエレキサカフトル/テザカフトル/イバカフトル(ETI)へのアクセスが当初得られず、気管支拡張症の増悪など臨床的悪化を来した。CYP3A4阻害薬による薬物動態学的操作でETI曝露を延長するアプローチにより、医療資源の限られた環境でも個別化投与でCFTRモジュレーター治療の恩恵を維持できる可能性が示された。",
+  "pmid": "42488561",
+  "url": "https://pubmed.ncbi.nlm.nih.gov/42488561/"
+ },
+ {
   "id": 486,
   "cat": "マイクロバイオーム・感染",
-  "isNew": true,
+  "isNew": false,
   "titleJa": "一過性感染菌と慢性感染菌間の患者体内での遺伝子伝播が肺感染症における極度の抗菌薬耐性を引き起こす",
   "titleEn": "Within-patient gene transfer between transiently and chronically infecting bacteria causes extreme antibiotic resistance during lung infections.",
   "journal": "Nature Microbiology",
@@ -19,7 +36,7 @@
  {
   "id": 485,
   "cat": "治療・薬剤",
-  "isNew": true,
+  "isNew": false,
   "titleJa": "非CF気管支拡張症患者における抗菌薬治療期間が将来の増悪リスクに及ぼす影響",
   "titleEn": "Effect of antibiotic therapy duration on risk of future exacerbations in patients with non-CF bronchiectasis.",
   "journal": "Respiratory Medicine and Research",
@@ -36,7 +53,7 @@
  {
   "id": 484,
   "cat": "増悪・病態",
-  "isNew": true,
+  "isNew": false,
   "titleJa": "40歳女性における非定型カルタゲナー症候群：内臓逆位・気管支拡張症・不妊を伴うCT所見",
   "titleEn": "Atypical Kartagener syndrome in a 40-year-old woman: Computed Tomography findings of situs inversus with bronchiectasis and infertility.",
   "journal": "Radiology Case Reports",
