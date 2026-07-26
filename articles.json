@@ -1,8 +1,26 @@
 [
  {
+  "id": 488,
+  "cat": "マイクロバイオーム・感染",
+  "isNew": true,
+  "titleJa": "難治性喘息患児における細菌共検出を伴う早期Aspergillus関連アレルギー性気道疾患の疑い例",
+  "titleEn": "Suspected early Aspergillus-related allergic airway disease with bacterial co-detection in a child with refractory asthma.",
+  "journal": "IDCases",
+  "sjr": "Q3",
+  "date": "2026-07-16",
+  "year": 2026,
+  "ev": "症例報告",
+  "authors": "Cao TV, Ha TM, Pham LH, Nguyen KV",
+  "aui": "Cao Ha Pham Nguyen",
+  "summary": "難治性喘息の10歳女児が発熱・喀痰を伴う咳嗽・喘鳴で入院し、著明な好酸球増多と総IgE高値、気管支肺胞洗浄(BAL)検体でのガラクトマンナン・Aspergillus抗原陽性を認めたが、多重PCRで肺炎球菌・インフルエンザ菌・MRSAも検出され、HRCTでは中心性気管支拡張像を伴わないびまん性すりガラス影のみを呈した。A. fumigatus特異的IgE未測定のため確定ABPAの分類基準は満たさなかったが、経過中のIgM/IgG陽転化を確認しイトラコナゾール投与で改善しており、細菌共検出が真菌性アレルギー気道疾患の認識を遅らせうる点、および気管支拡張像を伴わなくても早期病変を除外できない点が示唆された。",
+  "jpView": "日本のABPMはアスペルギルス以外の真菌（Schizophyllum等）の関与も比較的多いとされ、本症例のような典型的Aspergillus関連ABPAとは疫学的背景が異なる可能性がある。気管支拡張像を伴わない早期像や細菌共検出による診断の遅れは、小児喘息診療における真菌感作スクリーニングの示唆として本邦でも参考になる。",
+  "pmid": "42502853",
+  "url": "https://pubmed.ncbi.nlm.nih.gov/42502853/"
+ },
+ {
   "id": 487,
   "cat": "治療・薬剤",
-  "isNew": true,
+  "isNew": false,
   "titleJa": "アクセス制限下でのCFTRモジュレーター治療継続：CYP3A4阻害を用いてエレキサカフトル/テザカフトル/イバカフトルの効果を維持した症例報告",
   "titleEn": "Case Report: When access is limited: using CYP3A4 inhibition to maintain clinical benefit from elexacaftor/tezacaftor/ivacaftor.",
   "journal": "Frontiers in Pharmacology",
