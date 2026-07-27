@@ -1,8 +1,25 @@
 [
  {
+  "id": 489,
+  "cat": "ガイドライン・総説",
+  "isNew": true,
+  "titleJa": "気管支拡張症の外来ケアにおける看護師の役割と責任：スコーピングレビュー",
+  "titleEn": "Nursing Roles and Responsibilities in Outpatient Bronchiectasis Care: A Scoping Review.",
+  "journal": "Nursing Reports",
+  "sjr": "Q1",
+  "date": "2026-07-14",
+  "year": 2026,
+  "ev": "総説",
+  "authors": "Hiscock K, Jedwab RM",
+  "aui": "Hiscock Jedwab",
+  "summary": "非嚢胞性線維症気管支拡張症の外来管理における看護師の役割を2002〜2025年発表の研究5件・国際診療ガイドライン2件からスコーピングレビューし、臨床評価・モニタリング、セルフマネジメント支援・患者教育、多職種連携によるケア調整、患者アドボカシー・コミュニケーション、リーダーシップ・サービス開発の5領域に整理した。ただし特定された役割の多くは多職種向け推奨事項から間接的に導かれたものであり、看護実践を明示的に記述したエビデンスや測定可能なアウトカム、標準化された役割定義は依然として限定的であった。",
+  "pmid": "42506029",
+  "url": "https://pubmed.ncbi.nlm.nih.gov/42506029/"
+ },
+ {
   "id": 488,
   "cat": "マイクロバイオーム・感染",
-  "isNew": true,
+  "isNew": false,
   "titleJa": "難治性喘息患児における細菌共検出を伴う早期Aspergillus関連アレルギー性気道疾患の疑い例",
   "titleEn": "Suspected early Aspergillus-related allergic airway disease with bacterial co-detection in a child with refractory asthma.",
   "journal": "IDCases",
