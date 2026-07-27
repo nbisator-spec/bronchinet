@@ -1969,7 +1969,8 @@
   "authors": "Yii A, Maldonado Sanchez Y, Lai Q, Chen W",
   "aui": "Yii Maldonado Sanchez Lai Chen",
   "summary": "シンガポールにおけるCOPD疫学・治療パターンを包括的に総説し、気管支拡張症・心血管疾患・糖尿病などの合併症が医療利用増大と予後悪化に寄与することを整理した。dupilumabをはじめとする生物学的製剤・FeNOバイオマーカー活用による精密医療の展開を展望し、早期診断と新規生物学的製剤採用によるアウトカム改善の機会を論じている。",
-  "url": "https://pubmed.ncbi.nlm.nih.gov/42338669/"
+  "url": "https://pubmed.ncbi.nlm.nih.gov/42338669/",
+  "sjr": "Q1"
  },
  {
   "id": 372,
@@ -6079,7 +6080,7 @@
   "isNew": false,
   "titleJa": "COPD患者における気管支拡張症進展の前向き観察研究：PROBE-COPDスタディ",
   "titleEn": "A Prospective Observational Study Evaluating the PRogression Of BronchiEctasis in COPD Patients - Results from the PROBE - COPD Study",
-  "journal": "International Journal of COPD",
+  "journal": "International Journal of Chronic Obstructive Pulmonary Disease",
   "aui": "Venkitakrishnan Sudheendranath Vijay Ramachandran Cleetus Somson John",
   "sjr": "Q1",
   "if": "3.1",
