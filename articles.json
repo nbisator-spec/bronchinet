@@ -1,8 +1,43 @@
 [
  {
+  "id": 509,
+  "cat": "増悪・病態",
+  "isNew": true,
+  "titleJa": "ランダムフォレストアルゴリズムに基づく気管支拡張症患者における喀血リスク予測ノモグラムの開発と検証",
+  "titleEn": "Development and validation of a nomogram for predicting hemoptysis risk in patients with bronchiectasis: A study based on Random Forest algorithm.",
+  "journal": "Medicine",
+  "sjr": "Q2",
+  "date": "2026-07-31",
+  "year": 2026,
+  "ev": "原著",
+  "authors": "Zhang G, Chen Y, Zhai M ほか",
+  "aui": "Zhang Chen Zhai Zhao",
+  "summary": "気管支拡張症患者131例を対象に、ランダムフォレストアルゴリズムで抽出した体格指数・CRP・クレアチニン・年齢・尿素などの臨床変数を用いて喀血リスク予測ノモグラムを開発した。検証セットでのAUCは0.944と高い予測性能とキャリブレーションを示し、高リスク患者の早期同定に有用なツールとなる可能性がある。",
+  "pmid": "42536543",
+  "url": "https://pubmed.ncbi.nlm.nih.gov/42536543/"
+ },
+ {
+  "id": 508,
+  "cat": "増悪・病態",
+  "isNew": true,
+  "titleJa": "嚢胞性線維症と原発性線毛機能不全症の小児における複数呼出洗い出し(MBW)パラメータの比較：マッチドコホート研究",
+  "titleEn": "Comparing Multiple Breath Washout Parameters in a Matched Cohort of Children With Cystic Fibrosis and Primary Ciliary Dyskinesia.",
+  "journal": "Pediatric Pulmonology",
+  "sjr": "Q1",
+  "if": "2.3",
+  "date": "2026-08-01",
+  "year": 2026,
+  "ev": "観察研究",
+  "authors": "Vanvuchelen L, Vermaut A, Proesmans M ほか",
+  "aui": "Vanvuchelen Vermaut Proesmans Vermeulen Boon",
+  "summary": "6~20歳のCF患者23例とPCD患者23例(年齢・FEV1でマッチ)を対象に、末梢気道機能の指標である肺クリアランス指数(LCI)を後方視的に比較したところ、FEV1は両群で同程度であったにもかかわらずLCIはCF群でより異常値を示した(7.8対7.1、p=0.04)。FEV1が正常範囲でも末梢気道障害の程度がCFとPCDで異なる可能性が示唆され、早期評価におけるMBWの有用性を裏付ける結果である。",
+  "pmid": "42504864",
+  "url": "https://pubmed.ncbi.nlm.nih.gov/42504864/"
+ },
+ {
   "id": 507,
   "cat": "治療・薬剤",
-  "isNew": true,
+  "isNew": false,
   "dpp1": true,
   "titleJa": "薬剤アップデート：2026年夏版・最近の新薬承認",
   "titleEn": "The Drug Update: Recent drug approvals, summer 2026 edition.",
@@ -20,7 +55,7 @@
  {
   "id": 506,
   "cat": "精密医療・エンドタイプ",
-  "isNew": true,
+  "isNew": false,
   "titleJa": "副鼻腔炎・喘息・気管支拡張症：好酸球は病態の駆動因子か、それとも随伴所見に過ぎないか？",
   "titleEn": "Sinusitis, asthma, and bronchiectasis: Are eosinophils the driver or just along for the ride?",
   "journal": "Annals of Allergy, Asthma & Immunology",
@@ -37,7 +72,7 @@
  {
   "id": 505,
   "cat": "マイクロバイオーム・感染",
-  "isNew": true,
+  "isNew": false,
   "scope": "他疾患",
   "titleJa": "侵襲性肺アスペルギルス症を予測する臨床応用可能なノモグラム：ネスト化症例対照研究",
   "titleEn": "A clinically actionable nomogram for predicting invasive pulmonary aspergillosis: a nested case-control study.",
@@ -55,7 +90,7 @@
  {
   "id": 504,
   "cat": "ガイドライン・総説",
-  "isNew": true,
+  "isNew": false,
   "titleJa": "非嚢胞性線維症・非結核後遺症性気管支拡張症",
   "titleEn": "Non-cystic Fibrosis and Non-tuberculosis Sequela Bronchiectasis.",
   "journal": "Thoracic Surgery Clinics",
@@ -72,7 +107,7 @@
  {
   "id": 503,
   "cat": "マイクロバイオーム・感染",
-  "isNew": true,
+  "isNew": false,
   "titleJa": "肺非結核性抗酸菌症に対する外科的治療",
   "titleEn": "Surgical Treatment of Pulmonary Nontuberculous Mycobacterial Infections.",
   "journal": "Thoracic Surgery Clinics",
@@ -90,7 +125,7 @@
  {
   "id": 502,
   "cat": "治療・薬剤",
-  "isNew": true,
+  "isNew": false,
   "titleJa": "結核後肺疾患：外科的管理の役割",
   "titleEn": "Post-Tuberculosis Lung Disease: The Role of Surgical Management.",
   "journal": "Thoracic Surgery Clinics",
@@ -107,7 +142,7 @@
  {
   "id": 501,
   "cat": "マイクロバイオーム・感染",
-  "isNew": true,
+  "isNew": false,
   "scope": "他疾患",
   "titleJa": "Triadelphia pulvinata定着：中東から帰国したインド人出稼ぎ労働者における初報告",
   "titleEn": "Triadelphia pulvinata colonisation: First report in an Indian expatriate returning from the Middle East.",
