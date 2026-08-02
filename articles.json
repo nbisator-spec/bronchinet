@@ -1,8 +1,25 @@
 [
  {
+  "id": 510,
+  "cat": "マイクロバイオーム・感染",
+  "isNew": true,
+  "titleJa": "アレルギー性気管支肺アスペルギルス症（ABPA）へのステロイド投与開始前に",
+  "titleEn": "Before Corticosteroids for Allergic Bronchopulmonary Aspergillosis.",
+  "journal": "The American Journal of Medicine",
+  "sjr": "Q1",
+  "date": "2026-08-01",
+  "year": 2026,
+  "ev": "症例報告",
+  "authors": "Li G, Pang M, Jing M ほか",
+  "aui": "Li Pang Jing Fan Yang",
+  "summary": "気管支拡張症・COPDを背景とするアレルギー性気管支肺アスペルギルス症（ABPA）の症例をもとに、ステロイド投与開始前に浸潤性肺アスペルギルス症との鑑別を要する点を論じた症例報告。抄録は早期公開段階で未収載のため、詳細はタイトル・キーワードに基づく要約にとどまる。",
+  "pmid": "42542160",
+  "url": "https://pubmed.ncbi.nlm.nih.gov/42542160/"
+ },
+ {
   "id": 509,
   "cat": "増悪・病態",
-  "isNew": true,
+  "isNew": false,
   "titleJa": "ランダムフォレストアルゴリズムに基づく気管支拡張症患者における喀血リスク予測ノモグラムの開発と検証",
   "titleEn": "Development and validation of a nomogram for predicting hemoptysis risk in patients with bronchiectasis: A study based on Random Forest algorithm.",
   "journal": "Medicine",
@@ -20,7 +37,7 @@
  {
   "id": 508,
   "cat": "増悪・病態",
-  "isNew": true,
+  "isNew": false,
   "titleJa": "嚢胞性線維症と原発性線毛機能不全症の小児における複数呼出洗い出し(MBW)パラメータの比較：マッチドコホート研究",
   "titleEn": "Comparing Multiple Breath Washout Parameters in a Matched Cohort of Children With Cystic Fibrosis and Primary Ciliary Dyskinesia.",
   "journal": "Pediatric Pulmonology",
