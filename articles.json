@@ -1,8 +1,26 @@
 [
  {
+  "id": 515,
+  "cat": "マイクロバイオーム・感染",
+  "isNew": true,
+  "titleJa": "胸部CT・臨床マーカー統合マルチモーダル機械学習による抗酸菌性肺疾患の精密識別",
+  "titleEn": "Precise discrimination of mycobacterial pulmonary diseases via multimodal machine learning integrating chest CT and clinical markers.",
+  "journal": "Frontiers in Medicine",
+  "sjr": "Q1",
+  "if": "3.0",
+  "date": "2026-07-09",
+  "year": 2026,
+  "ev": "原著",
+  "authors": "Jin Y, Ding J, Ouyang J ほか",
+  "aui": "Jin Ding Ouyang Yao Wang Xu Jin",
+  "summary": "肺結核（MTB-LD）と非結核性抗酸菌症（NTM-LD）が確定した102例を対象に、胸部CT所見・臨床症状・血液バイオマーカーを統合したマルチモーダル機械学習モデルを開発・検証した。ランダムフォレストモデルが最良の判別性能（AUC 0.92、感度0.89、特異度0.93）を示し、嚢胞性気管支拡張像やtree-in-bud徴候が重要な予測因子として同定された。",
+  "pmid": "42553647",
+  "url": "https://pubmed.ncbi.nlm.nih.gov/42553647/"
+ },
+ {
   "id": 514,
   "cat": "増悪・病態",
-  "isNew": true,
+  "isNew": false,
   "titleJa": "気管支拡張症における心理的要因と機能的能力：QOLの規定因子",
   "titleEn": "Psychological factors and functional capacity as determinants of health-related quality of life in bronchiectasis.",
   "journal": "Psychology, Health & Medicine",
@@ -19,7 +37,7 @@
  {
   "id": 513,
   "cat": "マイクロバイオーム・感染",
-  "isNew": true,
+  "isNew": false,
   "titleJa": "気管支拡張症患者における緑膿菌感染の検出・モニタリングのための新規細菌定量アッセイの評価",
   "titleEn": "Assessment of a bacterial quantification assay to detect and monitor Pseudomonas aeruginosa infection in patients with bronchiectasis.",
   "journal": "ERJ Open Research",
@@ -37,7 +55,7 @@
  {
   "id": 512,
   "cat": "増悪・病態",
-  "isNew": true,
+  "isNew": false,
   "titleJa": "イタリアにおける小児期から成人期への慢性肺疾患（CPD）移行医療の課題と障壁：全国調査",
   "titleEn": "Challenges and barriers in pediatric to adult Transition in Chronic Pulmonary Diseases (CPD) in Italy: a nationwide Survey.",
   "journal": "Respiration",
