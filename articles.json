@@ -1,8 +1,26 @@
 [
  {
+  "id": 525,
+  "cat": "学会動向",
+  "isNew": true,
+  "titleJa": "気管支拡張症のルネサンス",
+  "titleEn": "The Renaissance of Bronchiectasis.",
+  "journal": "American Journal of Respiratory and Critical Care Medicine",
+  "sjr": "Q1",
+  "if": "21.7",
+  "date": "2026-08-08",
+  "year": 2026,
+  "ev": "社説・論説",
+  "authors": "Martinez-Garcia MA, Chang AB, Chotirmall SH, Tino G",
+  "aui": "Martinez-Garcia Chang Chotirmall Tino",
+  "summary": "気管支拡張症は喘息やCOPDを上回る研究成長率を示す拡大領域にあるとし、この分野における主要な10の変化を要約した論説。今後は予防への注力に加え、治療薬・RCT参加を含む医療アクセスの公平性確保や、小児・成人双方における研究成果の臨床転帰への橋渡しが一層求められると論じている。",
+  "pmid": "42569927",
+  "url": "https://pubmed.ncbi.nlm.nih.gov/42569927/"
+ },
+ {
   "id": 524,
   "cat": "マイクロバイオーム・感染",
-  "isNew": true,
+  "isNew": false,
   "titleJa": "肺アスペルギルス症を合併しアレルギー性気管支肺アスペルギルス症(ABPA)と誤診された好酸球性多発血管炎性肉芽腫症(EGPA)の1例",
   "titleEn": "Eosinophilic granulomatosis with polyangiitis complicated by pulmonary aspergillosis and misdiagnosed as allergic bronchopulmonary aspergillosis: a case report.",
   "journal": "Frontiers in Medicine",
@@ -20,7 +38,7 @@
  {
   "id": 523,
   "cat": "マイクロバイオーム・感染",
-  "isNew": true,
+  "isNew": false,
   "titleJa": "肺ムーコル症の臨床像と画像所見の特徴",
   "titleEn": "Clinical and imaging characteristics of pulmonary mucormycosis.",
   "journal": "Respiratory Medicine",
