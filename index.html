@@ -497,9 +497,9 @@
     <div class="dashboard-header">
       <div class="dashboard-title">
         🔥 本日のハイライト
-        <span class="dashboard-badge">NEW 5件</span>
+        <span class="dashboard-badge">NEW 1件</span>
       </div>
-      <div class="dashboard-date">最終更新：2026-08-12 07:04 自動生成</div>
+      <div class="dashboard-date">最終更新：2026-08-13 07:04 自動生成</div>
     </div>
     <div class="dashboard-grid" id="dashboardGrid"></div>
   </div>
@@ -664,6 +664,13 @@
       <div class="sidebar-card">
         <div class="sidebar-header orange">📅 デイリーレポート履歴</div>
         <div class="sidebar-body">
+          <div class="report-item">
+            <div>
+              <div class="report-date">2026年8月13日（07:04）</div>
+              <div class="report-count">新規2件（慢性呼吸器疾患自己抗体スコーピングレビュー1件、Indiana大学 成人気管支拡張症PCDスクリーニング試験1件）</div>
+            </div>
+            <span class="report-link" onclick="showSection('reports',document.querySelectorAll('nav a')[3])">▶ 開く</span>
+          </div>
           <div class="report-item">
             <div>
               <div class="report-date">2026年8月12日（07:04）</div>
@@ -1490,6 +1497,29 @@
   <div class="reports-page-header">
     <h2>📝 デイリーレポート アーカイブ</h2>
     <p>毎朝8時に自動生成される文献サマリーの履歴。既読除外機能により、常に新規情報のみを収録しています。</p>
+  </div>
+
+  <!-- Report 2026-08-13 07:04 -->
+  <div class="report-card">
+    <div class="report-card-header">
+      <div>
+        <div class="report-card-date">📅 2026年8月13日（07:04 自動生成）</div>
+        <div style="font-size:12px;color:var(--text-muted);margin-top:3px;">PubMed 10クエリ（過去30日、mindate=2026/07/14〜maxdate=2026/08/13、ユニークPMID 94件走査、Query2/8はページング取得）・J-STAGE（2026年、計1件走査、既報）・CiNii（26件走査、KAKEN科研費含む、新規なし）・臨床試験3ソース（ClinicalTrials.gov RECRUITING 85試験/JRCT 236試験中関連19試験/CTIS 21試験）を確認。未読PMID2件のうち1件を新規採用（肺結節良悪性鑑別モデル論文は気管支拡張症が11変数中の1つに過ぎず対象外としseen_pmidsへ追記し再発防止）。ClinicalTrials.govでIndiana大学の新規診断研究（成人気管支拡張症におけるPCDスクリーニング）を新規採用。J-STAGE・CiNii・JRCT・CTISは新規なし。</div>
+      </div>
+      <span class="report-card-count">新規 1件・臨床試験 1件</span>
+    </div>
+    <ul class="report-highlight-list">
+      <li>
+        <span class="report-num">1</span>
+        <span class="report-cat-inline" style="background:#ede9fe;color:#5b21b6">精密医療・エンドタイプ</span>
+        <span>特発性肺線維症・COPD・嚢胞性線維症・喘息・気管支拡張症・サルコイドーシス・珪肺症など慢性非感染性呼吸器疾患における自己抗体をスコーピングレビュー。79研究を精査した結果、体系的・非バイアスな自己抗体探索は少なく、臨床的意義が確立した自己抗体はごく一部にとどまり、エンドタイピングに向けた今後の優先研究領域が示された（Frontiers in Immunology Q1・IF5.9, 2026）。<a href="https://pubmed.ncbi.nlm.nih.gov/42582065/" target="_blank" style="color:var(--primary)">PubMed</a></span>
+      </li>
+      <li>
+        <span class="report-num">2</span>
+        <span class="report-cat-inline" style="background:#cffafe;color:#0e7490">臨床試験</span>
+        <span>高速ビデオ顕微鏡と鼻腔一酸化窒素（nNO）測定を組み合わせ、成人気管支拡張症患者において未診断の原発性線毛機能不全症（PCD）がどの程度潜在しているかを検証する診断研究（Indiana University）。<a href="https://clinicaltrials.gov/study/NCT07566611" target="_blank" style="color:var(--primary)">ClinicalTrials.gov</a></span>
+      </li>
+    </ul>
   </div>
 
   <!-- Report 2026-08-12 07:04 -->
@@ -4735,6 +4765,8 @@ const TRIAL_GROUPS = [
         desc: '慢性肺疾患患者を対象に、遠隔リハビリと対面での8週間維持運動プログラムを比較するパイロット試験。退院後の運動療法継続の効果を検証。30例。', url: 'https://clinicaltrials.gov/study/NCT06304207' },
       { name: 'スマホ音響による気道評価（AWARE）', drug: 'AWARE（音響波形呼吸評価）', sponsor: 'Indiana University', phase: '診断', status: 'RECRUITING', nct: 'NCT06512064', color: '#64748b',
         desc: 'スマートフォンのスピーカー/マイクで気道径・気流閉塞を評価し、気道疾患の診断・増悪検出を支援できるか検証。喘息・COPD・CF・線毛機能障害・気管支拡張症を横断・800例。', url: 'https://clinicaltrials.gov/study/NCT06512064' },
+      { name: '成人気管支拡張症におけるPCDスクリーニング', drug: '高速ビデオ顕微鏡＋鼻腔NO測定（診断研究）', sponsor: 'Indiana University', phase: '診断', status: 'RECRUITING', nct: 'NCT07566611', color: '#64748b',
+        desc: '高速ビデオ顕微鏡と鼻腔一酸化窒素（nNO）測定を組み合わせ、成人気管支拡張症患者において未診断の原発性線毛機能不全症（PCD）がどの程度潜在しているかを検証する研究。', url: 'https://clinicaltrials.gov/study/NCT07566611' },
       { name: 'SonoHeal 気道クリアランス（実現可能性）', drug: 'SonoHeal（音響振動）機器', sponsor: 'Cognita Labs LLC', phase: '機器・観察', status: 'ACTIVE_NOT_RECRUITING', nct: 'NCT07568119', color: '#64748b',
         desc: '音響振動による気道クリアランス機器SonoHealの早期実現可能性・受容性を評価し、標準治療（高頻度胸壁振動）と予備的に比較。CF・非CF気管支拡張症・COPD・15例。', url: 'https://clinicaltrials.gov/study/NCT07568119' },
       { name: '肺移植後の拒絶除外のための肺超音波', drug: '—（肺超音波診断）', sponsor: 'Mayo Clinic', phase: '診断', status: 'RECRUITING', nct: 'NCT04582279', color: '#64748b',

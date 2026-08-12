@@ -1,8 +1,26 @@
 [
  {
+  "id": 531,
+  "cat": "精密医療・エンドタイプ",
+  "isNew": true,
+  "titleJa": "慢性非感染性呼吸器疾患における自己抗体：スコーピングレビュー",
+  "titleEn": "Autoantibodies in chronic non-infectious respiratory diseases: a scoping review.",
+  "journal": "Frontiers in Immunology",
+  "sjr": "Q1",
+  "if": "5.9",
+  "date": "2026-07-28",
+  "year": 2026,
+  "ev": "総説",
+  "authors": "Chow KL, Bekkers M, de Malmanche T, Patchett K, Wark PAB, Kaiko GE",
+  "aui": "Chow Bekkers de Malmanche Patchett Wark Kaiko",
+  "summary": "特発性肺線維症・COPD・嚢胞性線維症・喘息・気管支拡張症・サルコイドーシス・珪肺症など慢性非感染性呼吸器疾患における自己抗体をスコーピングレビュー。79研究を精査した結果、体系的・非バイアスな自己抗体探索は少なく、臨床的意義が確立した自己抗体はごく一部にとどまり、エンドタイピングに向けた今後の優先研究領域が示された。",
+  "pmid": "42582065",
+  "url": "https://pubmed.ncbi.nlm.nih.gov/42582065/"
+ },
+ {
   "id": 526,
   "cat": "マイクロバイオーム・感染",
-  "isNew": true,
+  "isNew": false,
   "titleJa": "肺に「花が咲く」：気管支拡張症・ABPAにおけるfinger-in-glove徴候の画像症例",
   "titleEn": "A flower blooming in the Lung.",
   "journal": "European Journal of Internal Medicine",
@@ -19,7 +37,7 @@
  {
   "id": 527,
   "cat": "治療・薬剤",
-  "isNew": true,
+  "isNew": false,
   "titleJa": "気管支拡張症における抗炎症療法の比較（Letter）",
   "titleEn": "Comparison of Antiinflammatory Therapies for Bronchiectasis.",
   "journal": "Chest",
@@ -37,7 +55,7 @@
  {
   "id": 528,
   "cat": "増悪・病態",
-  "isNew": true,
+  "isNew": false,
   "titleJa": "既知の気管支拡張症患者における進行性呼吸困難・慢性咳嗽の1例",
   "titleEn": "A Case of Progressively Worsening Dyspnea and Chronic Cough in a Patient With Known Bronchiectasis.",
   "journal": "Chest",
@@ -55,7 +73,7 @@
  {
   "id": 529,
   "cat": "マイクロバイオーム・感染",
-  "isNew": true,
+  "isNew": false,
   "titleJa": "慢性肺アスペルギルス症における抗アスペルギルス血清学的診断：総説",
   "titleEn": "Ins and outs of anti-Aspergillus serology in chronic pulmonary aspergillosis: a narrative review.",
   "journal": "Clinical Microbiology and Infection",
@@ -72,7 +90,7 @@
  {
   "id": 530,
   "cat": "精密医療・エンドタイプ",
-  "isNew": true,
+  "isNew": false,
   "titleJa": "肝酵素上昇と膵外分泌不全を伴う気管支拡張症の1例（CFTR関連疾患）",
   "titleEn": "[Bronchiectasis with elevated liver enzymes and pancreatic exocrine insufficiency].",
   "journal": "Chinese Journal of Tuberculosis and Respiratory Diseases",
