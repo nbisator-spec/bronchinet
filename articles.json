@@ -2,7 +2,7 @@
  {
   "id": 542,
   "cat": "治療・薬剤",
-  "isNew": true,
+  "isNew": false,
   "titleJa": "原発性線毛機能不全症における理学療法：エビデンスは何か？ ナラティブレビューと臨床経験",
   "titleEn": "Physiotherapy in Primary Ciliary Dyskinesia-What Is the Evidence?: A Narrative Review and Personal Experience.",
   "journal": "Pediatric Pulmonology",
@@ -21,7 +21,7 @@
  {
   "id": 541,
   "cat": "マイクロバイオーム・感染",
-  "isNew": true,
+  "isNew": false,
   "titleJa": "肺感染症患者218例におけるメタゲノム次世代シーケンシング(mNGS)と従来培養法の病原体検出能の比較：後方視的研究",
   "titleEn": "Comparative Analysis of Metagenomic Next-Generation Sequencing and Conventional Culture for Pathogen Detection in 218 Patients with Pulmonary Infectious Diseases: A Retrospective Study.",
   "journal": "Infection and Drug Resistance",
