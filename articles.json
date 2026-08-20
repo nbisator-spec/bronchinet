@@ -2,7 +2,7 @@
  {
   "id": 551,
   "cat": "マイクロバイオーム・感染",
-  "isNew": true,
+  "isNew": false,
   "titleJa": "膿気胸として発症したアレルギー性気管支肺アスペルギルス症：臨床スペクトラムの拡大",
   "titleEn": "Allergic Bronchopulmonary Aspergillosis Presenting as Pyopneumothorax: Expanding the Clinical Spectrum.",
   "journal": "Annals of African Medicine",
@@ -19,7 +19,7 @@
  {
   "id": 550,
   "cat": "増悪・病態",
-  "isNew": true,
+  "isNew": false,
   "titleJa": "カルタゲナー症候群の臨床・画像所見の検討",
   "titleEn": "The Clinico-radiological Perspective of Kartagener's Syndrome.",
   "journal": "Annals of African Medicine",
@@ -37,7 +37,7 @@
  {
   "id": 549,
   "cat": "マイクロバイオーム・感染",
-  "isNew": true,
+  "isNew": false,
   "titleJa": "COPDとアスペルギルス：世界的健康上重要な複雑な相互作用",
   "titleEn": "COPD and Aspergillus-a complex interaction of global health importance.",
   "journal": "The Lancet Infectious Diseases",
@@ -55,7 +55,7 @@
  {
   "id": 548,
   "cat": "治療・薬剤",
-  "isNew": true,
+  "isNew": false,
   "titleJa": "気管支拡張症と肺結核における外科的介入",
   "titleEn": "Surgical intervention in bronchiectasis and pulmonary tuberculosis.",
   "journal": "Breathe (Sheffield, England)",
@@ -73,7 +73,7 @@
  {
   "id": 547,
   "cat": "増悪・病態",
-  "isNew": true,
+  "isNew": false,
   "titleJa": "単純性気管支拡張症様の肺リンパ管奇形が腫瘤・狭窄へ進展した1例",
   "titleEn": "Pulmonary Lymphatic Malformation Mimicking Simple Bronchiectasis, Progressing to Masses and Stenosis.",
   "journal": "American Journal of Respiratory and Critical Care Medicine",
