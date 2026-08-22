@@ -497,9 +497,9 @@
     <div class="dashboard-header">
       <div class="dashboard-title">
         🔥 本日のハイライト
-        <span class="dashboard-badge">NEW 0件</span>
+        <span class="dashboard-badge">NEW 2件</span>
       </div>
-      <div class="dashboard-date">最終更新：2026-08-21 07:04 自動生成</div>
+      <div class="dashboard-date">最終更新：2026-08-22 07:04 自動生成</div>
     </div>
     <div class="dashboard-grid" id="dashboardGrid"></div>
   </div>
@@ -664,6 +664,13 @@
       <div class="sidebar-card">
         <div class="sidebar-header orange">📅 デイリーレポート履歴</div>
         <div class="sidebar-body">
+          <div class="report-item">
+            <div>
+              <div class="report-date">2026年8月22日（07:04）</div>
+              <div class="report-count">新規2件（PubMed論文2件：血小板/リンパ球比とBAE後喀血再発〈Medicine Q2〉・NTHi比較ゲノム解析〈Frontiers Q1〉。J-STAGE/CiNii/臨床試験3ソースは新規なし）</div>
+            </div>
+            <span class="report-link" onclick="showSection('reports',document.querySelectorAll('nav a')[3])">▶ 開く</span>
+          </div>
           <div class="report-item">
             <div>
               <div class="report-date">2026年8月21日（07:04）</div>
@@ -1546,6 +1553,29 @@
   <div class="reports-page-header">
     <h2>📝 デイリーレポート アーカイブ</h2>
     <p>毎朝8時に自動生成される文献サマリーの履歴。既読除外機能により、常に新規情報のみを収録しています。</p>
+  </div>
+
+  <!-- Report 2026-08-22 07:04 -->
+  <div class="report-card">
+    <div class="report-card-header">
+      <div>
+        <div class="report-card-date">📅 2026年8月22日（07:04 自動生成）</div>
+        <div style="font-size:12px;color:var(--text-muted);margin-top:3px;">PubMed 10クエリ（過去30日、mindate=2026/07/23〜maxdate=2026/08/22、ユニークPMID 92件走査）・J-STAGE（2026年、1件走査、既報のため新規なし）・CiNii（2026年、26件走査、KAKEN科研費含む、新規なし）・臨床試験3ソース（ClinicalTrials.gov RECRUITING 30試験・JRCT 239試験中関連20試験・CTIS 22試験、いずれも既読）を確認。未読PMID5件のうち2件を新規採用。残り3件は対象外と判断（CT鑑別診断論文で気管支拡張症はSPS/PEの多数リスク因子の一つとしての言及に留まる、AATDスクリーニングスコアの構成因子の一つとしての言及に留まる、post-TB肺癌サーベイランス総説でPTLDの一所見としての言及に留まる）。いずれもseen_pmidsへ追記し再発防止。臨床試験は3ソースとも新規なし。</div>
+      </div>
+      <span class="report-card-count">新規 2件・臨床試験 0件</span>
+    </div>
+    <ul class="report-highlight-list">
+      <li>
+        <span class="report-num">1</span>
+        <span class="report-cat-inline" style="background:#fee2e2;color:#b91c1c">増悪・病態</span>
+        <span>気管支拡張症関連喀血に対する気管支動脈塞栓術(BAE)施行127例の後ろ向き研究で、血小板/リンパ球比(PLR)高値が喀血再発と有意に関連（カットオフ123.3超でハザード比2.91、95%CI 1.61-5.29）。LASSO・Boruta・ランダムフォレストの3手法で一貫して上位予測因子となり、1・3・5年時点でAUC 0.678〜0.776の予後モデルを構築（Medicine (Baltimore) Q2・IF1.4）。<a href="https://pubmed.ncbi.nlm.nih.gov/42629716/" target="_blank" style="color:var(--primary)">PubMed</a></span>
+      </li>
+      <li>
+        <span class="report-num">2</span>
+        <span class="report-cat-inline" style="background:#dcfce7;color:#166534">マイクロバイオーム・感染</span>
+        <span>気管支拡張症・市中肺炎・COPD由来の非莢膜型インフルエンザ菌(NTHi)分離株27株の全ゲノム・パンゲノム解析。MLST・コアゲノム系統解析では疾患特異的なクラスタリングは認められず、pan-GWASでも多重検定補正後に統計的に有意な副次ゲノム遺伝子は同定されなかった（Frontiers in Cellular and Infection Microbiology Q1）。<a href="https://pubmed.ncbi.nlm.nih.gov/42630188/" target="_blank" style="color:var(--primary)">PubMed</a></span>
+      </li>
+    </ul>
   </div>
 
   <!-- Report 2026-08-21 07:04 -->
