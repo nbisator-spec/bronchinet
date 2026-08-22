@@ -497,9 +497,9 @@
     <div class="dashboard-header">
       <div class="dashboard-title">
         🔥 本日のハイライト
-        <span class="dashboard-badge">NEW 2件</span>
+        <span class="dashboard-badge">NEW 0件</span>
       </div>
-      <div class="dashboard-date">最終更新：2026-08-22 07:04 自動生成</div>
+      <div class="dashboard-date">最終更新：2026-08-23 07:04 自動生成</div>
     </div>
     <div class="dashboard-grid" id="dashboardGrid"></div>
   </div>
@@ -664,6 +664,13 @@
       <div class="sidebar-card">
         <div class="sidebar-header orange">📅 デイリーレポート履歴</div>
         <div class="sidebar-body">
+          <div class="report-item">
+            <div>
+              <div class="report-date">2026年8月23日（07:04）</div>
+              <div class="report-count">新規0件（PubMed 94件・J-STAGE 16件・CiNii 120件・ClinicalTrials.gov 85件・JRCT 20件・CTIS 22件を確認、全て既読済み。PubMed境界症例1件〈PCDマクロライドSR〉とCiNii商業誌総説断片29件は非採用と判断）</div>
+            </div>
+            <span class="report-link" onclick="showSection('reports',document.querySelectorAll('nav a')[3])">▶ 開く</span>
+          </div>
           <div class="report-item">
             <div>
               <div class="report-date">2026年8月22日（07:04）</div>
@@ -1553,6 +1560,17 @@
   <div class="reports-page-header">
     <h2>📝 デイリーレポート アーカイブ</h2>
     <p>毎朝8時に自動生成される文献サマリーの履歴。既読除外機能により、常に新規情報のみを収録しています。</p>
+  </div>
+
+  <!-- Report 2026-08-23 07:04 -->
+  <div class="report-card">
+    <div class="report-card-header">
+      <div>
+        <div class="report-card-date">📅 2026年8月23日（07:04 自動生成）</div>
+        <div style="font-size:12px;color:var(--text-muted);margin-top:3px;">PubMed 10クエリ（過去30日、mindate=2026/07/24〜maxdate=2026/08/23、ユニークPMID 94件走査、Query8はページング取得〈計89件〉）・J-STAGE（2024年、16件走査、既報のため新規なし）・CiNii（2024年、120件走査、KAKEN科研費・業界紙含む、新規なし）・臨床試験3ソース（ClinicalTrials.gov RECRUITING 85試験・JRCT 239試験中関連20試験・CTIS 22試験、いずれも既読）を確認。未読PMID1件（PCDに対するマクロライド療法の系統的レビュー、Medicine (Baltimore)）は、Query8〈bronchiectasis[tiab]〉に一致したが本文・抄録に"bronchiectasis"の語がなく引用文献中のみの言及のため対象外と判断（seen_pmidsへ追記し再発防止）。CiNiiで未読29件を検出したが、KAKEN科研費・ミクス業界紙以外の商業誌総説断片・症例報告（呼吸器ジャーナル特集19件、麻酔症例、medicina特集等）はノイズ対策方針により非採用（seen_cinii_idsへ追記し再発防止）。全ソースで新規アイテムなし。</div>
+      </div>
+      <span class="report-card-count">新規 0件・臨床試験 0件</span>
+    </div>
   </div>
 
   <!-- Report 2026-08-22 07:04 -->

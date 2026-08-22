@@ -2,7 +2,7 @@
  {
   "id": 553,
   "cat": "増悪・病態",
-  "isNew": true,
+  "isNew": false,
   "titleJa": "気管支拡張症患者における気管支動脈塞栓術後の喀血再発予測における血小板・リンパ球比の予後的価値",
   "titleEn": "Prognostic value of the platelet-to-lymphocyte ratio for recurrent hemoptysis following bronchial artery embolization in patients with bronchiectasis.",
   "journal": "Medicine (Baltimore)",
@@ -20,7 +20,7 @@
  {
   "id": 552,
   "cat": "マイクロバイオーム・感染",
-  "isNew": true,
+  "isNew": false,
   "titleJa": "気管支拡張症・市中肺炎・COPD由来の非莢膜型インフルエンザ菌(NTHi)分離株間のゲノム差異を明らかにする全ゲノム・パンゲノム解析",
   "titleEn": "Whole-genome and pan-genome analyses reveal genomic differences among nontypeable Haemophilus influenzae isolates from bronchiectasis, community-acquired pneumonia, and chronic obstructive pulmonary disease.",
   "journal": "Frontiers in Cellular and Infection Microbiology",
