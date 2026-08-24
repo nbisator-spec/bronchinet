@@ -1,8 +1,26 @@
 [
  {
+  "id": 556,
+  "cat": "増悪・病態",
+  "isNew": true,
+  "titleJa": "カナダ・アルバータ州における気管支拡張症の疫学とアウトカム：15年間の人口ベース研究",
+  "titleEn": "Epidemiology and Outcomes of Bronchiectasis in Alberta, Canada: A 15-Year Population-Based Study.",
+  "journal": "Annals of the American Thoracic Society",
+  "sjr": "Q1",
+  "if": "5.4",
+  "date": "2026-08-24",
+  "year": 2026,
+  "ev": "観察研究",
+  "authors": "Somayaji R, Black JE, Whitten TA ほか",
+  "aui": "Somayaji Black Whitten Gutierrez Burke-Gaffney Cooper Jarand Leigh Smith Thornton",
+  "summary": "カナダ・アルバータ州の行政データを用いた15年間(2010〜2025年)のレトロスペクティブコホート研究で成人気管支拡張症12,169例を同定したところ、有病率は2010年から2024年にかけて2倍以上(10万人当たり311.6)に増加した一方、年間罹患率(10万人当たり25.1)はほぼ横ばいであった。COPD合併例(27%)は死亡率55%・入院率0.62回/人年と最も予後不良で生涯医療費も平均約8.8万カナダドルと最も高額であり、喘息合併例(13%)は増悪頻度は高い(44%)ものの死亡率は低かった(16%)。",
+  "pmid": "42635536",
+  "url": "https://pubmed.ncbi.nlm.nih.gov/42635536/"
+ },
+ {
   "id": 555,
   "cat": "ガイドライン・総説",
-  "isNew": true,
+  "isNew": false,
   "titleJa": "原発性線毛機能不全症(PCD)：有病率と診断に関する最新知見",
   "titleEn": "Primary Ciliary Dyskinesia: Recent Updates in Its Prevalence and Diagnosis.",
   "journal": "Respiratory Care",
@@ -21,7 +39,7 @@
  {
   "id": 554,
   "cat": "マイクロバイオーム・感染",
-  "isNew": true,
+  "isNew": false,
   "titleJa": "慢性肺疾患における腸内細菌叢-免疫相互作用：疾患横断的視点から見た腸-肺軸(gut-lung axis)の新知見",
   "titleEn": "Gut Microbiota-Immune Interactions in Chronic Lung Diseases: An Emerging Cross-Disease Perspective Gut-Lung Axis in Chronic Lung Disease.",
   "journal": "Journal of Inflammation Research",
