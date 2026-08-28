@@ -2,7 +2,7 @@
  {
   "id": 574,
   "cat": "増悪・病態",
-  "isNew": true,
+  "isNew": false,
   "titleJa": "気管支拡張症における気管支洗浄液中の好中球エラスターゼ活性と1年後の転帰：多施設前向きコホート研究",
   "titleEn": "Neutrophil elastase activity in bronchial lavage fluid and the one-year follow-up outcomes in bronchiectasis patients: A multicenter prospective cohort study.",
   "journal": "Therapeutic Advances in Respiratory Disease",
@@ -20,7 +20,7 @@
  {
   "id": 573,
   "cat": "マイクロバイオーム・感染",
-  "isNew": true,
+  "isNew": false,
   "titleJa": "アレルギー性気管支肺アスペルギルス症の治療反応モニタリングと増悪検出における組換えAspergillus fumigatus特異的IgE",
   "titleEn": "Recombinant Aspergillus fumigatus-specific IgE for monitoring treatment response and detecting exacerbations in allergic bronchopulmonary aspergillosis.",
   "journal": "The Journal of Allergy and Clinical Immunology. In Practice",
@@ -39,7 +39,7 @@
  {
   "id": 572,
   "cat": "ガイドライン・総説",
-  "isNew": true,
+  "isNew": false,
   "titleJa": "嚢胞性線維症患者におけるMRSA除菌のための介入（Cochraneレビュー・2026年更新版）",
   "titleEn": "Interventions for the eradication of meticillin-resistant Staphylococcus aureus (MRSA) in people with cystic fibrosis.",
   "journal": "Cochrane Database of Systematic Reviews",
@@ -56,7 +56,7 @@
  {
   "id": 571,
   "cat": "マイクロバイオーム・感染",
-  "isNew": true,
+  "isNew": false,
   "titleJa": "オーストラリア先住民の成人気管支拡張症における喀痰の抗菌薬感受性パターンと臨床転帰",
   "titleEn": "Sputum antimicrobial susceptibility patterns and clinical outcomes among adult Aboriginal Australians with bronchiectasis.",
   "journal": "Therapeutic Advances in Respiratory Disease",
@@ -73,7 +73,7 @@
  {
   "id": 570,
   "cat": "増悪・病態",
-  "isNew": true,
+  "isNew": false,
   "titleJa": "肺気腫と気管支拡張症における閉塞性睡眠時無呼吸リスクの比較：傾向スコアマッチングコホート研究",
   "titleEn": "Risk of Obstructive Sleep Apnea in Patients with Emphysema Versus Bronchiectasis: A Propensity Score-Matched Cohort Study.",
   "journal": "Healthcare (Basel)",
@@ -90,7 +90,7 @@
  {
   "id": 569,
   "cat": "精密医療・エンドタイプ",
-  "isNew": true,
+  "isNew": false,
   "titleJa": "統合気道疾患仮説の遺伝的エビデンス：主要気道疾患に共通する上皮・免疫アーキテクチャ",
   "titleEn": "Genetic Evidence for Unified Airway Disease: Shared Epithelial and Immune Architecture Across Major Airway Diseases.",
   "journal": "International Journal of Molecular Sciences",
@@ -107,7 +107,7 @@
  {
   "id": 568,
   "cat": "増悪・病態",
-  "isNew": true,
+  "isNew": false,
   "titleJa": "気管支拡張症QOL質問票(QoL-B)イタリア語版の検証",
   "titleEn": "Validation of the Italian version of Bronchiectasis Quality of Life Questionnaire.",
   "journal": "Therapeutic Advances in Respiratory Disease",
@@ -124,7 +124,7 @@
  {
   "id": 567,
   "cat": "マイクロバイオーム・感染",
-  "isNew": true,
+  "isNew": false,
   "titleJa": "マウスの肺胞および気道内Mycobacterium abscessus感染の制御における肺常在マクロファージの異なる役割",
   "titleEn": "Differential roles of resident lung macrophages during control of murine alveolar and airway Mycobacterium abscessus infection.",
   "journal": "Frontiers in Tuberculosis",
@@ -140,7 +140,7 @@
  {
   "id": 566,
   "cat": "マイクロバイオーム・感染",
-  "isNew": true,
+  "isNew": false,
   "titleJa": "非結核性抗酸菌と気管支拡張症の双方向的病態：南アジアからの臨床的知見・診断上の課題・今後の方向性",
   "titleEn": "Bidirectional pathogenesis between non-tuberculous mycobacteria and bronchiectasis: clinical insights, diagnostic challenges and future directions-Perspectives from South Asia.",
   "journal": "Frontiers in Tuberculosis",
@@ -157,7 +157,7 @@
  {
   "id": 565,
   "cat": "増悪・病態",
-  "isNew": true,
+  "isNew": false,
   "titleJa": "気管支拡張症における好中球リンパ球比と疾患重症度との関連：単施設後方視的研究",
   "titleEn": "Neutrophil-to-Lymphocyte Ratio in Bronchiectasis and Its Association With Disease Severity-A Single-Center Retrospective Study.",
   "journal": "Pulmonary Medicine",
@@ -174,7 +174,7 @@
  {
   "id": 564,
   "cat": "増悪・病態",
-  "isNew": true,
+  "isNew": false,
   "titleJa": "中国人の非嚢胞性線維症性気管支拡張症患者における気管支拡張症健康質問票(BHQ)の検証",
   "titleEn": "Validation of Bronchiectasis Health Questionnaire (BHQ) in Chinese Patients With Noncystic Fibrosis Bronchiectasis.",
   "journal": "Canadian Respiratory Journal",
@@ -191,7 +191,7 @@
  {
   "id": 563,
   "cat": "増悪・病態",
-  "isNew": true,
+  "isNew": false,
   "titleJa": "原発性線毛機能不全症における肺・耳科的症状とQOLへの影響の評価",
   "titleEn": "Evaluation of Pulmonary and Otological Manifestations in Primary Ciliary Dyskinesia and Their Effect on Quality of Life.",
   "journal": "Pediatric Pulmonology",
