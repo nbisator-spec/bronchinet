@@ -2,7 +2,7 @@
  {
   "id": 578,
   "cat": "治療・薬剤",
-  "isNew": true,
+  "isNew": false,
   "titleJa": "非嚢胞性線維症性気管支拡張症における肺炎症の軽減と黄色ブドウ球菌増殖抑制を目的としたLactiplantibacillus plantarum吸入粉末",
   "titleEn": "Lpb. plantarum inhalation powders for the reduction of lung inflammation and S. aureus growth control in non-CF bronchiectasis.",
   "journal": "Expert Opinion on Drug Delivery",
@@ -19,7 +19,7 @@
  {
   "id": 577,
   "cat": "増悪・病態",
-  "isNew": true,
+  "isNew": false,
   "titleJa": "多型HPV感染による広範な皮膚疣贅を呈したLIG4症候群の1例",
   "titleEn": "LIG4 Syndrome Presenting with Extensive Cutaneous Viral Warts Caused by Multi-Type HPV Infection.",
   "journal": "Genes",
