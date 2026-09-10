@@ -298,6 +298,44 @@
   .tbar-val { width:30px; flex-shrink:0; font-weight:700; color:var(--text-muted); font-size:10.5px; }
   .trends-note { font-size:11px; color:var(--text-muted); margin-top:16px; line-height:1.6; }
   @media (max-width:600px){ .trends-grid{ grid-template-columns:1fr; } .tbar-label{ width:78px; } }
+
+  /* ── RANKING PAGE ── */
+  .ranking-page { padding:20px 0 40px; }
+  .ranking-page-header { background:linear-gradient(135deg,#4c1d95,#7e22ce); color:#fff; border-radius:12px; padding:24px; margin-bottom:20px; }
+  .ranking-page-header h2 { font-size:20px; font-weight:800; margin-bottom:6px; }
+  .ranking-page-header p { color:#e9d5ff; font-size:13px; line-height:1.6; }
+  .ranking-controls { background:var(--card-bg); border:1px solid var(--border); border-radius:10px; padding:14px 16px; margin-bottom:16px; }
+  .ranking-controls .cat-chips { display:flex; flex-wrap:wrap; gap:7px; }
+  .ranking-sortbar { display:flex; align-items:center; gap:10px; flex-wrap:wrap; margin-top:12px; padding-top:12px; border-top:1px solid var(--border); }
+  .ranking-sort-label { font-size:11.5px; font-weight:700; color:var(--text-muted); }
+  .sort-btn { padding:5px 13px; border-radius:20px; font-size:12px; font-weight:600; cursor:pointer; border:2px solid var(--border); background:var(--bg); color:var(--text-muted); transition:all .2s; }
+  .sort-btn.active { background:#6d28d9; border-color:#6d28d9; color:#fff; }
+  .ranking-count { margin-left:auto; font-size:11.5px; color:var(--text-muted); }
+  .rank-row { display:flex; align-items:flex-start; gap:14px; padding:13px 14px; border-bottom:1px solid var(--border); cursor:pointer; transition:background .15s; }
+  .rank-row:hover { background:var(--primary-light); }
+  .rank-row:last-child { border-bottom:none; }
+  .rank-row-num { font-size:20px; font-weight:900; color:var(--border); min-width:34px; text-align:right; line-height:1.3; flex-shrink:0; }
+  .rank-row-num.top3 { color:#6d28d9; }
+  .rank-row-main { flex:1; min-width:0; }
+  .rank-row-title { font-size:13.5px; font-weight:600; color:var(--text); line-height:1.5; margin-bottom:5px; }
+  .rank-row-meta { display:flex; align-items:center; gap:7px; flex-wrap:wrap; font-size:11px; color:var(--text-muted); }
+  .rank-row-cite { flex-shrink:0; text-align:right; min-width:88px; }
+  .rank-cite-big { font-size:19px; font-weight:900; color:#6d28d9; line-height:1.1; }
+  .rank-cite-unit { font-size:10px; color:var(--text-muted); font-weight:600; }
+  .rank-cite-sub { font-size:10.5px; color:var(--text-muted); margin-top:3px; }
+  .ranking-list-wrap { background:var(--card-bg); border:1px solid var(--border); border-radius:10px; overflow:hidden; }
+  .ranking-empty { text-align:center; padding:40px 20px; color:var(--text-muted); font-size:13px; line-height:1.7; }
+  .sidebar-header.clickable { cursor:pointer; justify-content:space-between; }
+  .sidebar-header.clickable:hover { filter:brightness(1.15); }
+  .sidebar-header-more { font-size:10.5px; font-weight:600; opacity:.9; }
+  @media (max-width:600px){
+    .ranking-page-header { padding:18px 16px; }
+    .rank-row { gap:9px; padding:12px 10px; }
+    .rank-row-num { font-size:16px; min-width:24px; }
+    .rank-row-cite { min-width:64px; }
+    .rank-cite-big { font-size:16px; }
+    .ranking-count { margin-left:0; width:100%; }
+  }
   .card-date { font-size: 11px; color: var(--text-muted); }
   .card-link { font-size: 11px; color: var(--primary); text-decoration: none; display: flex; align-items: center; gap: 3px; }
   .card-link:hover { text-decoration: underline; }
@@ -483,6 +521,7 @@
     <a onclick="showSection('resources',this)">🔗 リソース</a>
     <a onclick="showSection('reports',this)">📝 デイリーレポート</a>
     <a onclick="showSection('trends',this)">📊 トレンド</a>
+    <a onclick="showSection('ranking',this)">🏆 引用ランキング</a>
   </nav>
 </header>
 
@@ -527,7 +566,7 @@
         <div class="stat-label">本日の新規論文</div>
       </div>
     </div>
-    <div class="stat-card" onclick="showSection('reports',document.querySelectorAll('nav a')[3])">
+    <div class="stat-card" onclick="showSection('reports',document.querySelectorAll('nav a')[6])">
       <div class="stat-icon" style="background:#ede9fe">📋</div>
       <div>
         <div class="stat-num" id="totalReports">—</div>
@@ -656,7 +695,10 @@
 
       <!-- RANKING -->
       <div class="sidebar-card">
-        <div class="sidebar-header purple">🏆 引用数ランキング</div>
+        <div class="sidebar-header purple clickable" onclick="gotoRanking()" title="引用数ランキングの全件ページを開く">
+          <span>🏆 引用数ランキング</span>
+          <span class="sidebar-header-more">全件を見る ▶</span>
+        </div>
         <div class="sidebar-body" id="rankingList"></div>
       </div>
 
@@ -669,749 +711,749 @@
               <div class="report-date">2026年9月10日（07:04）</div>
               <div class="report-count">新規3件（PubMed論文3件）。臨床試験の新規なし。PubMed：①非嚢胞性線維症性気管支拡張症の成人・青年におけるブレンソカチブの母集団薬物動態解析＝11試験・患者807例＋健康被験者291例の11,643点の濃度データを統合、肝機能障害・性別・人種・強いCYP3A/P-gp調節薬併用が有意共変量だが臨床的に重要なものはなく、成人・青年ともに10mg/25mgの用量設定を支持〈CPT: Pharmacometrics & Systems Pharmacology・SJR Q1・原著・💊DPP-1〉／②気管支拡張症における逆流（総説）＝逆流は高頻度で症状・QOL悪化、増悪・死亡率上昇と関連するがデータはほぼ観察研究で因果不明、典型的GERD／非酸・近位逆流／咽喉頭症状／嚥下障害／誤嚥の表現型に分けて評価し酸抑制単独では不十分〈Current Opinion in Pulmonary Medicine・SJR Q2・総説〉／③胸部X線量に近づく超低線量胸部フォトンカウンティングCT＝小児24例で実効線量14µSvを達成し全例診断可能だが、間質性肺疾患・気管支拡張症の除外にはやや高線量が望まれ既知病変の経過観察に有用〈European Radiology Experimental・SJR Q1・原著〉。PubMed 10クエリでユニークPMID 94件走査（Query8はretstartページングで94件全件確認）、重複排除後3件を採用。J-STAGE（2025年〜13件）はいずれも既報。CiNiiは呼吸器ジャーナル特集「気管支拡張症の新時代が来た!」の総説断片34件を検出したが商業誌総説のため方針どおり非採用（KAKEN科研費・業界紙の新規なし）。ClinicalTrials.gov RECRUITING 40試験／CTIS 22試験／JRCT関連20試験／Cochrane 1件はいずれも新規なし。※PubMed MCP不通のためE-utilities直叩きで代替</div>
             </div>
-            <span class="report-link" onclick="showSection('reports',document.querySelectorAll('nav a')[3])">▶ 開く</span>
+            <span class="report-link" onclick="showSection('reports',document.querySelectorAll('nav a')[6])">▶ 開く</span>
           </div>
           <div class="report-item">
             <div>
               <div class="report-date">2026年9月9日（07:04）</div>
               <div class="report-count">新規5件（PubMed論文5件）。臨床試験の新規なし。PubMed：①重症好酸球性喘息における粘液栓へのメポリズマブの有効性＝HRCT粘液栓47例をBE合併の有無で層別化、粘液栓スコアは両群で有意低下、FEV1改善はSEA+BE群でのみ有意、ベースラインBSIが粘液栓・増悪と正相関〈ERJ Open Research・SJR Q1・IF 4.0・観察研究〉／②気管支拡張症の心血管リスク評価＝カナダBE/NTMレジストリで3人に1人が10年心血管リスク中等度〜高度、診療パスへの組込を提言〈ERJ Open Research・SJR Q1・IF 4.0・観察研究〉／③MAC肺疾患でのQOL-B呼吸器症状スコアの妥当性検証＝ARISE/ENCORE第III相データ362例、信頼性・妥当性良好、MWPC閾値約16.7点〈Patient Related Outcome Measures・原著〉／④気管支拡張症増悪の血清アルブミン・NLR・PLR＝インド単施設、アルブミンとNLRが重症度と相関、治療後改善〈Bioinformation・観察研究〉／⑤喀血センター整備の中国専門家推奨＝気管支拡張症は喀血の主要原因、気管支動脈塞栓術体制構築を提言〈Chinese J Tuberc Respir Dis・SJR Q3・ガイドライン〉。PubMed 10クエリでユニークPMID 102件走査、重複排除後5件を採用。J-STAGE／CiNii（KAKEN・業界紙含む）はいずれも既報。ClinicalTrials.gov RECRUITING／CTIS 22試験／JRCT関連20試験／Cochrane 1件はいずれも新規なし。※PubMed MCP不通のためE-utilities直叩きで代替</div>
             </div>
-            <span class="report-link" onclick="showSection('reports',document.querySelectorAll('nav a')[3])">▶ 開く</span>
+            <span class="report-link" onclick="showSection('reports',document.querySelectorAll('nav a')[6])">▶ 開く</span>
           </div>
           <div class="report-item">
             <div>
               <div class="report-date">2026年9月8日（07:04）</div>
               <div class="report-count">新規2件（PubMed論文2件、いずれもPCD＝原発性線毛機能不全症）。臨床試験の新規なし。PubMed：①原発性線毛機能不全症における慢性気道感染の臨床アウトカム＝PCD 32例の単施設後ろ向きコホートで、慢性緑膿菌感染は肺増悪率の有意な上昇（率比5.03）と関連する一方、ppFEV1低下と関連したのは慢性Aspergillus fumigatus感染のみ〈Pediatric Pulmonology・SJR Q1・IF 2.3・観察研究〉／②原発性線毛機能不全症における肺増悪（総説）＝増悪は乳児期を含む全年齢で高頻度、20〜25%は肺機能が回復せず、BESTCILIA試験で維持アジスロマイシンが増悪頻度を55%減少、DPP-1阻害薬など抗炎症療法がパイプラインに〈European Journal of Pediatrics・SJR Q1・IF 2.6・総説〉。PubMed 10クエリでユニークPMID 93件走査、重複排除後2件を採用。J-STAGE 13件／CiNii 80件はいずれも既報（CiNiiのKAKEN・業界紙の新規なし）。ClinicalTrials.gov RECRUITING 86試験／CTIS 22試験／JRCT関連20試験／Cochrane 1件はいずれも新規なし。※PubMed MCP不通のためE-utilities直叩きで代替</div>
             </div>
-            <span class="report-link" onclick="showSection('reports',document.querySelectorAll('nav a')[3])">▶ 開く</span>
+            <span class="report-link" onclick="showSection('reports',document.querySelectorAll('nav a')[6])">▶ 開く</span>
           </div>
           <div class="report-item">
             <div>
               <div class="report-date">2026年9月7日（07:04）</div>
               <div class="report-count">新規2件（PubMed論文2件）。臨床試験の新規なし。PubMed：①網膜色素変性症に合併した原発性気管支拡張症と慢性副鼻腔疾患の症例報告＝RP＋気管支拡張＋慢性副鼻腔炎の併存は原発性線毛機能不全症（PCD）など共通の線毛関連病態を示唆する手がかりとなる〈CHEST Pulmonary・SJR Q1・症例報告〉／②英国の連結電子健康記録を用いた対応コホート研究（がん罹患者789,254人を非罹患者と1:10マッチ、1999-2019年）＝食道がん・肺がん・血液がんのサバイバーで新規気管支拡張症の発症リスクが上昇、既存呼吸器疾患の増悪も複数がん種で増加〈EClinicalMedicine・SJR Q1・観察研究〉。PubMed 10クエリでユニークPMID 92件走査、重複排除後2件を採用。J-STAGE 13件／CiNii 80件はいずれも既報。ClinicalTrials.gov RECRUITING 86試験／CTIS 22試験／JRCT関連20試験はいずれも新規なし。※PubMed MCP不通のためE-utilities直叩きで代替</div>
             </div>
-            <span class="report-link" onclick="showSection('reports',document.querySelectorAll('nav a')[3])">▶ 開く</span>
+            <span class="report-link" onclick="showSection('reports',document.querySelectorAll('nav a')[6])">▶ 開く</span>
           </div>
           <div class="report-item">
             <div>
               <div class="report-date">2026年9月6日（07:04）</div>
               <div class="report-count">新規3件（PubMed論文3件、いずれも総説・観察研究）。臨床試験の新規なし。PubMed：①結核後肺疾患（PTLD）の臨床スペクトラム・管理・生涯影響のナラティブレビュー＝線維化・空洞・気管支拡張・気流閉塞・肺高血圧など多彩、結核生存者の約60%でスパイロメトリー異常、呼吸リハが機能改善〈Cold Spring Harbor Perspectives in Medicine・SJR Q1・総説〉／②中国の後ろ向き研究500例＝栄養・炎症複合スコア（NICS）でNTM肺疾患とMDR肺結核を鑑別、NICS組込モデルAUC 0.66だが感度35%と限定的（気管支拡張症を共変量に含む）〈Journal of Global Antimicrobial Resistance・SJR Q2・観察研究〉／③びまん性嚢胞性肺疾患のHRCT鑑別総説＝嚢胞状気管支拡張を含む嚢胞類似所見との識別、パターン認識アプローチ〈Seminars in Respiratory and Critical Care Medicine・SJR Q1・総説〉。PubMed 10クエリでユニークPMID 87件走査、重複排除後3件を採用（別1件はerratum のため除外）。J-STAGE 13件／CiNii 62件はいずれも既報。ClinicalTrials.gov RECRUITING／CTIS 22試験／JRCT関連20試験／Cochrane 1件はいずれも新規なし。※PubMed MCP不通のためE-utilities直叩きで代替</div>
             </div>
-            <span class="report-link" onclick="showSection('reports',document.querySelectorAll('nav a')[3])">▶ 開く</span>
+            <span class="report-link" onclick="showSection('reports',document.querySelectorAll('nav a')[6])">▶ 開く</span>
           </div>
           <div class="report-item">
             <div>
               <div class="report-date">2026年9月5日（07:04）</div>
               <div class="report-count">新規2件（PubMed論文2件、臨床試験1件）。PubMed：本ポータル既収録のRECOVER試験（CF・ETI 2年投与）のCT上の気管支拡張可逆性評価法（PRAGMA-CF vs 気管支動脈径比ペア法）をめぐるDournesの書簡とMcNally/Caudri/Tiddensらの回答〈Ann Am Thorac Soc・SJR Q1・IF 5.4・社説論説〉。臨床試験：トルコの気管支拡張症患者への高強度インターバル運動療法（HIIT）試験〈NCT07805174・RECRUITING〉。PubMed 10クエリでユニークPMID 89件走査、重複排除後2件を採用。J-STAGE 1件／CiNii 27件／ClinicalTrials.gov RECRUITING 86試験中1件新規／CTIS 22試験はいずれも既報。JRCTは本日接続タイムアウトのため検索不可（次回再試行）。※PubMed MCP不通のためE-utilities直叩きで代替</div>
             </div>
-            <span class="report-link" onclick="showSection('reports',document.querySelectorAll('nav a')[3])">▶ 開く</span>
+            <span class="report-link" onclick="showSection('reports',document.querySelectorAll('nav a')[6])">▶ 開く</span>
           </div>
           <div class="report-item">
             <div>
               <div class="report-date">2026年9月4日（07:04）</div>
               <div class="report-count">新規6件（PubMed論文6件、うちハイライト3件）。ハイライト：成人気管支拡張症の病因をめぐる世界的パズル＝国際・各国レジストリで病因の地域差を概観、治療可能な病因の全例除外検索を強調〈Martínez-García/Aksamit/朝倉崇徳ら・Archivos de Bronconeumología・SJR Q2・IF 9.2・総説〉／菌種同定した肺MAC症成人105例の前向きコホート（2021-2026、米バージニア州）＝M. intracellulare最多・67%が結節気管支拡張型・NTM-NET基準の治癒は22例中2例のみ、高齢と線維空洞型が進行と関連、菌種ベースの3表現型を同定〈Ann Am Thorac Soc・SJR Q1・IF 5.4・観察研究〉／南アジアコホート55例での身体活動量・性差・機能的運動能力＝呼吸困難重症度と画像重症度が6MWDを独立予測、女性は絶対歩行距離が短いが自己申告活動量は高い〈PLoS One・SJR Q1・IF 2.6・観察研究〉。その他：COPD+気管支拡張症の高齢者に生じた肺ノカルジア症＋アスペルギルス症合併疑いの症例〈Diagn Microbiol Infect Dis・SJR Q2・症例報告〉／結核後の免疫・構造的肺リモデリングが発癌を駆動するという総説〈Front Immunol・SJR Q1・IF 5.9・総説〉／20年間の小児気道異物254例＝気管支鏡遅延で気管支拡張・線維化が生じる〈Med Sci Monit・SJR Q2・観察研究〉。PubMed 10クエリでユニークPMID 89件走査、重複排除後6件を採用。J-STAGE 13件／CiNii 61件／ClinicalTrials.gov RECRUITING／JRCT 242試験中関連20試験／CTIS 22試験／Cochrane 1件はいずれも新規なし。※PubMed MCP不通のためE-utilities直叩きで代替</div>
             </div>
-            <span class="report-link" onclick="showSection('reports',document.querySelectorAll('nav a')[3])">▶ 開く</span>
+            <span class="report-link" onclick="showSection('reports',document.querySelectorAll('nav a')[6])">▶ 開く</span>
           </div>
           <div class="report-item">
             <div>
               <div class="report-date">2026年9月3日（07:04）</div>
               <div class="report-count">新規：PubMed論文2件＋臨床試験2件。PubMed論文：気管支拡張症診療における気管支鏡検査の臨床的インパクト＝検体採取を超え半数超の症例で管理に影響、微生物学的評価と炎症エンドタイピングの両立を提唱〈ミラノ・フマニタス大学 Aliberti/Chalmersら・ERJ Open Research・SJR Q1・IF 4.0・社説論説〉／気管支拡張症におけるBALの価値＝閉塞・病原体検出に加え炎症フェノタイピングとリスク層別化に寄与、結核流行地では活動性結核除外が重要〈ホーチミン市医科薬科大学・ERJ Open Research・SJR Q1・IF 4.0・社説論説〉。臨床試験：Chiesiの DPP-1（カテプシンC）阻害薬 CHF10196／florensocatib（Haisco導出の HSK31858）第III相（NCT07577804・NOT_YET_RECRUITING・12〜85歳・最長78週＋OLE・2026年11月開始予定）／Vast Therapeutics の吸入NO放出プロドラッグ ALX1 第2a相用量設定（NOT_YET_RECRUITING・2026年9月開始予定）。PubMed 10クエリでユニークPMID 100件走査、重複排除後2件を採用。J-STAGE 13件／CiNii 39件／ClinicalTrials.gov RECRUITING 50試験／JRCT 242試験中関連20試験／CTIS 22試験／Cochrane 1件はいずれも新規なし。※PubMed MCP不通のためE-utilities直叩きで代替</div>
             </div>
-            <span class="report-link" onclick="showSection('reports',document.querySelectorAll('nav a')[3])">▶ 開く</span>
+            <span class="report-link" onclick="showSection('reports',document.querySelectorAll('nav a')[6])">▶ 開く</span>
           </div>
           <div class="report-item">
             <div>
               <div class="report-date">2026年9月2日（07:04）</div>
               <div class="report-count">新規4件（PubMed論文4件：IPV導入で11年間入院なく機能的自立を維持したSwyer-James-MacLeod症候群の荒蕪肺の日本例〈BMJ Case Reports・SJR Q4・IF 0.4・日本発/症例報告〉・運動誘発脱飽和を伴う気管支拡張症でのIOS末梢気道機能障害とDSPの関連〈Ther Adv Respir Dis・SJR Q1・増悪/病態〉・気管支拡張症の鉄代謝異常とMHC-II選択的低下＝「動員と提示の乖離」を提唱した2データセット統合トランスクリプトーム解析〈J Inflamm Res・SJR Q2・IF 4.1〉・カナダの気管支拡張症データに関する論説〈Ann Am Thorac Soc・SJR Q1・IF 5.4・学会動向〉。PubMed 10クエリでユニークPMID 100件走査、重複排除後9件を精査し5件は主題非該当で非採用〈RA-ILD総説・サルコイドーシス血漿プロテオミクス・喀血へのエンボスフィア±コイル・インド呼吸器疾患季節調査・CRSレター、seen_pmidsへ追記し再掲防止〉。J-STAGE 13件／CiNii 95件／ClinicalTrials.gov RECRUITING 40試験／JRCT 241試験中関連20試験／CTIS 22試験／Cochrane 1件はいずれも新規なし。※PubMed MCP不通のためE-utilities直叩きで代替）</div>
             </div>
-            <span class="report-link" onclick="showSection('reports',document.querySelectorAll('nav a')[3])">▶ 開く</span>
+            <span class="report-link" onclick="showSection('reports',document.querySelectorAll('nav a')[6])">▶ 開く</span>
           </div>
           <div class="report-item">
             <div>
               <div class="report-date">2026年9月1日（07:04）</div>
               <div class="report-count">新規0件（PubMed 10クエリでユニークPMID 79件走査、重複排除後の未読PMIDなし。J-STAGE 13件／CiNii 95件（KAKEN科研費・ミクス業界紙含む）／ClinicalTrials.gov RECRUITING 40試験／JRCT 241試験中関連20試験／CTIS 22試験／Cochrane 1件はいずれも新規なし。前日8/31分のNEWバッジを解除。※PubMed MCP不通のためE-utilities直叩きで代替）</div>
             </div>
-            <span class="report-link" onclick="showSection('reports',document.querySelectorAll('nav a')[3])">▶ 開く</span>
+            <span class="report-link" onclick="showSection('reports',document.querySelectorAll('nav a')[6])">▶ 開く</span>
           </div>
           <div class="report-item">
             <div>
               <div class="report-date">2026年8月31日（07:04）</div>
               <div class="report-count">新規2件（PubMed論文2件：非CF気管支拡張症向けLactiplantibacillus plantarum吸入スプレードライ粉末のin vitro抗炎症＋抗黄色ブドウ球菌の概念実証〈Expert Opin Drug Deliv・SJR Q1・治療/薬剤〉・多型HPV疣贅を呈し気管支拡張症を伴う反復性肺感染＋汎低ガンマグロブリン血症を示したLIG4症候群の1例〈Genes・SJR Q2・症例報告〉。PubMed 10クエリでユニークPMID 123件走査、重複排除後6件を精査し4件は主題非該当で非採用〈seen_pmids記録〉。J-STAGE 13件/CiNii 94件/ClinicalTrials.gov 40試験/JRCT関連20試験/CTIS 22試験/Cochrane 1件はいずれも新規なし。※PubMed MCP不通のためE-utilities直叩きで代替）</div>
             </div>
-            <span class="report-link" onclick="showSection('reports',document.querySelectorAll('nav a')[3])">▶ 開く</span>
+            <span class="report-link" onclick="showSection('reports',document.querySelectorAll('nav a')[6])">▶ 開く</span>
           </div>
           <div class="report-item">
             <div>
               <div class="report-date">2026年8月30日（07:04）</div>
               <div class="report-count">新規2件（PubMed論文2件：大阪・堺市立総合医療センターの高齢者MAC有瘻性膿胸の治療成功例〈Respir Med Case Rep Q3・日本発〉・原発性線毛機能不全症の小児における血清/BAL中HGFと重症度の関連〈Clin Ter Q3〉。重複排除後の未読PMID13件のうち11件は前日8/28レポートで審査済み・非採用の再出現分（気管支拡張症が主題でない症例/総説等、seen_pmidsへ追記し再掲防止）。J-STAGE/CiNii/ClinicalTrials.gov 40試験/JRCT 239試験中関連20試験/CTIS 22試験の6ソースはいずれも新規なし）</div>
             </div>
-            <span class="report-link" onclick="showSection('reports',document.querySelectorAll('nav a')[3])">▶ 開く</span>
+            <span class="report-link" onclick="showSection('reports',document.querySelectorAll('nav a')[6])">▶ 開く</span>
           </div>
           <div class="report-item">
             <div>
               <div class="report-date">2026年8月29日（07:04）</div>
               <div class="report-count">新規0件（PubMed 10クエリでユニークPMID 100件走査、未読2件はいずれも気管支拡張症が主題でなく非採用〈APDS治療コストモデル・天然物総説、再出現防止のためseen-items記録〉。J-STAGE/CiNii/ClinicalTrials.gov 85試験/JRCT 20試験/CTIS 22試験の6ソースすべて新規なし）</div>
             </div>
-            <span class="report-link" onclick="showSection('reports',document.querySelectorAll('nav a')[3])">▶ 開く</span>
+            <span class="report-link" onclick="showSection('reports',document.querySelectorAll('nav a')[6])">▶ 開く</span>
           </div>
           <div class="report-item">
             <div>
               <div class="report-date">2026年8月28日（07:04）</div>
               <div class="report-count">新規12件（PubMed論文12件：BLF中好中球エラスターゼ活性と1年転帰〈Ther Adv Respir Dis Q1〉・ABPAでのrAsp f4-IgEモニタリング〈JACI In Practice Q1・IF8.2〉・MRSA除菌のCochraneレビュー更新〈CDSR Q1〉・NTM×気管支拡張症の双方向病態総説ほか。J-STAGE/CiNii/ClinicalTrials.gov/JRCT/CTIS 5ソースは新規なし）</div>
             </div>
-            <span class="report-link" onclick="showSection('reports',document.querySelectorAll('nav a')[3])">▶ 開く</span>
+            <span class="report-link" onclick="showSection('reports',document.querySelectorAll('nav a')[6])">▶ 開く</span>
           </div>
           <div class="report-item">
             <div>
               <div class="report-date">2026年8月27日（07:04）</div>
               <div class="report-count">新規2件（PubMed論文2件：CFTR/SFTPC遺伝子バリアントによるPCD症例〈Case Reports in Medicine Q4〉・結核蔓延地域における肺NTM症2症例〈Reports (MDPI)〉。J-STAGE/CiNii/ClinicalTrials.gov/JRCT/CTIS 5ソースは新規なし）</div>
             </div>
-            <span class="report-link" onclick="showSection('reports',document.querySelectorAll('nav a')[3])">▶ 開く</span>
+            <span class="report-link" onclick="showSection('reports',document.querySelectorAll('nav a')[6])">▶ 開く</span>
           </div>
           <div class="report-item">
             <div>
               <div class="report-date">2026年8月26日（07:04）</div>
               <div class="report-count">新規4件（PubMed論文4件：ベンラリズマブ第3相MAHALE試験〈ERJ Open Research Q1・IF4.0〉・DPP-1阻害薬フロレンソカチブ〈旧HSK31858〉第3相HOPE-BE試験〈同誌〉・関連編集論説〈同誌〉・小児気管支拡張症画像転帰研究〈Respiratory Medicine Q1・IF3.1〉。J-STAGE/ClinicalTrials.gov/JRCT/CTIS 4ソースは新規なし。CiNiiはサイト障害で今回未取得）</div>
             </div>
-            <span class="report-link" onclick="showSection('reports',document.querySelectorAll('nav a')[3])">▶ 開く</span>
+            <span class="report-link" onclick="showSection('reports',document.querySelectorAll('nav a')[6])">▶ 開く</span>
           </div>
           <div class="report-item">
             <div>
               <div class="report-date">2026年8月25日（07:04）</div>
               <div class="report-count">新規1件（PubMed論文1件：カナダ・アルバータ州15年間人口ベース研究〈Ann Am Thorac Soc Q1・IF5.4〉。J-STAGE/CiNii/ClinicalTrials.gov/JRCT/CTIS 5ソースは新規なし）</div>
             </div>
-            <span class="report-link" onclick="showSection('reports',document.querySelectorAll('nav a')[3])">▶ 開く</span>
+            <span class="report-link" onclick="showSection('reports',document.querySelectorAll('nav a')[6])">▶ 開く</span>
           </div>
           <div class="report-item">
             <div>
               <div class="report-date">2026年8月24日（07:04）</div>
               <div class="report-count">新規2件（PubMed論文2件：PCD有病率・診断に関するATS/ERS合同ガイドライン総説〈Respiratory Care Q2〉・4疾患横断の腸-肺軸ナラティブレビュー〈J Inflamm Res Q2〉。J-STAGE/CiNii/ClinicalTrials.gov/JRCT/CTIS 5ソースは新規なし）</div>
             </div>
-            <span class="report-link" onclick="showSection('reports',document.querySelectorAll('nav a')[3])">▶ 開く</span>
+            <span class="report-link" onclick="showSection('reports',document.querySelectorAll('nav a')[6])">▶ 開く</span>
           </div>
           <div class="report-item">
             <div>
               <div class="report-date">2026年8月23日（07:04）</div>
               <div class="report-count">新規0件（PubMed 94件・J-STAGE 16件・CiNii 120件・ClinicalTrials.gov 85件・JRCT 20件・CTIS 22件を確認、全て既読済み。PubMed境界症例1件〈PCDマクロライドSR〉とCiNii商業誌総説断片29件は非採用と判断）</div>
             </div>
-            <span class="report-link" onclick="showSection('reports',document.querySelectorAll('nav a')[3])">▶ 開く</span>
+            <span class="report-link" onclick="showSection('reports',document.querySelectorAll('nav a')[6])">▶ 開く</span>
           </div>
           <div class="report-item">
             <div>
               <div class="report-date">2026年8月22日（07:04）</div>
               <div class="report-count">新規2件（PubMed論文2件：血小板/リンパ球比とBAE後喀血再発〈Medicine Q2〉・NTHi比較ゲノム解析〈Frontiers Q1〉。J-STAGE/CiNii/臨床試験3ソースは新規なし）</div>
             </div>
-            <span class="report-link" onclick="showSection('reports',document.querySelectorAll('nav a')[3])">▶ 開く</span>
+            <span class="report-link" onclick="showSection('reports',document.querySelectorAll('nav a')[6])">▶ 開く</span>
           </div>
           <div class="report-item">
             <div>
               <div class="report-date">2026年8月21日（07:04）</div>
               <div class="report-count">新規1件（ClinicalTrials.gov試験1件：AZD0292第2相・中国展開。PubMed/J-STAGE/CiNii/JRCT/CTISは新規なし）</div>
             </div>
-            <span class="report-link" onclick="showSection('reports',document.querySelectorAll('nav a')[3])">▶ 開く</span>
+            <span class="report-link" onclick="showSection('reports',document.querySelectorAll('nav a')[6])">▶ 開く</span>
           </div>
           <div class="report-item">
             <div>
               <div class="report-date">2026年8月20日（07:04）</div>
               <div class="report-count">新規6件（PubMed論文5件：Lancet Infect Dis「COPDとAspergillus」総説・AJRCCM症例報告ほか、JRCT観察研究1件：北海道大学マルチオミクスコホート）</div>
             </div>
-            <span class="report-link" onclick="showSection('reports',document.querySelectorAll('nav a')[3])">▶ 開く</span>
+            <span class="report-link" onclick="showSection('reports',document.querySelectorAll('nav a')[6])">▶ 開く</span>
           </div>
           <div class="report-item">
             <div>
               <div class="report-date">2026年8月19日（07:04）</div>
               <div class="report-count">新規5件（PubMed論文4件、EU試験〈CTIS〉1件：吸入CMS第I相PK試験）</div>
             </div>
-            <span class="report-link" onclick="showSection('reports',document.querySelectorAll('nav a')[3])">▶ 開く</span>
+            <span class="report-link" onclick="showSection('reports',document.querySelectorAll('nav a')[6])">▶ 開く</span>
           </div>
           <div class="report-item">
             <div>
               <div class="report-date">2026年8月18日（07:04）</div>
               <div class="report-count">新規0件（全ソース既読、新規なし）</div>
             </div>
-            <span class="report-link" onclick="showSection('reports',document.querySelectorAll('nav a')[3])">▶ 開く</span>
+            <span class="report-link" onclick="showSection('reports',document.querySelectorAll('nav a')[6])">▶ 開く</span>
           </div>
           <div class="report-item">
             <div>
               <div class="report-date">2026年8月17日（07:04）</div>
               <div class="report-count">新規2件（PCD理学療法ナラティブレビュー1件、肺感染症218例mNGS対培養比較研究1件）</div>
             </div>
-            <span class="report-link" onclick="showSection('reports',document.querySelectorAll('nav a')[3])">▶ 開く</span>
+            <span class="report-link" onclick="showSection('reports',document.querySelectorAll('nav a')[6])">▶ 開く</span>
           </div>
           <div class="report-item">
             <div>
               <div class="report-date">2026年8月15日（07:04）</div>
               <div class="report-count">新規3件（DPP-1阻害薬florensocatib/トブラマイシン事後解析1件、カルボシステイン前臨床モデル1件、精密診断総説1件）</div>
             </div>
-            <span class="report-link" onclick="showSection('reports',document.querySelectorAll('nav a')[3])">▶ 開く</span>
+            <span class="report-link" onclick="showSection('reports',document.querySelectorAll('nav a')[6])">▶ 開く</span>
           </div>
           <div class="report-item">
             <div>
               <div class="report-date">2026年8月14日（07:04）</div>
               <div class="report-count">新規6件（UKバイオバンク気道疾患重複×心血管リスク1件、慢性肺疾患横断ゲノミクス1件、先住民小児呼吸器アウトカム1件、PCD関連総説3件）</div>
             </div>
-            <span class="report-link" onclick="showSection('reports',document.querySelectorAll('nav a')[3])">▶ 開く</span>
+            <span class="report-link" onclick="showSection('reports',document.querySelectorAll('nav a')[6])">▶ 開く</span>
           </div>
           <div class="report-item">
             <div>
               <div class="report-date">2026年8月13日（07:04）</div>
               <div class="report-count">新規2件（慢性呼吸器疾患自己抗体スコーピングレビュー1件、Indiana大学 成人気管支拡張症PCDスクリーニング試験1件）</div>
             </div>
-            <span class="report-link" onclick="showSection('reports',document.querySelectorAll('nav a')[3])">▶ 開く</span>
+            <span class="report-link" onclick="showSection('reports',document.querySelectorAll('nav a')[6])">▶ 開く</span>
           </div>
           <div class="report-item">
             <div>
               <div class="report-date">2026年8月12日（07:04）</div>
               <div class="report-count">新規6件（症例報告・総説4件＋Letter1件、UCB Galvokimig第2相ATMOS試験1件）</div>
             </div>
-            <span class="report-link" onclick="showSection('reports',document.querySelectorAll('nav a')[3])">▶ 開く</span>
+            <span class="report-link" onclick="showSection('reports',document.querySelectorAll('nav a')[6])">▶ 開く</span>
           </div>
           <div class="report-item">
             <div>
               <div class="report-date">2026年8月11日（07:04）</div>
               <div class="report-count">新規0件（PubMed 10クエリ・J-STAGE・CiNii・臨床試験〈CT.gov/JRCT/CTIS〉すべて既収録分のみ）</div>
             </div>
-            <span class="report-link" onclick="showSection('reports',document.querySelectorAll('nav a')[3])">▶ 開く</span>
+            <span class="report-link" onclick="showSection('reports',document.querySelectorAll('nav a')[6])">▶ 開く</span>
           </div>
           <div class="report-item">
             <div>
               <div class="report-date">2026年8月10日（07:04）</div>
               <div class="report-count">新規1件（AJRCCM論説「The Renaissance of Bronchiectasis」：研究領域の主要な10の変化を総括）</div>
             </div>
-            <span class="report-link" onclick="showSection('reports',document.querySelectorAll('nav a')[3])">▶ 開く</span>
+            <span class="report-link" onclick="showSection('reports',document.querySelectorAll('nav a')[6])">▶ 開く</span>
           </div>
           <div class="report-item">
             <div>
               <div class="report-date">2026年8月9日（07:04）</div>
               <div class="report-count">新規2件（肺ムーコル症31例の後方視的解析・ABPA誤診されたEGPA合併肺アスペルギルス症の症例報告）</div>
             </div>
-            <span class="report-link" onclick="showSection('reports',document.querySelectorAll('nav a')[3])">▶ 開く</span>
+            <span class="report-link" onclick="showSection('reports',document.querySelectorAll('nav a')[6])">▶ 開く</span>
           </div>
           <div class="report-item">
             <div>
               <div class="report-date">2026年8月8日（07:04）</div>
               <div class="report-count">新規3件（トルコの小児PCD-WES再解析・ペルーの結核後肺後遺症・愛知医大のExophiala dermatitidis関連ABPM症例）</div>
             </div>
-            <span class="report-link" onclick="showSection('reports',document.querySelectorAll('nav a')[3])">▶ 開く</span>
+            <span class="report-link" onclick="showSection('reports',document.querySelectorAll('nav a')[6])">▶ 開く</span>
           </div>
           <div class="report-item">
             <div>
               <div class="report-date">2026年8月7日（07:04）</div>
               <div class="report-count">新規3件（CLEAR試験サブ解析2件〈HTS薬物反応性評価・自宅スパイロメトリー〉・伊のBE睡眠障害と呼吸リハビリ総説）</div>
             </div>
-            <span class="report-link" onclick="showSection('reports',document.querySelectorAll('nav a')[3])">▶ 開く</span>
+            <span class="report-link" onclick="showSection('reports',document.querySelectorAll('nav a')[6])">▶ 開く</span>
           </div>
           <div class="report-item">
             <div>
               <div class="report-date">2026年8月6日（07:04）</div>
               <div class="report-count">新規1件（中国からのMTB/NTM肺疾患鑑別マルチモーダル機械学習診断モデル研究）</div>
             </div>
-            <span class="report-link" onclick="showSection('reports',document.querySelectorAll('nav a')[3])">▶ 開く</span>
+            <span class="report-link" onclick="showSection('reports',document.querySelectorAll('nav a')[6])">▶ 開く</span>
           </div>
           <div class="report-item">
             <div>
               <div class="report-date">2026年8月5日（07:04）</div>
               <div class="report-count">新規3件（英ダンディー大学の緑膿菌新規細菌定量アッセイ・ブラジルのQOL規定因子研究・イタリアの小児-成人移行医療全国調査）</div>
             </div>
-            <span class="report-link" onclick="showSection('reports',document.querySelectorAll('nav a')[3])">▶ 開く</span>
+            <span class="report-link" onclick="showSection('reports',document.querySelectorAll('nav a')[6])">▶ 開く</span>
           </div>
           <div class="report-item">
             <div>
               <div class="report-date">2026年8月4日（07:04）</div>
               <div class="report-count">新規1件（飯塚病院からの症例集積研究：構造的肺疾患〈気管支拡張症含む〉における喀痰パスツレラ・マルトシダ検出の臨床的意義）</div>
             </div>
-            <span class="report-link" onclick="showSection('reports',document.querySelectorAll('nav a')[3])">▶ 開く</span>
+            <span class="report-link" onclick="showSection('reports',document.querySelectorAll('nav a')[6])">▶ 開く</span>
           </div>
           <div class="report-item">
             <div>
               <div class="report-date">2026年8月3日（07:04）</div>
               <div class="report-count">新規1件（アレルギー性気管支肺アスペルギルス症〈ABPA〉のステロイド投与開始前の鑑別を論じた症例報告）</div>
             </div>
-            <span class="report-link" onclick="showSection('reports',document.querySelectorAll('nav a')[3])">▶ 開く</span>
+            <span class="report-link" onclick="showSection('reports',document.querySelectorAll('nav a')[6])">▶ 開く</span>
           </div>
           <div class="report-item">
             <div>
               <div class="report-date">2026年8月2日（07:04）</div>
               <div class="report-count">新規2件（ランダムフォレストによる気管支拡張症喀血リスク予測ノモグラム・CF/PCD小児の肺クリアランス指数比較研究）</div>
             </div>
-            <span class="report-link" onclick="showSection('reports',document.querySelectorAll('nav a')[3])">▶ 開く</span>
+            <span class="report-link" onclick="showSection('reports',document.querySelectorAll('nav a')[6])">▶ 開く</span>
           </div>
           <div class="report-item">
             <div>
               <div class="report-date">2026年8月1日（07:04）</div>
               <div class="report-count">新規7件（ブレンソカチブ含む2026年夏季FDA新薬承認アップデート〈DPP-1〉・副鼻腔炎/喘息/気管支拡張症の好酸球コメンタリー・IPA予測ノモグラム〈気管支拡張症OR7.07〉・非CF非結核後遺症性気管支拡張症総説・肺NTM症外科治療総説・結核後肺疾患外科治療総説・中東帰国者のTriadelphia pulvinata肺定着症例）</div>
             </div>
-            <span class="report-link" onclick="showSection('reports',document.querySelectorAll('nav a')[3])">▶ 開く</span>
+            <span class="report-link" onclick="showSection('reports',document.querySelectorAll('nav a')[6])">▶ 開く</span>
           </div>
           <div class="report-item">
             <div>
               <div class="report-date">2026年7月31日（07:04）</div>
               <div class="report-count">新規2件（気管支拡張症における肺リハビリ補助としての非侵襲的換気〈病態生理学的考察〉・高頻度胸壁振動療法(HFCWO)による気道クリアランスのナラティブレビュー〈Frontiers in Rehabilitation Sciences〉）</div>
             </div>
-            <span class="report-link" onclick="showSection('reports',document.querySelectorAll('nav a')[3])">▶ 開く</span>
+            <span class="report-link" onclick="showSection('reports',document.querySelectorAll('nav a')[6])">▶ 開く</span>
           </div>
           <div class="report-item">
             <div>
               <div class="report-date">2026年7月30日（07:04）</div>
               <div class="report-count">新規5件（豪州夏季マクロライド漸減RCT・気道クリアランス技法SDM受容性・NTM肺症×気管支拡張症重症度別治療転帰〈Chest〉・喘息鼻腔マイクロバイオータとCT気管支拡張所見・Nocardia感染症例〈日本発〉）</div>
             </div>
-            <span class="report-link" onclick="showSection('reports',document.querySelectorAll('nav a')[3])">▶ 開く</span>
+            <span class="report-link" onclick="showSection('reports',document.querySelectorAll('nav a')[6])">▶ 開く</span>
           </div>
           <div class="report-item">
             <div>
               <div class="report-date">2026年7月29日（07:04）</div>
               <div class="report-count">新規4件（APDS診断・治療総説〈日本発〉・気管支拡張症IOS指標とQOLの関連・ブラジルPCD小児コホートNGS診断・小児気管支拡張症QOLシステマティックレビュー）</div>
             </div>
-            <span class="report-link" onclick="showSection('reports',document.querySelectorAll('nav a')[3])">▶ 開く</span>
+            <span class="report-link" onclick="showSection('reports',document.querySelectorAll('nav a')[6])">▶ 開く</span>
           </div>
           <div class="report-item">
             <div>
               <div class="report-date">2026年7月28日（07:04）</div>
               <div class="report-count">新規1件（気管支拡張症の外来ケアにおける看護師の役割：スコーピングレビュー〈Nursing Reports〉）</div>
             </div>
-            <span class="report-link" onclick="showSection('reports',document.querySelectorAll('nav a')[3])">▶ 開く</span>
+            <span class="report-link" onclick="showSection('reports',document.querySelectorAll('nav a')[6])">▶ 開く</span>
           </div>
           <div class="report-item">
             <div>
               <div class="report-date">2026年7月27日（07:04）</div>
               <div class="report-count">新規1件（難治性喘息患児における細菌共検出を伴う早期Aspergillus関連ABPA疑い例〈IDCases〉）</div>
             </div>
-            <span class="report-link" onclick="showSection('reports',document.querySelectorAll('nav a')[3])">▶ 開く</span>
+            <span class="report-link" onclick="showSection('reports',document.querySelectorAll('nav a')[6])">▶ 開く</span>
           </div>
           <div class="report-item">
             <div>
               <div class="report-date">2026年7月26日（07:04）</div>
               <div class="report-count">新規1件（CFTRモジュレーター治療アクセス制限下でのCYP3A4阻害戦略：豪州CF症例報告〈Frontiers in Pharmacology〉）</div>
             </div>
-            <span class="report-link" onclick="showSection('reports',document.querySelectorAll('nav a')[3])">▶ 開く</span>
+            <span class="report-link" onclick="showSection('reports',document.querySelectorAll('nav a')[6])">▶ 開く</span>
           </div>
           <div class="report-item">
             <div>
               <div class="report-date">2026年7月25日（07:04）</div>
               <div class="report-count">新規3件（非CF気管支拡張症患者の抗菌薬治療期間と増悪リスク・非定型カルタゲナー症候群CT症例・Nature Microbiology誌:患者体内での抗菌薬耐性遺伝子水平伝播）</div>
             </div>
-            <span class="report-link" onclick="showSection('reports',document.querySelectorAll('nav a')[3])">▶ 開く</span>
+            <span class="report-link" onclick="showSection('reports',document.querySelectorAll('nav a')[6])">▶ 開く</span>
           </div>
           <div class="report-item">
             <div>
               <div class="report-date">2026年7月24日（07:04）</div>
               <div class="report-count">新規なし（PubMed・J-STAGE・CiNii・臨床試験〈CT.gov/JRCT/CTIS〉すべて既収録分のみ）</div>
             </div>
-            <span class="report-link" onclick="showSection('reports',document.querySelectorAll('nav a')[3])">▶ 開く</span>
+            <span class="report-link" onclick="showSection('reports',document.querySelectorAll('nav a')[6])">▶ 開く</span>
           </div>
           <div class="report-item">
             <div>
               <div class="report-date">2026年7月23日（07:04）</div>
               <div class="report-count">新規10件（ACCP成人気管支拡張症ガイドライン・腎移植後気管支拡張症レビュー・HFNC適応拡大総説〈神戸市立医療センター〉・神経障害児呼吸機能障害レビュー ほか）</div>
             </div>
-            <span class="report-link" onclick="showSection('reports',document.querySelectorAll('nav a')[3])">▶ 開く</span>
+            <span class="report-link" onclick="showSection('reports',document.querySelectorAll('nav a')[6])">▶ 開く</span>
           </div>
           <div class="report-item">
             <div>
               <div class="report-date">2026年7月22日（07:04）</div>
               <div class="report-count">新規4件（高齢者抗炎症治療総説・PCDポルトガルコホート・COPD労作時脱酸素症MLモデル・PCD遺伝子診断KAKEN課題）</div>
             </div>
-            <span class="report-link" onclick="showSection('reports',document.querySelectorAll('nav a')[3])">▶ 開く</span>
+            <span class="report-link" onclick="showSection('reports',document.querySelectorAll('nav a')[6])">▶ 開く</span>
           </div>
           <div class="report-item">
             <div>
               <div class="report-date">2026年7月21日（07:04）</div>
               <div class="report-count">新規2件・臨床試験1件（高齢者気管支拡張症総説・緑膿菌感染ギンコール酸C17:1前臨床モデル・REGEND001幹細胞移植試験）</div>
             </div>
-            <span class="report-link" onclick="showSection('reports',document.querySelectorAll('nav a')[3])">▶ 開く</span>
+            <span class="report-link" onclick="showSection('reports',document.querySelectorAll('nav a')[6])">▶ 開く</span>
           </div>
           <div class="report-item">
             <div>
               <div class="report-date">2026年7月20日（07:04）</div>
               <div class="report-count">新規1件（肺ノカルジア症の症例集積〈気管支拡張症合併例を含む〉）</div>
             </div>
-            <span class="report-link" onclick="showSection('reports',document.querySelectorAll('nav a')[3])">▶ 開く</span>
+            <span class="report-link" onclick="showSection('reports',document.querySelectorAll('nav a')[6])">▶ 開く</span>
           </div>
           <div class="report-item">
             <div>
               <div class="report-date">2026年7月19日（07:04）</div>
               <div class="report-count">新規0件（PubMed・J-STAGE・CiNii・臨床試験3ソースとも新規なし）</div>
             </div>
-            <span class="report-link" onclick="showSection('reports',document.querySelectorAll('nav a')[3])">▶ 開く</span>
+            <span class="report-link" onclick="showSection('reports',document.querySelectorAll('nav a')[6])">▶ 開く</span>
           </div>
           <div class="report-item">
             <div>
               <div class="report-date">2026年7月18日（07:04）</div>
               <div class="report-count">新規3件（NTM肺疾患運動プログラムRCTプロトコル・RA関連間質性肺疾患/気管支拡張症と生殖因子の関連・気管支拡張症手術後予後予測モデル）</div>
             </div>
-            <span class="report-link" onclick="showSection('reports',document.querySelectorAll('nav a')[3])">▶ 開く</span>
+            <span class="report-link" onclick="showSection('reports',document.querySelectorAll('nav a')[6])">▶ 開く</span>
           </div>
           <div class="report-item">
             <div>
               <div class="report-date">2026年7月17日（07:04）</div>
               <div class="report-count">新規5件（ブレンソカチブ アジア人種ASPENサブ解析・NTMアップデート総説・慢性肺疾患eQTL標的優先順位付け・BEレジストリHFCWO低使用率・肺音AI分類）</div>
             </div>
-            <span class="report-link" onclick="showSection('reports',document.querySelectorAll('nav a')[3])">▶ 開く</span>
+            <span class="report-link" onclick="showSection('reports',document.querySelectorAll('nav a')[6])">▶ 開く</span>
           </div>
           <div class="report-item">
             <div>
               <div class="report-date">2026年7月16日（07:04）</div>
               <div class="report-count">新規6件（日本PCD全国疫学・BronchUK医療資源インパクト・PID/抗体不全レビュー・FeNOバイオマーカー総説・OLD-IBDメタ解析・Lophomonas症例）</div>
             </div>
-            <span class="report-link" onclick="showSection('reports',document.querySelectorAll('nav a')[3])">▶ 開く</span>
+            <span class="report-link" onclick="showSection('reports',document.querySelectorAll('nav a')[6])">▶ 開く</span>
           </div>
           <div class="report-item">
             <div>
               <div class="report-date">2026年7月15日（07:04）</div>
               <div class="report-count">新規6件（EMBARC CRS-タイプ2炎症解析・小児気管支拡張症フェノタイプ社説・小児BC-QoL尺度開発・PCD画像研究・PCD社会的決定要因・BDRレター）</div>
             </div>
-            <span class="report-link" onclick="showSection('reports',document.querySelectorAll('nav a')[3])">▶ 開く</span>
+            <span class="report-link" onclick="showSection('reports',document.querySelectorAll('nav a')[6])">▶ 開く</span>
           </div>
           <div class="report-item">
             <div>
               <div class="report-date">2026年7月14日（07:04）</div>
               <div class="report-count">新規4件（AJRCCM社説「キンドリング効果」・東京医大ECRS-気管支拡張症関連研究・NTM肺疾患レビュー・老化関連EVレビュー）</div>
             </div>
-            <span class="report-link" onclick="showSection('reports',document.querySelectorAll('nav a')[3])">▶ 開く</span>
+            <span class="report-link" onclick="showSection('reports',document.querySelectorAll('nav a')[6])">▶ 開く</span>
           </div>
           <div class="report-item">
             <div>
               <div class="report-date">2026年7月13日（07:04）</div>
               <div class="report-count">新規3件（ブレンソカチブDPP-1阻害レター・DIAPH1欠損症のホジキンリンパ腫合併例・PID患者の睡眠/QOL評価）</div>
             </div>
-            <span class="report-link" onclick="showSection('reports',document.querySelectorAll('nav a')[3])">▶ 開く</span>
+            <span class="report-link" onclick="showSection('reports',document.querySelectorAll('nav a')[6])">▶ 開く</span>
           </div>
           <div class="report-item">
             <div>
               <div class="report-date">2026年7月11日（07:04）</div>
               <div class="report-count">新規1件（気管支拡張症における誤嚥・GERDの多職種連携レビュー）</div>
             </div>
-            <span class="report-link" onclick="showSection('reports',document.querySelectorAll('nav a')[3])">▶ 開く</span>
+            <span class="report-link" onclick="showSection('reports',document.querySelectorAll('nav a')[6])">▶ 開く</span>
           </div>
           <div class="report-item">
             <div>
               <div class="report-date">2026年7月10日（07:04）</div>
               <div class="report-count">新規2件（骨形成不全症の肺病変・IL7R変異による非典型的SCIDの気管支拡張症合併）</div>
             </div>
-            <span class="report-link" onclick="showSection('reports',document.querySelectorAll('nav a')[3])">▶ 開く</span>
+            <span class="report-link" onclick="showSection('reports',document.querySelectorAll('nav a')[6])">▶ 開く</span>
           </div>
           <div class="report-item">
             <div>
               <div class="report-date">2026年7月9日（07:04）</div>
               <div class="report-count">新規4件・臨床試験1件（環境由来NTM症例・BAE後喀血再発予測・IEIの気管支拡張症・クロファジミン10年経験）</div>
             </div>
-            <span class="report-link" onclick="showSection('reports',document.querySelectorAll('nav a')[3])">▶ 開く</span>
+            <span class="report-link" onclick="showSection('reports',document.querySelectorAll('nav a')[6])">▶ 開く</span>
           </div>
           <div class="report-item">
             <div>
               <div class="report-date">2026年7月8日（07:04）</div>
               <div class="report-count">新規1件・EU試験1件（PCD早期構造的肺変化・Macroleaveマクロライド中止試験CTIS登録）</div>
             </div>
-            <span class="report-link" onclick="showSection('reports',document.querySelectorAll('nav a')[3])">▶ 開く</span>
+            <span class="report-link" onclick="showSection('reports',document.querySelectorAll('nav a')[6])">▶ 開く</span>
           </div>
           <div class="report-item">
             <div>
               <div class="report-date">2026年7月7日（07:04）</div>
               <div class="report-count">新規なし（既読済みアイテムを全件除外、genuinely newな文献・試験は検出されず）</div>
             </div>
-            <span class="report-link" onclick="showSection('reports',document.querySelectorAll('nav a')[3])">▶ 開く</span>
+            <span class="report-link" onclick="showSection('reports',document.querySelectorAll('nav a')[6])">▶ 開く</span>
           </div>
           <div class="report-item">
             <div>
               <div class="report-date">2026年7月6日（07:04）</div>
               <div class="report-count">新規1件（非CF気管支拡張症のAchromobacter xylosoxidans気道感染症例/Arch Bronconeumol）</div>
             </div>
-            <span class="report-link" onclick="showSection('reports',document.querySelectorAll('nav a')[3])">▶ 開く</span>
+            <span class="report-link" onclick="showSection('reports',document.querySelectorAll('nav a')[6])">▶ 開く</span>
           </div>
           <div class="report-item">
             <div>
               <div class="report-date">2026年7月5日（07:04）</div>
               <div class="report-count">新規2件（非CF気管支拡張症小児の運動療法RCT/J Sci Med Sport・気管支拡張症の好中球エラスターゼとサンプル間相関/Tuberc Respir Dis）</div>
             </div>
-            <span class="report-link" onclick="showSection('reports',document.querySelectorAll('nav a')[3])">▶ 開く</span>
+            <span class="report-link" onclick="showSection('reports',document.querySelectorAll('nav a')[6])">▶ 開く</span>
           </div>
           <div class="report-item">
             <div>
               <div class="report-date">2026年7月4日（07:04）</div>
               <div class="report-count">新規6件（CRS併存疾患レビュー/JACI-Pract・PCDヒト細胞/前臨床モデル2篇/Eur Respir Rev・NTM-PD vs 肺結核マイクロバイオータ/BMC Microbiol・結核後スパイロメトリー/Monaldi Arch・スペインAATDガイドライン2026改訂）</div>
             </div>
-            <span class="report-link" onclick="showSection('reports',document.querySelectorAll('nav a')[3])">▶ 開く</span>
+            <span class="report-link" onclick="showSection('reports',document.querySelectorAll('nav a')[6])">▶ 開く</span>
           </div>
           <div class="report-item">
             <div>
               <div class="report-date">2026年7月3日（07:04）</div>
               <div class="report-count">新規2件（気管支拡張症の粘液栓とQOL・緑膿菌感染の関連/Sci Rep・韓国人コホートでの好酸球数と増悪リスク/Tuberc Respir Dis）</div>
             </div>
-            <span class="report-link" onclick="showSection('reports',document.querySelectorAll('nav a')[3])">▶ 開く</span>
+            <span class="report-link" onclick="showSection('reports',document.querySelectorAll('nav a')[6])">▶ 開く</span>
           </div>
           <div class="report-item">
             <div>
               <div class="report-date">2026年7月2日（07:04）</div>
               <div class="report-count">新規8件・臨床試験1件（AJRCCM気管支拡張鑑別・緑膿菌マウスモデル・PCD肺増悪レビュー・バングラデシュCF有病率 他）</div>
             </div>
-            <span class="report-link" onclick="showSection('reports',document.querySelectorAll('nav a')[3])">▶ 開く</span>
+            <span class="report-link" onclick="showSection('reports',document.querySelectorAll('nav a')[6])">▶ 開く</span>
           </div>
           <div class="report-item">
             <div>
               <div class="report-date">2026年7月1日（07:04）</div>
               <div class="report-count">新規10件（MAC再発CT予測・DPP-1総説・PCD遺伝子治療PoC・RA肺スクリーニング・WHO欧州疫学ギャップ 他）</div>
             </div>
-            <span class="report-link" onclick="showSection('reports',document.querySelectorAll('nav a')[3])">▶ 開く</span>
+            <span class="report-link" onclick="showSection('reports',document.querySelectorAll('nav a')[6])">▶ 開く</span>
           </div>
           <div class="report-item">
             <div>
               <div class="report-date">2026年6月30日（07:04）</div>
               <div class="report-count">新規1件（PCD-QOL質問票スペイン語版検証・Respiratory Medicine）</div>
             </div>
-            <span class="report-link" onclick="showSection('reports',document.querySelectorAll('nav a')[3])">▶ 開く</span>
+            <span class="report-link" onclick="showSection('reports',document.querySelectorAll('nav a')[6])">▶ 開く</span>
           </div>
           <div class="report-item">
             <div>
               <div class="report-date">2026年6月29日（07:04）</div>
               <div class="report-count">新規2件（CNIO肺リハ予測指標・日本内科学会誌気管支拡張症特集序論）</div>
             </div>
-            <span class="report-link" onclick="showSection('reports',document.querySelectorAll('nav a')[3])">▶ 開く</span>
+            <span class="report-link" onclick="showSection('reports',document.querySelectorAll('nav a')[6])">▶ 開く</span>
           </div>
           <div class="report-item">
             <div>
               <div class="report-date">2026年6月28日（07:04）</div>
               <div class="report-count">新規1件（気管支拡張症看護・英国調査）</div>
             </div>
-            <span class="report-link" onclick="showSection('reports',document.querySelectorAll('nav a')[3])">▶ 開く</span>
+            <span class="report-link" onclick="showSection('reports',document.querySelectorAll('nav a')[6])">▶ 開く</span>
           </div>
           <div class="report-item">
             <div>
               <div class="report-date">2026年6月27日（07:04）</div>
               <div class="report-count">新規4件（EMBARC頻回増悪表現型大規模解析・Aspergillus真菌エンドタイプ総説・炎症指標CAR・AT合併BE症例）</div>
             </div>
-            <span class="report-link" onclick="showSection('reports',document.querySelectorAll('nav a')[3])">▶ 開く</span>
+            <span class="report-link" onclick="showSection('reports',document.querySelectorAll('nav a')[6])">▶ 開く</span>
           </div>
           <div class="report-item">
             <div>
               <div class="report-date">2026年6月26日（07:04）</div>
               <div class="report-count">新規3件（症状中心モデル総説・粘液溶解薬SR/メタ解析・Aspergillus多種IgG診断）</div>
             </div>
-            <span class="report-link" onclick="showSection('reports',document.querySelectorAll('nav a')[3])">▶ 開く</span>
+            <span class="report-link" onclick="showSection('reports',document.querySelectorAll('nav a')[6])">▶ 開く</span>
           </div>
           <div class="report-item">
             <div>
               <div class="report-date">2026年6月25日（07:04）</div>
               <div class="report-count">新規1件・EU試験1件（Singapore COPD総説・Sanofi SAR445399 CTIS登録）</div>
             </div>
-            <span class="report-link" onclick="showSection('reports',document.querySelectorAll('nav a')[3])">▶ 開く</span>
+            <span class="report-link" onclick="showSection('reports',document.querySelectorAll('nav a')[6])">▶ 開く</span>
           </div>
           <div class="report-item">
             <div>
               <div class="report-date">2026年6月24日（07:04）</div>
               <div class="report-count">新規5件（SLE合併BE・PA定着マイクロバイオーム・呼吸器マイクロバイオーム総説・後結核性肺疾患・RCQ妥当性）</div>
             </div>
-            <span class="report-link" onclick="showSection('reports',document.querySelectorAll('nav a')[3])">▶ 開く</span>
+            <span class="report-link" onclick="showSection('reports',document.querySelectorAll('nav a')[6])">▶ 開く</span>
           </div>
           <div class="report-item">
             <div>
               <div class="report-date">2026年6月23日（07:04）</div>
               <div class="report-count">新規2件（咳過敏性パターン・NTM症例シリーズ）</div>
             </div>
-            <span class="report-link" onclick="showSection('reports',document.querySelectorAll('nav a')[3])">▶ 開く</span>
+            <span class="report-link" onclick="showSection('reports',document.querySelectorAll('nav a')[6])">▶ 開く</span>
           </div>
           <div class="report-item">
             <div>
               <div class="report-date">2026年6月22日（07:04）</div>
               <div class="report-count">新規0件（全ソース確認済み・新規なし）</div>
             </div>
-            <span class="report-link" onclick="showSection('reports',document.querySelectorAll('nav a')[3])">▶ 開く</span>
+            <span class="report-link" onclick="showSection('reports',document.querySelectorAll('nav a')[6])">▶ 開く</span>
           </div>
           <div class="report-item">
             <div>
               <div class="report-date">2026年6月21日（07:04）</div>
               <div class="report-count">新規2件（BE-COPD/喘息合併メタ解析・PCD診断精度）</div>
             </div>
-            <span class="report-link" onclick="showSection('reports',document.querySelectorAll('nav a')[3])">▶ 開く</span>
+            <span class="report-link" onclick="showSection('reports',document.querySelectorAll('nav a')[6])">▶ 開く</span>
           </div>
           <div class="report-item">
             <div>
               <div class="report-date">2026年6月20日（07:04）</div>
               <div class="report-count">新規3件（RA肺疾患総説・Pa VOC・PCD症例）</div>
             </div>
-            <span class="report-link" onclick="showSection('reports',document.querySelectorAll('nav a')[3])">▶ 開く</span>
+            <span class="report-link" onclick="showSection('reports',document.querySelectorAll('nav a')[6])">▶ 開く</span>
           </div>
           <div class="report-item">
             <div>
               <div class="report-date">2026年6月19日（07:04+）</div>
               <div class="report-count">新規3件（細菌培養・Enterobacterales予後・PCD小児QoL）</div>
             </div>
-            <span class="report-link" onclick="showSection('reports',document.querySelectorAll('nav a')[3])">▶ 開く</span>
+            <span class="report-link" onclick="showSection('reports',document.querySelectorAll('nav a')[6])">▶ 開く</span>
           </div>
           <div class="report-item">
             <div>
               <div class="report-date">2026年6月18日（07:04+）</div>
               <div class="report-count">新規6件（Pa除菌・SA肺炎日本発・AT他）</div>
             </div>
-            <span class="report-link" onclick="showSection('reports',document.querySelectorAll('nav a')[3])">▶ 開く</span>
+            <span class="report-link" onclick="showSection('reports',document.querySelectorAll('nav a')[6])">▶ 開く</span>
           </div>
           <div class="report-item">
             <div>
               <div class="report-date">2026年6月17日（07:04）</div>
               <div class="report-count">新規3件（好酸球性エンドタイプ原著・TB後BE他）</div>
             </div>
-            <span class="report-link" onclick="showSection('reports',document.querySelectorAll('nav a')[3])">▶ 開く</span>
+            <span class="report-link" onclick="showSection('reports',document.querySelectorAll('nav a')[6])">▶ 開く</span>
           </div>
           <div class="report-item">
             <div>
               <div class="report-date">2026年6月16日（07:04）</div>
               <div class="report-count">新規3件・試験2件新規</div>
             </div>
-            <span class="report-link" onclick="showSection('reports',document.querySelectorAll('nav a')[3])">▶ 開く</span>
+            <span class="report-link" onclick="showSection('reports',document.querySelectorAll('nav a')[6])">▶ 開く</span>
           </div>
           <div class="report-item">
             <div>
               <div class="report-date">2026年6月15日（07:04）</div>
               <div class="report-count">新規1件（気管支学・症例報告）</div>
             </div>
-            <span class="report-link" onclick="showSection('reports',document.querySelectorAll('nav a')[3])">▶ 開く</span>
+            <span class="report-link" onclick="showSection('reports',document.querySelectorAll('nav a')[6])">▶ 開く</span>
           </div>
           <div class="report-item">
             <div>
               <div class="report-date">2026年6月14日（07:04）</div>
               <div class="report-count">新規5件（KAKEN科研費）</div>
             </div>
-            <span class="report-link" onclick="showSection('reports',document.querySelectorAll('nav a')[3])">▶ 開く</span>
+            <span class="report-link" onclick="showSection('reports',document.querySelectorAll('nav a')[6])">▶ 開く</span>
           </div>
           <div class="report-item">
             <div>
               <div class="report-date">2026年6月13日（07:04）</div>
               <div class="report-count">新規3件・試験1件新規</div>
             </div>
-            <span class="report-link" onclick="showSection('reports',document.querySelectorAll('nav a')[3])">▶ 開く</span>
+            <span class="report-link" onclick="showSection('reports',document.querySelectorAll('nav a')[6])">▶ 開く</span>
           </div>
           <div class="report-item">
             <div>
               <div class="report-date">2026年6月12日（07:04）</div>
               <div class="report-count">新規9件・EU試験7件新規</div>
             </div>
-            <span class="report-link" onclick="showSection('reports',document.querySelectorAll('nav a')[3])">▶ 開く</span>
+            <span class="report-link" onclick="showSection('reports',document.querySelectorAll('nav a')[6])">▶ 開く</span>
           </div>
           <div class="report-item">
             <div>
               <div class="report-date">2026年6月11日（08:04）</div>
               <div class="report-count">新規0件・試験新規なし</div>
             </div>
-            <span class="report-link" onclick="showSection('reports',document.querySelectorAll('nav a')[3])">▶ 開く</span>
+            <span class="report-link" onclick="showSection('reports',document.querySelectorAll('nav a')[6])">▶ 開く</span>
           </div>
           <div class="report-item">
             <div>
               <div class="report-date">2026年6月11日</div>
               <div class="report-count">新規5件・試験新規なし</div>
             </div>
-            <span class="report-link" onclick="showSection('reports',document.querySelectorAll('nav a')[3])">▶ 開く</span>
+            <span class="report-link" onclick="showSection('reports',document.querySelectorAll('nav a')[6])">▶ 開く</span>
           </div>
           <div class="report-item">
             <div>
               <div class="report-date">2026年6月10日</div>
               <div class="report-count">新規4件・試験新規なし</div>
             </div>
-            <span class="report-link" onclick="showSection('reports',document.querySelectorAll('nav a')[3])">▶ 開く</span>
+            <span class="report-link" onclick="showSection('reports',document.querySelectorAll('nav a')[6])">▶ 開く</span>
           </div>
           <div class="report-item">
             <div>
               <div class="report-date">2026年6月9日</div>
               <div class="report-count">新規3件・試験新規なし</div>
             </div>
-            <span class="report-link" onclick="showSection('reports',document.querySelectorAll('nav a')[3])">▶ 開く</span>
+            <span class="report-link" onclick="showSection('reports',document.querySelectorAll('nav a')[6])">▶ 開く</span>
           </div>
           <div class="report-item">
             <div>
               <div class="report-date">2026年6月8日</div>
               <div class="report-count">新規2件・試験新規なし</div>
             </div>
-            <span class="report-link" onclick="showSection('reports',document.querySelectorAll('nav a')[3])">▶ 開く</span>
+            <span class="report-link" onclick="showSection('reports',document.querySelectorAll('nav a')[6])">▶ 開く</span>
           </div>
           <div class="report-item">
             <div>
               <div class="report-date">2026年6月6日</div>
               <div class="report-count">新規2件・試験5件収録</div>
             </div>
-            <span class="report-link" onclick="showSection('reports',document.querySelectorAll('nav a')[3])">▶ 開く</span>
+            <span class="report-link" onclick="showSection('reports',document.querySelectorAll('nav a')[6])">▶ 開く</span>
           </div>
           <div class="report-item">
             <div>
               <div class="report-date">2026年6月5日</div>
               <div class="report-count">新規4件・臨床試験2件</div>
             </div>
-            <span class="report-link" onclick="showSection('reports',document.querySelectorAll('nav a')[3])">▶ 開く</span>
+            <span class="report-link" onclick="showSection('reports',document.querySelectorAll('nav a')[6])">▶ 開く</span>
           </div>
           <div class="report-item">
             <div>
               <div class="report-date">2026年6月4日</div>
               <div class="report-count">新規3件・臨床試験1件</div>
             </div>
-            <span class="report-link" onclick="showSection('reports',document.querySelectorAll('nav a')[3])">▶ 開く</span>
+            <span class="report-link" onclick="showSection('reports',document.querySelectorAll('nav a')[6])">▶ 開く</span>
           </div>
           <div class="report-item">
             <div>
               <div class="report-date">2026年6月3日</div>
               <div class="report-count">新規2件収録</div>
             </div>
-            <span class="report-link" onclick="showSection('reports',document.querySelectorAll('nav a')[3])">▶ 開く</span>
+            <span class="report-link" onclick="showSection('reports',document.querySelectorAll('nav a')[6])">▶ 開く</span>
           </div>
           <div class="report-item">
             <div>
               <div class="report-date">2026年6月2日</div>
               <div class="report-count">新規3件収録</div>
             </div>
-            <span class="report-link" onclick="showSection('reports',document.querySelectorAll('nav a')[3])">▶ 開く</span>
+            <span class="report-link" onclick="showSection('reports',document.querySelectorAll('nav a')[6])">▶ 開く</span>
           </div>
           <div class="report-item">
             <div>
               <div class="report-date">2026年6月1日</div>
               <div class="report-count">新規19件収録</div>
             </div>
-            <span class="report-link" onclick="showSection('reports',document.querySelectorAll('nav a')[3])">▶ 開く</span>
+            <span class="report-link" onclick="showSection('reports',document.querySelectorAll('nav a')[6])">▶ 開く</span>
           </div>
           <div class="report-item">
             <div>
               <div class="report-date">2026年5月31日</div>
               <div class="report-count">新規17件収録</div>
             </div>
-            <span class="report-link" onclick="showSection('reports',document.querySelectorAll('nav a')[3])">▶ 開く</span>
+            <span class="report-link" onclick="showSection('reports',document.querySelectorAll('nav a')[6])">▶ 開く</span>
           </div>
           <div class="report-item">
             <div>
               <div class="report-date">2026年5月30日</div>
               <div class="report-count">新規2件収録</div>
             </div>
-            <span class="report-link" onclick="showSection('reports',document.querySelectorAll('nav a')[3])">▶ 開く</span>
+            <span class="report-link" onclick="showSection('reports',document.querySelectorAll('nav a')[6])">▶ 開く</span>
           </div>
           <div class="report-item">
             <div>
               <div class="report-date">2026年5月29日</div>
               <div class="report-count">新規3件収録</div>
             </div>
-            <span class="report-link" onclick="showSection('reports',document.querySelectorAll('nav a')[3])">▶ 開く</span>
+            <span class="report-link" onclick="showSection('reports',document.querySelectorAll('nav a')[6])">▶ 開く</span>
           </div>
           <div class="report-item">
             <div>
               <div class="report-date">2026年5月28日</div>
               <div class="report-count">新規15件収録</div>
             </div>
-            <span class="report-link" onclick="showSection('reports',document.querySelectorAll('nav a')[3])">▶ 開く</span>
+            <span class="report-link" onclick="showSection('reports',document.querySelectorAll('nav a')[6])">▶ 開く</span>
           </div>
           <div class="report-item">
             <div>
               <div class="report-date">2026年5月27日</div>
               <div class="report-count">新規14件収録</div>
             </div>
-            <span class="report-link" onclick="showSection('reports',document.querySelectorAll('nav a')[3])">▶ 開く</span>
+            <span class="report-link" onclick="showSection('reports',document.querySelectorAll('nav a')[6])">▶ 開く</span>
           </div>
           <div class="report-item">
             <div>
               <div class="report-date">2026年5月25日</div>
               <div class="report-count">新規3件収録</div>
             </div>
-            <span class="report-link" onclick="showSection('reports',document.querySelectorAll('nav a')[3])">▶ 開く</span>
+            <span class="report-link" onclick="showSection('reports',document.querySelectorAll('nav a')[6])">▶ 開く</span>
           </div>
           <div class="report-item">
             <div>
               <div class="report-date">2026年5月24日</div>
               <div class="report-count">新規5件収録</div>
             </div>
-            <span class="report-link" onclick="showSection('reports',document.querySelectorAll('nav a')[3])">▶ 開く</span>
+            <span class="report-link" onclick="showSection('reports',document.querySelectorAll('nav a')[6])">▶ 開く</span>
           </div>
           <div class="report-item">
             <div>
@@ -5019,6 +5061,43 @@
   </div>
 </div>
 
+<!-- ==================== SECTION: 引用ランキング ==================== -->
+<div class="section" id="section-ranking">
+  <div class="ranking-page">
+    <div class="ranking-page-header">
+      <h2>🏆 引用数ランキング</h2>
+      <p>本ポータル収録文献のうち、Europe PMC で被引用数を取得できたものを降順表示します。「年あたり」は発表からの経過年数で割った値で、古い論文が有利になる累計引用数の偏りを補正します（分母の下限は1年。発表1年未満の文献は累計引用数がそのまま年あたり値になります）。</p>
+    </div>
+
+    <div class="ranking-controls">
+      <div class="cat-chips" id="rankingChips">
+        <div class="chip active" data-cat="all" onclick="setRankFilter('all',this)">すべて</div>
+        <div class="chip" data-cat="治療・薬剤" onclick="setRankFilter('治療・薬剤',this)">💊 治療・薬剤</div>
+        <div class="chip" data-cat="増悪・病態" onclick="setRankFilter('増悪・病態',this)">⚡ 増悪・病態</div>
+        <div class="chip" data-cat="マイクロバイオーム・感染" onclick="setRankFilter('マイクロバイオーム・感染',this)">🦠 マイクロバイオーム・感染</div>
+        <div class="chip" data-cat="ガイドライン・総説" onclick="setRankFilter('ガイドライン・総説',this)">📋 ガイドライン・総説</div>
+        <div class="chip" data-cat="精密医療・エンドタイプ" onclick="setRankFilter('精密医療・エンドタイプ',this)">🎯 精密医療</div>
+        <div class="chip" data-cat="臨床試験" onclick="setRankFilter('臨床試験',this)">🧪 臨床試験</div>
+        <div class="chip" data-cat="学会動向" onclick="setRankFilter('学会動向',this)">🌐 学会動向</div>
+        <div class="chip" data-cat="COPD合併" onclick="setRankFilter('COPD合併',this)">🫁 COPD合併</div>
+        <div class="chip" data-cat="日本発" onclick="setRankFilter('日本発',this)">🇯🇵 日本発</div>
+      </div>
+      <div class="ranking-sortbar">
+        <span class="ranking-sort-label">並べ替え:</span>
+        <div class="sort-btn active" data-sort="total" onclick="setRankSort('total',this)">累計引用数</div>
+        <div class="sort-btn" data-sort="peryear" onclick="setRankSort('peryear',this)">年あたり引用数</div>
+        <span class="ranking-count" id="rankingCount"></span>
+      </div>
+    </div>
+
+    <div class="ranking-list-wrap" id="rankingFullList">
+      <div class="ranking-empty">引用数を取得中…</div>
+    </div>
+
+    <div class="trends-note">※ 被引用数は Europe PMC の <code>citedByCount</code>（24時間キャッシュ）。DOI または PMID を持つ文献のみが対象で、和文誌・KAKEN・臨床試験登録などは集計外です。行をクリックすると文献の詳細が開きます。</div>
+  </div>
+</div>
+
 <!-- MODAL -->
 <div class="modal-overlay" id="modalOverlay" onclick="closeModal(event)">
   <div class="modal" id="modalContent">
@@ -5470,31 +5549,53 @@ async function fetchCitations() {
   return cache;
 }
 
+// 全ランキング（累計引用数の降順）。ページ側の絞り込み・並べ替えはこの配列から行う
+let RANKED_ALL = [];
+let rankFilter = 'all';
+let rankSort = 'total';
+
+// 発表日からの経過年数（年あたり引用数の分母）。"YYYY-MM-DD" / "YYYY-MM" / year のいずれにも対応
+function yearsSincePub(a) {
+  let d = null;
+  const s = String(a.date || '');
+  if (/^\d{4}-\d{2}-\d{2}$/.test(s))      d = new Date(s + 'T00:00:00Z');
+  else if (/^\d{4}-\d{2}$/.test(s))       d = new Date(s + '-15T00:00:00Z');
+  else if (/^\d{4}$/.test(s))             d = new Date(s + '-07-01T00:00:00Z');
+  else if (a.year)                        d = new Date(a.year + '-07-01T00:00:00Z');
+  if (!d || isNaN(d)) return null;
+  const yrs = (Date.now() - d.getTime()) / (365.25 * 24 * 3600 * 1000);
+  // 分母の下限は1年。発表1年未満の文献を小さい分母で割ると年あたり引用数が
+  // 数倍に水増しされ、補正したいはずの新しさの偏りが逆に増幅されるため。
+  return Math.max(yrs, 1);
+}
+
 async function buildRanking() {
   const el = document.getElementById('rankingList');
   el.innerHTML = '<div style="text-align:center;padding:16px;color:var(--text-muted);font-size:12px;">引用数を取得中…</div>';
 
   const citMap = await fetchCitations();
 
-  const ranked = ARTICLES
+  RANKED_ALL = ARTICLES
     .map(a => {
       const doi = extractDoi(a.url);
       const pmid = extractPmid(a.url);
       const cit = (doi && doi in citMap) ? citMap[doi]
                 : (pmid && `pmid:${pmid}` in citMap) ? citMap[`pmid:${pmid}`]
                 : -1;
-      return { ...a, cit };
+      const yrs = yearsSincePub(a);
+      return { ...a, cit, yrs, perYear: (yrs ? cit / yrs : null) };
     })
     .filter(a => a.cit > 0)
-    .sort((a, b) => b.cit - a.cit)
-    .slice(0, 8);
+    .sort((a, b) => b.cit - a.cit);
 
-  if (ranked.length === 0) {
+  renderRankingPage();
+
+  if (RANKED_ALL.length === 0) {
     el.innerHTML = '<div style="text-align:center;padding:16px;color:var(--text-muted);font-size:12px;">引用データを取得中です。しばらくお待ちください。</div>';
     return;
   }
 
-  el.innerHTML = ranked.map((a, i) => `
+  el.innerHTML = RANKED_ALL.slice(0, 8).map((a, i) => `
     <div class="ranking-item" onclick="openModal(${a.id})">
       <div class="rank-num ${i < 3 ? 'top3' : ''}">${i + 1}</div>
       <div style="flex:1">
@@ -5505,13 +5606,91 @@ async function buildRanking() {
   `).join('');
 }
 
+// ── 引用ランキング 詳細ページ ──
+function renderRankingPage() {
+  const el = document.getElementById('rankingFullList');
+  const countEl = document.getElementById('rankingCount');
+  if (!el) return;
+
+  if (RANKED_ALL.length === 0) {
+    el.innerHTML = '<div class="ranking-empty">引用データを取得中です。しばらくお待ちください。<br>（Europe PMC から取得し、24時間ブラウザにキャッシュします）</div>';
+    if (countEl) countEl.textContent = '';
+    return;
+  }
+
+  let list = rankFilter === 'all' ? RANKED_ALL.slice() : RANKED_ALL.filter(a => a.cat === rankFilter);
+  if (rankSort === 'peryear') {
+    list.sort((a, b) => (b.perYear ?? -1) - (a.perYear ?? -1));
+  }
+
+  if (countEl) {
+    countEl.textContent = `${list.length}件${rankFilter !== 'all' ? `（${rankFilter}）` : ''} / 引用データ取得済み ${RANKED_ALL.length}件`;
+  }
+
+  if (list.length === 0) {
+    el.innerHTML = '<div class="ranking-empty">このカテゴリには被引用数を取得できた文献がまだありません。</div>';
+    return;
+  }
+
+  el.innerHTML = list.map((a, i) => {
+    const primary   = rankSort === 'peryear' ? (a.perYear != null ? a.perYear.toFixed(1) : '—') : a.cit.toLocaleString();
+    const primaryU  = rankSort === 'peryear' ? '件/年' : '件引用';
+    const secondary = rankSort === 'peryear'
+      ? `累計 ${a.cit.toLocaleString()}件`
+      : (a.perYear != null ? `年 ${a.perYear.toFixed(1)}件` : '');
+    const metrics = [
+      a.journal || '',
+      a.if  ? `IF ${a.if}`  : '',
+      a.sjr ? `SJR ${a.sjr}` : '',
+      a.ev  || '',
+      a.date || ''
+    ].filter(Boolean).join(' · ');
+    return `
+    <div class="rank-row" onclick="openModal(${a.id})">
+      <div class="rank-row-num ${i < 3 ? 'top3' : ''}">${i + 1}</div>
+      <div class="rank-row-main">
+        <div class="rank-row-title">${a.titleJa}</div>
+        <div class="rank-row-meta">
+          <span class="cat-tag ${a.cat}">${a.cat}</span>
+          ${a.dpp1 ? '<span class="cat-tag" style="background:#ede9fe;color:#5b21b6">💊 DPP-1</span>' : ''}
+          <span>${metrics}</span>
+        </div>
+      </div>
+      <div class="rank-row-cite">
+        <div class="rank-cite-big">${primary}<span class="rank-cite-unit"> ${primaryU}</span></div>
+        ${secondary ? `<div class="rank-cite-sub">${secondary}</div>` : ''}
+      </div>
+    </div>`;
+  }).join('');
+}
+
+function setRankFilter(cat, el) {
+  rankFilter = cat;
+  document.querySelectorAll('#rankingChips .chip').forEach(c => c.classList.remove('active'));
+  el.classList.add('active');
+  renderRankingPage();
+}
+
+function setRankSort(mode, el) {
+  rankSort = mode;
+  document.querySelectorAll('.ranking-sortbar .sort-btn').forEach(b => b.classList.remove('active'));
+  el.classList.add('active');
+  renderRankingPage();
+}
+
+// サイドバーの「🏆 引用数ランキング」ヘッダーから詳細ページへ
+function gotoRanking() {
+  const navEl = document.querySelector('nav a[onclick*="\'ranking\'"]');
+  showSection('ranking', navEl);
+}
+
 // ============================================================
 // NAV — SECTION SWITCHING
 // ============================================================
 function showSection(sec, el) {
   // Update nav active state
   document.querySelectorAll('nav a').forEach(a => a.classList.remove('active'));
-  el.classList.add('active');
+  if (el) el.classList.add('active');
   // Hide all sections
   document.querySelectorAll('.section').forEach(s => s.classList.remove('active'));
   // Show target section
