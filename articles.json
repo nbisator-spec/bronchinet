@@ -2195,6 +2195,7 @@
   "id": 482,
   "cat": "ガイドライン・総説",
   "isNew": false,
+  "dpp1": true,
   "titleJa": "成人気管支拡張症の管理：米国胸部専門医学会（ACCP）臨床診療ガイドライン",
   "titleEn": "Management of Adult Bronchiectasis: An American College of Chest Physicians Clinical Practice Guideline.",
   "journal": "Chest",
@@ -2205,8 +2206,8 @@
   "ev": "ガイドライン",
   "authors": "Thomson R, Thornton C, Aksamit T ほか",
   "aui": "Thomson Thornton Aksamit Barker Basavaraj Burr Hill Jarand Lee Metersky Moores Morimoto O'Donnell Smith Somayaji Tino Frazer-Green",
-  "summary": "成人気管支拡張症の治療に関し、8つのPICO設問への系統的レビューとGRADE手法・修正Delphi法によりACCPが策定した臨床診療ガイドライン。47研究を基に、急性増悪時の抗菌薬治療、長期抑制療法・抗炎症療法、気道クリアランス、喀血管理、外科的切除の位置づけなど13の条件付き推奨を提示した。",
-  "jpView": "日本人専門医（森本耕三氏・複十字病院）がパネルに参加。国内に独立した非CF気管支拡張症ガイドラインが無い中（2026年時点）、本ガイドラインはERS 2025・BTSと並び国内診療の参照基準となりうる。",
+  "summary": "成人非CF気管支拡張症の治療について、8つのPICO設問への系統的レビュー（47研究）とGRADE手法・修正Delphi法によりACCPが策定した臨床診療ガイドライン。13推奨はすべて条件付きで、エビデンスの確実性が中等度なのは長期マクロライドと長期ブレンソカチブ（いずれも頻回増悪例に提案）の2つのみ、長期アトルバスタチンとrhDNaseは非推奨、頻回増悪例（年2回以上）への3ヶ月以上の吸入抗菌薬・喀血へのトラネキサム酸・気道クリアランス（ELTGOL/ACB、動的PEP、高張食塩水吸入、HFCWO）・局所病変で難治例への外科的切除を条件付きで提案し、緑膿菌初回分離時の除菌療法は「エビデンス不十分」として賛否いずれの推奨も行わなかった。",
+  "jpView": "日本人専門医（森本耕三氏・複十字病院／結核予防会）がパネル参加しており、国内に独立した非CF気管支拡張症ガイドラインが無い中（2026年時点）でERS 2025・BTSと並ぶ参照基準となりうるが、長期マクロライドは喀痰NTM陽性例では禁忌で開始前スクリーニングが求められる点はNTM有病率の高い日本でとくに実装上の要点となる。MSL上の最重要点は、ブレンソカチブの推奨が「DPP-1阻害薬クラス」ではなく同薬に限定され、単剤データからクラス効果は仮定できず他のDPP-1阻害薬の開発完了に伴い推奨は見直され得ると明記されたことである。",
   "pmid": "42480819",
   "url": "https://pubmed.ncbi.nlm.nih.gov/42480819/"
  },
