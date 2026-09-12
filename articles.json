@@ -2,7 +2,7 @@
  {
   "id": 617,
   "cat": "治療・薬剤",
-  "isNew": true,
+  "isNew": false,
   "dpp1": true,
   "titleJa": "好中球性炎症に対する新規治療薬の展望-DPP-1阻害薬などを中心に",
   "titleEn": "",
@@ -19,7 +19,7 @@
  {
   "id": 616,
   "cat": "治療・薬剤",
-  "isNew": true,
+  "isNew": false,
   "titleJa": "Volara呼吸療法を開始したメディケア・メディケイド患者の特性：診療報酬請求データ研究",
   "titleEn": "Characteristics of Medicare and Medicaid Patients Initiating Volara Respiratory Therapy: A Medical Claims Study.",
   "journal": "Advances in Therapy",
@@ -36,7 +36,7 @@
  {
   "id": 615,
   "cat": "マイクロバイオーム・感染",
-  "isNew": true,
+  "isNew": false,
   "titleJa": "緑膿菌のアバンドタイプ・インタラクトタイプは気管支拡張症の臨床的多様性を反映する",
   "titleEn": "Pseudomonas Aeruginosa Abundotypes and Interactotypes Reflect Clinical Heterogeneity in Bronchiectasis.",
   "journal": "American Journal of Respiratory and Critical Care Medicine",
@@ -54,7 +54,7 @@
  {
   "id": 614,
   "cat": "マイクロバイオーム・感染",
-  "isNew": true,
+  "isNew": false,
   "titleJa": "気管支拡張症における多剤耐性緑膿菌定着の疫学・危険因子・臨床転帰：香港での地域全体調査",
   "titleEn": "Epidemiology, risk factors and clinical outcomes of multidrug-resistant Pseudomonas aeruginosa colonization in bronchiectasis: a territory-wide study in Hong Kong.",
   "journal": "Journal of Thoracic Disease",
@@ -73,7 +73,7 @@
  {
   "id": 613,
   "cat": "増悪・病態",
-  "isNew": true,
+  "isNew": false,
   "titleJa": "アレルギー性気管支肺アスペルギルス症を合併した嚢胞性線維症患者におけるCFTR変異と遺伝子型パターン：サウジアラビア三次医療機関からの解析",
   "titleEn": "CFTR mutations and genotypic patterns among cystic fibrosis patients with allergic bronchopulmonary aspergillosis: analysis from a tertiary care center in Saudi Arabia.",
   "journal": "Frontiers in Pediatrics",
