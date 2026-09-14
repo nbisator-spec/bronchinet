@@ -1,8 +1,26 @@
 [
  {
+  "id": 622,
+  "cat": "マイクロバイオーム・感染",
+  "isNew": true,
+  "titleJa": "ポルトガル人非嚢胞性線維症気管支拡張症患者における喀痰マイクロバイオームと臨床プロファイル",
+  "titleEn": "Sputum microbiome and clinical profiles in Portuguese non-cystic fibrosis bronchiectasis patients.",
+  "journal": "Pulmonology",
+  "sjr": "Q1",
+  "if": "6.4",
+  "date": "2026-09-14",
+  "year": 2026,
+  "ev": "原著",
+  "authors": "Araujo R, Oliveira L, Azevedo I, Amorim A",
+  "aui": "Araujo Oliveira Azevedo Amorim",
+  "summary": "ポルトガル人の非嚢胞性線維症気管支拡張症患者58例の喀痰マイクロバイオームを16S rRNA解析したところ、Haemophilus優位群とPseudomonas優位群など明確なサブタイプに分かれ、Pseudomonas優位群はFEV1低下・BSI高値・広範な画像変化と関連していた。左下葉の病変を有する患者ではα多様性が有意に低く、宿主-マイクロバイオーム相互作用と解剖学的因子が病型形成に関与する可能性が示唆された。",
+  "pmid": "42733323",
+  "url": "https://pubmed.ncbi.nlm.nih.gov/42733323/"
+ },
+ {
   "id": 621,
   "cat": "ガイドライン・総説",
-  "isNew": true,
+  "isNew": false,
   "titleJa": "気管支拡張症における栄養管理：臨床医のための実践ガイド",
   "titleEn": "Nutritional management in bronchiectasis: A practical guide for clinicians.",
   "journal": "Therapeutic Advances in Respiratory Disease",
@@ -19,7 +37,7 @@
  {
   "id": 620,
   "cat": "治療・薬剤",
-  "isNew": true,
+  "isNew": false,
   "titleJa": "気管支拡張症のためのウェブベース理学療法リソース：内容・質・実装エビデンスの評価",
   "titleEn": "Web-Based Physiotherapy Resources for Bronchiectasis: Evaluation of Content, Quality, and Implementation Evidence.",
   "journal": "Physiotherapy Research International",
@@ -36,7 +54,7 @@
  {
   "id": 619,
   "cat": "マイクロバイオーム・感染",
-  "isNew": true,
+  "isNew": false,
   "titleJa": "ゼブラフィッシュ幼生の鰾を用いたMycobacterium abscessus感染モデル：感染動態・宿主病原体相互作用・薬剤効果の検討",
   "titleEn": "Zebrafish larvae swim bladder serves as a model to study Mycobacterium abscessus infection kinetics, host-pathogen interactions and drug efficacy.",
   "journal": "Mycobacteria (London, England)",
@@ -52,7 +70,7 @@
  {
   "id": 618,
   "cat": "増悪・病態",
-  "isNew": true,
+  "isNew": false,
   "titleJa": "気管支拡張症入院患者における喀血リスク：臨床予測モデルの開発と外部検証",
   "titleEn": "Hemoptysis risk in hospitalized patients with bronchiectasis: development and external validation of a clinical prediction model.",
   "journal": "Frontiers in Medicine",
