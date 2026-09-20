@@ -536,9 +536,9 @@
     <div class="dashboard-header">
       <div class="dashboard-title">
         🔥 本日のハイライト
-        <span class="dashboard-badge">NEW 5件</span>
+        <span class="dashboard-badge">NEW 3件</span>
       </div>
-      <div class="dashboard-date">最終更新：2026-09-20 05:04 自動生成</div>
+      <div class="dashboard-date">最終更新：2026-09-21 05:04 自動生成</div>
     </div>
     <div class="dashboard-grid" id="dashboardGrid"></div>
   </div>
@@ -706,6 +706,13 @@
       <div class="sidebar-card">
         <div class="sidebar-header orange">📅 デイリーレポート履歴</div>
         <div class="sidebar-body">
+          <div class="report-item">
+            <div>
+              <div class="report-date">2026年9月21日（05:04）</div>
+              <div class="report-count">新規3件（PubMed論文3件）。臨床試験・J-STAGE・CiNii新規なし。PubMed 10クエリ（過去30日、curl経由E-utilities直叩き）でユニークPMID 117件を確認、既読済み114件を除いた3件を精査し全件採用：①米国Epic Cosmos（匿名化3億700万人超）を用いた非CF気管支拡張症の有病率推移解析で、2025年の年齢調整有病率10万人あたり270.3・2015年から133%増と報告〈Chest・SJR Q1・IF 9.8・観察研究〉／②資源の限られたセーフティネット医療で気管支拡張症・NTM診療をどう実装するかを4領域の枠組みとして提案した総説〈Chest・SJR Q1・IF 9.8・総説〉／③国立病院機構天竜病院の肺結核255例で、結核後肺疾患の帰結として進行性線維化型ILD（PPFE様病変）が2.7%に出現し、菌量が多く喀痰陰性化が遅い例に多いことを示した日本発の観察研究〈Respiratory Investigation・SJR Q2・IF 2.0・観察研究〉。うち②以外の2件に「日本の視点」注釈を付与（②は米国セーフティネット制度に依存する内容のため原則どおり付けず）。J-STAGE新規0件・CiNii新規0件（商業誌の総説断片97件は原則どおり除外、KAKEN科研費3件は全て既報）。ClinicalTrials.gov RECRUITING 87試験・CTIS 22試験・JRCT関連20試験もすべて既報で新規採用試験なし。※PubMed MCP不通のためE-utilities直叩きで代替（Q6・Q8は502エラーのため再試行）</div>
+            </div>
+            <span class="report-link" onclick="showSection('reports',document.querySelectorAll('nav a')[6])">▶ 開く</span>
+          </div>
           <div class="report-item">
             <div>
               <div class="report-date">2026年9月20日（05:04）</div>
@@ -1808,6 +1815,35 @@
   <div class="reports-page-header">
     <h2>📝 デイリーレポート アーカイブ</h2>
     <p>毎朝5時に自動生成される文献サマリーの履歴。既読除外機能により、常に新規情報のみを収録しています。</p>
+  </div>
+
+  <!-- Report 2026-09-21 05:04 -->
+  <div class="report-card">
+    <div class="report-card-header">
+      <div>
+        <div class="report-card-date">📅 2026年9月21日（05:04 自動生成）</div>
+        <div style="font-size:12px;color:var(--text-muted);margin-top:3px;">PubMed 10クエリ（過去30日、E-utilities esearch/efetchをcurl直叩き。Q6・Q8はPubMed側の502エラーのため再試行して取得）でユニークPMID 117件を確認、既読・登録済み114件を除いた3件を精査し全件採用。J-STAGE新規0件・CiNii新規0件（商業誌の総説断片97件は原則どおり除外、KAKEN科研費3件は全て既報）。臨床試験はClinicalTrials.gov RECRUITING 87試験・CTIS 22試験・JRCT関連20試験を確認したがすべて既報。PubMed MCP不通のためE-utilities（esearch/efetch）curl直叩きで代替。</div>
+      </div>
+      <span class="report-card-count">新規 3件・臨床試験 0件</span>
+    </div>
+    <ul class="report-highlight-list">
+      <li>
+        <span class="report-num">1</span>
+        <span class="report-cat-inline" style="background:#fee2e2;color:#991b1b">増悪・病態</span>
+        <span>米国の電子カルテデータベースEpic Cosmos（匿名化3億700万人超）を用い、プライマリケア受診成人における非CF気管支拡張症の有病率推移を2015〜2025年で反復横断解析。2025年の対象5,800万人超のうち191,203例が症例定義を満たし、年齢調整有病率は10万人あたり270.3、2015年から133%増加していた。症例群は高齢（平均72.1歳 vs 58.1歳）・女性が多く（66%）・Medicare加入が多かった（Chest・SJR Q1・IF 9.8・観察研究）。<a href="https://pubmed.ncbi.nlm.nih.gov/42762985/" target="_blank" style="color:var(--primary)">PubMed</a></span>
+      </li>
+      <li>
+        <span class="report-num">2</span>
+        <span class="report-cat-inline" style="background:#e0e7ff;color:#3730a3">ガイドライン・総説</span>
+        <span>既存の気管支拡張症・NTM肺疾患ガイドラインは専門医評価・高度診断・高額治療へのアクセスを前提としており、資源の限られた医療システムでは実装が困難である点を指摘。Bronchiectasis and NTM Care Center Networkの経験に基づき、早期認識を支える診断経路、高リスク患者を優先する共同管理モデル、エビデンスに基づく治療への現実的アプローチなど4領域からなる適応の枠組みを提案する総説（Chest・SJR Q1・IF 9.8・総説）。<a href="https://pubmed.ncbi.nlm.nih.gov/42762987/" target="_blank" style="color:var(--primary)">PubMed</a></span>
+      </li>
+      <li>
+        <span class="report-num">3</span>
+        <span class="report-cat-inline" style="background:#fce7f3;color:#9d174d">日本発</span>
+        <span>国立病院機構天竜病院のHIV陰性肺結核255例で、HRCTによる間質性肺疾患・間質性肺異常の有無と経時的進行を後方視的に評価。2年超の画像追跡が可能な16例中7例（全体の2.7%）が進行性線維化型に分類され、結核菌量が多く喀痰陰性化までの期間が長い例に多く、胸膜肺実質線維弾性症（PPFE）様病変を呈した。一方、ベースラインで間質性異常がない例からはILDは生じなかった（Respiratory Investigation・SJR Q2・IF 2.0・観察研究）。<a href="https://pubmed.ncbi.nlm.nih.gov/42762682/" target="_blank" style="color:var(--primary)">PubMed</a></span>
+      </li>
+    </ul>
+    <div style="margin-top:12px;padding-top:12px;border-top:1px solid var(--border);font-size:13px;color:var(--text-muted);">🧪 臨床試験：本日新規なし（ClinicalTrials.gov・CTIS・JRCTいずれも既報）。</div>
   </div>
 
   <!-- Report 2026-09-20 05:04 -->
