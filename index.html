@@ -536,9 +536,9 @@
     <div class="dashboard-header">
       <div class="dashboard-title">
         🔥 本日のハイライト
-        <span class="dashboard-badge">NEW 3件</span>
+        <span class="dashboard-badge">NEW 0件</span>
       </div>
-      <div class="dashboard-date">最終更新：2026-09-21 05:04 自動生成</div>
+      <div class="dashboard-date">最終更新：2026-09-22 05:04 自動生成</div>
     </div>
     <div class="dashboard-grid" id="dashboardGrid"></div>
   </div>
@@ -706,6 +706,13 @@
       <div class="sidebar-card">
         <div class="sidebar-header orange">📅 デイリーレポート履歴</div>
         <div class="sidebar-body">
+          <div class="report-item">
+            <div>
+              <div class="report-date">2026年9月22日（05:04）</div>
+              <div class="report-count">新規1件（臨床試験1件）。PubMed論文・J-STAGE・CiNii・JRCT・CTIS新規なし。PubMed MCP接続を確認し10クエリ（過去30日）を実行、ユニークPMID 116件を確認したが全件既報。J-STAGE 13件・CiNii 120件（商業誌「医学のあゆみ」総説断片3件は原則どおり除外、KAKEN/業界紙0件）も新規なし。ClinicalTrials.gov RECRUITING 30試験を確認し、ベルギーKU Leuven主導の個別化バクテリオファージ療法レジストリ（EPHICACI、NCT06368388）を新規採用——既存治療が奏効しない難治性感染症（気管支拡張症・嚢胞性線維症の肺感染症を含む）が対象。CTIS 22試験・JRCT関連20試験はすべて既報。</div>
+            </div>
+            <span class="report-link" onclick="showSection('reports',document.querySelectorAll('nav a')[6])">▶ 開く</span>
+          </div>
           <div class="report-item">
             <div>
               <div class="report-date">2026年9月21日（05:04）</div>
@@ -1815,6 +1822,25 @@
   <div class="reports-page-header">
     <h2>📝 デイリーレポート アーカイブ</h2>
     <p>毎朝5時に自動生成される文献サマリーの履歴。既読除外機能により、常に新規情報のみを収録しています。</p>
+  </div>
+
+  <!-- Report 2026-09-22 05:04 -->
+  <div class="report-card">
+    <div class="report-card-header">
+      <div>
+        <div class="report-card-date">📅 2026年9月22日（05:04 自動生成）</div>
+        <div style="font-size:12px;color:var(--text-muted);margin-top:3px;">PubMed MCP接続を確認し10クエリ（過去30日）を実行、ユニークPMID 116件を確認したが全件既報。J-STAGE 13件・CiNii 120件（商業誌「医学のあゆみ」総説断片3件は原則どおり除外、KAKEN科研費・業界紙は0件）も新規なし。臨床試験はClinicalTrials.gov RECRUITING 30試験・CTIS 22試験・JRCT関連20試験を確認し、CT.gov 1件を新規採用。</div>
+      </div>
+      <span class="report-card-count">新規 0件・臨床試験 1件</span>
+    </div>
+    <ul class="report-highlight-list">
+      <li>
+        <span class="report-num">1</span>
+        <span class="report-cat-inline" style="background:#cffafe;color:#155e75">臨床試験</span>
+        <span>ベルギーKU Leuven大学病院が主導する多施設前向きレジストリ「EPHICACI」。既存の抗菌薬・外科治療が奏効しない難治性感染症（気管支拡張症・嚢胞性線維症の肺感染症、慢性菌血症、筋骨格系感染症等）に対し、患者ごとにバンク保有ファージから選定する個別化バクテリオファージ療法を最終手段として実施した実態とコストを追跡する観察研究（RECRUITING）。</span>
+      </li>
+    </ul>
+    <div style="margin-top:12px;padding-top:12px;border-top:1px solid var(--border);font-size:13px;color:var(--text-muted);">📚 論文：本日新規なし（PubMed・J-STAGE・CiNiiいずれも既報）。</div>
   </div>
 
   <!-- Report 2026-09-21 05:04 -->
@@ -6294,6 +6320,8 @@ const TRIAL_GROUPS = [
         desc: '重症喘息・COPD・非嚢胞性線維症性気管支拡張症・嚢胞性線維症の患者を対象に、CTで同定した粘液栓の下流領域についてキセノンMRIを用いた換気・ガス交換障害を評価する研究。', url: 'https://clinicaltrials.gov/study/NCT06985225' },
       { name: '宿主-微生物マルチオミクスコホート（北海道大学）', drug: '観察研究（サルコイドーシス/気管支拡張症/NTM複合コホート）', sponsor: '北海道大学病院', phase: '観察研究', status: '募集前', nct: 'jRCT1010260033', color: '#475569',
         desc: 'サルコイドーシス・気管支拡張症・肺非結核性抗酸菌症の患者300例から臨床情報と生体試料を前向きに収集し、宿主-微生物相互作用に関する分子・免疫・微生物学的特徴と診断・重症度・予後バイオマーカーを探索する多施設マルチオミクス統合コホート研究。登録開始予定2026年9月。公表日：令和8年8月19日', url: 'https://jrct.mhlw.go.jp/latest-detail/jRCT1010260033' },
+      { name: 'EPHICACI 個別化ファージ療法レジストリ（ルーヴェン）', drug: 'パーソナライズドファージ療法（観察研究）', sponsor: 'Universitaire Ziekenhuizen KU Leuven', phase: '観察・レジストリ', status: 'RECRUITING', nct: 'NCT06368388', color: '#334155',
+        desc: 'ベルギーKU Leuven主導の多施設前向きレジストリ。既存治療（抗菌薬・外科）が奏効しない難治性感染症（気管支拡張症/嚢胞性線維症の肺感染症を含む）に対し、患者ごとに選定したバクテリオファージによる最終手段治療の実施実態とコストを追跡する。', url: 'https://clinicaltrials.gov/study/NCT06368388' },
     ]
   },
 

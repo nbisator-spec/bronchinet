@@ -2,7 +2,7 @@
  {
   "id": 646,
   "cat": "日本発",
-  "isNew": true,
+  "isNew": false,
   "titleJa": "肺結核後に出現する進行性線維化型間質性肺疾患：後方視的観察研究",
   "titleEn": "Progressive fibrotic interstitial lung disease emerging after pulmonary tuberculosis: a retrospective observational study.",
   "journal": "Respiratory Investigation",
@@ -21,7 +21,7 @@
  {
   "id": 645,
   "cat": "増悪・病態",
-  "isNew": true,
+  "isNew": false,
   "titleJa": "米国の非嚢胞性線維症気管支拡張症：大規模電子カルテ集団における有病率推移 2015-2025",
   "titleEn": "Non-Cystic Fibrosis Bronchiectasis in the United States: Prevalence Trends in a Large Electronic Health Record Population, 2015-2025.",
   "journal": "Chest",
@@ -40,7 +40,7 @@
  {
   "id": 644,
   "cat": "ガイドライン・総説",
-  "isNew": true,
+  "isNew": false,
   "titleJa": "セーフティネット医療における気管支拡張症・NTM診療の提供：実装のための実践的枠組み",
   "titleEn": "Delivering Bronchiectasis and NTM Care in Safety-Net Health Systems: A Practical Framework for Implementation.",
   "journal": "Chest",
