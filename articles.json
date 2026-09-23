@@ -1,8 +1,26 @@
 [
  {
-  "id": 650,
+  "id": 651,
   "cat": "マイクロバイオーム・感染",
   "isNew": true,
+  "titleJa": "病原性因子PslとPcrVの標的化は気管支拡張症・嚢胞性線維症モデルにおいて宿主防御を回復させる",
+  "titleEn": "Targeting virulence factors Psl and PcrV restores host defense in bronchiectasis and cystic fibrosis models.",
+  "journal": "Journal of Clinical Investigation",
+  "sjr": "Q1",
+  "if": "13.6",
+  "date": "2026-09-22",
+  "year": 2026,
+  "ev": "原著",
+  "authors": "Qin W, Brailsford W, Cromer Berman SM et al.",
+  "aui": "Qin Brailsford Cromer Berman Thornton DiGiandomenico Kubes",
+  "summary": "CF様マウス（βENaC過剰発現・CFTR欠損）にアガロースビーズ包埋緑膿菌を感染させ、トブラマイシン抵抗性の持続性バイオフィルム感染モデルを確立し、生体内肺顕微鏡で肺胞マクロファージが次第にバイオフィルムから解離し、動員された好中球も菌を排除できないことを示した。PslとPcrVを標的とする二重特異性抗体gremubamab（MEDI3902）の投与は肺胞マクロファージを保持して貪食能を回復させ、過剰な好中球性炎症を抑制し、菌排除と生存を有意に改善した。",
+  "pmid": "42771482",
+  "url": "https://pubmed.ncbi.nlm.nih.gov/42771482/"
+ },
+ {
+  "id": 650,
+  "cat": "マイクロバイオーム・感染",
+  "isNew": false,
   "titleJa": "慢性肺感染症患者における抗菌薬耐性の国際疫学",
   "titleEn": "International epidemiology of antimicrobial resistance in people living with chronic lung infection.",
   "journal": "Thorax",
@@ -21,7 +39,7 @@
  {
   "id": 649,
   "cat": "ガイドライン・総説",
-  "isNew": true,
+  "isNew": false,
   "titleJa": "小児気管支拡張症：見逃されやすいが評価可能な疾患",
   "titleEn": "Bronchiectasis in children: An underdiagnosed disease with accessible screening and etiological assessment.",
   "journal": "Revue des maladies respiratoires",
@@ -39,7 +57,7 @@
  {
   "id": 648,
   "cat": "治療・薬剤",
-  "isNew": true,
+  "isNew": false,
   "titleJa": "気管支拡張症における高張食塩水・カルボシステインの喀痰レオロジーへの影響：CLEAR-EME",
   "titleEn": "Effects of hypertonic saline and/or carbocisteine on sputum rheology in bronchiectasis: CLEAR-EME.",
   "journal": "ERJ Open Research",
@@ -58,7 +76,7 @@
  {
   "id": 647,
   "cat": "増悪・病態",
-  "isNew": true,
+  "isNew": false,
   "titleJa": "小児非嚢胞性線維症気管支拡張症における気道過敏性",
   "titleEn": "Bronchial Hyperresponsiveness in Pediatric Non-Cystic Fibrosis Bronchiectasis.",
   "journal": "Pediatric Pulmonology",
