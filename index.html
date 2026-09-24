@@ -536,9 +536,9 @@
     <div class="dashboard-header">
       <div class="dashboard-title">
         🔥 本日のハイライト
-        <span class="dashboard-badge">NEW 1件</span>
+        <span class="dashboard-badge">NEW 2件</span>
       </div>
-      <div class="dashboard-date">最終更新：2026-09-24 05:04 自動生成</div>
+      <div class="dashboard-date">最終更新：2026-09-25 05:04 自動生成</div>
     </div>
     <div class="dashboard-grid" id="dashboardGrid"></div>
   </div>
@@ -706,6 +706,13 @@
       <div class="sidebar-card">
         <div class="sidebar-header orange">📅 デイリーレポート履歴</div>
         <div class="sidebar-body">
+          <div class="report-item">
+            <div>
+              <div class="report-date">2026年9月25日（05:04）</div>
+              <div class="report-count">新規2件（PubMed論文2件）＋臨床試験2件。PubMed MCP接続を確認し10クエリ（過去30日・掲載日基準）を実行、ユニークPMID 118件はすべて既読。追加で登録日基準（過去7日）の照合を行い、索引遅れの3件を精査して主題外1件（STAT1機能獲得型変異の免疫不全研究で気管支拡張は1例の所見。seen_pmidsへ追記し再掲防止）を除く2件を新規採用。J-STAGE 13件・CiNii 120件・JRCT関連20試験・CTIS 22試験は既報。ClinicalTrials.gov RECRUITING 90試験から新規2試験（AMBER：アジスロマイシン第IV相RCT、慢性肺疾患の遠隔呼吸リハビリRCT）を追加。 採用論文：①EMBARC/ELF患者作成の15質問に対するChatGPT・Bard・Copilotの回答を専門家28名・患者33名が評価したAIR-BE研究〈Therapeutic Advances in Respiratory Disease・SJR Q1・観察研究〉、②悪性腫瘍既往の非HIV患者における致死的な再発性空洞型MAC肺疾患〈Cureus・症例報告〉。</div>
+            </div>
+            <span class="report-link" onclick="showSection('reports',document.querySelectorAll('nav a')[6])">▶ 開く</span>
+          </div>
           <div class="report-item">
             <div>
               <div class="report-date">2026年9月24日（05:04）</div>
@@ -1836,6 +1843,34 @@
   <div class="reports-page-header">
     <h2>📝 デイリーレポート アーカイブ</h2>
     <p>毎朝5時に自動生成される文献サマリーの履歴。既読除外機能により、常に新規情報のみを収録しています。</p>
+  </div>
+
+  <!-- Report 2026-09-25 05:04 -->
+  <div class="report-card">
+    <div class="report-card-header">
+      <div>
+        <div class="report-card-date">📅 2026年9月25日（05:04 自動生成）</div>
+        <div style="font-size:12px;color:var(--text-muted);margin-top:3px;">PubMed MCP接続を確認し10クエリ（過去30日・掲載日基準）を実行、ユニークPMID 118件はすべて既読。追加で登録日基準（過去7日）の照合を行い、索引遅れの3件を精査して主題外1件（STAT1機能獲得型変異の免疫不全研究で気管支拡張は1例の所見。seen_pmidsへ追記し再掲防止）を除く2件を新規採用。J-STAGE 13件・CiNii 120件・JRCT関連20試験・CTIS 22試験は既報。ClinicalTrials.gov RECRUITING 90試験から新規2試験（AMBER：アジスロマイシン第IV相RCT、慢性肺疾患の遠隔呼吸リハビリRCT）を追加。</div>
+      </div>
+      <span class="report-card-count">新規 2件・臨床試験 2件</span>
+    </div>
+    <ul class="report-highlight-list">
+      <li>
+        <span class="report-num">1</span>
+        <span class="report-cat-inline" style="background:#fee2e2;color:#991b1b">増悪・病態</span>
+        <span>AIR-BE研究（Therapeutic Advances in Respiratory Disease）：EMBARC/ELF患者諮問グループ作成の15質問をChatGPT・Bard・Copilotに入力し、ERS専門家28名と患者33名が評価。45回答中37が信頼可能で、正確性・網羅性はChatGPTが最高（正確性中央値8.0 vs 7.0 vs 7.0）。</span>
+      </li>
+      <li>
+        <span class="report-num">2</span>
+        <span class="report-cat-inline" style="background:#dbeafe;color:#1e40af">マイクロバイオーム・感染</span>
+        <span>悪性腫瘍既往・気管支拡張症を有する71歳女性の再発性空洞型MAC肺疾患が、ガイドライン治療下でも呼吸不全で死亡した症例報告（Cureus）。治療中断と構造的肺疾患が致死的経過の背景とされた。</span>
+      </li>
+      <li>
+        <span class="report-num">3</span>
+        <span class="report-cat-inline" style="background:#cffafe;color:#155e75">臨床試験</span>
+        <span>AMBER（NCT07608328・Assiut University・Phase IV）：非CF気管支拡張症500例でアジスロマイシン250 mg連日12か月の増悪抑制を検証する二重盲検プラセボ対照RCT。ほか遠隔呼吸リハビリRCT（NCT07666841）を追加。</span>
+      </li>
+    </ul>
   </div>
 
   <!-- Report 2026-09-24 05:04 -->
@@ -6463,6 +6498,10 @@ const TRIAL_GROUPS = [
         desc: 'AstraZeneca主導の、中国人非CF気管支拡張症患者のフェノタイプ・エンドタイプを解明するトランスレーショナル観察研究（320例）。', url: 'https://clinicaltrials.gov/study/NCT07245407' },
       { name: '急性増悪への気管支鏡下アミカシン局所注入 RCT', drug: 'アミカシン（気管支鏡下局所注入）', sponsor: 'First Affiliated Hospital of Ningbo University（寧波大学附属第一病院）', phase: 'N/A（第IV相相当）', status: 'RECRUITING', nct: 'NCT07813299', color: '#0e7490',
         desc: '成人の気管支拡張症急性増悪を対象に、標準治療への上乗せで気管支鏡下にアミカシンを局所注入する効果・安全性を検証する多施設・盲検・無作為化比較試験。', url: 'https://clinicaltrials.gov/study/NCT07813299' },
+      { name: 'AMBER：アジスロマイシンによる増悪リスク抑制 RCT', drug: 'Azithromycin 250 mg 1日1回（12か月）', sponsor: 'Assiut University（エジプト）', phase: 'Phase IV', status: 'RECRUITING', nct: 'NCT07608328', color: '#0e7490',
+        desc: '成人の非CF気管支拡張症を対象に、標準治療へのアジスロマイシン250 mg連日12か月の上乗せが「12か月間に1回以上の増悪」を減らすかを検証する二重盲検プラセボ対照RCT（500例・1:1割付・ITT解析）。', url: 'https://clinicaltrials.gov/study/NCT07608328' },
+      { name: '慢性肺疾患に対する遠隔呼吸リハビリテーション RCT', drug: '—（遠隔呼吸リハビリ・専用アプリ＋遠隔モニタリング）', sponsor: 'Tel-Aviv Sourasky Medical Center（イスラエル）', phase: 'N/A', status: 'RECRUITING', nct: 'NCT07666841', color: '#64748b',
+        desc: 'COPD・気管支拡張症・ILD・PAH等の慢性肺疾患患者（90例、イスラエル2施設）を遠隔呼吸リハビリと施設型リハビリ紹介に無作為化し、リハビリ開始・継続率（主要評価項目）を比較する。', url: 'https://clinicaltrials.gov/study/NCT07666841' },
     ]
   },
 
