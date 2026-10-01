@@ -2,7 +2,7 @@
  {
   "id": 669,
   "cat": "日本発",
-  "isNew": true,
+  "isNew": false,
   "titleJa": "肺移植前後の微生物学的動態：臨床的解釈と予後への含意",
   "titleEn": "Microbiological Dynamics Before and After Lung Transplantation: Clinical Interpretation and Prognostic Implications.",
   "journal": "Clinical Transplantation",
@@ -19,7 +19,7 @@
  {
   "id": 670,
   "cat": "マイクロバイオーム・感染",
-  "isNew": true,
+  "isNew": false,
   "titleJa": "フーリン阻害は緑膿菌感染マウスモデルにおける急性肺傷害を防御する",
   "titleEn": "Furin inhibition protects against acute lung injury in a mouse model of Pseudomonas aeruginosa infection.",
   "journal": "American Journal of Respiratory Cell and Molecular Biology",
@@ -37,7 +37,7 @@
  {
   "id": 671,
   "cat": "増悪・病態",
-  "isNew": true,
+  "isNew": false,
   "titleJa": "原発性線毛機能不全症（PCD）の気道画像診療の実態：標準化ガイドラインに向けた国際調査",
   "titleEn": "Airway imaging practices in primary ciliary dyskinesia: a global survey to guide standardized guidelines.",
   "journal": "British Journal of Radiology",
@@ -54,7 +54,7 @@
  {
   "id": 672,
   "cat": "増悪・病態",
-  "isNew": true,
+  "isNew": false,
   "titleJa": "原発性線毛機能不全症（PCD）における難聴と鼓膜換気チューブ留置の転帰",
   "titleEn": "Hearing loss and tympanostomy tube outcomes in primary ciliary dyskinesia.",
   "journal": "International Journal of Pediatric Otorhinolaryngology",
@@ -71,7 +71,7 @@
  {
   "id": 673,
   "cat": "増悪・病態",
-  "isNew": true,
+  "isNew": false,
   "titleJa": "持続性喘鳴を呈した9歳女児の気管支内線維上皮性ポリープ：症例報告",
   "titleEn": "Endobronchial fibroepithelial polyp presenting as persistent wheezing in a 9-year-old girl: a case report.",
   "journal": "Frontiers in Pediatrics",
