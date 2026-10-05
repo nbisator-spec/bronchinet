@@ -2,7 +2,7 @@
  {
   "id": 681,
   "cat": "増悪・病態",
-  "isNew": true,
+  "isNew": false,
   "titleJa": "CEP135遺伝子バリアントは先天性小頭症と原発性線毛運動不全症（PCD）を引き起こす",
   "titleEn": "Variants in CEP135 Cause Congenital Microcephaly and Primary Ciliary Dyskinesia.",
   "journal": "Pediatric Pulmonology",
@@ -20,7 +20,7 @@
  {
   "id": 682,
   "cat": "マイクロバイオーム・感染",
-  "isNew": true,
+  "isNew": false,
   "titleJa": "原発性線毛運動不全症の小児における緑膿菌とインフルエンザ菌の定着が肺機能低下に及ぼす縦断的影響の比較",
   "titleEn": "Longitudinal Impact of Pseudomonas aeruginosa Versus Haemophilus influenzae Colonization on Lung Function Decline in Children With Primary Ciliary Dyskinesia.",
   "journal": "Pediatric Pulmonology",
@@ -38,7 +38,7 @@
  {
   "id": 683,
   "cat": "マイクロバイオーム・感染",
-  "isNew": true,
+  "isNew": false,
   "titleJa": "メタゲノム次世代シーケンシング（mNGS）がノカルジアを検出したとき：臨床的解釈から免疫状態に基づく臨床管理まで",
   "titleEn": "When metagenomic next-generation sequencing detects Nocardia: from clinical interpretation to immune-based clinical management.",
   "journal": "Frontiers in Cellular and Infection Microbiology",
@@ -55,7 +55,7 @@
  {
   "id": 684,
   "cat": "増悪・病態",
-  "isNew": true,
+  "isNew": false,
   "titleJa": "ANCA関連血管炎の先行（センチネル）症状としての気管支拡張症：症例報告と文献レビュー",
   "titleEn": "Bronchiectasis as the Sentinel Manifestation of ANCA-Associated Vasculitis: A Case Report and Literature Review.",
   "journal": "Respirology Case Reports",
