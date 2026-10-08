@@ -1,5 +1,88 @@
 [
  {
+  "id": 692,
+  "cat": "ガイドライン・総説",
+  "isNew": true,
+  "titleJa": "2025年ERS推奨に基づくイタリアの気管支拡張症診療の現状評価",
+  "titleEn": "Evaluating current bronchiectasis care in Italy according to the 2025 European respiratory society recommendations.",
+  "journal": "Therapeutic Advances in Respiratory Disease",
+  "sjr": "Q1",
+  "date": "2026-07-04",
+  "year": 2026,
+  "ev": "観察研究",
+  "authors": "De Angelis A, Comellini V, Gramegna A et al.",
+  "aui": "De Angelis Comellini Gramegna Battaglia Montemurro Bellofiore Pagnini Privitera Ori Simonetta Nigro Chalmers Nobile Blasi Aliberti",
+  "summary": "ミラノ・Humanitas大学のグループが、イタリア気管支拡張症患者会（AIB）に関連する施設を対象に全国多施設横断調査を行い、施設体制・診断資源・多職種診療と、2025年ERSガイドラインから導いた10の中核管理領域への準拠状況を評価した。最小限の病因検査バンドルはほぼ全施設で利用可能となり2016年より改善した一方、稀な原因の特殊診断・体系的な理学療法・書面の自己管理計画は施設間で不均一で、長期吸入抗菌薬とマクロライドは広く処方されるもののアクセス障壁が残るとした。",
+  "jpView": "独立した気管支拡張症ガイドラインを持たない本邦（2026年時点）でも、ERS 2025の中核推奨への準拠度を施設単位で測るこの枠組みは、国内の診療実態調査やギャップ分析の設計に応用しうる。",
+  "pmid": "42400276",
+  "url": "https://doi.org/10.1177/17534666261459923"
+ },
+ {
+  "id": 693,
+  "cat": "マイクロバイオーム・感染",
+  "isNew": true,
+  "titleJa": "非CF気管支拡張症のStenotrophomonas maltophilia慢性気管支感染に対する吸入レボフロキサシン併用療法：症例報告",
+  "titleEn": "Inhaled Levofloxacin in a Combination Regimen for Stenotrophomonas maltophilia Chronic Bronchial Infection in Non-Cystic Fibrosis Bronchiectasis: A Case Report.",
+  "journal": "Open Respiratory Archives",
+  "sjr": "Q3",
+  "date": "2026-07-23",
+  "year": 2026,
+  "ev": "症例報告",
+  "authors": "Flores García J, Navarro Llanes J, Alvarado-Miranda M",
+  "aui": "Flores García Navarro Llanes Alvarado-Miranda",
+  "summary": "スペインMútua Terrassa大学病院からの報告で、両側下葉に円柱状気管支拡張を有する19歳のアスリートのS. maltophilia慢性気管支感染に対し、経口levofloxacin単剤が無効となった後、全身trimethoprim-sulfamethoxazoleと28日サイクルの間欠吸入levofloxacinを併用した。症状の完全寛解・肺機能の安定・菌の消失が得られ、著者らは非CF気管支拡張症で吸入levofloxacinによるS. maltophilia除菌に成功した初の報告としている。",
+  "pmid": "42750957",
+  "url": "https://doi.org/10.1016/j.opresp.2026.100658"
+ },
+ {
+  "id": 694,
+  "cat": "マイクロバイオーム・感染",
+  "isNew": true,
+  "titleJa": "免疫正常女性で遷延性発熱を呈したLady Windermere症候群",
+  "titleEn": "Lady Windermere Syndrome Presenting As Prolonged Febrile Illness in an Immunocompetent Woman.",
+  "journal": "Cureus",
+  "date": "2026-06-04",
+  "year": 2026,
+  "ev": "症例報告",
+  "authors": "Romero Merino P, Lerzundi Mamani ML, Cipion-Bueno E et al.",
+  "aui": "Romero Merino Lerzundi Mamani Cipion-Bueno Herrera Ramos Maguiña",
+  "summary": "肺塞栓症・甲状腺機能低下症の既往がある60歳女性が45日間の乾性咳嗽と間欠熱で受診し、痩せ型体型と漏斗胸を認め、CTで中葉・舌区優位の気管支拡張症、培養でMycobacterium aviumを同定した。rifampicin・ethambutol・azithromycinによる12か月の多剤併用療法で菌陰性化と臨床的改善が得られ、画像所見も安定して寛解が持続した。",
+  "pmid": "42403832",
+  "url": "https://doi.org/10.7759/cureus.110224"
+ },
+ {
+  "id": 695,
+  "cat": "治療・薬剤",
+  "isNew": true,
+  "titleJa": "嚢胞性線維症および他のCFTR機能低下性気道疾患を標的に最適化された新規化合物シリーズ",
+  "titleEn": "A novel drug series optimized to address cystic fibrosis and other CFTR deficiency diseases of human airways.",
+  "journal": "npj Drug Discovery",
+  "date": "2025-11-03",
+  "year": 2025,
+  "ev": "原著",
+  "authors": "Rab A, Hong JS, Manfredi C et al.",
+  "aui": "Rab Hong Manfredi Joshi Ponnaluri Tracy Luo Yang Kolykhalov Davies Sorscher",
+  "summary": "エモリー大学のグループが、気道上皮への局所投与で変異型・野生型CFTRの機能を増強するよう最適化したトリアゾロチアジアジン系の新規化合物シリーズを報告し、その作用機序の少なくとも一部はホスホジエステラーゼ4（PDE4）阻害によると考えられた。CFキャリアや後天性CFTR機能低下は非CF気管支拡張症・慢性副鼻腔炎の素因となることから、有効なモジュレーターを使えないCF患者に加え、非CF気管支拡張症などの一般的疾患への新たな治療戦略となりうるとした。",
+  "pmid": "42380489",
+  "url": "https://doi.org/10.1038/s44386-025-00026-1"
+ },
+ {
+  "id": 696,
+  "cat": "治療・薬剤",
+  "isNew": true,
+  "dpp1": true,
+  "titleJa": "Brensocatib（LiverTox：薬剤性肝障害データベース）",
+  "titleEn": "Brensocatib.",
+  "journal": "LiverTox: Clinical and Research Information on Drug-Induced Liver Injury",
+  "date": "2026-09-07",
+  "year": 2026,
+  "ev": "総説",
+  "summary": "米国NIDDKの薬剤性肝障害データベースLiverToxに、DPP-1阻害薬brensocatibの項目が2026年9月に追加された。治療中に血清アミノトランスフェラーゼ上昇が低頻度にみられるものの、臨床的に明らかな肝障害との関連は報告されていないと評価している。",
+  "jpView": "DPP-1阻害薬クラスの安全性（肝機能）を議論する際に参照できる公的データベースの評価。brensocatib（Insmed）についての記載であり、verducatib（Boehringer）とは別化合物である点に留意。",
+  "pmid": "42842738",
+  "url": "https://www.ncbi.nlm.nih.gov/books/NBK625217/"
+ },
+ {
   "id": 688,
   "cat": "治療・薬剤",
   "isNew": true,
@@ -4321,6 +4404,7 @@
   "year": 2025,
   "ev": "総説",
   "authors": "Mohapatra PR, Mishra B",
+  "aui": "Mohapatra Mishra",
   "summary": "MAC・M. abscessus・M. kansasiiを中心にNTM肺症の診断（ATS/IDSA 2020基準における気管支拡張症所見を含む臨床・画像・微生物学的三徴）と治療（マクロライド多剤併用、M. abscessusに対する長期静注療法、吸入アミカシンリポソーム製剤等）を概説する総説。菌種同定・薬剤感受性試験の重要性と、遺伝子型耐性検査など今後の診療の方向性にも言及している。",
   "jpView": "日本は肺MAC症を中心にNTM肺症の有病率・罹患率が世界的に高い地域であり、気管支拡張症とのオーバーラップは国内呼吸器診療の主要課題。本総説の診断・治療パラダイムは国内NTM-気管支拡張症診療の位置づけを俯瞰する参考になる。",
   "pmid": "42457303",
@@ -4728,7 +4812,7 @@
   "cat": "増悪・病態",
   "isNew": false,
   "titleJa": "気管支拡張症における誤嚥とGERD：高リスク集団における呼吸器内科・消化器内科・耳鼻咽喉科の連携",
-  "titleEn": "Aspiration and GERD in Bronchiectasis: Bridging Pulmonology, Gastroenterology, and Otolaryngology in an At-Risk Population.",
+  "titleEn": "Aspiration and Gastroesophageal Reflux Disease in Bronchiectasis: Bridging Pulmonology, Gastroenterology, and Otolaryngology in an At-Risk Population.",
   "journal": "Chest",
   "sjr": "Q1",
   "if": "9.8",
@@ -5249,6 +5333,7 @@
   "aui": "Harnan Franklin Angus Soriano Johannessen Sutton Garcia-Aymerich Auer Carroll Simpson Powell Anderson Joos",
   "summary": "WHO欧州53か国を対象に14の呼吸器疾患の罹患率・有病率・死亡率・DALY・社会的コストを系統的にマッピング。気管支拡張症はわずか1〜5か国分の疫学データしか存在せず、CF・A1AD・睡眠時無呼吸と並んでエビデンスギャップが最大の疾患の一つと特定された。",
   "jpView": "気管支拡張症は疫学データが乏しくエビデンスギャップが最大級と指摘。日本も全国的な有病率データが限られており、国内レジストリ整備の必要性を裏付ける。",
+  "pmid": "42376020",
   "url": "https://pubmed.ncbi.nlm.nih.gov/42376020/"
  },
  {
@@ -5267,6 +5352,7 @@
   "aui": "Johnson Ahmad",
   "summary": "肺結節と気管支拡張症の偶発所見を契機に70代男性に嚢胞性線維症（CF）が確定診断された1例を報告。汗試験・CFTR遺伝子型解析でCF確定し、成人気管支拡張症患者へのCFスクリーニングには施設間格差があることが問題提起された。",
   "jpView": "BEを契機に70代で診断された成人CF。CFが極めて稀な日本では成人CFが見逃されやすく、原因不明BEでCFTRを鑑別に含める重要性を逆説的に示す。",
+  "pmid": "42373200",
   "url": "https://pubmed.ncbi.nlm.nih.gov/42373200/"
  },
  {
@@ -5284,6 +5370,7 @@
   "authors": "Bertini V, Pifferi M, Ramone T, Maj MC, Michelucci A ほか",
   "aui": "Bertini Pifferi Ramone Maj Michelucci Di Cicco Cambi Peroni Caligo Valetto",
   "summary": "203名のPCD疑い患者コホートにてNGS後遺伝診断未確定例28名にaCGH-CNV解析を実施し、13例（6.4%）でDNAAF4・CCDC39・CFAP300等のCNVを特定した。CNV解析追加により全体診断収率が86.2%から92.6%に向上し、PCD遺伝診断への標準的な追加検査として推奨された。",
+  "pmid": "42061474",
   "url": "https://pubmed.ncbi.nlm.nih.gov/42061474/"
  },
  {
@@ -5318,6 +5405,7 @@
   "authors": "McDermott GC, Hammer MM, Wang X, Paudel ML, Chang SC ほか",
   "aui": "McDermott Hammer Wang Paudel Chang Juge Zhang Lorusso Samuylov Vanni Saavedra Kowalski Qian Bade Mueller Sparks Byrne",
   "summary": "肺癌スクリーニング低線量CT施行のRA患者228名と非RA患者14,805名を比較し、RA群で気管支拡張症検出率が有意に高いことを示した（OR 1.64, 95%CI 1.12-2.39）。RA患者の4人に1人が陽性スクリーニング所見を持ち、肺癌スクリーニング機会を気管支拡張症等の肺合併症早期発見にも活用できることが示唆された。",
+  "pmid": "41144903",
   "url": "https://pubmed.ncbi.nlm.nih.gov/41144903/"
  },
  {
@@ -5335,6 +5423,7 @@
   "aui": "Mishra Choudhury Gopinath",
   "summary": "救急室での喀血管理を体系的に解説した総説。高収入国では気管支拡張症・悪性腫瘍・心疾患が主因であり、ネブライザートラネキサム酸が新たな補助療法として注目される。気管支動脈塞栓術が90%超の止血率を持ち、多職種チームによる段階的管理が最重要とされる。",
   "jpView": "救急での喀血管理の総説。NTM/BEで喀血が多くBAEが頻用される日本の実臨床に直結。ネブライザートラネキサム酸等の補助療法も参考になる。",
+  "pmid": "42377159",
   "url": "https://pubmed.ncbi.nlm.nih.gov/42377159/"
  },
  {
@@ -5342,7 +5431,7 @@
   "cat": "マイクロバイオーム・感染",
   "isNew": false,
   "titleJa": "MAC肺疾患の治療後再発に関連する画像因子：多施設後ろ向きコホート研究",
-  "titleEn": "Radiological factors associated with the recurrence of MAC pulmonary disease: a multicentre retrospective cohort study.",
+  "titleEn": "Radiological factors associated with the recurrence of Mycobacterium avium complex pulmonary disease: a multicentre retrospective cohort study.",
   "journal": "Thorax",
   "sjr": "Q1",
   "if": "9.1",
@@ -5353,6 +5442,7 @@
   "aui": "Lee Lee Oh Jo Shim Kwon",
   "summary": "治療成功後のMAC肺疾患患者538名のCT所見と再発リスクを後ろ向き多施設解析。治療後CTの細胞性細気管支炎スコア（≥3）が再発の最強独立予測因子（aHR 1.64）であり、結節気管支拡張型・線維空洞型の両表現型で再発リスク増大と関連することが示された。",
   "jpView": "日本はNTM/MAC肺疾患の罹患率が世界最高水準であり、気管支拡張症合併が多い。治療後CTの細胞性細気管支炎スコアが再発予測に有用なことは、経過観察プロトコールの根拠として活用可能（2026年）。",
+  "pmid": "42373326",
   "url": "https://pubmed.ncbi.nlm.nih.gov/42373326/"
  },
  {
@@ -5369,6 +5459,7 @@
   "authors": "De Carli A, Pastore A, Maj MC, Filippini F, Matteucci S ほか",
   "aui": "De Carli Pastore Maj Filippini Matteucci Di Cicco Peroni Donzelli Crucitta Zentilin Michelucci Gabellini Freer Lai Pifferi Pistello",
   "summary": "PCD原因遺伝子RSPH4A変異に対してadenine base editorをAAVベクターで患者由来気道細胞に導入し、約30%の正常繊毛運動パターン回復を実証した概念実証研究。現時点では低い編集効率と深層細胞への送達制限が課題であるが、PCD遺伝子治療の実現可能性を初めて示した。",
+  "pmid": "42050778",
   "url": "https://pubmed.ncbi.nlm.nih.gov/42050778/"
  },
  {
@@ -5388,6 +5479,7 @@
   "aui": "Pastorino Ferraris Robbiano Staffiere Riccio Braido",
   "summary": "好中球-DPP-1-プロテアーゼ軸を気管支拡張症・COPD・喘息の各文脈で比較レビュー。気管支拡張症では骨髄期のDPP-1阻害（brensocatib・verducatib）が増悪減少の臨床エビデンスを持ち、COPD・喘息への適用にはバイオマーカー誘導型の患者選択が必要とした。",
   "jpView": "Brensocatib（Insmed）がFDA承認（2025年8月）を取得し、Verducatib（Boehringer）のAIRTIVITY第III相が日本でも進行中（jRCT2071250036）というタイミングで、DPP-1阻害の疾患横断的な作用機序整理を提供する重要レビュー。",
+  "pmid": "42372954",
   "url": "https://pubmed.ncbi.nlm.nih.gov/42372954/"
  },
  {
@@ -5405,6 +5497,7 @@
   "authors": "Carretero-Vilarroig L, Jaijo T, Lucas JS, Behan L ほか",
   "aui": "Carretero-Vilarroig Jaijo Lucas Behan Dasi Sanchez-Thevenet Armengot-Carceller Reula",
   "summary": "気管支拡張症の重要な遺伝的原因である原発性線毛機能不全症（PCD）患者のQOL-PCD質問票（40項目）のスペイン語版を21名のPCD成人患者で文化的適応・検証し、良好な内的一貫性と再現性を確認した。PCD関連気管支拡張症における患者報告アウトカム（PRO）の標準化は、疾患特異的エンドタイプに基づく精密医療アプローチの基盤として重要である。",
+  "pmid": "42248373",
   "url": "https://pubmed.ncbi.nlm.nih.gov/42248373/"
  },
  {
@@ -5437,6 +5530,7 @@
   "aui": "Kim Park Shim Yoo Park",
   "summary": "慢性閉塞性肺疾患・間質性肺疾患・気管支拡張症患者60例を対象に、心エコー充満圧（E/e'）・栄養状態（GNRI）・炎症（NLR）・安静時酸素流量を統合したCNIO指標を作成した。CNIO高値は3ヶ月後の6分間歩行距離を有意に短縮させ（β=−43m/SD増加）、肺リハビリテーションの機能改善を予測する複合リスク指標として有望であることが示された。",
   "jpView": "心機能・栄養・炎症・酸素の複合指標とリハ転帰。高齢・低栄養のBEが多い日本で、包括的なリハ前評価・予後予測の視点になる。",
+  "pmid": "42356267",
   "url": "https://pubmed.ncbi.nlm.nih.gov/42356267/"
  },
  {
@@ -5453,6 +5547,7 @@
   "authors": "Daly R, Fowler SJ, Ludlow S, Rickards E",
   "aui": "Daly Fowler Ludlow Rickards",
   "summary": "英国の気管支拡張症患者を担当する看護師72名を対象とした実態調査で、プライマリケア・二次・三次医療のすべての設定において看護師が患者ニーズのアセスメントと多職種連携の調整を担う重要な役割を果たしていることが明らかになった。気管支拡張症は専門外の医療者や患者への認知度が低く、専門看護師（CNS）のさらなる育成と患者教育の体系化が必要であることが示された。",
+  "pmid": "42360894",
   "url": "https://pubmed.ncbi.nlm.nih.gov/42360894/"
  },
  {
@@ -5471,6 +5566,7 @@
   "aui": "Sibila Perea Burgel Polverino Hull Long Chotirmall Shteinberg Pollock Stobo Lind Haworth Dimakou Bossios Loebinger Dhar Xu Mersch Rademacher Choi Lorent Blasi Vendrell Goeminne Ringshausen De Soyza Aliberti Chalmers",
   "summary": "欧州気管支拡張症レジストリ（EMBARC）30か国19,324例の5年追跡解析で、増悪回数が1回増えるごとに将来の増悪リスクが累積的に上昇することを示した（IRR 1.45〜3.56）。さらに1回の重症増悪（入院要）は将来の重症増悪リスクを4倍近く高め（IRR 3.96）、この頻回増悪表現型の一貫性は疾患原因・地域を問わず確認された。",
   "jpView": "EMBARCの19,324例が示す「増悪蓄積モデル」は、日本のNTM主体コホートにおいても増悪早期抑制・DPP-1阻害薬（Verducatib/Brensocatib）の介入タイミングを議論する際の重要なエビデンス基盤となる。",
+  "pmid": "42348458",
   "url": "https://pubmed.ncbi.nlm.nih.gov/42348458/"
  },
  {
@@ -5488,6 +5584,7 @@
   "aui": "Bertuccio Pisanu Arminio Arlando Tafa Cosseta Gallo Asperges Valsecchi Cascina Corsico Conio Stella",
   "summary": "EMBARCデータで約25%の患者がAspergillus関連免疫学的シグナルを示し、ABPA・感作・特異的IgGなどのフェノタイプが疾患重症化と関連することを概説した。マイコビオームと細菌間のクロスキングダム相互作用を踏まえ、炎症エンドタイプ別（2型 vs 非2型）のバイオマーカー誘導管理アプローチを提唱している。",
   "jpView": "日本ではSchizophyllum等の非アスペルギルス真菌によるABPMの割合が比較的高いとされており、Aspergillus特化の本知見を日本コンテキストで解釈する際は真菌種の違いへの留意が必要。",
+  "pmid": "42352989",
   "url": "https://pubmed.ncbi.nlm.nih.gov/42352989/"
  },
  {
@@ -5506,6 +5603,7 @@
   "aui": "Gunaydın Aksoy Simsek",
   "summary": "非CFB患者97例（安定期39例・増悪期58例）でNLR・PLR・SII・PIV・CAR・HALPスコアを比較し、CRPアルブミン比（CAR）が最高の鑑別能（AUC=0.995）を示した。HALPとSIIが増悪の独立予測因子であり、日常診療で活用可能な低コストバイオマーカーとして提唱された。",
   "jpView": "NLR・CAR等の簡便な血液炎症指標で増悪表現型を識別。特別な検査を要さず、国内の日常診療でもBEの増悪リスク層別に活用しやすい。",
+  "pmid": "42355476",
   "url": "https://pubmed.ncbi.nlm.nih.gov/42355476/"
  },
  {
@@ -5523,6 +5621,7 @@
   "authors": "Taraș R, Dima M, Axente M, Cinteză EE, Paraschiva CP, Toma CL, Vidlescu R, Ionescu MD",
   "aui": "Taras Dima Axente Cinteza Paraschiva Toma Vidlescu Ionescu",
   "summary": "15歳の毛細血管拡張性運動失調症（AT）患者における気管支拡張症二次発症の症例報告と文献レビュー。反復性誤嚥性肺炎・免疫不全・小脳失調の三主徴が気道構造破壊を引き起こし、慢性呼吸器症状を呈する小児でのAT早期認識と多職種管理の重要性が示された。",
+  "pmid": "42355692",
   "url": "https://pubmed.ncbi.nlm.nih.gov/42355692/"
  },
  {
@@ -5542,6 +5641,7 @@
   "aui": "De Angelis Marrades Perea Faner Iorfida Aliberti Chalmers Sibila",
   "summary": "ERS 2025ガイドラインを踏まえ、咳・喀痰・呼吸困難などの症状が疾患活動性と将来の増悪リスクを反映するバイオマーカーとして機能することを論じ、気道クリアランス・粘液溶解薬・抗生物質・DPP-1阻害を含む治療戦略を症状プロファイルと紐づけた。「増悪歴重視」から「症状中心・多次元的アプローチ」への典型転換を総説として示す。",
   "jpView": "2025 ERSガイドラインが「増悪駆動」から「症状中心・治療可能形質」モデルへの転換を提唱した文脈を整理した総説であり、日本でガイドライン整備が進む際の議論基盤となる。",
+  "pmid": "42342265",
   "url": "https://pubmed.ncbi.nlm.nih.gov/42342265/"
  },
  {
@@ -5560,6 +5660,7 @@
   "aui": "McCullough Busby O'Neill Connolly McLeese Linden McAuley Elborn De Soyza Chalmers Clarke Bradley",
   "summary": "24研究（n=7,051）で8種類の粘液溶解薬（ambroxol・carbocisteine・高張食塩水・NAC等）を評価したSR/メタ解析。年間増悪頻度は有意差なし（-0.40件/年、p=0.22、very low certainty）、FEV1%予測値は小幅改善（+3.23%、p=0.03）のみ。特定薬剤・サブグループを対象とした大規模試験の必要性を示す。",
   "jpView": "日本では気道クリアランス療法の一環として粘液溶解薬（カルボシステイン等）が広く使用されるが、本SRは増悪抑制エビデンスが「Very low certainty」であることを示しており、治療選択の科学的根拠の再評価を促す。",
+  "pmid": "42342264",
   "url": "https://pubmed.ncbi.nlm.nih.gov/42342264/"
  },
  {
@@ -5567,7 +5668,7 @@
   "cat": "マイクロバイオーム・感染",
   "isNew": false,
   "titleJa": "慢性肺疾患におけるAspergillus niger・A.flavusの臨床的意義：A.fumigatusを超えて",
-  "titleEn": "Beyond: The Clinical Burden of Aspergillus niger and Aspergillus flavus in Chronic Pulmonary Diseases.",
+  "titleEn": "Beyond Aspergillus fumigatus: The Clinical Burden of Aspergillus flavus and Aspergillus niger in Chronic Pulmonary Diseases.",
   "journal": "Pathogens",
   "sjr": "Q1",
   "if": "3.3",
@@ -5578,6 +5679,7 @@
   "aui": "Brizzolara Intra Faverio Biffi Basta Delfini Novati Zucchetti Luppi Lavitrano Casati",
   "summary": "イタリア・モンツァでの後ろ向き研究（n=274）。気管支拡張症・過敏性肺炎・ILD患者においてA.fumigatus IgG陰性でも49.5%がA.niger or A.flavusに陽性と判明。単一種IgG測定のみでは真菌曝露を大幅に過小評価するため、診断パネルへの複数アスペルギルス種IgG組み込みを推奨する。",
   "jpView": "日本では真菌性感作にSchizophyllum等の特殊な種が比較的多い文脈があるが、本稿が示すA.niger/A.flavus IgGの追加測定アプローチは、気管支拡張症患者の真菌関連診断パネル拡充の科学的根拠として参照できる。",
+  "pmid": "42347209",
   "url": "https://pubmed.ncbi.nlm.nih.gov/42347209/"
  },
  {
@@ -5595,6 +5697,7 @@
   "authors": "Yii A, Maldonado Sanchez Y, Lai Q, Chen W",
   "aui": "Yii Maldonado Sanchez Lai Chen",
   "summary": "シンガポールにおけるCOPD疫学・治療パターンを包括的に総説し、気管支拡張症・心血管疾患・糖尿病などの合併症が医療利用増大と予後悪化に寄与することを整理した。dupilumabをはじめとする生物学的製剤・FeNOバイオマーカー活用による精密医療の展開を展望し、早期診断と新規生物学的製剤採用によるアウトカム改善の機会を論じている。",
+  "pmid": "42338669",
   "url": "https://pubmed.ncbi.nlm.nih.gov/42338669/"
  },
  {
@@ -5612,6 +5715,7 @@
   "aui": "Min Kye Lee Eun Kang Choi Yang Lee",
   "summary": "韓国の全国保険データベースを用いたマッチドコホート研究で、SLE患者における気管支拡張症の発症リスクは対照群の1.46倍（95%CI 1.22–1.76）と有意に高いことが示された。SLEで気管支拡張症を発症した患者は死亡率・救急受診・入院率がすべて有意に高く、自己免疫疾患患者への積極的な呼吸器スクリーニングの重要性が示唆される。",
   "jpView": "SLE患者のBE発症リスク1.46倍(韓国全国コホート)。膠原病関連BEに遭遇する日本で、SLE併存例の気道評価の参考になるアジアデータ。",
+  "pmid": "42331395",
   "url": "https://pubmed.ncbi.nlm.nih.gov/42331395/"
  },
  {
@@ -5630,6 +5734,7 @@
   "aui": "Peng Liu Li Xiong Wang Zhang Li Zhang Zhang Ying",
   "summary": "非CF気管支拡張症64例をPseudomonas aeruginosa（PA）定着群（n=29）と非定着群（n=35）に分け、BALF 16S rRNA解析でマイクロバイオームを比較した観察研究。PA定着群では疾患重症度（BSI・Bhalla・E-FACEDスコア）が有意に高く肺機能が低下し、BALFの微生物叢多様性が著明に減少してPseudomonas優勢・常在菌抑制のパターンを呈した。",
   "jpView": "日本の非CF気管支拡張症においても緑膿菌定着は予後不良因子として知られるが、吸入抗菌薬の保険適応は2026年時点で限定的であり、本研究が示す微生物叢多様性低下と重症度の関連は、定着早期介入の意義を支持するエビデンスとなりうる。",
+  "pmid": "42334217",
   "url": "https://pubmed.ncbi.nlm.nih.gov/42334217/"
  },
  {
@@ -5646,6 +5751,7 @@
   "authors": "Lin W, Sun Z, Chen J, Huang S ほか",
   "aui": "Lin Sun Chen Huang",
   "summary": "喘息・COPD・CF・気管支拡張症・呼吸器感染症を横断し、呼吸器マイクロバイオームを「状態遷移」エコロジーの枠組みで整理したミニレビュー。粘膜免疫・粘液・腸-肺軸・代謝産物が微生物叢の安定性と疾患感受性を制御するメカニズムを論じ、マイクロバイオーム指向の精密介入に向けた方法論的優先課題を提示する。",
+  "pmid": "42329775",
   "url": "https://pubmed.ncbi.nlm.nih.gov/42329775/"
  },
  {
@@ -5663,6 +5769,7 @@
   "aui": "Chiang Andronikou Roman Furman Schaaf Sant'Anna Otero Tanzer Lecca Byrne",
   "summary": "ペルーで結核治療成功した青年101例と健常対照101例を24ヵ月追跡した前向きコホート研究。結核生存者はFEV1・FVC・小気道抵抗（R5・AX）が対照群より有意に悪化したまま持続し、CTでは気管支拡張症・網状影・結節等の構造的異常が多く認められ、治療完了後の呼吸機能評価の必要性が示された。",
   "jpView": "青年期の後結核性肺障害(ペルー前向きコホート)。結核既往からのBEが一定数ある日本で、結核後の長期呼吸機能フォローの重要性を示す。",
+  "pmid": "42331351",
   "url": "https://pubmed.ncbi.nlm.nih.gov/42331351/"
  },
  {
@@ -5681,6 +5788,7 @@
   "aui": "Koo An Joo Rhee Kim Kim Min Kim Shin Yoon Jang Park Kim Moon",
   "summary": "COPD・喘息・IPF・気管支拡張症を含む慢性咳嗽患者300例を対象に、簡易版咳評価ツールRCQ（Rapid Cough Questionnaire）の妥当性を多施設前向き研究で検証。RCQはLCQと強い相関（r=0.93）を示し、気管支拡張症を含む全疾患サブグループで一貫した性能が確認され、日常臨床および大規模研究での実用性が支持された。",
   "jpView": "簡易咳評価ツール(RCQ)の妥当性検証。咳嗽・喀痰GLがある日本で、BEを含む慢性咳嗽の定量評価・経過観察への活用余地がある。",
+  "pmid": "42331391",
   "url": "https://pubmed.ncbi.nlm.nih.gov/42331391/"
  },
  {
@@ -5699,6 +5807,7 @@
   "aui": "Koo An Joo Rhee Kim Min Kim Jang Shin Yoon Song Kim Moon",
   "summary": "慢性咳嗽患者300例を対象に咳過敏性質問票（CHQ）を用いた前向き多施設研究。気管支拡張症と喘息ではCOPD・IPFと比べCHQ関連が幅広く認められ、CHQが従来の咳測定ツールでは捉えられない多次元的症状プロファイルを把握できることが示された。",
   "jpView": "呼吸器疾患の咳過敏性パターン。咳嗽・喀痰の診療ガイドラインを持つ日本で、BE・喘息の咳過敏性評価は臨床に馴染みやすい。",
+  "pmid": "42323027",
   "url": "https://pubmed.ncbi.nlm.nih.gov/42323027/"
  },
  {
@@ -5716,6 +5825,7 @@
   "aui": "Ertürk Kaçar-Şahin Demir Candevir Kömür Kuşçu Kibar İnal Kurtaran Taşova",
   "summary": "トルコの三次医療センターで診断されたNTM感染症14例の後ろ向き解析。M. aviumとM. intracellulareが各5例で最多、肺病変は10例に認められ、クラリスロマイシン・リネゾリド・アミカシンへの感受性が高かった。感受性検査に基づく治療で12例中9例が完全臨床応答を達成。",
   "jpView": "日本はNTM症（特にMAC）の罹患率が世界的に高く、本報告の菌種分布と薬剤感受性プロファイルは本邦のNTM管理と比較する上で参考となる。感受性検査に基づく治療選択の重要性は日本の診療指針とも一致する。",
+  "pmid": "42327528",
   "url": "https://pubmed.ncbi.nlm.nih.gov/42327528/"
  },
  {
@@ -5734,6 +5844,7 @@
   "aui": "Wen Zhang Chen Fan",
   "summary": "52研究（81,779名）のメタ解析でBE患者のCOPD合併率18%（95%CI: 14-22%）、喘息合併率16%（95%CI: 11-20%）と推計。女性比率が喘息有病率の弱い予測因子（β=3.97）だが異質性（I²=99%）の大部分は未測定因子に起因し、表現型主導の統合管理アプローチを支持する。",
   "jpView": "BEのCOPD合併18%・喘息合併16%のメタ解析。合併(ACO)例が多い日本の実態と整合し、包括的な併存管理の必要性を裏づける。",
+  "pmid": "42321713",
   "url": "https://pubmed.ncbi.nlm.nih.gov/42321713/"
  },
  {
@@ -5752,6 +5863,7 @@
   "aui": "Marino Zysman-Colman Agbonze Leigh Davis Ferkol Olivier Knowles Zariwala Landry Swaleh Shapiro",
   "summary": "成人PCD疑い例156名（うち確定診断41名26%）で主要4臨床基準（≥2項目充足）の感度95%・特異度88%を確認。鼻腔NO（nNO<77 nL/min）は感度88%・特異度98%を示し、不妊/妊孕性低下を5番目の基準として追加すると感度が100%に向上した。",
   "jpView": "成人PCDの臨床診断基準(4項目)の精度検証。日本人に多いDRC1創始者変異によるPCDは成人で診断される例もあり、簡便な基準は国内の拾い上げに有用。",
+  "pmid": "42248299",
   "url": "https://pubmed.ncbi.nlm.nih.gov/42248299/"
  },
  {
@@ -5769,6 +5881,7 @@
   "authors": "Wang S et al.",
   "aui": "Wang Zhang Wu He Chen Xu Lv Ji Wang",
   "summary": "9歳中国人女児でDNAH11遺伝子の複合ヘテロ変異（父由来ミスセンスc.6556A>C・母由来エクソン30-54重複）を同定しPCDを確定診断。トリオ全エクソーム解析へのCNV解析統合の重要性を示す症例報告。",
+  "pmid": "42317261",
   "url": "https://pubmed.ncbi.nlm.nih.gov/42317261/"
  },
  {
@@ -5786,6 +5899,7 @@
   "authors": "García-Barceló MT et al.",
   "aui": "García-Barceló Martorell González-Alsina Doménech-Sánchez Gomila Albertí Mateu-Borràs",
   "summary": "CF・気管支拡張症・COPD由来の臨床P. aeruginosa株48株のVOC（揮発性有機化合物）を網羅解析。急性感染株は芳香族化合物（アセトフェノン）優位、慢性感染株は脂肪族化合物優位であり、LasR機能欠損株は硫黄系VOC産生低下を示した。",
+  "pmid": "42315557",
   "url": "https://pubmed.ncbi.nlm.nih.gov/42315557/"
  },
  {
@@ -5803,6 +5917,7 @@
   "aui": "Bendstrup Dieude Kreuter Hoffmann-Vold Cottin Hauge",
   "summary": "RAにおける肺合併症（ILD・COPD・気管支拡張症・細気管支炎）の病態・スクリーニング・管理戦略を包括的にレビュー。高分解能CT推奨のエビデンスと、RA-ILD治療エビデンスの限界、気管支拡張症の罹患率・死亡率への影響を概説。",
   "jpView": "RA関連気管支拡張症・ILDは日本でも見逃されやすい合併症であり、生物学的DMARD投与患者での定期的CT・肺機能モニタリング強化を論じる際の根拠資料となる。",
+  "pmid": "42315602",
   "url": "https://pubmed.ncbi.nlm.nih.gov/42315602/"
  },
  {
@@ -5820,6 +5935,7 @@
   "authors": "Sarıhan NH et al.",
   "aui": "Sarıhan Oksay Bozbeyoğlu Girit",
   "summary": "遺伝的に確認されたPCD小児30例を対象に、肺機能検査・CT（modified Bhallaスコア）・QoL（SGRQ）の横断的関連を検討。FEV1・FVCは加齢とともに低下し、SGRQスコアは増悪頻度と正相関・肺機能と負相関を示したが、HRCTの構造的所見はQoLスコアと直接相関しなかった。",
+  "pmid": "42313717",
   "url": "https://pubmed.ncbi.nlm.nih.gov/42313717/"
  },
  {
@@ -5838,6 +5954,7 @@
   "aui": "Sun Wang Liu Li Wang He Lv Chen Chen Chen Tong Fan",
   "summary": "中国単施設4634例の後ろ向きコホート研究。Enterobacterales分離（4.9%）は人工呼吸器装着（aOR 2.39）・疾患特異的死亡（aHR 1.49）と独立に関連し、特にE. coliが全死因・疾患特異的死亡双方のリスクを増加させた。予後栄養指数（PNI）の高値は死亡・人工呼吸器リスクを低下させた。",
   "jpView": "入院BE増悪患者でPNI（予後栄養指数）が人工呼吸・死亡の保護因子であることは、高齢者比率が高い本邦のNTM-BE患者への栄養管理の重要性を示唆する（ただし中国単施設データ）。",
+  "pmid": "42309932",
   "url": "https://pubmed.ncbi.nlm.nih.gov/42309932/"
  },
  {
@@ -5855,6 +5972,7 @@
   "authors": "Farhat ES et al.",
   "aui": "Farhat Abd El Halim Elessawy Elhefny Ahmed Ahmed Fouad",
   "summary": "エジプト単施設60例でBAL液培養を施行。H. influenzae（40%）＞Pseudomonas（26.7%）＞Klebsiella（20%）の順に分離され、Pseudomonas感染例で酸素飽和度低下と修正Rieffスコア重症化が最も顕著であった。",
+  "pmid": "42310653",
   "url": "https://pubmed.ncbi.nlm.nih.gov/42310653/"
  },
  {
@@ -5872,6 +5990,7 @@
   "authors": "Cetinoglu S et al.",
   "aui": "Cetinoglu Ozen Haci Taskirdi Akcal Kaya Gulez Genel",
   "summary": "免疫不全を伴う多系統神経変性疾患ATの小児19例（2003-2024年、トルコ単施設）を後方視的解析。気管支拡張症は26.3%（5例）に発症し、IgA欠乏57.9%・死亡率31.5%と予後不良であり、早期多学的フォローアップと反復性副鼻腔肺感染の予防的管理が転帰改善の鍵と結論づけた。",
+  "pmid": "42308133",
   "url": "https://pubmed.ncbi.nlm.nih.gov/42308133/"
  },
  {
@@ -5879,7 +5998,7 @@
   "cat": "増悪・病態",
   "isNew": false,
   "titleJa": "各種基礎肺疾患における続発性自然気胸の臨床表現型：後方視的研究と文献レビュー",
-  "titleEn": "Clinical phenotypes of secondary spontaneous pneumothorax (SSP) in different underlying lung diseases: a retrospective study and literature review",
+  "titleEn": "Clinical phenotypes of secondary spontaneous pneumothorax (SSP) in different underlying lung diseases: a retrospective study and literature review on the clinical heterogeneity in this single entity.",
   "journal": "Journal of Thoracic Disease",
   "sjr": "Q2",
   "if": "1.9",
@@ -5890,6 +6009,7 @@
   "aui": "Cheng Wong Chiu Yew Wong Tong Miu",
   "summary": "香港の223例続発性自然気胸を後方視的に解析。気管支拡張症での1年再発率は0%と最低で、COPD/ILD群では遷延性空気漏れリスクが有意に高かった（>14日OR 4.02、95%CI 1.49-10.88）。基礎疾患別の個別化管理が重要と結論づけた。",
   "jpView": "基礎肺疾患別の続発性自然気胸。NTM/BE合併気胸は国内で重要な合併症であり、表現型把握に資する。",
+  "pmid": "42306734",
   "url": "https://pubmed.ncbi.nlm.nih.gov/42306734/"
  },
  {
@@ -5905,6 +6025,7 @@
   "authors": "Feng XQ et al.",
   "aui": "Feng Zhong Peng Xu Zhou",
   "summary": "中国・湖南省人民病院のPCD小児24例（2014-2025年）の後方視的解析。67%（16例）に気管支拡張症を確認し、診断中央値は98ヶ月と大幅に遅延。鼻NO測定（全例2.4〜27 nL/min）と遺伝子検査（陽性率85.7%）の早期診断における有用性を強調した。",
+  "pmid": "42304999",
   "url": "https://pubmed.ncbi.nlm.nih.gov/42304999/"
  },
  {
@@ -5922,6 +6043,7 @@
   "authors": "He LT et al.",
   "aui": "He Pan Zhang",
   "summary": "PIBO乳幼児30例に標準化治療プロトコル（ブデソニド・アジスロマイシン・モンテルカスト・フルチカゾン・テルブタリン）を実施。臨床症状は3ヶ月、肺機能は9ヶ月で有意改善（p<0.05）した一方、気管支拡張・無気肺などの構造的異常は12ヶ月後も有意改善に至らず、長期管理の必要性を示した。",
+  "pmid": "42303000",
   "url": "https://pubmed.ncbi.nlm.nih.gov/42303000/"
  },
  {
@@ -5940,6 +6062,7 @@
   "aui": "Mizushima Kono Motohashi Kogami Ishiwari Kikuchi Kobayashi Abe",
   "summary": "東京医科大学病院での後方視的研究（気道SA常在化48例）。10.4%（5例）がSA肺炎を発症し、発症者では安定期WBC（AUC 0.840）・好中球・好酸球数が有意に高かった。IPF合併が独立した発症リスク因子として同定された。",
   "jpView": "東京医科大学呼吸器内科からの日本単施設データ。気管支拡張症が背景疾患の一つとして含まれており、SA常在化患者の肺炎リスク管理において安定期白血球数やIPF合併の評価が有用なことを示す国内エビデンス。",
+  "pmid": "42306681",
   "url": "https://pubmed.ncbi.nlm.nih.gov/42306681/"
  },
  {
@@ -5958,6 +6081,7 @@
   "aui": "Pais Sanches Amorim Gigante Reis Tinoco Furtado Ribeirinha Monteiro Araújo Oliveira Varandas China Monteiro Cordeiro Linhas Costa Pascoal",
   "summary": "ポルトガル複数施設のリアルワールドデータを用い、非CF気管支拡張症における緑膿菌初回感染に対する除菌治療戦略の実態と有効性を後方視的に解析した多施設コホート研究。除菌治療パターン・成功率・再コロニー形成リスクの実臨床データを報告した。",
   "jpView": "日本では吸入抗菌薬の適応が限定的で緑膿菌除菌プロトコルの標準化が課題。本ポルトガル多施設リアルワールドデータは、日本における今後の除菌治療体系構築の参考エビデンスとなる（2026年時点、国内適応ガイダンス未整備）。",
+  "pmid": "42303502",
   "url": "https://pubmed.ncbi.nlm.nih.gov/42303502/"
  },
  {
@@ -5994,6 +6118,7 @@
   "aui": "Htet Zayar Palupi Chotipanvithayakul Nakhonsri Ngamphiw Khunkham Vasoppakarn Atthakul Tongsima Keeratipusana Janpoung Kumwichar Chongsuvivatwong",
   "summary": "タイの肺TB入院患者59,027例と非TB対照群1:1コホートで、TB後の再入院リスクを検討。気管支拡張症への再入院ハザード比はHR=3.8（95%CI 2.9-4.9）と高リスク因子の一つであり、TBサバイバーにおける呼吸器合併症（気管支拡張症・気胸・心嚢炎）モニタリングの必要性を示した。",
   "jpView": "結核入院後のBE再入院リスクが高い(HR3.8、タイ全国データ)。陳旧性結核関連BEが課題の日本で、結核後の長期管理・追跡の必要性を裏づける。",
+  "pmid": "42298652",
   "url": "https://pubmed.ncbi.nlm.nih.gov/42298652/"
  },
  {
@@ -6012,6 +6137,7 @@
   "aui": "Arbiv Thornton",
   "summary": "気道内LC-MS/MS法による好酸球タンパク（Gal-10・ECP・EDN等）直接測定と血中好酸球数（BEC≥300/μL）の乖離を詳細に検討したEMBARC-BRIDGE研究に付随する社説。血中好酸球数のみによるエンドタイプ定義の限界を論じ、精密医療における気道直接測定の実臨床応用の意義を考察する。",
   "jpView": "気管支拡張症の好酸球性エンドタイプに基づく精密医療は、日本においても独立した診療ガイドラインが未整備な中、治療可能な形質（Treatable Traits）アプローチの枠組みとして実臨床への適用が期待される。",
+  "pmid": "41690777",
   "url": "https://pubmed.ncbi.nlm.nih.gov/41690777/"
  },
  {
@@ -6030,6 +6156,7 @@
   "aui": "Ko Heo Park Hwang Shin",
   "summary": "188例（気管支拡張症96例含む）のBAE施行例で細菌叢を解析すると、気管支拡張症では緑膿菌（29.2%）が最多で構造的肺疾患なし群（1.4%）と比べ有意に高頻度（p<0.001）。喀血時の経験的抗菌薬選択には背景疾患（構造的肺疾患の種類）を考慮することを推奨した。",
   "jpView": "気管支拡張症患者のBAE後において緑膿菌が主要感染因子である知見は、本邦でも吸入抗菌薬（トブラマイシン等）や全身抗菌薬の適応選択に示唆を与える。緑膿菌適応の有無が治療戦略を左右する国内診療への参考データとなる。",
+  "pmid": "42292178",
   "url": "https://pubmed.ncbi.nlm.nih.gov/42292178/"
  },
  {
@@ -6047,6 +6174,7 @@
   "aui": "Wu Jiang Guo Gao Wang Li Yu Xia Wang",
   "summary": "20例の気管支拡張症患者に体肺動脈シャント（SPS）塞栓術を施行し、術後に一回拍出量（SV）が有意増加（p=0.048）、心臓MRIで右室駆出率も43.0%→48.8%に改善（p=0.034）した。術前NT-proBNP高値が術後SV改善の予測因子となりうる可能性を示した。",
   "jpView": "体肺動脈シャント塞栓術後の右心血行動態評価。喀血にBAE・血管内塞栓術が頻用される日本で、術後の循環動態評価の視点を与える。",
+  "pmid": "42288249",
   "url": "https://pubmed.ncbi.nlm.nih.gov/42288249/"
  },
  {
@@ -6064,6 +6192,7 @@
   "aui": "Rostamian Bavari Jomehzadeh Shoushtari Kharazinejad Zahedi Barani Abdi Kooti",
   "summary": "気管支拡張症患者におけるNTM全体有病率は0.158（95%CI: 0.084–0.276）、NTM肺疾患有病率も同様に0.158（0.067–0.328）。種別ではMAC（Mycobacterium avium complex）が最頻（0.094）であり、MACが気管支拡張症における主要NTM病原体であることをSR/メタ解析で裏付けた。",
   "jpView": "日本はNTM（特にMAC）肺疾患の有病率が世界的に高く、本メタ解析でのMAC最頻種（0.094）は国内の気管支拡張症-NTM診療の疫学的バックグラウンドを裏付ける。NTM同定検査の積極実施と早期治療介入の継続的な重要性を示すエビデンス。",
+  "pmid": "42291459",
   "url": "https://pubmed.ncbi.nlm.nih.gov/42291459/"
  },
  {
@@ -6705,8 +6834,8 @@
   "id": 307,
   "cat": "マイクロバイオーム・感染",
   "isNew": false,
-  "titleJa": "嚢胞性線維症の若年男性における感染症：症例報告と文献レビュー",
-  "titleEn": "Infection in a young man with cystic fibrosis: a case report and literature review.",
+  "titleJa": "嚢胞性線維症の若年男性におけるMycobacterium abscessus感染症：症例報告と文献レビュー",
+  "titleEn": "Mycobacterium abscessus infection in a young man with cystic fibrosis: a case report and literature review.",
   "journal": "Frontiers in Pediatrics",
   "sjr": "Q1",
   "if": "2.0",
@@ -6987,7 +7116,7 @@
   "cat": "増悪・病態",
   "isNew": false,
   "titleJa": "原発性線毛機能不全患者における乳幼児期から成人期にわたる肺形態・灌流のMRIによる縦断的変化",
-  "titleEn": "Longitudinal Changes in Lung Morphology and Perfusion Detected by Magnetic Resonance Imaging in Patients with Primary Ciliary Dyskinesia From Infancy Through Adulthood.",
+  "titleEn": "Longitudinal Changes in Lung Morphologic Features and Perfusion Detected by MRI in Patients With Primary Ciliary Dyskinesia From Infancy Through Adulthood.",
   "journal": "Chest",
   "sjr": "Q1",
   "if": "9.8",
@@ -7145,6 +7274,7 @@
   "aui": "Hu Diao Li Zeng Yang Yu Zhu Liu Zhang",
   "summary": "21件のSRと69件のRCT（CF・非CF気管支拡張症・VAP）を統合した包括的エビデンスマップにより、NCFBでの吸入抗菌薬は増悪頻度を有意に減少させ（RR 0.86）、細菌学的除菌率を改善する（RR 2.16）一方、気管支攣縮（RR 1.43）および耐性菌出現（RR 1.97）のリスクも有意に上昇。ネブライザー種類・標的病原体別の効果差が明確化された。（PubMed PMID: 42229866）",
   "jpView": "吸入抗菌薬の最新統合データ。日本では緑膿菌陽性例でも吸入抗菌薬の選択肢が限られるため、国際エビデンスの動向把握が有用。",
+  "pmid": "42229866",
   "url": "https://pubmed.ncbi.nlm.nih.gov/42229866/"
  },
  {
@@ -7163,6 +7293,7 @@
   "aui": "Ben-Meir Teper Strug Ratjen Kerem",
   "summary": "感染後閉塞性細気管支炎（PIBO）の病態として好中球性炎症、インフラマゾーム活性化（IL-18・カスパーゼ1）、遺伝的感受性が主要機序として注目されており、診断は臨床・機能・画像の統合評価が必要。疾患修飾療法のエビデンスは限られており、フェノタイプ別の標的治療開発が今後の鍵となる。（PubMed PMID: 42234623）",
   "scope": "閉塞性細気管支炎",
+  "pmid": "42234623",
   "url": "https://pubmed.ncbi.nlm.nih.gov/42234623/"
  },
  {
@@ -7180,6 +7311,7 @@
   "aui": "Yasar Hamurcu Kavcar Besnek Uzunoglu",
   "summary": "気管支拡張症を伴うカルタゲナー症候群の27歳男性が左上肢の脱力・しびれで発症、頚部病変として1ヶ月間誤認された右前頭葉脳膿瘍の症例。頭部MRIで診断後、外科的ドレナージとメロペネム＋バンコマイシンにより完全な神経学的回復を達成した。（PubMed PMID: 42232444）",
   "scope": "PCD",
+  "pmid": "42232444",
   "url": "https://pubmed.ncbi.nlm.nih.gov/42232444/"
  },
  {
@@ -7187,7 +7319,7 @@
   "cat": "臨床試験",
   "isNew": false,
   "titleJa": "AIR-NET試験：EMBARCネットワークによる既存抗炎症薬の適応的プラットフォーム試験のデザイン",
-  "titleEn": "Design and rationale of the AIR-NET trial: a randomised, open-label, multifactorial, multicentre, adaptive platform trial of repurposed anti-inflammatory treatments in bronchiectasis (EMBARC)",
+  "titleEn": "Design and rationale of the AIR-NET trial: a randomised, open-label, multifactorial, multicentre, adaptive platform trial using a range of repurposed anti-inflammatory treatments to improve outcomes in patients with bronchiectasis within the EMBARC clinical research network.",
   "journal": "ERJ Open Research",
   "sjr": "Q1",
   "if": "4.0",
@@ -7198,6 +7330,7 @@
   "aui": "Long New Stobo Band McLaren-Neil Hull Gilmour Lind McIntosh Galloway Eke Harris Singanayagam Shah Huang Wilkinson Loebinger Haworth Chotirmall De Soyza Chalmers",
   "summary": "好中球性気道炎症を標的に、EMBARC研究ネットワークで複数の既存（リパーパス）抗炎症薬を同時評価する無作為化・非盲検・多因子・多施設の適応的プラットフォーム試験AIR-NETのデザインと論拠を報告。好中球プロテアーゼ阻害が第II/III相で増悪を減少させた知見を踏まえ、追加の好中球標的治療を効率的に検証する基盤を構築する。（PubMed PMID: 41809869）",
   "jpView": "好中球性炎症を標的とする既存薬再評価のプラットフォーム試験。日本は長期マクロライド療法の伝統が強く、新規抗炎症薬の国内位置づけは欧米と異なりうる。",
+  "pmid": "41809869",
   "url": "https://pubmed.ncbi.nlm.nih.gov/41809869/"
  },
  {
@@ -7217,6 +7350,7 @@
   "aui": "Chalmers Daley",
   "summary": "気管支拡張症に対する新たな抗炎症療法であるDPP-1（カテプシンC）阻害薬について、実臨床での至適用量選択のあり方を論じたOxfordからのviewpoint。有効性と安全性のバランスを踏まえた用量設定の考え方を整理した。（PubMed PMID: 42085276）",
   "jpView": "DPP-1阻害薬の至適用量論。日本ではBrensocatib（Insmed）が上市準備段階、Verducatib（日本BI、jRCT2071250036）が第III相進行中で、本邦の用量設定議論にも直結（2026年時点）。",
+  "pmid": "42085276",
   "url": "https://pubmed.ncbi.nlm.nih.gov/42085276/"
  },
  {
@@ -7235,6 +7369,7 @@
   "aui": "Chalmers Sibila Cortina Long Chotirmall Aliberti",
   "summary": "2025年ERS成人気管支拡張症ガイドラインの臨床サマリー。原因検索のための初期評価、長期経口・吸入抗菌薬・抗炎症薬・粘液調整薬を含む薬物療法、気道クリアランス・呼吸リハビリ等の非薬物療法を要点整理した。（PubMed PMID: 41988091）",
   "jpView": "日本には独立した非CF気管支拡張症診療ガイドラインがなく（2026年時点）、本サマリーは国内診療の重要な参照。NTM多発・マクロライド伝統など国内文脈への適応が必要。",
+  "pmid": "41988091",
   "url": "https://pubmed.ncbi.nlm.nih.gov/41988091/"
  },
  {
@@ -7253,6 +7388,7 @@
   "aui": "Lee",
   "summary": "2025年ERS成人気管支拡張症ガイドラインを方法論的に批判的吟味（appraisal）した論評（Monash大学）。理学療法・気道クリアランスの推奨を中心に、エビデンスの強さと実装上の留意点を評価した。（PubMed PMID: 41904079）",
   "jpView": "ERSガイドラインの方法論的評価。GL不在の日本でERS 2025を国内適用する際、エビデンスの強弱を見極める一助になる。",
+  "pmid": "41904079",
   "url": "https://pubmed.ncbi.nlm.nih.gov/41904079/"
  },
  {
@@ -7271,6 +7407,7 @@
   "aui": "Choi Chalmers",
   "summary": "長期マクロライド療法を「いつ・どのように中止するか」という臨床的難題を論じたエディトリアル。中止後の増悪リスクと、耐性・有害事象回避とのバランスについて議論を喚起した。（PubMed PMID: 41878274）",
   "jpView": "DPB治療を起源にマクロライド長期療法が根付く日本では、いつ中止するかの判断が頻出の臨床課題。中止基準の検討は国内の処方適正化に直接資する。",
+  "pmid": "41878274",
   "url": "https://pubmed.ncbi.nlm.nih.gov/41878274/"
  },
  {
@@ -7289,6 +7426,7 @@
   "aui": "Dubus Foinet Abou-Taam Thumerelle Gachelin Jouve El Boustany Mazenq",
   "summary": "小児非CF気管支拡張症における長期アジスロマイシンのオープンラベル無作為化中止試験。長期マクロライドを中止した際の増悪・症状への影響を評価し、小児での適正な継続・中止判断に資するエビデンスを提供する。（PubMed PMID: 41878278）",
   "jpView": "マクロライド伝統を持つ日本の小児診療でも、長期投与の継続/中止判断は重要。本RCTは小児BEでの適正なマクロライド管理のエビデンスを補強する。",
+  "pmid": "41878278",
   "url": "https://pubmed.ncbi.nlm.nih.gov/41878278/"
  },
  {
@@ -7306,6 +7444,7 @@
   "authors": "Michaud A; Jarand J; Thornton CS",
   "aui": "Michaud Jarand Thornton",
   "summary": "気管支拡張症における一過性と持続性の細菌コロニゼーションが臨床転帰に与える影響を比較した研究（カルガリー大学）。コロニゼーションの持続性が増悪頻度や予後に及ぼす差異を検討した。（PubMed PMID: 41878279）",
+  "pmid": "41878279",
   "url": "https://pubmed.ncbi.nlm.nih.gov/41878279/"
  },
  {
@@ -7324,6 +7463,7 @@
   "aui": "Solarat Mendoza Perea Amaro Soler Marrades Palomeque Villanueva Vergara Marco Suarez-Cuartin Agustí Aliberti Shoemark Chalmers Faner Sibila",
   "summary": "慢性緑膿菌感染を有する気管支拡張症患者における全身性の免疫調節異常を検討した研究（バルセロナ大学病院）。慢性緑膿菌感染が局所にとどまらず全身免疫の制御異常と関連しうることを示し、宿主免疫を標的とした治療戦略の可能性を示唆した。（PubMed PMID: 41193351）",
   "jpView": "慢性緑膿菌感染による全身性免疫調節異常。緑膿菌が難治化因子の国内で、全身病態としての理解を広げる。",
+  "pmid": "41193351",
   "url": "https://pubmed.ncbi.nlm.nih.gov/41193351/"
  },
  {
@@ -7341,6 +7481,7 @@
   "authors": "Bindo F; Simonetta E; Gramegna A; Faverio P; Scarano P; Polelli V; Stainer A; Amati F; Nigro M; Tramontano A; Mirijaj S; Curci P; Mancuso M; Crimi C; Luppi F; Blasi F; Aliberti S",
   "aui": "Bindo Simonetta Gramegna Faverio Scarano Polelli Stainer Amati Nigro Tramontano Mirijaj Curci Mancuso Crimi Luppi Blasi Aliberti",
   "summary": "気管支拡張症増悪で入院した患者の臨床像と院内転帰を検討した研究（イタリア・IRCCS Ca' Granda財団）。増悪入院患者の重症度・合併症・院内アウトカムを記述し、入院管理の改善に向けた示唆を提供した。（PubMed PMID: 41846677）",
+  "pmid": "41846677",
   "url": "https://pubmed.ncbi.nlm.nih.gov/41846677/"
  },
  {
@@ -7358,6 +7499,7 @@
   "authors": "Kwok WC; Tam TCC; Chan SKS; Choi EPH; Ho JCM",
   "aui": "Kwok Tam Chan Choi Ho",
   "summary": "香港の非CF気管支拡張症前向きコホートで、BMI・血清アルブミン・血中好中球/リンパ球から算出するALI（Advanced Lung Cancer Inflammation Index）が増悪リスクの独立した予測因子となることを示した。栄養と炎症を統合した簡便な予後指標としての有用性を示唆した。（PubMed PMID: 41873328）",
+  "pmid": "41873328",
   "url": "https://pubmed.ncbi.nlm.nih.gov/41873328/"
  },
  {
@@ -7375,6 +7517,7 @@
   "authors": "Cazzola M; Rogliani P; Calzetta L; van Haren FMP; Page C; Matera MG",
   "aui": "Cazzola Rogliani Calzetta van Haren Page Matera",
   "summary": "喘息・COPD・気管支拡張症に共通する病態基盤としての酸化還元（レドックス）不均衡を概説したレビュー（イタリア）。ROS/RNS過剰による炎症・組織傷害の機序と、抗酸化を標的とした治療応用の可能性を論じた。（PubMed PMID: 41940032）",
+  "pmid": "41940032",
   "url": "https://pubmed.ncbi.nlm.nih.gov/41940032/"
  },
  {
@@ -7393,6 +7536,7 @@
   "aui": "Losier",
   "summary": "気管支拡張症における真菌感作をエンドタイプとして捉える視点を提起したChestの論評。真菌感作の臨床的意義と、エンドタイプに基づく個別化治療アプローチの必要性を論じた。（PubMed PMID: 41963007）",
   "jpView": "真菌感作・ABPMは本邦で比較的多く（アスペルギルス以外の関与も）、エンドタイプに基づく層別化は国内診療にも示唆を与える。",
+  "pmid": "41963007",
   "url": "https://pubmed.ncbi.nlm.nih.gov/41963007/"
  },
  {
@@ -7400,7 +7544,7 @@
   "cat": "治療・薬剤",
   "isNew": false,
   "titleJa": "気管支拡張症・COPDにおける振動呼気陽圧（OPEP）療法：臨床研究のナラティブレビュー",
-  "titleEn": "Oscillating Positive Expiratory Pressure (OPEP) Therapy in Bronchiectasis and COPD: A Narrative Review of Clinical Studies",
+  "titleEn": "Oscillating Positive Expiratory Pressure (OPEP) Therapy in Bronchiectasis and Chronic Obstructive Pulmonary Disease (COPD): A Narrative Review of Clinical Studies.",
   "journal": "Pulmonary Therapy",
   "sjr": "Q1",
   "if": "3.0",
@@ -7411,6 +7555,7 @@
   "aui": "Schloss Coppolo Suggett Long Nagel Mitchell",
   "summary": "気管支拡張症・COPDにおける振動呼気陽圧（OPEP）療法の臨床研究を概観したナラティブレビュー。粘液貯留・粘液栓に対する気道クリアランス効果と、吸入薬送達の改善における役割を整理した。（PubMed PMID: 41903102）",
   "jpView": "振動呼気陽圧(OPEP)療法。気道クリアランスが治療の柱となる日本のBE/COPD診療で、器具療法の選択肢を整理する参考になる。",
+  "pmid": "41903102",
   "url": "https://pubmed.ncbi.nlm.nih.gov/41903102/"
  },
  {
@@ -7429,6 +7574,7 @@
   "aui": "Lu Li Zheng Jiang Wu Li Kong",
   "summary": "非CF気管支拡張症の慢性緑膿菌感染に対する吸入トブラマイシンの有効性・安全性を評価した最新のシステマティックレビュー＆メタ解析。緑膿菌の菌量減少・増悪抑制・忍容性に関する累積エビデンスを更新した。（PubMed PMID: 42032539）",
   "jpView": "吸入抗菌薬は本邦でエビデンス・適応が限定的。緑膿菌感染管理における国際標準とのギャップを埋める参考となる累積エビデンス。",
+  "pmid": "42032539",
   "url": "https://pubmed.ncbi.nlm.nih.gov/42032539/"
  },
  {
@@ -7445,6 +7591,7 @@
   "authors": "Herrero-Cortina B",
   "aui": "Herrero-Cortina",
   "summary": "患者中心の戦略を気管支拡張症マネジメントの中核と位置づけて論じた論説。アドヒアランス・QOL・共有意思決定を重視した包括的管理の重要性を強調した。（PubMed PMID: 42028414）",
+  "pmid": "42028414",
   "url": "https://pubmed.ncbi.nlm.nih.gov/42028414/"
  },
  {
@@ -7462,6 +7609,7 @@
   "authors": "Balcan B; Vezir D; Ocal R; Cinar C; Aksoy E; Celik Y; Ceyhan B",
   "aui": "Balcan Vezir Ocal Cinar Aksoy Celik Ceyhan",
   "summary": "気管支拡張症（CF・非CF）患者70例を対象に、貧血と閉塞性睡眠時無呼吸（OSA）の併存および臨床特性との関連を前向き横断研究で検討した。貧血とOSAという見過ごされやすい併存症が病態に与える影響に注目した。（PubMed PMID: 42072456）",
+  "pmid": "42072456",
   "url": "https://pubmed.ncbi.nlm.nih.gov/42072456/"
  },
  {
@@ -7481,6 +7629,7 @@
   "summary": "CVIDに関する39研究を統合した系統的レビュー。脾腫が気管支拡張症リスク増加と関連し，総Bリンパ球高値が気管支拡張症および死亡リスク低下と関連することが示された。リンパ球増殖マーカーおよびBリンパ球サブセットと臨床転帰の関連が，CVIDにおける気管支拡張症の免疫学的病態理解に寄与する。（PubMed PMID: 42227882）",
   "jpView": "CVIDと気管支拡張症の関連(脾腫がリスク)。免疫不全を背景とするBEの評価の重要性を示す、国内臨床免疫学会英文誌の系統的レビュー。",
   "scope": "免疫不全",
+  "pmid": "42227882",
   "url": "https://pubmed.ncbi.nlm.nih.gov/42227882/"
  },
  {
@@ -7497,6 +7646,7 @@
   "authors": "Tekin V; Tekinhatun M; Özçelik STA; Fırat H; Üzen H",
   "aui": "Tekin Tekinhatun Özçelik Fırat Üzen",
   "summary": "EfficientNetB1とConvNeXtTinyを統合したEffConvNeXtがトルコの5,899枚の胸部X線から嚢胞性気管支拡張症・肺炎・正常を98.25%の精度で分類し個別モデルを上回った。XAI（説明可能AI）アプローチにより臨床診断支援ツールとしての実装可能性を示した。（PubMed PMID: 40999297）",
+  "pmid": "40999297",
   "url": "https://pubmed.ncbi.nlm.nih.gov/40999297/"
  },
  {
@@ -7514,6 +7664,7 @@
   "authors": "Spittle Daniella A et al.",
   "aui": "Spittle Turner",
   "summary": "α1アンチトリプシン（AAT）はNE（好中球エラスターゼ）阻害を中心とした気道恒常性維持に加え、抗炎症・免疫調節・抗アポトーシス機能を持ち、AATDに基づくCOPDを超えて気管支拡張症・CF・ILDにおいても治療標的となりうる可能性を論じた文献総説。非AATD状態でのAAT補充療法の有効性を探索する新たな研究動向と臨床的意義についても言及した。（PubMed PMID: 42221221）",
+  "pmid": "42221221",
   "url": "https://pubmed.ncbi.nlm.nih.gov/42221221/"
  },
  {
@@ -7532,6 +7683,7 @@
   "aui": "Ackland Bowron Cox Staples",
   "summary": "気管支拡張症・COPD・喘息等の慢性気道疾患（CAD）で共通して増加するNTHiが疾患の推進因子か病変環境の産物かを論じた包括的レビュー。NTHiの超変異・バイオフィルム形成・細胞内生存による適応機構と、宿主側の免疫・構造・粘膜変化が「許容ニッチ」を形成する過程を解説し、ホスト-病原体相互作用を標的とした新規治療戦略を考察した。（PubMed PMID: 41527686）",
   "jpView": "非型別インフルエンザ菌(NTHi)はBE/COPDの主要定着菌。国内でも頻度が高く、増悪との関連理解に有用。",
+  "pmid": "41527686",
   "url": "https://pubmed.ncbi.nlm.nih.gov/41527686/"
  },
  {
@@ -7550,6 +7702,7 @@
   "aui": "Liu Wu Song Guan Xu Lu Ge Chen Qu Xu",
   "summary": "中国92病院9,647例のBE-Chinaコホートの横断研究。定期ACT実施率は12.2%にとどまり地域間格差が顕著。毎日の喀痰産生（OR 1.68）・マクロライド療法（OR 2.31）・非侵襲的換気使用（OR 4.11）等がACT実施と関連し、症状負荷の高い重症患者層に集中している実態を示した。（PubMed PMID: 42221461）",
   "jpView": "アジアのBE-Chinaレジストリ。同じアジア圏で気道クリアランス管理の実態を示し、去痰薬・マクロライド中心という日本の診療実態との比較の参考になる。",
+  "pmid": "42221461",
   "url": "https://pubmed.ncbi.nlm.nih.gov/42221461/"
  },
  {
@@ -7568,6 +7721,7 @@
   "aui": "Ringshausen Baumann de Roux Dettmer Diel Eichinger Ewig Flick Hanitsch Hillmann Koczulla Köhler Koitschev Kugler Nüsslein Ott Pink Pletz Rohde Sedlacek Slevogt Sommerwerck Sutharsan von Weihe Welte Wilken Mertsch Rademacher",
   "summary": "気管支拡張症の世界的有病率増加を背景にドイツ呼吸器学会が発表した成人気管支拡張症の包括的コンセンサスガイドライン。診断・病因分類・肺機能評価・気道クリアランス・抗菌療法からbrensocatib等の新規抗炎症薬まで網羅した実臨床向け指針。（PubMed PMID: 41861044）",
   "jpView": "日本に独立GLが無いため、ERS以外の各国コンセンサスGLも国内診療の比較参照として有益。",
+  "pmid": "41861044",
   "url": "https://pubmed.ncbi.nlm.nih.gov/41861044/"
  },
  {
@@ -7587,6 +7741,7 @@
   "aui": "Gramegna Premuda Putti Piedepalumbo Misuraca Ori Nigro Simonetta Aliberti Blasi",
   "summary": "気管支拡張症の病態中心である好中球性気道炎症に対する治療戦略の進化を解説したレビュー。長期マクロライド療法から、好中球セリンプロテアーゼ活性化経路を標的とするDPP-1（カテプシンC）阻害薬（brensocatib）まで宿主指向性療法の最新知見を整理した。（PubMed PMID: 41993889）",
   "jpView": "マクロライド伝統を持つ日本にとり、好中球性炎症を標的とするカテプシンC(DPP-1)阻害薬は次世代の選択肢。brensocatib/verducatib等の競合パイプライン理解に資する総説でMSL観点の価値が高い。",
+  "pmid": "41993889",
   "url": "https://pubmed.ncbi.nlm.nih.gov/41993889/"
  },
  {
@@ -7605,6 +7760,7 @@
   "aui": "Downey Schulze Eich Singh Larbig Vit Nicolas Chotirmall Chalmers",
   "summary": "気管支拡張症患者の気道局所にIgGを吸入投与することで免疫学的防御機能を補強する新規アプローチ（CSL787）のランダム化第1相試験の結果を報告。安全性プロファイルと抗菌有効性の初期データを提示し、気管支拡張症の局所免疫療法として今後の開発につながる可能性を示した。（PubMed PMID: 42085293）",
   "jpView": "CSL787は日本でも第2相（jRCT2071250037）が登録済み。吸入IgGという新規モダリティとして国内パイプラインでも注目（2026年時点）。",
+  "pmid": "42085293",
   "url": "https://pubmed.ncbi.nlm.nih.gov/42085293/"
  },
  {
@@ -7642,6 +7798,7 @@
   "authors": "Wang Siyuan et al.",
   "aui": "Wang Zhou Ma Yang Lei Shiwei Gao Wang Le Jiang Yang",
   "summary": "気管支拡張症急性増悪に対し新規気道クリアランス法「鼻腔陰圧振動療法（NNPO）」と従来の振動OPEP療法の非劣性を検証する多施設ランダム化クロスオーバー試験のプロトコル論文。患者耐容性と依存性が問題となる従来ACTsの代替法として気道分泌物排泄改善を目指す。（PubMed PMID: 41816674）",
+  "pmid": "41816674",
   "url": "https://pubmed.ncbi.nlm.nih.gov/41816674/"
  },
  {
@@ -7659,6 +7816,7 @@
   "authors": "Vitacca Michele et al.",
   "aui": "Vitacca Paneroni Spanevello Carone Cassetti Lastoria Maniscalco Capelli Ambrosino",
   "summary": "非CF気管支拡張症患者（COPD合併・非合併）を対象とした10年間の後方視的多施設研究で、有酸素・筋力トレーニングを含む肺リハビリテーションが運動耐容能・息切れ・疲労感を改善することを示した。COPD合併の有無によらず肺リハビリテーションの恩恵を受けられることを確認。（PubMed PMID: 41868961）",
+  "pmid": "41868961",
   "url": "https://pubmed.ncbi.nlm.nih.gov/41868961/"
  },
  {
@@ -7676,6 +7834,7 @@
   "authors": "Hadj Bouzid Amel Imene et al.",
   "aui": "Hadj Bouzid Beaufils Berger",
   "summary": "気管支拡張症はかつて不可逆的とされてきたが、深層学習を用いたCT評価で一部の症例で可逆性が認められることを示した研究（Lancet Respir Med掲載）。治療介入による気管支拡張症の部分的改善を客観的に評価できる可能性を示し、治療目標設定と効果判定に影響する重要な知見。（PubMed PMID: 41786369）",
+  "pmid": "41786369",
   "url": "https://pubmed.ncbi.nlm.nih.gov/41786369/"
  },
  {
@@ -7694,6 +7853,7 @@
   "aui": "Tiew Narayana Jaggi Koh Lee Puah Hull Long Low Poh Blasi Aliberti Chalmers Chew Chotirmall",
   "summary": "真菌感作は慢性呼吸器疾患の新たなエンドフェノタイプとして注目されているが気管支拡張症での役割は不明だった。拡張されたアレルゲンパネルを用いた包括的評価でA. fumigatus感作が高リスク気管支拡張症（重症増悪・P. aeruginosa感染・入院）と独立して関連することをシンガポールコホートで示した。（PubMed PMID: 41386457）",
   "jpView": "真菌感作とBE重症度。日本ではABPMでAspergillus以外の真菌(Schizophyllum等)の関与も比較的多く、感作評価は国内の真菌関連気道疾患診療に資する。",
+  "pmid": "41386457",
   "url": "https://pubmed.ncbi.nlm.nih.gov/41386457/"
  },
  {
@@ -7712,6 +7872,7 @@
   "aui": "Srivali De Giacomi",
   "summary": "気管支拡張症患者におけるOSA有病率・リスク因子・双方向性の臨床的影響をMEDLINE・EMBASE・Cochraneの系統的レビューとメタ解析で初めて定量化した研究（Duke大学）。気管支拡張症管理においてOSAのスクリーニングと管理が重要である可能性を提示した。（PubMed PMID: 41905893）",
   "jpView": "BEと閉塞性睡眠時無呼吸の合併。併存症の包括管理が求められる国内の高齢BE診療で見落とさないべき視点。",
+  "pmid": "41905893",
   "url": "https://pubmed.ncbi.nlm.nih.gov/41905893/"
  },
  {
@@ -7730,6 +7891,7 @@
   "aui": "Yuan Wang Zhang Liu Liu Zhang Li Feng Zhao Wang Lu Wang Zhang Yuan Kang Zhang",
   "summary": "ABOS増悪343例の前向き研究でクラスター解析により好中球優位型・好酸球優位型・混合型の3表現型を同定。好中球優位型が入院期間延長・ICU入室・人工換気などの不良転帰と独立して関連し、ABOS増悪の表現型指向型管理の必要性を示した。（PubMed PMID: 41178529）",
   "jpView": "喘息-気管支拡張症オーバーラップ(ABOS)。喘息合併BEは日本でも遭遇頻度が高く、好中球性増悪の表現型把握は生物学的製剤の適応判断に資する。",
+  "pmid": "41178529",
   "url": "https://pubmed.ncbi.nlm.nih.gov/41178529/"
  },
  {
@@ -7748,6 +7910,7 @@
   "aui": "Hwang Lee Choi Ra Oh",
   "summary": "韓国多施設レジストリデータを用いて特発性気管支拡張症と感染後（TB後を含む）気管支拡張症の臨床特性を比較した研究。特発性症例は感染後症例と異なる病態・細菌叢・予後プロファイルを示し、病因に基づく層別化管理の重要性を示唆した。（PubMed PMID: 41589011）",
   "jpView": "特発性と感染後BEの臨床比較(韓国多施設)。結核既往・感染後BEが一定数ある日本の病因分類の参考になる。",
+  "pmid": "41589011",
   "url": "https://pubmed.ncbi.nlm.nih.gov/41589011/"
  },
  {
@@ -7765,6 +7928,7 @@
   "authors": "Olgun Esin Gizem et al.",
   "aui": "Olgun Özcan Zirek Tekin Bayav Turğut Ağırtıcı Küçük Öztürk Çelik Merteşe Çobanoğlu",
   "summary": "小児非CF気管支拡張症において末梢好酸球増多・H. influenzae等の下気道病原体・初回肺炎年齢・栄養不良の相互関連を検討した研究。好酸球性炎症が小児気管支拡張症の増悪頻度・肺機能低下にも関与しうることを示した。（PubMed PMID: 41755496）",
+  "pmid": "41755496",
   "url": "https://pubmed.ncbi.nlm.nih.gov/41755496/"
  },
  {
@@ -7783,6 +7947,7 @@
   "aui": "Li Zeng Mu Cai",
   "summary": "NTM肺疾患（NTM-PD）と気管支拡張症の共存例と非共存例の臨床プロファイルを後方視的に比較し、急速発育菌vs緩徐発育菌の相違も解析。気管支拡張症合併NTM-PDでは特定のリスク因子が同定され、気道構造変化とマイクロバイオームの相互作用が明らかになった。（PubMed PMID: 41768378）",
   "jpView": "NTM肺疾患合併BEの臨床特性・リスク因子。NTM多発国の日本で、合併例の層別化と早期介入に有用。",
+  "pmid": "41768378",
   "url": "https://pubmed.ncbi.nlm.nih.gov/41768378/"
  },
  {
@@ -7801,6 +7966,7 @@
   "aui": "Richards Brunton Choate Winthrop McShane Maselli Knowles Swenson Tino Aksamit Metersky",
   "summary": "米国気管支拡張症・NTMレジストリにおいてCFTR変異保有者では肺感染症（NTM・P. aeruginosa等）の頻度が増加する可能性を検討した研究。CFTR機能部分低下が非CF気管支拡張症の感染リスクに寄与するという精密医療的視点を大規模レジストリで検証した。（PubMed PMID: 41839362）",
   "jpView": "嚢胞性線維症が稀な日本でも、CFTR変異がNTM/BE感受性に関与しうるという視点。国内のNTM-BE例の遺伝的背景(CFTR・線毛遺伝子等)の解明につながる。",
+  "pmid": "41839362",
   "url": "https://pubmed.ncbi.nlm.nih.gov/41839362/"
  },
  {
@@ -7819,6 +7985,7 @@
   "aui": "Wohlgemuth Rasteiro Aneja Bota Cindric Freischem George Günsel Ishola Koenig Kubisch-Dohmen Langenickel Loges Lopes Mummert Olbrich Pennekamp Pereira Pinto Raidt Rudolph Ter Steege Valecha Lopes Omran",
   "summary": "PCD（原発性線毛機能不全症）の中でも重篤なCCDC40病的バリアント例に対し、mRNA療法で線毛の構造組成と運動機能を回復できることを試験管内・生体内で初めて示した革新的研究。気管支拡張症に至るPCDの根本病態を修正する遺伝子治療戦略の新たな可能性を開いた。（PubMed PMID: 42089334）",
   "scope": "PCD",
+  "pmid": "42089334",
   "url": "https://pubmed.ncbi.nlm.nih.gov/42089334/"
  },
  {
@@ -7837,6 +8004,7 @@
   "aui": "Tümmler Schulz Minso Alfeis Tamm Rademacher Ringshausen",
   "summary": "欧州レジストリで38%を占める特発性気管支拡張症患者に対し鼻腔電位差（NPD）によりCFTR機能を評価した研究（ハノーバー医科大学）。健常人・CF患者との比較でCFTR機能部分低下を持つ特発性気管支拡張症サブグループの存在を示し、CFTRモジュレーター治療の潜在的対象群を特定した。（PubMed PMID: 41776502）",
   "jpView": "鼻腔電位差によるCFTR機能評価。CFが稀でCFTR診断基盤が乏しい日本で、特発性BEの病因精査の選択肢を示す。",
+  "pmid": "41776502",
   "url": "https://pubmed.ncbi.nlm.nih.gov/41776502/"
  },
  {
@@ -7855,6 +8023,7 @@
   "summary": "初期検査でPCDが除外されていたにも関わらず成人期に再評価でPCDと診断された気管支拡張症症例を報告。遺伝的病因検索が不十分だった成人気管支拡張症患者の一部でPCDが見逃されている実態を示し、包括的遺伝子スクリーニングの導入を推奨した。（PubMed PMID: 41544978）",
   "jpView": "成人期に新規診断されたPCD。日本でも未診断成人PCDの拾い上げが課題で、遺伝的病因の再評価が国内診断に資する。",
   "scope": "PCD",
+  "pmid": "41544978",
   "url": "https://pubmed.ncbi.nlm.nih.gov/41544978/"
  },
  {
@@ -7867,9 +8036,10 @@
   "sjr": "Q3",
   "date": "2026-03-14",
   "year": 2026,
-  "ev": "原著",
-  "authors": " et al.",
+  "ev": "ガイドライン",
+  "authors": "Subspecialty Group of Respiratory, the Society of Pediatrics, Chinese Medical Association et al.",
   "summary": "中国小児科学会が発表した小児気管支拡張症に対する肺リハビリテーションの2026年版専門家コンセンサス。小児特有の運動能力・気道クリアランス・栄養管理を包括した専門ガイダンスとして小児気管支拡張症管理の標準化に向けた重要な指針を提供。（PubMed PMID: 41834195）",
+  "pmid": "41834195",
   "url": "https://pubmed.ncbi.nlm.nih.gov/41834195/"
  },
  {
@@ -7887,6 +8057,7 @@
   "authors": "Yang Shuqiao et al.",
   "aui": "Yang Sun Gu",
   "summary": "非ILD気管支拡張症506例において自己抗体陽性群（n=131）・CTD-BE群（n=135）・孤立性BE群（n=240）を比較解析。自己抗体陽性がCTDへの進展リスクと関連し、自己免疫プロファイルを考慮した気管支拡張症の層別化管理の必要性を示した。（PubMed PMID: 42074699）",
+  "pmid": "42074699",
   "url": "https://pubmed.ncbi.nlm.nih.gov/42074699/"
  },
  {
@@ -7906,6 +8077,7 @@
   "summary": "日本PCD患者の約半数が保有するDRC1遺伝子エクソン1-4の大型ホモ接合欠失による症例の臨床特性を全国12施設の後方視的コホートで解析した日本発研究（結核予防会複十字病院）。気管支拡張症進行と肺機能低下のパターンを明らかにしこのバリアント特有の予後を初めて大規模に示した。（PubMed PMID: 41570615）",
   "jpView": "日本人に多いとされるDRC1創始者変異によるPCD(日本発)。NTM/BE多発国の本邦で、遺伝性気管支拡張症の国内基盤の解明に寄与する。",
   "scope": "PCD",
+  "pmid": "41570615",
   "url": "https://pubmed.ncbi.nlm.nih.gov/41570615/"
  },
  {
@@ -7925,6 +8097,7 @@
   "aui": "Shoemark Johnson Shuttleworth Schwiening Hull Stobo Abo-Leyah Finch Pollock Huang Richardson Perea McIntosh Cant Galloway Choi de Soyza Spinou Ringshausen Lorent Mallia Johnston Gierlinski Goeminne Loebinger Hua Gao Chotirmall Dhar Haworth Altenburg Blasi Polverino Shteinberg Strickson Cipolla Teper Fernandez Shih Mange Singanayagam Aliberti Sibila Long Chalmers",
   "summary": "好中球偽酵素AZU1が気管支拡張症の重症度・P. aeruginosa感染・増悪と独立して関連し、brensocatib（DPP-1阻害薬）がAZU1を有意に低下させることをEMBARC多コホートおよびWILLOW試験後解析で初めて証明。AZU1が気管支拡張症の新規バイオマーカーかつ治療標的として確立された重要論文。（PubMed PMID: 42044645）",
   "jpView": "AZU1(アズロシジン)をDPP-1阻害の治療標的かつ重症度マーカーとする国際多コホート研究。将来的なバイオマーカー層別化は、日本での適応患者選定の議論にもつながる先進的視点。",
+  "pmid": "42044645",
   "url": "https://pubmed.ncbi.nlm.nih.gov/42044645/"
  },
  {
@@ -7943,6 +8116,7 @@
   "aui": "Daley van Ingen Chalmers Flume Griffith Hasegawa Morimoto Winthrop Sheu Avsar Andrisani Codecasa Terschlüsen May Yuen Wu Hassan Nevoret Mange",
   "summary": "新規/再発非空洞性MAC肺疾患99例を対象にALIS追加vs対照を6ヶ月比較したRCT。ALIS群で6ヶ月後培養陰性化率80.6%（対照63.9%）、7ヶ月後78.8%（対照47.1%、p=0.001）と有意に改善。難治性MAC以外の初回治療へのALIS有効性を初めてRCTで示した。（PubMed PMID: 41915555）",
   "jpView": "アミカシンリポソーム吸入（ARIKAYCE）は難治性MAC肺症に国内承認済み（2021年）。NTM多発の日本では本剤の位置づけが特に重要。",
+  "pmid": "41915555",
   "url": "https://pubmed.ncbi.nlm.nih.gov/41915555/"
  },
  {
@@ -7962,6 +8136,7 @@
   "aui": "Premuda Gramegna Misuraca Piedepalumbo Terranova Santambrogio Contarini Ori Blasi",
   "summary": "気管支拡張症の炎症管理における薬物療法の現状とパイプラインを網羅的にレビューし、DPP-1阻害薬（brensocatib）による好中球セリンプロテアーゼ活性化経路の標的化を中心に解説。ASPEN試験後の実臨床実装課題と今後の開発方向性を論じた。（PubMed PMID: 42048140）",
   "jpView": "DPP-1阻害薬を軸とした薬物療法・開発の総説。brensocatib/verducatib/HSK31858の開発状況を俯瞰でき、国内パイプライン(AIRTIVITY等)の文脈づけに直接役立つMSL必読の整理。",
+  "pmid": "42048140",
   "url": "https://pubmed.ncbi.nlm.nih.gov/42048140/"
  },
  {
@@ -7981,6 +8156,7 @@
   "summary": "免疫グロブリン補充・低用量エリスロマイシン継続下で急速進行性GLILDを発症し免疫抑制に不応で死亡した34歳女性CVID症例（熊本大学）。気管支拡張症を高頻度に合併するCVIDにおいてGLILDが予後不良を呈しうることを示す日本発症例報告。（PubMed PMID: 42219311）",
   "jpView": "免疫不全(CVID)に伴う気道・間質病変の国内症例(和文英文誌Internal Medicine)。気管支拡張症の背景に免疫異常を考慮する重要性を国内文脈で示す。",
   "scope": "免疫不全",
+  "pmid": "42219311",
   "url": "https://pubmed.ncbi.nlm.nih.gov/42219311/"
  },
  {
@@ -7999,6 +8175,7 @@
   "aui": "Kodama Takaoka Nakashima Matsunaga Terada Yamashita Masumitsu Miyasaka Muraoka Masumoto Kaneko Watanabe Tsurikisawa",
   "summary": "気管支拡張症の主要病因の一つABPMにおいて、診断時の高IgE血症が肺機能の進行性低下と関連することを国立病院機構横浜医療センターから報告。IgEを早期治療介入のバイオマーカーとして活用する戦略を支持する日本発エビデンス。（PubMed PMID: 41796390）",
   "jpView": "ABPMは本邦でAspergillus以外の真菌(Schizophyllum等)の関与が比較的多い。日本発の本データは診断時IgE高値と肺機能低下の関連を示し、国内のABPM-気管支拡張症診療に直接資する。",
+  "pmid": "41796390",
   "url": "https://pubmed.ncbi.nlm.nih.gov/41796390/"
  },
  {
@@ -8016,6 +8193,7 @@
   "aui": "Kotetsu Kawaguchi Nakajima Shiota Washio Ishimatsu Otsuka Taguchi Moriwaki Yoshida",
   "summary": "難治性P. aeruginosa感染を有する気管支拡張症患者に長期吸入トブラマイシン療法が有効であった国立病院機構福岡病院からの症例報告。国内でエビデンスが限られる吸入トブラマイシン長期継続の安全性と感染管理効果を示した実臨床的報告。（PubMed PMID: 42022522）",
   "jpView": "吸入抗菌薬の適応が限定的な日本で、難治性緑膿菌感染に吸入トブラマイシンが奏効した国内症例。実臨床での適応外使用の経験知として価値がある。",
+  "pmid": "42022522",
   "url": "https://pubmed.ncbi.nlm.nih.gov/42022522/"
  },
  {
@@ -8023,7 +8201,7 @@
   "cat": "日本発",
   "isNew": false,
   "titleJa": "AI搭載気道セグメンテーションを用いた気管支拡張症の新規CT定量評価法（日本発）",
-  "titleEn": "A novel quantitative method for CT assessment of bronchiectasis using AI-based airway segmentation",
+  "titleEn": "A novel quantitative method for CT assessment of bronchiectasis using AI-based airway segmentation and upper limits of normal airway caliber.",
   "journal": "Respiratory Research",
   "sjr": "Q1",
   "if": "5.7",
@@ -8034,6 +8212,7 @@
   "aui": "Tanabe Sato Maetani Sakamoto Fukui Masuda Kanasaki Handa Sato Morita Hirai",
   "summary": "AI搭載自動気道セグメンテーションを用いて気管支拡張症の重症度・範囲を客観的に定量化する新規CT評価法を開発した日本発研究。従来の半定量的Reiffスコアと比較して再現性が高く、疾患進行モニタリングや治療効果判定への応用可能性を示した。（PubMed PMID: 41840608）",
   "jpView": "AIによる気道定量CT(日本発)。画像定量で日本が先導する領域であり、気管支拡張症の客観的評価の国内標準化につながりうる。",
+  "pmid": "41840608",
   "url": "https://pubmed.ncbi.nlm.nih.gov/41840608/"
  },
  {
@@ -8052,6 +8231,7 @@
   "aui": "Moon Lee Han Shin Lee",
   "summary": "TB既往が気管支拡張症発症リスクに及ぼす影響を国家レベルのコホートデータで定量化。TB後気管支拡張症が重要な疾患負荷であることを大規模集団で証明し、TB治癒後の気管支拡張症予防管理プログラムの必要性を強調する。（PubMed PMID: 42046225）",
   "jpView": "結核既往からのBE発症。結核中蔓延の歴史を持つ日本で、感染後(陳旧性結核関連)BEは重要な病因の一つ。",
+  "pmid": "42046225",
   "url": "https://pubmed.ncbi.nlm.nih.gov/42046225/"
  },
  {
@@ -8070,6 +8250,7 @@
   "aui": "Kao Wang Chang Sheu Wang Hsieh Hsu Chen Ou Wei Yang Lan Wang Lin Lin Wang Lin Liu Cheng Chen Cheng Peng Chan Chen Jao Chen Chen Tsai Cheng Lin Chien Wang",
   "summary": "気管支拡張症は好中球性疾患とされてきたが、非好酸球性であっても高IgE血症が重症増悪リスクと独立して関連することを台湾16施設・579例の前向きコホートで示した。非アレルギー性バイオマーカーとして血清IgEが増悪予測・治療層別化に有用な可能性を示す新知見。（PubMed PMID: 42045520）",
   "jpView": "非好酸球性BEでの高IgE血症と重症増悪。好酸球性とは別経路で、真菌感作(ABPM)が多い日本での増悪層別化に示唆的。",
+  "pmid": "42045520",
   "url": "https://pubmed.ncbi.nlm.nih.gov/42045520/"
  },
  {
@@ -8087,24 +8268,8 @@
   "authors": "Semenzato Umberto et al.",
   "aui": "Semenzato Santello Fichera Previtero Contin Rastelli Valvason Zuffellato Ferrari Micelli Giraudo Sattin Cattelan Spagnolo Tinè",
   "summary": "気管支拡張症患者の胸部CTから骨格筋量・脂肪量等の体組成を定量化しリスク層別化への応用を検討した研究。日常診療で取得される胸部CTに体組成解析を組み込むことで、低コストな予後層別化が実現できる可能性を示した。（PubMed PMID: 41998633）",
+  "pmid": "41998633",
   "url": "https://pubmed.ncbi.nlm.nih.gov/41998633/"
- },
- {
-  "id": 226,
-  "cat": "増悪・病態",
-  "isNew": false,
-  "titleJa": "インパルスオシロメトリー指標は気管支拡張症の機能障害・進行性肺疾患と関連する",
-  "titleEn": "Impulse oscillometry indices are associated with functional impairment and progressive pulmonary disease in bronchiectasis",
-  "journal": "Expert Review of Respiratory Medicine",
-  "sjr": "Q2",
-  "if": "2.7",
-  "date": "2026-05-25",
-  "year": 2026,
-  "ev": "原著",
-  "authors": "Kleinhendler Eyal et al.",
-  "aui": "Kleinhendler Hasson Cohn-Schwartz Melloul Enghelberg Friedman Regev Urtreger Kupershmidet Bar-Shai Tiran Freund Unterman",
-  "summary": "努力非依存的な気道評価法であるインパルスオシロメトリー（IOS）の各種指標が気管支拡張症の肺機能障害・疾患進行と有意に関連することを示した。スパイロメトリーが困難な患者や小児における肺機能評価の代替手法としてのIOS活用を支持する。（PubMed PMID: 42159580）",
-  "url": "https://pubmed.ncbi.nlm.nih.gov/42159580/"
  },
  {
   "id": 225,
@@ -8122,14 +8287,15 @@
   "aui": "De Angelis Lo Casto Artuso Del Bello Tramontano Nigro Simonetta Scarano Polelli Aliberti",
   "summary": "気管支拡張症における黄色ブドウ球菌（S. aureus/MRSA）の疫学・臨床的影響・管理上の課題を包括的にレビュー。P. aeruginosa以外の主要病原体としてのS. aureusを再評価し、MRSA特異的な気道感染管理戦略の確立に向けた課題を提示した。（PubMed PMID: 42111376）",
   "jpView": "黄色ブドウ球菌/MRSAのBEでの意義。MRSA保菌が問題となる国内で、定着菌としての評価・管理の参考になる。",
+  "pmid": "42111376",
   "url": "https://pubmed.ncbi.nlm.nih.gov/42111376/"
  },
  {
   "id": 224,
   "cat": "マイクロバイオーム・感染",
   "isNew": false,
-  "titleJa": "非CFG気管支拡張症患者の慢性副鼻腔炎と喀痰NTM陽性の関連：米国BE・NTMレジストリ解析（n=1352）",
-  "titleEn": "Association of Chronic Rhinosinusitis and NTM in Sputum of Patients With Non-Cystic Fibrosis Bronchiectasis",
+  "titleJa": "非CF気管支拡張症患者における慢性副鼻腔炎と喀痰緑膿菌の関連：米国BE・NTMレジストリ解析",
+  "titleEn": "Association of Chronic Rhinosinusitis and Pseudomonas Aeruginosa in Sputum of Patients With Non-Cystic Fibrosis Bronchiectasis.",
   "journal": "Chronic Obstructive Pulmonary Diseases",
   "sjr": "Q2",
   "if": "2.0",
@@ -8138,16 +8304,17 @@
   "ev": "原著",
   "authors": "Grabauskas Titas et al.",
   "aui": "Grabauskas Brunton Metersky Winthrop Lapinel Solomon Jakharia Korah-Sedgwick Geyer",
-  "summary": "米国BE・NTMレジストリ1352例の横断解析で、CRS既往が喀痰MAC陽性と独立して関連（OR 1.5）することを初めて示した。Pseudomonas・Haemophilusとの関連はなく、上気道感染（副鼻腔炎）→気管支拡張症NTM感染という特異的な経路の重要性を示唆する。（PubMed PMID: 41738760）",
+  "summary": "米国Bronchiectasis and NTM Research Registryの気管支拡張症1,352例（うち慢性副鼻腔炎の既往222例・16%）の横断解析で、慢性副鼻腔炎群は喀痰緑膿菌陽性が多く（35% vs 26%）、多変量調整後も慢性副鼻腔炎は緑膿菌陽性と独立して関連した（OR 1.5、95%CI 1.07〜2.08）。一方、黄色ブドウ球菌・インフルエンザ菌とは関連しなかった。",
   "jpView": "副鼻腔-気管支の連関。日本でも副鼻腔気管支症候群(SBS)として認識される病態で、慢性副鼻腔炎とNTM陽性の関連は国内の慢性気道感染診療と親和性が高い。",
+  "pmid": "41738760",
   "url": "https://pubmed.ncbi.nlm.nih.gov/41738760/"
  },
  {
   "id": 223,
   "cat": "マイクロバイオーム・感染",
   "isNew": false,
-  "titleJa": "気管支拡張症患者におけるNTMと複合菌の共感染：偶然か必然か（Front Med総説）",
-  "titleEn": "Co-infection with NTM and complex in patients with bronchiectasis: coincidence or inevitability?",
+  "titleJa": "気管支拡張症患者における緑膿菌とMycobacterium avium complexの共感染：偶然か必然か（総説）",
+  "titleEn": "Co-infection with Pseudomonas aeruginosa and Mycobacterium avium complex in patients with bronchiectasis: coincidence or inevitability?",
   "journal": "Frontiers in Medicine",
   "sjr": "Q1",
   "if": "3.0",
@@ -8156,8 +8323,9 @@
   "ev": "総説",
   "authors": "Zhou Xiaoni et al.",
   "aui": "Zhou Luo Wu Wang Pan Wang Xiao Lin Yao",
-  "summary": "気管支拡張症患者の気道においてNTMとP. aeruginosa・Aspergillus等との共感染が高頻度に生じる実態と機序を論じたレビュー。気管支拡張症気道が多菌種混合感染の温床となる構造的・免疫学的背景を解説し、複合感染を念頭においた管理戦略の必要性を提示した。（PubMed PMID: 41889491）",
+  "summary": "武漢肺科医院のグループによる総説で、気管支拡張症の気道微生物叢が「単一病原体」から「複数病原体の共存」へと捉え直されるなか、MACと緑膿菌がいずれも気道破壊を増悪させながら同時に検討されることは少ないと指摘し、両者が同一患者内で一方が優勢になると他方が退く形で長期に共存し、共感染例の疾病負荷は単独感染より高いことを示すエビデンスを整理した。両菌の競合・協調的相互作用の機序と疫学・臨床像をまとめ、治療上の課題を提示している。",
   "jpView": "NTMと他菌の共感染。NTM多発国の日本では、NTM-BE例での複数菌定着の評価と治療優先順位の判断が日常的課題であり、実臨床に直結する。",
+  "pmid": "41889491",
   "url": "https://pubmed.ncbi.nlm.nih.gov/41889491/"
  },
  {
@@ -8176,6 +8344,7 @@
   "aui": "Semancik Ganninger Robinson Cooper-Bennett Fintzi Fennelly Prevots Lipner",
   "summary": "気管支拡張症患者120例（38%が現在NTM感染、38%が既往感染）の尿中微量金属とNTM感染の関連を検討。モリブデン濃度1 SD増加ごとに現在NTM感染のオッズが14%有意に増加（OR 1.14、95%CI 1.02–1.28）。水道水・給水管中のモリブデンとNTM感染の関連を臨床コホートで初めて検証し、気管支拡張症患者の居住環境評価の重要性を示した。（PubMed PMID: 41889435）",
   "jpView": "尿中モリブデンとNTM感染の関連。日本はNTM高浸淫国で水系環境曝露が示唆されており、給水・微量金属と感染リスクの知見は国内の環境疫学・患者指導に関連する。",
+  "pmid": "41889435",
   "url": "https://pubmed.ncbi.nlm.nih.gov/41889435/"
  },
  {
@@ -8194,6 +8363,7 @@
   "aui": "Lee Joh Lee Kim Sin Koo Jeong",
   "summary": "気管支拡張症130例の後方視的研究。主肺動脈径（mPA）>29 mmと2葉以上の病変が入院リスクの独立した予測因子（調整OR各2.47・2.57）。CT単独モデルが心エコー組み合わせモデルと同等の入院予測精度を示し、HRCTによる肺高血圧スクリーニングが気管支拡張症の増悪リスク層別化に有用であることを支持する。（PubMed PMID: 41362089）",
   "jpView": "BEの肺高血圧をHRCT・心エコーで評価。重症・高齢BEが多い日本で、見落とされやすい合併症の評価指標。",
+  "pmid": "41362089",
   "url": "https://pubmed.ncbi.nlm.nih.gov/41362089/"
  },
  {
@@ -8211,6 +8381,7 @@
   "authors": "Soto-Martinez M E et al.",
   "aui": "Soto-Martinez Rubin",
   "summary": "2025年の小児呼吸器・睡眠医学の注目論文を専門家がキュレーションした年次レビュー。喘息・気管支拡張症・CF・RSV・睡眠呼吸障害など100本近くの候補から厳選し、小児気管支拡張症を含む最新エビデンスの全体像を提供する包括的総説。（PubMed PMID: 41813463）",
+  "pmid": "41813463",
   "url": "https://pubmed.ncbi.nlm.nih.gov/41813463/"
  },
  {
@@ -8229,6 +8400,7 @@
   "aui": "Hu Ruan Chung Hsueh Yu Chien",
   "summary": "台湾の前向きコホート（97例、77%が気管支拡張症）で、Aspergillus特異的IgG高値がFEV1急速低下の独立した危険因子と同定（OR 1.04、AUC 0.72）。カットオフ30 mgA/Lで感度63.6%・特異度71.4%を示し、気管支拡張症患者での真菌曝露モニタリングの臨床的意義を定量化した。（PubMed PMID: 41136312）",
   "jpView": "アスペルギルス特異的IgG陽性とFEV1急速低下の関連。真菌関連気道疾患が問題となる日本で、感作例の経過予測に役立つ。",
+  "pmid": "41136312",
   "url": "https://pubmed.ncbi.nlm.nih.gov/41136312/"
  },
  {
@@ -8248,6 +8420,7 @@
   "summary": "231例のPCDコホートで10.4%にNTMが検出され（M. simiaeが主体）、急速発育菌（M. abscessus等）はFEV1低値患者に多かった。気管支拡張症を主徴とするPCDにおいてNTM合併が臨床的に重要な問題であることを多施設データで示した初の大規模研究。（PubMed PMID: 42207757）",
   "jpView": "NTM多発国の日本でも、PCD等の素因疾患にNTMが重複する病態は重要。国家規模コホートの知見は希少病因×NTM管理の参考になる。",
   "scope": "PCD",
+  "pmid": "42207757",
   "url": "https://pubmed.ncbi.nlm.nih.gov/42207757/"
  },
  {
@@ -8266,6 +8439,7 @@
   "aui": "Carroll Chapman Gilchrist",
   "summary": "気管支拡張症・CF・PCD患者におけるアジスロマイシン長期療法中の耐性獲得パターンを解説した社説。耐性は必ずしも治療失敗を意味せず、マクロライド感受性の判定基準の再考と個別化した耐性モニタリング戦略の必要性を論じた。（PubMed PMID: 42161596）",
   "jpView": "マクロライド長期療法が根付く日本では、アジスロマイシン耐性パターンの解釈と耐性化回避(特にNTM)が国内診療の最重要留意点となる。",
+  "pmid": "42161596",
   "url": "https://pubmed.ncbi.nlm.nih.gov/42161596/"
  },
  {
@@ -8285,6 +8459,7 @@
   "summary": "重症喘息患者へのICS/LABA/LAMAトリプル療法の後方視的解析で、気管支拡張症合併がTT治療失敗の独立した予測因子（HR 1.91）として同定された。重症喘息における合併気管支拡張症のスクリーニングと個別化治療選択の重要性を示唆する。（PubMed PMID: 42084598）",
   "jpView": "重症喘息へのトリプル吸入療法。喘息合併BE(ACO)が多い日本で、吸入療法の最適化の参考になる。",
   "scope": "喘息",
+  "pmid": "42084598",
   "url": "https://pubmed.ncbi.nlm.nih.gov/42084598/"
  },
  {
@@ -8303,6 +8478,7 @@
   "aui": "Wang Shen Li Xia Yin Qiao Deng He Guo Zhang Zhang Qu",
   "summary": "P. aeruginosaが宿主細胞の乳酸を枯渇させてH3K18乳酸化を低下させ、m6A結合タンパクYTHDF1によるDNAH5発現調節を障害することで線毛機能不全を誘導するメカニズムを初めて解明した。このエピジェネティック経路の解明は気管支拡張症における緑膿菌慢性感染の新規治療標的となりうる。（PubMed PMID: 41738162）",
   "scope": "PCD",
+  "pmid": "41738162",
   "url": "https://pubmed.ncbi.nlm.nih.gov/41738162/"
  },
  {
@@ -8321,6 +8497,7 @@
   "aui": "Thawanaphong Gonzalez-Bravo Radford Kjarsgaard Venegas Garrido Fedosenko Ho Dyment Tan Zhang Adatia Mukherjee Dolovich Nair",
   "summary": "好中球性重症喘息増悪患者の61.5%にPCD関連遺伝子バリアントが同定され、これらの患者では生物学的製剤の効果が乏しい可能性が示された。気管支拡張症合併重症喘息ではPCDの見逃しに注意し、早期遺伝子スクリーニングが治療戦略選択を変えうることを示す。（PubMed PMID: 42104487）",
   "scope": "喘息",
+  "pmid": "42104487",
   "url": "https://pubmed.ncbi.nlm.nih.gov/42104487/"
  },
  {
@@ -8338,6 +8515,7 @@
   "authors": "Fuchs Teresa et al.",
   "aui": "Fuchs Donovan Ives Irving Davies Hogg Alton Wilson Bush Davies",
   "summary": "小児CF・PCD患者の肺機能・CT所見と気道炎症の相関を比較解析。CFでは肺機能低下と炎症が乖離する一方、PCD（気管支拡張症を主病態とする）では異なる相関パターンが確認され、疾患別の炎症モニタリング指標の使い分けの重要性が示された。（PubMed PMID: 42101371）",
+  "pmid": "42101371",
   "url": "https://pubmed.ncbi.nlm.nih.gov/42101371/"
  },
  {
@@ -8356,6 +8534,7 @@
   "aui": "Tao Li Uddin Yan Jiang Bai",
   "summary": "CCDC39遺伝子c.1528-2A>GホモスプライスサイトバリアントによりPCDに精子鞭毛多形態異常症（MMAF）が合併した男性不妊症例を報告。ICSIで妊娠に成功し、PCD遺伝子バリアントが男性不妊の見逃せない原因であることを示す新知見。（PubMed PMID: 42210652）",
   "scope": "PCD",
+  "pmid": "42210652",
   "url": "https://pubmed.ncbi.nlm.nih.gov/42210652/"
  },
  {
@@ -8374,6 +8553,7 @@
   "aui": "AbdulWahab Mohamed Hamid Alzoubi Love Robinson Janahi Abu-Hasan",
   "summary": "カタール在住28名のPCD小児を対象に遺伝子解析を実施し8つの新規バリアントを同定。カタール国民ではDNAH11が最多であり、多様な国籍背景を持つ小児ではバリアントスペクトラムが異なることが示された。気管支拡張症を引き起こすPCDの遺伝子多様性の理解に貢献する。（PubMed PMID: 41267578）",
   "scope": "PCD",
+  "pmid": "41267578",
   "url": "https://pubmed.ncbi.nlm.nih.gov/41267578/"
  },
  {
@@ -8392,6 +8572,7 @@
   "aui": "Wu Tavares Liang Wee Mennella Feng Cao Wong Zheng He Stephenson Hanan Hochma Li Chen Dell Heon Liu",
   "summary": "網膜色素変性症との関連で知られるRPGR遺伝子の機能喪失がF-アクチン過剰蓄積を通じて運動線毛を障害しPCDを引き起こすメカニズムを解明。ラトランクリンAおよびY27632によるF-アクチン調節がPCD病態を改善することを示し、気管支拡張症を伴うPCDの新規治療戦略を提示した。（PubMed PMID: 41915430）",
   "scope": "PCD",
+  "pmid": "41915430",
   "url": "https://pubmed.ncbi.nlm.nih.gov/41915430/"
  },
  {
@@ -8410,6 +8591,7 @@
   "aui": "Hao Yuan",
   "summary": "FOXJ1遺伝子のヘテロ接合機能獲得バリアントによる常染色体優性PCD（AD-PCD）の病態機序と臨床特性を解説した論説。AD-PCDは線毛構造が保たれながら運動機能が障害される特殊な表現型を示し、気管支拡張症診療で見逃されやすい新規サブタイプとして注目される。（PubMed PMID: 42113888）",
   "scope": "PCD",
+  "pmid": "42113888",
   "url": "https://pubmed.ncbi.nlm.nih.gov/42113888/"
  },
  {
@@ -8428,6 +8610,7 @@
   "aui": "Ma Yang Zhang Pan Li Wang Li",
   "summary": "在胎34週の双胎女児がDNAH5遺伝子変異による内臓逆位を伴うPCDと新生児期に診断された2症例。新生児呼吸窮迫と内臓逆位が共存する場合はPCDを積極的に疑い、遺伝子検査で早期確定診断を行うことで気管支拡張症等の不可逆的肺障害の予防につながりうることを示した。（PubMed PMID: 42216596）",
   "scope": "PCD",
+  "pmid": "42216596",
   "url": "https://pubmed.ncbi.nlm.nih.gov/42216596/"
  },
  {
@@ -8445,6 +8628,7 @@
   "authors": "Boast Lucy Anne et al.",
   "aui": "Boast Varma Swinnerton Turner Damery",
   "summary": "喘息・気管支拡張症・ILDを対象とした統合ケア介入16研究の系統的レビュー。喘息・ILDでは短期的QOL改善・医療利用減少の可能性が示されたが、気管支拡張症に特化した統合ケア研究は1件も同定されず、この分野における重要なエビデンスギャップが明確化された。（PubMed PMID: 42209125）",
+  "pmid": "42209125",
   "url": "https://pubmed.ncbi.nlm.nih.gov/42209125/"
  },
  {
@@ -8463,6 +8647,7 @@
   "aui": "Karavasiloglou Gkatzou Fernandez-Rodriguez Schwartz Goutaki",
   "summary": "過去20年間のPCD患者の成長・栄養状態・食事摂取量に関する50研究を体系的にレビュー。低栄養有病率4〜11%、ビタミンD不足54%・欠乏18〜26%と高率であり、PCD（気管支拡張症を主病態として含む）患者への栄養評価・介入の重要性とエビデンスギャップを指摘した。（PubMed PMID: 42203237）",
   "scope": "PCD",
+  "pmid": "42203237",
   "url": "https://pubmed.ncbi.nlm.nih.gov/42203237/"
  },
  {
@@ -8481,6 +8666,7 @@
   "aui": "Rubbo Ong Tsang Newman Lucas",
   "summary": "PCD小児の外来フォローアップに関する現行文献のレビュー。高品質エビデンスの不足・個人差の大きさ・診断遅延が管理プロトコル策定を困難にしている現状を指摘し、PCD専門外来での統合管理、気管支拡張症を含む上下気道疾患のモニタリング、患者・家族教育戦略を概説した。（PubMed PMID: 42199053）",
   "scope": "PCD",
+  "pmid": "42199053",
   "url": "https://pubmed.ncbi.nlm.nih.gov/42199053/"
  },
  {
@@ -8499,6 +8685,7 @@
   "aui": "He Lu Guo Yang Zhou Liu Fan Yang Luo",
   "summary": "ZMYND10遺伝子のホモ接合スプライスサイト変異（c.511-1G>A）が気管支拡張症・慢性副鼻腔炎・内臓逆位・原発性不妊を呈するPCDを引き起こした中国人家系の症例報告。高速ビデオ顕微鏡で線毛完全不動性が確認され、外内ダイニンアームの消失とGAS8（DRC4）欠失が観察され、ZMYND10関連PCD表現型スペクトラムが拡大された。（PubMed PMID: 42180707）",
   "scope": "PCD",
+  "pmid": "42180707",
   "url": "https://pubmed.ncbi.nlm.nih.gov/42180707/"
  },
  {
@@ -8514,6 +8701,7 @@
   "ev": "ガイドライン",
   "summary": "中国呼吸器学会による気管支肺結核（TBTB）の診断・治療2025年版ガイドライン。非特異的症状のため誤診・診断遅延が生じやすく、気管支拡張症・気道狭窄・肺萎縮等の重篤後遺症につながりうるTBTBに対し、最新エビデンスに基づく診断アルゴリズムと治療戦略を包括的に提示した。（PubMed PMID: 42108173）",
   "jpView": "気管支肺結核の診断・治療GL（中国）。結核後の気管支拡張症・気道狭窄は日本でも重要な病因で、結核既往を背景とする気管支拡張症の管理に示唆を与える。",
+  "pmid": "42108173",
   "url": "https://pubmed.ncbi.nlm.nih.gov/42108173/"
  },
  {
@@ -8532,6 +8720,7 @@
   "aui": "Zhao Yuan Xiong Xia Deng Chen Liao Wang Deng",
   "summary": "PCD主要原因遺伝子DNAH11のバリアントを解析し、左右非対称性障害を呈するPCDおよび非典型的PCDの遺伝子型・表現型相関を明らかにした。DNAH11バリアントは線毛構造が保たれながら運動が異常となる特殊なPCDサブタイプを引き起こし、気管支拡張症の遺伝子診断における次世代シーケンシングパネルの有用性を支持する。（PubMed PMID: 42102130）",
   "scope": "PCD",
+  "pmid": "42102130",
   "url": "https://pubmed.ncbi.nlm.nih.gov/42102130/"
  },
  {
@@ -8549,6 +8738,7 @@
   "authors": "Chen Qiaoli et al.",
   "aui": "Chen Wang Cai Xu Yang Lin Zhang Wang Yang Xu Chen Zhong Zhao Deng",
   "summary": "慢性咳嗽1,061例の解析で、気管支拡張症とCOPDは中性球性・混合白血球性喀痰群でより高頻度に認められた。喀痰好中球増多は年齢・喫煙歴調整後も複数の換気機能指標（FVC・FEV₁/FVC・PEFなど）低下と独立して関連し、気管支拡張症における好中球優位型炎症の肺機能への影響が再確認された。（PubMed PMID: 42157039）",
+  "pmid": "42157039",
   "url": "https://pubmed.ncbi.nlm.nih.gov/42157039/"
  },
  {
@@ -8566,6 +8756,7 @@
   "authors": "Tian Changping et al.",
   "aui": "Tian Xue",
   "summary": "気管支拡張症の表現型解析において、CFTRジェノタイプに基づくアプローチから、機能的バイオマーカーと縦断的追跡を組み合わせた動的エンドタイピング戦略への転換を論じたコレスポンデンス。精密医療実装に向けた次世代エンドタイプ分類フレームワークを提示している。（PubMed PMID: 42212955）",
+  "pmid": "42212955",
   "url": "https://pubmed.ncbi.nlm.nih.gov/42212955/"
  },
  {
@@ -8584,6 +8775,7 @@
   "aui": "Rademacher Ringshausen Sutharsan Rohde Zurawski Sieber Barten-Neiner Adaskina Pink Mertsch",
   "summary": "38施設・1500名超のドイツPROGNOSISレジストリ解析。レジストリ参加中に増悪回数（中央値2→1回、p<0.001）・入院が有意に減少し、肺機能は安定維持。特発性症例が35→28%に減少し、病因特定に基づく個別化管理の重要性が示された。（PubMed PMID: 42206015）",
   "jpView": "レジストリ参加により病因の特定が進み特発性例が35%から28%に減少した本結果は、本邦のBE 147例で特発性が34%を占めることと比べても示唆的である。国内では病因精査の体系化（レジストリの整備を含む）が個別化管理の前提となる。",
+  "pmid": "42206015",
   "url": "https://pubmed.ncbi.nlm.nih.gov/42206015/"
  },
  {
@@ -8601,6 +8793,7 @@
   "authors": "Hu Bingzhu et al.",
   "aui": "Hu Zhang Chai Yu Liu Chen Li",
   "summary": "BAE施行426例を中央値2年追跡した後方視的研究で、26.5%が喀血再発。多変量Cox回帰にて体肺動脈シャント（HR=2.43）と全肺血管抵抗（TPR）上昇が独立した再発予測因子として同定され、BAE前の血行動態評価の重要性が示された。（PubMed PMID: 42182664）",
+  "pmid": "42182664",
   "url": "https://pubmed.ncbi.nlm.nih.gov/42182664/"
  },
  {
@@ -8619,6 +8812,7 @@
   "aui": "Hawkins O'Mahony Harrison Rutherford Cusack McDonnell O'Neil Duignan Bruzzi Ward Rutherford",
   "summary": "アイルランド・ゴールウェイ大学病院のグループによるNCFBの包括的臨床レビュー。疫学・診断・気道クリアランス・抗菌療法・brensocatib等の新規治療を網羅的にアップデート。（PubMed PMID: 42057306）",
   "jpView": "NCFBの包括レビュー。日本には非CF気管支拡張症の独立診療ガイドラインが無く（2026年時点）、brensocatib等の新規治療を含む本総説は国内実臨床の参照点になりうる。",
+  "pmid": "42057306",
   "url": "https://pubmed.ncbi.nlm.nih.gov/42057306/"
  },
  {
@@ -8637,6 +8831,7 @@
   "aui": "Yilmaz Basaran Bindal Turkkan Sahin Direk Yazıcıoglu Yekeler",
   "summary": "気管支拡張症を主病態とするカルタゲナー症候群の末期呼吸不全患者に両側肺移植を施行し7年間追跡した症例報告。手術・術後の複数の課題を乗り越えQoLが著明に改善し、PCD関連気管支拡張症の終末期治療として肺移植の有効性と課題を示した。（PubMed PMID: 42144294）",
   "scope": "PCD",
+  "pmid": "42144294",
   "url": "https://pubmed.ncbi.nlm.nih.gov/42144294/"
  },
  {
@@ -8656,6 +8851,7 @@
   "aui": "Papapetropoulos Topouzis Alexander Cortese-Krott Helyes Martemyanov Mauro Nagercoil Panettieri Patel Schulz Stefanska Stephens Vergnolle Wang Ward Ferdinandy",
   "summary": "2025年承認の46種の新薬を包括的にレビュー。気管支拡張症分野では、DPP1阻害薬brensocatibがFDA承認を取得し、好中球プロテアーゼ活性化を阻害して肺組織破壊を防ぐ初の標的治療として紹介。54%がファーストインクラス薬という高水準の年となった。（PubMed PMID: 41771767）",
   "jpView": "Brensocatib(Insmed)は2025年にFDA承認、日本は未承認(2026年時点、ASPEN試験に国内サブグループ)。Boehringerのverducatibは別化合物で第III相AIRTIVITYが国内進行中。クラス動向把握に重要。",
+  "pmid": "41771767",
   "url": "https://pubmed.ncbi.nlm.nih.gov/41771767/"
  },
  {
@@ -8674,6 +8870,7 @@
   "aui": "Usui Sakamoto Homma Kurosaki Kurihara Sato Suzuki Nanki Arimura Matsuo Makino Okada Harigai Yamagata Sugiyama Dobashi Ishizu Tsuboi Usui Sada Kishi",
   "summary": "日本人AAV患者195例（RemIT-JAV-RPGNコホート）のHRCT所見を系統的に解析。牽引性気管支拡張（34%）はMPO-ANCA陽性例で多く、UIPパターン間質性肺炎はMPO群で有意に高頻度（47% vs 11%）。ANCAサブタイプにより肺病変パターンが明確に異なることを示した。（PubMed PMID: 42068960）",
   "jpView": "日本発。ANCA関連血管炎のANCAサブタイプ別HRCT所見。膠原病・血管炎関連BEの鑑別に国内臨床で有用。",
+  "pmid": "42068960",
   "url": "https://pubmed.ncbi.nlm.nih.gov/42068960/"
  },
  {
@@ -8690,6 +8887,7 @@
   "aui": "Shillitoe Bourne Stroud Flood Buckland Ip Worth Hackett Herwadkar Coulter Jolles Garcez Moya Faust Pearce Gennery",
   "summary": "英国XLA患者のHRQoLを調査。気管支拡張症非合併例では健常者と同等のHRQoLだが、合併例では身体機能スコアが有意に低下（PCS 47.88 vs 55.14, p<0.001）。原発性免疫不全症における気管支拡張症予防の重要性を定量的に示した。（PubMed PMID: 42169998）",
   "scope": "免疫不全",
+  "pmid": "42169998",
   "url": "https://pubmed.ncbi.nlm.nih.gov/42169998/"
  },
  {
@@ -8708,6 +8906,7 @@
   "aui": "Zhang Jiang Li Zhang Li Zhang",
   "summary": "感染性気管支拡張症として10年間誤診されていた22歳男性にABPAを確定診断した症例。HRCT・気管支鏡・BALF中ガラクトマンナン・tNGSを統合した多段階診断ワークフローを構築し、早期抗炎症・抗真菌療法開始により臨床改善を達成した。（PubMed PMID: 42184259）",
   "jpView": "感染性気管支拡張症として長年誤診されABPAと確定した症例。日本ではアスペルギルス以外の真菌（Schizophyllum等）によるABPMも比較的多く、BAL・tNGSを含む多段階診断の有用性は国内でも参考になる。",
+  "pmid": "42184259",
   "url": "https://pubmed.ncbi.nlm.nih.gov/42184259/"
  },
  {
@@ -8722,6 +8921,7 @@
   "ev": "原著",
   "summary": "喘息患者の1.0〜3.5%・嚢胞性線維症の7〜15%に発症するABPAの統合診療コンセンサスを策定。気管支拡張症合併を特徴とし、コルチコステロイド・抗真菌薬を基本にオマリズマブ等の生物学的製剤と漢方医学的アプローチを組み合わせた診断・管理戦略を体系化した。（PubMed PMID: 42103676）",
   "jpView": "ABPAの統合診療コンセンサス（中国）。気管支拡張症合併を特徴とするABPAは、日本では非アスペルギルス真菌の関与という特徴があり、診断基準の国内適用時の留意点を考える材料になる。",
+  "pmid": "42103676",
   "url": "https://pubmed.ncbi.nlm.nih.gov/42103676/"
  },
  {
@@ -8740,6 +8940,7 @@
   "aui": "Greydanus Bhave Ashok Goel",
   "summary": "50以上の遺伝子・2000以上の病原性変異が関与するPCDの病態・診断・治療を包括的に解説。気管支拡張症が主要合併症であり、nasal NO・TEM・免疫蛍光・HSVMAを組み合わせた多角的診断が不可欠。遺伝子治療を含む将来的治療の展望も論じている。（PubMed PMID: 42135132）",
   "scope": "PCD",
+  "pmid": "42135132",
   "url": "https://pubmed.ncbi.nlm.nih.gov/42135132/"
  },
  {
@@ -8758,6 +8959,7 @@
   "aui": "Akca Dinç Ertuna Özkan Tabakçı Bilgiç Kürtül Çakar Ünlü Yetişgin Yıldırım Ademhan Tural Eryılmaz Polat Tuğcu Keçeli Sığırcı Cinel",
   "summary": "PCD小児47例でPCD特異的CTスコアリング「SPEC」を検証。SPECスコアはFEV₁z-score（ρ=-0.748）・FVCz-score（ρ=-0.722）と強い負の相関を示し、既存のBhalla・modified Brodyスコアとも高い相関。小児PCD患者の治療意思決定と臨床試験転帰指標としての有用性が示された。（PubMed PMID: 42133077）",
   "scope": "PCD",
+  "pmid": "42133077",
   "url": "https://pubmed.ncbi.nlm.nih.gov/42133077/"
  },
  {
@@ -8776,6 +8978,7 @@
   "aui": "Posner",
   "summary": "慢性咳嗽の多因子的な病態と原因診断戦略を呼吸器内科の観点から体系的に総説。気管支拡張症・喘息・気管支炎などの鑑別アルゴリズムを整理し、難治性咳嗽に対する段階的な専門的アプローチを提示した。（PubMed PMID: 42161710）",
   "jpView": "慢性咳嗽への呼吸器内科的アプローチ。咳嗽・喀痰GLを持つ日本で、BEを慢性咳嗽の鑑別に含める視点を補強。",
+  "pmid": "42161710",
   "url": "https://pubmed.ncbi.nlm.nih.gov/42161710/"
  },
  {
@@ -8795,6 +8998,7 @@
   "summary": "東アジアに多いDRC1遺伝子変異によるPCDが新生児期に反復無気肺・気道過分泌として発症した日本初の症例報告。PCDは典型的な内臓逆位を欠く場合、新生児期に見逃されやすく、早期遺伝子診断の重要性を強調した。（PubMed PMID: 42185991）",
   "jpView": "DRC1変異PCDの新生児例(日本発)。新生児期からのPCD/遺伝性気管支拡張症の早期診断の重要性を国内に提起する。",
   "scope": "PCD",
+  "pmid": "42185991",
   "url": "https://pubmed.ncbi.nlm.nih.gov/42185991/"
  },
  {
@@ -8814,6 +9018,7 @@
   "summary": "46歳男性のPCDをDNAAF11遺伝子の大欠失（エクソン5〜11）とヘミ接合性ナンセンス変異の複合として同定した日本初の詳細報告。ロングリードシーケンシングが希少な構造的変異の診断に有効であり、不明原因の気管支拡張症患者へのゲノム解析の重要性を示した。（PubMed PMID: 41062319）",
   "jpView": "日本発。DNAAF11大欠失・ナンセンス変異によるPCD。日本人の線毛機能不全の遺伝基盤解明に寄与する。",
   "scope": "PCD",
+  "pmid": "41062319",
   "url": "https://pubmed.ncbi.nlm.nih.gov/41062319/"
  },
  {
@@ -8832,6 +9037,7 @@
   "aui": "Wahab Hussain Babar Nadeem Amin Sarwar Ahmad Wahab Mukhtar",
   "summary": "ABPA成人喘息患者の特徴的なCT・X線所見を整理し、気管支拡張症を含む各種画像パターンの発現頻度と診断的意義を報告。ABPAの早期診断と治療開始タイミングにおける画像所見の役割を考察した。（PubMed PMID: 42099257）",
   "jpView": "ABPAの画像診断。本邦ではアレルギー性気管支肺真菌症(ABPM)としてAspergillus以外の関与も念頭に置く必要があり、国内の診断アプローチと併せ解釈したい。",
+  "pmid": "42099257",
   "url": "https://pubmed.ncbi.nlm.nih.gov/42099257/"
  },
  {
@@ -8849,6 +9055,7 @@
   "authors": "Adiguzel Taner et al.",
   "aui": "Adiguzel Karadag",
   "summary": "6〜18歳の非CF気管支拡張症小児100例でFeNOを測定し病因・肺機能・CT所見との関連を検討。FeNOはFEV1・FVCと正相関し喘息合併例で高値を示したが、CT病変範囲との相関は認めず、FeNOはT2炎症フェノタイプのマーカーとして有用と結論した。（PubMed PMID: 42201195）",
+  "pmid": "42201195",
   "url": "https://pubmed.ncbi.nlm.nih.gov/42201195/"
  },
  {
@@ -8866,6 +9073,7 @@
   "authors": "Dournes Ga&#xeb;l et al.",
   "aui": "Dournes Hadj Bouzid Doucet Benlala Maurac Blanchard Dupin Berger Henrot Zysman",
   "summary": "AATD患者のHR-CTで肺気腫・気管支壁肥厚（気管支拡張症）・粘液栓を定量解析し臨床アウトカムとの関連を検討。粘液栓が増悪頻度・死亡率と独立して関連し、AATD患者での気管支拡張症状態の早期把握の重要性を示した。（PubMed PMID: 41364209）",
+  "pmid": "41364209",
   "url": "https://pubmed.ncbi.nlm.nih.gov/41364209/"
  },
  {
@@ -8884,6 +9092,7 @@
   "aui": "Suárez-Casillas Mejías-Trueba Martínez Alemany Navarro Amuedo Praena Segovia de Alarcón González Luque Márquez Palacios-Baena Carmona-Caballero Sánchez Oliva Gil-Navarro García Gutiérrez Herrera-Hidalgo Poyato Borrego López-Cortés Cisneros",
   "summary": "慢性肺疾患（気管支拡張症含む）患者の緑膿菌感染症に対するOPATの前向き観察研究。実臨床でのOPAT有効性・安全性プロファイルを示し、入院期間短縮と医療コスト削減への寄与を支持するエビデンスを提供した。（PubMed PMID: 42198243）",
   "jpView": "緑膿菌への外来点滴抗菌薬療法(OPAT)。吸入抗菌薬が限定的な日本で、難治緑膿菌への代替アプローチとして示唆的。",
+  "pmid": "42198243",
   "url": "https://pubmed.ncbi.nlm.nih.gov/42198243/"
  },
  {
@@ -8901,6 +9110,7 @@
   "aui": "Takahashi Nakagawa Toyama-Kousaka Satake Nagamatsu Hirose Toba Ota Morikawa Nakano Ishigaki Shinkai",
   "summary": "気管支拡張症を背景にNTM肺疾患を経過した80歳日本人女性がMPO-ANCA陽性MPA（顕微鏡的多発血管炎）を発症した症例。NTM-PD後のANCA関連血管炎という稀な合併症と、感染性増悪との鑑別の重要性を示した。（PubMed PMID: 42131077）",
   "jpView": "NTM肺症後の顕微鏡的多発血管炎を扱う本邦症例。NTM多発国の日本で留意すべき病態連関を示す。",
+  "pmid": "42131077",
   "url": "https://pubmed.ncbi.nlm.nih.gov/42131077/"
  },
  {
@@ -8919,6 +9129,7 @@
   "aui": "Gu Wang Lu Cui",
   "summary": "M. shinjukuenseは日本で初めて報告された希少NTMだが、本症例は中国・首都医科大学からの報告で、健康な若年女性が局所性気管支拡張・結節として発症しazithromycin・isoniazid・rifampicin週3回投与で治療に成功した。中国でも本菌による肺疾患の存在が確認され、感染特性・治療指針の確立が急務であることを示した。（PubMed PMID: 42098647）",
   "jpView": "Mycobacterium shinjukuenseは新宿(東京)で分離・命名された菌種で、日本のNTM多様性の高さを象徴する。NTM多発国の本邦では稀少菌種の同定・治療経験の蓄積が国際的にも価値を持つ。",
+  "pmid": "42098647",
   "url": "https://pubmed.ncbi.nlm.nih.gov/42098647/"
  },
  {
@@ -8936,6 +9147,7 @@
   "authors": "Halis Ay&#x15f;e Nigar et al.",
   "aui": "Halis Kahraman Şahin Arısoy Sarıbaş Yıldız",
   "summary": "非CF気管支拡張症による両側肺移植後5年の35歳女性が生殖補助医療を用いて健康児出産に成功した症例報告。肺移植後妊娠における免疫抑制薬の選択・感染対策・母児管理の詳細を記述した貴重な先例である。（PubMed PMID: 42150944）",
+  "pmid": "42150944",
   "url": "https://pubmed.ncbi.nlm.nih.gov/42150944/"
  },
  {
@@ -8953,6 +9165,7 @@
   "authors": "Yamakawa Hideaki",
   "aui": "Yamakawa",
   "summary": "RAにおいて気管支拡張症・ILD・気道感染が複雑に絡み合う「治療のジレンマ」を体系的に論じた総説。免疫抑制療法の有益性と感染リスクのバランス、気管支拡張症・ILD各合併症の管理優先順位を整理した。（PubMed PMID: 41985360）",
+  "pmid": "41985360",
   "url": "https://pubmed.ncbi.nlm.nih.gov/41985360/"
  },
  {
@@ -8970,6 +9183,7 @@
   "authors": "Bondeelle Louise et al.",
   "aui": "Bondeelle Berger Archer de Margerie-Mellon Cassonnet Peffault de Latour Michonneau Chevret Bergeron",
   "summary": "造血幹細胞移植後BOS患者における気管支拡張症の合併実態と臨床的意義を検討。気管支拡張症合併BOSが特有のフェノタイプを形成する可能性を提示し、BOS診療における精密医療的アプローチへの示唆を与える。（PubMed PMID: 41888296）",
+  "pmid": "41888296",
   "url": "https://pubmed.ncbi.nlm.nih.gov/41888296/"
  },
  {
@@ -8987,6 +9201,7 @@
   "authors": "Matthaiou Andreas M et al.",
   "aui": "Matthaiou Bizymi Tomos Symvoulaki Skiadas Pitsidianakis Liapikou Tzanakis Antoniou",
   "summary": "好中球性炎症マーカー（フィブリノゲン）と好酸球性炎症マーカー（FeNO）の比（FFR）が気管支拡張症の疾患活動性・重症度と相関することを検討した研究。FFRは炎症内型の鑑別と重症度評価に有用な新規複合バイオマーカーとなり得ることが示された。（PubMed PMID: 42123116）",
+  "pmid": "42123116",
   "url": "https://pubmed.ncbi.nlm.nih.gov/42123116/"
  },
  {
@@ -9006,6 +9221,7 @@
   "aui": "Panou Steiropoulos Drakopanagiotakis",
   "summary": "DPP-1・DPP-4・DPP-9・DPP-10など各種DPPファミリー酵素の肺疾患への関与を網羅的に総説。ブレンソカチブを軸とするDPP-1阻害薬の気管支拡張症への最強エビデンスを整理し、各DPPの臨床応用と今後の課題を論じている。（PubMed PMID: 42193335）",
   "jpView": "肺疾患におけるDPP系阻害薬の俯瞰。気管支拡張症のDPP-1(カテプシンC)阻害は、糖尿病で馴染みあるDPP-4阻害とは作用機序が異なる点を、国内臨床医に説明する基盤になる。",
+  "pmid": "42193335",
   "url": "https://pubmed.ncbi.nlm.nih.gov/42193335/"
  },
  {
@@ -9013,7 +9229,7 @@
   "cat": "治療・薬剤",
   "isNew": false,
   "titleJa": "臨床的に重症度の高い気管支拡張症を合併した喘息患者へのTSLP阻害薬（テゼペルマブ）使用：ケースシリーズ",
-  "titleEn": "Use of an anti-TSLP agent in patients with asthma and clinically significant bronchiectasis: a case series",
+  "titleEn": "Use of an Anti-Thymic Stromal Lymphopoietin Agent in Patients With Asthma and Clinically Significant Bronchiectasis: A Case Series.",
   "journal": "Chest",
   "sjr": "Q1",
   "if": "9.8",
@@ -9024,6 +9240,7 @@
   "aui": "Gramegna Maruca Caminati Imeri Pelaia Cavallini Mastrototaro Parazzini Radovanovic Faverio Bondi Bagnasco Alicandro Santus Mondoni Aliberti Blasi",
   "summary": "テゼペルマブ（抗TSLP抗体）を気管支拡張症合併重症喘息患者に投与したケースシリーズ報告。T2炎症経路の遮断が気管支拡張症合併例においても喘息コントロールおよび気道炎症の改善に寄与する可能性が示された。（PubMed PMID: 42140482）",
   "jpView": "TSLP阻害薬テゼペルマブは日本で重症喘息に承認済(2026年時点、BEは適応外)。喘息合併重症BE例での効果は、国内で使用可能な生物学的製剤のBE領域への応用可能性を示唆。",
+  "pmid": "42140482",
   "url": "https://pubmed.ncbi.nlm.nih.gov/42140482/"
  },
  {
@@ -10802,7 +11019,7 @@
   "cat": "COPD合併",
   "isNew": false,
   "titleJa": "COPD・喘息・気管支拡張症の精密医療に向けた胸部CT画像解析の進歩",
-  "titleEn": "Chest CT imaging toward personalized management of COPD, asthma, and bronchiectasis: pulmonologist perspectives",
+  "titleEn": "Chest CT imaging toward personalized management of chronic obstructive pulmonary disease, asthma, and bronchiectasis: pulmonologist perspectives.",
   "journal": "Japanese Journal of Radiology",
   "sjr": "Q1",
   "if": "4.1",
@@ -10866,6 +11083,7 @@
   "year": 2026,
   "ev": "原著",
   "authors": "Kumar Madhan et al.",
+  "aui": "Kumar Gatt Zysman-Colman Fontoura-Matias Fertuck Dell Kritzinger Shapiro",
   "summary": "早期診断されたPCD乳児35例で、2歳までに外来増悪66%・入院増悪29%・Pseudomonas検出14%が発生し、7歳時に閉塞性肺機能パターンを示した。吸入高張食塩水は緑膿菌獲得を有意に抑制（0% vs 29%）したが、入院率は上昇し、さらなる前向き検討が必要とされた。",
   "scope": "PCD",
   "pmid": "42112810",
@@ -10884,6 +11102,7 @@
   "year": 2026,
   "ev": "総説",
   "authors": "Barne Monica et al.",
+  "aui": "Barne Shevade Bhattacharyya Christopher Nair Abhyankar Halder Vora Khanna Swarnakar Chhajed Santhalingam Nair Salvi",
   "summary": "NACは気管支拡張症において頻回増悪患者での増悪予防に有用とデルファイコンセンサスで合意された。抗酸化・抗炎症・免疫調節・抗バイオフィルム効果を持つ補助療法として、COPD・気管支拡張症・CFで有用性が確認された。",
   "jpView": "去痰・抗酸化の観点から用いられるN-アセチルシステインのコンセンサス。去痰薬中心の国内診療における位置づけ整理に有用。",
   "pmid": "42158130",
@@ -10905,6 +11124,7 @@
   "aui": "Mandurino Mirizzi Aljama Santus Mantero Omcikus Torres-Duran Turner Tanash Rodríguez-García Jensen Corsico López-Campos Chapman Clarenbach Guimaraes Bartošovská Hernández-Pérez Miravitlles Esquinas Barrecheguren",
   "summary": "349例の確認済みCT気管支拡張症患者をAATD遺伝子型別に解析したところ、Pi*ZZが70.5%を占めたが、Pi*SZ（18.6%）やその他遺伝子型（10.9%）にも相当数が存在した。気管支拡張症に伴うAATDはPi*ZZ以外の遺伝子型にも広がっており、従来よりも広い疾患負荷が明らかになった。",
   "jpView": "AATD遺伝子型別の気管支拡張症特性。AATDが稀な日本では頻度は低いが、非Pi*ZZ型にも及ぶという知見は、国内で稀な本病因を検討する際の参考になる。",
+  "pmid": "41668877",
   "url": "https://pubmed.ncbi.nlm.nih.gov/41668877/"
  },
  {
@@ -10923,6 +11143,7 @@
   "aui": "Marmor Brunton Fraulino Ruoss Henkle Zha Metersky Winthrop",
   "summary": "スタンフォード大学等による気管支拡張症・NTM研究レジストリを用いた後ろ向き解析で、抗生物質曝露とNTM新規分離との関連を検討した。抗菌薬の使用がNTM出現リスクに与える影響が明らかにされ、気管支拡張症における抗菌薬適正使用の重要性が示唆された。",
   "jpView": "抗菌薬曝露とNTM新規分離の関連。マクロライド長期療法が一般的な日本で、NTM耐性化・新規感染への留意点を示す。",
+  "pmid": "41076063",
   "url": "https://pubmed.ncbi.nlm.nih.gov/41076063/"
  },
  {
@@ -10940,6 +11161,7 @@
   "authors": "&#xd6;zdemir Levent et al.",
   "aui": "Özdemir Pazarli Gegin Özdemir Aksu Çubukçu",
   "summary": "気腫を合併しない気管支拡張症563例を後ろ向きに解析した結果、2.8%（16例）にAATD変異が検出され、その遺伝子型分布を明らかにした。AATDは従来COPD/気腫との関連で注目されてきたが、肺気腫のない気管支拡張症においても重要な原因エンティティとなりうることを示した。",
+  "pmid": "41578478",
   "url": "https://pubmed.ncbi.nlm.nih.gov/41578478/"
  },
  {
@@ -10955,6 +11177,7 @@
   "year": 2026,
   "ev": "メタ解析・SR",
   "authors": "Grassi L; Heye F; Proesmans K; Abatih E; Van Daele A; Lahousse L; Crabbé A",
+  "aui": "Grassi Heye Proesmans Abatih Van Daele Lahousse Crabbé",
   "summary": "慢性気道疾患（気管支拡張症を含む）における肺マイクロバイオームの細菌組成と臨床・免疫学的バイオマーカーとの関連を系統的レビューとメタ解析により評価した。肺マイクロバイオームが疾患進行のバイオマーカーとして機能しうることが確認され、精密医療への応用が期待される。",
   "pmid": "41935031",
   "url": "https://www.nature.com/articles/s41522-026-00967-z"
@@ -10972,6 +11195,7 @@
   "year": 2025,
   "ev": "原著",
   "authors": "Zhang Q; Li S; Zheng S; Tang J; Huang H; Han J; Zhou Y; Liu Y; Wu X; Luo J; Kong J",
+  "aui": "Zhang Li Zheng Tang Huang Han Zhou Liu Wu Luo Kong",
   "summary": "腸内細菌由来代謝産物と気管支拡張症との因果関係をメンデルランダム化解析などで評価し、40の代謝産物-疾患交差ターゲットと17のコア遺伝子を同定した。特にPPARG遺伝子が気管支拡張症に対して保護的に働く可能性が示された。",
   "pmid": "41431007",
   "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC12727356/"
@@ -10989,6 +11213,7 @@
   "year": 2026,
   "ev": "原著",
   "authors": "Colaianni-Alfonso N; Montiel G; Siroti C; Castro-Sayat M; Vetrugno L; Crimi C",
+  "aui": "Colaianni-Alfonso Montiel Siroti Castro-Sayat Vetrugno Crimi",
   "summary": "HFNCが気管支拡張症による急性呼吸不全において加温加湿ガス供給により気道分泌物の排出を改善し、喀痰量と呼吸仕事量・酸素化などの生理的指標に有意な改善効果をもたらすことが示された。HFNCは増悪時の気道クリアランス補助として有望であり、NIVより忍容性が高い選択肢として位置づけられている。",
   "pmid": "42024583",
   "url": "https://doi.org/10.1177/19433654261437778"
@@ -10998,7 +11223,7 @@
   "cat": "学会動向",
   "isNew": false,
   "titleJa": "気管支拡張症・非結核性抗酸菌症専門センターの体制設計",
-  "titleEn": "Structure of a Bronchiectasis and Nontuberculous Mycobacteria Care Center",
+  "titleEn": "Structure of a Bronchiectasis and Nontuberculous Mycobacteria Care Center: A Position Statement by the Bronchiectasis & NTM Association.",
   "journal": "Chest",
   "sjr": "Q1",
   "if": "9.8",
@@ -11006,6 +11231,7 @@
   "year": 2025,
   "ev": "ガイドライン",
   "authors": "Flume P; Bullington W; Christon L; Crawford E; Ditner A; Ellis K; Fiske C; Foil K; Hunt C; Ignatius E; Jones M; Kasperbauer S; Kitlowski M; MacDonald M; Marmor M; Martel M; Tupayachi Ortiz MG; Torrence J",
+  "aui": "Flume Bullington Christon Crawford Ditner Ellis Fiske Foil Hunt Ignatius Jones Kasperbauer Kitlowski MacDonald Marmor Martel Tupayachi Ortiz Torrence",
   "summary": "文献レビューと専門家コンセンサスに基づき、専門センターのコアチーム（呼吸器専門医・感染症専門医・理学療法士・専門薬剤師等）・必須パートナー・サービスについての包括的な推奨事項を提示した。米国では62施設にケアセンターネットワークが拡大中。",
   "jpView": "BE-NTM専門センターの設計論。国内のNTM-BE診療体制の整備を考える上で示唆的。",
   "pmid": "41421573",
@@ -11017,7 +11243,7 @@
   "isNew": false,
   "dpp1": true,
   "titleJa": "ブレンソカチブの有効性と価値：ICERカリフォルニア技術評価フォーラムのまとめ",
-  "titleEn": "The effectiveness and value of brensocatib for the treatment of non-cystic fibrosis bronchiectasis: A summary from ICER's California Technology Assessment Forum",
+  "titleEn": "The effectiveness and value of brensocatib for the treatment of non-cystic fibrosis bronchiectasis.",
   "journal": "J Manag Care Spec Pharm",
   "sjr": "Q1",
   "if": "2.9",
@@ -11025,6 +11251,7 @@
   "year": 2026,
   "ev": "原著",
   "authors": "McKenna A; Wasfy JH; Kim K; Touchette DR; Kim S; Richardson M; Ollendorf DA",
+  "aui": "McKenna Wasfy Kim Touchette Kim Richardson Ollendorf",
   "summary": "ICERの独立審査委員会は全会一致（11-0）でブレンソカチブの純粋な健康上の利益を認定。しかし現行価格（年間約88,000ドル）は費用対効果「低」と評価され、3,100〜3,700ドルへの値下げが必要と試算。日本での薬価設定・アクセスへの示唆が大きい。",
   "jpView": "米ICERの価値評価。日本では中医協での薬価・費用対効果評価が上市の鍵となるため、海外の医療経済評価の枠組みは国内の薬価交渉を読む参考になる。Brensocatibは2026年時点で国内未承認。",
   "pmid": "41760562",
@@ -11043,6 +11270,7 @@
   "year": 2025,
   "ev": "原著",
   "authors": "Bertuccio F; Tafa M; Carabetta D; Gemelli T; D'Antona G; Crisafulli O; Conio V; Grosso A; De Silvestri A; Corsico AG; Stella GM",
+  "aui": "Bertuccio Tafa Carabetta Gemelli D'Antona Crisafulli Conio Grosso De Silvestri Corsico Stella",
   "summary": "イタリア・パヴィア大学発の個別化スポーツプロトコル試験。呼吸困難例には持久力訓練、咳嗽・喀痰例には筋力訓練、倦怠感例には有酸素/無酸素混合トレーニングを週3回6ヶ月実施。頻回増悪患者の歴史的データとの比較により非薬物療法の可能性を検証する。",
   "pmid": "40703269",
   "url": "https://www.frontiersin.org/journals/medicine/articles/10.3389/fmed.2025.1554300/full"
@@ -11061,6 +11289,7 @@
   "year": 2024,
   "ev": "RCT",
   "authors": "Chalmers JD; Burgel PR; Daley CL; De Soyza A; Haworth CS; Mauger D; Loebinger MR; McShane PJ; Ringshausen FC; Blasi F; Shteinberg M; Mange K; Teper A; Fernandez C; Zambrano M; Fan C; Zhang X; Metersky ML",
+  "aui": "Chalmers Burgel Daley De Soyza Haworth Mauger Loebinger McShane Ringshausen Blasi Shteinberg Mange Teper Fernandez Zambrano Fan Zhang Metersky",
   "summary": "1721例を対象とした気管支拡張症史上最大規模のRCT（ASPEN試験）。ブレンソカチブ10mg・25mgともにプラセボ比約20%の増悪率低下を達成（Rate ratio 0.79/0.81）。25mg群では肺機能低下抑制も示された。",
   "jpView": "ブレンソカチブの主要第III相（ASPEN）。FDA承認（2025年8月）。国内は未承認だが日本人サブ解析が併存し、DPP-1阻害という新規クラスの国内展開が注目される。",
   "pmid": "40267423",
@@ -11071,16 +11300,17 @@
   "cat": "治療・薬剤",
   "isNew": false,
   "dpp1": true,
-  "titleJa": "ブレンソカチブ：非CF気管支拡張症の新たなる治療の幕開け（Editorial）",
-  "titleEn": "Brensocatib – an editorial on the new chapter in noncystic fibrosis bronchiectasis treatment",
+  "titleJa": "ブレンソカチブ：気管支拡張症患者にとってのもう一つの治療の「機会の窓」（総説）",
+  "titleEn": "Brensocatib-Another Therapeutic \"Window of Opportunity\" for Patients with Bronchiectasis.",
   "journal": "Journal of Clinical Medicine",
   "sjr": "Q2",
   "if": "2.9",
-  "date": "2025-10",
-  "year": 2025,
+  "date": "2026-02-04",
+  "year": 2026,
   "ev": "総説",
   "authors": "Mihălțan FD; Ulmeanu R; Constantin AA",
-  "summary": "ASPEN試験の成果を受け、DPP-1阻害という機序が気管支拡張症の「好中球過剰活性化」という核心病態に直接作用することを解説。長年の「治療なき疾患」から初のターゲット治療薬承認への転換点を総括する。",
+  "aui": "Mihălțan Ulmeanu Constantin",
+  "summary": "骨髄の好中球成熟過程でDPP-1を可逆的に阻害し好中球セリンプロテアーゼの活性化を防ぐbrensocatibについて、第II相WILLOW・第III相ASPENで増悪頻度の減少・初回増悪までの期間延長・喀痰中好中球プロテアーゼ活性の低下が示され、安全性も良好で複数のサブグループと標準治療上乗せで一貫した効果が得られたことを総説した。2025年8月12日にFDA承認された非CF気管支拡張症初の機序に基づく治療薬として、抗菌薬依存の軽減も含めた治療パラダイムの転換と位置づけている。",
   "jpView": "DPP-1阻害というクラス初の標的療法登場の意義を論じるEditorial。日本でもInsmedによるbrensocatibの上市準備が進むとされ(2026年時点未承認)、対症療法中心だった国内診療の転換点となりうる。",
   "pmid": "41682938",
   "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12898296/"
@@ -11098,6 +11328,7 @@
   "year": 2025,
   "ev": "社説・論説",
   "authors": "Babar Z; Khan MH; Rehman M; Mahato RK",
+  "aui": "Babar Khan Rehman Mahato",
   "summary": "2025年8月12日のFDA承認を詳説。DPP-1阻害による好中球セリンプロテアーゼ活性化阻害の機序と、ASPEN試験の臨床的意義を解説。気管支拡張症史上初の疾患修飾薬として位置付けられる。",
   "jpView": "Brensocatib(Brinsupri)は気管支拡張症初の標的療法として2025年にFDA承認。日本は未承認だがInsmed日本法人が上市準備中(2026年時点)。クラスを牽引する基準薬として位置づけを理解すべき一報。",
   "pmid": "41675736",
@@ -11117,6 +11348,7 @@
   "year": 2025,
   "ev": "メタ解析・SR",
   "authors": "Emara A; Awashra A; Ellebedy M; Abbas OF; Diaa A; Elgendy MS; Emara M; Shubietah A; Abdeen AMZ; Safi F",
+  "aui": "Emara Awashra Ellebedy Abbas Diaa Elgendy Emara Shubietah Abdeen Safi",
   "summary": "ブレンソカチブ・INS1007・HSK31858を含む全DPP-1阻害薬RCTのメタアナリシス。増悪頻度の有意な低下（RR≒0.80）と忍容性プロファイルを確認。エビデンスの質をGRADE方式で体系的に評価した初の包括的解析。",
   "jpView": "DPP-1阻害薬クラスのエビデンスをGRADEで統合。日本未承認段階での科学的支持の強さを把握でき、国内KOLとのディスカッションの土台になる。",
   "pmid": "41299471",
@@ -11136,6 +11368,7 @@
   "year": 2025,
   "ev": "RCT",
   "authors": "Zhong NS; Qiu R; Cao J; Huang YM; Zhou H; Xu XX; Xu JF; Ye H; Yang ZR; Gao LY; Shen Y; Xiao ZK; Xie SG; Lin DJ; Zhao L; Xiong H; Zhang XM; Li FQ; Guan WJ; Chalmers JD",
+  "aui": "Zhong Qiu Cao Huang Zhou Xu Xu Ye Yang Gao Shen Xiao Xie Lin Zhao Xiong Zhang Li Guan Chalmers",
   "summary": "中国人気管支拡張症患者を対象としたHSK31858のPhase 2試験。増悪率の有意な低下と好中球性炎症バイオマーカーの改善を確認。アジア人集団においてもDPP-1阻害クラス効果が再現されることを示した。",
   "jpView": "HSK31858(Haisco)は中国主導の第3のDPP-1阻害薬で、日本への展開情報は確認されていない(2026年時点)。brensocatib(Insmed)・verducatib(Boehringer)との3すくみの競合構図を把握する上で重要。",
   "pmid": "40154523",
@@ -11154,6 +11387,7 @@
   "year": 2025,
   "ev": "レター",
   "authors": "Wilson Nina et al.",
+  "aui": "Wilson Morton Homer Konkoth Joyce Kershaw Wilde Liddle Wason Ternent Allen Lord Steer Devereux Chalmers Hill Haworth Hurst De Soyza",
   "summary": "英国9施設での三群プラセボ対照RCT。LABA/LAMA配合薬が非CF気管支拡張症患者の増悪抑制・肺機能に与える影響を評価。気管支拡張薬の気管支拡張症への応用可能性を初めて本格的なRCTで検討した。",
   "jpView": "BEへの気管支拡張薬(DIBS試験)。気流閉塞合併(ACO)が多い日本で、気管支拡張薬の使い所を考えるエビデンス。",
   "pmid": "40470153",
@@ -11172,6 +11406,7 @@
   "year": 2026,
   "ev": "RCT",
   "authors": "Bradley JM; O'Neill B; McAuley DF; Chalmers JD; De Soyza A; Hill AT; Carroll M; Loebinger MR; Duckers J; Clarke M; McLeese RH; Ferguson K; Jackson A; Campbell C; McDowell C; Agus A; Norrie J; Copeland F; Downey DG; Convery R; Kelly M; Flight W; Talbot NP; Hurst JR; Steer J; Anwar M; Shahidi M; Gatheral T; Etumi M; Sullivan AL; Ionescu AA; Patil V; Bhattacharya M; Caskey S; Cosgrove D; Hagan C; Shoemark A; McManus T; Davies G; Elborn JS",
+  "aui": "Bradley O'Neill McAuley Chalmers De Soyza Hill Carroll Loebinger Duckers Clarke McLeese Ferguson Jackson Campbell McDowell Agus Norrie Copeland Downey Convery Kelly Flight Talbot Hurst Steer Anwar Shahidi Gatheral Etumi Sullivan Ionescu Patil Bhattacharya Caskey Cosgrove Hagan Shoemark McManus Davies Elborn",
   "summary": "英国20施設、288例を対象とした2×2要因オープンラベルRCT。頻回増悪・毎日喀痰を有する患者に対し、高張食塩水とカルボシステインの有効性を独立かつ組み合わせで検証。粘液調整薬の再評価につながる重要な試験。",
   "jpView": "カルボシステイン等の去痰薬が広く使われる日本に直結する高インパクトRCT(NEJM)。粘液調整療法の国内実践のエビデンス基盤となる。",
   "pmid": "41020514",
@@ -11190,6 +11425,7 @@
   "year": 2025,
   "ev": "RCT",
   "authors": "Yan Jiayang et al.",
+  "aui": "Yan Zhang Feng Liu Niu Guo Zhou Shi Di Zhang Wang Zhou Dai Ni Bao Yan Hu Wang Zhang Zhou Zuo Qu",
   "summary": "P63陽性肺前駆細胞の自家気管支内移植による気管支上皮再生療法の初のRCT。治療群で肺機能・CT所見の有意な改善を確認。再生医療アプローチとして気管支拡張症分野に新たな地平を拓く革新的試験。",
   "pmid": "39566467",
   "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11604513/"
@@ -11207,6 +11443,7 @@
   "year": 2025,
   "ev": "原著",
   "authors": "Calabrese Cecilia et al.",
+  "aui": "Calabrese Nolasco Annunziata Sola Imitazione Campisi Simioli Balestrino Ferrentino Vancheri Crimi Fiorentino",
   "summary": "重症度別に長期HFTの効果を検討した後ろ向きコホート研究。軽症〜中等症例での気道クリアランス改善・増悪頻度低下を確認。適切な患者選択による非侵襲的管理の選択肢として注目される。",
   "jpView": "長期高流量経鼻療法(HFT)。重症・高齢BEや慢性呼吸不全での酸素化・分泌物管理として国内でも選択肢になりうる。",
   "pmid": "39458096",
@@ -11225,6 +11462,7 @@
   "year": 2024,
   "ev": "メタ解析・SR",
   "authors": "Cordeiro Ricardo et al.",
+  "aui": "Cordeiro Choi Haworth Chalmers",
   "summary": "20試験・3,468例を含む最新メタアナリシス。吸入抗菌薬は増悪リスクを有意に低下（RR 0.85）させる一方、カタログ効果と試験デザインの問題が個別試験の陰性結果の原因と指摘。ERS 2025ガイドライン改訂の科学的根拠となった。",
   "jpView": "吸入抗菌薬(トブラマイシン等)は本邦では気管支拡張症への適応・エビデンスが限定的で国際標準と差がある。本メタ解析は国内での位置づけや適応外使用の判断材料として重要。",
   "pmid": "38309462",
@@ -11243,6 +11481,7 @@
   "year": 2026,
   "ev": "総説",
   "authors": "Esquinas AM; Guimaraes FS",
+  "aui": "Esquinas Guimaraes",
   "summary": "気道クリアランス・運動訓練・行動変容を統合した個別化リハモデルを提案。呼吸困難→持久力訓練、咳嗽→筋力訓練、倦怠感→複合訓練という症状別プロトコルで、QOLと6分間歩行距離の改善を複数コホートで実証。",
   "jpView": "肺リハビリは日本のBE・慢性気道疾患診療の柱。個別化実践のエビデンスは国内のリハ処方の参考になる。",
   "pmid": "41960568",
@@ -11261,6 +11500,7 @@
   "year": 2026,
   "ev": "原著",
   "authors": "Arkin FS; Altin S; Kara K; Bolat E; Camci SN",
+  "aui": "Arkin Altin Kara Bolat Camci",
   "summary": "2015〜2024年に診断された入院成人14,319例の10年コホート。粗死亡率34.8%で男性・55歳以上で有意に高い。末梢好酸球数・喀痰微生物学的パターンを含む多変量解析により予後不良因子を同定。実臨床での予後予測モデル構築に貢献する大規模データ。",
   "pmid": "41486128",
   "url": "https://link.springer.com/article/10.1186/s12890-025-04080-3"
@@ -11279,6 +11519,7 @@
   "year": 2025,
   "ev": "レター",
   "authors": "Marrades P; Viglino J; Perea L; Solarat B; Mendoza N; Martinez-Olondris P; Amaro R; Suarez-Cuartin G; Agustí A; Shoemark A; Aliberti S; Chalmers JD; Faner R; Sibila O",
+  "aui": "Marrades Viglino Perea Solarat Mendoza Martinez-Olondris Amaro Suarez-Cuartin Agustí Shoemark Aliberti Chalmers Faner Sibila",
   "summary": "頻回増悪患者（年3回以上）における好中球エラスターゼ（NE）活性の多次元解析。NEが高い患者群では気道微生物の多様性低下・炎症応答の増幅が連動しており、ブレンソカチブの恩恵を最大限受ける患者像を描き出す。",
   "jpView": "年3回以上の頻回増悪例でNE活性が高いという本解析は、DPP-1阻害薬の恩恵を受ける層を示唆する。国内ではbrensocatibのASPEN日本人サブグループ（jRCT2031210048・研究終了）とverducatibのAIRTIVITY（jRCT2071250036・募集中）が進行しており（2026年9月時点）、日本人で同様の層がどの程度いるかは今後の論点となる。",
   "pmid": "42111385",
@@ -11297,6 +11538,7 @@
   "year": 2025,
   "ev": "観察研究",
   "authors": "Sibila O; Stobo J; Perea L; Gao YH; Xu JF; Lind H; Viligorska K; Spinou A; Polverino E; Ringshausen FC; Vendrell M; Burgel PR; Haworth CS; Loebinger MR; Lorent N; Dhar R; Choi H; Chotirmall SH; De Soyza A; Hurst JR; Brown JS; van der Eerden M; Kauppi P; Johnson ED; Mendez R; Dimakou K; Bossios A; Torres A; Blasi F; Shteinberg M; Elborn SJ; Goeminne PC; Aliberti S; Jayaram L; Karalus N; Taylor SL; Martin ML; Burr LD; Wong C; Terpstra L; Altenburg J; Boersma W; Chalmers JD",
+  "aui": "Sibila Stobo Perea Gao Xu Lind Viligorska Spinou Polverino Ringshausen Vendrell Burgel Haworth Loebinger Lorent Dhar Choi Chotirmall De Soyza Hurst Brown van der Eerden Kauppi Johnson Mendez Dimakou Bossios Torres Blasi Shteinberg Elborn Goeminne Aliberti Jayaram Karalus Taylor Martin Burr Wong Terpstra Altenburg Boersma Chalmers",
   "summary": "マクロライド長期投与を受けた気管支拡張症患者の観察データから、軽症早期からの介入が将来の増悪リスクを有意に低下させることを示した。サブグループ解析でNTM合併例では有益性が弱まることも確認。",
   "jpView": "びまん性汎細気管支炎(DPB)治療を起源に、日本では長期少量マクロライド療法が確立した診療文化。本観察研究の増悪抑制の知見は国内実臨床と親和性が高く、エビデンス補強として活用しやすい。",
   "pmid": "40885209",
@@ -11313,6 +11555,7 @@
   "year": 2026,
   "ev": "総説",
   "authors": "Dela Cruz RL; Que FAD; Bacud LNC; Rosario MCO",
+  "aui": "Dela Cruz Que Bacud Rosario",
   "summary": "長期アジスロマイシン予防投与の増悪抑制効果をプラセボと比較（SMD -0.63）。6ヶ月以上の投与で有意な増悪率低下を確認。NTMリスクとのバランスを考慮した最適患者選択が重要と結論づけた。",
   "jpView": "マクロライド長期療法の伝統を持つ日本の診療と整合的。ただしNTM合併例ではマクロライド単剤を避ける(耐性化回避)という国内の留意点と併せて解釈したい。",
   "pmid": "41694940",
@@ -11331,6 +11574,7 @@
   "year": 2025,
   "ev": "原著",
   "authors": "Liu W; Li Y; Chen X; Liu X; Lv J; Jiang H",
+  "aui": "Liu Li Chen Liu Lv Jiang",
   "summary": "COPD合併気管支拡張症の入院患者を対象とした後ろ向きコホート研究。全身性ステロイド使用例で血中好酸球数が院内死亡率の予測因子となることを確認。好酸球性表現型の同定が治療最適化に重要なことを示す。",
   "jpView": "COPD合併BEでのステロイド治療と好酸球・院内死亡率。ICS使用と感染リスクのバランスは国内でも重要な判断。",
   "pmid": "42137338",
@@ -11349,6 +11593,7 @@
   "year": 2025,
   "ev": "原著",
   "authors": "Núñez-Robainas A; Alvarado-Miranda M; Solano A; Marsico S; Cumpli-Gargallo MC; Sáinz-Hernández M; Maiques JM; Barreiro E",
+  "aui": "Núñez-Robainas Alvarado-Miranda Solano Marsico Cumpli-Gargallo Sáinz-Hernández Maiques Barreiro",
   "summary": "気管支拡張症患者の筋肉量低下（サルコペニア）とCRP・IL-6・酸化マーカーの相関を検討。好中球性炎症が全身性合併症（筋肉減少）にも波及することを示し、抗炎症治療の全身的恩恵に対する新たな根拠を提供。",
   "jpView": "高齢BE患者が多い日本で、サルコペニア・全身炎症の評価は予後とリハ介入を考える重要指標。",
   "pmid": "42111379",
@@ -11367,6 +11612,7 @@
   "year": 2025,
   "ev": "原著",
   "authors": "Afrose D; Rønn CP; Eklöf J; Vognsen AK; Tønnesen LL; Bertelsen BB; Boel JB; Andersen CØ; Dessau RBC; Pinholt M; Jensen JU; Sivapalan P",
+  "aui": "Afrose Rønn Eklöf Vognsen Tønnesen Bertelsen Boel Andersen Dessau Pinholt Jensen Sivapalan",
   "summary": "長期ICS使用者ではインフルエンザ菌の分離頻度が有意に高く（OR 1.48）、増悪リスクも増加することを確認。気管支拡張症へのICS使用は慎重に検討すべきであることを示す実臨床データ。",
   "jpView": "ICS使用とインフルエンザ菌分離の関連。NTM多発国の日本ではICSによる気道感染リスクの観点からも適応判断に資する。",
   "pmid": "41375860",
@@ -11385,6 +11631,7 @@
   "year": 2025,
   "ev": "原著",
   "authors": "Lee C; Lee GY; Shin J; Lee JY; Lee JH",
+  "aui": "Lee Lee Shin Lee Lee",
   "summary": "気管支拡張症患者における長期ICS使用と肺がん発症リスクの関連を大規模コホートで検討。ICS使用群で有意なリスク上昇は確認されなかったが、感染症合併頻度との交互作用が示唆された。",
   "jpView": "ICSの安全性シグナル（肺癌リスク）。NTM・感染リスクが懸念される日本のBE診療では、ICS適応の慎重な評価を後押しする知見。",
   "pmid": "41227050",
@@ -11404,6 +11651,7 @@
   "year": 2025,
   "ev": "総説",
   "authors": "Doumat G; Aksamit TR; Kanj AN",
+  "aui": "Doumat Aksamit Kanj",
   "summary": "気管支拡張症の好中球性・好酸球性・混合型の炎症内型別の特徴と、それぞれに対する治療アプローチを網羅的に解説。炎症バイオマーカー（NE活性・血中好酸球数・FeNO）を用いた内型同定と個別化治療戦略を提示。",
   "jpView": "好中球性炎症の整理は、マクロライド長期療法やDPP-1(カテプシンC)阻害薬の作用機序を国内の文脈で説明する際の基盤となる。",
   "pmid": "40425105",
@@ -11441,6 +11689,7 @@
   "year": 2025,
   "ev": "原著",
   "authors": "Choi H; Richardson H; Hennayake C; Shuttleworth M; Cant E; Bottier M; Spinou A; Robertson K; Long MB; De Soyza A; Ringshausen FC; Goeminne P; Lorent N; Haworth C; Altenburg J; Loebinger MR; Alferes de Lima Headley D; Dicker AJ; Blasi F; Shteinberg M; Aliberti S; Polverino E; Sibila O; Shoemark A; Chalmers JD",
+  "aui": "Choi Richardson Hennayake Shuttleworth Cant Bottier Spinou Robertson Long De Soyza Ringshausen Goeminne Lorent Haworth Altenburg Loebinger Alferes de Lima Headley Dicker Blasi Shteinberg Aliberti Polverino Sibila Shoemark Chalmers",
   "summary": "欧州最大の前向きコホートEMBARC-BRIDGEから、上気道マイクロバイオームと下気道の臨床転帰の相関を初めて系統的に解析。上気道のDysbiosis（多様性低下・病原体優勢化）が増悪頻度・FEV1低下と有意に関連することを示した。",
   "jpView": "本邦のBE 147例では副鼻腔気管支症候群（SBS）が25%を占め、欧米より比較的多い。上気道の微生物叢の乱れが下気道の転帰と結びつくという本結果は、SBSの比率が高い国内の症例構成において上気道の評価を重視する根拠となりうる。",
   "pmid": "40938736",
@@ -11459,6 +11708,7 @@
   "year": 2025,
   "ev": "原著",
   "authors": "Wang WW; Wang YH; Xu J; Song YL; Xu JF",
+  "aui": "Wang Wang Xu Song Xu",
   "summary": "緑膿菌保菌患者の気道マイクロバイオームと炎症バイオマーカーを機械学習モデルで統合解析。微生物-炎症シグネチャーにより急性増悪を予測（AUC 0.82）。個別化予防介入の新たな戦略を示した。",
   "jpView": "緑膿菌は国内でも難治化因子。機械学習による増悪予測は層別化の方向性を示すが、日本では吸入抗菌薬の適応が限定的で緑膿菌管理の選択肢が国際標準と異なる点に留意。",
   "pmid": "40890730",
@@ -11487,18 +11737,20 @@
   "id": 30,
   "cat": "マイクロバイオーム・感染",
   "isNew": false,
-  "titleJa": "Psl/PcrV標的二重特異性モノクローナル抗体の有効性（GREAT-2試験）",
-  "titleEn": "A Bispecific Monoclonal Antibody Targeting Psl and PcrV for Chronic Pseudomonas Aeruginosa Infection in Patients With Bronchiectasis: Results From a Randomized, Double-Blind Placebo-Controlled Trial (GREAT-2)",
+  "titleJa": "Psl・PcrVを標的とする二重特異性モノクローナル抗体（gremubamab）は気管支拡張症患者の好中球による緑膿菌殺菌を増強する",
+  "titleEn": "A Bispecific Monoclonal Antibody Targeting Psl and PcrV Enhances Neutrophil-Mediated Killing of Pseudomonas aeruginosa in Patients with Bronchiectasis.",
   "journal": "American Journal of Respiratory and Critical Care Medicine",
   "sjr": "Q1",
   "if": "21.7",
-  "date": "2025-03",
-  "year": 2025,
-  "ev": "RCT",
-  "summary": "GREAT-2試験：Gremubamabの多施設RCT。慢性緑膿菌保菌患者において増悪率の低下傾向を示したが主要エンドポイント達成には至らず。抗体療法の改善版（AZD0292）がPhase IIbに進んでいる。",
-  "jpView": "抗緑膿菌二重特異性抗体(GREAT-2試験=AZD0292)。日本登録もある競合パイプラインで、吸入抗菌薬の選択肢が限られる国内で注目すべき新規モダリティ。",
+  "date": "2024-05-16",
+  "year": 2024,
+  "ev": "原著",
+  "authors": "Long MB, Gilmour A, Kehl M et al.",
+  "aui": "Long Gilmour Kehl Tabor Keller Warrener Gopalakrishnan Rosengren Crichton McIntosh Giam Keir Brailsford Hughes Belvisi Sellman DiGiandomenico Chalmers",
+  "summary": "ダンディー大学のグループが、Psl菌体外多糖とIII型分泌系PcrVを標的とする二重特異性抗体gremubamabを評価し、世界的気管支拡張症コホートの緑膿菌分離株100株の全ゲノム解析で、psl遺伝子座の完全保有73株・pcrV遺伝子保有99株と標的が高度に保存されていることを示した。gremubamabは患者好中球のオプソニン貪食殺菌（+34.6%）と貪食（+70.0%）を健常者と同程度に増強し、内因性抗体と競合せずに緑膿菌の細胞傷害性を抑制した。",
+  "jpView": "抗緑膿菌二重特異性抗体のクラスではAZD0292が国内でも治験登録されている（jRCT2071260021、2026年時点）。吸入抗菌薬の選択肢が限られる本邦で、非抗菌薬アプローチの作用機序を理解する基礎資料となる。",
   "pmid": "38754132",
-  "url": "https://pubmed.ncbi.nlm.nih.gov/?term=A%20Bispecific%20Monoclonal%20Antibody%20Targeting%20Psl%20and%20PcrV%20Chronic%20Pseudomonas%20aeruginosa%20bronchiectasis%20GREAT-2"
+  "url": "https://doi.org/10.1164/rccm.202308-1403OC"
  },
  {
   "id": 31,
@@ -11513,6 +11765,7 @@
   "year": 2025,
   "ev": "原著",
   "authors": "Nguyen-Ho L; Tran-Le QK; Trinh HKT; Le-Thuong V; Pham-Hung V; Pham-Thien H; Truong-Thien P; Dang-Vu T; Lam-Quoc D; Tran-Van N",
+  "aui": "Nguyen-Ho Tran-Le Trinh Le-Thuong Pham-Hung Pham-Thien Truong-Thien Dang-Vu Lam-Quoc Tran-Van",
   "summary": "気管支洗浄液を用いた包括的微生物学的解析。細菌（H. influenzae, P. aeruginosa）、NTM（M. avium complex）、真菌（Aspergillus spp.）の共感染パターンと臨床転帰への影響を定量的に解析。",
   "jpView": "細菌・NTM・真菌の共感染パターン解析。日本はNTM・（Aspergillus以外を含む）真菌の関与が課題であり、包括的な微生物評価の視点は国内診療に適合する。",
   "pmid": "41036295",
@@ -11523,14 +11776,16 @@
   "cat": "マイクロバイオーム・感染",
   "isNew": false,
   "titleJa": "欧州横断的な気管支拡張症の耐性菌マップ：メタゲノム解析",
-  "titleEn": "Metagenomic Profiling Maps Europe-Wide Bronchiectasis Resistomes",
+  "titleEn": "Sputum metagenomics in bronchiectasis reveals pan-European variation: an EMBARC-BRIDGE study.",
   "journal": "European Respiratory Journal",
   "sjr": "Q1",
   "if": "23.8",
-  "date": "2025-08",
+  "date": "2025-05-23",
   "year": 2025,
   "ev": "原著",
-  "summary": "9カ国のEMBARC-BRIDGEコホートからメタゲノム解析で欧州全域の気管支拡張症患者の耐性遺伝子分布図を作成。国によって耐性パターンが大きく異なり、地域別の抗菌薬選択指針に重要な示唆を与える。",
+  "authors": "Thng KX, Tiew PY, Mac Aogáin M et al.",
+  "aui": "Thng Tiew Mac Aogáin Narayana Jaggi Ivan Shuttleworth Long Richardson Lind Alferes de Lima Headley Robertson Pollock Goeminne Shteinberg De Soyza Aliberti Altenburg Haworth Sibila Polverino Loebinger Ringshausen Lorent Dimakou Shoemark Chalmers Chotirmall",
+  "summary": "EMBARC-BRIDGE研究で欧州8カ国（北・西欧、南欧、英国）の気管支拡張症349例の喀痰をショットガン・メタゲノム解析し、培養で示されていた国間の微生物差を再現するとともに、緑膿菌・インフルエンザ菌・肺炎球菌の検出感度を高め、Pseudomonas・Streptococcus・Haemophilus優位の3クラスターが欧州全域に濃淡をもって分布することを示した。耐性遺伝子プロファイル（レジストーム）は地域間で有意に異なり南欧で多様性が高かった一方、主要3菌属に関連する耐性遺伝子プロファイルは国や地域によらず類似しており、欧州の抗菌薬診療に示唆を与えるとした。",
   "pmid": "40404216",
   "url": "https://pubmed.ncbi.nlm.nih.gov/40404216/"
  },
@@ -11547,6 +11802,7 @@
   "year": 2025,
   "ev": "観察研究",
   "authors": "Chen YF; Hou HH; Chien N; Lu KZ; Lin CH; Liao YC; Lor KL; Chien JY; Chen CM; Chen CY; Cheng SL; Wang HC; Hsueh PR; Yu CJ",
+  "aui": "Chen Hou Chien Lu Lin Liao Lor Chien Chen Chen Cheng Wang Hsueh Yu",
   "summary": "固定性気流閉塞合併例ではH. influenzae優位のマイクロバイオームパターンが顕著で、増悪頻度・入院リスクが高いことを前向きコホートで確認。COPDオーバーラップ症例の集中的管理の根拠を提供。",
   "pmid": "39143556",
   "url": "https://pubmed.ncbi.nlm.nih.gov/39143556/"
@@ -11564,6 +11820,7 @@
   "year": 2025,
   "ev": "総説",
   "authors": "Fujita M",
+  "aui": "Fujita",
   "summary": "NTM肺疾患と気管支拡張症の双方向的な相互増悪関係を総説。日本・韓国・台湾におけるMAC優位の疫学、診断基準の国際比較、治療レジメン選択（マクロライドベース多剤併用）の最新知見をまとめた。",
   "jpView": "日本は肺NTM症(特にMAC)の有病率が世界的に高く、NTM-気管支拡張症オーバーラップは本邦の最重要課題。国際的な現状整理として国内診療の文脈づけに有用。",
   "pmid": "40276131",
@@ -11585,40 +11842,25 @@
   "aui": "Chalmers Haworth Flume Long Burgel Dimakou Blasi Herrero-Cortina Dhar Chotirmall Ringshausen Altenburg Morgan Nigro Crichton Van Meel Sibila Timothy Kompatsiari Hedberg Vandendriessche McShane Tonia Winthrop Loebinger Lorent Goeminne Shteinberg Polverino Aliberti",
   "summary": "2017年版以来の大幅改訂。気道クリアランス技術の強い推奨、呼吸リハの強力な推奨を継続しつつ、DPP-1阻害薬・吸入抗菌薬の位置付けを最新RCTエビデンスに基づき更新。治療可能特性（treatable traits）の概念を前面に打ち出した包括的改訂ガイドライン。",
   "jpView": "ERS2025診療ガイドライン本体。国内未整備のBEガイドラインを補完する国際標準として参照価値が高い一方、NTM多発の日本では検査・治療の重み付けに調整が要る。",
+  "pmid": "41016738",
   "url": "https://pubmed.ncbi.nlm.nih.gov/41016738/"
- },
- {
-  "id": 38,
-  "cat": "ガイドライン・総説",
-  "isNew": false,
-  "titleJa": "2025 ERSガイドラインの実践的解釈：日常診療への適用",
-  "titleEn": "From evidence to practice: What the 2025 European Respiratory Society guidelines mean for clinical practice",
-  "journal": "European Respiratory Journal",
-  "sjr": "Q1",
-  "if": "23.8",
-  "date": "2025-12",
-  "year": 2025,
-  "ev": "ガイドライン",
-  "summary": "ERSガイドライン改訂版のエキスパート解説。「シンプルなことを確実に行う」原則のもと、原因同定・気道クリアランス・適切な薬物療法の三本柱を強調。日常臨床での優先順位と実装課題を実践的に解説。",
-  "jpView": "国内に独立GLが無い本邦では、ERS 2025の実践的解釈は日常診療への適用ガイドとして特に有用。",
-  "url": "https://pubmed.ncbi.nlm.nih.gov/?term=From%20evidence%20to%20practice%20What%20the%202025%20European%20Respiratory%20Society%20guidelines%20mean%20for%20clinical%20practice%20bronchiectasis"
  },
  {
   "id": 39,
   "cat": "ガイドライン・総説",
   "isNew": false,
-  "titleJa": "2025 ERSガイドラインのハイライトと解釈",
-  "titleEn": "Highlights and interpretation of the 2025 European Respiratory Society clinical practice guideline for the management of adult bronchiectasis",
-  "journal": "European Respiratory Review",
-  "sjr": "Q1",
-  "if": "10.4",
-  "date": "2026-01",
+  "titleJa": "2025年ERS成人気管支拡張症診療ガイドラインのハイライトと解釈（中国語）",
+  "titleEn": "[Highlights and interpretation of the 2025 European Respiratory Society clinical practice guideline for the management of adult bronchiectasis].",
+  "journal": "Chinese Journal of Tuberculosis and Respiratory Diseases",
+  "sjr": "Q3",
+  "date": "2026-02-03",
   "year": 2026,
-  "ev": "原著",
-  "authors": "Wang L L et al.",
+  "ev": "総説",
+  "authors": "Wang LL, Xu JF",
   "aui": "Wang Xu",
-  "summary": "ガイドライン改訂の10の主要ポイントを「臨床への10の問い」形式で解説。気道クリアランス・長期抗菌薬・DPP-1阻害薬・好酸球性気管支拡張症の管理方針について、エビデンスレベル別に実践的な推奨事項をまとめた。",
+  "summary": "2025年ERS成人気管支拡張症診療ガイドライン（PICO 8問・ナラティブ3問）を中国の臨床向けに解説した論文で、大半の患者への気道クリアランス、呼吸困難・運動耐容能低下例への呼吸リハビリテーション、増悪高リスク例への長期マクロライド、慢性緑膿菌感染かつ頻回増悪例への長期吸入抗菌薬が強く推奨されたことを整理した。除菌療法・去痰薬は条件付き推奨、非マクロライド経口抗菌薬と吸入ステロイドの長期ルーチン使用は非推奨とされ、旧版との比較と中国での診療改善への示唆を示している。",
   "jpView": "日本でのGL不在を補う国際指針の要点整理として参照価値が高い(ERS 2025)。",
+  "pmid": "41629091",
   "url": "https://pubmed.ncbi.nlm.nih.gov/41629091/"
  },
  {
@@ -11634,27 +11876,11 @@
   "year": 2024,
   "ev": "原著",
   "authors": "Chalmers JD; Aliberti S; Long MB; Xu JF; Morgan L; Choi H; Haworth C; Hull R; Spinou A; Dhar R; Daley C; McShane PJ; Thornton C; Mall MA; Chotirmall SH",
+  "aui": "Chalmers Aliberti Long Xu Morgan Choi Haworth Hull Spinou Dhar Daley McShane Thornton Mall Chotirmall",
   "summary": "Lancet主導の国際委員会による気管支拡張症の包括的レポート。世界的な過小診断・過小治療の問題提起、診断基準の標準化、多職種ケアモデルの確立、希少性疾患から主要気道疾患への位置付け転換を提唱。",
   "jpView": "Lancet委員会によるBE治療展望。新規治療の方向性整理で、国内のパイプライン理解の基盤となる。",
   "pmid": "41619746",
   "url": "https://pubmed.ncbi.nlm.nih.gov/41619746/"
- },
- {
-  "id": 41,
-  "cat": "ガイドライン・総説",
-  "isNew": false,
-  "titleJa": "気管支拡張症2025年の年間進捗報告",
-  "titleEn": "Annual progress in the clinical management and research of bronchiectasis 2025",
-  "journal": "ERJ Open Research",
-  "sjr": "Q1",
-  "if": "4.0",
-  "date": "2025-12",
-  "year": 2025,
-  "ev": "総説",
-  "authors": "Wu DY; Pan YT; Zhang PP; Xu JF",
-  "summary": "2025年の気管支拡張症研究の主要進捗を網羅的にレビュー。ブレンソカチブFDA承認、ERSガイドライン改訂、ASPEN試験、GREAT-2試験結果などを軸に、治療・診断・マイクロバイオーム・精密医療の各分野の1年間の歩みをまとめる。",
-  "jpView": "本レビューが軸とするbrensocatibのFDA承認・ERSガイドライン改訂に対し、国内ではJRS 2025がマクロライド少量長期療法をERS 2025より強い推奨（強く推奨・確実性A）としている。GREAT-2のAZD0292も日本で試験登録（jRCT2071260021・募集中、2026年9月時点）があり、国際的な進展と国内の治療体系の違いを整理する基準点となる。",
-  "url": "https://pubmed.ncbi.nlm.nih.gov/?term=Annual%20progress%20in%20the%20clinical%20management%20and%20research%20of%20bronchiectasis%202025"
  },
  {
   "id": 42,
@@ -11669,6 +11895,7 @@
   "year": 2024,
   "ev": "総説",
   "authors": "Choi H; McShane PJ; Aliberti S; Chalmers JD",
+  "aui": "Choi McShane Aliberti Chalmers",
   "summary": "国際的な気管支拡張症管理の現状を総括した総説。治療アルゴリズム、バイオマーカーの役割、精密医療への移行、未解決課題（患者報告アウトカム、コンパニオン診断など）を体系的にまとめた。",
   "jpView": "成人BE管理の最新と将来の総説。独立GLが無い日本で、国際的な管理像を把握する参照。",
   "pmid": "38782469",
@@ -11686,6 +11913,8 @@
   "date": "2024-11",
   "year": 2024,
   "ev": "総説",
+  "authors": "Barker AF, Karamooz E",
+  "aui": "Barker Karamooz",
   "summary": "JAMA誌総説。気管支拡張症の疫学（推定有病率100万人以上/日本）、診断基準（CT所見）、治療の原則（気道クリアランス・マクロライド・DPP-1阻害薬）を非専門医向けにわかりやすく解説。",
   "jpView": "日本には非CF気管支拡張症に特化した独立診療ガイドラインが存在しない(2026年時点)。高インパクト誌の総説は、ERS/BTS等と並ぶ実践的参照として国内臨床で活用しやすい。",
   "pmid": "40293759",
@@ -11696,16 +11925,20 @@
   "cat": "ガイドライン・総説",
   "isNew": false,
   "dpp1": true,
-  "titleJa": "気管支拡張症薬物療法の最新動向：AJRCM総説",
+  "titleJa": "気管支拡張症薬物療法の最新動向：AJRCCM総説",
   "titleEn": "Recent investigations in pharmacotherapy for bronchiectasis",
   "journal": "American Journal of Respiratory and Critical Care Medicine",
   "sjr": "Q1",
   "if": "21.7",
-  "date": "2025-01",
+  "date": "2025-10-24",
   "year": 2025,
+  "ev": "総説",
+  "authors": "Chacko AA, Khairandish Y, Suder JM et al.",
+  "aui": "Chacko Khairandish Suder Proud",
   "summary": "DPP-1阻害薬・吸入抗菌薬・mucoactive療法・生物製剤の最新RCTデータを網羅。各治療ターゲットの機序・臨床試験成果・実臨床での位置付けを体系的にまとめた包括的総説。",
   "jpView": "気管支拡張症薬物療法の最新潮流。DPP-1阻害薬の登場を含む治療パラダイムの変化を、独立GL不在の日本で国内KOLと共有する基盤資料。",
-  "url": "https://academic.oup.com/ajrccm/article/212/1/148/8437469"
+  "pmid": "41135036",
+  "url": "https://doi.org/10.1164/rccm.202506-1350RR"
  },
  {
   "id": 46,
@@ -11720,6 +11953,7 @@
   "year": 2025,
   "ev": "総説",
   "authors": "Choi H; Gao YH",
+  "aui": "Choi Gao",
   "summary": "気管支拡張症の多様な表現型（頻回増悪型・細菌性慢性感染型・好酸球型・NTM型など）と分子内型の対応関係を整理。「treatable traits」の概念に基づく個別化治療マップを提案。精密医療実装のロードマップを提示。",
   "jpView": "BEの表現型・内型の精密医療レビュー。GL不在の日本でエンドタイプ/Treatable Traitsの概念を導入する基盤。",
   "pmid": "40400921",
@@ -11738,6 +11972,7 @@
   "year": 2025,
   "ev": "総説",
   "authors": "Marrades P; De Angelis A; Iorfida A; Perea L; Voza A; Aliberti S; Chalmers JD; Sibila O",
+  "aui": "Marrades De Angelis Iorfida Perea Voza Aliberti Chalmers Sibila",
   "summary": "Treatable Traits（治療可能特性）の概念を気管支拡張症に適用した包括的フレームワーク。好中球性炎症・気道感染・粘液産生過多・好酸球性炎症・運動不耐性など各特性を特定し、対応する治療介入を体系化。",
   "jpView": "Treatable Traits概念の臨床実装。独立GLが無くERS 2025が本概念を採用した日本では、実践への落とし込みが国内診療の指針となる。",
   "pmid": "41421559",
@@ -11756,6 +11991,7 @@
   "year": 2025,
   "ev": "総説",
   "authors": "De Angelis A; Artuso VA; Aliberti S; Goeminne P",
+  "aui": "De Angelis Artuso Aliberti Goeminne",
   "summary": "GERD・副鼻腔炎・免疫不全・自己免疫疾患など気管支拡張症に高頻度に合併する疾患のスクリーニングプロトコルと、それぞれの合併が臨床転帰に与える影響を系統的にレビュー。合併症主導の個別化管理の根拠を提供。",
   "jpView": "BE合併症の系統的スクリーニング。多併存の高齢BEが多い日本で、包括評価の枠組みとして有用。",
   "pmid": "41170702",
@@ -11775,6 +12011,7 @@
   "year": 2026,
   "ev": "総説",
   "authors": "Xia X; Wu Q; Cao Z; Zeng H; Yu L",
+  "aui": "Xia Wu Cao Zeng Yu",
   "summary": "精密医療の視点から気管支拡張症の病態（好中球-細菌-マイクロバイオームの悪循環）と最新の治療戦略（DPP-1阻害薬・生物製剤・ファージ療法・細胞療法）を俯瞰。バイオマーカー誘導型の治療選択の将来像を描く。",
   "jpView": "精密医療時代の気管支拡張症。エンドタイプに基づく治療選択の考え方は、DPP-1阻害薬等の新規薬剤を日本で適正使用する際の患者選定の枠組みを提供する。",
   "pmid": "42182764",
@@ -11793,6 +12030,7 @@
   "year": 2025,
   "ev": "総説",
   "authors": "Lee AL; Spinou A; Basavaraj A",
+  "aui": "Lee Spinou Basavaraj",
   "summary": "気道クリアランス・肺リハ・栄養療法・心理的支援など非薬物療法によってどのTreatable Traitに対応できるかを網羅的にレビュー。「包括的・多職種・個別化」アプローチの実装モデルを提示。",
   "jpView": "非薬物療法によるTreatable Traitsへの対応。GL不在の日本でERS 2025の概念を導入する際、気道クリアランス等の非薬物介入の体系的整理として活用できる。",
   "pmid": "40688306",
@@ -11812,6 +12050,7 @@
   "year": 2024,
   "ev": "原著",
   "authors": "Chalmers JD; Gupta A; Chotirmall SH; Armstrong A; Eickholz P; Hasegawa N; McShane PJ; O'Donnell AE; Shteinberg M; Watz H; Eleftheraki A; Diefenbach C; Sauter W",
+  "aui": "Chalmers Shteinberg Mall O'Donnell Watz Gupta Frahm Eleftheraki Rauch Chotirmall Armstrong Eickholz Hasegawa Sauter McShane",
   "summary": "BI 1291583（verducatib）のPhase II（AIRLEAF試験）の結果報告。複数用量設定で好中球セリンプロテアーゼ活性の用量依存的抑制を確認。最適用量を特定しPhase IIIのAIRTIVITY試験への移行を支持するデータ。",
   "jpView": "verducatibの第II相用量設定（AIRLEAF）。AIRTIVITY（第III相）へ接続する国際試験で、日本も開発に関与。",
   "pmid": "39255990",
@@ -11820,19 +12059,22 @@
  {
   "id": 52,
   "cat": "臨床試験",
-  "isNew": false,
+  "isNew": true,
   "dpp1": true,
-  "titleJa": "AIRTIVITY™試験のデザイン：verducatib（BI 1291583）Phase III",
-  "titleEn": "Phase III AIRTIVITY™ study design – verducatib (BI 1291583) in people with bronchiectasis",
+  "titleJa": "第III相AIRTIVITY試験のデザイン：気管支拡張症患者におけるverducatib（BI 1291583）",
+  "titleEn": "Phase III AIRTIVITY study design: verducatib (BI 1291583) in people with bronchiectasis.",
   "journal": "ERJ Open Research",
   "sjr": "Q1",
   "if": "4.0",
-  "date": "2024-10",
-  "year": 2024,
-  "ev": "RCT",
-  "summary": "BI社のverducatib（第2のDPP-1阻害薬）のPhase III試験（AIRTIVITY）のプロトコール論文。主要エンドポイントは年間増悪率。ASPENと類似したデザインだが用量・対象集団の選択にBI社独自の戦略が反映されている。",
-  "jpView": "BI社verducatib（BI 1291583）の国際第III相（AIRTIVITY）。jRCTに登録され国内施設も参加。第2のDPP-1阻害薬として国内開発が進行中。",
-  "url": "https://pubmed.ncbi.nlm.nih.gov/?term=AIRTIVITY%20verducatib%20BI%201291583%20bronchiectasis%20study%20design"
+  "date": "2026-09-01",
+  "year": 2026,
+  "ev": "臨床試験",
+  "authors": "Chalmers JD, Shteinberg M, Chotirmall SH et al.",
+  "aui": "Chalmers Shteinberg Chotirmall Sauter Flume Jain Morimoto O'Donnell Ringshausen Watz Xu Rauch Eleftheraki Engel Chang Nielsen Benitez Gupta Mall McShane",
+  "summary": "第II相AIRLEAFで増悪リスク低下とプラセボ同等の安全性を示したDPP-1（カテプシンC）阻害薬verducatibの第III相AIRTIVITY（NCT06872892）のデザイン論文で、多様な病因の成人約1,680例と青年（12〜18歳未満）約75例を2:1でverducatib 2.5 mgまたはプラセボに無作為化し、52〜76週投与する。主要評価項目は76週までの肺増悪の年間発現率で、肺機能低下・呼吸器症状・初回増悪までの期間・重症増悪率を主な副次評価項目とし、従来の気管支拡張症試験と異なりCF気管支拡張症も組み入れ、全増悪を判定委員会で評価する。",
+  "jpView": "AIRTIVITYは国内でも実施中（jRCT2071250036、2026年時点）で、共著者に複十字病院（結核予防会）の研究者が加わる。CF気管支拡張症・青年まで含む病因を問わない集団での検証であり、NTM合併の多い本邦患者への外挿性を議論する際の基本資料となる。",
+  "pmid": "42820152",
+  "url": "https://doi.org/10.1183/23120541.01068-2025"
  },
  {
   "id": 53,
@@ -11841,32 +12083,34 @@
   "dpp1": true,
   "titleJa": "AIRLEAF試験：簡易説明資料（患者向け平易版サマリー）",
   "titleEn": "AIRLEAF – a study of verducatib as a new kind of treatment for bronchiectasis: a plain language summary",
-  "journal": "ERJ Open Research",
-  "sjr": "Q1",
-  "if": "4.0",
-  "date": "2024-11",
-  "year": 2024,
+  "journal": "Future Rare Diseases",
+  "sjr": "Q4",
+  "date": "2025-12-08",
+  "year": 2025,
+  "authors": "Chalmers JD, Shteinberg M, Mall MA et al.",
   "summary": "AIRLEAF試験の患者・一般向け平易版説明。verducatibが何を標的に、どのように気管支拡張症に作用するかを図解入りで解説。医療者向けには患者説明ツールとしての活用が可能。",
   "jpView": "verducatib（BI 1291583、日本ベーリンガーインゲルハイム）は国内でもAIRTIVITY第III相（jRCT2071250036）が募集中（2026年9月時点）。患者向け平易版の資料は、国内で治験参加や試験内容を説明する際の参考になりうる。brensocatib（Insmed）とは別化合物・別企業である点に留意。",
-  "url": "https://pubmed.ncbi.nlm.nih.gov/?term=AIRLEAF%20verducatib%20bronchiectasis%20plain%20language%20summary"
+  "url": "https://doi.org/10.1080/23995270.2025.2580913",
+  "aui": "Chalmers Shteinberg Mall O’Donnell Watz Gupta Frahm Eleftheraki Rauch Chotirmall Armstrong Eickholz Hasegawa Sauter McShane"
  },
  {
   "id": 54,
   "cat": "学会動向",
   "isNew": false,
-  "titleJa": "第8回世界気管支拡張症会議2025：インクルーシブな肺、多様なソリューション",
-  "titleEn": "World Bronchiectasis Conference 2025—Inclusive Lungs, Diverse Solutions",
-  "journal": "ERJ Open Research",
+  "titleJa": "World Bronchiectasis Conference 2025：インクルーシブな肺、多様なソリューション",
+  "titleEn": "World Bronchiectasis Conference 2025-Inclusive Lungs, Diverse Solutions.",
+  "journal": "Respirology",
   "sjr": "Q1",
-  "if": "4.0",
-  "date": "2026-02",
-  "year": 2026,
-  "ev": "原著",
-  "authors": "Thomson Rachel Mary et al.",
+  "if": "7.2",
+  "date": "2025-05-21",
+  "year": 2025,
+  "ev": "社説・論説",
+  "authors": "Thomson RM, Morgan LC",
   "aui": "Thomson Morgan",
-  "summary": "2025年7月14〜17日、ブリスベン開催。気管支拡張症が「オーファン疾患」から主要呼吸器専門領域への脱却を宣言。患者の声を初めて公式プログラムに組み込み、基礎科学・小児科・PCD・看護/コメディカルの4トラックで最新研究を発表。NTM治療・多職種ケアモデル・新興治療薬の方向性が共有された。",
-  "jpView": "世界気管支拡張症会議2025の総括。NTM治療・多職種ケア・新興治療薬が焦点で、NTM多発国である日本のKOLにとって国際動向の把握に有用。",
-  "url": "https://pubmed.ncbi.nlm.nih.gov/40396480/"
+  "summary": "World Bronchiectasis Conference 2025（テーマ「Inclusive Lungs, Diverse Solutions」）に関するRespirology誌の記事。PubMedに抄録はなく、会議の具体的内容は原著で確認が必要。",
+  "jpView": "World Bronchiectasis Conference 2025に関する記事。NTM多発国である日本のKOLにとって、国際学会の動向を把握する入口となる。",
+  "pmid": "40396480",
+  "url": "https://doi.org/10.1111/resp.70063"
  },
  {
   "id": 55,
@@ -11895,6 +12139,7 @@
   "year": 2025,
   "ev": "社説・論説",
   "authors": "Metersky ML; Hunt CR; Addrizzo-Harris DJ; Aksamit TR",
+  "aui": "Metersky Hunt Addrizzo-Harris Aksamit",
   "summary": "米国で展開する気管支拡張症・NTM専門ケアセンターネットワーク（BEAT研究ネットワークの一部）の設立と初期成果を報告。専門センター受診による診断精度向上・治療標準化・患者QOL改善効果を示した。",
   "jpView": "BE・NTM専門ケアの集約化。NTM多発国の日本でも、専門センター・多職種連携の体制づくりの参考になる。",
   "pmid": "41519559",
@@ -11913,6 +12158,7 @@
   "year": 2026,
   "ev": "原著",
   "authors": "Dhar R; Chalmers J; Aliberti S",
+  "aui": "Dhar Chalmers Aliberti",
   "summary": "2025 ERSガイドラインをインドの医療環境（結核後気管支拡張症が多い、資源制約、保険未整備）に適用する際の実践的課題と工夫を論じた特別論文。低・中所得国への展開モデルとして参考になる。",
   "jpView": "2025 ERSガイドラインを資源制約国（インド）に適用する視点。独立GLを持たない日本（2026年時点）もERSを参照する立場で、結核後・NTM主体という疫学差を踏まえた適用の考え方が参考になる。",
   "pmid": "41474419",
