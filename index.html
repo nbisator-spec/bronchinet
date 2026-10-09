@@ -709,7 +709,7 @@
           <div class="report-item">
             <div>
               <div class="report-date">2026年10月10日（05:04）</div>
-              <div class="report-count">新規1件（PubMed論文1件）＋臨床試験1件（日本登録）。PubMed MCP接続を確認（Query 8の件数108件がMCPとE-utilitiesで一致）のうえ、E-utilities（curl・--retry 3）で11クエリを実行（Q1〜10は掲載日基準・Q11は登録日基準、2026/09/10〜2026/10/10、全クエリでcount=returned一致）。ユニークPMID 154件中、既読除外後の新規候補3件を審査し1件を採用（AZD0292学会抄録の訂正告知と、がんサバイバーのフレイル研究〈気管支拡張症は39アウトカムの1つ〉は非採用）。JRCTでUCBのgalvokimig（UCB9741）第II相ATMOSの日本登録（jRCT2031260579、募集前）を新たに検出し、ポータルに追加。ClinicalTrials.gov（募集中・募集前117試験）・J-STAGE 13件・CTIS 23試験は新規なし（CiNii未登録2件は商業誌〈医学のあゆみ〉の総説断片のため方針により不採用）。Cochrane（Query 10）は該当0件。臨床試験ウォッチ（116試験）は変化なし。 採用論文：①CCDC151新規フレームシフト変異による無精子症を伴うPCD〈Front Med・中南大学湘雅二医院・症例報告〉。</div>
+              <div class="report-count">新規1件（PubMed論文1件）＋臨床試験1件（日本登録）。PubMed MCP接続を確認（Query 8の件数108件がMCPとE-utilitiesで一致）のうえ、E-utilities（curl・--retry 3）で11クエリを実行（Q1〜10は掲載日基準・Q11は登録日基準、2026/09/10〜2026/10/10、全クエリでcount=returned一致）。ユニークPMID 154件中、既読除外後の新規候補3件を審査し1件を採用（AZD0292学会抄録の訂正告知と、がんサバイバーのフレイル研究〈気管支拡張症は39アウトカムの1つ〉は非採用）。JRCTでUCBのgalvokimig（UCB9741）第II相ATMOSの日本登録（jRCT2031260579、募集前）を新たに検出し、ポータルに追加。ClinicalTrials.gov（募集中・募集前117試験）・J-STAGE 13件・CTIS 23試験は新規なし（CiNii未登録2件は商業誌〈医学のあゆみ〉の総説断片のため方針により不採用）。Cochrane（Query 10）は該当0件。臨床試験ウォッチ（116試験）は変化なし。 採用論文：①CCDC151新規フレームシフト変異による無精子症を伴うPCD〈Front Med・中南大学湘雅二医院・症例報告〉。 【追補（同日・訂正）】brensocatib（ブリヌスプリ錠25mg）は2026年8月24日に国内承認（PMDA承認品目一覧）、10月14日に薬価収載（1錠24,695.70円、中医協第659回）されていた。「2026年時点で国内未承認」としていたjpView 20件と競合ランドスケープ表の日本欄を訂正。国内の承認・薬価収載を毎朝監視する「国内承認・薬価ウォッチ」（薬事審議会部会・PMDA・中医協）を導入。</div>
             </div>
             <span class="report-link" onclick="showSection('reports',document.querySelectorAll('nav a')[6])">▶ 開く</span>
           </div>
@@ -1969,6 +1969,11 @@
         <span class="report-num">2</span>
         <span class="report-cat-inline" style="background:#ede9fe;color:#5b21b6">精密医療・エンドタイプ</span>
         <span>CCDC151の未報告ホモ接合性フレームシフト変異（c.986dupT）による無精子症を伴うPCD（Front Med・中南大学湘雅二医院）：外側ダイニン腕が完全欠失し線毛は完全不動。CCDC151機能不全と無精子症の関連を支持。</span>
+      </li>
+      <li>
+        <span class="report-num">3</span>
+        <span class="report-cat-inline" style="background:#dbeafe;color:#1d4ed8">治療・薬剤</span>
+        <span>【訂正】brensocatib（ブリヌスプリ錠25mg・Insmed）は2026年8月24日に国内承認、10月14日に薬価収載（1錠24,695.70円、原価計算方式・有用性加算45%、ピーク時予測9.5千人・490億円、費用対効果評価H1）。「国内未承認」としていた日本の視点20件と競合ランドスケープを訂正し、国内承認・薬価ウォッチを導入。</span>
       </li>
     </ul>
   </div>
@@ -7125,8 +7130,8 @@ const TRIALS_DATA = TRIAL_GROUPS.flatMap(g => g.trials);
 // 開発状況は japan_context.md の検証済み事実（2026年時点・要再確認）
 const LANDSCAPE = [
   { cls: 'DPP-1阻害薬（カテプシンC阻害）', icon: '🏆', color: '#1d4ed8', drugs: [
-    { name: 'Brensocatib', company: 'Insmed（インスメッド合同会社）', kw: ['Brensocatib','ブレンソカチブ','INS1007','Brinsupri','ブリンスプリ','ASPEN'],
-      us: '✅ FDA承認 (2025/8)', eu: '申請/審査', jp: '上市準備段階（未承認）' },
+    { name: 'Brensocatib', company: 'Insmed（インスメッド合同会社）', kw: ['Brensocatib','ブレンソカチブ','INS1007','Brinsupri','ブリンスプリ','ブリヌスプリ','ASPEN'],
+      us: '✅ FDA承認 (2025/8)', eu: '申請/審査', jp: '✅ 承認 (2026/8/24)・薬価収載 (2026/10/14)' },
     { name: 'Verducatib (BI 1291583)', company: '日本ベーリンガーインゲルハイム', kw: ['Verducatib','BI 1291583','ベルデュカチブ','AIRTIVITY','Airleaf','Clairleaf'],
       us: 'Phase III', eu: 'Phase III', jp: 'Phase III（治験中）' },
     { name: 'HSK31858', company: 'Haisco（中国）', kw: ['HSK31858','SAVE-BE'],

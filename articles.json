@@ -34,7 +34,7 @@
   "authors": "Chalmers JD, Jain R, O'Donnell AE et al.",
   "aui": "Chalmers Jain O'Donnell Mall Flume",
   "summary": "Oxford大学（Chalmers）・UT Southwestern・Georgetown・Charité・MUSCの著者らによる総説で、骨髄での好中球成熟時に好中球セリンプロテアーゼを活性化するDPP1の阻害が気管支拡張症の好中球性炎症を抑える有力な戦略であり、brensocatib・florensocatib・verducatibの3剤が臨床試験で良好な結果を示し、brensocatibは米国・欧州で承認されたと整理した。長期の有効性・安全性や、従来の大規模試験で除外されてきたCF・一次性COPD・免疫不全例での有効性は未解決で、幅広い病因の患者を組み入れることが治療アクセスの鍵だとした。",
-  "jpView": "Boehringer Ingelheimの支援を受けた総説（全著者が同社との利益相反を開示）で、verducatibを含むDPP1阻害クラス3剤の俯瞰と「骨髄での好中球成熟段階での作用」という機序の説明に使える。国内ではbrensocatib（Insmed）は2026年時点で未承認、verducatibはAIRTIVITY（jRCT2071250036）で募集中。",
+  "jpView": "Boehringer Ingelheimの支援を受けた総説（全著者が同社との利益相反を開示）で、verducatibを含むDPP1阻害クラス3剤の俯瞰と「骨髄での好中球成熟段階での作用」という機序の説明に使える。国内ではbrensocatib（Insmed、ブリヌスプリ錠25mg）が2026年8月24日に承認、10月14日に薬価収載され、verducatibはAIRTIVITY（jRCT2071250036）で募集中（2026年10月時点）。",
   "pmid": "42843847",
   "url": "https://doi.org/10.1183/16000617.0213-2026"
  },
@@ -54,7 +54,7 @@
   "authors": "Chalmers JD",
   "aui": "Chalmers",
   "summary": "Oxford大学のChalmersによる単著の論考で、DPP1阻害薬brensocatibが成人および青年の気管支拡張症に承認されたことを取り上げた。PubMed上に抄録が無いため、具体的な論点・数値は原著で確認を要する。",
-  "jpView": "Brensocatib（Insmed）は2026年時点で国内未承認（ASPEN日本人サブグループ jRCT2031210048 は研究終了）。AJRCCMで承認が取り上げられたことは、DPP1阻害クラスが標準治療の選択肢として扱われ始めた指標となる。",
+  "jpView": "Brensocatib（Insmed）は国内でも2026年8月24日に承認され（ブリヌスプリ錠25mg）、10月14日に薬価収載（1錠24,695.70円）。AJRCCMで承認が取り上げられたことと併せ、DPP1阻害クラスが標準治療の選択肢として扱われ始めた指標となる。",
   "pmid": "42842420",
   "url": "https://doi.org/10.1093/ajrccm/aamag543"
  },
@@ -651,7 +651,7 @@
   "authors": "Flume PA, Maselli DJ",
   "aui": "Flume Maselli",
   "summary": "MUSCとUT Health San Antonioの専門家によるポッドキャスト形式の論説で、気管支拡張症の多様な原因と悪循環（vicious vortex）の病態、原因検索・喀痰培養・肺機能検査による評価、症状緩和・増悪減少・QOL向上・進行抑制を目標とした共同意思決定と多面的治療を論じた。好中球性炎症が残るアンメットニーズに対し、FDAで12歳以上に承認されたDPP1阻害薬brensocatib（ASPENで増悪を減らし25 mgで肺機能低下を抑制）に加え、verducatib・HSK31858、ensifentrine、itepekimabが開発中であると紹介した。",
-  "jpView": "米国の主要KOLによるパイプライン俯瞰で、verducatib（Boehringer）を含む後続薬の位置づけを把握できる。国内ではbrensocatibは2026年時点で未承認、verducatibはAIRTIVITY（jRCT2071250036）で実施中。",
+  "jpView": "米国の主要KOLによるパイプライン俯瞰で、verducatib（Boehringer）を含む後続薬の位置づけを把握できる。国内ではbrensocatib（Insmed、ブリヌスプリ錠25mg）が2026年8月24日に承認、10月14日に薬価収載され、verducatibはAIRTIVITY（jRCT2071250036）で実施中（2026年10月時点）。",
   "pmid": "41269659",
   "url": "https://doi.org/10.1007/s41030-025-00330-1"
  },
@@ -671,7 +671,7 @@
   "authors": "Zhang D, Zhang W, Hu P et al.",
   "aui": "Zhang Zhang Hu Zhang",
   "summary": "上海市肺科医院薬剤部の総説で、好中球セリンプロテアーゼの活性化を選択的に阻害するDPP1阻害薬（brensocatib・BI 1291583・HSK31858）の開発状況・有効性・安全性を非CF気管支拡張症とCOPDを中心に整理し、WILLOW第II相で初回増悪までの期間延長（HR 0.58〜0.62）、ASPEN第III相で年間増悪率21%（10 mg）・19%（25 mg）減少、SAVE-BEでHSK31858による増悪リスク48〜59%減少を示した。パピヨン・ルフェーブル症候群の表現型から皮膚・歯周の監視が必要だが試験での発現は1〜4%で軽度〜中等度が主体とし、標準化された監視プロトコルや患者層別化バイオマーカーの確立を今後の課題とした。",
-  "jpView": "DPP-1阻害薬3剤を横断的に比較した総説。国内ではverducatib（BI 1291583、Boehringer）がAIRTIVITY第III相（jRCT2071250036）で実施中で、brensocatib（Insmed）は2026年時点で未承認。皮膚・歯周の安全性監視はクラス共通の論点となる。",
+  "jpView": "DPP-1阻害薬3剤を横断的に比較した総説。国内ではbrensocatib（Insmed、ブリヌスプリ錠25mg）が2026年8月24日に承認、10月14日に薬価収載され、verducatib（BI 1291583、Boehringer）はAIRTIVITY第III相（jRCT2071250036）で実施中（2026年10月時点）。皮膚・歯周の安全性監視はクラス共通の論点となる。",
   "pmid": "40918524",
   "url": "https://doi.org/10.3389/fphar.2025.1656316"
  },
@@ -808,7 +808,7 @@
   "authors": "Mathew A, Anwar H",
   "aui": "Mathew Anwar",
   "summary": "英国Basildon and Thurrock University Hospitalsの著者らによる論説で、好中球性炎症を直接標的とするDPP-1阻害薬brensocatibの作用機序・有効性・副作用プロファイルと、英国成人集団への広範な導入の含意をレビューした。既存文献は増悪頻度の中等度の減少を支持する一方、長期安全性・既存治療への組み込み方・費用対効果には大きな不確実性が残ると指摘した。",
-  "jpView": "Brensocatib（Insmed）は2026年時点で国内未承認（ASPEN試験に日本人サブグループ参加、jRCT2031210048）。英国で指摘された長期安全性・費用対効果・既存治療（本邦ではEM少量長期療法が強く推奨）との併用位置づけの論点は、国内でのDPP-1阻害薬クラスの議論でもそのまま問われうる。",
+  "jpView": "Brensocatib（Insmed）は国内でも2026年8月24日に承認、10月14日に薬価収載され、費用対効果評価の対象（H1）となった。英国で指摘された長期安全性・費用対効果・既存治療（本邦ではEM少量長期療法が強く推奨）との併用位置づけの論点は、国内の実臨床でもそのまま問われる。",
   "pmid": "42841111",
   "url": "https://doi.org/10.7759/cureus.117538"
  },
@@ -1266,7 +1266,7 @@
   "authors": "Nigro M, Gramegna A, Johnson E et al.",
   "aui": "Nigro Gramegna Johnson Perea Contarini Misuraca Shuttleworth Shoemark Solarat Faner Simonetta Scarano Sibila Blasi Chalmers Aliberti",
   "summary": "ミラノ・ダンディー・バルセロナの3施設による国際多施設前向きコホートで喀痰カテプシンG活性を測定し3年間追跡したところ、高活性群はBSI・E-FACED・修正Reiff score・%FEV1・慢性緑膿菌感染などの重症度指標が悪く、増悪（IRR 1.62、95%CI 1.29-2.07）および重症増悪による入院（IRR 2.32、95%CI 1.03-5.21）が多かった。カテプシンGは好中球エラスターゼ活性と強く相関し、DPP-1阻害薬を含む将来の治療標的となり得ると著者らは述べている。",
-  "jpView": "カテプシンGはDPP-1により活性化される好中球セリンプロテアーゼの一つで、本研究はNE以外のNSPも予後指標となることを示す。本邦では2026年時点でbrensocatib（Insmed）は未承認、verducatib（Boehringer）はAIRTIVITY第III相（jRCT2071250036）が募集中であり、DPP-1阻害薬クラスの対象患者像やバイオマーカー議論に使える。",
+  "jpView": "カテプシンGはDPP-1により活性化される好中球セリンプロテアーゼの一つで、本研究はNE以外のNSPも予後指標となることを示す。国内ではbrensocatib（Insmed、ブリヌスプリ錠25mg）が2026年8月24日に承認、10月14日に薬価収載され、verducatib（Boehringer）はAIRTIVITY第III相（jRCT2071250036）が募集中（2026年10月時点）であり、DPP-1阻害薬クラスの対象患者像やバイオマーカー議論に使える。",
   "pmid": "42807352",
   "url": "https://doi.org/10.1183/23120541.01667-2025"
  },
@@ -1420,7 +1420,7 @@
   "authors": "Akhtar MS",
   "aui": "Akhtar",
   "summary": "経口・選択的・可逆的DPP-1阻害薬brensocatibの作用機序、臨床薬理、有効性・安全性、規制状況を、第II相WILLOW・第III相ASPEN試験や添付文書・ガイドラインに基づき整理した総説（2026年6月30日までの文献）。直近に増悪歴のある患者でエビデンスが最も強い一方、マクロライドや吸入抗菌薬との使い分け順序は未確立であり、気道クリアランス・感染対策と統合した予防療法として、皮膚・歯周モニタリング、費用、実臨床データが長期的価値を左右すると結論した。",
-  "jpView": "日本ではbrensocatib（Insmed）は2026年時点で未承認（上市準備段階との業界報道あり）で、同じDPP-1阻害薬クラスのverducatib（Boehringer）はAIRTIVITY第III相（jRCT2071250036）が国内でも進行中。マクロライド少量長期療法が根付く本邦で「マクロライドとの順序が未確立」という論点はクラス全体の位置づけ議論に直結する。",
+  "jpView": "国内ではbrensocatib（Insmed、ブリヌスプリ錠25mg）が2026年8月24日に承認、10月14日に薬価収載され、同じDPP-1阻害薬クラスのverducatib（Boehringer）はAIRTIVITY第III相（jRCT2071250036）が国内でも進行中（2026年10月時点）。マクロライド少量長期療法が根付く本邦で「マクロライドとの順序が未確立」という論点は、クラス全体の位置づけ議論に直結する。",
   "pmid": "42788768",
   "url": "https://doi.org/10.1080/17512433.2026.2739561"
  },
@@ -2323,7 +2323,7 @@
   "authors": "Usansky H, Cammarata A, Li C, Au Yeung S, Rubino CM, Wang L, Teper A, Fernandez C, Mange K",
   "aui": "Usansky Cammarata Li Au Yeung Rubino Wang Teper Fernandez Mange",
   "summary": "経口DPP-1（カテプシンC）阻害薬ブレンソカチブについて、11試験（健康被験者291例・患者807例）の11,643点の血漿中濃度を統合し、成人・青年の用量選択を支援する母集団薬物動態モデルを構築した。体重は標準的アロメトリックスケーリングで組み込まれ、肝機能障害・性別・人種・強いCYP3A/P-gp調節薬併用などが統計的に有意な共変量となったが臨床的に重要なものはなく、10mgおよび25mgの用量設定を支持した。",
-  "jpView": "ブレンソカチブ（Insmed・DPP-1阻害薬）は2025年8月に米FDA承認、日本は2026年時点で未承認だがASPEN試験に日本人サブグループ（jRCT2031210048）が組み入れられている。本解析は成人に加え青年への10mg/25mg用量設定を支持しており、将来の国内申請における用量根拠として参考になる。",
+  "jpView": "ブレンソカチブ（Insmed・DPP-1阻害薬）は2025年8月に米FDA承認、国内でも2026年8月24日に承認された（ASPEN試験に日本人サブグループ jRCT2031210048）。国内の承認用量は成人および12歳以上の小児に25mg 1日1回で、本解析の青年への用量設定の議論と対応する。",
   "pmid": "42712175",
   "url": "https://pubmed.ncbi.nlm.nih.gov/42712175/"
  },
@@ -4057,7 +4057,7 @@
   "authors": "Treadway MT, Marino AB, Theroux JD ほか",
   "aui": "Treadway Marino Theroux Drake",
   "summary": "2025年後半に米FDAが承認したプライマリケア関連の新薬をまとめたアップデート記事で、気管支拡張症治療薬ブレンソカチブ(Brinsupri)、エリンザネタント(Lynkuet)、ゾリフロダシン(Nuzolvence)などが取り上げられている。ブレンソカチブは経口DPP-1(カテプシンC)阻害薬として、非嚢胞性線維症気管支拡張症における初のクラス承認薬として紹介されている。",
-  "jpView": "国内ではブレンソカチブ（Insmed）は2026年時点で未承認・上市準備段階との業界報道があり、同じDPP-1阻害薬クラスで治験中のベルジュカチブ（ベーリンガーインゲルハイム、AIRTIVITY試験）と合わせ、日本市場投入のタイミングとクラス内競合ポジショニングが今後の注目点となる。",
+  "jpView": "国内ではbrensocatib（Insmed、ブリヌスプリ錠25mg）が2026年8月24日に承認、10月14日に薬価収載され、同じDPP-1阻害薬クラスで治験中のベルジュカチブ（ベーリンガーインゲルハイム、AIRTIVITY試験）とのクラス内競合ポジショニングが注目点となる（2026年10月時点）。",
   "pmid": "42535700",
   "url": "https://pubmed.ncbi.nlm.nih.gov/42535700/"
  },
@@ -5100,7 +5100,7 @@
   "authors": "Addrizzo-Harris D, Chalmers JD, Aliberti S ほか",
   "aui": "Addrizzo-Harris Chalmers Aliberti Burgel Morrissey Zhang Fan Lauterio Fucile Griffis Teper",
   "summary": "ASPEN試験に参加したアジア人種191例（10mg群63例・25mg群64例・プラセボ群64例）のサブグループ解析で、ブレンソカチブ10mg・25mgともに年間増悪率を約60%低下させ、初回増悪までの期間を延長した。25mg群では肺機能（post-BD FEV1）低下抑制とQOL-B呼吸器症状スコアの改善も認められ、有害事象プロファイルは全体集団と同様であった。",
-  "jpView": "アジア人種サブグループでの解析（数値的には全体集団より良好な傾向も示唆）で、既報の日本人サブグループ解析（Morimoto ら, Respiratory Investigation 2026）を補強するデータ。ただし検出力は限定的であり確定的ではない。ブレンソカチブは2026年時点で米FDA承認済み（2025年8月）だが日本国内は未承認。",
+  "jpView": "アジア人種サブグループでの解析（数値的には全体集団より良好な傾向も示唆）で、既報の日本人サブグループ解析（Morimoto ら, Respiratory Investigation 2026）を補強するデータ。ただし検出力は限定的であり確定的ではない。ブレンソカチブは米FDA承認（2025年8月）に続き、国内でも2026年8月24日に承認された。",
   "pmid": "42461571",
   "url": "https://pubmed.ncbi.nlm.nih.gov/42461571/"
  },
@@ -5479,7 +5479,7 @@
   "authors": "Imran SB, Haider E, Faraz B ほか",
   "aui": "Imran Haider Faraz Kumari",
   "summary": "非嚢胞性線維症性気管支拡張症における中核的な抗炎症薬クラスとして、好中球エラスターゼ等のセリンプロテアーゼ活性化を担うDPP-1（カテプシンC）を阻害するブレンソカチブの作用機序と治療的意義を概説したレター。原著抄録は非公開だが、FDA承認済み薬剤としての位置づけを再確認する内容である。",
-  "jpView": "Brensocatib（Insmed社）は2025年8月に米FDA承認済みだが、2026年時点で日本国内は未承認。ASPEN試験には日本人サブグループ（jRCT2031210048）が含まれており、国内導入時期が今後の焦点となる。",
+  "jpView": "Brensocatib（Insmed社）は2025年8月に米FDA承認、国内でも2026年8月24日に承認され、10月14日に薬価収載された。ASPEN試験には日本人サブグループ（jRCT2031210048）が含まれており、国内承認の根拠データの一部となる。",
   "pmid": "42433850",
   "url": "https://pubmed.ncbi.nlm.nih.gov/42433850/"
  },
@@ -8061,7 +8061,7 @@
   "authors": "Chalmers JD; Daley CL",
   "aui": "Chalmers Daley",
   "summary": "気管支拡張症に対する新たな抗炎症療法であるDPP-1（カテプシンC）阻害薬について、実臨床での至適用量選択のあり方を論じたOxfordからのviewpoint。有効性と安全性のバランスを踏まえた用量設定の考え方を整理した。（PubMed PMID: 42085276）",
-  "jpView": "DPP-1阻害薬の至適用量論。日本ではBrensocatib（Insmed）が上市準備段階、Verducatib（日本BI、jRCT2071250036）が第III相進行中で、本邦の用量設定議論にも直結（2026年時点）。",
+  "jpView": "DPP-1阻害薬の至適用量論。日本ではBrensocatib（Insmed）が2026年8月24日に25mg 1日1回で承認され、Verducatib（日本BI、jRCT2071250036）は第III相進行中で、本邦の用量設定議論にも直結する（2026年10月時点）。",
   "pmid": "42085276",
   "url": "https://pubmed.ncbi.nlm.nih.gov/42085276/"
  },
@@ -9562,7 +9562,7 @@
   "authors": "Papapetropoulos Andreas et al.",
   "aui": "Papapetropoulos Topouzis Alexander Cortese-Krott Helyes Martemyanov Mauro Nagercoil Panettieri Patel Schulz Stefanska Stephens Vergnolle Wang Ward Ferdinandy",
   "summary": "2025年承認の46種の新薬を包括的にレビュー。気管支拡張症分野では、DPP1阻害薬brensocatibがFDA承認を取得し、好中球プロテアーゼ活性化を阻害して肺組織破壊を防ぐ初の標的治療として紹介。54%がファーストインクラス薬という高水準の年となった。（PubMed PMID: 41771767）",
-  "jpView": "Brensocatib(Insmed)は2025年にFDA承認、日本は未承認(2026年時点、ASPEN試験に国内サブグループ)。Boehringerのverducatibは別化合物で第III相AIRTIVITYが国内進行中。クラス動向把握に重要。",
+  "jpView": "Brensocatib(Insmed)は2025年にFDA承認、国内でも2026年8月24日に承認・10月14日に薬価収載（ASPEN試験に国内サブグループ）。Boehringerのverducatibは別化合物で第III相AIRTIVITYが国内進行中。クラス動向把握に重要。",
   "pmid": "41771767",
   "url": "https://pubmed.ncbi.nlm.nih.gov/41771767/"
  },
@@ -10698,7 +10698,7 @@
   "authors": "Gu Y; Ragheb S; Unger M",
   "aui": "Gu Ragheb Unger",
   "summary": "2025年の肺内科領域の主要な進歩を総括したAnn Intern Med年間レビュー。気管支拡張症ではブレンソカチブの承認・ASPEN試験追加解析・DPP-1阻害の新たなエビデンスを含む重要な臨床知見を収録している。（PubMed PMID: 41974006）",
-  "jpView": "2025年の総括レビュー。brensocatib（Insmed・米FDA承認2025年8月／日本はASPEN日本人サブグループ jRCT2031210048・2026年時点国内未承認）を含む年間動向の把握に有用。",
+  "jpView": "2025年の総括レビュー。brensocatib（Insmed・米FDA承認2025年8月／国内は2026年8月24日承認、ASPEN日本人サブグループ jRCT2031210048）を含む年間動向の把握に有用。",
   "pmid": "41974006",
   "url": "https://doi.org/10.7326/ANNALS-26-00985"
  },
@@ -10904,7 +10904,7 @@
   "authors": "Morimoto K; Chalmers JD; Burgel PR; Daley CL; De Soyza A; Mauger D; Metersky ML; Zhang X; Li S; Goto Y; Teper A; Fernandez C; Hasegawa N",
   "aui": "Morimoto Chalmers Burgel Daley De Soyza Mauger Metersky Zhang Li Goto Teper Fernandez Hasegawa",
   "summary": "ASPENトライアルにおける日本人NCFB患者サブグループ解析（結核予防会複十字病院）。Brensocatib 10mg・25mgが日本人患者においても増悪率減少・肺機能低下抑制・患者報告症状改善において全体集団と同様の有効性と安全性を示すことが確認された。（PubMed PMID: 41519018）",
-  "jpView": "ASPEN試験の日本人サブ解析。国内の気管支拡張症は欧米よりNTM・後天性の比重が高く、日本人での有効性・安全性データはDPP-1阻害薬の国内導入を見据える上で重要。本剤は国内未承認（2025年時点）。",
+  "jpView": "ASPEN試験の日本人サブ解析。国内の気管支拡張症は欧米よりNTM・後天性の比重が高く、日本人での有効性・安全性データはDPP-1阻害薬の国内導入を見据える上で重要。本剤は2026年8月24日に国内承認された。",
   "pmid": "41519018",
   "url": "https://doi.org/10.1016/j.resinv.2025.101357"
  },
@@ -11964,7 +11964,7 @@
   "authors": "McKenna A; Wasfy JH; Kim K; Touchette DR; Kim S; Richardson M; Ollendorf DA",
   "aui": "McKenna Wasfy Kim Touchette Kim Richardson Ollendorf",
   "summary": "米国ICER（Institute for Clinical and Economic Review）のカリフォルニア技術評価フォーラムによる、非CF気管支拡張症に対するbrensocatibの有効性と経済的価値の評価を要約した報告（JMCP「Perspectives on Value」）。PubMedに抄録はなく、評価結果（投票結果・価格ベンチマーク等）の具体的数値は原著で確認が必要。",
-  "jpView": "米ICERの価値評価。日本では中医協での薬価・費用対効果評価が上市の鍵となるため、海外の医療経済評価の枠組みは国内の薬価交渉を読む参考になる。Brensocatibは2026年時点で国内未承認。",
+  "jpView": "米ICERの価値評価。国内ではbrensocatibが2026年10月14日に薬価収載（1錠24,695.70円、原価計算方式）され、費用対効果評価の対象（H1）となったため、海外の医療経済評価の枠組みは今後の国内の費用対効果評価を読む参考になる。",
   "pmid": "41760562",
   "url": "https://www.jmcp.org/doi/10.18553/jmcp.2026.32.3.392"
  },
@@ -12002,7 +12002,7 @@
   "authors": "Chalmers JD; Burgel PR; Daley CL; De Soyza A; Haworth CS; Mauger D; Loebinger MR; McShane PJ; Ringshausen FC; Blasi F; Shteinberg M; Mange K; Teper A; Fernandez C; Zambrano M; Fan C; Zhang X; Metersky ML",
   "aui": "Chalmers Burgel Daley De Soyza Haworth Mauger Loebinger McShane Ringshausen Blasi Shteinberg Mange Teper Fernandez Zambrano Fan Zhang Metersky",
   "summary": "1,721例（成人1,680例・青年41例）を対象とした第III相ASPEN試験で、brensocatib 10 mg・25 mgはいずれもプラセボに比べ52週の年間肺増悪率を低下させた（1.02・1.04 vs 1.29、率比0.79・0.81）。初回増悪までの期間も延長し（HR 0.81・0.83）、52週のFEV1低下は25 mgで38 mL少なく（10 mgでは有意差なし）、有害事象は角化亢進以外は同程度だった。",
-  "jpView": "ブレンソカチブの主要第III相（ASPEN）。FDA承認（2025年8月）。国内は未承認だが日本人サブ解析が併存し、DPP-1阻害という新規クラスの国内展開が注目される。",
+  "jpView": "ブレンソカチブの主要第III相（ASPEN）。FDA承認（2025年8月）に続き国内でも2026年8月24日に承認され、日本人サブ解析と併せてDPP-1阻害という新規クラスの国内導入の根拠となった。",
   "pmid": "40267423",
   "url": "https://www.nejm.org/doi/abs/10.1056/NEJMoa2411664"
  },
@@ -12022,7 +12022,7 @@
   "authors": "Mihălțan FD; Ulmeanu R; Constantin AA",
   "aui": "Mihălțan Ulmeanu Constantin",
   "summary": "骨髄の好中球成熟過程でDPP-1を可逆的に阻害し好中球セリンプロテアーゼの活性化を防ぐbrensocatibについて、第II相WILLOW・第III相ASPENで増悪頻度の減少・初回増悪までの期間延長・喀痰中好中球プロテアーゼ活性の低下が示され、安全性も良好で複数のサブグループと標準治療上乗せで一貫した効果が得られたことを総説した。2025年8月12日にFDA承認された非CF気管支拡張症初の機序に基づく治療薬として、抗菌薬依存の軽減も含めた治療パラダイムの転換と位置づけている。",
-  "jpView": "DPP-1阻害というクラス初の標的療法登場の意義を論じるEditorial。日本でもInsmedによるbrensocatibの上市準備が進むとされ(2026年時点未承認)、対症療法中心だった国内診療の転換点となりうる。",
+  "jpView": "DPP-1阻害というクラス初の標的療法登場の意義を論じるEditorial。国内でもbrensocatib（Insmed）が2026年8月24日に承認・10月14日に薬価収載され、対症療法中心だった国内診療の転換点となりうる。",
   "pmid": "41682938",
   "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12898296/"
  },
@@ -12041,7 +12041,7 @@
   "authors": "Babar Z; Khan MH; Rehman M; Mahato RK",
   "aui": "Babar Khan Rehman Mahato",
   "summary": "パキスタン・Ayub医科大学の著者による論説（Letter to the Editor）で、2025年8月12日にFDAが非CF気管支拡張症の初の治療薬として承認したbrensocatib（Brinsupri）について、DPP1の競合的・可逆的阻害による作用機序と、承認の根拠となったASPEN（52週、1,721例）・WILLOW（24週、256例）の2試験を紹介した。",
-  "jpView": "Brensocatib(Brinsupri)は気管支拡張症初の標的療法として2025年にFDA承認。日本は未承認だがInsmed日本法人が上市準備中(2026年時点)。クラスを牽引する基準薬として位置づけを理解すべき一報。",
+  "jpView": "Brensocatib(Brinsupri)は気管支拡張症初の標的療法として2025年にFDA承認。国内でも2026年8月24日に承認（販売名ブリヌスプリ錠25mg）、10月14日に薬価収載された。クラスを牽引する基準薬として位置づけを理解すべき一報。",
   "pmid": "41675736",
   "url": "https://www.ajmc.com/view/brensocatib-becomes-first-approved-therapy-for-bronchiectasis-expanding-treatment-options-james-d-chalmers-mbchb-phd"
  },
@@ -12061,7 +12061,7 @@
   "authors": "Emara A; Awashra A; Ellebedy M; Abbas OF; Diaa A; Elgendy MS; Emara M; Shubietah A; Abdeen AMZ; Safi F",
   "aui": "Emara Awashra Ellebedy Abbas Diaa Elgendy Emara Shubietah Abdeen Safi",
   "summary": "エジプト・アル＝アズハル大学のグループが2025年7月までのRCT 4本（2,523例）を統合し、DPP-1阻害薬は増悪を1回以上起こすリスク（RR 0.64）と重症増悪（RR 0.44）を減らし、増悪なしで経過する患者の割合を増やし（RR 1.33）、初回増悪までの期間を延長した（HR 0.66）。呼吸器症状スコアは改善した（MD 2.80）が気管支拡張薬投与後FEV1に差はなく、全有害事象・中止・死亡を増やさず重症・重篤な有害事象はむしろ少なかった。",
-  "jpView": "DPP-1阻害薬クラスのエビデンスをGRADEで統合。日本未承認段階での科学的支持の強さを把握でき、国内KOLとのディスカッションの土台になる。",
+  "jpView": "DPP-1阻害薬クラスのエビデンスをGRADEで統合。国内でbrensocatibが2026年8月に承認された段階での科学的支持の強さを把握でき、国内KOLとのディスカッションの土台になる。",
   "pmid": "41299471",
   "url": "https://pubmed.ncbi.nlm.nih.gov/41299471/"
  },
