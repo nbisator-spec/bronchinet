@@ -7127,7 +7127,7 @@ const TRIALS_DATA = TRIAL_GROUPS.flatMap(g => g.trials);
 // ============================================================
 // 競合ランドスケープ（薬剤別）
 // ============================================================
-// 開発状況は japan_context.md の検証済み事実（2026年時点・要再確認）
+// 開発状況は japan_context.md の検証済み事実（承認状況はFDA・EMA・PMDAの一次資料で2026-10-10確認。毎朝 approval_watch.py が差分検知）
 const LANDSCAPE = [
   { cls: 'DPP-1阻害薬（カテプシンC阻害）', icon: '🏆', color: '#1d4ed8', drugs: [
     { name: 'Brensocatib', company: 'Insmed（インスメッド合同会社）', kw: ['Brensocatib','ブレンソカチブ','INS1007','Brinsupri','ブリンスプリ','ブリヌスプリ','ASPEN'],
@@ -7146,8 +7146,8 @@ const LANDSCAPE = [
       us: 'Phase 2b', eu: 'Phase IIb', jp: 'Phase 2（登録）' },
   ]},
   { cls: '気道クリアランス・PDE阻害', icon: '💨', color: '#15803d', drugs: [
-    { name: 'Ensifentrine', company: 'Verona Pharma', kw: ['Ensifentrine','エンシフェントリン'],
-      us: 'Phase II', eu: 'Phase II', jp: '—' },
+    { name: 'Ensifentrine', company: 'Verona Pharma（米国の承認保有者は現在MSD）', kw: ['Ensifentrine','エンシフェントリン','Ohtuvayre'],
+      us: 'BE: Phase II／COPD: ✅ FDA承認 (2024/6/26)', eu: 'BE: Phase II／COPD: 申請取下げ (2025/10/30)', jp: '—' },
   ]},
   { cls: '抗炎症・生物学的製剤', icon: '🧬', color: '#ea580c', drugs: [
     { name: 'Itepekimab (抗IL-33)', company: 'Sanofi（サノフィ）', kw: ['Itepekimab','SAR440340','イテペキマブ'],
@@ -7155,7 +7155,9 @@ const LANDSCAPE = [
     { name: 'SAR445399', company: 'Sanofi（サノフィ）', kw: ['SAR445399'],
       us: 'Phase II', eu: '—', jp: '—' },
     { name: 'GSK3862995B', company: 'GSK', kw: ['GSK3862995B','GSK3862995'],
-      us: 'Phase II', eu: 'Phase II', jp: '—' },
+      us: 'Phase II', eu: 'Phase II', jp: 'Phase 1/2（jRCT2031250446）' },
+    { name: 'Galvokimig (UCB9741)', company: 'UCB（ユーシービージャパン）', kw: ['Galvokimig','UCB9741','ガルボキミグ','ATMOS'],
+      us: 'Phase II', eu: 'Phase II', jp: 'Phase II（jRCT2031260579・募集前）' },
   ]},
 ];
 
