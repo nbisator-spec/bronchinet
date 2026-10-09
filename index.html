@@ -536,9 +536,9 @@
     <div class="dashboard-header">
       <div class="dashboard-title">
         🔥 本日のハイライト
-        <span class="dashboard-badge">NEW 7件</span>
+        <span class="dashboard-badge">NEW 1件</span>
       </div>
-      <div class="dashboard-date">最終更新：2026-10-09 05:04 自動生成</div>
+      <div class="dashboard-date">最終更新：2026-10-10 05:04 自動生成</div>
     </div>
     <div class="dashboard-grid" id="dashboardGrid"></div>
   </div>
@@ -706,6 +706,13 @@
       <div class="sidebar-card">
         <div class="sidebar-header orange">📅 デイリーレポート履歴</div>
         <div class="sidebar-body">
+          <div class="report-item">
+            <div>
+              <div class="report-date">2026年10月10日（05:04）</div>
+              <div class="report-count">新規1件（PubMed論文1件）＋臨床試験1件（日本登録）。PubMed MCP接続を確認（Query 8の件数108件がMCPとE-utilitiesで一致）のうえ、E-utilities（curl・--retry 3）で11クエリを実行（Q1〜10は掲載日基準・Q11は登録日基準、2026/09/10〜2026/10/10、全クエリでcount=returned一致）。ユニークPMID 154件中、既読除外後の新規候補3件を審査し1件を採用（AZD0292学会抄録の訂正告知と、がんサバイバーのフレイル研究〈気管支拡張症は39アウトカムの1つ〉は非採用）。JRCTでUCBのgalvokimig（UCB9741）第II相ATMOSの日本登録（jRCT2031260579、募集前）を新たに検出し、ポータルに追加。ClinicalTrials.gov（募集中・募集前117試験）・J-STAGE 13件・CTIS 23試験は新規なし（CiNii未登録2件は商業誌〈医学のあゆみ〉の総説断片のため方針により不採用）。Cochrane（Query 10）は該当0件。臨床試験ウォッチ（116試験）は変化なし。 採用論文：①CCDC151新規フレームシフト変異による無精子症を伴うPCD〈Front Med・中南大学湘雅二医院・症例報告〉。</div>
+            </div>
+            <span class="report-link" onclick="showSection('reports',document.querySelectorAll('nav a')[6])">▶ 開く</span>
+          </div>
           <div class="report-item">
             <div>
               <div class="report-date">2026年10月9日（05:04）</div>
@@ -1941,6 +1948,29 @@
   <div class="reports-page-header">
     <h2>📝 デイリーレポート アーカイブ</h2>
     <p>毎朝5時に自動生成される文献サマリーの履歴。既読除外機能により、常に新規情報のみを収録しています。</p>
+  </div>
+
+  <!-- Report 2026-10-10 05:04 -->
+  <div class="report-card">
+    <div class="report-card-header">
+      <div>
+        <div class="report-card-date">📅 2026年10月10日（05:04 自動生成）</div>
+        <div style="font-size:12px;color:var(--text-muted);margin-top:3px;">PubMed MCP接続を確認（Query 8の件数108件がMCPとE-utilitiesで一致）のうえ、E-utilities（curl・--retry 3）で11クエリを実行（Q1〜10は掲載日基準・Q11は登録日基準、2026/09/10〜2026/10/10、全クエリでcount=returned一致）。ユニークPMID 154件中、既読除外後の新規候補3件を審査し1件を採用（AZD0292学会抄録の訂正告知と、がんサバイバーのフレイル研究〈気管支拡張症は39アウトカムの1つ〉は非採用）。JRCTでUCBのgalvokimig（UCB9741）第II相ATMOSの日本登録（jRCT2031260579、募集前）を新たに検出し、ポータルに追加。ClinicalTrials.gov（募集中・募集前117試験）・J-STAGE 13件・CTIS 23試験は新規なし（CiNii未登録2件は商業誌〈医学のあゆみ〉の総説断片のため方針により不採用）。Cochrane（Query 10）は該当0件。臨床試験ウォッチ（116試験）は変化なし。</div>
+      </div>
+      <span class="report-card-count">新規 1件・臨床試験 1件</span>
+    </div>
+    <ul class="report-highlight-list">
+      <li>
+        <span class="report-num">1</span>
+        <span class="report-cat-inline" style="background:#cffafe;color:#0e7490">臨床試験</span>
+        <span>UCBのgalvokimig（UCB9741）第II相ATMOSの日本登録（jRCT2031260579、令和8年10月9日公表・募集前）：非CF気管支拡張症の成人で初回増悪までの期間をプラセボと比較。国内予定24例、登録開始予定2026年11月1日。グローバル試験はNCT07720375。</span>
+      </li>
+      <li>
+        <span class="report-num">2</span>
+        <span class="report-cat-inline" style="background:#ede9fe;color:#5b21b6">精密医療・エンドタイプ</span>
+        <span>CCDC151の未報告ホモ接合性フレームシフト変異（c.986dupT）による無精子症を伴うPCD（Front Med・中南大学湘雅二医院）：外側ダイニン腕が完全欠失し線毛は完全不動。CCDC151機能不全と無精子症の関連を支持。</span>
+      </li>
+    </ul>
   </div>
 
   <!-- Report 2026-10-09 05:04 -->
@@ -6876,7 +6906,9 @@ const TRIAL_GROUPS = [
       { name: 'GSK3862995B 第1/2相（日本）', drug: 'GSK3862995B（GSK）', sponsor: 'グラクソスミスクライン', phase: 'Phase 1/2', status: '募集中', nct: 'jRCT2031250446', color: '#0f3872',
         desc: '気管支拡張症を有する被験者を対象にGSK3862995Bの有効性・安全性・免疫原性・薬物動態を評価する第1/2相試験（日本登録）。公表日：令和8年4月3日', url: 'https://jrct.mhlw.go.jp/latest-detail/jRCT2031250446' },
       { name: 'ATMOS（Galvokimig / UCB9741）', drug: 'Galvokimig / UCB9741（UCB Biopharma）', sponsor: 'UCB Biopharma SRL', phase: 'Phase II', status: 'RECRUITING', nct: 'NCT07720375', color: '#92400e',
-        desc: '成人非CF気管支拡張症患者300例を対象に、UCBの新規バイオ製剤Galvokimig（UCB9741）を24〜52週間投与し、初回肺増悪までの期間をプラセボと比較する多施設二重盲検RCT。作用機序の詳細は登録情報に未記載。2026年8月開始。', url: 'https://clinicaltrials.gov/study/NCT07720375' },
+        desc: '成人非CF気管支拡張症患者300例を対象に、UCBの新規バイオ製剤Galvokimig（UCB9741）を24〜52週間投与し、初回肺増悪までの期間をプラセボと比較する多施設二重盲検RCT。作用機序の詳細は登録情報に未記載。2026年8月開始。日本登録：jRCT2031260579。', url: 'https://clinicaltrials.gov/study/NCT07720375' },
+      { name: 'ATMOS 日本（Galvokimig / UCB9741）', drug: 'Galvokimig / UCB9741（ユーシービージャパン）', sponsor: 'ユーシービージャパン株式会社', phase: 'Phase II', status: '募集前', nct: 'jRCT2031260579', color: '#92400e',
+        desc: 'ATMOS試験（NCT07720375）の日本登録。非CF気管支拡張症の成人（18〜80歳、過去12か月に中等度以上の増悪2回以上または6か月以内に重度増悪1回）を対象に、galvokimig 24〜52週間投与の初回増悪までの期間をプラセボと比較する第2相二重盲検RCT。国内予定24例、登録開始予定2026年11月1日。公表日：令和8年10月9日', url: 'https://jrct.mhlw.go.jp/latest-detail/jRCT2031260579' },
     ]
   },
 

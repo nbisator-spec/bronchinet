@@ -1,8 +1,27 @@
 [
  {
+  "id": 736,
+  "cat": "精密医療・エンドタイプ",
+  "isNew": true,
+  "titleJa": "CCDC151の新規ホモ接合性フレームシフト変異による無精子症を伴う原発性線毛機能不全症（中国人家系）",
+  "titleEn": "A novel homozygous frameshift mutation in the CCDC151 causing primary ciliary dyskinesia with azoospermia in a Chinese family.",
+  "journal": "Frontiers in Medicine",
+  "sjr": "Q1",
+  "if": "3.0",
+  "date": "2026-09-23",
+  "year": 2026,
+  "ev": "症例報告",
+  "authors": "Fan H, Wang L, Zhou X ほか",
+  "aui": "Fan Wang Zhou Lu Yang Liu Yang Guo Luo",
+  "summary": "反復気道感染・慢性副鼻腔炎・両側びまん性気管支拡張・無精子症を呈した40歳男性で、全エクソーム解析によりCCDC151の未報告ホモ接合性フレームシフト変異（c.986dupT）を同定した。気道線毛では外側ダイニン腕（DNAH5・DNAI1）が完全に欠失し線毛は完全不動で、本変異の病原性とCCDC151機能不全と無精子症の関連を支持した。",
+  "scope": "PCD",
+  "pmid": "42846437",
+  "url": "https://doi.org/10.3389/fmed.2026.1929775"
+ },
+ {
   "id": 729,
   "cat": "ガイドライン・総説",
-  "isNew": true,
+  "isNew": false,
   "dpp1": true,
   "titleJa": "気管支拡張症におけるDPP1阻害の現状と今後の方向性",
   "titleEn": "The dipeptidyl peptidase 1 inhibition landscape in bronchiectasis and its future direction.",
@@ -22,7 +41,7 @@
  {
   "id": 730,
   "cat": "治療・薬剤",
-  "isNew": true,
+  "isNew": false,
   "dpp1": true,
   "titleJa": "Brensocatibが成人および青年の気管支拡張症に承認",
   "titleEn": "Brensocatib is approved for adults and adolescents with bronchiectasis.",
@@ -42,7 +61,7 @@
  {
   "id": 731,
   "cat": "治療・薬剤",
-  "isNew": true,
+  "isNew": false,
   "titleJa": "検査すべきか否か：吸入高張食塩水開始前の薬剤反応性評価の必要性を再考する",
   "titleEn": "To test or not to test: reassessing the need for drug response assessment before inhaled hypertonic saline.",
   "journal": "Thorax",
@@ -60,7 +79,7 @@
  {
   "id": 732,
   "cat": "増悪・病態",
-  "isNew": true,
+  "isNew": false,
   "titleJa": "気管支拡張症の在宅スパイロメトリー：測定はいつ医療になるのか",
   "titleEn": "Home spirometry in bronchiectasis: when does a measurement become medicine?",
   "journal": "Thorax",
@@ -78,7 +97,7 @@
  {
   "id": 733,
   "cat": "マイクロバイオーム・感染",
-  "isNew": true,
+  "isNew": false,
   "titleJa": "ブレイクポイントの先へ：慢性肺感染症の薬剤耐性サーベイランスがいまだ教えてくれないこと",
   "titleEn": "Beyond the breakpoint: what AMR surveillance in chronic lung infection still cannot tell us.",
   "journal": "Thorax",
@@ -96,7 +115,7 @@
  {
   "id": 734,
   "cat": "COPD合併",
-  "isNew": true,
+  "isNew": false,
   "titleJa": "EARCOレジストリにおけるCOPD合併・非合併α1アンチトリプシン欠乏症患者の健康効用値",
   "titleEn": "Health utilities in individuals with alpha-1 antitrypsin deficiency with and without COPD from the EARCO registry.",
   "journal": "Pulmonology",
@@ -114,7 +133,7 @@
  {
   "id": 735,
   "cat": "日本発",
-  "isNew": true,
+  "isNew": false,
   "titleJa": "アレルギー性気管支肺アスペルギルス症／真菌症の診断と管理の進歩",
   "titleEn": "Advances in the Diagnosis and Management of Allergic Bronchopulmonary Aspergillosis/Mycosis.",
   "journal": "Allergy, Asthma & Immunology Research",
