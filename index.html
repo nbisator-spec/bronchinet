@@ -7127,15 +7127,17 @@ const TRIALS_DATA = TRIAL_GROUPS.flatMap(g => g.trials);
 // ============================================================
 // 競合ランドスケープ（薬剤別）
 // ============================================================
-// 開発状況は japan_context.md の検証済み事実（承認状況はFDA・EMA・PMDAの一次資料で2026-10-10確認。毎朝 approval_watch.py が差分検知）
+// 開発状況は japan_context.md の検証済み事実（承認状況はFDA・EMA・PMDA・MHRA・NMPAの一次資料で2026-10-10確認。毎朝 approval_watch.py が差分検知）
+// uk: MHRA製品DB（SPC）／cn: NMPA「創新薬の承認」一覧（効能追加・申請状況は取得不可のため、確認できた事実のみ記載。不明は欄ごと省略）
 const LANDSCAPE = [
   { cls: 'DPP-1阻害薬（カテプシンC阻害）', icon: '🏆', color: '#1d4ed8', drugs: [
     { name: 'Brensocatib', company: 'Insmed（インスメッド合同会社）', kw: ['Brensocatib','ブレンソカチブ','INS1007','Brinsupri','ブリンスプリ','ブリヌスプリ','ASPEN'],
-      us: '✅ FDA承認 (2025/8/12)', eu: '✅ EU承認 (2025/11/18)', jp: '✅ 承認 (2026/8/24)・薬価収載 (2026/10/14)' },
+      us: '✅ FDA承認 (2025/8/12)', eu: '✅ EU承認 (2025/11/18)', jp: '✅ 承認 (2026/8/24)・薬価収載 (2026/10/14)',
+      uk: '✅ 承認 (2026/2/20)', cn: '未承認（2026/9時点）' },
     { name: 'Verducatib (BI 1291583)', company: '日本ベーリンガーインゲルハイム', kw: ['Verducatib','BI 1291583','ベルデュカチブ','AIRTIVITY','Airleaf','Clairleaf'],
       us: 'Phase III', eu: 'Phase III', jp: 'Phase III（治験中）' },
     { name: 'HSK31858', company: 'Haisco（中国）', kw: ['HSK31858','SAVE-BE'],
-      us: '—', eu: '—', jp: '—', other: '中国 Phase 2 完了' },
+      us: '—', eu: '—', jp: '—', cn: 'Phase 2 完了・未承認（2026/9時点）' },
   ]},
   { cls: '抗緑膿菌抗体', icon: '🦠', color: '#0e7490', drugs: [
     { name: 'AZD0292', company: 'AstraZeneca（アストラゼネカ）', kw: ['AZD0292','GREAT-2'],
@@ -7147,7 +7149,8 @@ const LANDSCAPE = [
   ]},
   { cls: '気道クリアランス・PDE阻害', icon: '💨', color: '#15803d', drugs: [
     { name: 'Ensifentrine', company: 'Verona Pharma（米国の承認保有者は現在MSD）', kw: ['Ensifentrine','エンシフェントリン','Ohtuvayre'],
-      us: 'BE: Phase II／COPD: ✅ FDA承認 (2024/6/26)', eu: 'BE: Phase II／COPD: 申請取下げ (2025/10/30)', jp: '—' },
+      us: 'BE: Phase II／COPD: ✅ FDA承認 (2024/6/26)', eu: 'BE: Phase II／COPD: 申請取下げ (2025/10/30)', jp: '—',
+      uk: '未承認' },
   ]},
   { cls: '抗炎症・生物学的製剤', icon: '🧬', color: '#ea580c', drugs: [
     { name: 'Itepekimab (抗IL-33)', company: 'Sanofi（サノフィ）', kw: ['Itepekimab','SAR440340','イテペキマブ'],
@@ -7198,6 +7201,8 @@ function buildLandscape() {
           ${statusBadge('🇺🇸', 'US', d.us)}
           ${statusBadge('🇪🇺', 'EU', d.eu)}
           ${statusBadge('🇯🇵', 'JP', d.jp)}
+          ${statusBadge('🇬🇧', 'UK', d.uk)}
+          ${statusBadge('🇨🇳', 'CN', d.cn)}
           ${d.other ? `<span class="ls-status">🌏 <b>${d.other}</b></span>` : ''}
         </div>
         <div class="ls-sec-label">🧪 進行中試験（${trials.length}）</div>
