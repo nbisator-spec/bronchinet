@@ -1,8 +1,27 @@
 [
  {
-  "id": 758,
+  "id": 760,
   "cat": "精密医療・エンドタイプ",
   "isNew": true,
+  "titleJa": "気管支拡張症における好酸球性・2型炎症：フェノタイプの認識からエンドタイプに基づく治療へ（総説）",
+  "titleEn": "Eosinophilic and type 2 inflammation in bronchiectasis: from phenotype recognition toward endotype-informed therapy.",
+  "journal": "Frontiers in Medicine",
+  "sjr": "Q1",
+  "if": "3.0",
+  "date": "2026-10-01",
+  "year": 2026,
+  "ev": "総説",
+  "authors": "Liang L, Liu L, Huang C ほか",
+  "aui": "Liang Liu Huang Zeng Zhu",
+  "summary": "中国・贛南医科大学第一附属医院の総説で、血中好酸球数・気道好酸球・FeNO・総IgEなどのT2指標は重なるが同等ではなく、現時点のエビデンスは気管支拡張症固有の統一的T2エンドタイプよりも好酸球性フェノタイプを支持すると整理した。ICSの好酸球関連の反応シグナルは探索的にとどまり、MAHALE試験でbenralizumabは好酸球を著減させたが臨床効果は示されなかった（症例集積不足・好酸球高値例の少なさで解釈は限定的）として、安定期の反復評価や好酸球で層別したRCTなど治療選択に用いる前に必要な検証過程を提示した。",
+  "jpView": "JRS 2025はBEでのICSを「使用しないことを推奨」（喘息合併例を除く）としており、好酸球高値だけではICSや生物学的製剤の適応根拠にならないという本総説の整理と整合する。喘息合併はEMBARCの31%に対し本邦報告では7%と低く、欧米の好酸球性BEデータを国内に当てはめる際は症例構成の違いに注意が要る。",
+  "pmid": "42889372",
+  "url": "https://doi.org/10.3389/fmed.2026.1987219"
+ },
+ {
+  "id": 758,
+  "cat": "精密医療・エンドタイプ",
+  "isNew": false,
   "titleJa": "好酸球性気管支拡張症における吸入ステロイド使用と初回緑膿菌分離との関連：多施設後ろ向き研究",
   "titleEn": "Association of inhaled corticosteroid use with first Pseudomonas aeruginosa isolation in eosinophilic bronchiectasis: a multicenter retrospective study.",
   "journal": "Respiratory Medicine",
@@ -21,7 +40,7 @@
  {
   "id": 759,
   "cat": "精密医療・エンドタイプ",
-  "isNew": true,
+  "isNew": false,
   "titleJa": "RNAシーケンスは原発性線毛運動不全症におけるHYDIN変異の診断を大きく改善し、高頻度欠失の影響を明らかにする",
   "titleEn": "RNA sequencing significantly improves HYDIN diagnosis and defines the effects of common deletions in primary ciliary dyskinesia.",
   "journal": "European Journal of Human Genetics",
