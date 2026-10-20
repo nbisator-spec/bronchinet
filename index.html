@@ -536,9 +536,9 @@
     <div class="dashboard-header">
       <div class="dashboard-title">
         🔥 本日のハイライト
-        <span class="dashboard-badge">NEW 0件</span>
+        <span class="dashboard-badge">NEW 2件</span>
       </div>
-      <div class="dashboard-date">最終更新：2026-10-20 05:04 自動生成</div>
+      <div class="dashboard-date">最終更新：2026-10-21 05:04 自動生成</div>
     </div>
     <div class="dashboard-grid" id="dashboardGrid"></div>
   </div>
@@ -706,6 +706,13 @@
       <div class="sidebar-card">
         <div class="sidebar-header orange">📅 デイリーレポート履歴</div>
         <div class="sidebar-body">
+          <div class="report-item">
+            <div>
+              <div class="report-date">2026年10月21日（05:04）</div>
+              <div class="report-count">新規2件（PubMed論文2件）、非採用1件。E-utilities（curl・--retry 3）で11クエリを一括実行（Q1〜10は掲載日基準・Q11は登録日基準、2026/09/21〜2026/10/21、全クエリでcount=returned一致）。ユニークPMID 140件中、既読除外後の新規候補3件を審査し2件を採用、1件は主題外で非採用（ダウン症候群児の播種性BCG症例。CTで気管支拡張なしと明記。seen_pmidsへ追記し再掲防止）。ClinicalTrials.gov（募集中・募集前115試験）・JRCT（全247件中BE関連21試験）・CTIS 23試験・J-STAGE 16件・CiNii 120件は新規なし。Cochrane（Query 10）は該当0件。臨床試験ウォッチ：GDC-6988 Phase 1/2（NCT06603246）の中止（TERMINATED）を検知。承認・薬価ウォッチは変化なし。 採用論文：①好酸球性気管支拡張症の総説〈Clin Rev Allergy Immunol・イタリア〉②気管支拡張症女性の妊孕性・妊娠転帰〈Chest・EMBARC/イスラエル主導〉。</div>
+            </div>
+            <span class="report-link" onclick="showSection('reports',document.querySelectorAll('nav a')[6])">▶ 開く</span>
+          </div>
           <div class="report-item">
             <div>
               <div class="report-date">2026年10月20日（05:04）</div>
@@ -2011,6 +2018,34 @@
   <div class="reports-page-header">
     <h2>📝 デイリーレポート アーカイブ</h2>
     <p>毎朝5時に自動生成される文献サマリーの履歴。既読除外機能により、常に新規情報のみを収録しています。</p>
+  </div>
+
+  <!-- Report 2026-10-21 05:04 -->
+  <div class="report-card">
+    <div class="report-card-header">
+      <div>
+        <div class="report-card-date">📅 2026年10月21日（05:04 自動生成）</div>
+        <div style="font-size:12px;color:var(--text-muted);margin-top:3px;">E-utilities（curl・--retry 3）で11クエリを一括実行（Q1〜10は掲載日基準・Q11は登録日基準、2026/09/21〜2026/10/21、全クエリでcount=returned一致）。ユニークPMID 140件中、既読除外後の新規候補3件を審査し2件を採用、1件は主題外で非採用（ダウン症候群児の播種性BCG症例。CTで気管支拡張なし。seen_pmidsへ追記し再掲防止）。ClinicalTrials.gov（募集中・募集前115試験）・JRCT（全247件中BE関連21試験）・CTIS 23試験・J-STAGE 16件・CiNii 120件は新規なし。Cochrane（Query 10）は該当0件。承認・薬価ウォッチは変化なし。</div>
+      </div>
+      <span class="report-card-count">新規 2件・臨床試験 0件</span>
+    </div>
+    <ul class="report-highlight-list">
+      <li>
+        <span class="report-num">1</span>
+        <span class="report-cat-inline" style="background:#ede9fe;color:#5b21b6">精密医療・エンドタイプ</span>
+        <span>好酸球性気管支拡張症の総説（Clinical Reviews in Allergy &amp; Immunology・イタリア）：合意基準不在下の暫定定義として確実（喀痰/BAL好酸球≥3%）・ほぼ確実（血中好酸球≥300/µLの持続）・可能性（単回150〜300/µL以上または喘息のないFeNO&gt;25ppb）の3段階を提案。</span>
+      </li>
+      <li>
+        <span class="report-num">2</span>
+        <span class="report-cat-inline" style="background:#fee2e2;color:#991b1b">増悪・病態</span>
+        <span>気管支拡張症女性の妊孕性・妊娠（Chest・EMBARC関連多施設＋ELF-EMBARC患者調査）：妊娠121件の58.6%で増悪、肺機能は安定。妊孕性低下は主にPCDに起因し、妊娠前FEV1が出生体重・在胎週数と相関。</span>
+      </li>
+      <li>
+        <span class="report-num">3</span>
+        <span class="report-cat-inline" style="background:#fef3c7;color:#92400e">臨床試験ウォッチ</span>
+        <span>GDC-6988（Genentech・吸入）Phase 1/2（NCT06603246）：CT.gov上で募集中→中止（TERMINATED）。中止理由はスポンサーの判断、登録症例数128→17例。</span>
+      </li>
+    </ul>
   </div>
 
   <!-- Report 2026-10-20 05:04 -->
@@ -7230,8 +7265,8 @@ const TRIAL_GROUPS = [
         desc: '吸入PDE3/4デュアル阻害薬のNCFBへの展開。ジェットネブライザー吸入、24週間〜3年間の投与で増悪率・症状・QOLを評価。180例登録予定、2026年9月完了見込み。', url: 'https://clinicaltrials.gov/study/NCT06559150' },
       { name: 'ALX1 Phase 2a 用量設定（Vast Therapeutics）', drug: 'ALX1（吸入一酸化窒素放出プロドラッグ、Vast Therapeutics）', sponsor: 'Vast Therapeutics', phase: 'Phase 2a', status: 'NOT_YET_RECRUITING', nct: 'NCT07731919', color: '#15803d',
         desc: 'ネブライザーで気道粘膜にNO放出プロドラッグを送達し、局所的な抗炎症・抗菌の二重作用を狙う吸入薬。成人気管支拡張症患者にALX1またはプラセボを14日間投与し、安全性・忍容性と予測バイオマーカーの変化から次相の用量を検討する単盲検用量設定試験。第1相では忍容性良好（気管支攣縮・メトヘモグロビン血症なし）と報告済み。2026年9月開始予定。', url: 'https://clinicaltrials.gov/study/NCT07731919' },
-      { name: 'GDC-6988 Phase 1/2', drug: 'GDC-6988吸入（Genentech）', sponsor: 'Genentech, Inc.', phase: 'Phase 1/2', status: 'RECRUITING', nct: 'NCT06603246', color: '#16a34a',
-        desc: '粘液閉塞性疾患患者を対象とした新規吸入薬GDC-6988の安全性・忍容性・薬理活性を評価するPhase 1/2試験。', url: 'https://clinicaltrials.gov/study/NCT06603246' },
+      { name: 'GDC-6988 Phase 1/2', drug: 'GDC-6988吸入（Genentech）', sponsor: 'Genentech, Inc.', phase: 'Phase 1/2', status: 'TERMINATED', nct: 'NCT06603246', color: '#16a34a',
+        desc: '粘液閉塞性疾患患者を対象とした新規吸入薬GDC-6988の安全性・忍容性・薬理活性を評価するPhase 1/2試験。CT.gov上で中止（TERMINATED）に変更（2026-10-21確認）。中止理由はスポンサーの判断（Sponsor’s Decision）で、登録症例数は128→17例、主要完了は2026-08-18。', url: 'https://clinicaltrials.gov/study/NCT06603246' },
       { name: 'Itraconazole MOLD試験', drug: 'Itraconazole（抗真菌薬、Mayo Clinic）', sponsor: 'Mayo Clinic', phase: 'Pilot', status: 'RECRUITING', nct: 'NCT07283497', color: '#15803d',
         desc: '気道内Aspergillus等が検出された気管支拡張症患者へのイトラコナゾール療法の実現可能性・安全性・気道マイクロバイオームへの影響を検討するパイロット試験。', url: 'https://clinicaltrials.gov/study/NCT07283497' },
       { name: 'OLE在宅療法（BiWaze）', drug: 'OLE（振動肺拡張）療法', sponsor: 'Delve Health', phase: 'N/A', status: 'RECRUITING', nct: 'NCT06926881', color: '#166534',
