@@ -1,8 +1,26 @@
 [
  {
+  "id": 763,
+  "cat": "マイクロバイオーム・感染",
+  "isNew": true,
+  "titleJa": "Mycobacteroides abscessusに対するpravibismaneのin vitroおよびin vivo抗菌活性",
+  "titleEn": "In vitro and in vivo antibacterial activity of pravibismane against Mycobacteroides abscessus.",
+  "journal": "BMC Microbiology",
+  "sjr": "Q1",
+  "if": "4.2",
+  "date": "2026-07-25",
+  "year": 2026,
+  "ev": "原著",
+  "authors": "Leestemaker-Palmer A, Keefe B, Bermudez LE, Baker BHJ",
+  "aui": "Leestemaker-Palmer Keefe Bermudez Baker",
+  "summary": "米国（オレゴン州立大学獣医学部・Microbion社）の前臨床研究で、pravibismaneはM. abscessusに対しアミカシンより16〜32倍低いMICを示し、THP-1マクロファージ内の菌を細胞生存性を保ったまま速やかに減少させた。慢性M. abscessus肺感染マウスモデルでは28日間の吸入投与が忍容性良好で肺内菌量を大きく減少させ、患者での検討の根拠とされた。",
+  "pmid": "42902132",
+  "url": "https://pubmed.ncbi.nlm.nih.gov/42902132/"
+ },
+ {
   "id": 761,
   "cat": "精密医療・エンドタイプ",
-  "isNew": true,
+  "isNew": false,
   "titleJa": "気道疾患における2型炎症：新たなフェノタイプとしての好酸球性気管支拡張症（総説）",
   "titleEn": "Type 2 Inflammation in Airway Diseases: Eosinophilic Bronchiectasis as an Emerging Phenotype.",
   "journal": "Clinical Reviews in Allergy & Immunology",
@@ -20,7 +38,7 @@
  {
   "id": 762,
   "cat": "増悪・病態",
-  "isNew": true,
+  "isNew": false,
   "titleJa": "気管支拡張症における妊孕性・妊娠・女性の健康：多施設研究とELF-EMBARC患者調査",
   "titleEn": "Fertility, pregnancy, and women's health in bronchiectasis: a multicenter study and ELF-EMBARC patient survey.",
   "journal": "Chest",
