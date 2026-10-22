@@ -536,9 +536,9 @@
     <div class="dashboard-header">
       <div class="dashboard-title">
         🔥 本日のハイライト
-        <span class="dashboard-badge">NEW 1件</span>
+        <span class="dashboard-badge">NEW 0件</span>
       </div>
-      <div class="dashboard-date">最終更新：2026-10-22 05:04 自動生成</div>
+      <div class="dashboard-date">最終更新：2026-10-23 05:04 自動生成</div>
     </div>
     <div class="dashboard-grid" id="dashboardGrid"></div>
   </div>
@@ -706,6 +706,13 @@
       <div class="sidebar-card">
         <div class="sidebar-header orange">📅 デイリーレポート履歴</div>
         <div class="sidebar-body">
+          <div class="report-item">
+            <div>
+              <div class="report-date">2026年10月23日（05:04）</div>
+              <div class="report-count">新規0件。E-utilities（curl・--retry 3）で11クエリを一括実行（Q1〜10は掲載日基準・Q11は登録日基準、2026/09/23〜2026/10/23、全クエリでcount=returned一致。PubMed MCPは接続済みだが、両経路の結果同一が検証済みのため一括処理に適したcurlを使用）。ユニークPMID 134件はすべて既読・既収載で新規候補0件。ClinicalTrials.gov（募集中・募集前115試験）・JRCT（全247件中BE関連21試験）・CTIS 23試験・J-STAGE 13件・CiNii 120件は新規なし。Cochrane（Query 10）は該当0件。臨床試験ウォッチ：SonoHeal 気道クリアランス（NCT07568119）の主要完了予定・試験完了予定が2026-06-30→2028-06-30へ延期を検知。承認・薬価ウォッチは変化なし。</div>
+            </div>
+            <span class="report-link" onclick="showSection('reports',document.querySelectorAll('nav a')[6])">▶ 開く</span>
+          </div>
           <div class="report-item">
             <div>
               <div class="report-date">2026年10月22日（05:04）</div>
@@ -2025,6 +2032,24 @@
   <div class="reports-page-header">
     <h2>📝 デイリーレポート アーカイブ</h2>
     <p>毎朝5時に自動生成される文献サマリーの履歴。既読除外機能により、常に新規情報のみを収録しています。</p>
+  </div>
+
+  <!-- Report 2026-10-23 05:04 -->
+  <div class="report-card">
+    <div class="report-card-header">
+      <div>
+        <div class="report-card-date">📅 2026年10月23日（05:04 自動生成）</div>
+        <div style="font-size:12px;color:var(--text-muted);margin-top:3px;">E-utilities（curl・--retry 3）で11クエリを一括実行（Q1〜10は掲載日基準・Q11は登録日基準、2026/09/23〜2026/10/23、全クエリでcount=returned一致。PubMed MCPは接続済みだが、両経路の結果同一が検証済みのため一括処理に適したcurlを使用）。ユニークPMID 134件はすべて既読・既収載で新規候補0件。ClinicalTrials.gov（募集中・募集前115試験）・JRCT（全247件中BE関連21試験）・CTIS 23試験・J-STAGE 13件・CiNii 120件は新規なし。Cochrane（Query 10）は該当0件。臨床試験ウォッチ：SonoHeal 気道クリアランス（NCT07568119）の主要完了予定・試験完了予定が2026-06-30→2028-06-30へ延期を検知。承認・薬価ウォッチは変化なし。</div>
+      </div>
+      <span class="report-card-count">新規 0件・臨床試験 0件</span>
+    </div>
+    <ul class="report-highlight-list">
+      <li>
+        <span class="report-num">1</span>
+        <span class="report-cat-inline" style="background:#fef3c7;color:#92400e">臨床試験ウォッチ</span>
+        <span>SonoHeal（Cognita Labs・音響振動による気道クリアランス機器）実現可能性試験（NCT07568119、15例・募集終了）：CT.gov上で主要完了予定・試験完了予定が2026-06-30→2028-06-30へ2年延期。</span>
+      </li>
+    </ul>
   </div>
 
   <!-- Report 2026-10-22 05:04 -->
@@ -7387,7 +7412,7 @@ const TRIAL_GROUPS = [
       { name: '成人気管支拡張症におけるPCDスクリーニング', drug: '高速ビデオ顕微鏡＋鼻腔NO測定（診断研究）', sponsor: 'Indiana University', phase: '診断', status: 'RECRUITING', nct: 'NCT07566611', color: '#64748b',
         desc: '高速ビデオ顕微鏡と鼻腔一酸化窒素（nNO）測定を組み合わせ、成人気管支拡張症患者において未診断の原発性線毛機能不全症（PCD）がどの程度潜在しているかを検証する研究。', url: 'https://clinicaltrials.gov/study/NCT07566611' },
       { name: 'SonoHeal 気道クリアランス（実現可能性）', drug: 'SonoHeal（音響振動）機器', sponsor: 'Cognita Labs LLC', phase: '機器・観察', status: 'ACTIVE_NOT_RECRUITING', nct: 'NCT07568119', color: '#64748b',
-        desc: '音響振動による気道クリアランス機器SonoHealの早期実現可能性・受容性を評価し、標準治療（高頻度胸壁振動）と予備的に比較。CF・非CF気管支拡張症・COPD・15例。', url: 'https://clinicaltrials.gov/study/NCT07568119' },
+        desc: '音響振動による気道クリアランス機器SonoHealの早期実現可能性・受容性を評価し、標準治療（高頻度胸壁振動）と予備的に比較。CF・非CF気管支拡張症・COPD・15例。CT.gov上で主要完了予定・試験完了予定が2026-06-30→2028-06-30に延期（2026-10-23確認）。', url: 'https://clinicaltrials.gov/study/NCT07568119' },
       { name: '肺移植後の拒絶除外のための肺超音波', drug: '—（肺超音波診断）', sponsor: 'Mayo Clinic', phase: '診断', status: 'RECRUITING', nct: 'NCT04582279', color: '#64748b',
         desc: '肺移植後の拒絶・感染を非侵襲的に診断する肺超音波アーチファクト解析研究。移植後気管支拡張症を含む対象で診断法を開発。90例。', url: 'https://clinicaltrials.gov/study/NCT04582279' },
       { name: '肺移植後の吸気筋トレーニング', drug: 'POWERBreathe Plus（吸気筋トレーニング）', sponsor: 'Mayo Clinic', phase: 'リハビリ', status: 'RECRUITING', nct: 'NCT04783155', color: '#64748b',
