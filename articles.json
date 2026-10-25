@@ -1,8 +1,26 @@
 [
  {
+  "id": 769,
+  "cat": "臨床試験",
+  "isNew": true,
+  "titleJa": "携帯型インテリジェント・インパルスオシロメトリの各種呼吸器疾患における診断精度：多施設横断研究のプロトコル",
+  "titleEn": "Research protocol for the diagnostic accuracy of intelligent portable impulse oscillometry across different respiratory diseases: a multicentre, cross-sectional study.",
+  "journal": "BMJ Open",
+  "sjr": "Q1",
+  "if": "2.3",
+  "date": "2026-10-21",
+  "year": 2026,
+  "ev": "観察研究",
+  "authors": "Chen B, Chen S, Wu Z ほか",
+  "aui": "Chen Chen Wu Lin Huang Ji Yao Shen Liang Zheng Xie Gao",
+  "summary": "広州医科大学第一附属医院（広州呼吸健康研究院）を中心とする中国の多施設横断研究のプロトコルで、健常者とCOPD・喘息・線維性ILD・気管支拡張症・中枢気道閉塞の患者に携帯型IOS・FeNO・呼気CO2・咳嗽音・スパイロメトリーを同日に実施する。IOSパラメータに基づく多疾患鑑別モデルを構築し、識別能と較正で診断性能を評価する（ChiCTR2500111125）。",
+  "pmid": "42907121",
+  "url": "https://pubmed.ncbi.nlm.nih.gov/42907121/"
+ },
+ {
   "id": 768,
   "cat": "マイクロバイオーム・感染",
-  "isNew": true,
+  "isNew": false,
   "titleJa": "原発性線毛運動不全症における微生物学的状態の縦断的評価：イタリア多施設研究",
   "titleEn": "Longitudinal Characterization of the Microbiological Status in Primary Ciliary Dyskinesia: An Italian Multicentre Study.",
   "journal": "Pediatric Pulmonology",
@@ -20,7 +38,7 @@
  {
   "id": 767,
   "cat": "精密医療・エンドタイプ",
-  "isNew": true,
+  "isNew": false,
   "titleJa": "Kartagener症候群における新規アレルの発見",
   "titleEn": "Discovery of novel alleles in Kartagener's syndrome.",
   "journal": "Mammalian Genome",
@@ -37,7 +55,7 @@
  {
   "id": 766,
   "cat": "ガイドライン・総説",
-  "isNew": true,
+  "isNew": false,
   "titleJa": "慢性呼吸不全における在宅非侵襲的換気（NIV）：エビデンスに基づくガイドライン",
   "titleEn": "Home non-invasive ventilation in chronic respiratory failure: Evidence-based guidelines.",
   "journal": "Lung India",
