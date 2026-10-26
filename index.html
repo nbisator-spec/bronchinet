@@ -536,9 +536,9 @@
     <div class="dashboard-header">
       <div class="dashboard-title">
         🔥 本日のハイライト
-        <span class="dashboard-badge">NEW 1件</span>
+        <span class="dashboard-badge">NEW 0件</span>
       </div>
-      <div class="dashboard-date">最終更新：2026-10-26 05:04 自動生成</div>
+      <div class="dashboard-date">最終更新：2026-10-27 05:04 自動生成</div>
     </div>
     <div class="dashboard-grid" id="dashboardGrid"></div>
   </div>
@@ -706,6 +706,13 @@
       <div class="sidebar-card">
         <div class="sidebar-header orange">📅 デイリーレポート履歴</div>
         <div class="sidebar-body">
+          <div class="report-item">
+            <div>
+              <div class="report-date">2026年10月27日（05:04）</div>
+              <div class="report-count">新規論文0件・臨床試験1件。E-utilities（curl・--retry 3）で11クエリを一括実行（Q1〜10は掲載日基準・Q11は登録日基準、2026/09/27〜2026/10/27、全クエリでcount=returned一致。PubMed MCPは接続済みだが、両経路の結果同一が検証済みのため一括処理に適したcurlを使用）。ユニークPMID 124件はすべて既読で新規論文なし。ClinicalTrials.gov（募集中・募集前115試験）で新規1試験、CTIS 23試験・J-STAGE 13件・CiNii 120件は新規なし。Cochrane（Query 10）は該当0件。JRCTはサイト側エラー（Internal Error／HTTP 403）で取得できず未確認。臨床試験ウォッチ・承認・薬価ウォッチは変化なし。 新規試験：①慢性アスペルギルス感染合併の非CF気管支拡張症に対する経口イトラコナゾール第III相RCT〈NCT06160713・PGIMER Chandigarh・インド〉。</div>
+            </div>
+            <span class="report-link" onclick="showSection('reports',document.querySelectorAll('nav a')[6])">▶ 開く</span>
+          </div>
           <div class="report-item">
             <div>
               <div class="report-date">2026年10月26日（05:04）</div>
@@ -2053,6 +2060,24 @@
   <div class="reports-page-header">
     <h2>📝 デイリーレポート アーカイブ</h2>
     <p>毎朝5時に自動生成される文献サマリーの履歴。既読除外機能により、常に新規情報のみを収録しています。</p>
+  </div>
+
+  <!-- Report 2026-10-27 05:04 -->
+  <div class="report-card">
+    <div class="report-card-header">
+      <div>
+        <div class="report-card-date">📅 2026年10月27日（05:04 自動生成）</div>
+        <div style="font-size:12px;color:var(--text-muted);margin-top:3px;">E-utilities（curl・--retry 3）で11クエリを一括実行（Q1〜10は掲載日基準・Q11は登録日基準、2026/09/27〜2026/10/27、全クエリでcount=returned一致。PubMed MCPは接続済みだが、両経路の結果同一が検証済みのため一括処理に適したcurlを使用）。ユニークPMID 124件はすべて既読で新規論文なし。ClinicalTrials.gov（募集中・募集前115試験）で新規1試験、CTIS 23試験・J-STAGE 13件・CiNii 120件は新規なし。Cochrane（Query 10）は該当0件。JRCTはサイト側エラー（Internal Error／HTTP 403）で取得できず未確認。臨床試験ウォッチ・承認・薬価ウォッチは変化なし。</div>
+      </div>
+      <span class="report-card-count">新規 0件・臨床試験 1件</span>
+    </div>
+    <ul class="report-highlight-list">
+      <li>
+        <span class="report-num">1</span>
+        <span class="report-cat-inline" style="background:#fef3c7;color:#92400e">臨床試験</span>
+        <span>経口イトラコナゾール第III相RCT（NCT06160713・PGIMER Chandigarh・インド、募集中）：慢性アスペルギルス感染を伴う非CF気管支拡張症で、6か月投与＋標準治療が増悪頻度を減らすかを標準治療単独と比較（目標80例）。</span>
+      </li>
+    </ul>
   </div>
 
   <!-- Report 2026-10-26 05:04 -->
@@ -7409,6 +7434,8 @@ const TRIAL_GROUPS = [
         desc: '粘液閉塞性疾患患者を対象とした新規吸入薬GDC-6988の安全性・忍容性・薬理活性を評価するPhase 1/2試験。CT.gov上で中止（TERMINATED）に変更（2026-10-21確認）。中止理由はスポンサーの判断（Sponsor’s Decision）で、登録症例数は128→17例、主要完了は2026-08-18。', url: 'https://clinicaltrials.gov/study/NCT06603246' },
       { name: 'Itraconazole MOLD試験', drug: 'Itraconazole（抗真菌薬、Mayo Clinic）', sponsor: 'Mayo Clinic', phase: 'Pilot', status: 'RECRUITING', nct: 'NCT07283497', color: '#15803d',
         desc: '気道内Aspergillus等が検出された気管支拡張症患者へのイトラコナゾール療法の実現可能性・安全性・気道マイクロバイオームへの影響を検討するパイロット試験。', url: 'https://clinicaltrials.gov/study/NCT07283497' },
+      { name: 'Itraconazole 第III相 RCT（PGIMER・インド）', drug: 'Itraconazole（経口抗真菌薬）', sponsor: 'Post Graduate Institute of Medical Education and Research, Chandigarh', phase: 'Phase III', status: 'RECRUITING', nct: 'NCT06160713', color: '#15803d',
+        desc: '慢性アスペルギルス感染を伴う非CF気管支拡張症患者を対象に、経口イトラコナゾール6か月＋標準治療と標準治療単独を比較し、増悪頻度（主要評価項目）の減少を検証する単施設RCT（目標80例、開始2023-12、主要完了予定2027-12）。', url: 'https://clinicaltrials.gov/study/NCT06160713' },
       { name: 'OLE在宅療法（BiWaze）', drug: 'OLE（振動肺拡張）療法', sponsor: 'Delve Health', phase: 'N/A', status: 'RECRUITING', nct: 'NCT06926881', color: '#166534',
         desc: 'BiWaze Clearシステムによる振動肺拡張（OLE）療法が6ヶ月間の気道クリアランスと呼吸健康に与える影響を評価する観察研究。', url: 'https://clinicaltrials.gov/study/NCT06926881' },
       { name: '高浸透圧食塩水 Phase IV（UNC）', drug: '高浸透圧食塩水吸入（7% NaCl）', sponsor: 'University of North Carolina, Chapel Hill', phase: 'Phase IV', status: 'RECRUITING', nct: 'NCT06242795', color: '#15803d',
