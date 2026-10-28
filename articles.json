@@ -1,8 +1,43 @@
 [
  {
-  "id": 777,
+  "id": 779,
+  "cat": "COPD合併",
+  "isNew": true,
+  "titleJa": "ポストCOVID期の香港におけるCOPD急性増悪の医療負担：表現型と増悪歴の影響",
+  "titleEn": "Health-Care Burden of Acute Exacerbation of Chronic Obstructive Pulmonary Disease in Hong Kong in the Post-COVID Pandemic Era-Impact of Phenotype and Exacerbation History.",
+  "journal": "Public Health Challenges",
+  "sjr": "Q1",
+  "date": "2026-10-27",
+  "year": 2026,
+  "ev": "観察研究",
+  "authors": "Kwok WC, Choo A, Zhou L ほか",
+  "aui": "Kwok Choo Zhou Ma Leung Wong Ho",
+  "summary": "香港大学による香港全域の後ろ向きコホート研究で、2022〜2024年に公立急性期病院へ重症COPD急性増悪で入院した11,465例（入院25,053回・150,717病床日）の直接医療費は計12.59億香港ドルに上り、入院数は3年間で有意に増加した。好酸球性・非好酸球性表現型で年間費用に差はなかった一方、気管支拡張症を併存する患者は重症増悪の年間回数と直接医療費が有意に多く、医療費増大の因子と考えられた。",
+  "pmid": "42948801",
+  "url": "https://pubmed.ncbi.nlm.nih.gov/42948801/"
+ },
+ {
+  "id": 778,
   "cat": "増悪・病態",
   "isNew": true,
+  "titleJa": "気管支拡張症・自己免疫・間質性肺疾患を統一的に説明する診断：分類不能型免疫不全症（CVID）",
+  "titleEn": "Unifying diagnosis for bronchiectasis, autoimmunity and interstitial lung disease: common variable immunodeficiency.",
+  "journal": "BMJ Case Reports",
+  "sjr": "Q4",
+  "if": "0.4",
+  "date": "2026-10-27",
+  "year": 2026,
+  "ev": "症例報告",
+  "authors": "Verma S, Thakur S, Rai DK ほか",
+  "aui": "Verma Thakur Rai Panicker Namboothri Shabbir Nain Collin",
+  "summary": "インド・AIIMSパトナ呼吸器内科からの症例報告で、気管支拡張症・自己免疫疾患・間質性肺疾患を併せ持つ患者の背景を一元的に説明する診断として分類不能型免疫不全症（CVID）を示した（PubMed上は抄録なし）。気管支拡張症の原因検索で液性免疫不全（免疫グロブリン測定）を評価する意義を示す1例である。",
+  "pmid": "42946495",
+  "url": "https://pubmed.ncbi.nlm.nih.gov/42946495/"
+ },
+ {
+  "id": 777,
+  "cat": "増悪・病態",
+  "isNew": false,
   "titleJa": "緑膿菌定着気管支拡張症における増悪負担の微生物学的因子と患者報告アウトカム：1年間の前向き研究",
   "titleEn": "Microbiological Factors and Patient-Reported Outcomes of Exacerbation Burden in Pseudomonas aeruginosa-Colonised Bronchiectasis: A One-Year Prospective Study.",
   "journal": "Medical Sciences (Basel)",
@@ -20,7 +55,7 @@
  {
   "id": 776,
   "cat": "精密医療・エンドタイプ",
-  "isNew": true,
+  "isNew": false,
   "titleJa": "非嚢胞性線維症気管支拡張症における上皮アラーミン・Th2サイトカインと疾患重症度の関連",
   "titleEn": "Association of Epithelial Alarmins and Th2 Cytokines with Disease Severity in Non-Cystic Fibrosis Bronchiectasis.",
   "journal": "Medicina",
@@ -38,7 +73,7 @@
  {
   "id": 775,
   "cat": "増悪・病態",
-  "isNew": true,
+  "isNew": false,
   "dpp1": true,
   "titleJa": "好中球エラスターゼは気道疾患においてCFTR機能を制御する",
   "titleEn": "Neutrophil Elastase Regulates CFTR Function in Airway Disease.",
@@ -57,7 +92,7 @@
  {
   "id": 774,
   "cat": "ガイドライン・総説",
-  "isNew": true,
+  "isNew": false,
   "titleJa": "2型炎症から粘液線毛機能不全まで：喘息と気管支拡張症を併存する小児に対する個別化呼吸リハビリテーション",
   "titleEn": "From Type 2 Inflammation to Mucociliary Dysfunction: Individualized Pulmonary Rehabilitation in Children with Asthma and Bronchiectasis.",
   "journal": "Children (Basel)",
@@ -74,7 +109,7 @@
  {
   "id": 773,
   "cat": "臨床試験",
-  "isNew": true,
+  "isNew": false,
   "titleJa": "LUCIND：小児神経疾患における呼吸器併存症のプロファイリング",
   "titleEn": "LUCIND: profiling respiratory comorbidity in paediatric neurological diseases.",
   "journal": "ERJ Open Research",
@@ -92,7 +127,7 @@
  {
   "id": 772,
   "cat": "増悪・病態",
-  "isNew": true,
+  "isNew": false,
   "titleJa": "3年間気管支内に残存した画鋲により嚢状気管支拡張症を来した思春期例：症例報告と文献レビュー",
   "titleEn": "Three-Year Retained Endobronchial Push Pin in an Adolescent Causing Saccular Bronchiectasis: A Case Report and Review of the Literature.",
   "journal": "Children (Basel)",
@@ -109,7 +144,7 @@
  {
   "id": 771,
   "cat": "ガイドライン・総説",
-  "isNew": true,
+  "isNew": false,
   "titleJa": "気管支拡張症を伴う先天性免疫異常症における呼吸リハビリテーション：近親婚率の高い地域への含意を含む叙述的総説",
   "titleEn": "Pulmonary Rehabilitation in Inborn Errors of Immunity with Bronchiectasis: A Narrative Review with Implications for High-Consanguinity Settings.",
   "journal": "Journal of Clinical Medicine",
@@ -127,7 +162,7 @@
  {
   "id": 770,
   "cat": "精密医療・エンドタイプ",
-  "isNew": true,
+  "isNew": false,
   "titleJa": "好酸球増多を超えて：気管支拡張症における好酸球二相性表現型モデル",
   "titleEn": "Beyond Eosinophilia: A Dual Eosinophil Phenotype Model in Bronchiectasis.",
   "journal": "Medicina",
