@@ -536,9 +536,9 @@
     <div class="dashboard-header">
       <div class="dashboard-title">
         🔥 本日のハイライト
-        <span class="dashboard-badge">NEW 2件</span>
+        <span class="dashboard-badge">NEW 3件</span>
       </div>
-      <div class="dashboard-date">最終更新：2026-10-29 05:04 自動生成</div>
+      <div class="dashboard-date">最終更新：2026-10-30 05:04 自動生成</div>
     </div>
     <div class="dashboard-grid" id="dashboardGrid"></div>
   </div>
@@ -706,6 +706,13 @@
       <div class="sidebar-card">
         <div class="sidebar-header orange">📅 デイリーレポート履歴</div>
         <div class="sidebar-body">
+          <div class="report-item">
+            <div>
+              <div class="report-date">2026年10月30日（05:04）</div>
+              <div class="report-count">新規論文3件・臨床試験1件。E-utilities（curl・--retry 3）で11クエリを一括実行（Q1〜10は掲載日基準・Q11は登録日基準、2026/09/30〜2026/10/30、全クエリでcount=returned一致。PubMed MCPは未使用：両経路の結果同一が検証済みのため一括処理に適したcurlを使用）。ユニークPMID 134件中、既読除外後の新規候補3件を審査し3件すべて採用。ClinicalTrials.gov（募集中・募集前116試験）で新規1試験（スペイン小児の口腔咽頭吸引による検体採取RCT）。JRCT（全247件中BE関連21試験）・CTIS 23試験・J-STAGE 13件・CiNii 120件は新規なし。Cochrane（Query 10）は該当0件。臨床試験ウォッチ・承認・薬価ウォッチは変化なし。 主な新規：①アジスロマイシン曝露とNTM新規分離に関連なし（デンマーク全国症例対照）〈Chest〉②PCD研究の国際協力の歩み〈Pediatric Pulmonology〉③成人気管支拡張症のテレヘルスSR〈Chronic Respiratory Disease〉。</div>
+            </div>
+            <span class="report-link" onclick="showSection('reports',document.querySelectorAll('nav a')[6])">▶ 開く</span>
+          </div>
           <div class="report-item">
             <div>
               <div class="report-date">2026年10月29日（05:04）</div>
@@ -2074,6 +2081,34 @@
   <div class="reports-page-header">
     <h2>📝 デイリーレポート アーカイブ</h2>
     <p>毎朝5時に自動生成される文献サマリーの履歴。既読除外機能により、常に新規情報のみを収録しています。</p>
+  </div>
+
+  <!-- Report 2026-10-30 05:04 -->
+  <div class="report-card">
+    <div class="report-card-header">
+      <div>
+        <div class="report-card-date">📅 2026年10月30日（05:04 自動生成）</div>
+        <div style="font-size:12px;color:var(--text-muted);margin-top:3px;">E-utilities（curl・--retry 3）で11クエリを一括実行（Q1〜10は掲載日基準・Q11は登録日基準、2026/09/30〜2026/10/30、全クエリでcount=returned一致。PubMed MCPは未使用：両経路の結果同一が検証済みのため一括処理に適したcurlを使用）。ユニークPMID 134件中、既読除外後の新規候補3件を審査し3件すべて採用。ClinicalTrials.gov（募集中・募集前116試験）で新規1試験（スペイン小児の口腔咽頭吸引による検体採取RCT）。JRCT（全247件中BE関連21試験）・CTIS 23試験・J-STAGE 13件・CiNii 120件は新規なし。Cochrane（Query 10）は該当0件。臨床試験ウォッチ・承認・薬価ウォッチは変化なし。</div>
+      </div>
+      <span class="report-card-count">新規 3件・臨床試験 1件</span>
+    </div>
+    <ul class="report-highlight-list">
+      <li>
+        <span class="report-num">1</span>
+        <span class="report-cat-inline" style="background:#dcfce7;color:#166534">マイクロバイオーム・感染</span>
+        <span>アジスロマイシン曝露とNTM新規分離（Chest・デンマーク全国ネスティッド症例対照、BE 173例/COPD 365例）：事前規定の曝露はNTM分離と関連せず（BE OR 1.31、95%CI 0.79–2.18）。広い定義での関連は指標日直前に集中し、検査機会の増加を反映と解釈。</span>
+      </li>
+      <li>
+        <span class="report-num">2</span>
+        <span class="report-cat-inline" style="background:#d1fae5;color:#065f46">ガイドライン・総説</span>
+        <span>PCDにおける国際協力（Pediatric Pulmonology・ミュンスター大学）：欧州・北米の取り組みが国際レジストリ、初の多国間RCT、ERS/ATS合同診断ガイドラインへ統合された経緯を総説。</span>
+      </li>
+      <li>
+        <span class="report-num">3</span>
+        <span class="report-cat-inline" style="background:#dbeafe;color:#1e40af">治療・薬剤</span>
+        <span>成人気管支拡張症のテレヘルス（Chronic Respiratory Disease・モナシュ大学SR、9研究156例）：遠隔呼吸リハビリ・気道クリアランスは安全・実施可能でHRQOLを改善（SGRQ −5.8）。</span>
+      </li>
+    </ul>
   </div>
 
   <!-- Report 2026-10-29 05:04 -->
@@ -7663,6 +7698,8 @@ const TRIAL_GROUPS = [
         desc: '成人の非CF気管支拡張症を対象に、標準治療へのアジスロマイシン250 mg連日12か月の上乗せが「12か月間に1回以上の増悪」を減らすかを検証する二重盲検プラセボ対照RCT（500例・1:1割付・ITT解析）。', url: 'https://clinicaltrials.gov/study/NCT07608328' },
       { name: '慢性肺疾患に対する遠隔呼吸リハビリテーション RCT', drug: '—（遠隔呼吸リハビリ・専用アプリ＋遠隔モニタリング）', sponsor: 'Tel-Aviv Sourasky Medical Center（イスラエル）', phase: 'N/A', status: 'RECRUITING', nct: 'NCT07666841', color: '#64748b',
         desc: 'COPD・気管支拡張症・ILD・PAH等の慢性肺疾患患者（90例、イスラエル2施設）を遠隔呼吸リハビリと施設型リハビリ紹介に無作為化し、リハビリ開始・継続率（主要評価項目）を比較する。', url: 'https://clinicaltrials.gov/study/NCT07666841' },
+      { name: '小児慢性呼吸器疾患の口腔咽頭吸引による検体採取と呼吸理学療法 RCT', drug: '—（口腔咽頭吸引・誘発喀痰・咽頭スワブ＋呼吸理学療法）', sponsor: 'Corporacion Parc Tauli（スペイン）', phase: 'N/A', status: 'RECRUITING', nct: 'NCT07903792', color: '#64748b',
+        desc: 'CF・非CF気管支拡張症の5〜18歳（196例）で、口腔咽頭吸引の微生物検出能を誘発喀痰・咽頭スワブと比較し、検体採取前の呼吸理学療法の有無を無作為化して培養結果への影響を評価する。', url: 'https://clinicaltrials.gov/study/NCT07903792' },
     ]
   },
 
