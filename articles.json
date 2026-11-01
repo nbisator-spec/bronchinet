@@ -2,7 +2,7 @@
  {
   "id": 786,
   "cat": "増悪・病態",
-  "isNew": true,
+  "isNew": false,
   "titleJa": "米国における気管支拡張症の人口ベース有病率",
   "titleEn": "Population-based Prevalence of Bronchiectasis in the United States.",
   "journal": "Chest",
@@ -21,7 +21,7 @@
  {
   "id": 785,
   "cat": "増悪・病態",
-  "isNew": true,
+  "isNew": false,
   "titleJa": "ヒト気道細胞におけるFOXJ1の転写標的と、FOXJ1関連原発性線毛運動不全症における多線毛形成の障害",
   "titleEn": "FOXJ1 transcriptional targets in human airway cells and impaired multiciliogenesis in FOXJ1-associated primary ciliary dyskinesia.",
   "journal": "American Journal of Respiratory Cell and Molecular Biology",
