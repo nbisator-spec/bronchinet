@@ -1,5 +1,23 @@
 [
  {
+  "id": 799,
+  "cat": "日本発",
+  "isNew": true,
+  "titleJa": "デュピルマブ治療中のアレルギー性気管支肺アスペルギルス症に合併した二次性 Pasteurella multocida 感染：症例報告",
+  "titleEn": "Secondary Pasteurella multocida Infection Complicating Allergic Bronchopulmonary Aspergillosis During Dupilumab Therapy: A Case Report.",
+  "journal": "Respirology Case Reports",
+  "sjr": "Q3",
+  "date": "2026-11-05",
+  "year": 2026,
+  "ev": "症例報告",
+  "authors": "Suzuki K, Kai Y, Uno K ほか",
+  "aui": "Suzuki Kai Uno Kajita Nagayoshi Osa Harunari Iwasa Fujioka Ota Kataoka Furutaka Furuyama Miyataka Ibaraki Tanimura Yamamoto Muro",
+  "summary": "南奈良総合医療センター・奈良県立医科大学（呼吸器内科）から、喘息・好酸球性副鼻腔炎を伴うABPAの54歳女性で、Dupilumab導入により病勢と肺機能が改善した14か月後、右中葉の気管支拡張病変に新たな陰影が出現した症例を報告した。ABPA再燃が疑われたが気管支鏡検体から Pasteurella multocida（長期の猫曝露あり）が分離され、抗菌薬で改善し、Dupilumabを継続したまま経口ステロイドも中止できた。",
+  "jpView": "生物学的製剤で管理中のABPAで気管支拡張病変に新規陰影が出た際、再燃と二次感染を気管支鏡で鑑別する重要性を示す国内症例。ペット曝露歴の聴取が起炎菌推定の手がかりとなる。",
+  "pmid": "42992349",
+  "url": "https://pubmed.ncbi.nlm.nih.gov/42992349/"
+ },
+ {
   "id": 797,
   "cat": "増悪・病態",
   "isNew": false,
