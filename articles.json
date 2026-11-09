@@ -2,7 +2,7 @@
  {
   "id": 800,
   "cat": "増悪・病態",
-  "isNew": true,
+  "isNew": false,
   "titleJa": "気管支拡張症における全身性炎症：EMBARC-BRIDGE研究のデータ",
   "titleEn": "Systemic Inflammation in Bronchiectasis: Data from the EMBARC-BRIDGE Study.",
   "journal": "American Journal of Respiratory and Critical Care Medicine",
@@ -21,7 +21,7 @@
  {
   "id": 801,
   "cat": "マイクロバイオーム・感染",
-  "isNew": true,
+  "isNew": false,
   "titleJa": "肺MAC症で菌陰性化後も画像が進行し、併存する肺腺癌が判明した一例",
   "titleEn": "Radiographic progression despite microbiologic clearance in pulmonary Mycobacterium avium complex disease revealing concurrent lung adenocarcinomaa.",
   "journal": "IDCases",
