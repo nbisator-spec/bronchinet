@@ -538,7 +538,7 @@
         🔥 本日のハイライト
         <span class="dashboard-badge">NEW 2件</span>
       </div>
-      <div class="dashboard-date">最終更新：2026-11-11 05:04 自動生成</div>
+      <div class="dashboard-date">最終更新：2026-11-12 05:04 自動生成</div>
     </div>
     <div class="dashboard-grid" id="dashboardGrid"></div>
   </div>
@@ -706,6 +706,13 @@
       <div class="sidebar-card">
         <div class="sidebar-header orange">📅 デイリーレポート履歴</div>
         <div class="sidebar-body">
+          <div class="report-item">
+            <div>
+              <div class="report-date">2026年11月12日（05:04）</div>
+              <div class="report-count">新規論文2件・臨床試験1件。daily_scan.py（PubMed E-utilities・curl --retry 3）で11クエリを実行（Q1〜10は掲載日基準・Q11は登録日基準、2026/10/13〜2026/11/12、全クエリで総数と取得件数が一致）。ユニークPMID 112件中、既読除外後の新規候補4件を審査し2件採用（非採用0件・保留2件）。 保留2件：Ann Am Thorac Soc「The Changing Landscape of Bronchiectasis」（抄録なし・出版社ページ閲覧不可、保留1日目）、BMJ Open Respir Res 食道閉鎖症成人の肺異常（抄録なし・DOI未解決、保留2日目）。非採用なし。臨床試験ウォッチ：状態変化なし・追跡薬剤の新規登録なし。承認・薬価ウォッチ：新規なし（EMAは取得失敗）。EU試験グループにATMOSのCTIS登録カードを追加。</div>
+            </div>
+            <span class="report-link" onclick="showSection('reports',document.querySelectorAll('nav a')[6])">▶ 開く</span>
+          </div>
           <div class="report-item">
             <div>
               <div class="report-date">2026年11月11日（05:04）</div>
@@ -2165,6 +2172,31 @@
   <div class="reports-page-header">
     <h2>📝 デイリーレポート アーカイブ</h2>
     <p>毎朝5時に自動生成される文献サマリーの履歴。既読除外機能により、常に新規情報のみを収録しています。</p>
+  </div>
+
+  <!-- Report 2026-11-12 05:04 -->
+  <div class="report-card">
+    <div class="report-card-header">
+      <div>
+        <div class="report-card-date">📅 2026年11月12日（05:04 自動生成）</div>
+        <div style="font-size:12px;color:var(--text-muted);margin-top:3px;">daily_scan.py（PubMed E-utilities・curl --retry 3）で11クエリを実行（Q1〜10は掲載日基準・Q11は登録日基準、2026/10/13〜2026/11/12、全クエリで総数と取得件数が一致）。ユニークPMID 112件中、既読除外後の新規候補4件を審査し2件採用（非採用0件・保留2件）。 保留2件：Ann Am Thorac Soc「The Changing Landscape of Bronchiectasis」（抄録なし・出版社ページ閲覧不可、保留1日目）、BMJ Open Respir Res 食道閉鎖症成人の肺異常（抄録なし・DOI未解決、保留2日目）。非採用なし。臨床試験ウォッチ：状態変化なし・追跡薬剤の新規登録なし。承認・薬価ウォッチ：新規なし（EMAは取得失敗）。EU試験グループにATMOSのCTIS登録カードを追加。</div>
+      </div>
+      <span class="report-card-count">新規 2件・臨床試験 1件</span>
+    </div>
+    <ul class="report-highlight-list">
+      <li>
+        <span class="report-num">1</span>
+        <span>UCBのgalvokimig（UCB9741）第II相ATMOSがEU（CTIS 2026-525524-18-00、Portugal・Italy）にも登録：CT.gov（NCT07720375）・日本（jRCT2031260579）に続く3地域目の登録確認。</span>
+      </li>
+      <li>
+        <span class="report-num">2</span>
+        <span>FOXA1ホモ接合性バリアントによる新規の症候性神経・肺疾患候補（舞踏アテトーゼ＋気管支拡張症＋肛門直腸/体軸骨格異常、トルコの血族婚家系3例、Movement Disorders）。</span>
+      </li>
+      <li>
+        <span class="report-num">3</span>
+        <span>緑膿菌関連の非CF気管支拡張症でHSD17B8低下とステロイド代謝の乱れが炎症増悪に関与する可能性（患者検体＋メンデルランダム化＋ラットモデル、AMB Express）。</span>
+      </li>
+    </ul>
   </div>
 
   <!-- Report 2026-11-11 05:04 -->
@@ -8100,6 +8132,8 @@ const TRIAL_GROUPS = [
   { name: 'EU試験（CTIS登録）', icon: '🇪🇺', color: '#0f3872',
     sub: 'EU Clinical Trials Information System（欧州公式登録）',
     trials: [
+      { name: "ATMOS EU（Galvokimig / UCB9741 Phase II）", drug: "Galvokimig / UCB9741（UCB Biopharma）", sponsor: "UCB Biopharma", phase: "Phase II", status: "EU登録", nct: "2026-525524-18-00", color: "#92400e",
+        desc: "ATMOS試験（NCT07720375）のEU登録。非CF気管支拡張症の成人を対象に、galvokimigを24〜52週間投与し有効性と安全性をプラセボと比較する第II相多施設無作為化二重盲検並行群間試験。実施国：Portugal（2サイト）・Italy（2サイト）。スポンサー：UCB Biopharma。日本登録：jRCT2031260579。（CTIS 2026-525524-18-00）", url: "https://euclinicaltrials.eu/ctis-public/view/2026-525524-18-00" },
       { name: "Brensocatib×Midazolam 薬物相互作用 Phase I（EU）", drug: "Brensocatib / INS1007（Insmed）", sponsor: "Insmed Inc.", phase: "Phase I", status: "EU登録", nct: "2026-526670-16-00", color: "#0f766e",
         desc: "DPP-1（カテプシンC）阻害薬Brensocatibとmidazolamの薬物相互作用を評価するヒト薬理（第I相）試験（INS1007-111）。対象疾患登録：非CF気管支拡張症。実施国：Netherlands（2サイト）。予定登録数：26例（18〜64歳）。承認決定：28/09/2026。スポンサー：Insmed Inc.。（CTIS 2026-526670-16-00）", url: "https://euclinicaltrials.eu/ctis-public/view/2026-526670-16-00" },
       { name: "SAR445399 Phase 2a（EU・Sanofi）", drug: "SAR445399（Sanofi）", sponsor: "Sanofi-Aventis Recherche & Developpement", phase: "Phase II", status: "EU登録", nct: "2025-523403-29-00", color: "#ea580c",
