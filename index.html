@@ -536,9 +536,9 @@
     <div class="dashboard-header">
       <div class="dashboard-title">
         🔥 本日のハイライト
-        <span class="dashboard-badge">NEW 0件</span>
+        <span class="dashboard-badge">NEW 2件</span>
       </div>
-      <div class="dashboard-date">最終更新：2026-11-17 05:04 自動生成</div>
+      <div class="dashboard-date">最終更新：2026-11-18 05:04 自動生成</div>
     </div>
     <div class="dashboard-grid" id="dashboardGrid"></div>
   </div>
@@ -706,6 +706,13 @@
       <div class="sidebar-card">
         <div class="sidebar-header orange">📅 デイリーレポート履歴</div>
         <div class="sidebar-body">
+          <div class="report-item">
+            <div>
+              <div class="report-date">2026年11月18日（05:04）</div>
+              <div class="report-count">新規論文2件・臨床試験1件。daily_scan.py（PubMed E-utilities・curl --retry 3）で11クエリを実行（Q1〜10は掲載日基準・Q11は登録日基準、2026/10/19〜2026/11/18、全クエリで総数と取得件数が一致）。ユニークPMID 108件中、既読除外後の新規候補3件を審査し2件採用（非採用0件・保留1件）。 保留：PMID 43009220（Ann Am Thorac Soc「The Changing Landscape of Bronchiectasis」、抄録未掲載・出版社ページ403、保留6日目）。臨床試験ウォッチ：GSK3862995B＋GSK5784283併用のCOPD試験 NCT07915791 が募集前→募集中に変化。新規試験 NCT07940829（RSS0343 腎機能障害PK試験）をカード追加。承認・薬価ウォッチは新規なし。</div>
+            </div>
+            <span class="report-link" onclick="showSection('reports',document.querySelectorAll('nav a')[6])">▶ 開く</span>
+          </div>
           <div class="report-item">
             <div>
               <div class="report-date">2026年11月17日（05:04）</div>
@@ -2207,6 +2214,31 @@
   <div class="reports-page-header">
     <h2>📝 デイリーレポート アーカイブ</h2>
     <p>毎朝5時に自動生成される文献サマリーの履歴。既読除外機能により、常に新規情報のみを収録しています。</p>
+  </div>
+
+  <!-- Report 2026-11-18 05:04 -->
+  <div class="report-card">
+    <div class="report-card-header">
+      <div>
+        <div class="report-card-date">📅 2026年11月18日（05:04 自動生成）</div>
+        <div style="font-size:12px;color:var(--text-muted);margin-top:3px;">daily_scan.py（PubMed E-utilities・curl --retry 3）で11クエリを実行（Q1〜10は掲載日基準・Q11は登録日基準、2026/10/19〜2026/11/18、全クエリで総数と取得件数が一致）。ユニークPMID 108件中、既読除外後の新規候補3件を審査し2件採用（非採用0件・保留1件）。 保留：PMID 43009220（Ann Am Thorac Soc「The Changing Landscape of Bronchiectasis」、抄録未掲載・出版社ページ403、保留6日目）。臨床試験ウォッチ：GSK3862995B＋GSK5784283併用のCOPD試験 NCT07915791 が募集前→募集中に変化。新規試験 NCT07940829（RSS0343 腎機能障害PK試験）をカード追加。承認・薬価ウォッチは新規なし。</div>
+      </div>
+      <span class="report-card-count">新規 2件・臨床試験 1件</span>
+    </div>
+    <ul class="report-highlight-list">
+      <li>
+        <span class="report-num">1</span>
+        <span>TORNASOL事後解析（ERJ Open Res）：喀痰菌量が高い緑膿菌陽性BEでは吸入トブラマイシンの症状改善がMCIDを超えた</span>
+      </li>
+      <li>
+        <span class="report-num">2</span>
+        <span>小児BEの気管支鏡・BAL所見（Pediatr Pulmonol）：嚢状・嚢胞状型で膿性分泌物が多く、BALの75.6%で有意な菌発育</span>
+      </li>
+      <li>
+        <span class="report-num">3</span>
+        <span>GSK3862995B＋GSK5784283併用のCOPD試験（NCT07915791）が募集中に移行。ReistoneのRSS0343は腎機能障害PK試験を新規登録し、対象疾患にCRSsNP・COPDを併記</span>
+      </li>
+    </ul>
   </div>
 
   <!-- Report 2026-11-17 05:04 -->
@@ -8255,6 +8287,8 @@ const TRIAL_GROUPS = [
         desc: 'RSS0343の健常人での反復経口投与による安全性・忍容性・薬物動態・QT/QTc評価の第I相（48例）。', url: 'https://clinicaltrials.gov/study/NCT07289464' },
       { name: 'RSS0343 第I相（薬物相互作用）', drug: 'RSS0343（Reistone）', sponsor: 'Reistone Biopharma', phase: 'Phase I', status: 'NOT_YET_RECRUITING', nct: 'NCT07696091', color: '#3b82f6',
         desc: 'リファンピシン・クラリスロマイシンがRSS0343の薬物動態に与える影響を検討する第I相・単施設試験（40例）。', url: 'https://clinicaltrials.gov/study/NCT07696091' },
+      { name: 'RSS0343 第I相（腎機能障害）', drug: 'RSS0343（Reistone）', sponsor: 'Reistone Biopharma', phase: 'Phase I', status: 'NOT_YET_RECRUITING', nct: 'NCT07940829', color: '#3b82f6',
+        desc: '健常人と軽度・中等度腎機能障害者でRSS0343錠の単回投与時の薬物動態を比べる、非盲検の単施設第I相（中国・鄭州大学第一附属医院、予定24例、主要完了予定2027年2月）。CT.govの対象疾患に非CF気管支拡張症に加え、鼻茸を伴わない慢性副鼻腔炎とCOPDが登録されている。', url: 'https://clinicaltrials.gov/study/NCT07940829' },
       { name: 'REGEND001 自家基底層幹細胞移植', drug: 'REGEND001（自家気道基底層幹細胞）', sponsor: 'Ruijin Hospital（上海瑞金病院）', phase: 'Phase I', status: 'RECRUITING', nct: 'NCT06987214', color: '#0891b2',
         desc: '患者自身の気管支基底層幹細胞を採取・拡大して移植する再生医療REGEND001の、慢性構造性肺疾患（気管支拡張症）に対する安全性・有効性を評価する第I相・トランスレーショナル研究（10例）。', url: 'https://clinicaltrials.gov/study/NCT06987214' },
       { name: '麗肺清腸顆粒 第II相（中医薬）', drug: '麗肺清腸顆粒（中医薬）＋体位ドレナージ', sponsor: '広州医科大学 第一附属病院', phase: 'Phase II', status: 'NOT_YET_RECRUITING', nct: 'NCT07523165', color: '#b45309',
