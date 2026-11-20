@@ -1,8 +1,43 @@
 [
  {
+  "id": 828,
+  "cat": "マイクロバイオーム・感染",
+  "isNew": true,
+  "titleJa": "中国・北京胸科医院における非結核性抗酸菌の菌種別薬剤感受性サーベイランス（2021〜2025年の5年間）",
+  "titleEn": "Five-year species-resolved antimicrobial susceptibility surveillance of nontuberculous mycobacteria at Beijing Chest Hospital, China, 2021-2025.",
+  "journal": "European Journal of Clinical Microbiology & Infectious Diseases",
+  "sjr": "Q1",
+  "date": "2026-11-19",
+  "year": 2026,
+  "ev": "観察研究",
+  "authors": "Gong Z, Zhao J, Shi Y ほか（Wang G）",
+  "aui": "Gong Zhao Shi Su Yang Lin Miao Ma Wang",
+  "summary": "北京胸科医院（首都医科大学）で2021〜2025年に分離されたNTM 790株（患者ごとの初回単一菌株）を後ろ向きに解析し、M. intracellulareが51.8%で最多かつ増加傾向（42.4%→59.7%、年あたり調整OR 1.20）、M. abscessus complexは気管支拡張症および入院検体と関連した。M. intracellulareではモキシフロキサシンとST合剤のMIC分布が上方、アミカシンとトブラマイシンは下方へ移動し、菌種・薬剤別のMIC分布監視が従来のS/I/R判定を補完しうると結論した。",
+  "pmid": "43055889",
+  "url": "https://pubmed.ncbi.nlm.nih.gov/43055889/"
+ },
+ {
+  "id": 829,
+  "cat": "増悪・病態",
+  "isNew": true,
+  "titleJa": "ロスムンド・トムソン症候群のイラン人患者に生じた気管支拡張症：症例報告と文献レビュー",
+  "titleEn": "Bronchiectasis in an Iranian patient with Rothmund-Thomson syndrome: a case report and review of the literature.",
+  "journal": "Journal of Medical Case Reports",
+  "sjr": "Q3",
+  "if": "0.8",
+  "date": "2026-08-26",
+  "year": 2026,
+  "ev": "症例報告",
+  "authors": "Tabatabaii SA, Ramezani S, Kamfar S ほか（Farahbakhsh N）",
+  "aui": "Tabatabaii Ramezani Kamfar Farahbakhsh",
+  "summary": "テヘランのモフィド小児病院（シャヒード・ベヘシュティ医科大学）から、治療抵抗性の呼吸困難を呈した14歳女性で、多様皮膚萎縮症などの特徴と遺伝子検査からロスムンド・トムソン症候群（RTS）と診断し、画像で多発性気管支拡張を認めた症例を報告した。免疫学的検索を含む一般的な原因検索で他の病因は見つからず、RTSの臨床像として呼吸器合併症を考慮する重要性を示した。",
+  "pmid": "43058795",
+  "url": "https://pubmed.ncbi.nlm.nih.gov/43058795/"
+ },
+ {
   "id": 820,
   "cat": "日本発",
-  "isNew": true,
+  "isNew": false,
   "titleJa": "小児期発症X連鎖無ガンマグロブリン血症（新規BTKフレームシフト変異）の診断遅延後に生じた気管支拡張症と慢性気管支炎：症例報告",
   "titleEn": "Bronchiectasis and Chronic Bronchitis after a Delayed Diagnosis of Childhood-onset XLA with a Novel BTK Frameshift Variant: A Case Report.",
   "journal": "Internal Medicine (Tokyo)",
@@ -20,7 +55,7 @@
  {
   "id": 821,
   "cat": "増悪・病態",
-  "isNew": true,
+  "isNew": false,
   "titleJa": "気管支拡張症の急性増悪で入院した患者における血球由来の複合炎症指標の予後予測能：単施設後ろ向きコホート研究",
   "titleEn": "Prognostic value of blood-cell-derived composite inflammatory indices in hospitalized patients with acute exacerbation of bronchiectasis: a single-center retrospective cohort study.",
   "journal": "Frontiers in Medicine",
@@ -38,7 +73,7 @@
  {
   "id": 822,
   "cat": "増悪・病態",
-  "isNew": true,
+  "isNew": false,
   "titleJa": "日常診療における電気化学センサー搭載携帯型機器による鼻腔一酸化窒素測定の実用性",
   "titleEn": "Usability of Hand-Held Devices With an Electrochemical Sensor to Determine Nasal Nitric Oxide in Clinical Routine.",
   "journal": "Pediatric Pulmonology",
@@ -56,7 +91,7 @@
  {
   "id": 823,
   "cat": "マイクロバイオーム・感染",
-  "isNew": true,
+  "isNew": false,
   "titleJa": "肺癌患者におけるMycobacterium avium complex肺疾患の診断・治療上の課題：後ろ向き症例集積",
   "titleEn": "Diagnostic and Therapeutic Challenges of Mycobacterium avium Complex Pulmonary Disease in Patients with Lung Cancer: A Retrospective Case Series.",
   "journal": "Infection and Drug Resistance",
@@ -74,7 +109,7 @@
  {
   "id": 824,
   "cat": "増悪・病態",
-  "isNew": true,
+  "isNew": false,
   "titleJa": "2型糖尿病におけるSGLT2阻害薬と慢性下気道疾患リスクの関連：2つのターゲットトライアル・エミュレーションによる検討",
   "titleEn": "Association between sodium-glucose cotransporter 2 inhibitors and the risk of chronic lower respiratory disease in type 2 diabetes mellitus: findings from two target trial emulations.",
   "journal": "Respiratory Research",
@@ -92,7 +127,7 @@
  {
   "id": 825,
   "cat": "マイクロバイオーム・感染",
-  "isNew": true,
+  "isNew": false,
   "titleJa": "可視化機械学習による非結核性抗酸菌肺疾患と肺結核の鑑別：中国多施設前向きサーベイランスコホート研究",
   "titleEn": "Distinguishing nontuberculous mycobacterial pulmonary disease from pulmonary tuberculosis using visual machine learning: a Chinese multicenter prospective surveillance cohort study.",
   "journal": "BMC Pulmonary Medicine",
@@ -110,7 +145,7 @@
  {
   "id": 826,
   "cat": "増悪・病態",
-  "isNew": true,
+  "isNew": false,
   "titleJa": "結核後肺疾患患者における気流閉塞の臨床的特徴と関連因子",
   "titleEn": "Clinical characteristics and factors associated with airflow obstruction among patients with post-tuberculosis lung disease.",
   "journal": "BMC Infectious Diseases",
@@ -128,7 +163,7 @@
  {
   "id": 827,
   "cat": "ガイドライン・総説",
-  "isNew": true,
+  "isNew": false,
   "titleJa": "変わりゆく気管支拡張症の診療環境",
   "titleEn": "The Changing Landscape of Bronchiectasis.",
   "journal": "Annals of the American Thoracic Society",
