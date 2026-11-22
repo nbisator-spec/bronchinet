@@ -1,8 +1,25 @@
 [
  {
+  "id": 833,
+  "cat": "増悪・病態",
+  "isNew": true,
+  "titleJa": "分類不能型免疫不全症（CVID）表現型を呈する患者の臨床・免疫・遺伝学的特徴と追跡結果の評価",
+  "titleEn": "Evaluation of clinical, immunological, genetic characteristics and follow-up results of patients presenting with common variable immunodeficiency phenotype.",
+  "journal": "Asian Pacific Journal of Allergy and Immunology",
+  "sjr": "Q3",
+  "date": "2026-11-22",
+  "year": 2026,
+  "ev": "観察研究",
+  "authors": "Gül HBK, Haskoloğlu Ş, Bal SK ほか（Doğu F）",
+  "aui": "Gül Haskoloğlu Bal Islamoğlu Baskoin Demirbaş Erman Ceylaner Boztuğ Ikincioğullar Doğu",
+  "summary": "トルコの小児アレルギー免疫科で20年間に診断されたCVID 51例の後ろ向き解析で、副鼻腔・肺感染が96%と最多であり、気管支拡張症を有する患者ではクラススイッチ記憶B細胞の割合が有意に低かった（p=0.020）。遺伝子解析40例の35%に病的バリアント（TACI・ICOS・NFKB2の順）を認め、免疫グロブリン補充療法後に感染関連入院率は71.4%から9.8%に低下した。",
+  "pmid": "43068376",
+  "url": "https://pubmed.ncbi.nlm.nih.gov/43068376/"
+ },
+ {
   "id": 830,
   "cat": "治療・薬剤",
-  "isNew": true,
+  "isNew": false,
   "titleJa": "気管支拡張症患者における在宅気道クリアランス法プログラムの長期有効性：ランダム化比較試験",
   "titleEn": "Long-term efficacy of a home-based airway clearance techniques programme in people with bronchiectasis: A randomized controlled trial.",
   "journal": "Physiotherapy",
@@ -19,7 +36,7 @@
  {
   "id": 831,
   "cat": "増悪・病態",
-  "isNew": true,
+  "isNew": false,
   "titleJa": "気管支拡張症患者における骨粗鬆症と脆弱性骨折のリスク：大規模多施設集団解析",
   "titleEn": "Osteoporosis and fragility fracture risk in patients with bronchiectasis: a large multicentre population analysis.",
   "journal": "BMJ Open Respiratory Research",
@@ -37,7 +54,7 @@
  {
   "id": 832,
   "cat": "ガイドライン・総説",
-  "isNew": true,
+  "isNew": false,
   "titleJa": "運動線毛病：原発性線毛運動不全症（PCD）に焦点を当てて",
   "titleEn": "Motile ciliopathies: a focus on primary ciliary dyskinesia.",
   "journal": "Human Molecular Genetics",
