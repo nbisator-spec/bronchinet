@@ -536,9 +536,9 @@
     <div class="dashboard-header">
       <div class="dashboard-title">
         🔥 本日のハイライト
-        <span class="dashboard-badge">NEW 2件</span>
+        <span class="dashboard-badge">NEW 0件</span>
       </div>
-      <div class="dashboard-date">最終更新：2026-11-24 05:04 自動生成</div>
+      <div class="dashboard-date">最終更新：2026-11-25 05:04 自動生成</div>
     </div>
     <div class="dashboard-grid" id="dashboardGrid"></div>
   </div>
@@ -706,6 +706,13 @@
       <div class="sidebar-card">
         <div class="sidebar-header orange">📅 デイリーレポート履歴</div>
         <div class="sidebar-body">
+          <div class="report-item">
+            <div>
+              <div class="report-date">2026年11月25日（05:04）</div>
+              <div class="report-count">新規論文0件・臨床試験0件。daily_scan.py（PubMed E-utilities・curl --retry 3）で11クエリを実行（Q1〜10は掲載日基準・Q11は登録日基準、2026/10/26〜2026/11/25、全クエリで総数と取得件数が一致）。ユニークPMID 120件中、既読除外後の新規候補0件を審査し0件採用（非採用0件・保留0件）。取得失敗：PMID 32491697: メタデータを取得できず（既読に入れていないので次回再浮上する）。 本日はPubMed 11クエリ（ユニーク120件）・J-STAGE・CiNii・CT.gov・CTIS・JRCTとも新規候補0件。PMID 32491697 はスキャン時にメタデータ取得に失敗したが、手動照会でStatPearls書籍章（間質性肺線維症、気管支拡張症と無関係）と確認（候補外のため既読登録は不可・次回も再浮上し得る）。臨床試験ウォッチ：Simeox 200 気道クリアランス米国市販後試験（NCT07443124）が募集前→募集中に変更、主要完了予定は2027-01へ延期（ポータル表示を更新済み）。承認・薬価ウォッチ（厚労省・PMDA・中医協・FDA・EMA・MHRA・NMPA）は新規なし。</div>
+            </div>
+            <span class="report-link" onclick="showSection('reports',document.querySelectorAll('nav a')[6])">▶ 開く</span>
+          </div>
           <div class="report-item">
             <div>
               <div class="report-date">2026年11月24日（05:04）</div>
@@ -2256,6 +2263,27 @@
   <div class="reports-page-header">
     <h2>📝 デイリーレポート アーカイブ</h2>
     <p>毎朝5時に自動生成される文献サマリーの履歴。既読除外機能により、常に新規情報のみを収録しています。</p>
+  </div>
+
+  <!-- Report 2026-11-25 05:04 -->
+  <div class="report-card">
+    <div class="report-card-header">
+      <div>
+        <div class="report-card-date">📅 2026年11月25日（05:04 自動生成）</div>
+        <div style="font-size:12px;color:var(--text-muted);margin-top:3px;">daily_scan.py（PubMed E-utilities・curl --retry 3）で11クエリを実行（Q1〜10は掲載日基準・Q11は登録日基準、2026/10/26〜2026/11/25、全クエリで総数と取得件数が一致）。ユニークPMID 120件中、既読除外後の新規候補0件を審査し0件採用（非採用0件・保留0件）。取得失敗：PMID 32491697: メタデータを取得できず（既読に入れていないので次回再浮上する）。 本日はPubMed 11クエリ（ユニーク120件）・J-STAGE・CiNii・CT.gov・CTIS・JRCTとも新規候補0件。PMID 32491697 はスキャン時にメタデータ取得に失敗したが、手動照会でStatPearls書籍章（間質性肺線維症、気管支拡張症と無関係）と確認（候補外のため既読登録は不可・次回も再浮上し得る）。臨床試験ウォッチ：Simeox 200 気道クリアランス米国市販後試験（NCT07443124）が募集前→募集中に変更、主要完了予定は2027-01へ延期（ポータル表示を更新済み）。承認・薬価ウォッチ（厚労省・PMDA・中医協・FDA・EMA・MHRA・NMPA）は新規なし。</div>
+      </div>
+      <span class="report-card-count">新規 0件・臨床試験 0件</span>
+    </div>
+    <ul class="report-highlight-list">
+      <li>
+        <span class="report-num">1</span>
+        <span>新規文献なし（全ソースで新規候補0件）</span>
+      </li>
+      <li>
+        <span class="report-num">2</span>
+        <span>NCT07443124（Simeox 200・米国市販後）が募集中に移行、主要完了予定2027-01</span>
+      </li>
+    </ul>
   </div>
 
   <!-- Report 2026-11-24 05:04 -->
@@ -8418,7 +8446,7 @@ const TRIAL_GROUPS = [
     trials: [
       { name: 'Rev-56 吸入（Phase 1a/1b）', drug: 'Rev-56 吸入（Revagenix）', sponsor: 'Revagenix, Inc.', phase: 'Phase 1a/1b', status: 'ACTIVE_NOT_RECRUITING', nct: 'NCT07709494', color: '#1d4ed8',
         desc: '新規吸入抗菌薬Rev-56の第1a/1b相。健常人での単回漸増（Part A）に続き、慢性緑膿菌感染を伴う非CF気管支拡張症患者で安全性・忍容性・微生物学的応答・薬物動態を評価。64例・主要完了2027年7月（CT.gov上で2026-10-15に募集終了・追跡中へ移行を確認）。', url: 'https://clinicaltrials.gov/study/NCT07709494' },
-      { name: 'Simeox 200 気道クリアランス（米国市販後）', drug: 'Simeox 200 機器（間欠的肺内排出）', sponsor: 'Inogen Inc.', phase: '機器・観察', status: 'NOT_YET_RECRUITING', nct: 'NCT07443124', color: '#0891b2',
+      { name: 'Simeox 200 気道クリアランス（米国市販後）', drug: 'Simeox 200 機器（間欠的肺内排出）', sponsor: 'Inogen Inc.', phase: '機器・観察', status: 'RECRUITING', nct: 'NCT07443124', color: '#0891b2',
         desc: '気道クリアランス機器Simeox 200の市販後単群観察研究。18〜85歳の気管支拡張症・慢性粘液過分泌患者で短期的な排痰改善（湿性喀痰重量）のベースラインを確立。35例。', url: 'https://clinicaltrials.gov/study/NCT07443124' },
       { name: 'LibAirty 気道クリアランス 実臨床評価（RELACS）', drug: 'LibAirty 気道クリアランスシステム', sponsor: 'Synchrony-Medical, Ltd', phase: '機器・観察', status: 'RECRUITING', nct: 'NCT07135284', color: '#0891b2',
         desc: '在宅使用するLibAirtyシステムの実臨床評価（RELACS）。成人気管支拡張症200例で、症状改善・肺増悪の頻度・医療資源利用への効果を評価。主要完了2027年2月。', url: 'https://clinicaltrials.gov/study/NCT07135284' },

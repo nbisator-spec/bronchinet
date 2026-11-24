@@ -2,7 +2,7 @@
  {
   "id": 834,
   "cat": "マイクロバイオーム・感染",
-  "isNew": true,
+  "isNew": false,
   "titleJa": "Mycobacterium avium complex肺疾患（MAC-PD）の認識と治療",
   "titleEn": "Recognizing and treating Mycobacterium avium complex pulmonary disease (MAC-PD).",
   "journal": "JAAPA",
@@ -18,7 +18,7 @@
  {
   "id": 835,
   "cat": "増悪・病態",
-  "isNew": true,
+  "isNew": false,
   "titleJa": "医療行政データベースを用いた小児原発性線毛運動不全症（PCD）の同定",
   "titleEn": "Identifying Pediatric Primary Ciliary Dyskinesia in Health Administrative Databases.",
   "journal": "Canadian Respiratory Journal",
