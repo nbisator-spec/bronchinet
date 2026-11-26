@@ -486,6 +486,9 @@
   .conf-abs-meta { font-size:11px; color:var(--text-muted); margin-top:3px; }
   .conf-chip { display:inline-block; font-size:10px; font-weight:700; padding:1px 6px; border-radius:4px; margin-left:4px; }
   .conf-empty { font-size:12px; color:var(--text-muted); padding:8px 4px; }
+  .conf-filter { display:flex; gap:8px; flex-wrap:wrap; margin:4px 0 14px; }
+  .conf-filter button { border:1px solid #fdba74; background:var(--card-bg); color:#9a3412; border-radius:999px; padding:6px 14px; font-size:13px; cursor:pointer; }
+  .conf-filter button.on { background:#c2410c; color:#fff; border-color:#c2410c; }
   @media (max-width:640px) { .conf-summary { grid-template-columns:1fr; } .conf-head { flex-direction:column; } }
   /* ===== /CONFERENCES ===== */
 </style>
@@ -7768,15 +7771,16 @@
 <div class="guide-page">
   <div class="guide-page-header" style="background:linear-gradient(135deg,#7c2d12,#c2410c);">
     <h2>🎤 関連学会</h2>
-    <p>気管支拡張症・NTMに関係する主要学会の会期・会場と、本ポータルに収録した学会抄録を学会ごとにまとめます。会期は各学会の公式サイトで確認したもののみ「✅ 確認済」とし、確認日を併記します（公式サイトで確認できていないものは「⚠️ 要確認」）。</p>
+    <p>気管支拡張症・NTMに関係する主要学会と、国内の関連学会（呼吸器・アレルギー・感染症・免疫など。地方会・支部会を含む）の会期・会場と、本ポータルに収録した学会抄録を学会ごとにまとめます。会期は各学会の公式サイトで確認したもののみ「✅ 確認済」とし、確認日を併記します（公式サイトで確認できていないものは「⚠️ 要確認」）。</p>
   </div>
 
   <div class="conf-summary" id="confSummary"></div>
 
   <div class="guide-section-title">📅 今後の学会</div>
+  <div class="conf-filter" id="confFilter"></div>
   <div id="confUpcoming"></div>
 
-  <div class="trends-note">※ 学会抄録は Europe PMC・OpenAlex から自動で集まったもの（ERS＝ERJ増刊、ATS＝AJRCCM増刊、BTS＝Thorax増刊）を、DOI で学会に振り分けて表示しています。国内学会（日本呼吸器学会・日本結核・非結核性抗酸菌症学会）の抄録集は会員限定のため自動収集の対象外です。会期・会場は変更されることがあるため、参加前に必ず公式サイトでご確認ください。</div>
+  <div class="trends-note">※ 学会抄録は Europe PMC・OpenAlex から自動で集まったもの（ERS＝ERJ増刊、ATS＝AJRCCM増刊、BTS＝Thorax増刊）を、DOI で学会に振り分けて表示しています。国内学会の抄録集は会員限定のため自動収集の対象外です。会期が終わった学会は、翌日から表示されなくなります。会期・会場は変更されることがあるため、参加前に必ず公式サイトでご確認ください。</div>
 </div>
 </div>
 <!-- /SECTION: 学会 -->
@@ -9121,6 +9125,55 @@ const CONFERENCES = [
     start:null, end:null, venue:"未発表",
     url:"https://apb-conference.org/",
     verified:null, verifiedNote:"2026-11-27時点で次回の発表を確認できず（第1回は2026年11月・東京）" },
+  // --- 国内の学会（関連学会一覧〔2026-11-27受領〕の国内学会・地方会・支部会。会期は2026-11-27に公式サイトで確認） ---
+  { id:"jrs-ho133", name:"第133回 日本呼吸器学会北海道地方会", org:"日本呼吸器学会 北海道支部", region:"日本", start:"2027-02-21", end:null, venue:"札幌市教育文化会館", url:"https://www.jrs.or.jp/meeting/hokkaido/local/", verified:"2026-11-27", verifiedNote:"日本呼吸器学会公式サイト", memo:"第6回 呼吸器関連5学会合同北海道地方会（日本結核・非結核性抗酸菌症学会北海道支部などと合同）" },
+  { id:"jrs-th124", name:"第124回 日本呼吸器学会東北地方会", org:"日本呼吸器学会 東北支部", region:"日本", start:"2027-03-06", end:null, venue:"いわて県民情報交流センター（盛岡市）", url:"https://www.jrs.or.jp/meeting/tohoku/local/", verified:"2026-11-27", verifiedNote:"日本呼吸器学会公式サイト", memo:"第154回 日本結核・非結核性抗酸菌症学会東北支部学会などと合同" },
+  { id:"jrs-kt273", name:"第273回 日本呼吸器学会関東地方会", org:"日本呼吸器学会 関東支部", region:"日本", start:"2027-02-13", end:null, venue:"秋葉原コンベンションホール（東京）", url:"https://www.jrs.or.jp/meeting/kanto/local/", verified:"2026-11-27", verifiedNote:"日本呼吸器学会公式サイト", deadlines:[{label:"演題締切（結核学会関東支部）", date:"2026-12-02"}], memo:"第191回 日本結核・非結核性抗酸菌症学会関東支部学会と合同" },
+  { id:"jrs-tk131", name:"第131回 日本呼吸器学会東海地方会", org:"日本呼吸器学会 東海支部", region:"日本", start:"2027-05-29", end:"2027-05-30", venue:"名古屋市立大学病院", url:"https://www.jrs.or.jp/meeting/tokai/local/", verified:"2026-11-27", verifiedNote:"日本呼吸器学会公式サイト", memo:"第149回 日本結核・非結核性抗酸菌症学会東海支部学会などと合同" },
+  { id:"jrs-kk109", name:"第109回 日本呼吸器学会近畿地方会", org:"日本呼吸器学会 近畿支部", region:"日本", start:"2027-07-10", end:null, venue:"大阪国際交流センター", url:"https://www.jrs.or.jp/meeting/kinki/local/", verified:"2026-11-27", verifiedNote:"日本呼吸器学会公式サイト", memo:"第135回 日本結核・非結核性抗酸菌症学会近畿地方会を併記" },
+  { id:"jrs-cs75", name:"第75回 日本呼吸器学会中国・四国地方会", org:"日本呼吸器学会 中国・四国支部", region:"日本", start:"2026-12-12", end:"2026-12-13", venue:"岡山コンベンションセンター（岡山市）", url:"https://med-gakkai.jp/jrs-jsre-jst2026/gaiyo/", verified:"2026-11-27", verifiedNote:"大会公式サイト・日本呼吸器学会公式サイト", memo:"第35回 日本呼吸器内視鏡学会中国四国支部会・第77回 日本結核・非結核性抗酸菌症学会中国四国支部会と合同" },
+  { id:"jrs-cs76", name:"第76回 日本呼吸器学会中国・四国地方会", org:"日本呼吸器学会 中国・四国支部", region:"日本", start:"2027-07-10", end:"2027-07-11", venue:"岡山コンベンションセンター（岡山市）", url:"https://www.jrs.or.jp/meeting/chugokushikoku/local/", verified:"2026-11-27", verifiedNote:"日本呼吸器学会公式サイト" },
+  { id:"jrs-cs77", name:"第77回 日本呼吸器学会中国・四国地方会", org:"日本呼吸器学会 中国・四国支部", region:"日本", start:"2027-12-04", end:"2027-12-05", venue:"広島国際会議場（広島市）", url:"https://www.jrs.or.jp/meeting/chugokushikoku/local/", verified:"2026-11-27", verifiedNote:"日本呼吸器学会公式サイト" },
+  { id:"jrs-ks98", name:"第98回 日本呼吸器学会九州支部 春季学術講演会", org:"日本呼吸器学会 九州支部", region:"日本", start:"2027-03-13", end:null, venue:"沖縄県市町村自治会館", url:"https://www.jrs.or.jp/meeting/kyushu/local/", verified:"2026-11-27", verifiedNote:"日本呼吸器学会公式サイト", memo:"日本結核・非結核性抗酸菌症学会と合同" },
+  { id:"jsa76", name:"第76回 日本アレルギー学会学術大会", org:"日本アレルギー学会", region:"日本", start:"2027-10-15", end:"2027-10-17", venue:"東京（会場名は未記載）", url:"https://www.jsaweb.jp/modules/meeting/index.php?content_id=2", verified:"2026-11-27", verifiedNote:"日本アレルギー学会公式サイト" },
+  { id:"jsa-kt16", name:"第16回 日本アレルギー学会関東地方会", org:"日本アレルギー学会", region:"日本", start:"2027-01-23", end:null, venue:"秋葉原コンベンションホール＋WEB（ライブ配信）", url:"https://www.jsaweb.jp/modules/news_topics/index.php?content_id=1130", verified:"2026-11-27", verifiedNote:"日本アレルギー学会公式サイト", deadlines:[{label:"演題締切（延長後）", date:"2026-11-30"}] },
+  { id:"jsa-cs9", name:"第9回 日本アレルギー学会中国・四国地方会", org:"日本アレルギー学会", region:"日本", start:"2027-03-06", end:null, venue:"広島大学 霞キャンパス 凌雲棟＋WEB（ライブ）", url:"https://www.jsaweb.jp/modules/news_topics/index.php?content_id=1131", verified:"2026-11-27", verifiedNote:"日本アレルギー学会公式サイト", deadlines:[{label:"演題締切", date:"2026-12-25"}] },
+  { id:"jsa-ks9", name:"第9回 日本アレルギー学会九州・沖縄支部地方会", org:"日本アレルギー学会", region:"日本", start:"2027-02-27", end:null, venue:"ホテルグランデはがくれ", url:"https://www.jsaweb.jp/modules/news_topics/index.php?content_id=1006", verified:"2026-11-27", verifiedNote:"日本アレルギー学会公式サイト", deadlines:[{label:"演題締切（延長後）", date:"2026-12-09"}] },
+  { id:"jas8", name:"第8回 日本喘息学会総会学術大会", org:"日本喘息学会", region:"日本", start:"2027-07-17", end:"2027-07-18", venue:"パシフィコ横浜 アネックスホール", url:"https://jasweb.or.jp/meeting/academic/", verified:"2026-11-27", verifiedNote:"日本喘息学会公式サイト" },
+  { id:"cough29", name:"第29回 日本咳嗽学会学術集会", org:"日本咳嗽学会", region:"日本", start:"2027-10-30", end:"2027-10-31", venue:"名古屋市（会場名は未記載）", url:"https://www.kubix.co.jp/cough/", verified:"2026-11-27", verifiedNote:"日本咳嗽学会公式サイト" },
+  { id:"jsrcr36", name:"第36回 日本呼吸ケア・リハビリテーション学会学術集会", org:"日本呼吸ケア・リハビリテーション学会", region:"日本", start:"2026-11-27", end:"2026-11-28", venue:"パシフィコ横浜 会議センター", url:"https://jsrcr36.umin.jp/outline.html", verified:"2026-11-27", verifiedNote:"大会公式サイト" },
+  { id:"jsrcr-kt12", name:"第12回 日本呼吸ケア・リハビリテーション学会関東支部学術集会", org:"日本呼吸ケア・リハビリテーション学会 関東支部", region:"日本", start:"2027-06-26", end:null, venue:"大田区産業プラザPiO（東京）", url:"https://www.jsrcr.jp/report/meeting/kanto/index.html", verified:"2026-11-27", verifiedNote:"学会公式サイト（支部ページ）", deadlines:[{label:"演題締切", date:"2027-03-17"}] },
+  { id:"jsrcr-tk13", name:"第13回 日本呼吸ケア・リハビリテーション学会東海支部学術集会", org:"日本呼吸ケア・リハビリテーション学会 東海支部", region:"日本", start:"2027-04-25", end:null, venue:"名古屋大学 豊田講堂シンポジオン（名古屋市）", url:"https://www.jsrcr.jp/report/meeting/tokai/index.html", verified:"2026-11-27", verifiedNote:"学会公式サイト（支部ページ）", deadlines:[{label:"演題締切", date:"2027-02-01"}], memo:"実技講習の部は2027年5月9日（ホテルプラザ勝川・春日井市）" },
+  { id:"jsrcr-cs12", name:"第12回 日本呼吸ケア・リハビリテーション学会中国・四国支部学術集会", org:"日本呼吸ケア・リハビリテーション学会 中国・四国支部", region:"日本", start:"2027-05-22", end:null, venue:"松山市総合コミュニティセンター", url:"https://www.jsrcr.jp/report/meeting/chugokushikoku/index.html", verified:"2026-11-27", verifiedNote:"学会公式サイト（支部ページ）" },
+  { id:"jsrcr-ks14", name:"第14回 日本呼吸ケア・リハビリテーション学会九州・沖縄支部学術集会", org:"日本呼吸ケア・リハビリテーション学会 九州・沖縄支部", region:"日本", start:"2027-02-14", end:null, venue:"オンライン開催", url:"https://www.jsrcr.jp/report/meeting/kyushuokinawa/index.html", verified:"2026-11-27", verifiedNote:"学会公式サイト（支部ページ）" },
+  { id:"jstar2", name:"第2回 気道疾患フロンティア研究会（J-STAR）", org:"気道疾患フロンティア研究会", region:"日本", start:"2027-01-23", end:null, venue:"ウインクあいち（名古屋市）", url:"https://j-star.umin.jp/m_guide.html", verified:"2026-11-27", verifiedNote:"研究会公式サイト・日本呼吸器学会公式サイト" },
+  { id:"biman2", name:"第2回 日本びまん性肺疾患学会学術集会", org:"日本びまん性肺疾患学会", region:"日本", start:"2027-09-18", end:"2027-09-19", venue:"KABUTO ONE HALL & CONFERENCE（東京都中央区）", url:"https://www.gakkai-p.jp/biman2027/", verified:"2026-11-27", verifiedNote:"大会公式サイト" },
+  { id:"jsre50", name:"第50回 日本呼吸器内視鏡学会学術集会", org:"日本呼吸器内視鏡学会", region:"日本", start:"2027-06-24", end:"2027-06-25", venue:"岡山コンベンションセンター・岡山県医師会館（岡山市）", url:"https://www.c-linkage.co.jp/jsre50/", verified:"2026-11-27", verifiedNote:"大会公式サイト", deadlines:[{label:"演題締切", date:"2027-01-13"}] },
+  { id:"jsrcm49", name:"第49回 日本呼吸療法医学会学術集会", org:"日本呼吸療法医学会", region:"日本", start:"2027-07-03", end:"2027-07-04", venue:"ウインクあいち（名古屋市）", url:"https://jsrcm49.umin.jp/outline.html", verified:"2026-11-27", verifiedNote:"大会公式サイト", deadlines:[{label:"演題締切", date:"2027-02-10"}] },
+  { id:"jaid101", name:"第101回 日本感染症学会総会・学術講演会", org:"日本感染症学会（第75回 日本化学療法学会総会と合同）", region:"日本", start:"2027-05-13", end:"2027-05-15", venue:"札幌コンベンションセンター（札幌市）", url:"https://www.c-linkage.co.jp/jaid101-jsc75/", verified:"2026-11-27", verifiedNote:"学会・大会公式サイト" },
+  { id:"jaid-w96", name:"第96回 日本感染症学会西日本地方会学術集会", org:"日本感染症学会（第74回 日本化学療法学会西日本支部総会と合同）", region:"日本", start:"2026-12-18", end:"2026-12-20", venue:"新来島高知重工ホール（高知県立県民文化ホール）ほか（高知市）", url:"https://med-gakkai.jp/kansenkaryo-w2026/gaiyo/", verified:"2026-11-27", verifiedNote:"大会公式サイト・学会公式サイト" },
+  { id:"aids41", name:"第41回 日本エイズ学会学術集会・総会", org:"日本エイズ学会", region:"日本", start:"2027-12-03", end:"2027-12-05", venue:"北とぴあ（東京都北区）", url:"https://aids41.web-event.jp/", verified:"2026-11-27", verifiedNote:"大会公式サイト" },
+  { id:"jcr71", name:"第71回 日本リウマチ学会総会・学術集会", org:"日本リウマチ学会", region:"日本", start:"2027-04-26", end:"2027-04-28", venue:"パシフィコ横浜", url:"https://www.jcr2027.com/", verified:"2026-11-27", verifiedNote:"大会公式サイト" },
+  { id:"jsibd17", name:"第17回 日本炎症性腸疾患学会学術集会", org:"日本炎症性腸疾患学会", region:"日本", start:"2026-11-27", end:"2026-11-28", venue:"アクロス福岡（福岡市）", url:"https://www.jsibd-gakkai.jp/17th/info.html", verified:"2026-11-27", verifiedNote:"大会公式サイト" },
+  { id:"jsiad10", name:"第10回 日本免疫不全・自己炎症学会総会・学術集会", org:"日本免疫不全・自己炎症学会", region:"日本", start:"2027-02-06", end:"2027-02-07", venue:"久留米シティプラザ（久留米市）", url:"https://10th-jsiad.conferenceweb.jp/", verified:"2026-11-27", verifiedNote:"学会・大会公式サイト" },
+  { id:"jrs-hr-next", name:"日本呼吸器学会北陸地方会（次回）", org:"日本呼吸器学会 北陸支部", region:"日本", start:null, end:null, venue:"未発表", url:"https://www.jrs.or.jp/meeting/hokuriku/local/", verified:null, verifiedNote:"2026-11-27時点で次回の発表なし（前回 第98回は2026年11月14〜15日）" },
+  { id:"jsa-ho-next", name:"日本アレルギー学会北海道地方会（次回）", org:"日本アレルギー学会", region:"日本", start:null, end:null, venue:"未発表", url:"https://www.jsaweb.jp/", verified:null, verifiedNote:"2026-11-27時点で次回の発表なし（前回 第7回は2026年11月8日）" },
+  { id:"jsa-th-next", name:"日本アレルギー学会東北地方会（次回）", org:"日本アレルギー学会", region:"日本", start:null, end:null, venue:"未発表", url:"https://www.jsaweb.jp/", verified:null, verifiedNote:"2026-11-27時点で次回の発表なし（前回 第8回は2026年11月14日）" },
+  { id:"jsa-hr-next", name:"日本アレルギー学会北陸地方会（次回）", org:"日本アレルギー学会", region:"日本", start:null, end:null, venue:"未発表", url:"https://www.jsaweb.jp/", verified:null, verifiedNote:"2026-11-27時点で次回の発表なし（前回 第8回は2026年11月23日）" },
+  { id:"jsa-tk-next", name:"日本アレルギー学会東海地方会（次回）", org:"日本アレルギー学会", region:"日本", start:null, end:null, venue:"未発表", url:"https://www.jsaweb.jp/", verified:null, verifiedNote:"2026-11-27時点で公式の発表を確認できず（前回 第7回は2026年3月8日）" },
+  { id:"jsa-kk-next", name:"日本アレルギー学会近畿地方会（次回）", org:"日本アレルギー学会", region:"日本", start:null, end:null, venue:"未発表", url:"https://www.jsaweb.jp/", verified:null, verifiedNote:"2026-11-27時点で公式の発表を確認できず（前回 第13回は2026年6月21日）" },
+  { id:"jsrcr37", name:"第37回 日本呼吸ケア・リハビリテーション学会学術集会", org:"日本呼吸ケア・リハビリテーション学会", region:"日本", start:null, end:null, venue:"未発表", url:"https://www.jsrcr.jp/", verified:null, verifiedNote:"2026-11-27時点で発表なし" },
+  { id:"jsrcr-ho-next", name:"日本呼吸ケア・リハビリテーション学会北海道支部学術集会（次回）", org:"日本呼吸ケア・リハビリテーション学会 北海道支部", region:"日本", start:null, end:null, venue:"未発表", url:"https://www.jsrcr.jp/report/meeting/hokkaido/index.html", verified:null, verifiedNote:"2026-11-27時点で次回の発表なし（前回 第10回は2026年5月9〜10日）" },
+  { id:"jsrcr-th-next", name:"日本呼吸ケア・リハビリテーション学会東北支部学術集会（次回）", org:"日本呼吸ケア・リハビリテーション学会 東北支部", region:"日本", start:null, end:null, venue:"未発表", url:"https://www.jsrcr.jp/report/meeting/tohoku/index.html", verified:null, verifiedNote:"2026-11-27時点で次回の発表なし（前回 第13回は2026年7月4日）" },
+  { id:"jsrcr-ks-next", name:"日本呼吸ケア・リハビリテーション学会甲信越支部学術集会（次回）", org:"日本呼吸ケア・リハビリテーション学会 甲信越支部", region:"日本", start:null, end:null, venue:"未発表", url:"https://www.jsrcr.jp/report/meeting/koshinetsu/index.html", verified:null, verifiedNote:"2026-11-27時点で次回の発表なし（前回 第11回は2026年6月6日）" },
+  { id:"jsrcr-hr-next", name:"日本呼吸ケア・リハビリテーション学会北陸支部学術集会（次回）", org:"日本呼吸ケア・リハビリテーション学会 北陸支部", region:"日本", start:null, end:null, venue:"未発表", url:"https://www.jsrcr.jp/report/meeting/hokuriku/index.html", verified:null, verifiedNote:"2026-11-27時点で次回の発表なし（前回 第18回は2026年6月6日）" },
+  { id:"jsrcr-kk-next", name:"日本呼吸ケア・リハビリテーション学会近畿支部学術集会（次回）", org:"日本呼吸ケア・リハビリテーション学会 近畿支部", region:"日本", start:null, end:null, venue:"未発表", url:"https://www.jsrcr.jp/report/meeting/kinki/index.html", verified:null, verifiedNote:"2026-11-27時点で次回の発表なし（前回 第10回は2026年11月7日、日本呼吸器学会近畿地方会と合同）" },
+  { id:"jstb-hr-next", name:"日本結核・非結核性抗酸菌症学会 北陸支部（次回）", org:"日本結核・非結核性抗酸菌症学会", region:"日本", start:null, end:null, venue:"未発表", url:"https://www.kekkaku.gr.jp/", verified:null, verifiedNote:"2026-11-27時点で次回の発表を確認できず（ほかの支部会は、上の日本呼吸器学会 地方会と合同）" },
+  { id:"jspp59", name:"第59回 日本小児呼吸器学会学術集会", org:"日本小児呼吸器学会", region:"日本", start:null, end:null, venue:"未発表", url:"https://jspp1969.jp/annual-meeting/meeting-list/", verified:null, verifiedNote:"学会公式サイトで開催地・時期は「未定」（2026-11-27時点）" },
+  { id:"jaid-e76", name:"第76回 日本感染症学会東日本地方会学術集会", org:"日本感染症学会", region:"日本", start:null, end:null, venue:"未発表", url:"https://www.kansensho.or.jp/modules/meeting/index.php?content_id=5", verified:null, verifiedNote:"2026-11-27時点で発表なし（前回 第75回は2026年10月28〜30日）" },
+  { id:"jaid-c-next", name:"日本感染症学会中日本地方会（次回）", org:"日本感染症学会", region:"日本", start:null, end:null, venue:"未発表", url:"https://www.kansensho.or.jp/modules/meeting/index.php?content_id=8", verified:null, verifiedNote:"学会公式サイトの掲載は第65回（2022年）が最後。その後の開催は確認できず" },
+  { id:"jsci55", name:"第55回 日本臨床免疫学会総会", org:"日本臨床免疫学会", region:"日本", start:null, end:null, venue:"未発表", url:"https://www.icongroup.co.jp/54jsci/", verified:null, verifiedNote:"2026-11-27時点で公式の発表を確認できず（前回 第54回は2026年10月22〜24日）" },
+  { id:"jsibd18", name:"第18回 日本炎症性腸疾患学会学術集会", org:"日本炎症性腸疾患学会", region:"日本", start:null, end:null, venue:"未発表", url:"https://www.jsibd-gakkai.jp/", verified:null, verifiedNote:"2026-11-27時点で公式の発表を確認できず" },
 ];
 const CONF_DRUGS = [
   { re:/brensocatib|ブレンソカチブ|INS1007|ASPEN/i, label:"brensocatib", bg:"#fee2e2", fg:"#b91c1c" },
@@ -9173,7 +9226,7 @@ function confCard(c, today) {
           <div class="conf-abs-meta">${a.cat}${a.isNew?' ・ <b style="color:#dc2626">NEW</b>':""} ${confDrugChips(a)}</div>
         </div>`).join("")
         : `<div class="conf-empty">まだ収録なし。${st.key==="past"?"補完ソースの検索窓（過去30日）より前に公開されたため未取り込み。":"抄録は増刊号の公開後に自動で集まります。"}</div>`}
-    </details>` : (c.domestic ? `<div class="conf-empty">国内学会の抄録集は会員限定のため自動収集の対象外です。</div>` : "");
+    </details>` : "";
   return `
   <div class="conf-card conf-${st.key}">
     <div class="conf-head">
@@ -9193,6 +9246,8 @@ function confCard(c, today) {
     ${absBlock}
   </div>`;
 }
+let confRegion = "all";
+function setConfRegion(v) { confRegion = v; buildConferences(); }
 function buildConferences() {
   const up = document.getElementById("confUpcoming");
   if (!up) return;
@@ -9200,7 +9255,12 @@ function buildConferences() {
   const order = c => c.start || "9999";
   const live = CONFERENCES.filter(c => ["upcoming","live","tba"].includes(confStatus(c,today).key)).sort((a,b)=>order(a).localeCompare(order(b)));
   // 開催済み（会期が終わった学会）は表示しない。会期終了の翌日から自動で消える。
-  up.innerHTML = live.map(c => confCard(c, today)).join("");
+  const isJp = c => c.region === "日本";
+  const shown = live.filter(c => confRegion === "all" || (confRegion === "jp") === isJp(c));
+  const fb = document.getElementById("confFilter");
+  if (fb) fb.innerHTML = [["all","すべて",live.length],["jp","国内",live.filter(isJp).length],["intl","海外",live.filter(c=>!isJp(c)).length]]
+    .map(([k,l,n]) => `<button class="${confRegion===k?"on":""}" onclick="setConfRegion('${k}')">${l}（${n}）</button>`).join("");
+  up.innerHTML = shown.map(c => confCard(c, today)).join("");
   const next = live.find(c => c.start && c.start >= today);
   const totalAbs = live.reduce((n,c) => n + confAbstracts(c).length, 0);
   document.getElementById("confSummary").innerHTML = `
