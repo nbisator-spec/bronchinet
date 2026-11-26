@@ -1,8 +1,59 @@
 [
  {
+  "id": 862,
+  "cat": "マイクロバイオーム・感染",
+  "isNew": true,
+  "titleJa": "抗体欠損症（CVID/XLA）成人と非結核性抗酸菌（NTM）肺症成人では好中球活性化とオプソニン貪食のプロファイルが異なる：横断研究",
+  "titleEn": "Neutrophil activation and opsonophagocytic profiles differ between adults with CVID/XLA and those with nontuberculous mycobacterial pulmonary disease: a cross-sectional study",
+  "journal": "Frontiers in Immunology",
+  "sjr": "Q1",
+  "if": "5.9",
+  "date": "2026-11-13",
+  "year": 2026,
+  "ev": "観察研究",
+  "authors": "Meyad Alkarni, Timothy D. McHugh, Colette Smith ほか（David M. Lowe）",
+  "summary": "NTM肺症15例・CVID/XLA 18例・健常者16例の全血で好中球活性化とM. abscessus／M. aviumの貪食を比較し、両患者群で好中球のプライミングを認めた一方、NTM肺症では血清好中球エラスターゼ・MMP-8・S100A8/A9・抗GPL IgAが高く、CVID/XLA血清はM. aviumのオプソニン貪食能が高かった。気管支拡張症は両群に存在したがNTM肺症でより多く、著者らはこの炎症プロファイルとの関連を示唆し宿主標的治療の手掛かりになるとしている。",
+  "url": "https://doi.org/10.3389/fimmu.2026.1996064"
+ },
+ {
+  "id": 863,
+  "cat": "マイクロバイオーム・感染",
+  "isNew": true,
+  "titleJa": "慢性気道疾患の急性増悪における気道マイクロバイオームと代謝物の相互作用",
+  "titleEn": "Airway Microbiome-Metabolite Interactions in Acute Exacerbations of Chronic Airway Diseases.",
+  "journal": "Microorganisms",
+  "sjr": "Q1",
+  "if": "4.2",
+  "date": "2026-11-19",
+  "year": 2026,
+  "ev": "総説",
+  "authors": "Chen Y, Li W, Tang J ほか（Feng Y）",
+  "aui": "Chen Li Tang Lu Hu Lu Xiao Feng",
+  "summary": "喘息・COPD・気管支拡張症の増悪について、細菌叢の構成だけでなく宿主・微生物の代謝物（S. aureus由来ホモシステイン、トリプトファン由来インドール-3-酢酸など）が組織傷害・保護に関わる機序を臨床・実験データから統合した総説。気管支拡張症では増悪時に細菌叢構成が一貫して変わらなくても炎症が強まり、好中球細胞外トラップが粘液性状を変えることを取り上げ、局所代謝経路の調節が増悪予防につながるかは今後の試験で検証すべきとしている。",
+  "pmid": "43092553",
+  "url": "https://pubmed.ncbi.nlm.nih.gov/43092553/"
+ },
+ {
+  "id": 864,
+  "cat": "増悪・病態",
+  "isNew": true,
+  "titleJa": "小児におけるCD19標的CAR-T細胞療法後の長期B細胞無形成：肺への影響",
+  "titleEn": "Long-Term B-Cell Aplasia Post CD19-Targeted CAR T Cells in Paediatric Patients: Implications on Lung Status.",
+  "journal": "Pediatric Blood & Cancer",
+  "sjr": "Q1",
+  "date": "2026-11-26",
+  "year": 2026,
+  "ev": "観察研究",
+  "authors": "Casartelli P, Rashed H, Napolitano S ほか（Lucchini G）",
+  "aui": "Casartelli Rashed Napolitano Ip Marruchella Balduzzi Ghorashian Lucchini",
+  "summary": "CD19標的CAR-T細胞療法後にB細胞無形成が遷延した小児48例を追跡し、定期的な免疫グロブリン補充下でも10例が呼吸器症状により画像検査を受け、2例に新たな気管支拡張症、4例にその他の異常所見を認めた。著者らは二次性免疫不全による長期の肺合併症リスクを指摘し、系統的な呼吸器モニタリングを提案している。",
+  "pmid": "43096699",
+  "url": "https://pubmed.ncbi.nlm.nih.gov/43096699/"
+ },
+ {
   "id": 841,
   "cat": "治療・薬剤",
-  "isNew": true,
+  "isNew": false,
   "dpp1": true,
   "titleJa": "ブレンソカチブの患者報告症状への効果：第III相ASPEN試験におけるQOL-B呼吸器症状スコア各項目の事後解析（BTS学会抄録）",
   "titleEn": "Effect of brensocatib on patient-reported symptoms in patients with non-cystic fibrosis bronchiectasis: a post hoc analysis of QOL-B RSS individual items from the ASPEN phase 3 trial",
@@ -18,7 +69,7 @@
  {
   "id": 842,
   "cat": "治療・薬剤",
-  "isNew": true,
+  "isNew": false,
   "dpp1": true,
   "titleJa": "気管支拡張症における患者報告の喀痰の色と好中球セリンプロテアーゼ・増悪との関連：ASPEN試験の事後解析（BTS学会抄録）",
   "titleEn": "Patient-reported sputum color and its association with neutrophil serine proteases and exacerbations in patients with bronchiectasis: a post hoc analysis from the ASPEN trial",
@@ -33,7 +84,7 @@
  {
   "id": 843,
   "cat": "増悪・病態",
-  "isNew": true,
+  "isNew": false,
   "titleJa": "血清アズロシジン-1は気管支拡張症の頻回増悪と関連する：EMBARC-BRIDGE研究の予備データ（BTS学会抄録）",
   "titleEn": "Serum azurocidin-1 is associated with frequent exacerbations in patients with bronchiectasis: preliminary data from the EMBARC-BRIDGE study",
   "journal": "Thorax（学会抄録）",
@@ -47,7 +98,7 @@
  {
   "id": 844,
   "cat": "精密医療・エンドタイプ",
-  "isNew": true,
+  "isNew": false,
   "titleJa": "多オミクス統合で同定された気道・全身にまたがる炎症プログラムと気管支拡張症の重症度・感染との関連：EMBARC-BRIDGEの結果（BTS学会抄録）",
   "titleEn": "Cross-compartment inflammatory programmes identified by multi-omic integration are associated with disease severity and infection in bronchiectasis: results from EMBARC-BRIDGE",
   "journal": "Thorax（学会抄録）",
@@ -61,7 +112,7 @@
  {
   "id": 845,
   "cat": "マイクロバイオーム・感染",
-  "isNew": true,
+  "isNew": false,
   "titleJa": "分子検出が明らかにする気管支拡張症の病原体特異的な炎症シグネチャー（BTS学会抄録）",
   "titleEn": "Molecular detection reveals pathogen-specific inflammatory signatures in bronchiectasis",
   "journal": "Thorax（学会抄録）",
@@ -75,7 +126,7 @@
  {
   "id": 846,
   "cat": "増悪・病態",
-  "isNew": true,
+  "isNew": false,
   "titleJa": "気管支拡張症と遷延性細菌性気管支炎における気管支肺胞洗浄液プロテオミクスが示す気道炎症の新知見（BTS学会抄録）",
   "titleEn": "Bronchoalveolar lavage proteomics in bronchiectasis and protracted bacterial bronchitis provides novel insight into airway inflammation",
   "journal": "Thorax（学会抄録）",
@@ -89,7 +140,7 @@
  {
   "id": 847,
   "cat": "精密医療・エンドタイプ",
-  "isNew": true,
+  "isNew": false,
   "titleJa": "気管支拡張症における2型炎症の状態別にみた臨床・生理・微生物学的特徴（BTS学会抄録）",
   "titleEn": "Clinical, physiological and microbiological characteristics by type 2 inflammatory status in bronchiectasis",
   "journal": "Thorax（学会抄録）",
@@ -103,7 +154,7 @@
  {
   "id": 848,
   "cat": "増悪・病態",
-  "isNew": true,
+  "isNew": false,
   "titleJa": "BRACE研究：英国多施設における気管支拡張症の多職種診療の監査（BTS学会抄録）",
   "titleEn": "The BRACE study: a multicentre UK audit of multidisciplinary bronchiectasis care",
   "journal": "Thorax（学会抄録）",
@@ -117,7 +168,7 @@
  {
   "id": 849,
   "cat": "マイクロバイオーム・感染",
-  "isNew": true,
+  "isNew": false,
   "titleJa": "気管支拡張症の緑膿菌に対する静注抗菌薬単剤療法の転帰：外来静注抗菌薬療法（OPAT）10年コホート（BTS学会抄録）",
   "titleEn": "Outcomes of IV antibiotic monotherapy for pseudomonas aeruginosa in bronchiectasis: a 10-year OPAT cohort",
   "journal": "Thorax（学会抄録）",
@@ -131,7 +182,7 @@
  {
   "id": 850,
   "cat": "マイクロバイオーム・感染",
-  "isNew": true,
+  "isNew": false,
   "titleJa": "非結核性抗酸菌肺疾患（NTM-PD）の特徴と気管支拡張症との比較：横断的観察研究（BTS学会抄録）",
   "titleEn": "Characterising non-tuberculous mycobacterial pulmonary disease (NTM-PD): how does this compare with bronchiectasis? An observational cross-sectional study",
   "journal": "Thorax（学会抄録）",
@@ -145,7 +196,7 @@
  {
   "id": 851,
   "cat": "マイクロバイオーム・感染",
-  "isNew": true,
+  "isNew": false,
   "titleJa": "MAC肺疾患の診療費用：英国における実際の医療費の包括的評価（BTS学会抄録）",
   "titleEn": "MAC-PD, the cost of care: a comprehensive assessment of actual healthcare costs associated with mycobacterium avium complex (MAC) pulmonary disease (PD)",
   "journal": "Thorax（学会抄録）",
@@ -159,7 +210,7 @@
  {
   "id": 852,
   "cat": "治療・薬剤",
-  "isNew": true,
+  "isNew": false,
   "titleJa": "非CF気管支拡張症の成人における在宅高流量鼻カニュラ療法の効果：システマティックレビューとメタ解析（BTS学会抄録）",
   "titleEn": "The impact of domiciliary high-flow nasal oxygen therapy in adults with non-cystic fibrosis bronchiectasis: a systematic review and meta-analysis",
   "journal": "Thorax（学会抄録）",
@@ -173,7 +224,7 @@
  {
   "id": 853,
   "cat": "増悪・病態",
-  "isNew": true,
+  "isNew": false,
   "titleJa": "LiveBE：気管支拡張症が患者の生活に及ぼす影響に関する患者調査（BTS学会抄録）",
   "titleEn": "LiveBE: living life with bronchiectasis - results from a patient survey on how bronchiectasis affects patient lives",
   "journal": "Thorax（学会抄録）",
@@ -187,7 +238,7 @@
  {
   "id": 854,
   "cat": "マイクロバイオーム・感染",
-  "isNew": true,
+  "isNew": false,
   "titleJa": "気管支拡張症における緑膿菌：オーストラリアにおける集団多様性と薬剤耐性の解明（プレプリント）",
   "titleEn": "Pseudomonas aeruginosa  in bronchiectasis: unmasking population diversity and antimicrobial resistance in the Australian context",
   "journal": "medRxiv（プレプリント・査読前）",
@@ -201,7 +252,7 @@
  {
   "id": 855,
   "cat": "増悪・病態",
-  "isNew": true,
+  "isNew": false,
   "titleJa": "メディケア加入の気管支拡張症患者における医療資源利用と格差",
   "titleEn": "Healthcare Utilization and Disparities Among Medicare-Enrolled Patients With Bronchiectasis",
   "journal": "CHEST Pulmonary",
@@ -216,7 +267,7 @@
  {
   "id": 856,
   "cat": "精密医療・エンドタイプ",
-  "isNew": true,
+  "isNew": false,
   "titleJa": "気管支拡張症の予後リスク層別化の精緻化：炎症表現型による緑膿菌の影響の異質性",
   "titleEn": "Refining prognostic risk stratification in bronchiectasis: the heterogeneous role of Pseudomonas aeruginosa by inflammatory phenotype",
   "journal": "BMC Pulmonary Medicine",
@@ -232,7 +283,7 @@
  {
   "id": 857,
   "cat": "マイクロバイオーム・感染",
-  "isNew": true,
+  "isNew": false,
   "titleJa": "緑膿菌が定着した非CF気管支拡張症患者における抗菌薬による除菌・抑制治療の臨床効果：システマティックレビュー",
   "titleEn": "The clinical effect of antibiotic eradication or suppression treatment in patients with non-CF bronchiectasis who are colonized with Pseudomonas aeruginosa",
   "journal": "BMC Pulmonary Medicine",
@@ -248,7 +299,7 @@
  {
   "id": 858,
   "cat": "治療・薬剤",
-  "isNew": true,
+  "isNew": false,
   "titleJa": "長期吸入アミカシンによる増悪予防（RELIEF研究）：再発性気管支拡張症における前向き2施設比較・52週追跡研究",
   "titleEn": "Reducing exacerbations with long-term inhaled amikacin for effective flare prevention (RELIEF study): A prospective comparative two-center, 52-week follow-up study in recurrent bronchiectasis",
   "journal": "Electronic Journal of General Medicine",
@@ -263,7 +314,7 @@
  {
   "id": 859,
   "cat": "増悪・病態",
-  "isNew": true,
+  "isNew": false,
   "titleJa": "気管支拡張症に対する気管支動脈塞栓術後の喀血長期再発に関連する因子",
   "titleEn": "Factors associated with long-term recurrence of hemoptysis after bronchial artery embolization for bronchiectasis",
   "journal": "BioMedical Engineering OnLine",
@@ -278,7 +329,7 @@
  {
   "id": 860,
   "cat": "増悪・病態",
-  "isNew": true,
+  "isNew": false,
   "titleJa": "肺移植評価に紹介された末期非CF気管支拡張症患者における第3群肺高血圧と臨床転帰の関連",
   "titleEn": "Association of group 3 pulmonary hypertension with clinical outcomes in patients with end-stage non-cystic fibrosis bronchiectasis referred for lung transplantation evaluation",
   "journal": "BMC Pulmonary Medicine",
@@ -294,7 +345,7 @@
  {
   "id": 861,
   "cat": "ガイドライン・総説",
-  "isNew": true,
+  "isNew": false,
   "titleJa": "α1-アンチトリプシン欠乏症と気管支拡張症：エビデンスの最新レビューと今後の課題",
   "titleEn": "Alpha-1 Antitrypsin Deficiency and Bronchiectasis: An Updated Review of the Evidence and Future Challenges",
   "journal": "Open Respiratory Archives",
@@ -309,7 +360,7 @@
  {
   "id": 836,
   "cat": "治療・薬剤",
-  "isNew": true,
+  "isNew": false,
   "dpp1": true,
   "titleJa": "気管支拡張症の増悪予防におけるDPP-1阻害薬・マクロライド・吸入抗菌薬の有効性と持続性の比較：ネットワークメタ解析",
   "titleEn": "Comparative efficacy and durability of DPP-1 Inhibitors, macrolides, and inhaled antibiotics for exacerbation prevention in bronchiectasis: a network meta-analysis.",
@@ -329,7 +380,7 @@
  {
   "id": 837,
   "cat": "増悪・病態",
-  "isNew": true,
+  "isNew": false,
   "titleJa": "入院を要する非CF気管支拡張症の重症増悪：三次医療機関における微生物学的所見と入院管理",
   "titleEn": "Severe Exacerbations of Non-Cystic Fibrosis Bronchiectasis Requiring Hospitalisation: Microbiology and Inpatient Management in a Tertiary Care Centre.",
   "journal": "Diseases",
@@ -346,7 +397,7 @@
  {
   "id": 838,
   "cat": "増悪・病態",
-  "isNew": true,
+  "isNew": false,
   "titleJa": "気管支拡張症における血清クロール値と全死亡の関連：後ろ向きコホート研究と機械学習による予測モデルの構築",
   "titleEn": "Association between serum chloride and all-cause mortality in bronchiectasis: a retrospective cohort study and predictive model establishment based on machine learning.",
   "journal": "Clinical and Experimental Medicine",
@@ -363,7 +414,7 @@
  {
   "id": 839,
   "cat": "マイクロバイオーム・感染",
-  "isNew": true,
+  "isNew": false,
   "titleJa": "非免疫不全宿主における肺スケドスポリウム症：症例集積と文献レビュー",
   "titleEn": "Pulmonary Scedosporiosis in Non-Immunocompromised Hosts: A Case Series and Literature Review.",
   "journal": "Journal of Fungi",
@@ -380,7 +431,7 @@
  {
   "id": 840,
   "cat": "ガイドライン・総説",
-  "isNew": true,
+  "isNew": false,
   "titleJa": "結核治療後の残存肺障害の検出：結核後肺疾患（PTLD）におけるHRCT・肺機能検査・DLCOのナラティブレビュー",
   "titleEn": "Detecting Residual Lung Damage After Tuberculosis Treatment: A Narrative Review of HRCT, Pulmonary Function Testing, and DLCO in Post-Tuberculosis Lung Disease.",
   "journal": "Tropical Medicine and Infectious Disease",
