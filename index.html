@@ -7762,7 +7762,7 @@
       <div class="ranking-empty">引用数を取得中…</div>
     </div>
 
-    <div class="trends-note">※ 被引用数は Europe PMC の <code>citedByCount</code>（24時間キャッシュ）。DOI または PMID を持つ文献のみが対象で、和文誌・KAKEN・臨床試験登録などは集計外です。行をクリックすると文献の詳細が開きます。</div>
+    <div class="trends-note">※ 被引用数は Europe PMC の <code>citedByCount</code>（毎朝の自動更新で取得）。DOI または PMID を持つ文献のみが対象で、和文誌・KAKEN・臨床試験登録などは集計外です。行をクリックすると文献の詳細が開きます。</div>
   </div>
 </div>
 
@@ -8260,13 +8260,18 @@ async function buildRanking() {
   const el = document.getElementById('rankingList');
   el.innerHTML = '<div style="text-align:center;padding:16px;color:var(--text-muted);font-size:12px;">引用数を取得中…</div>';
 
-  const citMap = await fetchCitations();
+  // 2026-11-27〜 被引用数は毎朝の自動更新（citation_counts.py）が articles.json の cit に入れる。
+  // ページを開くたびに Europe PMC へ約40回問い合わせると表示まで数分かかるため。
+  // cit が1件も無いデータ（COPDNet で未導入のときなど）に限り、従来どおりブラウザから取得する。
+  const hasCit = ARTICLES.some(a => typeof a.cit === 'number');
+  const citMap = hasCit ? {} : await fetchCitations();
 
   RANKED_ALL = ARTICLES
     .map(a => {
       const doi = extractDoi(a.url);
       const pmid = extractPmid(a.url);
-      const cit = (doi && doi in citMap) ? citMap[doi]
+      const cit = hasCit ? (typeof a.cit === 'number' ? a.cit : -1)
+                : (doi && doi in citMap) ? citMap[doi]
                 : (pmid && `pmid:${pmid}` in citMap) ? citMap[`pmid:${pmid}`]
                 : -1;
       const yrs = yearsSincePub(a);
