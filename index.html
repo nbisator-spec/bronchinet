@@ -7776,9 +7776,6 @@
   <div class="guide-section-title">📅 今後の学会</div>
   <div id="confUpcoming"></div>
 
-  <div class="guide-section-title">🗂️ 開催済み・抄録アーカイブ</div>
-  <div id="confPast"></div>
-
   <div class="trends-note">※ 学会抄録は Europe PMC・OpenAlex から自動で集まったもの（ERS＝ERJ増刊、ATS＝AJRCCM増刊、BTS＝Thorax増刊）を、DOI で学会に振り分けて表示しています。国内学会（日本呼吸器学会・日本結核・非結核性抗酸菌症学会）の抄録集は会員限定のため自動収集の対象外です。会期・会場は変更されることがあるため、参加前に必ず公式サイトでご確認ください。</div>
 </div>
 </div>
@@ -9091,10 +9088,11 @@ const CONFERENCES = [
     url:"https://www.kekkaku.gr.jp/jstb102/guide.html",
     verified:"2026-11-26", verifiedNote:"学会公式サイト「開催概要」",
     domestic:true },
-  { id:"wbc2027", name:"World Bronchiectasis Conference 2027（第10回）", org:"EMBARC ほか", region:"未定",
-    start:null, end:null, venue:"未発表",
-    url:"https://sites.dundee.ac.uk/embarc/",
-    verified:null, verifiedNote:"2026-11-26時点で日程の発表を確認できず（第9回は2026年・ハノーファー）" },
+  { id:"wbc2027", name:"第10回 World Bronchiectasis Conference 2027", org:"World Bronchiectasis Conference（EMBARC ほか）", region:"米国",
+    start:"2027-07-07", end:"2027-07-10", venue:"Philadelphia, PA（会場名は未発表）",
+    url:"https://www.world-bronchiectasis-conference.org/2027/",
+    verified:"2026-11-27", verifiedNote:"WBC公式サイト",
+    deadlines:[{label:"演題締切", date:"2027-03-14"}] },
   { id:"ers2027", name:"ERS Congress 2027", org:"European Respiratory Society（欧州呼吸器学会）", region:"イタリア",
     start:"2027-09-11", end:"2027-09-14", venue:"Allianz MiCo, Milan",
     url:"https://www.ersnet.org/congress-and-events/congress/",
@@ -9105,13 +9103,24 @@ const CONFERENCES = [
     url:"https://www.chestnet.org/learning-and-events/events/chest-annual-meeting",
     verified:"2026-11-26", verifiedNote:"CHEST公式サイト",
     deadlines:[{label:"教育セッション企画の募集", date:"2026-12-01"}] },
-  // --- 開催済み（抄録アーカイブ用。会期は未記載） ---
-  { id:"ers2026", name:"ERS Congress 2026", org:"European Respiratory Society", region:"—", start:null, end:null, past:true,
-    url:"https://www.ersnet.org/congress-and-events/congress/", verified:null, verifiedNote:"会期は未記載",
-    abstracts:/13993003\.congress-2026/i, abstractSource:"ERJ 増刊（2026年9月）" },
-  { id:"ats2026", name:"ATS 2026 International Conference", org:"American Thoracic Society", region:"—", start:null, end:null, past:true,
-    url:"https://conference.thoracic.org/", verified:null, verifiedNote:"会期は未記載",
-    abstracts:/10\.1164\/ajrccm\.2026\.\d+\.abstracts/i, abstractSource:"AJRCCM 増刊" },
+  { id:"ebrow2027", name:"第5回 European Bronchiectasis Workshop（EBROW 2027）", org:"EMBARC（第9回 RTI Forum と合同開催）", region:"英国",
+    start:"2027-02-08", end:"2027-02-10", venue:"London（QEII Centre と記載。一部に「会場は後日発表」の記載も残る）",
+    url:"https://bronchiectasis-rti.org/2027/",
+    verified:"2026-11-27", verifiedNote:"大会公式サイト（RTIと合わせた会期は2/8〜11）",
+    deadlines:[{label:"演題締切", date:"2026-11-23"},{label:"早期登録", date:"2026-12-16"}] },
+  { id:"ecfs2027", name:"第50回 European Cystic Fibrosis Conference", org:"European Cystic Fibrosis Society（ECFS）", region:"フランス",
+    start:"2027-06-02", end:"2027-06-05", venue:"Lille Grand Palais, Lille",
+    url:"https://www.ecfs.eu/lille2027",
+    verified:"2026-11-27", verifiedNote:"ECFS公式サイト（会期は学会一覧ページ）",
+    deadlines:[{label:"演題締切", date:"2027-01-13"},{label:"早期登録", date:"2027-03-03"}] },
+  { id:"apsr2027", name:"APSR Congress 2027", org:"Asian Pacific Society of Respirology（アジア太平洋呼吸器学会）", region:"インドネシア",
+    start:"2027-11-04", end:"2027-11-07", venue:"Bali（会場名は未発表）",
+    url:"https://www.apsr.org/",
+    verified:"2026-11-27", verifiedNote:"APSR公式サイト" },
+  { id:"apbc-next", name:"Asia-Pacific Bronchiectasis & NTM Conference（次回）", org:"Asia-Pacific Bronchiectasis & NTM Conference", region:"未定",
+    start:null, end:null, venue:"未発表",
+    url:"https://apb-conference.org/",
+    verified:null, verifiedNote:"2026-11-27時点で次回の発表を確認できず（第1回は2026年11月・東京）" },
 ];
 const CONF_DRUGS = [
   { re:/brensocatib|ブレンソカチブ|INS1007|ASPEN/i, label:"brensocatib", bg:"#fee2e2", fg:"#b91c1c" },
@@ -9190,11 +9199,10 @@ function buildConferences() {
   const d = new Date(), today = `${d.getFullYear()}-${String(d.getMonth()+1).padStart(2,"0")}-${String(d.getDate()).padStart(2,"0")}`;
   const order = c => c.start || "9999";
   const live = CONFERENCES.filter(c => ["upcoming","live","tba"].includes(confStatus(c,today).key)).sort((a,b)=>order(a).localeCompare(order(b)));
-  const past = CONFERENCES.filter(c => confStatus(c,today).key === "past");
+  // 開催済み（会期が終わった学会）は表示しない。会期終了の翌日から自動で消える。
   up.innerHTML = live.map(c => confCard(c, today)).join("");
-  document.getElementById("confPast").innerHTML = past.map(c => confCard(c, today)).join("");
   const next = live.find(c => c.start && c.start >= today);
-  const totalAbs = CONFERENCES.reduce((n,c) => n + confAbstracts(c).length, 0);
+  const totalAbs = live.reduce((n,c) => n + confAbstracts(c).length, 0);
   document.getElementById("confSummary").innerHTML = `
     <div class="conf-stat"><div class="conf-stat-num">${live.filter(c=>c.start).length}</div><div class="conf-stat-label">今後の学会（日程確定）</div></div>
     <div class="conf-stat"><div class="conf-stat-num">${next ? Math.round((new Date(next.start)-new Date(today))/864e5) : "—"}</div><div class="conf-stat-label">次の学会まで（日）${next?`<br><small>${next.name}</small>`:""}</div></div>
