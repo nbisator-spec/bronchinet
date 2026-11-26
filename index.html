@@ -451,6 +451,43 @@
     .trial-group-header { flex-wrap: wrap; gap: 6px 8px; }
     .trial-group-sub { white-space: normal; margin-left: 0; flex-basis: 100%; opacity: 0.9; }
   }
+  /* ===== CONFERENCES（学会ページ） ===== */
+  .conf-summary { display:grid; grid-template-columns:repeat(3,1fr); gap:12px; margin-bottom:8px; }
+  .conf-stat { background:var(--card-bg); border:1px solid var(--border); border-radius:10px; padding:14px; text-align:center; }
+  .conf-stat-num { font-size:26px; font-weight:800; color:#c2410c; }
+  .conf-stat-label { font-size:11px; color:var(--text-muted); margin-top:2px; }
+  .conf-card { background:var(--card-bg); border:1px solid var(--border); border-left:4px solid #c2410c; border-radius:10px; padding:16px; margin-bottom:12px; }
+  .conf-card.conf-past { border-left-color:#94a3b8; }
+  .conf-card.conf-tba { border-left-color:#cbd5e1; }
+  .conf-card.conf-live { border-left-color:#16a34a; }
+  .conf-head { display:flex; justify-content:space-between; gap:12px; align-items:flex-start; }
+  .conf-name { font-size:15px; font-weight:700; }
+  .conf-org { font-size:11px; color:var(--text-muted); margin-top:2px; }
+  .conf-badges { display:flex; gap:6px; flex-shrink:0; }
+  .conf-status { font-size:11px; font-weight:700; padding:3px 8px; border-radius:999px; background:#f1f5f9; color:#475569; }
+  .conf-status.s-upcoming { background:#ffedd5; color:#c2410c; }
+  .conf-status.s-live { background:#dcfce7; color:#15803d; }
+  .conf-countdown { font-size:11px; padding:3px 8px; border-radius:999px; background:#fff7ed; color:#9a3412; }
+  .conf-when { font-size:13px; margin-top:10px; }
+  .conf-deadline { font-size:12px; margin-top:6px; color:#b45309; }
+  .conf-deadline.passed { color:var(--text-muted); }
+  .conf-foot { display:flex; justify-content:space-between; align-items:center; gap:10px; margin-top:10px; flex-wrap:wrap; }
+  .conf-ver { font-size:11px; }
+  .conf-ver.ok { color:#15803d; }
+  .conf-ver.warn { color:#b45309; }
+  .conf-link { font-size:12px; color:var(--primary); text-decoration:none; font-weight:600; }
+  .conf-memo { font-size:12px; margin-top:8px; background:#f8fafc; border-radius:6px; padding:8px 10px; }
+  .conf-abs { margin-top:10px; border-top:1px dashed var(--border); padding-top:8px; }
+  .conf-abs summary { cursor:pointer; font-size:13px; font-weight:600; color:var(--primary); }
+  .conf-abs-src { font-weight:400; color:var(--text-muted); font-size:11px; margin-left:8px; }
+  .conf-abs-row { padding:8px 6px; border-bottom:1px solid #f1f5f9; cursor:pointer; }
+  .conf-abs-row:hover { background:#fff7ed; }
+  .conf-abs-title { font-size:13px; }
+  .conf-abs-meta { font-size:11px; color:var(--text-muted); margin-top:3px; }
+  .conf-chip { display:inline-block; font-size:10px; font-weight:700; padding:1px 6px; border-radius:4px; margin-left:4px; }
+  .conf-empty { font-size:12px; color:var(--text-muted); padding:8px 4px; }
+  @media (max-width:640px) { .conf-summary { grid-template-columns:1fr; } .conf-head { flex-direction:column; } }
+  /* ===== /CONFERENCES ===== */
 </style>
 </head>
 <body>
@@ -522,6 +559,7 @@
     <a onclick="showSection('reports',this)">📝 デイリーレポート</a>
     <a onclick="showSection('trends',this)">📊 トレンド</a>
     <a onclick="showSection('ranking',this)">🏆 引用ランキング</a>
+    <a onclick="showSection('conferences',this)">🎤 学会</a>
   </nav>
 </header>
 
@@ -7693,6 +7731,27 @@
   </div>
 </div>
 
+<!-- ==================== SECTION: 学会 ==================== -->
+<div class="section" id="section-conferences">
+<div class="guide-page">
+  <div class="guide-page-header" style="background:linear-gradient(135deg,#7c2d12,#c2410c);">
+    <h2>🎤 関連学会</h2>
+    <p>気管支拡張症・NTMに関係する主要学会の会期・会場と、本ポータルに収録した学会抄録を学会ごとにまとめます。会期は各学会の公式サイトで確認したもののみ「✅ 確認済」とし、確認日を併記します（公式サイトで確認できていないものは「⚠️ 要確認」）。</p>
+  </div>
+
+  <div class="conf-summary" id="confSummary"></div>
+
+  <div class="guide-section-title">📅 今後の学会</div>
+  <div id="confUpcoming"></div>
+
+  <div class="guide-section-title">🗂️ 開催済み・抄録アーカイブ</div>
+  <div id="confPast"></div>
+
+  <div class="trends-note">※ 学会抄録は Europe PMC・OpenAlex から自動で集まったもの（ERS＝ERJ増刊、ATS＝AJRCCM増刊、BTS＝Thorax増刊）を、DOI で学会に振り分けて表示しています。国内学会（日本呼吸器学会・日本結核・非結核性抗酸菌症学会）の抄録集は会員限定のため自動収集の対象外です。会期・会場は変更されることがあるため、参加前に必ず公式サイトでご確認ください。</div>
+</div>
+</div>
+<!-- /SECTION: 学会 -->
+
 <!-- MODAL -->
 <div class="modal-overlay" id="modalOverlay" onclick="closeModal(event)">
   <div class="modal" id="modalContent">
@@ -8970,6 +9029,146 @@ function setDate() {
 // ============================================================
 // INIT
 // ============================================================
+// ==================== CONFERENCES（学会ページ） ====================
+// 会期・会場は公式サイトで確認したもののみ verified に日付を入れる（記憶で書かない）。
+// abstracts: 収録文献の url（DOI）に当てる正規表現。学会抄録を学会ごとに振り分ける。
+const CONFERENCES = [
+  { id:"bts2026", name:"BTS Winter Meeting 2026", org:"British Thoracic Society（英国胸部学会）", region:"英国",
+    start:"2026-11-25", end:"2026-11-27", venue:"QEII Centre, London",
+    url:"https://www.brit-thoracic.org.uk/education-and-events/winter-meeting-2026",
+    verified:"2026-11-26", verifiedNote:"BTS公式サイトのプログラム資料",
+    abstracts:/thorax-2026-btsabstracts/i, abstractSource:"Thorax 増刊号（2026年11月）",
+    memo:"EMBARC-BRIDGE（Dundee）の解析とASPEN事後解析（ブレンソカチブ）が多数。" },
+  { id:"hapa2027", name:"HAPA NTM and Bronchiectasis International Conference", org:"Hawai'i, Asia, Pacific Island Alliance", region:"米国（ハワイ）",
+    start:"2027-03-08", end:"2027-03-10", venue:"Honolulu, HI",
+    url:"https://www.med.unc.edu/marsicolunginstitute/gross-to-co-host-hapa-ntm-and-bronchiectasis-international-conference-where-other-mli-researchers-will-also-speak/",
+    verified:null, verifiedNote:"大学ニュース記事による。主催者の公式ページは未確認" },
+  { id:"jrs67", name:"第67回 日本呼吸器学会学術講演会", org:"日本呼吸器学会", region:"日本",
+    start:"2027-04-16", end:"2027-04-18", venue:"東京国際フォーラム",
+    url:"https://www.jrs.or.jp/jrs67/guide.html",
+    verified:"2026-11-26", verifiedNote:"学会公式サイト「開催概要」",
+    deadlines:[{label:"一般演題募集", date:"2026-10-07", note:"締切済（延長後）"}],
+    domestic:true },
+  { id:"ats2027", name:"ATS 2027 International Conference", org:"American Thoracic Society（米国胸部学会）", region:"米国",
+    start:"2027-05-14", end:"2027-05-19", venue:"New Orleans, LA（Ernest N. Morial Convention Center）",
+    url:"https://conference.thoracic.org/",
+    verified:null, verifiedNote:"複数の学会情報サイトによる。公式サイトは自動アクセス制限のため未確認",
+    abstracts:/10\.1164\/ajrccm\.2027\.\d+\.abstracts/i, abstractSource:"AJRCCM 増刊（会期後に公開）" },
+  { id:"jstb102", name:"第102回 日本結核・非結核性抗酸菌症学会学術講演会", org:"日本結核・非結核性抗酸菌症学会", region:"日本",
+    start:"2027-06-11", end:"2027-06-12", venue:"京王プラザホテル（東京・西新宿）",
+    url:"https://www.kekkaku.gr.jp/jstb102/guide.html",
+    verified:"2026-11-26", verifiedNote:"学会公式サイト「開催概要」",
+    domestic:true },
+  { id:"wbc2027", name:"World Bronchiectasis Conference 2027（第10回）", org:"EMBARC ほか", region:"未定",
+    start:null, end:null, venue:"未発表",
+    url:"https://sites.dundee.ac.uk/embarc/",
+    verified:null, verifiedNote:"2026-11-26時点で日程の発表を確認できず（第9回は2026年・ハノーファー）" },
+  { id:"ers2027", name:"ERS Congress 2027", org:"European Respiratory Society（欧州呼吸器学会）", region:"イタリア",
+    start:"2027-09-11", end:"2027-09-14", venue:"Allianz MiCo, Milan",
+    url:"https://www.ersnet.org/congress-and-events/congress/",
+    verified:"2026-11-26", verifiedNote:"ERS公式サイト",
+    abstracts:/13993003\.congress-2027/i, abstractSource:"ERJ 増刊（会期中に公開）" },
+  { id:"chest2027", name:"CHEST 2027", org:"American College of Chest Physicians", region:"カナダ",
+    start:"2027-10-24", end:"2027-10-27", venue:"Vancouver, BC",
+    url:"https://www.chestnet.org/learning-and-events/events/chest-annual-meeting",
+    verified:"2026-11-26", verifiedNote:"CHEST公式サイト",
+    deadlines:[{label:"教育セッション企画の募集", date:"2026-12-01"}] },
+  // --- 開催済み（抄録アーカイブ用。会期は未記載） ---
+  { id:"ers2026", name:"ERS Congress 2026", org:"European Respiratory Society", region:"—", start:null, end:null, past:true,
+    url:"https://www.ersnet.org/congress-and-events/congress/", verified:null, verifiedNote:"会期は未記載",
+    abstracts:/13993003\.congress-2026/i, abstractSource:"ERJ 増刊（2026年9月）" },
+  { id:"ats2026", name:"ATS 2026 International Conference", org:"American Thoracic Society", region:"—", start:null, end:null, past:true,
+    url:"https://conference.thoracic.org/", verified:null, verifiedNote:"会期は未記載",
+    abstracts:/10\.1164\/ajrccm\.2026\.\d+\.abstracts/i, abstractSource:"AJRCCM 増刊" },
+];
+const CONF_DRUGS = [
+  { re:/brensocatib|ブレンソカチブ|INS1007|ASPEN/i, label:"brensocatib", bg:"#fee2e2", fg:"#b91c1c" },
+  { re:/verducatib|ベルジュカチブ|BI 1291583|AIRLEAF|AIRTIVITY/i, label:"verducatib", bg:"#dbeafe", fg:"#1d4ed8" },
+  { re:/HSK31858|florensocatib|SAVE-BE/i, label:"HSK31858", bg:"#fef3c7", fg:"#b45309" },
+  { re:/AZD0292|CSL787|ensifentrine|itepekimab|tezepelumab|depemokimab/i, label:"その他パイプライン", bg:"#ede9fe", fg:"#6d28d9" },
+];
+function confStatus(c, today) {
+  if (c.past) return { key:"past", label:"終了" };
+  if (!c.start) return { key:"tba", label:"日程未発表" };
+  if (today < c.start) return { key:"upcoming", label:"開催予定" };
+  if (today <= (c.end || c.start)) return { key:"live", label:"開催中" };
+  return { key:"past", label:"終了" };
+}
+function confDateJa(s) { if (!s) return ""; const [y,m,d] = s.split("-").map(Number); return `${y}年${m}月${d}日`; }
+function confRange(c) {
+  if (!c.start) return "日程未発表";
+  const a = confDateJa(c.start);
+  if (!c.end || c.end === c.start) return a;
+  const [, m, d] = c.end.split("-").map(Number);
+  return a + "〜" + (c.end.slice(0,4) === c.start.slice(0,4) ? `${m}月${d}日` : confDateJa(c.end));
+}
+function confAbstracts(c) {
+  if (!c.abstracts) return [];
+  return ARTICLES.filter(a => c.abstracts.test(a.url || "")).sort((x,y) => (y.date||"").localeCompare(x.date||""));
+}
+function confDrugChips(a) {
+  const t = [a.titleEn, a.titleJa, a.summary].join(" ");
+  return CONF_DRUGS.filter(d => d.re.test(t))
+    .map(d => `<span class="conf-chip" style="background:${d.bg};color:${d.fg}">💊 ${d.label}</span>`).join("");
+}
+function confCard(c, today) {
+  const st = confStatus(c, today);
+  const abs = confAbstracts(c);
+  const days = c.start && st.key === "upcoming" ? Math.round((new Date(c.start) - new Date(today)) / 864e5) : null;
+  const ver = c.verified
+    ? `<span class="conf-ver ok" title="${c.verifiedNote||""}">✅ 確認済（${c.verified}・${c.verifiedNote||"公式サイト"}）</span>`
+    : `<span class="conf-ver warn" title="${c.verifiedNote||""}">⚠️ 要確認（${c.verifiedNote||"公式サイト未確認"}）</span>`;
+  const dl = (c.deadlines||[]).map(d => {
+    const passed = d.date < today;
+    return `<div class="conf-deadline ${passed?"passed":""}">⏰ ${d.label}：${confDateJa(d.date)}${d.note?`（${d.note}）`:passed?"（締切済）":""}</div>`;
+  }).join("");
+  const drugN = abs.filter(a => CONF_DRUGS.some(d => d.re.test([a.titleEn,a.titleJa,a.summary].join(" ")))).length;
+  const absBlock = c.abstracts ? `
+    <details class="conf-abs" ${abs.length && st.key!=="past" ? "open" : ""}>
+      <summary>📄 収録抄録 ${abs.length}件${drugN?`（うち開発品関連 ${drugN}件）`:""}<span class="conf-abs-src">${c.abstractSource||""}</span></summary>
+      ${abs.length ? abs.map(a => `
+        <div class="conf-abs-row" onclick="openModal(${a.id})">
+          <div class="conf-abs-title">${a.titleJa || a.titleEn}</div>
+          <div class="conf-abs-meta">${a.cat}${a.isNew?' ・ <b style="color:#dc2626">NEW</b>':""} ${confDrugChips(a)}</div>
+        </div>`).join("")
+        : `<div class="conf-empty">まだ収録なし。${st.key==="past"?"補完ソースの検索窓（過去30日）より前に公開されたため未取り込み。":"抄録は増刊号の公開後に自動で集まります。"}</div>`}
+    </details>` : (c.domestic ? `<div class="conf-empty">国内学会の抄録集は会員限定のため自動収集の対象外です。</div>` : "");
+  return `
+  <div class="conf-card conf-${st.key}">
+    <div class="conf-head">
+      <div>
+        <div class="conf-name">${c.name}</div>
+        <div class="conf-org">${c.org} ・ ${c.region}</div>
+      </div>
+      <div class="conf-badges">
+        <span class="conf-status s-${st.key}">${st.label}</span>
+        ${days!==null?`<span class="conf-countdown">あと${days}日</span>`:""}
+      </div>
+    </div>
+    ${c.past ? "" : `<div class="conf-when">📅 ${confRange(c)}　📍 ${c.venue||"—"}</div>`}
+    ${dl}
+    <div class="conf-foot">${ver}<a class="conf-link" href="${c.url}" target="_blank" rel="noopener">公式サイト ↗</a></div>
+    ${c.memo ? `<div class="conf-memo">📝 ${c.memo}</div>` : ""}
+    ${absBlock}
+  </div>`;
+}
+function buildConferences() {
+  const up = document.getElementById("confUpcoming");
+  if (!up) return;
+  const d = new Date(), today = `${d.getFullYear()}-${String(d.getMonth()+1).padStart(2,"0")}-${String(d.getDate()).padStart(2,"0")}`;
+  const order = c => c.start || "9999";
+  const live = CONFERENCES.filter(c => ["upcoming","live","tba"].includes(confStatus(c,today).key)).sort((a,b)=>order(a).localeCompare(order(b)));
+  const past = CONFERENCES.filter(c => confStatus(c,today).key === "past");
+  up.innerHTML = live.map(c => confCard(c, today)).join("");
+  document.getElementById("confPast").innerHTML = past.map(c => confCard(c, today)).join("");
+  const next = live.find(c => c.start && c.start >= today);
+  const totalAbs = CONFERENCES.reduce((n,c) => n + confAbstracts(c).length, 0);
+  document.getElementById("confSummary").innerHTML = `
+    <div class="conf-stat"><div class="conf-stat-num">${live.filter(c=>c.start).length}</div><div class="conf-stat-label">今後の学会（日程確定）</div></div>
+    <div class="conf-stat"><div class="conf-stat-num">${next ? Math.round((new Date(next.start)-new Date(today))/864e5) : "—"}</div><div class="conf-stat-label">次の学会まで（日）${next?`<br><small>${next.name}</small>`:""}</div></div>
+    <div class="conf-stat"><div class="conf-stat-num">${totalAbs}</div><div class="conf-stat-label">収録済みの学会抄録</div></div>`;
+}
+// ==================== /CONFERENCES ====================
 async function loadArticles() {
   // articles.json を読み込む。毎朝の更新を即反映するため no-store。
   const res = await fetch('articles.json', { cache: 'no-store' });
@@ -8986,6 +9185,7 @@ function renderAll() {
   buildLandscape();
   buildKol();
   buildTrends();
+  if (typeof buildConferences === 'function') buildConferences();
 }
 document.addEventListener('DOMContentLoaded', async () => {
   try {
