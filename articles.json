@@ -1,8 +1,115 @@
 [
  {
-  "id": 862,
+  "id": 865,
+  "cat": "学会動向",
+  "isNew": true,
+  "titleJa": "気管支拡張症と慢性呼吸器疾患 up to date（共同企画1 司会の言葉）",
+  "journal": "日本呼吸ケア・リハビリテーション学会誌（学会抄録）",
+  "date": "2026-10-22",
+  "year": 2026,
+  "ev": "社説・論説",
+  "authors": "石井 誠, 今野 哲",
+  "summary": "共同企画の司会の言葉で、2025年ERSガイドライン発表、国内での「気管支拡張症診療の手引き」刊行予定、DPP1阻害薬ブレンソカチブの国内承認と後続DPP1阻害薬の開発進展により診療が転換期にあると述べる。粘液線毛クリアランス、喘息、COPD、肺NTM症の4演題を通じ、薬物療法と呼吸ケアを組み合わせた多職種診療を議論する企画である。",
+  "jpView": "国内で「気管支拡張症診療の手引き」の刊行予定が学会抄録に明記された。ブレンソカチブ国内承認（2026年8月）後の診療体系づくりを示す一次情報として、刊行時期を追跡したい。",
+  "url": "https://www.jstage.jst.go.jp/article/jsrcr/36/supplement/36_134s_2/_article/-char/ja/"
+ },
+ {
+  "id": 866,
+  "cat": "治療・薬剤",
+  "isNew": true,
+  "titleJa": "粘液線毛クリアランスから再考する気管支拡張症",
+  "journal": "日本呼吸ケア・リハビリテーション学会誌（学会抄録）",
+  "date": "2026-10-22",
+  "year": 2026,
+  "ev": "総説",
+  "authors": "朝倉 崇徳",
+  "summary": "2025年ERSガイドラインを概説し、粘液の過濃縮と粘液線毛クリアランス障害を軸に、気道クリアランス手技・運動療法・喀痰調整薬・感染炎症制御の組み合わせ方と、BSI・FACEDでは捉えにくい疾患活動性の経時評価の重要性を論じる講演抄録。成人に潜むPCDの診断戦略（鼻腔NO・遺伝学的検査・線毛運動解析・電顕）と、国内承認DPP1阻害薬を既存治療にどう組み込むかも検討する。",
+  "url": "https://www.jstage.jst.go.jp/article/jsrcr/36/supplement/36_135s_1/_article/-char/ja/"
+ },
+ {
+  "id": 867,
+  "cat": "精密医療・エンドタイプ",
+  "isNew": true,
+  "titleJa": "喘息と気管支拡張症",
+  "journal": "日本呼吸ケア・リハビリテーション学会誌（学会抄録）",
+  "date": "2026-10-22",
+  "year": 2026,
+  "ev": "総説",
+  "authors": "松本 久子",
+  "summary": "気管支拡張症の喘息合併は約15〜31%、重症喘息の気管支拡張合併は25〜68%とされ、合併例は増悪が多いことを整理し、Type 2炎症の程度で病態が異なる（Type 2 Low型は感染・入院が多くグラム陰性菌検出率が高い）と述べる講演抄録。呼気NO低値の合併例では好中球性炎症・粘液栓・細菌定着が相互に増幅するため、好中球性炎症への治療や排痰指導・呼吸リハなど積極的介入が求められるとする。",
+  "url": "https://www.jstage.jst.go.jp/article/jsrcr/36/supplement/36_135s_2/_article/-char/ja/"
+ },
+ {
+  "id": 868,
+  "cat": "COPD合併",
+  "isNew": true,
+  "titleJa": "COPDと気管支拡張症",
+  "journal": "日本呼吸ケア・リハビリテーション学会誌（学会抄録）",
+  "date": "2026-10-22",
+  "year": 2026,
+  "ev": "総説",
+  "authors": "田辺 直也",
+  "summary": "COPDと気管支拡張症の併存はROSE基準で診断され、併存例は好中球性炎症やProteobacteria優位の細菌叢を示し、増悪頻度や生命予後の悪化と関連することを概説する講演抄録。粘液栓スコア、気道径対肺動脈径比、気管支先細り欠如、健常者データに基づく気道径正常上限値を用いた新規定量法など、CTによる定量評価の臨床的意義を紹介する。",
+  "url": "https://www.jstage.jst.go.jp/article/jsrcr/36/supplement/36_136s_1/_article/-char/ja/"
+ },
+ {
+  "id": 869,
   "cat": "マイクロバイオーム・感染",
   "isNew": true,
+  "titleJa": "NTM慢性感染における気管支拡張症の発症・進展メカニズム",
+  "journal": "日本呼吸ケア・リハビリテーション学会誌（学会抄録）",
+  "date": "2026-10-22",
+  "year": 2026,
+  "ev": "総説",
+  "authors": "南宮 湖",
+  "summary": "NTMの定着・持続感染がマクロファージ・好中球集積や炎症性サイトカイン・MMPの過剰産生を介して気管支壁を分解し、肉芽腫形成や分泌物うっ滞、線毛運動不全と相まって不可逆的な拡張と「慢性感染－組織破壊－気管支拡張－宿主防御能低下」の悪循環を形成する機序を概観する講演抄録。抗酸菌治療に加え、気道炎症やリモデリングを標的とする病態制御戦略の可能性を論じる。",
+  "url": "https://www.jstage.jst.go.jp/article/jsrcr/36/supplement/36_136s_2/_article/-char/ja/"
+ },
+ {
+  "id": 870,
+  "cat": "治療・薬剤",
+  "isNew": true,
+  "titleJa": "気管支拡張症の気道クリアランス―ガイドラインから臨床実践へ―（ランチョンセミナー1）",
+  "journal": "日本呼吸ケア・リハビリテーション学会誌（学会抄録）",
+  "date": "2026-10-22",
+  "year": 2026,
+  "ev": "総説",
+  "authors": "髻谷 満",
+  "summary": "気道クリアランスはガイドラインでも推奨される呼吸リハの重要な要素だが、実臨床では指導が十分でないとし、喀痰・画像所見・生活背景を評価して個別に手技を選択・指導する重要性を述べる講演抄録。呼吸リハの位置づけとエビデンス、臨床上の課題を症例を交えて整理する。",
+  "url": "https://www.jstage.jst.go.jp/article/jsrcr/36/supplement/36_183s_1/_article/-char/ja/"
+ },
+ {
+  "id": 871,
+  "cat": "治療・薬剤",
+  "isNew": true,
+  "dpp1": true,
+  "titleJa": "好中球性炎症抑制による気管支拡張症の新時代（ランチョンセミナー1）",
+  "journal": "日本呼吸ケア・リハビリテーション学会誌（学会抄録）",
+  "date": "2026-10-22",
+  "year": 2026,
+  "ev": "総説",
+  "authors": "浅井 一久",
+  "summary": "非嚢胞性線維症性気管支拡張症の中心病態である好中球性炎症に対し、DPP1阻害薬brensocatibが好中球セリンプロテアーゼの活性化を抑制する新たな選択肢であり、ASPEN試験で増悪頻度の有意な減少と呼吸機能低下の抑制が示されたことを紹介する講演抄録。疾病負荷と治療課題を整理し、brensocatibを加えた治療戦略と呼吸リハとの統合的アプローチを論じる。",
+  "jpView": "Brensocatib（Insmed）の国内承認（2026年8月）・薬価収載（同10月）後、呼吸ケア・リハ領域の学会でも同薬の位置づけが講演されている。リハ職を含む多職種へのDPP1阻害薬の情報浸透を示す動き。",
+  "url": "https://www.jstage.jst.go.jp/article/jsrcr/36/supplement/36_183s_2/_article/-char/ja/"
+ },
+ {
+  "id": 872,
+  "cat": "増悪・病態",
+  "isNew": true,
+  "titleJa": "慢性炎症性気道疾患（喘息・COPD・気管支拡張症）の病態を再考する（ランチョンセミナー2）",
+  "journal": "日本呼吸ケア・リハビリテーション学会誌（学会抄録）",
+  "date": "2026-10-22",
+  "year": 2026,
+  "ev": "総説",
+  "authors": "多賀谷 悦子",
+  "summary": "喘息・COPD・気管支拡張症に共通する病態として気道粘液の過剰産生とクリアランス障害を取り上げ、粘液栓が気流閉塞・感染・増悪・呼吸機能低下を結びつける重要な病態であると論じる講演抄録。気管支拡張症では構造破壊・粘液貯留・慢性感染・好中球性炎症によるvicious vortexに加え、好酸球性炎症や喘息合併フェノタイプも注目されているとする。",
+  "url": "https://www.jstage.jst.go.jp/article/jsrcr/36/supplement/36_184s_1/_article/-char/ja/"
+ },
+ {
+  "id": 862,
+  "cat": "マイクロバイオーム・感染",
+  "isNew": false,
   "titleJa": "抗体欠損症（CVID/XLA）成人と非結核性抗酸菌（NTM）肺症成人では好中球活性化とオプソニン貪食のプロファイルが異なる：横断研究",
   "titleEn": "Neutrophil activation and opsonophagocytic profiles differ between adults with CVID/XLA and those with nontuberculous mycobacterial pulmonary disease: a cross-sectional study",
   "journal": "Frontiers in Immunology",
@@ -18,7 +125,7 @@
  {
   "id": 863,
   "cat": "マイクロバイオーム・感染",
-  "isNew": true,
+  "isNew": false,
   "titleJa": "慢性気道疾患の急性増悪における気道マイクロバイオームと代謝物の相互作用",
   "titleEn": "Airway Microbiome-Metabolite Interactions in Acute Exacerbations of Chronic Airway Diseases.",
   "journal": "Microorganisms",
@@ -31,12 +138,13 @@
   "aui": "Chen Li Tang Lu Hu Lu Xiao Feng",
   "summary": "喘息・COPD・気管支拡張症の増悪について、細菌叢の構成だけでなく宿主・微生物の代謝物（S. aureus由来ホモシステイン、トリプトファン由来インドール-3-酢酸など）が組織傷害・保護に関わる機序を臨床・実験データから統合した総説。気管支拡張症では増悪時に細菌叢構成が一貫して変わらなくても炎症が強まり、好中球細胞外トラップが粘液性状を変えることを取り上げ、局所代謝経路の調節が増悪予防につながるかは今後の試験で検証すべきとしている。",
   "pmid": "43092553",
-  "url": "https://pubmed.ncbi.nlm.nih.gov/43092553/"
+  "url": "https://pubmed.ncbi.nlm.nih.gov/43092553/",
+  "cit": 0
  },
  {
   "id": 864,
   "cat": "増悪・病態",
-  "isNew": true,
+  "isNew": false,
   "titleJa": "小児におけるCD19標的CAR-T細胞療法後の長期B細胞無形成：肺への影響",
   "titleEn": "Long-Term B-Cell Aplasia Post CD19-Targeted CAR T Cells in Paediatric Patients: Implications on Lung Status.",
   "journal": "Pediatric Blood & Cancer",
@@ -48,7 +156,8 @@
   "aui": "Casartelli Rashed Napolitano Ip Marruchella Balduzzi Ghorashian Lucchini",
   "summary": "CD19標的CAR-T細胞療法後にB細胞無形成が遷延した小児48例を追跡し、定期的な免疫グロブリン補充下でも10例が呼吸器症状により画像検査を受け、2例に新たな気管支拡張症、4例にその他の異常所見を認めた。著者らは二次性免疫不全による長期の肺合併症リスクを指摘し、系統的な呼吸器モニタリングを提案している。",
   "pmid": "43096699",
-  "url": "https://pubmed.ncbi.nlm.nih.gov/43096699/"
+  "url": "https://pubmed.ncbi.nlm.nih.gov/43096699/",
+  "cit": 0
  },
  {
   "id": 841,
@@ -14078,7 +14187,7 @@
   "jpView": "日本発。喘息とBEの双方向の重なりを論じる。ACO・喘息合併BEが多い国内診療に直結する視点。",
   "pmid": "34924307",
   "url": "https://doi.org/10.1016/j.resinv.2021.11.004",
-  "cit": 20
+  "cit": 22
  },
  {
   "id": 106,
@@ -14600,7 +14709,7 @@
   "jpView": "Treatable Traitsのバイオマーカー総説。独立GLの無い日本で、好酸球・FeNO・定量CTを用いた形質ベース管理は、国際GLを実務に落とす入口になりうる。",
   "pmid": "41633474",
   "url": "https://doi.org/10.1016/j.pupt.2026.102410",
-  "cit": 2
+  "cit": 7
  },
  {
   "id": 79,
@@ -15494,7 +15603,7 @@
   "summary": "台湾の前向き観察研究で、COPD 86例・気管支拡張症46例・固定性気流閉塞（FAO）を伴う気管支拡張症49例のBALを16S rRNA解析し、気管支拡張症はFAOの有無にかかわらずα多様性が低くProteobacteria優位で、Firmicutesが多く多様性の高いCOPDと明確に異なった。FAO合併例は重症度と増悪リスクが高く、緑膿菌の存在はIL-1β・IL-8・TNF-αなどの好中球性気道炎症と重症度に相関し、ROSE基準で喫煙歴により2つのエンドタイプが示唆された。",
   "pmid": "39143556",
   "url": "https://pubmed.ncbi.nlm.nih.gov/39143556/",
-  "cit": 10
+  "cit": 12
  },
  {
   "id": 35,
