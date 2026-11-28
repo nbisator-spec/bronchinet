@@ -486,6 +486,8 @@
   .conf-abs-meta { font-size:11px; color:var(--text-muted); margin-top:3px; }
   .conf-chip { display:inline-block; font-size:10px; font-weight:700; padding:1px 6px; border-radius:4px; margin-left:4px; }
   .conf-empty { font-size:12px; color:var(--text-muted); padding:8px 4px; }
+  .conf-abslink { margin-left:10px; }
+  .conf-absnote { font-size:12px; color:var(--text-muted); margin-top:6px; }
   .conf-filter { display:flex; gap:8px; flex-wrap:wrap; margin:4px 0 14px; }
   .conf-filter button { border:1px solid #fdba74; background:var(--card-bg); color:#9a3412; border-radius:999px; padding:6px 14px; font-size:13px; cursor:pointer; }
   .conf-filter button.on { background:#c2410c; color:#fff; border-color:#c2410c; }
@@ -7812,7 +7814,7 @@
   <div class="conf-filter" id="confFilter"></div>
   <div id="confUpcoming"></div>
 
-  <div class="trends-note">※ 学会抄録は Europe PMC・OpenAlex から自動で集まったもの（ERS＝ERJ増刊、ATS＝AJRCCM増刊、BTS＝Thorax増刊）を、DOI で学会に振り分けて表示しています。国内学会の抄録集は会員限定のため自動収集の対象外です。会期が終わった学会は、翌日から表示されなくなります。会期・会場は変更されることがあるため、参加前に必ず公式サイトでご確認ください。</div>
+  <div class="trends-note">※ 学会抄録は Europe PMC・OpenAlex から自動で集まったもの（ERS＝ERJ増刊、ATS＝AJRCCM増刊、BTS＝Thorax増刊）を、DOI で学会に振り分けて表示しています。国内学会の抄録は、学会サイトの利用条件（無断の転用・転載の禁止）のため、要約は載せず、公式の抄録集へのリンクだけを載せます。会期が終わった学会は、翌日から表示されなくなります。会期・会場は変更されることがあるため、参加前に必ず公式サイトでご確認ください。</div>
 </div>
 </div>
 <!-- /SECTION: 学会 -->
@@ -9102,6 +9104,7 @@ function setDate() {
 // ==================== CONFERENCES（学会ページ） ====================
 // 会期・会場は公式サイトで確認したもののみ verified に日付を入れる（記憶で書かない）。
 // abstracts: 収録文献の url（DOI）に当てる正規表現。学会抄録を学会ごとに振り分ける。
+// absUrl / absLabel: 国内学会の「プログラム・抄録集」の公式ページ（リンクだけ。抄録の中身は載せない＝学会サイトの利用条件のため。2026-11-28）
 const CONFERENCES = [
   { id:"bts2026", name:"BTS Winter Meeting 2026", org:"British Thoracic Society（英国胸部学会）", region:"英国",
     start:"2026-11-25", end:"2026-11-27", venue:"QEII Centre, London",
@@ -9278,7 +9281,8 @@ function confCard(c, today) {
     </div>
     ${c.past ? "" : `<div class="conf-when">📅 ${confRange(c)}　📍 ${c.venue||"—"}</div>`}
     ${dl}
-    <div class="conf-foot">${ver}<a class="conf-link" href="${c.url}" target="_blank" rel="noopener">公式サイト ↗</a></div>
+    <div class="conf-foot">${ver}<a class="conf-link" href="${c.url}" target="_blank" rel="noopener">公式サイト ↗</a>${c.absUrl ? `<a class="conf-link conf-abslink" href="${c.absUrl}" target="_blank" rel="noopener">📄 ${c.absLabel||"抄録集（公式）"} ↗</a>` : ""}</div>
+    ${c.region === "日本" && !c.absUrl ? `<div class="conf-absnote">📄 抄録集：公開されたら、公式のページへのリンクをここに載せます（毎月1日に確認）</div>` : ""}
     ${c.memo ? `<div class="conf-memo">📝 ${c.memo}</div>` : ""}
     ${absBlock}
   </div>`;
